@@ -1,6 +1,6 @@
 
 # Full Stack Developer
-![Screenshot](fullstack.png)
+![Screenshot](fullstack.jpg)
 
 # NETWORK
 #### tracert / traceroute
