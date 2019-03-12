@@ -44,10 +44,9 @@ https://www.makeuseof.com/tag/beginners-guide-setting-ssh-linux-testing-setup/
 ```
 - Symmetric vs. Asymmetric
 >Symmetric vs. Asymmetric Systems. Recall that there are two basic types of encryption: symmetric algorithms: (also called “secret key”) use the same key for both encryption and decryption; asymmetric algorithms: (also called “public key”) use different keys for encryption and decryption.
-
-```
-https://www.youtube.com/watch?v=NmM9HA2MQGI
-https://www.youtube.com/watch?v=Yjrfm_oRO0w
-https://www.youtube.com/watch?v=vsXMMT2CqqE&t=
-https://www.youtube.com/watch?v=NF1pwjL9-DE
-```
+ 
+1. [Asymmetric Encryption](https://www.youtube.com/watch?v=NmM9HA2MQGI)
+2. [Asymmetric Encryption](https://www.youtube.com/watch?v=Yjrfm_oRO0w)
+3. [Asymmetric Encryption](https://www.youtube.com/watch?v=vsXMMT2CqqE&t=)
+4. [Asymmetric Encryption](https://www.youtube.com/watch?v=NF1pwjL9-DE)
+ 
