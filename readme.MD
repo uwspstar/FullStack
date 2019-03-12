@@ -15,6 +15,8 @@ run:  tracert -4 google.com  //which forces IPv4 hops
 
 #### ping / telnet
 
+```
 ping <IP Address>
   
 Telnet <IP Address> 13531
+```
