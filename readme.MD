@@ -29,3 +29,16 @@ Telnet <IP Address> 13531
 ```
 SSH {user}@{host}
 ```
+- Windows:
+```
+Use PuTTY: https://mediatemple.net/community/products/dv/204404604/using-ssh-in-putty-
+Windows 10: https://www.howtogeek.com/336775/how-to-enable-and-use-windows-10s-built-in-ssh-commands/
+Extra: 
+1. https://www.ssh.com/ssh/putty/windows/
+2. https://www.memset.com/docs/server-security/secure-communication-ssh/using-ssh-windows/
+```
+- Linux:
+```
+You should be able to use the ssh  command already, but in case you can't:
+https://www.makeuseof.com/tag/beginners-guide-setting-ssh-linux-testing-setup/
+```
