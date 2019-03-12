@@ -1,4 +1,7 @@
 
+# Full Stack Developer
+![Screenshot](fullstack.png)
+
 # NETWORK
 #### tracert / traceroute
 Open up the Terminal (Mac), or Command Prompt (Windows) and run traceroute on any website you want. 
