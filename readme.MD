@@ -42,3 +42,5 @@ Extra:
 You should be able to use the ssh  command already, but in case you can't:
 https://www.makeuseof.com/tag/beginners-guide-setting-ssh-linux-testing-setup/
 ```
+- Symmetric vs. Asymmetric
+>Symmetric vs. Asymmetric Systems. Recall that there are two basic types of encryption: symmetric algorithms: (also called “secret key”) use the same key for both encryption and decryption; asymmetric algorithms: (also called “public key”) use different keys for encryption and decryption.
