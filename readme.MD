@@ -1,6 +1,6 @@
 
 # Full Stack Developer
-![Full Stack Developer](fullstack.JPG)
+![Full Stack Developer](/Img/fullstack.JPG)
 
 # NETWORK
 #### tracert / traceroute
