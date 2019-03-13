@@ -24,6 +24,10 @@ ping <IP Address>
 Telnet <IP Address> 13531
 ```
 - #### [explain shell commad https://explainshell.com/](https://explainshell.com/)
+
+# Communication Protocols
+![communications-protocol](/Img/communications-protocol.png)
+
 # SSH
 - HTTPS vs SSH
 >The “S,” then, provides an additional protocol for security; in fact HTTPS actually stands for HTTP over SSL (Secure Socket Layer). The most basic understanding of SSH (Secure Shell) is that you are remotely logging into another computer.
