@@ -16,6 +16,11 @@
 
 - [https://www.sitepoint.com/gif-png-jpg-which-one-to-use/](https://www.sitepoint.com/gif-png-jpg-which-one-to-use/)
 
+
+  - If you want transparency you might want to use PNG 
+  - if you want animations Then use a GIF 
+  - if you want really colorful detailed images.Then you should probably use JPEG.
+
 # NETWORK
 - #### tracert / traceroute
 
