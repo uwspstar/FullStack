@@ -57,3 +57,4 @@ https://www.makeuseof.com/tag/beginners-guide-setting-ssh-linux-testing-setup/
 3. [Asymmetric Encryption](https://www.youtube.com/watch?v=vsXMMT2CqqE&t=)
 4. [Asymmetric Encryption](https://www.youtube.com/watch?v=NF1pwjL9-DE)
  
+ - [Setup-ssh-for-github https://github.com/antonykidis/Setup-ssh-for-github/blob/master/Setup-ssh-on-github.pdf](https://github.com/antonykidis/Setup-ssh-for-github/blob/master/Setup-ssh-on-github.pdf)
