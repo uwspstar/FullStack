@@ -5,6 +5,13 @@
 
 # JS code snippet 
 - [My code snippet https://repl.it/@uwspstar/ScalyInferiorCoordinates](https://repl.it/@uwspstar/ScalyInferiorCoordinates)
+# Image File Formats
+
+- [https://99designs.com/blog/tips/image-file-types/](https://99designs.com/blog/tips/image-file-types/)
+
+- [https://pageweight.imgix.com/](https://pageweight.imgix.com/)
+
+- [https://www.sitepoint.com/gif-png-jpg-which-one-to-use/](https://www.sitepoint.com/gif-png-jpg-which-one-to-use/)
 
 # NETWORK
 - #### tracert / traceroute
