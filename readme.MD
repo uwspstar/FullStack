@@ -6,9 +6,7 @@
 ![Full Stack Developer](/Img/fullstack0.JPG)
 - [internet History https://www.vox.com/a/internet-maps](https://www.vox.com/a/internet-maps)
 
-# Node.js() 
-![Node](/Img/node0.png)
-
+# Node.js
 - [Node notes](https://github.com/uwspstar/node/blob/master/readme.md)
  
 # JS code snippet 
