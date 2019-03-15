@@ -9,6 +9,45 @@
 # Node.js
 ![Node](/Img/node0.png)
 
+- request and response
+```
+
+const http = require('http');
+const server = http.createServer((req, res) => {
+    //console.log(req);
+    //process.exit(); //stop server
+    //console.log(req.url, req.method, req.headers);
+    res.setHeader('Content-Type', 'text/html');
+    res.write('<html>')
+    res.write('<head><title>my header</title></head>')
+    res.write('<body>my body</body>')
+    res.write('</html>');
+    res.end();
+});
+
+server.listen(3000);
+
+
+/*
+
+You can always do that
+by pressing CTRL + C in the terminal/ command prompt window
+where you started your server (i.e. where you ran node app.js).
+
+On both requests and responses,
+Http headers are added to transport metadata from A to B.
+
+The following article provides a great overview of
+available headers and their role:
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers
+
+function rqListener(req,res){
+
+}
+http.createServer(rqListener);
+*/
+```
+
 # JS code snippet 
 - [My code snippet https://repl.it/@uwspstar/ScalyInferiorCoordinates](https://repl.it/@uwspstar/ScalyInferiorCoordinates)
 # Image File Formats
