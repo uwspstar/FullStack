@@ -1,4 +1,7 @@
 
+# Media Queries
+- [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
+
 # Full Stack Developer
 ![Full Stack Developer](/Img/fullstack0.JPG)
 - [internet History https://www.vox.com/a/internet-maps](https://www.vox.com/a/internet-maps)
