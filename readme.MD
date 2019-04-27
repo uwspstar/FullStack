@@ -45,6 +45,18 @@
   - Use CDNs like imigx
   - Remove image metadata
   
+```
+you can convert SVG into Base64 encoding, and that works as the Data URI 
+
+HTML 
+<img alt="" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDo etc">
+<img src='data:image/svg+xml;utf8,<svg ... > ... </svg>'>
+
+CSS
+.bg {
+  background: url('data:image/svg+xml;utf8,<svg ...> ... </svg>');
+}
+```
 
 # NETWORK
 - #### tracert / traceroute
