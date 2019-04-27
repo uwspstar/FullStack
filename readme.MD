@@ -3,6 +3,14 @@
 - Microservices architecture style(https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
 ![Microservices](/Img/microservices-logical.svg)
 
+### Consider this architecture style for:
+
+- Large applications that require a high release velocity.
+- Complex applications that need to be highly scalable.
+- Applications with rich domains or many subdomains.
+- An organization that consists of small development teams.
+
+
 # Media Queries
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
 
