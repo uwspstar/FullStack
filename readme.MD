@@ -10,6 +10,8 @@
 - Applications with rich domains or many subdomains.
 - An organization that consists of small development teams.
 
+# CI/CD
+- Top 8 Continuous Integration Tools (https://code-maze.com/top-8-continuous-integration-tools/)
 
 # Media Queries
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
