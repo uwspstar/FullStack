@@ -10,6 +10,9 @@
 - Applications with rich domains or many subdomains.
 - An organization that consists of small development teams.
 
+# JWT
+- JWT: The Complete Guide to JSON Web Tokens https://blog.angular-university.io/angular-jwt/
+- Angular Security - Authentication With JSON Web Tokens (JWT): The Complete Guide https://blog.angular-university.io/angular-jwt-authentication/
 # CI/CD
 - Top 8 Continuous Integration Tools (https://code-maze.com/top-8-continuous-integration-tools/)
 
