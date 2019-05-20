@@ -5,8 +5,8 @@
 - Docker client (Docker cli) // commands just a portal, nothing related the docker imgs and containers
 - Docker server (Docker daemon) // create img ,run container
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
-- > run> Docker version
-### run> Docker run hello-world
+- > $> Docker version
+### $> Docker run hello-world
 
 ```
 1) Docker server check the image cache first before pull from free service Docker Hub.
