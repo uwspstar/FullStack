@@ -5,7 +5,7 @@
 - Docker client (Docker cli) // commands just a portal, nothing related the docker imgs and containers
 - Docker server (Docker daemon) // create img ,run container
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
-> install Docker which install a linux VM on the top of mac/windows , the linux kernal is running inside linux VM
+> **install Docker which install a linux VM on the top of mac/windows , the linux kernal is running inside linux VM**
 ![PC work](/Img/docker005.png)
 - $> Docker version
 ![PC work](/Img/docker004.png)
