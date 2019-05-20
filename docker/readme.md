@@ -66,6 +66,8 @@ f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
 - $> docker exec -it 9d758c1f656c redis-cli
  ```
  open another window to run $> docker ps
- $> docker exec -it 9d758c1f656c redis-cli
+
+ $> docker exec -it 9d758c1f656c redis-cli  // **-it**
 127.0.0.1:6379> 
+$>ctrl + C  //exit
  ```
