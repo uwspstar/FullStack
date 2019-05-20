@@ -1,5 +1,7 @@
 ### 05/20/2019
 - **Docker and Kubernetes: The Complete Guide** https://www.udemy.com/docker-and-kubernetes-the-complete-guide/ by **Stephen Grider**
+![PC work](/Img/docker003.png)
+
 - Docker image // single file with all dependencies and configs to run the program
 - Docker container // instance of the image to run the program
 - Docker client (Docker cli) // commands just a portal, nothing related the docker imgs and containers
@@ -7,7 +9,6 @@
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
 - $> Docker version
 ### $> Docker run hello-world
-
 ```
 1) Docker server check the image cache first before pull from free service Docker Hub.
 2) After pulling the image, it's saved image cache first.
@@ -32,3 +33,4 @@ For more examples and ideas, visit: https://docs.docker.com/get-started/
 - screen shot from https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
 ![PC work](/Img/docker001.png)
 ![PC work](/Img/docker002.png)
+
