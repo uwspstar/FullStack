@@ -85,3 +85,6 @@ mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 $> # cd ~
 ```
 - **"Ctrl + C" NOT WORKING, try "Ctrl + D", or "exit", or "command + D"**
+
+### Building Custom Images Through Docker Server
+- 
