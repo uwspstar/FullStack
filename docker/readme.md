@@ -79,7 +79,8 @@ $> docker exec -it 2b6d1d3b9761 sh
 $> #
 $> # cd /
 $> # ls
-$> bin  boot  data  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
+$> bin  boot  data  dev  etc  home  lib  lib64  media  
+mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 $> # cd ~
 ```
 - **"Ctrl + C" NOT WORKING, try "Ctrl + D", or "command + D"**
