@@ -45,3 +45,5 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lectur
 - $> docker run busybox echo hi there
 - $> docker run busybox ls
 - $> docker ps
+- $> docker ps --help
+- $> docker ps --all
