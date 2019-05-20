@@ -75,7 +75,7 @@ $>ctrl + C  //exit
  
 - $> docker exec -it 2b6d1d3b9761 sh
 ```
-$> docker exec -it 2b6d1d3b9761 sh
+$> docker exec -it 2b6d1d3b9761 sh // **sh** run the command inside container, good for debug
 $> #
 $> # cd /
 $> # ls
