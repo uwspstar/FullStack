@@ -9,8 +9,8 @@
 > ![PC work](/Img/docker005.png)
 - $> Docker version
 > ![PC work](/Img/docker004.png)
-https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
-> ![PC work](/Img/docker003.png)
+- https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
+
 
 ### 05/20/2019
 ### $> Docker run hello-world
