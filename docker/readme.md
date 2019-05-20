@@ -82,3 +82,4 @@ $> # ls
 $> bin  boot  data  dev  etc  home  lib  lib64  media  mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 $> # cd ~
 ```
+- **ctrl + c NOT WORKING ** try ** ctrl + D** or **command + D**
