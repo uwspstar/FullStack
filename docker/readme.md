@@ -41,3 +41,7 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lectur
 - **Namespacing & control groups only for linux system ( not windows, not macOS )**
 > ![PC work](/Img/docker002.png)
 
+### Docker Client
+- $> docker run busybox echo hi there
+- $> docker run busybox ls
+- $> docker ps
