@@ -37,6 +37,6 @@ For more examples and ideas, visit: https://docs.docker.com/get-started/
  ```
 - screen shot from https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
 ![PC work](/Img/docker001.png)
-- Namespacing & control groups only for linux system ( not windows, not macOS )
+> **Namespacing & control groups only for linux system ( not windows, not macOS )**
 ![PC work](/Img/docker002.png)
 
