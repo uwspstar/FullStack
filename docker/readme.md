@@ -88,3 +88,10 @@ $> # cd ~
 
 ### Building Custom Images Through Docker Server
 - Docker File --> Docker Client --> Docker Server --> use img
+- Creat a Docker file
+```
+1) Specify a base img
+2) run some command to install additional programs
+3) Specify a command to run when container startup
+```
+>  ![PC work](/Img/docker006.png)
