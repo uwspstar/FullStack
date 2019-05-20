@@ -47,3 +47,9 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lectur
 - $> docker ps
 - $> docker ps --help
 - $> docker ps --all
+- **Docker run =  Docker Create + Docker start**
+```
+$> docker create hello-world
+f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
+$> docker start -a f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
+```
