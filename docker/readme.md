@@ -7,9 +7,12 @@
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
 - > run> Docker version
 #### run> Docker run hello-world
-- **1) Docker server check the image cache first before pull from free service Docker Hub.**
-- **2) After pulling the image, it's saved image cache first.**
-- **3) The Docker server take the single image to memory to create a container of it, and run a signle programe on it**
+
+```
+1) Docker server check the image cache first before pull from free service Docker Hub.**
+2) After pulling the image, it's saved image cache first.**
+3) The Docker server take the single image to memory to create a container of it, and run a signle programe on it**
+```
 ```
 To generate this message, Docker took the following steps: 
 ** grab the image, create a container, and run it **
