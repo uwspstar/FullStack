@@ -84,4 +84,4 @@ $> bin  boot  data  dev  etc  home  lib  lib64  media
 mnt  opt  proc  root  run  sbin  srv  sys  tmp  usr  var
 $> # cd ~
 ```
-- **"Ctrl + C" NOT WORKING, try "Ctrl + D", or "command + D"**
+- **"Ctrl + C" NOT WORKING, try "Ctrl + D", or "exit", or "command + D"**
