@@ -63,11 +63,11 @@ f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
 - $> docker kill <id> // stop now
 - open another window $> docker ps
 - $> docker run redis
-- $> docker exec -it 9d758c1f656c redis-cli
+- $> docker exec -it 9d758c1f656c redis-cli // **-it**
  ```
- open another window to run $> docker ps
+ open another window to run $> docker ps 
 
- $> docker exec -it 9d758c1f656c redis-cli  // **-it**
+ $> docker exec -it 9d758c1f656c redis-cli
 127.0.0.1:6379> 
 $>ctrl + C  //exit
  ```
