@@ -87,4 +87,4 @@ $> # cd ~
 - **"Ctrl + C" NOT WORKING, try "Ctrl + D", or "exit", or "command + D"**
 
 ### Building Custom Images Through Docker Server
-- 
+- Docker File --> Docker Client --> Docker Server --> use img
