@@ -7,6 +7,7 @@
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
 - $> Docker version
 ![PC work](/Img/docker004.png)
+https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
 ![PC work](/Img/docker003.png)
 
 ### 05/20/2019
