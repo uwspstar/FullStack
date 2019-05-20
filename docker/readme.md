@@ -8,9 +8,9 @@
 > **install Docker which install a linux VM on the top of mac/windows , the linux kernal is running inside linux VM**
 ![PC work](/Img/docker005.png)
 - $> Docker version
-![PC work](/Img/docker004.png)
+> ![PC work](/Img/docker004.png)
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
-![PC work](/Img/docker003.png)
+> ![PC work](/Img/docker003.png)
 
 ### 05/20/2019
 ### $> Docker run hello-world
@@ -35,8 +35,9 @@ To generate this message, Docker took the following steps:
 
 For more examples and ideas, visit: https://docs.docker.com/get-started/
  ```
-- screen shot from https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
-![PC work](/Img/docker001.png)
+- screen shot from 
+https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
+> ![PC work](/Img/docker001.png)
 > **Namespacing & control groups only for linux system ( not windows, not macOS )**
 ![PC work](/Img/docker002.png)
 
