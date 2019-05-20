@@ -59,5 +59,13 @@ f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
 ```
 - $> docker system prune
 - $> docker logs f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
-- $> docker stop // give time to finish and stop
-- $> docker kill // stop now
+- $> docker stop <id> // give 10 second to finish and stop
+- $> docker kill <id> // stop now
+- open another window $> docker ps
+- $> docker run redis
+- $> docker exec -it 9d758c1f656c redis-cli
+ ```
+ open another window to run $> docker ps
+ $> docker exec -it 9d758c1f656c redis-cli
+127.0.0.1:6379> 
+ ```
