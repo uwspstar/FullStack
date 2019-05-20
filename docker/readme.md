@@ -73,9 +73,9 @@ f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
 $>ctrl + C  //exit
  ```
  
-- $> docker exec -it 2b6d1d3b9761 sh
+- $> docker exec -it 2b6d1d3b9761 sh // **sh** run the command inside container, good for debug
 ```
-$> docker exec -it 2b6d1d3b9761 sh // **sh** run the command inside container, good for debug
+$> docker exec -it 2b6d1d3b9761 sh 
 $> #
 $> # cd /
 $> # ls
