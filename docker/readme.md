@@ -57,3 +57,5 @@ f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
 
 //-a means to watch and return the result to user screen
 ```
+- $> docker system prune
+- $> docker logs f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
