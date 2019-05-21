@@ -99,3 +99,5 @@ $> # cd ~
 ### 05/21/2019
 - The Build Process in Detail 
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436706?start=30
+- Making Real Projects with Docker
+https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436944?start=0
