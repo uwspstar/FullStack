@@ -95,3 +95,7 @@ $> # cd ~
 3) Specify a command to run when container startup
 ```
 >  ![PC work](/Img/docker006.png)
+
+### 05/21/2019
+- The Build Process in Detail 
+https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436706?start=30
