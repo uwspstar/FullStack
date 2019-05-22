@@ -77,3 +77,4 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 - 17 // 3  # floor division discards the fractional part 5
 - print(int(29) // 10) # 2
 - print(int(int(29) / 10)) # 2
+- print(str(int_num) +  str2) # print((int_num) +  str2) has problem
