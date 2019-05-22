@@ -46,7 +46,7 @@ z = str(3.0)  # z will be '3.0'
 >>> cubes
 [1, 8, 27, 64, 125]
 ```
-- 2 ** 7  # 2 to the power of 7 //128
+- 2 ** 7  # 2 to the power of 7 # 128
 - String literals can span multiple lines. One way is using triple-quotes: """...""" or '''...'''. 
 - word[2:5]  # characters from position 2 (included) to 5 (excluded)
 - Note how the start is always included, and the end always excluded. 
@@ -73,3 +73,7 @@ This means that the following slice returns a new (shallow) copy of the list:
 - PEB 8 - Style Guide: https://www.python.org/dev/peps/pep-0008/ 
 - Example Google Style Python Docstrings 
 https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
+- input()  # only get str, need to use int(str) for number 
+- 17 // 3  # floor division discards the fractional part 5
+- print(int(age) // 10) # 2
+- print(int(int(age) / 10)) # 2
