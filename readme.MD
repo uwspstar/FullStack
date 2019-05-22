@@ -3,6 +3,7 @@
 # Docker
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/
 
+# Azure Storage https://www.edureka.co/blog/azure-storage-tutorial/
 
 # Microservices architecture style
 - Microservices architecture style(https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
