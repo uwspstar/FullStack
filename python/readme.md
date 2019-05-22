@@ -75,5 +75,5 @@ This means that the following slice returns a new (shallow) copy of the list:
 https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 - input()  # only get str, need to use int(str) for number 
 - 17 // 3  # floor division discards the fractional part 5
-- print(int(age) // 10) # 2
-- print(int(int(age) / 10)) # 2
+- print(int(29) // 10) # 2
+- print(int(int(29) / 10)) # 2
