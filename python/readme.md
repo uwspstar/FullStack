@@ -103,3 +103,4 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 ### 05/24/2019
 - https://pynative.com/python-exercises-with-solutions/
 - https://programmingwithmosh.com/python/python-3-cheat-sheet/
+- boolena True # NOT true
