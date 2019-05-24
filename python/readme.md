@@ -96,5 +96,7 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 - 10 % 3 = 1
 - // interger divison # 3 // 2 =1
 - PEMDAS
+
+### 05/24/2019
 - https://pynative.com/python-exercises-with-solutions/
 - https://programmingwithmosh.com/python/python-3-cheat-sheet/
