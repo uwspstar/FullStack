@@ -10,6 +10,9 @@ https://www.udemy.com/the-modern-python3-bootcamp/
 ### Python Exercises with Solutions | pynative
 https://pynative.com/python-exercises-with-solutions/
 
+### 100+ Python challenging programming exercises
+https://github.com/zhiwehu/Python-programming-exercises
+
 ### Python 3 Cheat Sheet by Mosh Hamedani
 https://programmingwithmosh.com/python/python-3-cheat-sheet/
 
