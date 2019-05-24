@@ -85,3 +85,9 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 
 - for block in blockchain:
 - while True:
+- ** expentiation # 2**3 = 8 
+- 49 ** 0.5 = 7.0
+- 10 % 3 = 1
+- // interger divison # 3 // 2 =1
+- PEMDAS
+- https://pynative.com/python-exercises-with-solutions/
