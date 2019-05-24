@@ -104,3 +104,4 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 - https://pynative.com/python-exercises-with-solutions/
 - https://programmingwithmosh.com/python/python-3-cheat-sheet/
 - boolena True # NOT true
+- F-string # f"abc {x} cde"
