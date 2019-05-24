@@ -10,6 +10,9 @@ https://www.udemy.com/the-modern-python3-bootcamp/
 ### Python Exercises with Solutions | pynative
 https://pynative.com/python-exercises-with-solutions/
 
+### Python 3 Cheat Sheet by Mosh Hamedani
+https://programmingwithmosh.com/python/python-3-cheat-sheet/
+
 ### 05/19/2019
 - This is especially important on macOS, where you already got Python 2.7 pre-installed. 
 To NOT use that, run **python3**  instead of python .
@@ -94,3 +97,4 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 - // interger divison # 3 // 2 =1
 - PEMDAS
 - https://pynative.com/python-exercises-with-solutions/
+- https://programmingwithmosh.com/python/python-3-cheat-sheet/
