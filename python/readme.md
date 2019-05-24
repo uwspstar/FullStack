@@ -7,6 +7,9 @@ https://www.udemy.com/learn-python-by-building-a-blockchain-cryptocurrency
 ### The Modern Python 3 Bootcamp by Colt Steele
 https://www.udemy.com/the-modern-python3-bootcamp/
 
+### Python Exercises with Solutions | pynative
+https://pynative.com/python-exercises-with-solutions/
+
 ### 05/19/2019
 - This is especially important on macOS, where you already got Python 2.7 pre-installed. 
 To NOT use that, run **python3**  instead of python .
