@@ -78,3 +78,7 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 - print(int(29) // 10) # 2
 - print(int(int(29) / 10)) # 2
 - print(str(int_num) +  str2) # print((int_num) +  str2) has problem
+### 05/23/2019
+
+- for block in blockchain:
+- while True:
