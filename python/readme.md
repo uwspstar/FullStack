@@ -105,3 +105,22 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 - https://programmingwithmosh.com/python/python-3-cheat-sheet/
 - boolena True # NOT true
 - F-string # f"abc {x} cde"
+
+### 05/25/2019
+- if name == "abc": // NOT if(name =="abc" ):
+- style
+```
+print("hello world")
+print("input your name")
+name = input()
+
+
+def display_name(name):
+    if name == "a":
+        print(f"name is :{name}")
+    else:
+        print(f"name is :{name} not a")
+
+
+print(name)
+```
