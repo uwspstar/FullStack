@@ -202,3 +202,20 @@ Last four: [‘e’, ‘f’, ‘g’, ‘h’]
 Middle two: [‘d’, ‘e’]
 
 ```
+- When slicing from the start of a list, you should leave out the zero index to reduce visual
+noise.
+```assert a[:5] == a[0:5]```
+- the expression somelist[-0:] will result in a copy of the original list.
+- The result of slicing a list is a whole new list. References to the objects from the original
+list are maintained. Modifying the result of slicing won’t affect the original list.
+- Don’t supply 0 for the start index or the length of the
+sequence for the end index.
+- ::2 means select every second item starting at the beginning. Trickier, ::-2
+means select every second item starting at the end and moving backwards.
+```
+a[2::2] # [‘c’, ‘e’, ‘g’]
+a[-2::-2] # [‘g’, ‘e’, ‘c’, ‘a’]
+a[-2:2:-2] # [‘g’, ‘e’]
+a[2:2:-2] # []
+```
+
