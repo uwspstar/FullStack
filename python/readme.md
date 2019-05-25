@@ -187,3 +187,18 @@ def to_str(bytes_or_str):
 ```
 - In Python 3, bytes and str instances are never equivalent—
 not even the empty string
+- In Python 3, bytes contains sequences of 8-bit values, str contains sequences of
+Unicode characters. bytes and str instances can’t be used together with operators
+(like > or +).
+
+```
+a = [‘a’, ‘b’, ‘c’, ‘d’, ‘e’, ‘f’, ‘g’, ‘h’]
+print(‘First four:’, a[:4])
+print(‘Last four: ‘, a[-4:])
+print(‘Middle two:’, a[3:-3])
+>>>
+First four: [‘a’, ‘b’, ‘c’, ‘d’]
+Last four: [‘e’, ‘f’, ‘g’, ‘h’]
+Middle two: [‘d’, ‘e’]
+
+```
