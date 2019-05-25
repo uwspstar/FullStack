@@ -110,9 +110,40 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 - F-string # f"abc {x} cde"
 
 ### 05/25/2019
+- Pylint tool
+- $ python3 —version
+```
+import sys
+print(sys.version_info)
+print(sys.version)
+```
+- Python Enhancement Proposal #8, otherwise known as PEP 8
 - if name == "abc": // NOT if(name =="abc" ):
 - style  //care for the line space // 
 - >indentation is 4 space
+- Use spaces instead of tabs for indentation.
+- Lines should be 79 characters in length or less
+- In a file, functions and classes should be separated by two blank lines.
+- In a class, methods should be separated by one blank line.
+- Don’t put spaces around list indexes, function calls, or keyword argument
+assignments.
+- Put one—and only one—space before and after variable assignments.
+- Functions, variables, and attributes should be in lowercase_underscore
+format.
+- Protected instance attributes should be in _leading_underscore format.
+- Private instance attributes should be in __double_leading_underscore
+format.
+- Classes and exceptions should be in CapitalizedWord format
+- Module-level constants should be in ALL_CAPS format
+- Instance methods in classes should use self as the name of the first parameter
+(which refers to the object).
+- Class methods should use cls as the name of the first parameter (which refers to
+the class).
+- Don’t check for empty values (like [] or '') by checking the length (if
+len(somelist) == 0).
+- Avoid single-line if statements, for and while loops, and except compound
+statements.
+- Always put import statements at the top of a file.
 ```
 print("hello world")
 print("input your name")
@@ -129,4 +160,28 @@ def display_name(name):
 
 
 display_name(name)
+```
+- In Python 3, there are two types that represent sequences of characters: bytes and str.
+- Instances of bytes contain raw 8-bit values. 
+- Instances of str contain Unicode
+- There are many ways to represent Unicode characters as binary data (raw 8-bit values).
+The most common encoding is UTF-8.
+- In Python 3, you’ll need one method that takes a str or bytes and always returns a
+str.
+```
+def to_str(bytes_or_str):
+    if isinstance(bytes_or_str, bytes):
+        value = bytes_or_str.decode(‘utf-8’)
+    else:
+        value = bytes_or_str
+    return value # Instance of str
+```
+- You’ll need another method that takes a str or bytes and always returns a bytes.
+```
+def to_str(bytes_or_str):
+    if isinstance(bytes_or_str, bytes):
+        value = bytes_or_str.decode(‘utf-8’)
+    else:
+        value = bytes_or_str
+    return value # Instance of str
 ```
