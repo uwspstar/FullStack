@@ -108,7 +108,8 @@ https://sphinxcontrib-napoleon.readthedocs.io/en/latest/example_google.html
 
 ### 05/25/2019
 - if name == "abc": // NOT if(name =="abc" ):
-- style
+- style  //care for the line space // 
+- >indentation is 4 space
 ```
 print("hello world")
 print("input your name")
@@ -122,5 +123,5 @@ def display_name(name):
         print(f"name is :{name} not a")
 
 
-print(name)
+display_name(name)
 ```
