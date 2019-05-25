@@ -210,6 +210,7 @@ noise.
 list are maintained. Modifying the result of slicing won’t affect the original list.
 - Don’t supply 0 for the start index or the length of the
 sequence for the end index.
+- ```somelist[start:end:stride]```
 - ::2 means select every second item starting at the beginning. Trickier, ::-2
 means select every second item starting at the end and moving backwards.
 ```
