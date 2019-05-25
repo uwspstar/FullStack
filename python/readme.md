@@ -119,6 +119,8 @@ name = input()
 def display_name(name):
     if name == "a":
         print(f"name is :{name}")
+    elif name == "x":
+        print(f"name is : xx {name}")
     else:
         print(f"name is :{name} not a")
 
