@@ -185,3 +185,5 @@ def to_str(bytes_or_str):
         value = bytes_or_str
     return value # Instance of str
 ```
+- In Python 3, bytes and str instances are never equivalent—
+not even the empty string
