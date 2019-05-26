@@ -6,6 +6,8 @@
 - Docker server (Docker daemon) // create img ,run container
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
 - **install Docker which install a linux VM on the top of mac/windows , the linux kernal is running inside linux VM**
+- kernel 核心，要点；[计] 内核
+- daemon  守护进程；后台程序
 > ![PC work](/Img/docker005.png)
 - $> Docker version
 > ![PC work](/Img/docker004.png)
