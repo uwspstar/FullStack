@@ -120,5 +120,5 @@ Docker took the following steps:
  4. The Docker daemon streamed that output to the Docker client, which sent it
     to your terminal.
 ```
-- Docker server check the image cache first before pull from free service Docker Hub. 
-after pull the image, it's saved image cache first
+- >Docker server check the image cache first before pull from free service Docker Hub. 
+>after pull the image, it's saved image cache first
