@@ -248,4 +248,15 @@ y + 1 == x # truthy because -1 + 1 does in fact equal zero;
 x or y and x - 1 == y and y + 1 == x 
 # also truthy because both sides of the second AND are truthy
 ```
-    
+- is vs "=="
+```
+a = 1
+b = 1
+a == b # True
+a is b # True
+
+x = [1, 2, 3]
+y = [1, 2, 3]
+x == y # True
+x is y # False
+```
