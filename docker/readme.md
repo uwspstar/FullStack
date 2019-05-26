@@ -115,6 +115,8 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lectur
 - Start container : run the start up command in the created container
 
 ```
+\\ First time , you will see "Status: Downloaded newer image for hello-world:latest"
+
 Docker took the following steps:
  1. The Docker client contacted the Docker daemon. (CLI and daemon)
  2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
@@ -125,7 +127,7 @@ Docker took the following steps:
     to your terminal.
 ```
 - Docker image include 1. File System (FS) 2. Start Up Command ( suck as echo hellp )
->Docker server check the image cache first before pull from free service Docker Hub. after pull the image, it's saved image cache first. first time , you will see "Status: Downloaded newer image for hello-world:latest"
+>Docker server check the image cache first before pull from free service Docker Hub. After pull the image, it's saved image cache first. First time , you will see "Status: Downloaded newer image for hello-world:latest"
 - $>docker run busybox echo hi // docker run <img> <command> 
 - $>docker run busybox ls // the list folders belong to the container
 >Docker can run the img command, because of the command (such as. exe) inside the img somewhere
