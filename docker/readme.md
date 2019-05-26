@@ -125,10 +125,14 @@ Docker took the following steps:
     to your terminal.
 ```
 - Docker image include 1. File System (FS) 2. Start Up Command ( suck as echo hellp )
->Docker server check the image cache first before pull from free service Docker Hub. after pull the image, it's saved image cache first
+>Docker server check the image cache first before pull from free service Docker Hub. after pull the image, it's saved image cache first. first time , you will see "Status: Downloaded newer image for hello-world:latest"
 - $>docker run busybox echo hi // docker run <img> <command> 
 - $>docker run busybox ls // the list folders belong to the container
 >Docker can run the img command, because of the command (such as. exe) inside the img somewhere
 - $>docker run busybox ping google.com
 - $>docker ps
 - $>docker ps --all
+- $>docker --help
+- $>docker create hello-world
+- $>docker start -a 11e3f7da0c3b26c
+
