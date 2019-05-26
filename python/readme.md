@@ -259,4 +259,9 @@ x = [1, 2, 3]
 y = [1, 2, 3]
 x == y # True
 x is y # False
+
+z = y
+z == y # True
+z is y # True
+
 ```
