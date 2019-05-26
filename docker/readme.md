@@ -111,8 +111,8 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lectur
 - login user id // NOT email
 - docker run hello-world  
 - ```docker run =  docker create <img> + docker start <container>```
-> create container : copy the FS snapshot into container
-> Start container : run the start up command in the created container
+- Create container : copy the FS snapshot into container
+- Start container : run the start up command in the created container
 
 ```
 Docker took the following steps:
