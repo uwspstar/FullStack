@@ -248,7 +248,7 @@ y + 1 == x # truthy because -1 + 1 does in fact equal zero;
 x or y and x - 1 == y and y + 1 == x 
 # also truthy because both sides of the second AND are truthy
 ```
-- "is" vs "=="  # "==" only check value, "is" check location
+- ```"is" vs "==" ```    # "==" only check value, "is" check location
 ```
 a = 1
 b = 1
