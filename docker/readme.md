@@ -125,3 +125,5 @@ Docker took the following steps:
 - $>docker run busybox echo hi // docker run <img> <command> 
 - $>docker run busybox ls // the list folders belong to the container
 >Docker can run the img command, because of the command (such as. exe) inside the img somewhere
+- $>docker run busybox ping google.com
+- $>docker ps
