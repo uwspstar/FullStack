@@ -101,3 +101,20 @@ $> # cd ~
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436706?start=30
 - Making Real Projects with Docker
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436944?start=0
+
+### 05/26/2019
+- kernel 核心，要点；[计] 内核
+- daemon  守护进程；后台程序
+- docker version
+- login user id // NOT email
+- docker run hello-world // docker run =  docker create
+```
+Docker took the following steps:
+ 1. The Docker client contacted the Docker daemon. (CLI and daemon)
+ 2. The Docker daemon pulled the "hello-world" image from the Docker Hub.
+    (amd64)
+ 3. The Docker daemon created a new container from that image which runs the
+    executable that produces the output you are currently reading.
+ 4. The Docker daemon streamed that output to the Docker client, which sent it
+    to your terminal.
+```
