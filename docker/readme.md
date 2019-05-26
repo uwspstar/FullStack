@@ -109,7 +109,11 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lectur
 - daemon  守护进程；后台程序
 - docker version
 - login user id // NOT email
-- docker run hello-world // docker run =  docker create
+- docker run hello-world  
+- ```docker run =  docker create <img> + docker start <container>```
+> create container : copy the FS snapshot into container
+> Start container : run the start up command in the created container
+
 ```
 Docker took the following steps:
  1. The Docker client contacted the Docker daemon. (CLI and daemon)
@@ -127,3 +131,4 @@ Docker took the following steps:
 >Docker can run the img command, because of the command (such as. exe) inside the img somewhere
 - $>docker run busybox ping google.com
 - $>docker ps
+- $>docker ps --all
