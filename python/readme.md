@@ -227,9 +227,13 @@ x is 0  # False
 print(f"x is 1 : {x is 1}")
 print(f"x is 0 : {x is 0}")
 ```
-- a = -1
-  not a  # this expression  false Negative numbers are just like regular numbers, so not (True) is false
-> *** -1 which is a nonzero value ***
+```
+a = -1
+not a  
+# this expression  false Negative numbers are just like regular numbers, 
+so not (True) is false
+```
+``` *** -1 which is a nonzero value *** ```
 ```
 x = 0
 y = -1
