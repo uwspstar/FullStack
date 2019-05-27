@@ -149,6 +149,8 @@ WARNING! This will remove:
 - $>docker logs 587608fee71c //NOT log . 
 >try run docker --help to see all command
 
+### Manipulating Containers with the Docker Client
+- $>Docker
 ```
 Commands:
   attach      Attach local standard input, output, and error streams to a running container
@@ -204,6 +206,10 @@ Commands:
 - docker create <img> <command> // cannot override the commad at docker start, docker start only start defult command
  
 ### 05/27/2019
+- $>docker kill 2e611b8ecd1d
+- $>docker ps --all
+- $>docker system prune
+
 - Executing Commands in Running Containers ``` docker exec -it <containerid> <command> ```
 - $>docker exec -it b98293d46ff9 redis-cli
 - -it means input command to the container
@@ -221,3 +227,32 @@ Commands:
 / # touch newFoldreName     // create newFoldre
 ```
 ### Building Custom Images Through Docker Server
+- Docker File -> Docker Client -> Docker Server -> Usable Img
+```
+1) Specify a base img
+2) Run some command to install additional program
+3) Run a specify command to run a container startup
+```
+- $>docker build .
+```
+Sending build context to Docker daemon  2.048kB
+Step 1/3 : FROM alpine
+ ---> 055936d39205
+Step 2/3 : RUN apk add --update redis
+ ---> Running in 7e88b7cdadd9
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/main/x86_64/APKINDEX.tar.gz
+fetch http://dl-cdn.alpinelinux.org/alpine/v3.9/community/x86_64/APKINDEX.tar.gz
+(1/1) Installing redis (4.0.12-r0)
+Executing redis-4.0.12-r0.pre-install
+Executing redis-4.0.12-r0.post-install
+Executing busybox-1.29.3-r10.trigger
+OK: 7 MiB in 15 packages
+Removing intermediate container 7e88b7cdadd9
+ ---> 8186cf679ef8
+Step 3/3 : CMD ["redis-server"]
+ ---> Running in d8795562fa54
+Removing intermediate container d8795562fa54
+ ---> 3a2bb2a40e74
+Successfully built 3a2bb2a40e74
+```
+
