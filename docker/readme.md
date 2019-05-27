@@ -183,7 +183,7 @@ Commands:
   ** search      Search the Docker Hub for images
   start       Start one or more stopped containers
   ** stats       Display a live stream of container(s) resource usage statistics
-  stop        Stop one or more running containers
+  ** stop        Stop one or more running containers
   tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
   top         Display the running processes of a container
   unpause     Unpause all processes within one or more containers
@@ -191,4 +191,16 @@ Commands:
   version     Show the Docker version information
   wait        Block until one or more containers stop, then print their exit codes
   ```
+ - $>docker system --help
+ ```
+ Commands:
+  df          Show docker disk usage
+  events      Get real time events from the server
+  info        Display system-wide information
+  prune       Remove unused data
+ ```
+ - $>docker system df
+ - docker create <img> <command> // cannot override the commad at docker start, docker start only start defult command
  
+ ### 05/27/2019
+ - docker exec -it <containerid> <command> // Executing Commands in Running Containers
