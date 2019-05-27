@@ -148,6 +148,7 @@ WARNING! This will remove:
 ```
 - $>docker logs 587608fee71c //NOT log . 
 >try run docker --help to see all command
+
 ```
 Commands:
   attach      Attach local standard input, output, and error streams to a running container
@@ -198,9 +199,25 @@ Commands:
   events      Get real time events from the server
   info        Display system-wide information
   prune       Remove unused data
- ```
- - $>docker system df
- - docker create <img> <command> // cannot override the commad at docker start, docker start only start defult command
+```
+- $>docker system df
+- docker create <img> <command> // cannot override the commad at docker start, docker start only start defult command
  
- ### 05/27/2019
- - docker exec -it <containerid> <command> // Executing Commands in Running Containers
+### 05/27/2019
+- Executing Commands in Running Containers ``` docker exec -it <containerid> <command> ```
+- $>docker exec -it b98293d46ff9 redis-cli
+- -it means input command to the container
+- -it means -i -t // -i attach the command to container, -t output nice format to screen
+- Getting a Command Prompt in a Container ```$>docker exec -it b98293d46ff9 sh ```
+```
+- $>docker exec -it b98293d46ff9 sh  // sh is a shell
+# redis-cli
+127.0.0.1:6379> ^C
+# cd ~/
+# ls
+```
+- $>docker run -it busybox sh 
+```
+/ # touch newFoldreName     // create newFoldre
+```
+### Building Custom Images Through Docker Server
