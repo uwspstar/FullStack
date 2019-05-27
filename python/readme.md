@@ -265,3 +265,4 @@ z == y # True
 z is y # True
 
 ```
+- else: # NOT else  , do not forget : after else
