@@ -265,4 +265,29 @@ z == y # True
 z is y # True
 
 ```
+### 05/27/2019
 - else: # NOT else  , do not forget : after else
+
+### 05/28/2019
+- str.strip() # remove white space
+- len(str) # length
+- split
+```
+a = "Hello, World!"
+print(a.split(",")) # returns ['Hello', ' World!']
+```
+- Python Membership Operators
+- x in y # Returns True if a sequence with the specified value is present in the object
+- x not in y
+- Python Bitwise Operators
+- https://www.tutorialspoint.com/python/bitwise_operators_example.htm
+```
+Operator	Name	Description
+-------------------------------------------------
+& 	AND	Sets each bit to 1 if both bits are 1
+|	OR	Sets each bit to 1 if one of two bits is 1
+^	XOR	Sets each bit to 1 if only one of two bits is 1
+~ 	NOT	Inverts all the bits
+<<	Zero fill left shift	Shift left by pushing zeros in from the right and let the leftmost bits fall off
+>>	Signed right shift	Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
+```
