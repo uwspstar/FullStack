@@ -259,7 +259,20 @@ Successfully built 3a2bb2a40e74
 - https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11436706#overview
 >create tempary container, output tempary img, the img cached in your local machine. Next time, 
 >run same command ( same order), will get the same img from cache
+- try to change the commad order as less as possible, so docker can use the pre build image from cache
 - alpine just a OS
 - apk just apach package
 - https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11436708#overview
+### all docker command need to be lowercase
+- all docker command need to be lowercase ( include inside dockerfile, not include key, such FROM. CMD, etc)
+- node img https://hub.docker.com/_/node
+- $>docker build .
+- $>docker build -t uwspstar/simpleweb:latest .
+### Container Port Mapping
+- $>docker run -p 8080:8080 uwspstar/simpleweb
+- $>docker run -p 5000:8080 uwspstar/simpleweb  
+>$>docker run -p 5000:8080 uwspstar/simpleweb 
+>
+>the port number inside application is listening 8080, box in a container, the 5000 is local to mapping to 8080
+
 
