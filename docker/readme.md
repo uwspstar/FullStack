@@ -255,4 +255,8 @@ Removing intermediate container d8795562fa54
  ---> 3a2bb2a40e74
 Successfully built 3a2bb2a40e74
 ```
+### 05/28/2019
+- https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11436706#overview
+- alpine just a OS
+- apk just apach package
 
