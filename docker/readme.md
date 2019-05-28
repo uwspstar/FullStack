@@ -274,5 +274,6 @@ Successfully built 3a2bb2a40e74
 >$>docker run -p 5000:8080 uwspstar/simpleweb 
 >
 >the port number inside application is listening 8080, box in a container, the 5000 is local to mapping to 8080
+- $>docker run -it uwspstar/simpleweb sh  // NOT -t
 
 
