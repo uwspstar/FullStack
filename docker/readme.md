@@ -257,6 +257,9 @@ Successfully built 3a2bb2a40e74
 ```
 ### 05/28/2019
 - https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11436706#overview
+>create tempary container, output tempary img, the img cached in your local machine. Next time, 
+>run same command ( same order), will get the same img from cache
 - alpine just a OS
 - apk just apach package
+- https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11436708#overview
 
