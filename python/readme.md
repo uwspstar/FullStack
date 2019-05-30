@@ -291,3 +291,6 @@ Operator	Name	Description
 <<	Zero fill left shift	Shift left by pushing zeros in from the right and let the leftmost bits fall off
 >>	Signed right shift	Shift right by pushing copies of the leftmost bit in from the left, and let the rightmost bits fall off
 ```
+### 05/30/2019
+- range(3) #[0,1,2]
+- for num in range(3): 
