@@ -137,9 +137,16 @@ Docker took the following steps:
 - $>docker run busybox ping google.com
 - $>docker ps
 - $>docker ps --all
-- $>docker --help
+- $>docker --help 
+```
+\\same as $>docker --help 
+$>docker
+```
 - $>docker create hello-world
-- $>docker start -a 11e3f7da0c3b26c  // -a means sent the output from running contain to your screen
+- $>docker start -a 11e3f7da0c3b26c  
+```
+// -a means sent the output from running contain to your screen
+```
 >when start a container, we can restart again, but we cannot override the startup command
 - $docker system prune  // very usefull, clearn up you pc when you no longer use the container
 ```
@@ -152,8 +159,11 @@ WARNING! This will remove:
 - $>docker logs 587608fee71c //NOT log . 
 >try run docker --help to see all command
 
+
 ### Manipulating Containers with the Docker Client
-- $>Docker
+- $>docker
+
+### all command lowercase
 ```
 Commands:
   attach      Attach local standard input, output, and error streams to a running container
@@ -161,9 +171,9 @@ Commands:
   commit      Create a new image from a container's changes
   cp          Copy files/folders between a container and the local filesystem
   ** create      Create a new container
-  diff        Inspect changes to files or directories on a container's filesystem
+  ** diff        Inspect changes to files or directories on a container's filesystem
   events      Get real time events from the server
-  exec        Run a command in a running container
+  *** exec        Run a command in a running container
   export      Export a container's filesystem as a tar archive
   ** history     Show the history of an image
   ** images      List images
@@ -180,14 +190,14 @@ Commands:
   ** ps          List containers
   pull        Pull an image or a repository from a registry
   push        Push an image or a repository to a registry
-  rename      Rename a container
-  restart     Restart one or more containers
-  rm          Remove one or more containers
+  *** rename      Rename a container
+  *** restart     Restart one or more containers
+  *** rm          Remove one or more containers
   rmi         Remove one or more images
   ** run         Run a command in a new container
   save        Save one or more images to a tar archive (streamed to STDOUT by default)
   ** search      Search the Docker Hub for images
-  start       Start one or more stopped containers
+  *** start       Start one or more stopped containers
   ** stats       Display a live stream of container(s) resource usage statistics
   ** stop        Stop one or more running containers
   tag         Create a tag TARGET_IMAGE that refers to SOURCE_IMAGE
@@ -236,7 +246,7 @@ Commands:
 2) Run some command to install additional program
 3) Run a specify command to run a container startup
 ```
-- $>docker build .
+- $>docker build .  ``` NEED .```
 ```
 Sending build context to Docker daemon  2.048kB
 Step 1/3 : FROM alpine
@@ -260,8 +270,10 @@ Successfully built 3a2bb2a40e74
 ```
 ### 05/28/2019
 - https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11436706#overview
->create tempary container, output tempary img, the img cached in your local machine. Next time, 
->run same command ( same order), will get the same img from cache
+```
+create tempary container, output tempary img, the img cached in your local machine. Next time,
+run same command ( same order), will get the same img from cache
+```
 - try to change the commad order as less as possible, so docker can use the pre build image from cache
 - alpine just a OS
 - apk just apach package
@@ -279,4 +291,5 @@ Successfully built 3a2bb2a40e74
 >the port number inside application is listening 8080, box in a container, the 5000 is local to mapping to 8080
 - $>docker run -it uwspstar/simpleweb sh  // NOT -t
 
+### 05/30/2019
 
