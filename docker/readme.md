@@ -229,7 +229,7 @@ Commands:
 - -it means -i -t // -i attach the command to container, -t output nice format to screen
 - Getting a Command Prompt in a Container ```$>docker exec -it b98293d46ff9 sh ```
 ```
-- $>docker exec -it b98293d46ff9 sh  // sh is a shell
+- $>docker exec -it b98293d46ff9 sh  // sh is a shell , -t is tag
 # redis-cli
 127.0.0.1:6379> ^C
 # cd ~/
@@ -357,3 +357,33 @@ Successfully tagged uwspstar/simpleweb:latest
 ```
 - A Docker Cheat Sheet
 https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes#a-docker-cheat-sheet
+- $>docker-compose ``` // Define and run multi-container applications with Docker.```
+```
+Commands:
+  build              Build or rebuild services
+  bundle             Generate a Docker bundle from the Compose file
+  config             Validate and view the Compose file
+  create             Create services
+  down               Stop and remove containers, networks, images, and volumes
+  events             Receive real time events from containers
+  exec               Execute a command in a running container
+  help               Get help on a command
+  images             List images
+  kill               Kill containers
+  logs               View output from containers
+  pause              Pause services
+  port               Print the public port for a port binding
+  ps                 List containers
+  pull               Pull service images
+  push               Push service images
+  restart            Restart services
+  rm                 Remove stopped containers
+  run                Run a one-off command
+  scale              Set number of containers for a service
+  start              Start services
+  stop               Stop services
+  top                Display the running processes
+  unpause            Unpause services
+  up                 Create and start containers
+  version            Show the Docker-Compose version information
+```
