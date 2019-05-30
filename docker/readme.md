@@ -351,6 +351,7 @@ Successfully tagged uwspstar/simpleweb:latest
 ```
 - Redis  // same as tiny databse inside memory
 ```
+- $>docker info
 - $>docker rmi a4195c3fb018 //remove docker image
 - $>docker rm ms4195c3fb018  //remove container
 ```
