@@ -331,7 +331,7 @@ and pop removes the item at a specific index and returns it.
 >>> a
 [4, 5]
 ```
-- remove duplicate
+- remove val in list
 ```
 while val in nums:
         nums.remove(val)
