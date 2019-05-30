@@ -65,15 +65,18 @@ f809ebae37de9b573b8abd387cdfdb8a242009add35aa0e7bd306b9db9e1e207
 - $> docker kill <id> // stop now
 - open another window $> docker ps
 - $> docker run redis
-- $> docker exec -it 9d758c1f656c redis-cli // important to use **-it = -i -t**
-- -t make format nice with intellengence 
- ```
+- $> docker exec -it 9d758c1f656c redis-cli 
+```
+ // important to use **-it = -i -t**
+ -t make format nice with intellengence 
+```
+```
  open another window to run $> docker ps 
 
  $> docker exec -it 9d758c1f656c redis-cli
 127.0.0.1:6379> 
 $>ctrl + C  //exit
- ```
+```
  
 - $> docker exec -it 2b6d1d3b9761 sh // **sh** run the command inside container, good for debug
 sh just another command shell, same as bach, powershell, etc
