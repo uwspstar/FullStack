@@ -294,3 +294,4 @@ Operator	Name	Description
 ### 05/30/2019
 - range(3) #[0,1,2]
 - for num in range(3): 
+- 'list' object cannot be interpreted as an integer
