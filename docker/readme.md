@@ -271,29 +271,52 @@ Successfully built 3a2bb2a40e74
 ### 05/28/2019
 - https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11436706#overview
 ```
-create tempary container, output tempary img, the img cached in your local machine. Next time,
-run same command ( same order), will get the same img from cache
+create tempary container, output tempary img, the img cached in your local machine. 
+Next time, run same command ( same order), will get the same img from cache
 ```
 - try to change the commad order as less as possible, so docker can use the pre build image from cache
 - alpine just a OS
 - apk just apach package
 - https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11436708#overview
+
 ### all docker command need to be lowercase
 - all docker command need to be lowercase ( include inside dockerfile, not include key, such FROM. CMD, etc)
 - node img https://hub.docker.com/_/node
 - $>docker build .
 - $>docker build -t uwspstar/simpleweb:latest .
+
 ### Container Port Mapping
 - $>docker run -p 8080:8080 uwspstar/simpleweb
 - $>docker run -p 5000:8080 uwspstar/simpleweb  
->$>docker run -p 5000:8080 uwspstar/simpleweb 
->
->the port number inside application is listening 8080, box in a container, the 5000 is local to mapping to 8080
+- $>docker run -p 5000:8080 uwspstar/simpleweb 
+```
+the port number inside application is listening 8080, box in a container, 
+the 5000 is local to mapping to 8080
+```
 - $>docker run -it uwspstar/simpleweb sh  // NOT -t
+
+### 05/29/2019
+```
+# Specify a base img
+FROM node:alpine
+
+# Install some dependencies
+COPY ./ ./
+RUN npm install
+
+# Default command
+CMD ["npm","start"]
+```
 
 ### 05/30/2019
 ### Minimizing Cache Busting and Rebuilds
-
+- cache package.json step
+- COPY <from> <to>
+```
+// Copy current location package.json file to container current location
+COPY ./package.json ./
+```
+- we do not need to run the $>RUN npm install if ./package.json file NOT change, save time
 ```
 # Specify a base img
 FROM node:alpine
@@ -306,3 +329,30 @@ COPY ./ ./
 # Default command
 CMD ["npm","start"]
 ```
+- step 2/5 and 3/5 now, using cache
+```
+Sending build context to Docker daemon  4.096kB
+Step 1/5 : FROM node:alpine
+ ---> 91acf04599c4
+Step 2/5 : COPY ./package.json ./
+ ---> Using cache
+ ---> 06261e89a1ab
+Step 3/5 : RUN npm install
+ ---> Using cache
+ ---> d1c2c46dc888
+Step 4/5 : COPY ./ ./
+ ---> b90f522ffa04
+Step 5/5 : CMD ["npm","start"]
+ ---> Running in 9ceb0adc5bcb
+Removing intermediate container 9ceb0adc5bcb
+ ---> 89a7ae89b730
+Successfully built 89a7ae89b730
+Successfully tagged uwspstar/simpleweb:latest
+```
+- Redis  // same as tiny databse inside memory
+```
+- $>docker rmi a4195c3fb018 //remove docker image
+- $>docker rm ms4195c3fb018  //remove container
+```
+- A Docker Cheat Sheet
+https://www.digitalocean.com/community/tutorials/how-to-remove-docker-images-containers-and-volumes#a-docker-cheat-sheet
