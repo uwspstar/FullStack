@@ -295,3 +295,17 @@ Operator	Name	Description
 - range(3) #[0,1,2]
 - for num in range(3): 
 - 'list' object cannot be interpreted as an integer
+- loop with index
+```
+colors = ["red", "green", "blue", "purple"]
+i = 0
+while i < len(colors):
+    print(colors[i])
+    i += 1
+    
+
+colors = ["red", "green", "blue", "purple"]
+for i in range(len(colors)):
+    print(colors[i])
+
+```
