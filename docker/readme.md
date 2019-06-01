@@ -402,3 +402,93 @@ I want to create docker-compose.yml
    keyword services means container
 
 ```
+- networking with Docker Compose
+https://stackoverflow.com/questions/19234831/where-are-docker-images-stored-on-the-host-machine
+- docker run myimage // = docker-compose up
+- docker build . + docker run myimage // = docker-compose up --build
+- $>docker-compose up
+```
+Creating network "visits_default" with the default driver
+Pulling redis-server (redis:)...
+latest: Pulling from library/redis
+743f2d6c1f65: Pull complete
+171658c5966d: Pull complete
+fbef10bd7a65: Pull complete
+0b0b11956c72: Pull complete
+09dbd716637e: Pull complete
+d09046fd4481: Pull complete
+Building node-app  420B/420BB
+Step 1/6 : FROM node:alpine
+ ---> 91acf04599c4
+Step 2/6 : WORKDIR "/app"
+ ---> Using cache
+ ---> f7dddb2e1111
+Step 3/6 : COPY package.json .
+ ---> fe434746c563
+Step 4/6 : RUN npm install
+ ---> Running in 48ec3f0415a8
+npm notice created a lockfile as package-lock.json. You should commit this file.
+npm WARN app No description
+npm WARN app No repository field.
+npm WARN app No license field.
+
+added 54 packages from 41 contributors and audited 130 packages in 2.989s
+found 0 vulnerabilities
+
+Removing intermediate container 48ec3f0415a8
+ ---> a97dcd71a599
+Step 5/6 : COPY . .
+ ---> 8b10c602b602
+Step 6/6 : CMD ["npm", "start"]
+ ---> Running in a3da79c6ddab
+Removing intermediate container a3da79c6ddab
+ ---> 2818c9e17382
+Successfully built 2818c9e17382
+Successfully tagged visits_node-app:latest
+WARNING: Image for service node-app was built because it did not already exist. To rebuild this image you must use `docker-compose build` or `docker-compose up --build`.
+Creating visits_node-app_1     ... done
+Creating visits_redis-server_1 ... done
+Attaching to visits_redis-server_1, visits_node-app_1
+redis-server_1  | 1:C 01 Jun 2019 10:32:31.035 # oO0OoO0OoO0Oo Redis is starting oO0OoO0OoO0Oo
+redis-server_1  | 1:C 01 Jun 2019 10:32:31.035 # Redis version=5.0.5, bits=64, commit=00000000, modified=0, pid=1, just started
+redis-server_1  | 1:C 01 Jun 2019 10:32:31.035 # Warning: no config file specified, using the default config. In order to specify a config file use redis-server /path/to/redis.conf
+redis-server_1  | 1:M 01 Jun 2019 10:32:31.037 * Running mode=standalone, port=6379.
+redis-server_1  | 1:M 01 Jun 2019 10:32:31.037 # WARNING: The TCP backlog setting of 511 cannot be enforced because /proc/sys/net/core/somaxconn is set to the lower value of 128.
+redis-server_1  | 1:M 01 Jun 2019 10:32:31.037 # Server initialized
+redis-server_1  | 1:M 01 Jun 2019 10:32:31.037 # WARNING you have Transparent Huge Pages (THP) support enabled in your kernel. This will create latency and memory usage issues with Redis. To fix this issue run the command 'echo never > /sys/kernel/mm/transparent_hugepage/enabled' as root, and add it to your /etc/rc.local in order to retain the setting after a reboot. Redis must be restarted after THP is disabled.
+redis-server_1  | 1:M 01 Jun 2019 10:32:31.037 * Ready to accept connections
+node-app_1      | 
+node-app_1      | > @ start /app
+node-app_1      | > node index.js
+node-app_1      | 
+node-app_1      | Listening on port 8081
+```
+- port=6379 // redis TCP
+- $>docker-compose up -d
+- $>docker-compose down
+- Top 10 Docker CLI commands you can’t live without by ryanwhocodes
+https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-54fb6377f481
+```
+1) $>docker ps 
+2) $>docker pull
+3) $>docker build
+4) $>docker run
+5) $>docker log
+6) $>docker volume ls
+7) $>docker rm
+8) $>docker rmi
+9) $>docker stop
+10 $>docker-compose up -d // start up all my containers 
+    - $>docker kill $(docker ps -q) //  - kill all running containers with 
+    - $>docker rm $(docker ps -a -q) // delete all stopped containers with 
+    - $>docker rmi $(docker images -q) //delete all images with 
+```
+```
+A container is launched by running an image. 
+An image is an executable package that includes everything needed
+to run an application–the code, a runtime, libraries, environment variables, and configuration files.
+A container is a runtime instance of an image–what the image 
+becomes in memory when executed (that is, an image with state, or a user process). 
+You can see a list of your running containers with the command, docker ps, 
+just as you would in Linux. — from Docker Concepts
+```
