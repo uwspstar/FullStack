@@ -387,3 +387,18 @@ Commands:
   up                 Create and start containers
   version            Show the Docker-Compose version information
 ```
+
+### 06/01/2019
+- docker-compose.yml
+```
+I want to create docker-compose.yml
+1) redis-server container
+   - make it using the redis image
+2) node-app container
+   - make is using the Dockerfile in the current director
+   - map port 4040 to 8081
+   4040 local port
+   8018 port in docker container
+   keyword services means container
+
+```
