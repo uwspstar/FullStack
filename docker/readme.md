@@ -2,6 +2,10 @@
 - **Docker and Kubernetes: The Complete Guide** https://www.udemy.com/docker-and-kubernetes-the-complete-guide/ by **Stephen Grider**
 - Docker image // single file with all dependencies and configs to run the program
 - Docker container // instance of the image to run the program
+```
+An image is an executable package that includes everything needed
+A container is launched by running an image. 
+```
 - Docker client (Docker cli) // commands just a portal, nothing related the docker imgs and containers
 - Docker server (Docker daemon) // create img ,run container
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
