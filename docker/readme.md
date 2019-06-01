@@ -186,7 +186,7 @@ Commands:
   inspect     Return low-level information on Docker objects
   ** kill        Kill one or more running containers
   load        Load an image from a tar archive or STDIN
-  login       Log in to a Docker registry
+  ** login       Log in to a Docker registry
   logout      Log out from a Docker registry
   ** logs        Fetch the logs of a container
   pause       Pause all processes within one or more containers
@@ -197,7 +197,7 @@ Commands:
   *** rename      Rename a container
   *** restart     Restart one or more containers
   *** rm          Remove one or more containers
-  rmi         Remove one or more images
+  *** rmi         Remove one or more images
   ** run         Run a command in a new container
   save        Save one or more images to a tar archive (streamed to STDOUT by default)
   ** search      Search the Docker Hub for images
@@ -487,6 +487,7 @@ https://medium.com/the-code-review/top-10-docker-commands-you-cant-live-without-
     - $>docker rm $(docker ps -a -q) // delete all stopped containers with 
     - $>docker rmi $(docker images -q) //delete all images with 
 ```
+- ```-q, --quiet          Only display IDs```
 ```
 A container is launched by running an image. 
 An image is an executable package that includes everything needed
@@ -496,3 +497,5 @@ becomes in memory when executed (that is, an image with state, or a user process
 You can see a list of your running containers with the command, docker ps, 
 just as you would in Linux. — from Docker Concepts
 ```
+- Automatic Container Restarts
+https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11437008#overview
