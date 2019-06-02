@@ -510,3 +510,11 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/114
 ```
 - COPY with docker but with exclusion 
 https://stackoverflow.com/questions/43747776/copy-with-docker-but-with-exclusion
+- .dockerignore file
+```
+before :
+Sending build context to Docker daemon  153.3MB
+
+after :
+Sending build context to Docker daemon  1.066MB
+```
