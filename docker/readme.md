@@ -508,3 +508,5 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/114
 ``` 
 -f mean the specified file
 ```
+- COPY with docker but with exclusion 
+https://stackoverflow.com/questions/43747776/copy-with-docker-but-with-exclusion
