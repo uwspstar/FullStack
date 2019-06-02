@@ -518,3 +518,9 @@ Sending build context to Docker daemon  153.3MB
 after :
 Sending build context to Docker daemon  1.066MB
 ```
+- WORKDIR
+```
+You can think of WORKDIR like a cd inside the container 
+(it affects commands that come later in the Dockerfile, like the RUN command). 
+```
+### CMD ["npm", "run", "start"] // NOT space, need to use ","
