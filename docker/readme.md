@@ -499,3 +499,8 @@ just as you would in Linux. — from Docker Concepts
 ```
 - Automatic Container Restarts
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11437008#overview
+
+### 06/02/2019
+- npm run start
+- npm run test
+- npm run build
