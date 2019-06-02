@@ -504,3 +504,4 @@ https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/114
 - npm run start
 - npm run test
 - npm run build
+- $>docker build -f Dockerfile.dev .   ``` # -f mean the specified file```
