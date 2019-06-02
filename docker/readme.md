@@ -524,3 +524,8 @@ You can think of WORKDIR like a cd inside the container
 (it affects commands that come later in the Dockerfile, like the RUN command). 
 ```
 ### CMD ["npm", "run", "start"] // NOT space, need to use ","
+- $>docker run -p 4000:3000 99ae0f84099b
+```
+-p 4000:3000
+mapping localhost 4000 to container port 3000
+```
