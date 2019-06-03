@@ -336,3 +336,5 @@ and pop removes the item at a specific index and returns it.
 while val in nums:
         nums.remove(val)
 ```
+### 06/03/2019
+- while boolenExpression:
