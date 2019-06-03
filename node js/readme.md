@@ -6,3 +6,4 @@ https://www.udemy.com/advanced-node-for-developers
 - https://github.com/nodejs/node
 - process.binding() // bind C++ code to js
 - OS scheduler decide which thread should be processed
+- Event loop
