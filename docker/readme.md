@@ -529,3 +529,5 @@ You can think of WORKDIR like a cd inside the container
 -p 4000:3000
 mapping localhost 4000 to container port 3000
 ```
+### reference container with Bookmarking Volumes
+https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11437068#overview
