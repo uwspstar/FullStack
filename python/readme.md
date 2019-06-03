@@ -340,3 +340,8 @@ while val in nums:
 - while boolenExpression:
 - https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+- ⌘/
+```
+⌘/ Toggle line comment
+⇧⌥A Toggle block comment
+```
