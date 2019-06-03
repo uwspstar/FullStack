@@ -338,4 +338,5 @@ while val in nums:
 ```
 ### 06/03/2019
 - while boolenExpression:
-
+- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
