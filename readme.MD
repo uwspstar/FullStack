@@ -1,4 +1,6 @@
 
+# VSCODE shortcuts
+https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 
 # Docker
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/
