@@ -94,3 +94,6 @@ filter() looks at the matched elements and returns the ones that also match the 
 https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
 - ```filter does not update the existing array it will return a new filtered array every time.```
 - ```Map generate a new array based on your existing array.```
+- ```The map method allows items in an array to be manipulated to the user’s preference```
+- Filter vs Map :  filter with condition, such as boolen, map with manipulated, such as Math.sqr()
+- Filter vs Map all return a new array.  forEach, return same array
