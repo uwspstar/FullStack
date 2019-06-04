@@ -82,3 +82,15 @@ app.put('/api/courses/:id', (req, res) => {
     res.send(course);
 })
 ```
+- filter(function() { ... } ) vs find(function() { ... } )
+```
+filter runs till the end of the array, and invokes its callback on every item; 
+in contrast to find which stops after having found one. 
+When the callback throws an exception on one of these additionally iterated elements, the outcome is different.
+find() returns children of the match elements for the given selector, 
+filter() looks at the matched elements and returns the ones that also match the given selector.
+```
+- Filter vs Map vs Reduce vs Foreach
+https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-ea3127c6d319
+- ```filter does not update the existing array it will return a new filtered array every time.```
+- ```Map generate a new array based on your existing array.```
