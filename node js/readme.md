@@ -15,6 +15,8 @@ $>mkdir express-demo
 $>cd express-demo
 $>npm init --yes
 $>npm i express
+...
+$>node index.js
 ```
 - https://expressjs.com/en/4x/api.html#req
 - const port = process.env.PORT || 3000
@@ -37,3 +39,11 @@ https://www.udemy.com/nodejs-master-class/learn/lecture/9991632#overview
 - console.log(JSON.stringify(o));
 - console.dir vs console.log
 https://stackoverflow.com/questions/11954152/whats-the-difference-between-console-dir-and-console-log
+- req.param.id
+- req.query
+- $>node index.js
+```
+use query string param for anything that is optional
+```
+- parseInt(req.param.id)
+- app.use(express.json()); //NOT app.use(express.json);
