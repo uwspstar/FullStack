@@ -47,3 +47,35 @@ use query string param for anything that is optional
 ```
 - parseInt(req.param.id)
 - app.use(express.json()); //NOT app.use(express.json);
+- req.status(400).send('bad input') // after error, DO NOT FORGET "return;"
+### joi 
+- $>npm i joi@version // input validation
+- put
+```
+app.put('/api/courses/:id', (req, res) => {
+    // Look up the course
+    // If not existing, return 404 
+    const course = courses.find(c => c.id === parseInt(req.params.id));
+    if (!course) {
+        res.status(404).send('The course with the given ID was not exist');
+        return;
+    }
+
+    // Validate
+    // If invalid, return 400 - Bad request
+    const schema = {
+        name: Joi.string().min(3).required()
+    }
+
+    const result = Joi.validate(req.body, schema);
+    if (result.error) {
+        res.status(400).send(result.error.details[0].message);
+        return;
+    }
+
+    // Update course
+    // Return the updated course
+    course.name = req.body.name;
+    res.send(course);
+})
+```
