@@ -7,3 +7,15 @@ https://www.udemy.com/advanced-node-for-developers
 - process.binding() // bind C++ code to js
 - OS scheduler decide which thread should be processed
 - Event loop
+
+### 06/04/2019
+### Express
+```
+$>mkdir express-demo
+$>cd express-demo
+$>npm init --yes
+$>npm i express
+```
+- const port = process.env.PORT || 3000
+- $>export PORT=5000
+- $>nodemon index.js
