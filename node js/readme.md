@@ -171,3 +171,5 @@ ElasticSearch
 ```
 ### Router
 - app.get('/api/courses',router); // NOT app.get('api/courses',router);
+### bcrypt
+- $>npm i bcrypt
