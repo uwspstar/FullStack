@@ -159,9 +159,9 @@ app.use(‘/api/admin’, function(req, res, next)) {
 - https://expressjs.com/en/resources/middleware.html
 ```
 *** body-parser	Parse HTTP request body. See also: body, co-body, and raw-body.	express.bodyParser
-compression	Compress HTTP responses.	express.compress
+*** compression	Compress HTTP responses.	express.compress
 connect-rid	Generate unique request ID.	NA
-cookie-parser	Parse cookie header and populate req.cookies. See also cookies and keygrip.	express.cookieParser
+*** cookie-parser	Parse cookie header and populate req.cookies. See also cookies and keygrip.	express.cookieParser
 *** cookie-session	Establish cookie-based sessions.	express.cookieSession
 *** cors	Enable cross-origin resource sharing (CORS) with various options.	NA
 *** csurf	Protect from CSRF exploits.	express.csrf
