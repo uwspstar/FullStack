@@ -157,3 +157,23 @@ app.use(‘/api/admin’, function(req, res, next)) {
 ```
 ### third party middleware
 - https://expressjs.com/en/resources/middleware.html
+```
+*** body-parser	Parse HTTP request body. See also: body, co-body, and raw-body.	express.bodyParser
+compression	Compress HTTP responses.	express.compress
+connect-rid	Generate unique request ID.	NA
+cookie-parser	Parse cookie header and populate req.cookies. See also cookies and keygrip.	express.cookieParser
+*** cookie-session	Establish cookie-based sessions.	express.cookieSession
+*** cors	Enable cross-origin resource sharing (CORS) with various options.	NA
+*** csurf	Protect from CSRF exploits.	express.csrf
+*** errorhandler	Development error-handling/debugging.	express.errorHandler
+method-override	Override HTTP methods using header.	express.methodOverride
+*** morgan	HTTP request logger.	express.logger
+multer	Handle multi-part form data.	express.bodyParser
+response-time	Record HTTP response time.	express.responseTime
+serve-favicon	Serve a favicon.	express.favicon
+serve-index	Serve directory listing for a given path.	express.directory
+*** serve-static	Serve static files.	express.static
+session	Establish server-based sessions (development only).	express.session
+*** timeout	Set a timeout period for HTTP request processing.	express.timeout
+vhost	Create virtual domains.	express.vhost
+```
