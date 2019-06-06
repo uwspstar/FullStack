@@ -1,4 +1,4 @@
-- Node.js: The Complete Guide to Build RESTful APIs (2018) by Mash
+### Node.js: The Complete Guide to Build RESTful APIs (2018) by Mosh
 https://www.udemy.com/nodejs-master-class
 
 ### CRUD example
