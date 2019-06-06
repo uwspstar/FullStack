@@ -149,3 +149,21 @@ console.log(`Mail Password: ${config.get('mail.password')}`);
 
 ### Templating Engines
 - https://www.udemy.com/nodejs-master-class/learn/lecture/9991974#overview
+
+### Database Integration
+- https://expressjs.com/en/guide/database-integration.html
+```
+Cassandra
+*** Couchbase
+*** CouchDB
+LevelDB
+*** MySQL
+*** MongoDB
+Neo4j
+*** Oracle
+*** PostgreSQL
+*** Redis
+*** SQL Server
+SQLite
+ElasticSearch
+```
