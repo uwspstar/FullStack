@@ -182,3 +182,4 @@ const hashed = await bcrypt.hash(‘1234’, salt);
 const isValid = await bcrypt.compare(‘1234’, hashed);
 ```
 - JSON Web Token (JWT)
+- $>npm install jsonwebtoken
