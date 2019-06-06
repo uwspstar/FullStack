@@ -112,3 +112,12 @@ authentication, etc
 ### 06/07/2009
 - console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
 - console.log(`app: ${app.get('env')}`);  // app: development is default
+### morgan
+- $>npm install morgan
+```
+// morgan is HTTP request logger.	express.logger
+if (app.get('env') === 'development') {
+    app.use(morgan('tiny'));
+}
+```
+- $>export NODE_ENV=production
