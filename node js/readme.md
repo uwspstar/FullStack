@@ -123,6 +123,7 @@ if (app.get('env') === 'development') {
 - $>export NODE_ENV=production
 ### config
 - $>npm install config
+- $>export app_password=unset
 ```
 // Configuration :  all configs under the config folder
 console.log(`Application Name: ${config.get('name')}`);
@@ -135,6 +136,7 @@ console.log(`Mail server: ${config.get('mail.host')}`);
 //create a configuration file, config/custom-environment-variables.json
 //app_password is the variable input form node console
 //$>export app_passowrd=1234
+//$>export app_password=unset
 {
     "mail": {
         "password": "app_password"
