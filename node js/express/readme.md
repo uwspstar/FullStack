@@ -177,3 +177,18 @@ session	Establish server-based sessions (development only).	express.session
 *** timeout	Set a timeout period for HTTP request processing.	express.timeout
 vhost	Create virtual domains.	express.vhost
 ```
+```
+connect-image-optimus	Optimize image serving. Switches images to .webp or .jxr, if possible.
+express-debug	Development tool that adds information about template variables (locals), current session, and so on.
+express-partial-response	Filters out parts of JSON responses based on the fields query-string; by using Google API’s Partial Response.
+*** express-simple-cdn	Use a CDN for static assets, with multiple host support.
+express-slash	Handles routes with and without trailing slashes.
+express-stormpath	User storage, authentication, authorization, SSO, and data security.
+express-uncapitalize	Redirects HTTP requests containing uppercase to a canonical lowercase form.
+*** helmet	Helps secure your apps by setting various HTTP headers.
+join-io	Joins files on the fly to reduce the requests count.
+*** passport	Authentication using “strategies” such as OAuth, OpenID and many others. See http://passportjs.org/ for more information.
+static-expiry	Fingerprint URLs or caching headers for static assets.
+view-helpers	Common helper methods for views.
+sriracha-admin	Dynamically generate an admin site for Mongoose.
+```
