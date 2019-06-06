@@ -183,3 +183,6 @@ const isValid = await bcrypt.compare(‘1234’, hashed);
 ```
 - JSON Web Token (JWT)
 - $>npm install jsonwebtoken
+- Storing Secrets in Environment Variables
+https://www.udemy.com/nodejs-master-class/learn/lecture/9993496#overview
+-
