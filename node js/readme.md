@@ -169,3 +169,5 @@ Neo4j
 SQLite
 ElasticSearch
 ```
+### Router
+- app.get('/api/courses',router); // NOT app.get('api/courses',router);
