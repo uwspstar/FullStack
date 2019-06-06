@@ -131,6 +131,8 @@ console.log(`Mail server: ${config.get('mail.host')}`);
 ```DO NOT store the password in the config, avoid everyone can see after code checked in repository```
 - custom-environment-variables.json
 ```
+//To enable custom environment variables, 
+//create a configuration file, config/custom-environment-variables.json
 //app_password is the variable input form node console
 //$>export app_passowrd=1234
 {
