@@ -173,3 +173,12 @@ ElasticSearch
 - app.get('/api/courses',router); // NOT app.get('api/courses',router);
 ### bcrypt
 - $>npm i bcrypt
+- To hash passwords, use bcrypt:
+```
+// Hashing passwords
+const salt = await bcrypt.genSalt(10);
+const hashed = await bcrypt.hash(‘1234’, salt);
+// Validating passwords
+const isValid = await bcrypt.compare(‘1234’, hashed);
+```
+- JSON Web Token (JWT)
