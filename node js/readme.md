@@ -108,3 +108,7 @@ function.
 - static(): to serve static files
 - You can create custom middleware for cross-cutting concerns, such as logging,
 authentication, etc
+
+### 06/07/2009
+- console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+- console.log(`app: ${app.get('env')}`);  // app: development is default
