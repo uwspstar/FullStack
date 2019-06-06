@@ -185,4 +185,6 @@ const isValid = await bcrypt.compare(‘1234’, hashed);
 - $>npm install jsonwebtoken
 - Storing Secrets in Environment Variables
 https://www.udemy.com/nodejs-master-class/learn/lecture/9993496#overview
--
+- ```401 Unauthorized 403 fobidden```
+- use try{...} catch {...} for async function
+- use ,then().catch() for promis
