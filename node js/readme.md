@@ -123,3 +123,4 @@ if (app.get('env') === 'development') {
 - $>export NODE_ENV=production
 ### config
 - $>npm install config
+```DO NOT store the password in the config, avoid everyone can see after code checked in repository```
