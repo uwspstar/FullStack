@@ -129,3 +129,15 @@ console.log(`Application Name: ${config.get('name')}`);
 console.log(`Mail server: ${config.get('mail.host')}`);
 ```
 ```DO NOT store the password in the config, avoid everyone can see after code checked in repository```
+- custom-environment-variables.json
+```
+//app_password is the variable input form node console
+//$>export app_passowrd=1234
+{
+    "mail": {
+        "password": "app_password"
+    }
+}
+...
+console.log(`Mail Password: ${config.get('mail.password')}`);
+```
