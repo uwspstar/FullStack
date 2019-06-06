@@ -143,3 +143,9 @@ console.log(`Mail server: ${config.get('mail.host')}`);
 ...
 console.log(`Mail Password: ${config.get('mail.password')}`);
 ```
+### debug
+- $>npm install debug
+- https://www.udemy.com/nodejs-master-class/learn/lecture/9991972#overview
+
+### Templating Engines
+- https://www.udemy.com/nodejs-master-class/learn/lecture/9991974#overview
