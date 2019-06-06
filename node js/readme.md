@@ -121,3 +121,5 @@ if (app.get('env') === 'development') {
 }
 ```
 - $>export NODE_ENV=production
+### config
+- $>npm install config
