@@ -123,4 +123,9 @@ if (app.get('env') === 'development') {
 - $>export NODE_ENV=production
 ### config
 - $>npm install config
+```
+// Configuration :  all configs under the config folder
+console.log(`Application Name: ${config.get('name')}`);
+console.log(`Mail server: ${config.get('mail.host')}`);
+```
 ```DO NOT store the password in the config, avoid everyone can see after code checked in repository```
