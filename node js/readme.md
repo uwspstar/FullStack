@@ -97,3 +97,14 @@ https://codeburst.io/array-methods-explained-filter-vs-map-vs-reduce-vs-foreach-
 - ```The map method allows items in an array to be manipulated to the user’s preference```
 - Filter vs Map :  filter with condition, such as boolen, map with manipulated, such as Math.sqr()
 - Filter vs Map all return a new array.  forEach, return same array
+
+### 06/06/2019
+- A middleware function is a function that takes a request object and either
+terminates the request/response cycle or passes control to another middleware
+function.
+- Express has a few built-in middleware functions:
+- json(): to parse the body of requests with a JSON payload
+- urlencoded(): to parse the body of requests with URL-encoded payload
+- static(): to serve static files
+- You can create custom middleware for cross-cutting concerns, such as logging,
+authentication, etc
