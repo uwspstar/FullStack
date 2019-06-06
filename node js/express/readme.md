@@ -5,11 +5,46 @@ https://www.udemy.com/nodejs-master-class
 
 ```
 const Joi = require('joi'); // Return class use Uppercase
+const logger = require('./logger');
+const config = require('config');
+const morgan = require('morgan');
 const express = require('express');
 const app = express();
 
+// Configuration :  all configs under the config folder
+console.log(`Application Name: ${config.get('name')}`);
+console.log(`Mail Server: ${config.get('mail.host')}`);
+console.log(`Mail Password: ${config.get('mail.password')}`);
+
+
+// Evn
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`);
+console.log(`app: ${app.get('env')}`);
+
+if (app.get('env') === 'development') {
+    app.use(morgan('tiny'));
+    console.log('Morgan enable...');
+}
+
+
 // app use express.json() middleware
+// middleware is in order
 app.use(express.json());
+app.use(express.urlencoded({
+    extended: true
+}));
+app.use(express.static('public'));
+
+// app.use((req, res, next) => {
+//     console.log('Logging...');
+//     next();
+// })
+app.use(logger);
+
+app.use((req, res, next) => {
+    console.log('Authentication...');
+    next();
+});
 
 // console.log([1, 2]);
 // console.dir([1, 2]);
@@ -130,7 +165,10 @@ function validateCourse(course) {
 
 const port = process.env.PORT || 3000;
 app.listen(port, () => {
-    console.dir(`Listening port ${port} ...`)
+    console.dir(`
+        Listening port $ {
+            port
+        }...`)
 })
 ```
 ### middleware
