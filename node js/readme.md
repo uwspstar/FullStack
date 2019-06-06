@@ -3,6 +3,8 @@
 https://www.udemy.com/advanced-node-for-developers
 - Node.js: The Complete Guide to Build RESTful APIs (2018) by Mosh Hamedani
 https://www.udemy.com/nodejs-master-class
+- The Complete Node.js Developer Course (3rd Edition) by Andrew Mead
+https://www.udemy.com/the-complete-nodejs-developer-course-2
 
 ### 06/03/2019
 - Node has 50% js and 50% C++
