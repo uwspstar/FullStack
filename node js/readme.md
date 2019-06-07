@@ -224,3 +224,11 @@ process.argv.forEach((val, index) => {
 ```
 ### yargs
 - $>npm install yargs
+
+### Storing Data with JSON
+- JSON.stringify
+- JSON.parse
+```
+JSON.stringify converts a JavaScript object into a JSON
+string, while JSON.parse converts a JSON string into a JavaScript object.
+```
