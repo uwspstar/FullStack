@@ -192,5 +192,25 @@ https://www.udemy.com/nodejs-master-class/learn/lecture/9993496#overview
 - use ,then().catch() for promis
 ### validator.js
 - $>npm i validator
+```
+const validator = require('validator')
+console.log(validator.isURL('https/mead.io')) // Print: true
+```
 ### chalk.js
 - $>npm i chalk
+- A globally installed module is not added as a dependency to your project. 
+```
+You can use npm modules from outside of your scripts by installing them globally. Globally
+installed modules are designed to be used from the terminal and provide you with new
+commands you can run. In this lesson, you’ll learn how to install and work with global
+modules.
+```
+### nodemon
+- npm install -g nodemon@1.18.5
+```
+A globally installed module is not added as a dependency to your project. 
+That means you won’t see it listed in package.json or package-lock.json. 
+You also won’t find its code in node_modules. 
+Globally installed modules are located in a special directory in your
+machine which is created and managed by npm.
+```
