@@ -222,3 +222,5 @@ process.argv.forEach((val, index) => {
   console.log(`${index}: ${val}`);
 });
 ```
+### yargs
+- $>npm install yargs
