@@ -229,6 +229,21 @@ process.argv.forEach((val, index) => {
 - JSON.stringify
 - JSON.parse
 ```
+JSON looks similar to a JavaScript object, but there are some differences. 
+The most obvious is that all properties are wrapped in double-quotes.
+{"name":"Gunther","planet":"Earth","age":54}
+
 JSON.stringify converts a JavaScript object into a JSON
 string, while JSON.parse converts a JSON string into a JavaScript object.
+```
+```
+const book = {
+ title: 'Ego is the Enemy',
+ author: 'Ryan Holiday'
+}
+// Covert JavaScript object into JSON string
+const bookJSON = JSON.stringify(book)
+// Covert JSON string into object
+const bookObject = JSON.parse(bookJSON)
+console.log(bookObject.title) // Print: Ego is the Enemy
 ```
