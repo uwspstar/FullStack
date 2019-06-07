@@ -247,3 +247,33 @@ const bookJSON = JSON.stringify(book)
 const bookObject = JSON.parse(bookJSON)
 console.log(bookObject.title) // Print: Ego is the Enemy
 ```
+- Arrow Functions // ES6
+```
+(param1 = defaultValue1, param2, …, paramN = defaultValueN) => { statements }
+
+// Destructuring within the parameter list is also supported
+var f = ([a, b] = [1, 2], {x: c} = {x: a + b}) => a + b + c;
+f(); // 6
+```
+```Arrow functions don’t bind their own this value. ```
+- https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Functions/Arrow_functions
+```
+var elements = [
+  'Hydrogen',
+  'Helium',
+  'Lithium',
+  'Beryllium'
+];
+
+elements.map(({ length :lengthFooBArX }) => lengthFooBArX); // [8, 6, 7, 9]
+// In this case, because we only need the length property, we can use destructuring parameter:
+// Notice that the `length` corresponds to the property we want to get whereas the
+// obviously non-special `lengthFooBArX` is just the name of a variable which can be changed
+// to any valid variable name you want
+
+elements.map(({ length }) => length); // [8, 6, 7, 9]
+// This destructuring parameter assignment can also be written as seen below. However, note that in
+// this example we are not assigning `length` value to the made up property. Instead, the literal name
+// itself of the variable `length` is used as the property we want to retrieve from the object.
+
+```
