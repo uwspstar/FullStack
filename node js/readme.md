@@ -216,3 +216,9 @@ machine which is created and managed by npm.
 ```
 ### 06/07/2019
 - process.argv
+```
+// print process.argv
+process.argv.forEach((val, index) => {
+  console.log(`${index}: ${val}`);
+});
+```
