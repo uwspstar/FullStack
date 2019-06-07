@@ -1,4 +1,6 @@
-### STUDY NOTE
+# STUDY NOTE
+
+### 06/07/2019
 - li // lower index
 - hi // higher index
 - mi // middle index
