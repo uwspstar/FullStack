@@ -214,3 +214,5 @@ You also won’t find its code in node_modules.
 Globally installed modules are located in a special directory in your
 machine which is created and managed by npm.
 ```
+### 06/07/2019
+- process.argv
