@@ -190,3 +190,7 @@ https://www.udemy.com/nodejs-master-class/learn/lecture/9993496#overview
 - ```401 Unauthorized 403 fobidden```
 - use try{...} catch {...} for async function
 - use ,then().catch() for promis
+### validator.js
+- $>npm i validator
+### chalk.js
+- $>npm i chalk
