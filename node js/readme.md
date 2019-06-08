@@ -286,3 +286,4 @@ const user = users.find((user) => user.name === 'George Hudson')
  // callback is invoked with three arguments: 
  the value of the element, the index of the element, and the Array object being traversed
 ```
+- node inspect app.js
