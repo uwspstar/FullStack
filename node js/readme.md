@@ -297,7 +297,8 @@ debugger // Debug tools will pause here until your click play again
 console.log('Thing two)
 ```
 ### Asynchronous
-- https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/lecture/13728912#overview
+- Call Stack, Callback Queue, and Event Loop
+https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/lecture/13728912#overview
 ```
 We can actually do other stuff inside of the call stack, so JavaScript itself is a single threaded programming
 language.
