@@ -288,4 +288,10 @@ const user = users.find((user) => user.name === 'George Hudson')
 ```
 ### debug
 - $>node inspect app.js // hit 2 times ctrl + c quit
+- $>restart
 - chrome://inspect //in the Chrome browser.
+```
+console.log('Thing one)
+debugger // Debug tools will pause here until your click play again
+console.log('Thing two)
+```
