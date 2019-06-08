@@ -286,6 +286,7 @@ const user = users.find((user) => user.name === 'George Hudson')
  // callback is invoked with three arguments: 
  the value of the element, the index of the element, and the Array object being traversed
 ```
+### 06/08/2019
 ### debug
 - $>node inspect app.js // hit 2 times ctrl + c quit
 - $>restart
@@ -294,4 +295,44 @@ const user = users.find((user) => user.name === 'George Hudson')
 console.log('Thing one)
 debugger // Debug tools will pause here until your click play again
 console.log('Thing two)
+```
+### Asynchronous
+- https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/lecture/13728912#overview
+```
+We can actually do other stuff inside of the call stack, so JavaScript itself is a single threaded programming
+language.
+
+You can do one thing at a time and the call stack enforces that we can only have one function on the
+top of the call stack that is the thing we're doing.
+There's no way to execute two things at the same time.
+
+Now that doesn't mean no JSA is completely single threaded the code you run is indeed still single threaded
+but node uses other threads in C++ behind the scenes to manage your events.
+```
+- callback queue
+```
+The job of the callback queue is simple.
+Its job is to maintain a list of all of the callback functions that are ready to get executed.
+So when a given event is done in this case when the zero second timer is complete that callback function
+the function we defined right here that's gonna get added on to the callback Q which is just a standard
+line you get in at the end of the line and you work your way towards the front the front item is the
+one that will get executed first.
+
+So right here since there are no items in the list the callback gets added right up front.
+So we have this callback and it's ready to get executed but before it can be executed it needs to be
+added onto the call stack.That's where functions go to run.
+```
+- event loop```our function doesn't run right away. The event loop needs to wait for the call stack to be empty.```
+```
+Now this is where the event loop comes into play the event loop looks at two things 
+1)it looks at the call stack 
+2) and it looks at the callback Q If the call stack is empty it's going to run items from the
+callback.
+
+Q So at this point the event loop says I know you got added to the callback queue but the call stack
+is not empty so I can't execute you.
+
+And this is why our function doesn't run right away. The event loop needs to wait for the call stack to be empty.
+So at this point Maine actually continues to run the next thing we see is that line eleven of our program
+
 ```
