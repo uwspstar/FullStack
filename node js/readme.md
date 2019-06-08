@@ -277,3 +277,12 @@ elements.map(({ length }) => length); // [8, 6, 7, 9]
 // itself of the variable `length` is used as the property we want to retrieve from the object.
 
 ```
+- arr.find() 
+```
+// The find() method returns the value of the first element in the array 
+// that satisfies the provided testing function. Otherwise undefined is returned.
+const user = users.find((user) => user.name === 'George Hudson')
+
+ // callback is invoked with three arguments: 
+ the value of the element, the index of the element, and the Array object being traversed
+```
