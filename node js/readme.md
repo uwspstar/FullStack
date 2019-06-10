@@ -346,3 +346,4 @@ So at this point Maine actually continues to run the next thing we see is that l
 ### 06/10/2019
 - node use globle instead of using window (js)
 - in node, every file is module
+- class ChildClass extends ParentClass { ... }
