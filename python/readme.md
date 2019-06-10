@@ -393,3 +393,15 @@ https://docs.python.org/3.7/library/stdtypes.html#string-methods
 ### 06/10/2019
 - Boolean Operations — and, or, not
 - Numeric Types — int, float, complex
+- for loop
+```
+for num in range(1, 6):
+    print("\U0001f600" * num)
+```
+- while
+```
+times = 1
+while times < 6:
+    print("\U0001f600" * times)
+    times += 1
+```
