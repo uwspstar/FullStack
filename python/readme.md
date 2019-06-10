@@ -345,3 +345,48 @@ while val in nums:
 ⌘/ Toggle line comment
 ⇧⌥A Toggle block comment
 ```
+### 06/09/2019
+- datastructures
+https://docs.python.org/3.7/tutorial/datastructures.html
+- Lists 
+```
+squares = [1, 4, 9, 16, 25]
+print(f"squares : {squares}")  # [1, 4, 9, 16, 25]
+print(f"squares[0] : {squares[0]}")  # 1
+print(f"squares[-1] : {squares[-1]}")  # 25
+print(f"squares[-3:] : {squares[-3:]}")  # [9, 16,5]
+print(f"squares[:] : {squares[:]}")  # [1, 4, 9, 16, 25]
+concatenation = squares + [36, 49, 64, 81, 100]
+# [1, 4, 9, 16, 25, 36, 49, 64, 81, 100]
+print(f"squares + [36, 49, 64, 81, 100] : {concatenation}")
+# Unlike strings, which are immutable,
+# lists are a mutable type, i.e.
+# it is possible to change their content:
+cubes = [1, 8, 27, 65, 125]
+cubes[3] = 64
+print(f"cubes : {cubes}")
+cubes.append(216)
+print(f"cubes.append(216) : {cubes}")
+cubes.append(7**3)  # 7**3 = 7^3
+print(f"cubes.append(7**3) : {cubes}")
+cubes[2:5] = ['C', 'D', 'E']  # replace some values
+print(f"cubes[2:5] = ['C', 'D', 'E']: {cubes}")  # list not type
+cubes[2:5] = []  # remove
+print(f"cubes[2:5] = [] : {cubes}")  # list not type
+cubes[:] = []  # remove
+print(f"cubes[:] = [] : {cubes}")  # list not type
+letters = ['a', 'b', 'c', 'd']
+print(f"len(letters) : {len(letters)}")
+a = ['a', 'b', 'c']
+n = [1, 2, 3]
+x = [a, n]
+print(f"x : {x}")  # [['a', 'b', 'c'], [1, 2, 3]]
+print(f"x[0] : {x[0]}")  # ['a', 'b', 'c']
+print(f"x[0][1] : {x[0][1]}")  # b
+```
+```
+Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content
+```
+- 2 ** 7  # 2 to the power of 7
+- Built-in Types
+https://docs.python.org/3.7/library/stdtypes.html#string-methods
