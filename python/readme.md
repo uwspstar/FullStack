@@ -393,15 +393,27 @@ https://docs.python.org/3.7/library/stdtypes.html#string-methods
 ### 06/10/2019
 - Boolean Operations — and, or, not
 - Numeric Types — int, float, complex
-- for loop
+- i += 1 # NOT i =+ 1 , python does not have =+
 ```
 for num in range(1, 6):
     print("\U0001f600" * num)
 ```
-- while
+- while # Don't forget to add the + before the = sign 
 ```
 times = 1
 while times < 6:
     print("\U0001f600" * times)
-    times += 1
+    times += 1 // without this line, it will print forever, 
+```
+```
+Don't forget to add the + before the = sign when incrementing!
+```
+```
+for num in range(1, 6):
+    count = 1
+    smileys = ""
+    while count <= num:
+        smileys += "\U0001f600"
+        count += 1
+    print(smileys)
 ```
