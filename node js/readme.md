@@ -346,4 +346,20 @@ So at this point Maine actually continues to run the next thing we see is that l
 ### 06/10/2019
 - node use globle instead of using window (js)
 - in node, every file is module
-- class ChildClass extends ParentClass { ... }
+### class ChildClass extends ParentClass { ... }
+```
+class Square extends Polygon {
+  constructor(length) {
+    // Here, it calls the parent class' constructor with lengths
+    // provided for the Polygon's width and height
+    super(length, length);
+    // Note: In derived classes, super() must be called before you
+    // can use 'this'. Leaving this out will cause a reference error.
+    this.name = 'Square';
+  }
+
+  get area() {
+    return this.height * this.width;
+  }
+}
+```
