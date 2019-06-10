@@ -390,3 +390,6 @@ Unlike strings, which are immutable, lists are a mutable type, i.e. it is possib
 - 2 ** 7  # 2 to the power of 7
 - Built-in Types
 https://docs.python.org/3.7/library/stdtypes.html#string-methods
+### 06/10/2019
+- Boolean Operations — and, or, not
+- Numeric Types — int, float, complex
