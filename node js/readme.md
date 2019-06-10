@@ -345,3 +345,4 @@ So at this point Maine actually continues to run the next thing we see is that l
 - JSON Formatter //Chrome extension for printing JSON  chrome://chrome/extensions/
 ### 06/10/2019
 - node use globle instead of using window (js)
+- in node, every file is module
