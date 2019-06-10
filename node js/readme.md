@@ -338,5 +338,8 @@ So at this point Maine actually continues to run the next thing we see is that l
 
 ```
 ### 06/09/2019
+### request
+- $>npm i request
 - darksky.net
+- mapbox.com
 - JSON Formatter //Chrome extension for printing JSON  chrome://chrome/extensions/
