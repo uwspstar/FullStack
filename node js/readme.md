@@ -375,3 +375,18 @@ class myDate extends Date {
   }
 }
 ```
+### NGINX
+- NodeJS and NGINX 
+https://www.udemy.com/all-about-nodejs/learn/lecture/2050748#overview
+```
+not efficient for high traffic instances.
+It's already running on a single thread and solving static assets for the slows down things unnecessarily.
+
+Another important reason is that there is no caching so every time there is a request all static assets
+have to be served again and again all of this makes up for a very slow server.
+
+What we need to do is to create a little server instance that is tasked with solving and caching static
+assets.
+
+Additionally we should also deploy a load balancer to distribute user traffic over a number of Naude
+```
