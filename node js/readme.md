@@ -414,4 +414,6 @@ response.body.currently.temperature + ' degrees out. There is a ' +
 response.body.currently.precipProbability + '% chance of rain.')
 })
 ```
-
+- The callback function you pass to expects an error and response argument
+be provided
+- A callback function is a function that’s passed as an argument to another function
