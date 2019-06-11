@@ -390,3 +390,4 @@ assets.
 
 Additionally we should also deploy a load balancer to distribute user traffic over a number of Naude
 ```
+- Arrow functions don’t bind their own this value. 
