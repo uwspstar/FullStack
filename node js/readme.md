@@ -339,6 +339,16 @@ So at this point Maine actually continues to run the next thing we see is that l
 ```
 ### 06/09/2019
 ### request
+```
+const request = require('request')
+const url = 'https://api.darksky.net/forecast/9d1465c6f3bb7a6c71944bdd8548d026/37.8267,- 122.4233'
+request({ url: url }, (error, response) => {
+    // Parse the response body from JSON string into JavaScript object
+    const data = JSON.parse(response.body)
+    // Will print the current temperature to the console
+    console.log(data.currently.temperature)
+})
+```
 - $>npm i request
 - darksky.net
 - mapbox.com
@@ -391,3 +401,4 @@ assets.
 Additionally we should also deploy a load balancer to distribute user traffic over a number of Naude
 ```
 - Arrow functions don’t bind their own this value. 
+- $> node inspect app.js //debug
