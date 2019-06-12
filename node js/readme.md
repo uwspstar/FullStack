@@ -419,5 +419,5 @@ be provided
 - A callback function is a function that’s passed as an argument to another function
 
 ### 06/12/2019
-- Linux sh command
-https://www.computerhope.com/unix/ush.htm
+- Linux sh command https://www.computerhope.com/unix/ush.htm
+- https://www.youtube.com/watch?v=AO0jzD1hpXc
