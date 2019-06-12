@@ -439,3 +439,15 @@ $> cd <folder>
 absolute path / : start from root /
 relative path / : start from current
 ```
+- document.createElement
+```
+var newDiv = document.createElement("div"); 
+When called on an HTML document, createElement() converts tagName to lower case before creating the element
+```
+- Element.setAttribute()
+```
+var b = document.querySelector("button"); 
+
+b.setAttribute("name", "helloButton");
+b.setAttribute("disabled", "");
+```
