@@ -426,6 +426,14 @@ $> clear
 $> pwd
 $> cd ..
 $> cd
+$> cd ~
+xing@xwang-mbp.local:/Users/xing/play/mobile-redemption
+$> cd ~
+
+xing@xwang-mbp.local:/Users/xing
+$> pwd
+/Users/xing
+
 $> ls
 $> cd <folder>
 absolute path / : start from root /
