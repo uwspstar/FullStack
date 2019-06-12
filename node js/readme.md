@@ -483,3 +483,17 @@ var myObj = Object.create({}, {
 myObj.foo = 1;
 console.log(Object.keys(myObj)); // console: ['foo']
 ```
+- https://stackoverflow.com/questions/10599933/convert-long-number-into-abbreviated-string-in-javascript-with-a-special-shortn
+- addEventListener()
+- removeEventListener()
+```
+document.getElementById("myBtn").addEventListener("click", displayDate);
+
+The first parameter is the type of the event (like "click" or "mousedown").
+
+The second parameter is the function we want to call when the event occurs.
+
+The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
+
+Note that you don't use the "on" prefix for the event; use "click" instead of "onclick".
+```
