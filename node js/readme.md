@@ -421,3 +421,13 @@ be provided
 ### 06/12/2019
 - Linux sh command https://www.computerhope.com/unix/ush.htm
 - https://www.youtube.com/watch?v=AO0jzD1hpXc
+```
+$> clear
+$> pwd
+$> cd ..
+$> cd
+$> ls
+$> cd <folder>
+absolute path / : start from root /
+relative path / : start from current
+```
