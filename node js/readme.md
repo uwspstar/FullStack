@@ -451,3 +451,35 @@ var b = document.querySelector("button");
 b.setAttribute("name", "helloButton");
 b.setAttribute("disabled", "");
 ```
+- Object.keys(obj) 
+``` 
+In ES5, if the argument to this method is not an object (a primitive), then it will cause a TypeError. In ES2015, a non-object argument will be coerced to an object.
+Object.keys('foo');
+// TypeError: "foo" is not an object (ES5 code)
+
+Object.keys('foo');
+// ["0", "1", "2"]                   (ES2015 code)
+```
+
+```
+// simple array
+var arr = ['a', 'b', 'c'];
+console.log(Object.keys(arr)); // console: ['0', '1', '2']
+
+// array like object
+var obj = { 0: 'a', 1: 'b', 2: 'c' };
+console.log(Object.keys(obj)); // console: ['0', '1', '2']
+
+// array like object with random key ordering
+var anObj = { 100: 'a', 2: 'b', 7: 'c' };
+console.log(Object.keys(anObj)); // console: ['2', '7', '100']
+
+// getFoo is a property which isn't enumerable
+var myObj = Object.create({}, {
+  getFoo: {
+    value: function () { return this.foo; }
+  } 
+});
+myObj.foo = 1;
+console.log(Object.keys(myObj)); // console: ['foo']
+```
