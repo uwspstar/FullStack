@@ -511,14 +511,27 @@ an agreed upon standard for how code modules should be structured
 First-Class Functions :  everything you can do with other types, you can do with Functions. You can use functions like strings, numbers, etc. (i.e. pass them around,
 set variables equal to them, put them in arrays, and more)
 
-An Expresssion:
-A block of code that results in a value.
-Function expressions are possible in javascript becasue functions are first-class
-```
-- pass function as variable
-``` 
-// pass function as variable
 function logGreeting(fn) {
   fn();
 }
+
+
+An Expresssion:
+A block of code that results in a value.
+Function expressions are possible in javascript becasue functions are first-class
+
+var greeting = function() {
+}
+```
+- pass function as variable
+``` 
+fucntion greet() {
+  console.log('greet...');
+}
+
+function logGreeting(fn) {
+  fn();
+}
+
+logGreeting(greet);
 ````
