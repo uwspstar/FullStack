@@ -515,4 +515,10 @@ An Expresssion:
 A block of code that results in a value.
 Function expressions are possible in javascript becasue functions are first-class
 ```
-
+- pass function as variable
+``` 
+// pass function as variable
+function logGreeting(fn) {
+  fn();
+}
+````
