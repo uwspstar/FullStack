@@ -544,3 +544,15 @@ require, it's a function. What you pass to the function, the argument,
 the parameter is a string, and the string contains the location or the name of the module that you wish to import or that is used
 ```
 - module.exports = {} //object
+- object ```an object is nothing but a collection of name/value pairs.```
+```
+javascript objects are names that connected to values,but the values might be other lists of names and values.
+Another way to think about it is that an object sits in memory
+and points at other objects or other values.
+You might have primitive values like numbers and strings,
+objects, which are other collections of name/value pairs,
+and remember that functions, are actually special types of objects.So the value might be a function.
+
+When a function is attached to an object, we call it a method, and really these, you might think of as pointing to a particular spot or address in memory where these different properties, these different methods, that is to say,
+these different values attached to names on the object live. 
+````
