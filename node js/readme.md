@@ -5,6 +5,9 @@ https://www.udemy.com/advanced-node-for-developers
 https://www.udemy.com/nodejs-master-class
 - The Complete Node.js Developer Course (3rd Edition) by Andrew Mead
 https://www.udemy.com/the-complete-nodejs-developer-course-2
+- Learn and Understand NodeJS by Anthony Alicea
+https://www.udemy.com/understand-nodejs/learn/lecture/3485580#overview
+
 
 ### 06/03/2019
 - Node has 50% js and 50% C++
