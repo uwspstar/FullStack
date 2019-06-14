@@ -15,6 +15,11 @@ https://www.edureka.co/blog/azure-storage-tutorial/
 - Microservices architecture style(https://docs.microsoft.com/en-us/azure/architecture/guide/architecture-styles/microservices)
 ![Microservices](/Img/microservices-logical.svg)
 
+### API document
+- swagger
+- $>npm install -g swagger 
+- http://convertjson.com/yaml-to-json.htm
+
 ### Consider this architecture style for:
 
 - Large applications that require a high release velocity.
