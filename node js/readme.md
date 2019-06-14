@@ -556,3 +556,8 @@ and remember that functions, are actually special types of objects.So the value 
 When a function is attached to an object, we call it a method, and really these, you might think of as pointing to a particular spot or address in memory where these different properties, these different methods, that is to say,
 these different values attached to names on the object live. 
 ````
+- object literal.
+```
+take a sequence of name/value pairs, separate them by commas,
+and surround them with a curly brace, and that's a very quick way to create a Javascript object
+```
