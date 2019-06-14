@@ -497,3 +497,16 @@ The third parameter is a boolean value specifying whether to use event bubbling 
 
 Note that you don't use the "on" prefix for the event; use "click" instead of "onclick".
 ```
+### 06/14/2019
+- Module 
+```
+a reusable block of code whose existence does not accidentally impact other code
+```
+- commonjs module
+```
+an agreed upon standard for how code modules should be structured
+```
+- First-class functions vs. Function Expressions
+```
+
+```
