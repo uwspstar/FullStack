@@ -543,3 +543,4 @@ logGreeting(greet);
 require, it's a function. What you pass to the function, the argument,
 the parameter is a string, and the string contains the location or the name of the module that you wish to import or that is used
 ```
+- module.exports = {} //object
