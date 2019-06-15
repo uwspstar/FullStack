@@ -72,3 +72,74 @@ p(id="myid", class="myclass1, myclass2").
     li#list_item: a(href='#') sfalsd
     li#list_item: a(href='#') dddddd
 ```
+
+### index.jade
+```
+doctype
+
+html
+
+    include ./head.jade
+
+    body
+
+        div
+            p first paragraph
+            
+            p
+                |<i>blabal asfalsd</i> fasdfdsgsdf gdsfgsd fgdsf gsdf gblaba lasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfgblabalasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfgblabalasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfg
+                br
+                |sfgsdfg blabalasf alsdfas dfdsgsdfgdsfgsdfgdsfgsdfg
+            p.
+                <b>abced asfalsd</b> fasdfdsgsdf gdsfgsd fgdsf gsdf gblaba 
+
+            #2nd_myid.
+                sfgsdfg blabalasf alsdfas 
+
+            .2nd_myclass.
+                sfgsdfg blabalasf alsdfas 
+
+            ul
+                li#list_item 
+                    a(href='#') sfalsd
+                li#list_item 
+                    a(href='#') ccccc asfalsd
+            
+            ul
+                li#list_item: a(href='#') sfalsd
+                li#list_item: a(href='#') dddddd
+                    
+            p(id="myid", class="myclass1, myclass2").
+                fasdfdsgsdf gdsfgsd fgdsf gsdf gblaba lasfalsdfasd.
+
+            //- will not see me
+            // can see me
+               
+            - myVariable = "myNameIsXing"
+            
+            p Hello #{myVariable}
+            
+            p 123 * 123  = #{123 * 123}
+
+            - website = "http://deallp.com"
+
+            a(href="#{website}")
+
+            - myArray = ['elm1', 'elm2']
+
+            ul
+                li#myArray_item: span myArrayelm[0] is :  
+                    a(href="#{website}") #{myArray[0]}
+                li#myArray_item: span myArrayelm[1] is :  
+                    a(href="#{website}") #{myArray[1]}
+
+            - mystring = 'asdfk;safja;sdfhjasdf'
+
+            p= mystring
+
+            - myObject = {"type" : "text", "name" : "fName"}
+
+            span First Name
+            input(type=myObject.type, name=myObject.name)
+
+```
