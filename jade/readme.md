@@ -87,7 +87,10 @@ html
             p first paragraph
             
             p
-                |<i>blabal asfalsd</i> fasdfdsgsdf gdsfgsd fgdsf gsdf gblaba lasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfgblabalasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfgblabalasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfg
+                |<i>blabal asfalsd</i> fasdfdsgsdf gdsfgsd fgdsf gsdf gblaba lasfalsdfasdfd
+                sgsdfgdsfgsdfgdsfgsdfgblabalasfa
+                lsdfasdfdsgsdfgdsfgsdfgdsfgsd
+                fgblabalasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfg
                 br
                 |sfgsdfg blabalasf alsdfas dfdsgsdfgdsfgsdfgdsfgsdfg
             p.
