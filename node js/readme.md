@@ -566,25 +566,10 @@ and surround them with a curly brace, and that's a very quick way to create a Ja
 inheritance.
 That's when one object, one collection of name value pairs, gets access to the properties and methods,that is, other name value pairs, of another object.
 
-So an object has properties and methods,
-
-values and functions attached to it.
-
-And your object gets access to the properties
-
-and methods of that other object.
-
+So an object has properties and methods, values and functions attached to it.
+And your object gets access to the properties and methods of that other object.
 It inherits those other properties and methods.
-
-However, the way JavaScript implements the idea
-
-of inheritance is a bit different
-
-than other programming languages,
-
-major programming languages out there.
-
-But also very powerful because of its simplicity.
-
-It implements what's called prototypal inheritance.
+However, the way JavaScript implements the idea of inheritance is a bit different
+than other programming languages, major programming languages out there.
+But also very powerful because of its simplicity. It implements what's called prototypal inheritance.
 ```
