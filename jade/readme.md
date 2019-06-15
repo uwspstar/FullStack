@@ -10,6 +10,13 @@
 //- will not see me
 // can see me
 ```
+- Variable
+```
+- myVariable = "myNameIsXing"
+            
+p Hello #{myVariable}
+```
+```p 123 * 123  = #{123 * 123}```
 - p 
 ```
 p.
