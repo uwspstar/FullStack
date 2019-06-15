@@ -22,6 +22,14 @@ a(href="#{website}")
 
 p 123 * 123  = #{123 * 123}
 
+- myArray = ['elm1', 'elm2']
+ul
+  li#myArray_item: a(href="#{website}") #{myArray[0]}
+  li#myArray_item: a(href="#{website}") #{myArray[1]}
+                
+- mystring ='asdfasdfjasdfas;dfj;'
+
+p= mystring
 ```
 
 
@@ -32,6 +40,11 @@ p.
     
 p
     |<i>blabal asfalsd</i> fasdfdsgsdf 
+
+- mystring ='asdfasdfjasdfas;dfj;'
+
+p= mystring
+
 ```
 - id
 ```
