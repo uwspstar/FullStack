@@ -15,8 +15,16 @@
 - myVariable = "myNameIsXing"
             
 p Hello #{myVariable}
+
+ - website = "http://deallp.com"
+
+a(href="#{website}")
+
+p 123 * 123  = #{123 * 123}
+
 ```
-```p 123 * 123  = #{123 * 123}```
+
+
 - p 
 ```
 p.
