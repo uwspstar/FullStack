@@ -40,7 +40,7 @@ p != {someInfo}
 p !{someInfo}   // right
             
 ```
-- if/else
+- if/else  / unless
 ```
 - date = new Date()
 - hour = date.getHours()
@@ -59,8 +59,18 @@ else if age >= 18
     h3 Vote
 else 
     h3 wait
+    
+unless age >= 16
+    h3 You'll drive at 16
+else
+    h3 You can Drive
 ```
+- expession
+```
+- dayTime =(((hour >= 6) && (hour <= 17)) ? 'Day Time' : 'Night Time')
 
+h3 #{dayTime}
+```
 - p 
 ```
 p.
