@@ -74,6 +74,18 @@ else
 
 h3 #{dayTime}
 ```
+- case
+```
+- name = "Xing"
+                       
+case name
+    when "Yang"
+        h3 Hi yang
+    when "Xing"
+        h3 Hi Xing
+    deafult
+        h3 Hi You
+```
 - p 
 ```
 p.
