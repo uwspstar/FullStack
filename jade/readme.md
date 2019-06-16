@@ -170,8 +170,24 @@ html
             p
                 |<i>blabal asfalsd</i> fasdfdsgsdf gdsfgsd fgdsf gsdf gblaba lasfalsdfasdfd
                 sgsdfgdsfgsdfgdsfgsdfgblabalasfa
-                lsdfasdfdsgsdfgdsfgsdfgdsfgsd
-                fgblabalasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfg
+     doctype
+
+html
+
+    include ./head.jade
+
+    body
+
+        div
+            - var n = 0
+            ul
+                while n < 4
+                    li= n++
+                   
+            p first paragraph
+            
+            p
+                |<i>blabal asfalsd</i> fasdfdsgsdf gdsfgsd fgdsf gsdf gblaba lasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfgblabalasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfgblabalasfalsdfasdfdsgsdfgdsfgsdfgdsfgsdfg
                 br
                 |sfgsdfg blabalasf alsdfas dfdsgsdfgdsfgsdfgdsfgsdfg
             p.
@@ -225,5 +241,66 @@ html
 
             span First Name
             input(type=myObject.type, name=myObject.name)
+
+            - someInfo = "<i>Verygood</i>"
+            p= {someInfo}
+            p={someInfo}
+            p = {someInfo}
+            p != {someInfo}
+            p !{someInfo}
+
+            - date = new Date()
+            - hour = date.getHours()
+
+            - if ((hour >= 6) && (hour <= 17)) {
+                h3 Day Time
+            - } else {
+                h3 Night Time
+            - }
+
+            - age = 18
+
+            if((age >= 16) && (age < 18))
+                h3 student
+            else if age >= 18
+                h3 Vote
+            else 
+                h3 wait
+
+            unless age >= 16
+                h3 You'll drive at 16
+            else
+                h3 You can Drive
+            
+            - dayTime =(((hour >= 6) && (hour <= 17)) ? 'Day Time' : 'Night Time')
+
+            h3 #{dayTime}
+
+            - name = "Xing"
+
+            case name
+                when "Yang"
+                    h3 Hi yang
+                when "Xing"
+                    h3 Hi Xing
+                default
+                    h3 Hi You
+            
+            script.
+                console.log('Hello Jade')
+
+            - colorArray = ["red", "yellow", "blue"]
+
+            ul
+                - for(i = 0; i < colorArray.length ; i++) {
+                    li= colorArray[i]
+                - }
+            
+            ul 
+                each color in colorArray
+                    li= color
+
+            
+
 
 ```
