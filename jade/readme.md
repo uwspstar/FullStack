@@ -104,6 +104,14 @@ ul
     each color in colorArray
         li= color
 ```
+- while loop
+```
+- var n = 0
+ul
+    while n < 4
+        li= n++
+                    
+```
 - p 
 ```
 p.
