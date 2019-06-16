@@ -83,8 +83,24 @@ case name
         h3 Hi yang
     when "Xing"
         h3 Hi Xing
-    deafult
+    default
         h3 Hi You
+```
+- script
+```
+ script.
+    console.log('Hello Jade')            
+```
+- for/each loop
+```
+ul
+- for(i = 0; i < colorArray.length ; i++) {
+    li= colorArray[i]
+- }
+
+ul 
+    each color in colorArray
+        li= color
 ```
 - p 
 ```
