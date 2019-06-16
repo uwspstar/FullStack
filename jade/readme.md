@@ -30,6 +30,15 @@ ul
 - mystring ='asdfasdfjasdfas;dfj;'
 
 p= mystring
+
+// based on the browser
+ - someInfo = "<i>Verygood</i>"
+p= {someInfo}
+p={someInfo}
+p = {someInfo}
+p != {someInfo}
+p !{someInfo}   // right
+            
 ```
 
 
