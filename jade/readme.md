@@ -93,6 +93,8 @@ case name
 ```
 - for/each loop
 ```
+- colorArray = ["red", "yellow", "blue"]
+
 ul
 - for(i = 0; i < colorArray.length ; i++) {
     li= colorArray[i]
