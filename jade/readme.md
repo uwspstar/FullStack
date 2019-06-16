@@ -67,6 +67,9 @@ else
 ```
 - expession
 ```
+- date = new Date()
+- hour = date.getHours()
+
 - dayTime =(((hour >= 6) && (hour <= 17)) ? 'Day Time' : 'Night Time')
 
 h3 #{dayTime}
