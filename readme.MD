@@ -139,3 +139,6 @@ https://www.makeuseof.com/tag/beginners-guide-setting-ssh-linux-testing-setup/
 
 # Devices Matrics 
 https://material.io/tools/devices/
+
+# JADE
+# Angular Testing
