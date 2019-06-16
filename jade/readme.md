@@ -40,7 +40,26 @@ p != {someInfo}
 p !{someInfo}   // right
             
 ```
+- if/else
+```
+- date = new Date()
+- hour = date.getHours()
 
+- if ((hour >= 6) && (hour <= 17)) {
+    h3 Day Time
+- } else {
+    h3 Night Time
+- }
+
+- age = 18
+
+if((age >= 16) && (age < 18))
+    h3 student
+else if age >= 18
+    h3 Vote
+else 
+    h3 wait
+```
 
 - p 
 ```
