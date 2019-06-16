@@ -11,6 +11,7 @@
 // can see me
 ```
 - Extends
+http://jade-lang.com/reference/extends
 - Variable
 ```
 - myVariable = "myNameIsXing"
