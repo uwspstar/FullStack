@@ -63,3 +63,8 @@ describe('string', () => {
     });
 });
 ```
+### Integration Tests
+- supertest 
+```
+to perform integration tests in our express application we'll be using a module called supertest
+```
