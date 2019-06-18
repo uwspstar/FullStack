@@ -68,3 +68,10 @@ describe('string', () => {
 ```
 to perform integration tests in our express application we'll be using a module called supertest
 ```
+- log the output @package.json
+```
+"scripts": {
+    "testfile": "timestamp=$(date \"+%c\"); jest --no-color 2>TestResults/TestResult_${timestamp}.txt",
+    "test": "jest --watchAll"
+  },
+```
