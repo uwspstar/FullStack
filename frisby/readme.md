@@ -21,3 +21,7 @@
 - unit test 
 - integration test 
 - end-to-end
+### testing framework
+- Jasmine
+- mocha
+- jest //facebook use to test react
