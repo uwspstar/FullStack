@@ -10,6 +10,12 @@
 - mkdir -p __tests__/api
 - create file test_spec.js
 - Run $> jest
+```
+Since we are using testing libraries, these are not dependencies that will be using in production. 
+we want to make sure to run npm install --save-dev rather than npm install, 
+so that we do save them to our package.json, but do not install them in production. 
+When you do this, you should see that your package.json consists of two sets of dependencies: dependencies and devDependencies.
+``
 ### Status Code
 - 200 - OK
 - 201 - "Created" (POST)
