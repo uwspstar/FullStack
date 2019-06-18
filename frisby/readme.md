@@ -27,3 +27,28 @@
 - jest //facebook use to test react, you know jasmine, you know jest
 ### unit test
 - make sure all the excution pass test
+- string test
+```
+const test = require("../src/string");
+
+describe('string', () => {
+
+    // toBe
+    it('should return Hi name', () => {
+        const result = test.string('Xing');
+        expect(result).toBe('Hi, Xing')
+    });
+
+    // toContain
+    it('should return Hi name', () => {
+        const result = test.string('Xing');
+        expect(result).toContain('Xing')
+    });
+
+    // toMatch
+    it('should return Hi name', () => {
+        const result = test.string('Xing');
+        expect(result).toMatch(/Xing/);
+    });
+});
+```
