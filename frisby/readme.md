@@ -24,4 +24,6 @@
 ### testing framework
 - Jasmine
 - mocha
-- jest //facebook use to test react
+- jest //facebook use to test react, you know jasmine, you know jest
+### unit test
+- make sure all the excution pass test
