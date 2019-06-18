@@ -5,6 +5,10 @@ https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - macos
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 
+# Jest
+
+### Frisby
+
 # Docker
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/
 
