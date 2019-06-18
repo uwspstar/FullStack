@@ -25,7 +25,8 @@ When you do this, you should see that your package.json consists of two sets of 
 - 404 - "No Found"
 
 # Jest testing framework
-
+- https://www.udemy.com/nodejs-master-class/
+- https://www.rithmschool.com/courses/intermediate-node-express/api-tests-with-jest
 ### unit test -> integration test -> end-to-end
 - unit test 
 - integration test 
