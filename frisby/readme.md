@@ -152,18 +152,28 @@ It allows us to isolate our application code from its external resources.
 - Popular Jest matcher functions:
 ```
 // Equality
-expect(...).toBe(); expect(...).toEqual();
+expect(...).toBe(); 
+expect(...).toEqual();
 // Truthiness
-expect(...).toBeDefined(); expect(...).toBeNull(); expect(...).toBeTruthy();
+expect(...).toBeDefined(); 
+expect(...).toBeNull(); 
+expect(...).toBeTruthy();
 expect(...).toBeFalsy();
 // Numbers
-expect(...).toBeGreaterThan(); expect(...).toBeGreaterThanOrEqual(); expect(...).toBeLessThan(); expect(...).toBeLessThanOrEqual();
+expect(...).toBeGreaterThan(); 
+expect(...).toBeGreaterThanOrEqual(); 
+expect(...).toBeLessThan(); 
+expect(...).toBeLessThanOrEqual();
 // Strings
 expect(...).toMatch(/regularExp/);
 // Arrays
 expect(...).toContain();
 // Objects
-expect(...).toBe(); // check for the equality of object references expect(...).toEqual(); // check for the equality of properties expect(...).toMatchObject();
+expect(...).toBe(); 
+// check for the equality of object references 
+expect(...).toEqual(); 
+// check for the equality of properties 
+expect(...).toMatchObject();
 // Exceptions
 expect(() => { someCode }).toThrow();
 ```
