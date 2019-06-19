@@ -79,3 +79,21 @@ to perform integration tests in our express application we'll be using a module 
 ```
 expect(result).toEqual(expect.arrayContaining(['USD', 'AUD', 'EUR']));
 ```
+- object
+```
+module.exports.getProduct = function (productId) {
+    return {
+        id: productId,
+        price: 10,
+        size: 10
+    };
+}
+```
+```
+expect(result).toMatchObject({
+    id: 1,
+    price: 10
+});
+expect(result).toHaveProperty('size', 10);
+expect(result).toHaveProperty('id', 1);
+```
