@@ -36,6 +36,7 @@ two sets of dependencies: dependencies and devDependencies.
 - Jasmine
 - mocha
 - jest //facebook use to test react, you know jasmine, you know jest
+###  test should neither be too specific or too general
 ### unit test
 - make sure all the excution pass test
 - string test
@@ -63,7 +64,6 @@ describe('string', () => {
     });
 });
 ```
-### Integration Tests
 - supertest 
 ```
 to perform integration tests in our express application we'll be using a module called supertest
@@ -97,3 +97,5 @@ expect(result).toMatchObject({
 expect(result).toHaveProperty('size', 10);
 expect(result).toHaveProperty('id', 1);
 ```
+
+### Integration Tests
