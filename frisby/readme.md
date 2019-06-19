@@ -75,3 +75,7 @@ to perform integration tests in our express application we'll be using a module 
     "test": "jest --watchAll"
   },
 ```
+- array
+```
+expect(result).toEqual(expect.arrayContaining(['USD', 'AUD', 'EUR']));
+```
