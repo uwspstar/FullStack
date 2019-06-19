@@ -29,6 +29,12 @@ two sets of dependencies: dependencies and devDependencies.
 - https://www.udemy.com/nodejs-master-class/
 - https://www.rithmschool.com/courses/intermediate-node-express/api-tests-with-jest
 ### unit test -> integration test -> end-to-end
+```
+- We have 3 types of automated tests:
+    - Unit tests: test a unit of an application without external resources (eg db) 
+    - Integration tests: test the application with external resources.
+    - Functional or end-to-end tests: test the application through its UI.
+```
 - unit test ```NOT talking external database```
 - integration test ```talking external resource```
 - end-to-end
