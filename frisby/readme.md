@@ -177,6 +177,12 @@ expect(...).toMatchObject();
 // Exceptions
 expect(() => { someCode }).toThrow();
 ```
+- mock
+```
+//jest.fn().mockReturnValue(1);
+//jest.fn().mockResolvedValue(1);
+//jest.fn().mockRejectedValue(new Error('...'));
+```
 - async test
 ```
 test('the data is peanut butter', done => {
