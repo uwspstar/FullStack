@@ -43,11 +43,17 @@ two sets of dependencies: dependencies and devDependencies.
 - mocha
 - jest //facebook use to test react, you know jasmine, you know jest
 ###  test should neither be too specific or too general
-### unit test
+### unit test ```3 simple steps: (A, A , A)```
 ```
 for unit test, you should NOT talking external database,
 otherwize, you are doing integration test
 ```
+```
+develop a unit test 3 simple steps: (A, A , A)
+- Arrange – setup the testing objects and prepare the prerequisites for your test.
+- Act – perform the actual work of the test.
+- Assert – verify the result.
+``
 - make sure all the excution pass test
 - string test
 ```
@@ -151,5 +157,17 @@ expect(...).toContain();
 expect(...).toBe(); // check for the equality of object references expect(...).toEqual(); // check for the equality of properties expect(...).toMatchObject();
 // Exceptions
 expect(() => { someCode }).toThrow();
+```
+- async test
+```
+test('the data is peanut butter', done => {
+  function callback(data) {
+    expect(data).toBe('peanut butter');
+    done();
+  }
+
+  fetchData(callback);
+});
+If done() is never called, the test will fail, which is what you want to happen.
 ```
 ### Integration Tests
