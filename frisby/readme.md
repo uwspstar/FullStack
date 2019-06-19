@@ -97,5 +97,21 @@ expect(result).toMatchObject({
 expect(result).toHaveProperty('size', 10);
 expect(result).toHaveProperty('id', 1);
 ```
-
+- exception
+```
+it('should throw if username is falsy', () => {
+    // Null
+    // undefined
+    // NaN
+    // ''
+    // 0
+    // false
+    const args = [null, undefined, NaN, '', 0, false];
+    args.forEach(arg => {
+        expect(() => {
+            test.registerUser(arg)
+        }).toThrow();
+    });
+})
+```
 ### Integration Tests
