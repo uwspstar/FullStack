@@ -29,8 +29,8 @@ two sets of dependencies: dependencies and devDependencies.
 - https://www.udemy.com/nodejs-master-class/
 - https://www.rithmschool.com/courses/intermediate-node-express/api-tests-with-jest
 ### unit test -> integration test -> end-to-end
-- unit test 
-- integration test 
+- unit test ```NOT talking external database```
+- integration test ```talking external resource```
 - end-to-end
 ### testing framework
 - Jasmine
@@ -38,6 +38,10 @@ two sets of dependencies: dependencies and devDependencies.
 - jest //facebook use to test react, you know jasmine, you know jest
 ###  test should neither be too specific or too general
 ### unit test
+```
+for unit test, you should NOT talking external database,
+otherwize, you are doing integration test
+```
 - make sure all the excution pass test
 - string test
 ```
