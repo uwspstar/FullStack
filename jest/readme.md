@@ -175,3 +175,7 @@ test('the data is peanut butter', done => {
 If done() is never called, the test will fail, which is what you want to happen.
 ```
 ### Integration Tests
+```
+If you find yourself doing too much mocking, 
+that’s when you need to replace your unit test with an integration test. 
+```
