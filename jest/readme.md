@@ -192,3 +192,10 @@ Nothing more, nothing less.
 Clean up after your test using the afterEach function.
 ```
 - Run jest with ```—coverage``` flag to get a code coverage report
+```
+"scripts": {
+    "testfile": "timestamp=$(date \"+%Y%m%d%H%M%S\"); jest --coverage --no-color 2>TestResults/TestResult_${timestamp}.txt",
+    "test": "jest --watchAll",
+    "testcoverage": "jest --coverage --watchAll"
+},
+```
