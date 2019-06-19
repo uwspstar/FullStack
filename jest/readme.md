@@ -191,3 +191,4 @@ Populate the database only with the data required by the test.
 Nothing more, nothing less. 
 Clean up after your test using the afterEach function.
 ```
+- Run jest with ```—coverage``` flag to get a code coverage report
