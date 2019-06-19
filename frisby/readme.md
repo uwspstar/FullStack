@@ -90,6 +90,15 @@ to perform integration tests in our express application we'll be using a module 
     "testfile": "timestamp=$(date \"+%c\"); jest --no-color 2>TestResults/TestResult_${timestamp}.txt",
     "test": "jest --watchAll"
   },
+  
+...
+or 
+
+"scripts": {
+    "testfile": "timestamp=$(date \"+%Y%m%d%H%M%S\"); jest --no-color 2>TestResults/TestResult_${timestamp}.txt",
+    "test": "jest --watchAll"
+  },
+  
 ```
 - array
 ```
