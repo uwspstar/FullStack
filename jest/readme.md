@@ -174,7 +174,14 @@ test('the data is peanut butter', done => {
 If done() is never called, the test will fail, which is what you want to happen.
 ```
 ### Integration Tests
+- when
 ```
 If you find yourself doing too much mocking, 
 that’s when you need to replace your unit test with an integration test. 
+```
+-  separate your test database
+```
+With integration tests, we test our application with a real database. 
+As a best practice, separate your test database from the development or production
+databases. 
 ```
