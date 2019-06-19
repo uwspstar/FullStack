@@ -184,4 +184,10 @@ that’s when you need to replace your unit test with an integration test.
 With integration tests, we test our application with a real database. 
 As a best practice, separate your test database from the development or production
 databases. 
+
+You should write each integration test as if it is the only test in the world. 
+Start with a clean state (database). 
+Populate the database only with the data required by the test. 
+Nothing more, nothing less. 
+Clean up after your test using the afterEach function.
 ```
