@@ -21,7 +21,7 @@
 ### GUI Client tool 
 - Robo 3T / Robomongo
   - https://robomongo.org/
-### Basic
+### express / body-parser/ mongodb / mongoose
 - Promises
 - $> npm install express --save
 - $> npm install body-parser --save
