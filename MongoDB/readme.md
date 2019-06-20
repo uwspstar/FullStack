@@ -23,3 +23,7 @@
   - https://robomongo.org/
 ### Basic
 - Promises
+- $> npm install express --save
+- $> npm install body-parser --save
+- $> npm install mongodb --save
+- $> npm install mongoose
