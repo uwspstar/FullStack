@@ -1,7 +1,7 @@
 # MongoDB
 - MongoDB is an document database. It stores data in JSON like documents.
 - https://www.mongodb.com/download-center/community
-### install 
+### Install 
 - local mongoodb 
   - https://www.udemy.com/mongodb-the-complete-developers-guide/learn/lecture/11739120#overview
 - on Mac
