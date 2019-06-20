@@ -3,6 +3,7 @@
 - https://www.mongodb.com/download-center/community
 ### Install 
 - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+- https://www.udemy.com/nodejs-the-complete-guide/learn/lecture/11942756#overview
 - local mongoodb 
   - https://www.udemy.com/mongodb-the-complete-developers-guide/learn/lecture/11739120#overview
   - https://www.udemy.com/the-complete-developers-guide-to-mongodb/learn/lecture/6035408#overview
