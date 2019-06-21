@@ -27,6 +27,7 @@
 - $> npm install body-parser --save
 - $> npm install mongodb --save
 - $> npm install mongoose
+### make sure add IP in white list
 ### CRUD Operations
 - Connecting to MongoDB
 ```
