@@ -573,3 +573,6 @@ However, the way JavaScript implements the idea of inheritance is a bit differen
 than other programming languages, major programming languages out there.
 But also very powerful because of its simplicity. It implements what's called prototypal inheritance.
 ```
+### 06/20/2019
+- node does not have windows but use global
+- global.console.log();
