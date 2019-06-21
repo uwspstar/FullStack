@@ -100,12 +100,16 @@ const result = await Course.deleteOne({ _id: id });
 const result = await Course.deleteMany({ _id: id }); 
 const course = await Course.findByIdAndRemove(id);
 ```
-- Regular Expression
+### Regular Expression
 ```
 - /..string/, slash for representing a regular expression.
 - ^, carrot character represent a string that starts with something.
 - $, dollar sign, indicates the end of a string. 
+- .*, dot star, in a regular expression means we can contains
 
+characters, 
 /^Xing/ means string start Xing
 /Xing$/ means string end with Xing
+/.*xing.*/ means contains with Xing
+
 ```
