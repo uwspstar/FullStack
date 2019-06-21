@@ -120,3 +120,8 @@ characters,
 ```
 mongoimport --db mongo-exercises --collection courses --drop --file exercise-data.json --jsonArray
 ```
+- two approaches. normalization vs denormalization
+```
+One is using references which we call normalization,
+and the other approach is using embedded documents, which we call denormalization.
+````
