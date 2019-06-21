@@ -7,7 +7,7 @@ https://www.udemy.com/nodejs-master-class
 https://www.udemy.com/the-complete-nodejs-developer-course-2
 - Learn and Understand NodeJS by Anthony Alicea
 https://www.udemy.com/understand-nodejs/learn/lecture/3485580#overview
-
+- https://nodejs.org/dist/latest-v10.x/docs/api/
 
 ### 06/03/2019
 - Node has 50% js and 50% C++
