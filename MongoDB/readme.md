@@ -27,3 +27,33 @@
 - $> npm install body-parser --save
 - $> npm install mongodb --save
 - $> npm install mongoose
+### CRUD Operations
+- Connecting to MongoDB
+```
+const mongoose = require(‘mongoose’); 
+mongoose.connect(‘mongodb://localhost/playground')
+.then(() => console.log(‘Connected...’))
+.catch(err => console.error(‘Connection failed...’));
+
+```
+- To store objects in MongoDB, we need to define a Mongoose schema first.
+- Supported types are: 
+```
+  String, 
+  Number, 
+  Date, 
+  Buffer (for storing binary data), 
+  Boolean and ObjectID.
+```
+```
+// Defining a schema
+const courseSchema = new mongoose.Schema({ 
+  name: String,
+  price: Number 
+});
+
+// Using a SchemaType object
+const courseSchema = new mongoos  e.Schema({ 
+  isPublished: { type: Boolean, default: false }
+});
+```
