@@ -576,3 +576,4 @@ But also very powerful because of its simplicity. It implements what's called pr
 ### 06/20/2019
 - node does not have windows but use global
 - global.console.log();
+- So always use asynchronous methods.
