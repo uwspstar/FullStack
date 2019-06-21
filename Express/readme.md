@@ -7,7 +7,7 @@ const express = require(‘express’); const app = express();
 // Creating a course
 app.post('/api/courses', (req, res) => {
   // Create the course and return the course object
-  resn.send(course);
+  res.send(course);
 });
 
 // Getting all the courses
