@@ -116,3 +116,7 @@ characters,
 ```
 - Pagination
   - https://www.udemy.com/nodejs-master-class/learn/lecture/9992630#overview
+- import data from file to local db
+```
+mongoimport --db mongo-exercises --collection courses --drop --file exercise-data.json --jsonArray
+```
