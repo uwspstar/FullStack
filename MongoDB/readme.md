@@ -123,5 +123,6 @@ mongoimport --db mongo-exercises --collection courses --drop --file exercise-dat
 - two approaches. normalization vs denormalization
 ```
 One is using references which we call normalization,
-and the other approach is using embedded documents, which we call denormalization.
-````
+and the other approach is using embedded documents, which we call denormalization. 
+```
+- you need to do a tradeoff, between query performance, vs,consistency.
