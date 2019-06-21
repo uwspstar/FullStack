@@ -102,7 +102,10 @@ const course = await Course.findByIdAndRemove(id);
 ```
 - Regular Expression
 ```
-/..string/, slash for representing a regular expression.
-n regular expressions, you can use this ^ carrot character 
-to represent a string that starts with something.
+- /..string/, slash for representing a regular expression.
+- ^, carrot character represent a string that starts with something.
+- $, dollar sign, indicates the end of a string. 
+
+/^Xing/ means string start Xing
+/Xing$/ means string end with Xing
 ```
