@@ -199,3 +199,9 @@ Clean up after your test using the afterEach function.
     "testcoverage": "jest --coverage --watchAll --verbose"
   },
 ```
+- process database-->http-->assertion
+```
+we need a real database. You populate this database with data for testing. 
+Now we send an http request to an endpoint we want to test and then make an assertion. 
+That assertion may involve inspecting the result or the database.
+```
