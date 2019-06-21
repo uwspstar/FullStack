@@ -577,3 +577,9 @@ But also very powerful because of its simplicity. It implements what's called pr
 - node does not have windows but use global
 - global.console.log();
 - So always use asynchronous methods.
+- callback
+```
+all asynchronous methods take a function as their last argument. 
+Node will call this function when that asynchronous operation completes. 
+We call this function a callback.
+```
