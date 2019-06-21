@@ -101,6 +101,7 @@ const result = await Course.deleteMany({ _id: id });
 const course = await Course.findByIdAndRemove(id);
 ```
 ### Regular Expression
+- https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 ```
 - /..string/, slash for representing a regular expression.
 - ^, carrot character represent a string that starts with something.
