@@ -127,6 +127,7 @@ if (app.get('env') === 'development') {
 ```
 - $>export NODE_ENV=production
 ### config
+- https://www.npmjs.com/package/config
 - $>npm install config
 - $>export app_password=unset
 ```
