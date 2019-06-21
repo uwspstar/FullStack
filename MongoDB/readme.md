@@ -120,9 +120,9 @@ characters,
 ```
 mongoimport --db mongo-exercises --collection courses --drop --file exercise-data.json --jsonArray
 ```
-- two approaches. normalization vs denormalization
+- two approaches. normalization (consistency) vs denormalization
 ```
-One is using references which we call normalization,
+One is using references which we call normalization, more like a traditional MSSQL
 and the other approach is using embedded documents, which we call denormalization. 
 ```
 - you need to do a tradeoff, between query performance, vs,consistency.
