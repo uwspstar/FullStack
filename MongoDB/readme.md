@@ -100,7 +100,7 @@ const result = await Course.deleteOne({ _id: id });
 const result = await Course.deleteMany({ _id: id }); 
 const course = await Course.findByIdAndRemove(id);
 ```
-### Regular Expression
+- Regular Expression
 - https://www.w3schools.com/jsref/jsref_obj_regexp.asp
 ```
 - /..string/, slash for representing a regular expression.
@@ -114,3 +114,5 @@ characters,
 /.*xing.*/ means contains with Xing
 
 ```
+- Pagination
+  - https://www.udemy.com/nodejs-master-class/learn/lecture/9992630#overview
