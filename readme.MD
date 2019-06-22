@@ -21,6 +21,23 @@ Your public key has been saved in /Users/xingwang/.ssh/id_rsa.pub.
 ```
 copy the pub key to github 
 ```
+### default port
+```
+*** 20: File Transfer Protocol (FTP) Data Transfer
+*** 21: File Transfer Protocol (FTP) Command Control
+*** 22: Secure Shell (SSH) Secure Login
+23: Telnet remote login service, unencrypted text messages
+*** 25: Simple Mail Transfer Protocol (SMTP) E-mail routing
+*** 53: Domain Name System (DNS) service
+*** 80: Hypertext Transfer Protocol (HTTP) used in the World Wide Web
+110: Post Office Protocol (POP3)
+119: Network News Transfer Protocol (NNTP)
+123: Network Time Protocol (NTP)
+143: Internet Message Access Protocol (IMAP) Management of digital mail
+161: Simple Network Management Protocol (SNMP)
+194: Internet Relay Chat (IRC)
+*** 443: HTTP Secure (HTTPS) HTTP over TLS/SSL
+```
 # Jest
 # MongoDB
 
