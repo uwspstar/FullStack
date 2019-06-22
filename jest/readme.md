@@ -6,6 +6,7 @@ It comes with everything you need to write automated tests.
 # Jest testing framework
 - https://www.udemy.com/nodejs-master-class/
 - https://www.rithmschool.com/courses/intermediate-node-express/api-tests-with-jest
+
 ### unit test -> integration test -> end-to-end
 ```
 - We have 3 types of automated tests:
