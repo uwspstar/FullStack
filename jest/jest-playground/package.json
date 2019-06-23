@@ -1,0 +1,25 @@
+{
+  "name": "jest-playground",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development PORT=3000 node app.js",
+    "prod": "NODE_ENV=production PORT=4444 node app.js",
+    "qa": "NODE_ENV=qa PORT=8082 node app.js",
+    "testfile": "timestamp=$(date \"+%Y%m%d%H%M%S\"); jest --coverage --verbose --no-color 2>TestResults/TestResult_${timestamp}.txt",
+    "test": "jest --watchAll --verbose",
+    "testcoverage": "jest --coverage --watchAll --verbose"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "jest": "^24.8.0"
+  },
+  "dependencies": {
+    "config": "^3.1.0",
+    "express": "^4.17.1",
+    "mongoose": "^5.6.0"
+  }
+}

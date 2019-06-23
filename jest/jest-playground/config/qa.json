@@ -1,0 +1,10 @@
+{
+    "envName": "qa",
+    "dbConfig": {
+        "connectionString": "mongodb+srv://xing:U.wspstar2009@cluster0-h6akd.azure.mongodb.net/test?retryWrites=true&w=majority",
+        "dbName": "customers"
+    },
+    "host": "localhost",
+    "port": 3000,
+
+}
