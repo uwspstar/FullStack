@@ -43,6 +43,79 @@ describe('Testing Samples', () => {
         });
     });
 
+    describe('Testing array getColor', () => {
 
+        it('should return array containing ["blue", "red", "white"]', () => {
 
+            const result = sample.getColor();
+            expect(result).toEqual(expect.arrayContaining(["blue", "red", "white"]));
+        });
+
+        it('should return array contain red', () => {
+
+            const result = sample.getColor();
+            expect(result).toContain("red");
+        });
+
+        it('should return array contain white', () => {
+
+            const result = sample.getColor();
+            expect(result).toContain("white");
+        });
+
+        it('should return array contain blue', () => {
+
+            const result = sample.getColor();
+            expect(result).toContain("blue");
+        });
+
+    });
+
+    describe('Testing objects getColor', () => {
+
+        it('should return product with the given id', () => {
+
+            const result = sample.getProduct(1);
+            expect(result).toMatchObject({
+                id: 1
+            });
+        });
+
+        it('should return product with the given id', () => {
+
+            const result = sample.getProduct(1);
+            expect(result).toHaveProperty('id', 1);
+        });
+
+    });
+
+    describe('Testing Exception', () => {
+        //NULL, underfined, NaN, '', 0 , false
+        it('should return exception if input is falsy', () => {
+
+            const args = [null, NaN, '', 0, false];
+            args.forEach(x => {
+                expect(() => sample.getException(x)).toThrow();
+            })
+            expect(() => sample.getException(underfined)).toThrow();
+        });
+
+        it('should return exception if input is falsy', () => {
+
+            expect(() => sample.getException(null)).toThrow();
+            expect(() => sample.getException(underfined)).toThrow();
+            expect(() => sample.getException('')).toThrow();
+            expect(() => sample.getException(0)).toThrow();
+            expect(() => sample.getException(NaN)).toThrow();
+            expect(() => sample.getException(false)).toThrow();
+        });
+
+        it('should "xing" exception if input is "xing"', () => {
+            const result = sample.getException("xing");
+            expect(result).toMatchObject({
+                username: 'xing'
+            });
+            expect(result).toBeGreaterThan(0);
+        });
+    });
 });

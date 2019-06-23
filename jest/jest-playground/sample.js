@@ -16,7 +16,7 @@ module.exports.reversString = function (str) {
 
 // Testing arrays 
 module.exports.getColor = function () {
-    return ['blue', 'read', 'white'];
+    return ['blue', 'red', 'white'];
 }
 
 // Testing objects 
