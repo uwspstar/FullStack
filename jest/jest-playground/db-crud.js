@@ -1,5 +1,5 @@
 module.exports.db = {
-    dbConnInit: () => {
+    dbConnInit: function () {
         console.log(`db connection init ....`);
     },
     dbClose: () => {
