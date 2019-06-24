@@ -1,5 +1,5 @@
-const db = require('./db');
-//const mail = require('./mail');
+//const db = require('./db');
+const axios = require('axios');
 
 // Testing numbers 
 module.exports.getAbsNumber = function (number) {
@@ -47,6 +47,14 @@ module.exports.registerUser = function (username) {
         username: username
     }
 }
+
+
+// Testing Simple Promis 
+module.exports.fetchUser = () =>
+    axios.get('https://jsonplaceholder.typicode.com/users/1')
+    .then(res => res.data)
+    .catch(err => console.log('Error !', err));
+
 
 // // Mock functions 
 // module.exports.applyDiscount = function (order) {
