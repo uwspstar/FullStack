@@ -3,11 +3,24 @@ const {
     dbClose
 } = require('../../db-crud');
 
-beforeEach(() => dbConnInit);
-afterEach(() => dbClose);
+beforeAll(() => dbConnInit());
+afterAll(() => dbClose());
+
+// beforeEach(() => dbConnInit());
+// afterEach(() => dbClose());
 
 describe('', () => {
-    it('', () => {
+
+    it('create', () => {
+        // expect(1).toBe(2);
+    });
+    it('read', () => {
+
+    });
+    it('update', () => {
+
+    });
+    it('delete', () => {
 
     });
 });
