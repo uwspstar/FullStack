@@ -2,6 +2,16 @@ const sample = require('../../sample');
 
 describe('Testing Samples', () => {
 
+    describe('basic', () => {
+        it('should return exception if input is falsy', () => {
+
+            expect(null).toBeNull();
+            expect(undefined).toBeUndefined();
+            expect(!undefined).toBeDefined();
+            expect(false).toBeFalsy();
+
+        });
+    })
     describe('Testing Absoulte numbers', () => {
 
         it('should return the positive number if the input is positive', () => {
@@ -93,17 +103,17 @@ describe('Testing Samples', () => {
         //NULL, underfined, NaN, '', 0 , false
         it('should return exception if input is falsy', () => {
 
-            const args = [null, NaN, '', 0, false];
+            const args = [null, undefined, NaN, '', 0, false];
             args.forEach(x => {
                 expect(() => sample.getException(x)).toThrow();
-            })
-            expect(() => sample.getException(underfined)).toThrow();
+            });
+
         });
 
         it('should return exception if input is falsy', () => {
 
             expect(() => sample.getException(null)).toThrow();
-            expect(() => sample.getException(underfined)).toThrow();
+            expect(() => sample.getException(undefined)).toThrow();
             expect(() => sample.getException('')).toThrow();
             expect(() => sample.getException(0)).toThrow();
             expect(() => sample.getException(NaN)).toThrow();
@@ -115,7 +125,7 @@ describe('Testing Samples', () => {
             expect(result).toMatchObject({
                 username: 'xing'
             });
-            expect(result).toBeGreaterThan(0);
+            expect(result.id).toBeGreaterThan(0);
         });
     });
 });
