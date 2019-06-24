@@ -1,0 +1,48 @@
+[999D[K[999D[KPASS test/unit/app.test.js
+    ✓  (2ms)
+
+PASS test/intergration/db-crud.test.js
+    ✓  (2ms)
+
+PASS test/unit/sample.test.js
+  Testing Samples
+    basic
+      ✓ should return Falsy (5ms)
+      ✓ should return falsy (1ms)
+    Testing Absoulte numbers
+      ✓ should return the positive number if the input is positive (1ms)
+      ✓ should return the positive number if the input is negative
+      ✓ should return the 0 if the input is 0 (1ms)
+    Testing reverst string
+      ✓ should return revers string cba if input is abc
+      ✓ should return revers string a if input is a
+      ✓ should return empty string  if input is empty
+    Testing array getColor
+      ✓ should return array containing ["blue", "red", "white"] (1ms)
+      ✓ should return array contain red (1ms)
+      ✓ should return array contain white
+      ✓ should return array contain blue
+    Testing objects getColor
+      ✓ should return product with the given id (1ms)
+      ✓ should return product with the given id (1ms)
+    Testing Exception
+      ✓ should return exception if input is falsy (6ms)
+      ✓ should return exception if input is falsy (2ms)
+      ✓ should "xing" exception if input is "xing"
+
+PASS test/intergration/api.test.js
+  Testing API
+    Testing promis
+      ✓ should return username: Bret when input id is 1 (255ms)
+      ✓ should return id: 1 user when input id is 1 (115ms)
+      ✓ should return object match id:1 when input id is 1 (126ms)
+    Testing async await
+      ✓ should return username: Bret when input id is 1 (117ms)
+      ✓ should return id: 1 user when input id is 1 (113ms)
+      ✓ should return object match id:1 when input id is 1 (121ms)
+
+[999D[KTest Suites: 4 passed, 4 total
+Tests:       25 passed, 25 total
+Snapshots:   0 total
+Time:        2.977s
+Ran all test suites.
