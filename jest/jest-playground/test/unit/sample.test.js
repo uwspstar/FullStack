@@ -3,7 +3,16 @@ const sample = require('../../sample');
 describe('Testing Samples', () => {
 
     describe('basic', () => {
-        it('should return exception if input is falsy', () => {
+        it('should return Falsy', () => {
+
+            const args = [null, undefined, NaN, '', 0, false];
+            args.forEach(x => {
+                expect(x).toBeFalsy();
+            });
+
+        });
+
+        it('should return falsy', () => {
 
             expect(null).toBeNull();
             expect(undefined).toBeUndefined();
