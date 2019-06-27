@@ -51,3 +51,5 @@ var x = location.hash;
 //The result of x will be:
 #part2
 ```
+### 06/26/2019
+- factory vs constructor function.
