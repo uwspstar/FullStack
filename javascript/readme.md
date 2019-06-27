@@ -55,3 +55,4 @@ var x = location.hash;
 - factory vs constructor function.
 - function declaration ( not ; ) ```hoisting```
 - function expression ( has ; at the end) ```not hoisting, only can call after this declare```
+- class declartion and class expression are NOT hoisting
