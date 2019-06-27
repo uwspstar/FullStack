@@ -56,3 +56,4 @@ var x = location.hash;
 - function declaration ( not ; ) ```hoisting```
 - function expression ( has ; at the end) ```not hoisting, only can call after this declare```
 - class declartion and class expression are NOT hoisting
+- Static Methods and instance Methods
