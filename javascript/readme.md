@@ -58,3 +58,4 @@ var x = location.hash;
 - class declartion and class expression are NOT hoisting
 - Static Methods and instance Methods
 - this (https://www.udemy.com/javascript-object-oriented-programming/learn/lecture/10020626#overview)
+- Private Members Using Symbols
