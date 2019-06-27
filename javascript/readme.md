@@ -59,4 +59,4 @@ var x = location.hash;
 - Static Methods and instance Methods
 - this (https://www.udemy.com/javascript-object-oriented-programming/learn/lecture/10020626#overview)
 - Private Members Using Symbols
-- modules (AMD, commonJS, UMD)
+- modules (AMD, commonJS, UMD, ES6 Modules)
