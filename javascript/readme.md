@@ -57,3 +57,4 @@ var x = location.hash;
 - function expression ( has ; at the end) ```not hoisting, only can call after this declare```
 - class declartion and class expression are NOT hoisting
 - Static Methods and instance Methods
+- this (https://www.udemy.com/javascript-object-oriented-programming/learn/lecture/10020626#overview)
