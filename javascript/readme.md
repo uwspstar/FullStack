@@ -143,7 +143,7 @@ Object.defineProperty(this, 'defaultLocation', {
     set: function(value) { defaultLocation = value; }
 });
 ```
-### 07/04/20`9
+### 07/04/2019
 ```
 // Every object (except the root object) has a prototype (parent). 
 // To get the prototype of an object:
