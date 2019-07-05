@@ -27,6 +27,8 @@ npm update --save == yarn upgrade
 npm install package -g == yarn global add package
 
 ```
+- Create React App https://reactjs.org/docs/create-a-new-react-app.html#create-react-app
+- promise https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 - Virtual DOM
 - Redux 
 - Hooks
