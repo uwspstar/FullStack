@@ -3,3 +3,9 @@
 - https://www.udemy.com/complete-react-developer-zero-to-mastery/
 
 - Virtual DOM
+- Redux 
+- Hooks
+- GraphQL
+- ContextAPI
+- Stripe
+- Firebase
