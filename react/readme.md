@@ -42,7 +42,10 @@ onChange={e=> console.log(e.target.value)}
 onChange={e=> this.setState({searchFiled : e.target.value },console.log(this.state))}
 />
 
-
+```
+- js, everything is not in the 6 types are object
+```
+6 types are , number, string, boolean, null, undefine, symble
 ```
 - Redux 
 - Hooks
