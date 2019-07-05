@@ -32,6 +32,10 @@ npm install package -g == yarn global add package
 - jsonplaceholder https://jsonplaceholder.typicode.com/users
 - whatis_json https://www.w3schools.com/whatis/whatis_json.asp
 - Virtual DOM
+- search box
+```
+<input type='search' placeholder='search ...' />
+```
 - Redux 
 - Hooks
 - GraphQL
