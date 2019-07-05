@@ -37,6 +37,12 @@ npm install package -g == yarn global add package
 <input type='search' placeholder='search ...' 
 onChange={e=> console.log(e.target.value)}
 />
+
+<input type='search' placeholder='search ...' 
+onChange={e=> this.setState({searchFiled : e.target.value },console.log(e.target.value))}
+/>
+
+
 ```
 - Redux 
 - Hooks
