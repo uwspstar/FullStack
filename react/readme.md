@@ -47,6 +47,9 @@ onChange={e=> this.setState({searchFiled : e.target.value },console.log(this.sta
 ```
 6 types are , number, string, boolean, null, undefine, symble
 ```
+- map()
+- filter()
+- includes()
 - Redux 
 - Hooks
 - GraphQL
