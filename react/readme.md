@@ -35,6 +35,7 @@ npm install package -g == yarn global add package
 - search box
 ```
 <input type='search' placeholder='search ...' />
+onChange={e=> console.log(e.target.value)}
 ```
 - Redux 
 - Hooks
