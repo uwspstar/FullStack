@@ -29,6 +29,8 @@ npm install package -g == yarn global add package
 ```
 - Create React App https://reactjs.org/docs/create-a-new-react-app.html#create-react-app
 - promise https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
+- jsonplaceholder https://jsonplaceholder.typicode.com/users
+- whatis_json https://www.w3schools.com/whatis/whatis_json.asp
 - Virtual DOM
 - Redux 
 - Hooks
