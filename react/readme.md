@@ -50,6 +50,7 @@ onChange={e=> this.setState({searchFiled : e.target.value },console.log(this.sta
 - map()
 - filter()
 - includes()
+- Handling Events https://reactjs.org/docs/handling-events.html
 - Redux 
 - Hooks
 - GraphQL
