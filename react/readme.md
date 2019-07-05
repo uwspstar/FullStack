@@ -39,7 +39,7 @@ onChange={e=> console.log(e.target.value)}
 />
 
 <input type='search' placeholder='search ...' 
-onChange={e=> this.setState({searchFiled : e.target.value },console.log(e.target.value))}
+onChange={e=> this.setState({searchFiled : e.target.value },console.log(this.state))}
 />
 
 
