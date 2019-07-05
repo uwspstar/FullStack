@@ -34,8 +34,9 @@ npm install package -g == yarn global add package
 - Virtual DOM
 - search box
 ```
-<input type='search' placeholder='search ...' />
+<input type='search' placeholder='search ...' 
 onChange={e=> console.log(e.target.value)}
+/>
 ```
 - Redux 
 - Hooks
