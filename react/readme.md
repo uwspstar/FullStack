@@ -67,6 +67,11 @@ https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/148
 - React Lifecycle Methods
 http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 
+### E-Commerce project
+```
+$> npx create-react-app e-commerce
+
+```
 ### Redux 
 ### Hooks
 ### GraphQL
