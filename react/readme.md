@@ -51,6 +51,8 @@ onChange={e=> this.setState({searchFiled : e.target.value },console.log(this.sta
 - filter()
 - includes()
 - Handling Events https://reactjs.org/docs/handling-events.html
+- Class Methods and Arrow Functions
+https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/14870617#overview
 - Redux 
 - Hooks
 - GraphQL
