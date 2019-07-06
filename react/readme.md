@@ -64,6 +64,7 @@ https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/148
 - React and ReactDOM https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/14915222#overview
 - Virtual DOM https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/15082734#overview
 - Asynchronous setState
+- React Lifecycle Methods - Mounting
 
 ### Redux 
 ### Hooks
