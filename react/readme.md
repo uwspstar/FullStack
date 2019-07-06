@@ -72,6 +72,7 @@ http://projects.wojtekmaj.pl/react-lifecycle-methods-diagram/
 $> npx create-react-app e-commerce
 
 ```
+### CSS and SCSS files
 ### Redux 
 ### Hooks
 ### GraphQL
