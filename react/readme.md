@@ -6,6 +6,11 @@
 2. decide the state and where it lives
 3. what changes should we make when the state changes
 ```
+### SSH
+- Connecting With SSH To Github
+- https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/15359990#overview
+- https://help.github.com/en/enterprise/2.15/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+
 ### npm vs. yarn
 ```
 // Install dependencies from package.json: 
@@ -58,11 +63,7 @@ https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/148
 - componentDidMount()
 - React and ReactDOM https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/14915222#overview
 - Virtual DOM https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/15082734#overview
-
-### SSH
-- Connecting With SSH To Github
-- https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/15359990#overview
-- https://help.github.com/en/enterprise/2.15/user/articles/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent
+- Asynchronous setState
 
 ### Redux 
 ### Hooks
