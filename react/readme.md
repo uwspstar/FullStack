@@ -56,9 +56,9 @@ https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/148
 - bind() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
 - render()
 - componentDidMount()
-- Redux 
-- Hooks
-- GraphQL
-- ContextAPI
-- Stripe
-- Firebase
+### Redux 
+### Hooks
+### GraphQL
+### ContextAPI
+### Stripe
+### Firebase
