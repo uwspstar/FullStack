@@ -57,6 +57,9 @@ https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/148
 - bind() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
 - render()
 - componentDidMount()
+### SSH
+- Connecting With SSH To Github
+https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/15359990#overview
 ### Redux 
 ### Hooks
 ### GraphQL
