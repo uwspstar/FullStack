@@ -51,6 +51,7 @@ onChange={e=> this.setState({searchFiled : e.target.value },console.log(this.sta
 - filter()
 - includes()
 - Handling Events https://reactjs.org/docs/handling-events.html
+- preventDefault()
 - Class Methods and Arrow Functions
 https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/14870617#overview
 - bind() https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_objects/Function/bind
