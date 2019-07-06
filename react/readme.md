@@ -31,7 +31,6 @@ npm install package -g == yarn global add package
 - promise https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Promise
 - jsonplaceholder https://jsonplaceholder.typicode.com/users
 - whatis_json https://www.w3schools.com/whatis/whatis_json.asp
-- Virtual DOM
 - search box
 ```
 <input type='search' placeholder='search ...' 
@@ -58,6 +57,7 @@ https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/148
 - render()
 - componentDidMount()
 - React and ReactDOM https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/14915222#overview
+- Virtual DOM https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/15082734#overview
 
 ### SSH
 - Connecting With SSH To Github
