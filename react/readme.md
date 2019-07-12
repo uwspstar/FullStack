@@ -50,6 +50,7 @@ onChange={e=> this.setState({searchFiled : e.target.value },console.log(this.sta
 - js, everything is not in the 6 types are object
 ```
 6 types are , number, string, boolean, null, undefine, symble
+
 ```
 - map()
 - filter()
