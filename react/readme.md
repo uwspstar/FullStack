@@ -75,6 +75,7 @@ $> npx create-react-app e-commerce
 ```
 ### CSS and SCSS files
 - cubic-bezier() https://www.w3schools.com/cssref/func_cubic-bezier.asp
+- routing https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/15113848#overview
 ### Redux 
 ### Hooks
 ### GraphQL
