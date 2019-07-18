@@ -421,3 +421,5 @@ for num in range(1, 6):
         count += 1
     print(smileys)
 ```
+### 07/18/2019
+- lower case
