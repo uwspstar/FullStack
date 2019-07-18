@@ -21,6 +21,7 @@ https://www.amazon.com/Effective-Python-Specific-Software-Development/dp/0134034
 
 # Python command
 ### Use exit() or Ctrl-D (i.e. EOF) to exit
+- exit()
 
 ### 05/19/2019
 - This is especially important on macOS, where you already got Python 2.7 pre-installed. 
