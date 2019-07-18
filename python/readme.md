@@ -19,6 +19,9 @@ https://programmingwithmosh.com/python/python-3-cheat-sheet/
 ### Effective Python: 59 Specific Ways to Write Better Python (Effective Software Development Series)
 https://www.amazon.com/Effective-Python-Specific-Software-Development/dp/0134034287
 
+# Python command
+### Use exit() or Ctrl-D (i.e. EOF) to exit
+
 ### 05/19/2019
 - This is especially important on macOS, where you already got Python 2.7 pre-installed. 
 To NOT use that, run **python3**  instead of python .
