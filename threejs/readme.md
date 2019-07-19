@@ -7,3 +7,4 @@ display anything with three.js, we need three things:
 so that we can render the scene with camera.
 ```
 
+- There are a few different cameras in three.js. such as PerspectiveCamera.
