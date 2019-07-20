@@ -13,6 +13,6 @@ each module - or each file that we create - has its own separate scope.
 That is, code that we want to add or access inside of one file.
 ```
 - exports NOT export
-- CommonJs
-- AMD
-- ES2015
+- CommonJs (require , module.exports)
+- AMD (require, define)
+- ES2015 (import, export)
