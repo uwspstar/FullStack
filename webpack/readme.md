@@ -6,3 +6,4 @@ The purpose of webpack is :
 to take our big collection of tiny little javascript modules and merge them all into one big javascript file 
 while also ensuring that each module is executed in the correct order.
 ```
+- $>npm init --yes
