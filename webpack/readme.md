@@ -7,6 +7,7 @@ to take our big collection of tiny little javascript modules and merge them all 
 while also ensuring that each module is executed in the correct order.
 ```
 - $>npm init --yes
+
 ```
 In the world of JavaScript modules,
 each module - or each file that we create - has its own separate scope.
@@ -16,3 +17,5 @@ That is, code that we want to add or access inside of one file.
 - CommonJs (require , module.exports)
 - AMD (require, define)
 - ES2015 (import, export)
+
+- $>npm install --save-dev webpack
