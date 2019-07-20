@@ -217,3 +217,5 @@ import {Square} from './square';
 ### 07/20/2019
 - Object Literals
 - Factories
+- factory function ( use return)
+- construct function (use new )
