@@ -20,11 +20,19 @@ That is, code that we want to add or access inside of one file.
 
 - $>npm install --save-dev webpack
 - webpack.config.js
+https://www.udemy.com/webpack-2-the-complete-developers-guide/learn/lecture/6296226#overview
 ```
 // there's these two minimum properties that we have to define inside of this config object right here.
+1. entry
+2. output 
 
+const path = require('path');
 const config = {
-
+    entry: './scr/index.js',
+    output: {
+        path: path.resolve(__dirname, 'build'),
+        filename: 'bundle.js'
+    }
 }
 
 module.exports = config;
