@@ -46,9 +46,15 @@ when you install a module globally, you can only have one version of a module in
 - Babel : turn ES2015 code into ES5 code
 ```
 Babel : 
-- babel-loader
-- babel-core
-- babel-preset-environment or env.
+- babel-loader : teaches bable how to work with webpack
+- babel-core : knows how to take in code, parse it, and generate some output files
+- babel-preset-environment or env : ruleset for telling babel exactly what pieces of ES2015/6/7 syntax to look for, and how to turn it into ES5 code
+```
+```
+we're going to ensure that Webpack only tries to apply
+Babel to Javascript files inside of our project.
+We're not going to allow Babel to get applied to CSS files, or images, or HTML docs,
+anything else like that.
 ```
 - Webpack : Link up JS module together
 
