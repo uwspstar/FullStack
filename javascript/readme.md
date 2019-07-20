@@ -217,7 +217,11 @@ import {Square} from './square';
 ### 07/20/2019
 - Object Literals
 - Factories
-- factory function ( use return)
+- factory function (use return)
 - construct function (use new)
 - functions are object
 - .call() function
+- value types (Number, String, Boolean, Symbol, undefined, null)
+- reference type (Object, Function, Array)
+- Primitives are copied by their value
+- Objectes are copied by their reference
