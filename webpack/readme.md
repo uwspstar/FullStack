@@ -19,3 +19,13 @@ That is, code that we want to add or access inside of one file.
 - ES2015 (import, export)
 
 - $>npm install --save-dev webpack
+- webpack.config.js
+```
+// there's these two minimum properties that we have to define inside of this config object right here.
+
+const config = {
+
+}
+
+module.exports = config;
+```
