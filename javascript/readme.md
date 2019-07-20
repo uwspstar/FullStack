@@ -225,3 +225,4 @@ import {Square} from './square';
 - reference type (Object, Function, Array)
 - Primitives are copied by their value
 - Objectes are copied by their reference
+
