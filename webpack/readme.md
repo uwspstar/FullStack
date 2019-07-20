@@ -28,7 +28,7 @@ https://www.udemy.com/webpack-2-the-complete-developers-guide/learn/lecture/6296
 
 const path = require('path');
 const config = {
-    entry: './scr/index.js',
+    entry: './src/index.js',
     output: {
         path: path.resolve(__dirname, 'build'),
         filename: 'bundle.js'
@@ -42,3 +42,4 @@ when you install a module globally, you can only have one version of a module in
 ``
 - command run at 'webpack' : out of all globlelly installed modules, find the one called webpack and run it
 - command run at 'npm run build' : Run the copy of 'webpacl' stored in the 'node_modules' directory
+-$> open index.html
