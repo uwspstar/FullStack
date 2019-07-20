@@ -37,3 +37,6 @@ const config = {
 
 module.exports = config;
 ```
+```
+when you install a module globally, you can only have one version of a module installed at a time.
+``
