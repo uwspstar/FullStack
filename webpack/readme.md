@@ -44,3 +44,10 @@ when you install a module globally, you can only have one version of a module in
 - command run at 'npm run build' : Run the copy of 'webpacl' stored in the 'node_modules' directory
 -$> open index.html
 - Babel : turn ES2015 code into ES5 code
+```
+- babel-loader
+- babel-core
+- babel-preset-environment or env.
+```
+- Webpack : Link up JS module together
+
