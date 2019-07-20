@@ -214,3 +214,6 @@ import {Square} from './square';
 // We use Webpack to combine our JavaScript files into a
 // bundle. 
 ```
+### 07/20/2019
+- Object Literals
+- Factories
