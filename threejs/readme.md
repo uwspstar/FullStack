@@ -8,3 +8,5 @@ so that we can render the scene with camera.
 ```
 
 - There are a few different cameras in three.js. such as PerspectiveCamera.
+- $>npm init --yes
+- $>npm i three
