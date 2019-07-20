@@ -45,6 +45,7 @@ when you install a module globally, you can only have one version of a module in
 -$> open index.html
 - Babel : turn ES2015 code into ES5 code
 ```
+Babel : 
 - babel-loader
 - babel-core
 - babel-preset-environment or env.
