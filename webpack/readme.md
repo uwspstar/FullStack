@@ -128,3 +128,16 @@ before the code is run and in turn your div element is available to the selector
 ``` 
 - $>npm install --save-dev style-loader css-loader
 - $>npm install --save-dev extract-text-webpack-plugin
+- 
+```
+webpack.config.js
+- const ExtractTextPlugin = require('extract-text-webpack-plugin');
+
+new ExtractTextPlugin and we're going to pass an argument of style.css 
+This line right here tells the extract text library to find any files 
+that were transformed by its loader earlier up inside of here.
+So anything that this loader caught is going to get grabbed by this plugin right here 
+and then saves into a file called style.css.
+If we have multiple CSS files inside of our project,
+they will all be combined and stuffed into a single style.css file.
+```
