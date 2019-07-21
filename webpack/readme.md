@@ -80,6 +80,7 @@ Babel :
 - babel-preset-environment or env : ruleset for telling babel exactly what pieces of ES2015/6/7 
 syntax to look for, and how to turn it into ES5 code
 ```
+- $>npm install --save-dev babel-loader babel-core babel-preset-env
 - only apply Babel to Javascript files 
 ```
 we're going to ensure that Webpack only tries to apply
