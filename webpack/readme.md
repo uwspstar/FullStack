@@ -30,7 +30,7 @@ That is, code that we want to add or access inside of one file.
 ```
 - webpack.config.js . (manully add it)
 https://www.udemy.com/webpack-2-the-complete-developers-guide/learn/lecture/6296226#overview
-- install VSCODE "Live Server" extension Ritwick Dey
+
 ```
 // there's these two minimum properties that we have to define inside of this config object right here.
 1. entry
@@ -55,12 +55,23 @@ module.exports = config;
   
 NOTE : make sure use double quote ""
 ```
+- install VSCODE "Live Server" extension Ritwick Dey
+- add index.html 
+```
+<script src="build/bundle.js"></script>
+```
+- $>npm run build
+-$> open index.html
+``` 
+or use VSCODE Live Server
+```
 ```
 when you install a module globally, you can only have one version of a module installed at a time.
 ```
 - command run at 'webpack' : out of all globlelly installed modules, find the one called webpack and run it
 - command run at 'npm run build' : Run the copy of 'webpack' stored in the 'node_modules' directory
--$> open index.html
+
+
 - Babel : turn ES2015 code into ES5 code
 ```
 Babel : 
