@@ -3,7 +3,8 @@
 https://www.udemy.com/webpack-2-the-complete-developers-guide/learn/lecture/6308308#overview
 ```
 The purpose of webpack is :
-to take our big collection of tiny little javascript modules and merge them all into one big javascript file 
+to take our big collection of tiny little javascript modules 
+and merge them all into one big javascript file 
 while also ensuring that each module is executed in the correct order.
 ```
 - $>npm init --yes
@@ -23,7 +24,7 @@ That is, code that we want to add or access inside of one file.
 or
 $>npm i -D webpack webpack-cli
 ```
-- webpack.config.js
+- webpack.config.js . (manully add it)
 https://www.udemy.com/webpack-2-the-complete-developers-guide/learn/lecture/6296226#overview
 ```
 // there's these two minimum properties that we have to define inside of this config object right here.
@@ -54,6 +55,7 @@ Babel :
 - babel-core : knows how to take in code, parse it, and generate some output files
 - babel-preset-environment or env : ruleset for telling babel exactly what pieces of ES2015/6/7 syntax to look for, and how to turn it into ES5 code
 ```
+- only apply Babel to Javascript files 
 ```
 we're going to ensure that Webpack only tries to apply
 Babel to Javascript files inside of our project.
