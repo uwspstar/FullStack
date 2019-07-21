@@ -119,3 +119,10 @@ anything else like that.
 In your .babelrc you are still referencing the package babel-preset-env 
 (which is for 6.x), you want to reference @babel/preset-env instead (which is for 7.x).
 ```
+- image.src = "http://lorempixel.com/400/440"
+- put your JS at the bottom of the page so the DOM
+```
+Your code is loaded before the DOM is ready, so the selectors can't find those elements on the page.
+
+You can put your JS at the bottom of the page so the DOM is fully loaded before the code is run and in turn your div element is available to the selector.
+```
