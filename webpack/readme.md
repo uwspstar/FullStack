@@ -128,7 +128,7 @@ before the code is run and in turn your div element is available to the selector
 ``` 
 - $>npm install --save-dev style-loader css-loader
 - $>npm install --save-dev extract-text-webpack-plugin
-- 
+- extract-text-webpack-plugin
 ```
 webpack.config.js
 - const ExtractTextPlugin = require('extract-text-webpack-plugin');
