@@ -123,6 +123,6 @@ In your .babelrc you are still referencing the package babel-preset-env
 - put your JS at the bottom of the page so the DOM
 ```
 Your code is loaded before the DOM is ready, so the selectors can't find those elements on the page.
-
-You can put your JS at the bottom of the page so the DOM is fully loaded before the code is run and in turn your div element is available to the selector.
-```
+You can put your JS at the bottom of the pageso the DOM is fully loaded 
+before the code is run and in turn your div element is available to the selector.
+``` 
