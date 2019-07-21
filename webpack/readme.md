@@ -81,6 +81,16 @@ Babel :
 syntax to look for, and how to turn it into ES5 code
 ```
 - $>npm install --save-dev babel-loader babel-core babel-preset-env
+```
+- package.json
+"devDependencies": {
+    "babel-core": "^6.26.3",
+    "babel-loader": "^8.0.6",
+    "babel-preset-env": "^1.7.0",
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
+```
 - only apply Babel to Javascript files 
 ```
 we're going to ensure that Webpack only tries to apply
