@@ -73,6 +73,8 @@ https://www.edureka.co/blog/azure-storage-tutorial/
 - Top 8 Continuous Integration Tools (https://code-maze.com/top-8-continuous-integration-tools/)
 - CI CD Pipeline: Learn How to Setup a CI CD Pipeline From Scratch
 (https://medium.com/edureka/ci-cd-pipeline-5508227b19ca)
+- CI/CD pipeline using Docker and Jenkins. Step by step 
+(https://syndicode.com/2019/04/05/ci-cd-pipeline-using-docker-and-jenkins-step-by-step/)
 
 # Media Queries
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
