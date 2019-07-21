@@ -82,6 +82,13 @@ syntax to look for, and how to turn it into ES5 code
 ```
 - $>npm install --save-dev babel-loader babel-core babel-preset-env
 ```
+Update
+As of babel 7, install the dependency via the following command instead
+$>npm remove babel-cli
+$>npm install --save-dev @babel/cli @babel/core @babel/preset-env
+//$>npm install --save-dev @babel/core @babel/preset-env
+```
+```
 - package.json
 "devDependencies": {
     "babel-core": "^6.26.3",
@@ -104,4 +111,11 @@ anything else like that.
 {
   "presets": ["babel-preset-env", "react"]
 }
+```
+```
+{ "presets": ["@babel/preset-env"] }
+(and install that package if you haven't already).
+
+In your .babelrc you are still referencing the package babel-preset-env 
+(which is for 6.x), you want to reference @babel/preset-env instead (which is for 7.x).
 ```
