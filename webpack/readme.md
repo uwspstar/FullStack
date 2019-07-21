@@ -46,14 +46,15 @@ module.exports = config;
 when you install a module globally, you can only have one version of a module installed at a time.
 ```
 - command run at 'webpack' : out of all globlelly installed modules, find the one called webpack and run it
-- command run at 'npm run build' : Run the copy of 'webpacl' stored in the 'node_modules' directory
+- command run at 'npm run build' : Run the copy of 'webpack' stored in the 'node_modules' directory
 -$> open index.html
 - Babel : turn ES2015 code into ES5 code
 ```
 Babel : 
 - babel-loader : teaches bable how to work with webpack
 - babel-core : knows how to take in code, parse it, and generate some output files
-- babel-preset-environment or env : ruleset for telling babel exactly what pieces of ES2015/6/7 syntax to look for, and how to turn it into ES5 code
+- babel-preset-environment or env : ruleset for telling babel exactly what pieces of ES2015/6/7 
+syntax to look for, and how to turn it into ES5 code
 ```
 - only apply Babel to Javascript files 
 ```
