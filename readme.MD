@@ -71,6 +71,8 @@ https://www.edureka.co/blog/azure-storage-tutorial/
 - Angular Security - Authentication With JSON Web Tokens (JWT): The Complete Guide https://blog.angular-university.io/angular-jwt-authentication/
 # CI/CD
 - Top 8 Continuous Integration Tools (https://code-maze.com/top-8-continuous-integration-tools/)
+- CI CD Pipeline: Learn How to Setup a CI CD Pipeline From Scratch
+(https://medium.com/edureka/ci-cd-pipeline-5508227b19ca)
 
 # Media Queries
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
