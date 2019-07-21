@@ -99,4 +99,9 @@ We're not going to allow Babel to get applied to CSS files, or images, or HTML d
 anything else like that.
 ```
 - Webpack : Link up JS module together
-
+- .babelrc
+```
+{
+  "presets": ["babel-preset-env", "react"]
+}
+```
