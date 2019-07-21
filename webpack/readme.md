@@ -19,10 +19,14 @@ That is, code that we want to add or access inside of one file.
 - AMD (require, define)
 - ES2015 (import, export)
 
-- $>npm install --save-dev webpack
+- $>npm i -D webpack webpack-cli
 ```
-or
-$>npm i -D webpack webpack-cli
+- package.json
+
+"devDependencies": {
+    "webpack": "^4.36.1",
+    "webpack-cli": "^3.3.6"
+  }
 ```
 - webpack.config.js . (manully add it)
 https://www.udemy.com/webpack-2-the-complete-developers-guide/learn/lecture/6296226#overview
