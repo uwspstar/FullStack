@@ -30,6 +30,7 @@ That is, code that we want to add or access inside of one file.
 ```
 - webpack.config.js . (manully add it)
 https://www.udemy.com/webpack-2-the-complete-developers-guide/learn/lecture/6296226#overview
+- install VSCODE "Live Server" extension Ritwick Dey
 ```
 // there's these two minimum properties that we have to define inside of this config object right here.
 1. entry
