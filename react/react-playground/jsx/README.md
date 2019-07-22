@@ -1,0 +1,2 @@
+- $>node --version
+- $>npx create-react-app jsx
