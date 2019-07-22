@@ -127,8 +127,9 @@ You can put your JS at the bottom of the pageso the DOM is fully loaded
 before the code is run and in turn your div element is available to the selector.
 ``` 
 - $>npm install --save-dev style-loader css-loader
-- $>npm install --save-dev extract-text-webpack-plugin
-- extract-text-webpack-plugin
+- $>npm install --save-dev mini-css-extract-plugin
+https://github.com/webpack-contrib/mini-css-extract-plugin
+- mini-css-extract-plugin
 ```
 webpack.config.js
 - const ExtractTextPlugin = require('extract-text-webpack-plugin');
