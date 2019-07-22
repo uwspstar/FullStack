@@ -4,4 +4,5 @@
 - https://flaviocopes.com/parcel/
 - https://www.youtube.com/watch?v=4XB6jcyiADY&t=990s
 
-$>npm init -y
+- $>npm init -y
+- $>npm install parcel-bundler
