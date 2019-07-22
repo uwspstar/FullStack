@@ -1,0 +1,1 @@
+{"version":3,"sources":["styles/main.scss"],"names":[],"mappings":"AAEA,GACI","file":"scripts.0461c01c.css","sourceRoot":"../src","sourcesContent":["$primary-color : red;\n\nh1 {\n    color: $primary-color;\n}"]}
