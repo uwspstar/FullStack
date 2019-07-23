@@ -46,3 +46,12 @@ The renderer is responsible for calculating what the scene will look like in the
 based on the camera angle.
 We will create a WebGLRenderer object in this example that will use your graphics card to render the scene.
 ```
+- setInterval(function,interval)
+```
+The problem with this function is that it doesn't take into account 
+what is happening in the browser. 
+If you were browsing another tab, 
+this function would still be fired every couple of milliseconds. 
+Besides that, the setInterval() method isn't synchronized with the redrawing of the screen. 
+This could lead to higher CPU usage and bad performance.
+```
