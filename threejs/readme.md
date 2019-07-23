@@ -56,3 +56,14 @@ Besides that, the setInterval() method isn't synchronized with the redrawing of 
 This could lead to higher CPU usage and bad performance.
 ```
 - requestAnimationFrame()
+- In the Three.js project, you created a scene to which you added the objects (a geometry together with a material) that you wanted to render
+```
+- The materials that you used defined what the objects looked like. 
+Each material reacted in a different way to light sources
+- Rendering shadows is expensive and needs to be turned on for the renderer, 
+for each object, and for each light
+- You can do easy animations by just changing the position 
+and the rotation properties of the objects in the scene
+- Statistics and custom controls can be easily added with the two helper libraries 
+and a couple of lines of JavaScript
+```
