@@ -14,3 +14,5 @@ so that we can render the scene with camera.
 - There are a few different cameras in three.js. such as PerspectiveCamera.
 - $>npm init --yes
 - $>npm i three
+- $>python -m SimpleHTTPServer
+ ```Serving HTTP on 0.0.0.0 port 8000 ...```
