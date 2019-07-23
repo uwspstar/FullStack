@@ -31,7 +31,7 @@ $> nserver
 simple-http-server Now Serving: /Users/jos/git/Physijs at http://
 localhost:8000/
 ```
-- we defined a scene, a camera, and a renderer. 
+### a scene, a camera, and a renderer. 
 - scene variable 
 ```is a container that is used to store and keep track of all the objects that we want to render. 
 The sphere and the cube that we want to render will be added to this scene later on in the example. 
