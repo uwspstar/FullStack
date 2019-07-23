@@ -55,3 +55,4 @@ this function would still be fired every couple of milliseconds.
 Besides that, the setInterval() method isn't synchronized with the redrawing of the screen. 
 This could lead to higher CPU usage and bad performance.
 ```
+- requestAnimationFrame()
