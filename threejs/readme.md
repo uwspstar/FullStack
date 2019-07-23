@@ -67,3 +67,7 @@ and the rotation properties of the objects in the scene
 - Statistics and custom controls can be easily added with the two helper libraries 
 and a couple of lines of JavaScript
 ```
+### Creating a scene
+- Camera
+- Lights
+- Objects
