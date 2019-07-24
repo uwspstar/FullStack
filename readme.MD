@@ -44,7 +44,7 @@ copy the pub key to github
 # MongoDB
 
 ### Frisby
-# Parcel / boundle tool, 
+# Parcel / boundle tool 
 # Webpack
 # Docker
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/
