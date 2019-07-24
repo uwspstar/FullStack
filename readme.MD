@@ -40,7 +40,7 @@ copy the pub key to github
 ```
 # Azure / Web Jobs
 # React
-# Jest
+# Jest / test framework
 # MongoDB
 
 ### Frisby
