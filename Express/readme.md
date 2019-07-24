@@ -2,7 +2,8 @@
 
 ```
 // Build a web server
-const express = require(‘express’); const app = express();
+const express = require(‘express’); 
+const app = express();
 
 // Creating a course
 app.post('/api/courses', (req, res) => {
