@@ -3,6 +3,7 @@
 - http://davidscottlyons.com/threejs-intro/#slide-0
 - https://github.com/josdirksen/learning-threejs
 
+![threejsfundamentals](/threejs/3js.png)
 ```
 display anything with three.js, we need three things: 
 - scene
