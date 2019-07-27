@@ -38,12 +38,14 @@ copy the pub key to github
 194: Internet Relay Chat (IRC)
 *** 443: HTTP Secure (HTTPS) HTTP over TLS/SSL
 ```
+# Azure / Web Jobs
 # React
-# Jest
+# Jest / test framework
 # MongoDB
 
 ### Frisby
-# Parcel
+# Parcel / boundle tool 
+# Webpack
 # Docker
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/
 
