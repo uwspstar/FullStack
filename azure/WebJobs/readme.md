@@ -23,3 +23,6 @@ To learn more, see Develop and deploy WebJobs using Visual Studio - Azure App Se
 ```
 - Develop and deploy WebJobs using Visual Studio - Azure App Service
 https://docs.microsoft.com/en-us/azure/app-service/webjobs-dotnet-deploy-vs
+
+- azure-webjobs-sdk-samples
+https://github.com/Azure/azure-webjobs-sdk-samples
