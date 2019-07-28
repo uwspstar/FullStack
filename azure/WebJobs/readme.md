@@ -7,3 +7,9 @@ in the same context as a web app, API app, or mobile app. There is no additional
 ```
 - Get started with the Azure WebJobs SDK for event-driven background processing
 https://docs.microsoft.com/en-us/azure/app-service/webjobs-sdk-get-started
+
+- How to use the Azure WebJobs SDK for event-driven background processing
+https://docs.microsoft.com/en-us/azure/app-service/webjobs-sdk-how-to
+
+- Develop and deploy WebJobs using Visual Studio - Azure App Service
+https://docs.microsoft.com/en-us/azure/app-service/webjobs-dotnet-deploy-vs
