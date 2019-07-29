@@ -14,3 +14,5 @@ without having to worry about managing own infrastructure.
 3. API App
 4. WebApp for Containers
 ```
+- Exercise - Create a web app in the Azure portal
+https://docs.microsoft.com/en-us/learn/modules/host-a-web-app-with-azure-app-service/3-exercise-create-a-web-app-in-the-azure-portal?pivots=csharp
