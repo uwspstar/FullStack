@@ -26,3 +26,5 @@ https://docs.microsoft.com/en-us/azure/app-service/webjobs-dotnet-deploy-vs
 
 - azure-webjobs-sdk-samples
 https://github.com/Azure/azure-webjobs-sdk-samples
+- HelloWorld
+https://github.com/Azure/azure-webjobs-sdk-samples/tree/master/BasicSamples/HelloWorld
