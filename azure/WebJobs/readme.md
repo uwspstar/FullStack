@@ -28,3 +28,9 @@ https://docs.microsoft.com/en-us/azure/app-service/webjobs-dotnet-deploy-vs
 https://github.com/Azure/azure-webjobs-sdk-samples
 - HelloWorld
 https://github.com/Azure/azure-webjobs-sdk-samples/tree/master/BasicSamples/HelloWorld
+
+- Building Web Jobs in Your Website
+https://app.pluralsight.com/player?course=microsoft-azure-web-jobs&author=matt-milner&name=f775d332-f70d-4ecc-8c55-d5ad08127ad2&clip=1&mode=live
+
+- Building an Independent Web Job
+https://app.pluralsight.com/player?course=microsoft-azure-web-jobs&author=matt-milner&name=e292ede8-45c3-44bb-8c54-c5ac4496eae1&clip=0&mode=live
