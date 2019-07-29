@@ -152,6 +152,12 @@ Telnet <IP Address> 13531
 ![communications-protocol](/Img/communications-protocol.png)
 
 # SSH
+![create ssh](/Img/ssh1.jpg)
+SourceTree
+Tool --> Greate or import SSHkey --> generate key
+--> user / .ssh folder save id_rsa.pub as public key
+--> user / .ssh folder save id_rsa  as private key
+--> copy the public key set the SSH Public Keys
 - HTTPS vs SSH
 >The “S,” then, provides an additional protocol for security; in fact HTTPS actually stands for HTTP over SSL (Secure Socket Layer). The most basic understanding of SSH (Secure Shell) is that you are remotely logging into another computer.
 - SSL vs SSH
