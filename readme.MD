@@ -152,8 +152,8 @@ Telnet <IP Address> 13531
 ![communications-protocol](/Img/communications-protocol.png)
 
 # SSH
-![create ssh](/Img/ssh1.jpg)
-SourceTree
+![create ssh](/Img/ssh1.JPG)
+- SourceTree
 Tool --> Greate or import SSHkey --> generate key
 --> user / .ssh folder save id_rsa.pub as public key
 --> user / .ssh folder save id_rsa  as private key
