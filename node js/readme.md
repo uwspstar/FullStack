@@ -8,6 +8,12 @@ https://www.udemy.com/the-complete-nodejs-developer-course-2
 - Learn and Understand NodeJS by Anthony Alicea
 https://www.udemy.com/understand-nodejs/learn/lecture/3485580#overview
 - https://nodejs.org/dist/latest-v10.x/docs/api/
+- Node.js Everywhere with Environment Variables! by John Papa
+https://medium.com/the-node-js-collection/making-your-node-js-work-everywhere-with-environment-variables-2da8cdf6e786
+- Working with Environment Variables in Node.js BY DOMINIK KUNDEL
+https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-js.html
+- Here’s how you can actually use Node environment variables by Burke Holland
+https://www.freecodecamp.org/news/heres-how-you-can-actually-use-node-environment-variables-8fdf98f53a0a/
 
 ### 06/03/2019
 - Node has 50% js and 50% C++
