@@ -193,3 +193,6 @@ https://material.io/tools/devices/
 
 # JADE
 # Angular Testing
+# User Agent 
+- Change the Browser User Agent in Chrome, Safari, & Firefox
+http://osxdaily.com/2013/01/16/change-user-agent-chrome-safari-firefox/
