@@ -592,3 +592,5 @@ We call this function a callback.
 ```
 ### logger
 - https://www.npmjs.com/package/winston
+- Nodejs Application Security
+https://blog.usejournal.com/nodejs-application-security-80d5150a0366
