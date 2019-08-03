@@ -1,4 +1,4 @@
-# CICD
+# CI / CD
 - Top 8 Continuous Integration Tools by Posted by Vladimir Pecanac
 https://code-maze.com/top-8-continuous-integration-tools/
 - Continuous Integration, Delivery, Deployment
