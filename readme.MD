@@ -5,7 +5,8 @@
 
 # git ssh & sourcetree
 - https://github.com/uwspstar/FullStack/tree/master/ssh
-### default port
+
+# Default port
 ```
 *** 20: File Transfer Protocol (FTP) Data Transfer
 *** 21: File Transfer Protocol (FTP) Command Control
@@ -26,8 +27,7 @@
 # React
 # Jest / test framework
 # MongoDB
-
-### Frisby
+# Frisby
 # Parcel / boundle tool 
 # Webpack
 # Docker
