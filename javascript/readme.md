@@ -1,5 +1,18 @@
 # STUDY NOTES
-
+```
+- V8 from Google is the most used JavaScript engine. Other uses include the Node.js runtime system.
+- SpiderMonkey is developed by Mozilla for use in Firefox and its forks. T
+he GNOME Shell uses it for extension support.
+- JavaScriptCore is Apple's engine for its Safari browser. 
+Other WebKit-based browsers also use it. 
+KJS from KDE was the starting point for its development.
+- Chakra is the current engine of the Microsoft Edge browser, f
+orked from the same-named engine of Internet Explorer. 
+However, Microsoft is now rebuilding Edge as a Chromium-based browser, 
+so it will be using V8 instead of Chakra. 
+- Internet Explorer continues to use its version of Chakra.
+- Facebook created the Hermes engine for Android apps built for the React Native framework
+```
 ### Advanced JavaScript Concepts by Andrei Neagoie
 https://www.udemy.com/advanced-javascript-concepts/
 ### Object-oriented Programming in JavaScript by Mosh Hamedani
