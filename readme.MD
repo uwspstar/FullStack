@@ -75,7 +75,7 @@ https://www.edureka.co/blog/azure-storage-tutorial/
 - JWT: The Complete Guide to JSON Web Tokens https://blog.angular-university.io/angular-jwt/
 - Angular Security - Authentication With JSON Web Tokens (JWT): The Complete Guide https://blog.angular-university.io/angular-jwt-authentication/
 # CI/CD
-
+- https://github.com/uwspstar/FullStack/tree/master/CICD
 # Media Queries
 - [Media Queries](https://css-tricks.com/snippets/css/media-queries-for-standard-devices/)
 
