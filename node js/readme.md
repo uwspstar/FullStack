@@ -21,7 +21,8 @@ https://www.freecodecamp.org/news/heres-how-you-can-actually-use-node-environmen
 - process.binding() // bind C++ code to js
 - OS scheduler decide which thread should be processed
 - Event loop
-
+### Fetch vs axios
+https://www.udemy.com/react-redux/learn/lecture/12531294#overview
 ### 06/04/2019
 ### Express
 ```
