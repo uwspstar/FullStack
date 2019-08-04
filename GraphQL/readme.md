@@ -8,6 +8,8 @@ It provides the speed and flexibility needed for real world applications.
 - GraphQL API is flexible , just change query
 - GraphQL API is much simpler to maintain 
 ```
-- GraphQL creates fast and flexible APIs, giving clients complete control to ask for just the data they need.
-- This results in fewer HTP requests flexible data querying and in general less code to manage.
+- GraphQL creates fast and flexible APIs, giving clients complete control 
+to ask for just the data they need.
+- This results in fewer HTP requests flexible data querying 
+and in general less code to manage.
 ```
