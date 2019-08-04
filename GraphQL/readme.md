@@ -17,4 +17,7 @@ and in general less code to manage.
 https://babeljs.io/
 -  $>npm install babel-cli@6.26.0 babel-preset-env@1.7.0
 -  config babel ```.babelrc . babel-preset-env```
- 
+- ES6 import
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/import
+- ES6 export
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
