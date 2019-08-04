@@ -12,4 +12,9 @@ It provides the speed and flexibility needed for real world applications.
 to ask for just the data they need.
 - This results in fewer HTP requests flexible data querying 
 and in general less code to manage.
-```
+``
+- install babel 
+https://babeljs.io/
+-  $>npm install babel-cli@6.26.0 babel-preset-env@1.7.0
+-  config babel ```.babelrc . babel-preset-env```
+ 
