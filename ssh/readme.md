@@ -6,6 +6,8 @@
 - Enter passphrase (empty for no passphrase): ```just enter, use default```
 - Enter same passphrase again: 
 ```just enter, use default```
+
+- windows
 ```
 Your identification has been saved in /Users/xingwang/.ssh/id_rsa.
 Your public key has been saved in /Users/xingwang/.ssh/id_rsa.pub.
