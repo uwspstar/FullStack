@@ -5,6 +5,9 @@
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - macos
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
+- The guide to Visual Studio Code shortcuts, higher productivity and 30 of my favourite shortcuts you need to learn
+ by lampewebdev
+https://dev.to/lampewebdev/the-guide-to-visual-studio-code-shortcuts-higher-productivity-and-30-of-my-favourite-shortcuts-you-need-to-learn-mb3
 # git ssh & sourcetree
 - $> ssh-keygen -t rsa -b 4096 -C "uwspstar@gmail.com"
 ```Generating public/private rsa key pair.```
