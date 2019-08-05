@@ -1,4 +1,5 @@
 # ASCII ( American Standard Code )
+- https://en.wikipedia.org/wiki/ASCII
 ```
 abbreviated from American Standard Code for Information Interchange, 
 is a character encoding standard for electronic communication. ASCII codes represent text in computers, 
