@@ -40,5 +40,5 @@ Most modern character-encoding schemes are based on ASCII, although they support
   - punctuation symbols.
 
 - For example, lowercase i would be represented in the ASCII encoding by binary 1101001 = hexadecimal 69 (i is the ninth letter) = decimal 105.
-- A is binary 100 0001 = hexadecimal 41
-- a is binary 110 0001 = hexadecimal 61
+- A is binary 100 0001 = Decimal 65
+- a is binary 110 0001 = Decimal 97
