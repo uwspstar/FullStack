@@ -23,4 +23,4 @@ https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/imp
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/export
 
 ### GraphQL big picture
-![create ssh](/Img/graphql1.png)
+![GraphQL big picture(/Img/grapnql1.png)
