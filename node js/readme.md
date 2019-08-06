@@ -40,8 +40,6 @@ a license type e.g. you do not want your project to be used for commercial
 uses, for example).
 ▪ Finally, you will be asked to review your entries and to confirm they are
 correct. Type ‘yes’ and press enter.
-▪ The package.json file will have now been created in the background and you
-will be brought to a new line in GitBash/ iTerm2 as shown:
 ```
 ### 06/03/2019
 - Node has 50% js and 50% C++
