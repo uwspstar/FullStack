@@ -15,6 +15,34 @@ https://www.twilio.com/blog/2017/08/working-with-environment-variables-in-node-j
 - Here’s how you can actually use Node environment variables by Burke Holland
 https://www.freecodecamp.org/news/heres-how-you-can-actually-use-node-environment-variables-8fdf98f53a0a/
 
+### $>npm init --yes
+- package.json file
+```
+package.json file.
+o To do this, type ‘npm init’ and press enter
+o This will prompt a wizard like function where we begin creating our package file,
+where the command line will ask you a series of step-by-step questions
+▪ The first question will be to provide the package name (leave this as default)
+and press enter
+▪ Version number – leave this as the default value and press enter        
+▪ Description – This can be whatever you want it to be.
+▪ Entry Point – By default this is set as index.js (use the default value and press enter). 
+The entry point is where our project will start when it runs (e.g. the code will initiate index.js on the first step).
+▪ TestCommand–Leave this as blank and pressenter
+▪ Git Repository – we are not going to be using one, so leave this as blank and
+press enter
+▪ Keywords – leave this as default and press enter (You would use keywords
+that are relevant to your module and that you would expect people to use
+while searching for a module like yours)
+▪ Author – enter your name and press enter
+▪ License – leave this as default and press enter (you can use this field to enter
+a license type e.g. you do not want your project to be used for commercial
+uses, for example).
+▪ Finally, you will be asked to review your entries and to confirm they are
+correct. Type ‘yes’ and press enter.
+▪ The package.json file will have now been created in the background and you
+will be brought to a new line in GitBash/ iTerm2 as shown:
+```
 ### 06/03/2019
 - Node has 50% js and 50% C++
 - https://github.com/nodejs/node
