@@ -3,6 +3,12 @@
 Jest is a new trending popular testing framework recommended by Facebook. 
 It comes with everything you need to write automated tests.
 ```
+- test suit
+```
+Jest is an awesome test framework for javascript projects 
+(and react, and other things that compile to javascript). 
+It supports parallel testing, watching & retrying, mocking, snapshotting...
+```
 # Jest testing framework
 - https://www.udemy.com/nodejs-master-class/
 - https://www.rithmschool.com/courses/intermediate-node-express/api-tests-with-jest
