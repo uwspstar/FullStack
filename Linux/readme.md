@@ -12,3 +12,12 @@ https://www.virtualbox.org/wiki/Downloads
 ```
 - "command" + "space" to find the virtualbox
 - "app store" search "the unarchiver" and download it
+- CentOS 7 – Gnome Desktop VDI – Download
+https://www.linuxtrainingacademy.com/vdi/
+```
+Login and Password Information for the Image:
+
+Username: adminuser
+Password: adminuser
+Root Password: adminuser
+```
