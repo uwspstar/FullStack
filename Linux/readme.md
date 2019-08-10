@@ -10,3 +10,4 @@ https://www.virtualbox.org/wiki/Downloads
 - Make sure Allow apps downloaded from: App store and identified developers is checked 
 (click "allow" )
 ```
+- "command" + "space" to find the virtualbox
