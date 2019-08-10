@@ -79,7 +79,8 @@ $> npx create-react-app e-commerce
 - routing https://www.udemy.com/complete-react-developer-zero-to-mastery/learn/lecture/15113848#overview
 - Manipulating the browser history https://developer.mozilla.org/en-US/docs/Web/API/History_API
 ### axios
-- https://www.udemy.com/react-redux/learn/lecture/12531294#overview
+- axios vs fetch 
+https://www.udemy.com/react-redux/learn/lecture/12531294#overview
 ### Redux 
 ### Hooks
 ### GraphQL
