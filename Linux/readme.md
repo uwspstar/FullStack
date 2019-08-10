@@ -11,3 +11,4 @@ https://www.virtualbox.org/wiki/Downloads
 (click "allow" )
 ```
 - "command" + "space" to find the virtualbox
+- "app store" search "the unarchiver" and download it
