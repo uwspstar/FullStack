@@ -6,6 +6,7 @@
 - ls -a
 - ls -l
 - cd // change directory
+- one dot is current directory, two dots is parent directory
 ```
 - Download VirtualBox on Mac
 https://www.virtualbox.org/wiki/Downloads
