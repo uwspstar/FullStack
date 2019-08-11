@@ -3,6 +3,8 @@
 ```
 - pwd //Print Working Directory.
 - ls
+- ls -a
+- ls -l
 - cd // change directory
 ```
 - Download VirtualBox on Mac
