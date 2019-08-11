@@ -1,4 +1,10 @@
 # Linux
+### command
+```
+- pwd //Print Working Directory.
+- ls
+- cd // change directory
+```
 - Download VirtualBox on Mac
 https://www.virtualbox.org/wiki/Downloads
 ```
