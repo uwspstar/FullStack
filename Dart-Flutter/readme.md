@@ -3,3 +3,5 @@
 https://www.udemy.com/dart-and-flutter-the-complete-developers-guide/
 - Dart :  program language
 - Flutter : Mobile UI framework
+- React Native vs Flutter - Which to Learn?
+https://www.youtube.com/watch?v=tSyXb0sHBoE&t=107s
