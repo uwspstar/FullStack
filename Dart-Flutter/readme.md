@@ -12,6 +12,8 @@ https://dartpad.dartlang.org/
 void main() {
   var name = getName();
   print('my name is $name');
+  print('my name is ${name}');
+  print('my name is ${name.length}');
 }
 
 String getName() {
