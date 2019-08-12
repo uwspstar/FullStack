@@ -8,3 +8,13 @@ https://www.youtube.com/watch?v=tSyXb0sHBoE&t=107s
 ### Tool
 - dartpad
 https://dartpad.dartlang.org/
+```
+void main() {
+  var name = getName();
+  print('my name is $name');
+}
+
+String getName() {
+  return 'Xing';
+}
+```
