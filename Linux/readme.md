@@ -12,6 +12,10 @@
 ```
 "control" + "option" + "T" -> open terminal
 "control" + "D" -> close terminal
+- echo hello
+- cal
+- cal -y
+- cal 2019
 ```
 - Install Ubuntu in Mac with Virtual Box
 https://www.youtube.com/watch?v=4SbTXqPk_1Y
