@@ -39,6 +39,20 @@ class Person {
   }
 }
 ```
+```
+int meaningOfLife = 42;
+double valueOfPi  = 3.141592;
+bool visible      = true;
+```
+- value type lower case
+- A String is immutable
+- A Set is an unordered collection of unique objects.
+- A Map is an unordered collection of key-value pairs. 
+- A Uri object represents a uniform resource identifier
+```
+Uri dartlang = Uri.parse('http://dartlang.org/');
+```
+### documentation
 - Dart API documentation
 https://api.dart.dev/stable/2.4.1/index.html
 - dart core
