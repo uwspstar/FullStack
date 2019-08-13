@@ -20,3 +20,19 @@ String getName() {
   return 'Xing';
 }
 ```
+```
+void main() {
+ 
+  var person =  new Person('xing');
+  person.gerName();
+  
+}
+class Person {
+  String firstName;
+  Person(this.firstName);
+  
+  gerName() {
+    print(firstName);
+  }
+}
+```
