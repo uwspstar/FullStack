@@ -30,7 +30,14 @@ On macOS control+command+space pulls up the Emoji keyboard
 ### set PATH on Mac
 -  Editing the PATH Variable
 https://www.udemy.com/dart-and-flutter-the-complete-developers-guide/learn/lecture/10874516#overview
+```
+- user finder to open root folder , such as "xing"
+- hit "command" + "shift" +"."  to show all hidden files
+- open the hidden file ".bath_profile" with textEdit
+- keep pending after the : , such as add ":$HOME/bin" ,and save your changes
+export PATH="$PATH:$HOME/play/workspace/tools/mac:$HOME/play/workspace/tools/generic:$HOME/bin"
 
+```
 # Azure / Web Jobs
 - https://github.com/uwspstar/FullStack/tree/master/azure/WebJobs
 # React
