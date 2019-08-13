@@ -16,6 +16,9 @@
 - cal
 - cal -y
 - cal 2019
+- date
+- clear
+- "control" + "L"
 ```
 - Install Ubuntu in Mac with Virtual Box
 https://www.youtube.com/watch?v=4SbTXqPk_1Y
