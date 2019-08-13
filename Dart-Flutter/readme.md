@@ -63,3 +63,5 @@ https://api.dart.dev/stable/2.4.1/dart-core/dart-core-library.html
 https://flutter.dev/docs/get-started/install/macos
 -  Editing the PATH Variable
 https://www.udemy.com/dart-and-flutter-the-complete-developers-guide/learn/lecture/10874516#overview
+- install flutter sdk for PC
+https://www.udemy.com/dart-and-flutter-the-complete-developers-guide/learn/lecture/10863188#overview
