@@ -27,6 +27,10 @@ On macOS control+command+space pulls up the Emoji keyboard
 194: Internet Relay Chat (IRC)
 *** 443: HTTP Secure (HTTPS) HTTP over TLS/SSL
 ```
+### set PATH on Mac
+-  Editing the PATH Variable
+https://www.udemy.com/dart-and-flutter-the-complete-developers-guide/learn/lecture/10874516#overview
+
 # Azure / Web Jobs
 - https://github.com/uwspstar/FullStack/tree/master/azure/WebJobs
 # React
