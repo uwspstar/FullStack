@@ -9,6 +9,10 @@
 - cd // change directory
 - one dot is current directory, two dots is parent directory
 ```
+```
+"control" + "option" + "T" -> open terminal
+"control" + "D" -> close terminal
+```
 - Install Ubuntu in Mac with Virtual Box
 https://www.youtube.com/watch?v=4SbTXqPk_1Y
 - Download VirtualBox on Mac
