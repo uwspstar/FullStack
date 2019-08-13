@@ -25,6 +25,8 @@
 - !1
 - !2
 ```
+- Terminals, Commands and Shells
+https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
 - Install Ubuntu in Mac with Virtual Box
 https://www.youtube.com/watch?v=4SbTXqPk_1Y
 - Download VirtualBox on Mac
