@@ -19,6 +19,11 @@
 - date
 - clear
 - "control" + "L"
+- arrow key "up" and "down" for history
+- history
+- history -c; history -w;  // clear history and write the changes
+- !1
+- !2
 ```
 - Install Ubuntu in Mac with Virtual Box
 https://www.youtube.com/watch?v=4SbTXqPk_1Y
