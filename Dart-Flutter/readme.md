@@ -8,6 +8,9 @@ https://www.youtube.com/watch?v=tSyXb0sHBoE&t=107s
 ### Tool
 - dartpad
 https://dartpad.dartlang.org/
+
+### cheatsheet
+https://dart.dev/codelabs/dart-cheatsheet
 ```
 void main() {
   var name = getName();
@@ -36,3 +39,5 @@ class Person {
   }
 }
 ```
+- Dart API documentation
+https://api.dart.dev/stable/2.4.1/index.html
