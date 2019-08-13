@@ -57,3 +57,7 @@ Uri dartlang = Uri.parse('http://dartlang.org/');
 https://api.dart.dev/stable/2.4.1/index.html
 - dart core
 https://api.dart.dev/stable/2.4.1/dart-core/dart-core-library.html
+
+### flutter 
+- install flutter sdk for Mac
+https://flutter.dev/docs/get-started/install/macos
