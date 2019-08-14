@@ -2,7 +2,7 @@
 ```
 Mac OS X is a Unix OS and its command line is 99.9% the same as any Linux distribution. 
 Both are using bash as default shell .
-- UNIX is to DOS as Linux is to Windows
+*** UNIX is to DOS as Linux is to Windows
 ```
 
 - Terminals, Commands and Shells
