@@ -1,4 +1,8 @@
 # Linux
+```
+Mac OS X is a Unix OS and its command line is 99.9% the same as any Linux distribution. 
+Both are using bash as default shell 
+```
 
 - Terminals, Commands and Shells
 https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
@@ -65,12 +69,14 @@ Section 6: Games
 Section 7: Miscellanea
 Section 8: System Administration tools and Daemons
 ```
+- man -k  // serach manual
 ```
 - man -k which
 - which -a cal date echo
 ```
 - anything in [...] is option
 - anything in <...> is mandatory
+- anything with "|" is OR option
 
 ### VirtualBox
 - Download VirtualBox on Mac
