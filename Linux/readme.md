@@ -4,16 +4,24 @@
 https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
 
 ### $PATH 
-- echo $PATH
+
 ```
 How Shell knows what program you want to run ?
 it search for that program on Shell's $PATH 
 which is just a list of folders that contain these programs.
 ```
+- echo $PATH
+- which cal  // show where is cal to run
 ### command
 - https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
 - command (case sensitive) --> options --> inputs
 - commandName options inputs
+- "-" short option "--" long name option 
+```
+- date -u
+- date --univeral
+- chain the command, -abcd same as -a -b -c -d
+```
 
 ```
 - pwd //Print Working Directory.
