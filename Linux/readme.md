@@ -16,6 +16,7 @@ which is just a list of folders that contain these programs.
 ```
 ### command
 - https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
+- https://www.commandlinux.com/
 - command (case sensitive) --> options --> inputs
 - commandName options inputs
 - "-" short option "--" long name option 
@@ -53,6 +54,20 @@ which is just a list of folders that contain these programs.
 ### Linux Manual
 - Using the Linux Manual
 https://www.udemy.com/linux-mastery/learn/lecture/8264124#overview
+- 8 Sections
+```
+Section 1: User Commands
+Section 2: System Calls
+Section 3: C Library Functions
+Section 4: Devices and Special Files
+Section 5: File Formats and Conventions
+Section 6: Games
+Section 7: Miscellanea
+Section 8: System Administration tools and Daemons
+```
+```
+- man -k which
+```
 
 ### VirtualBox
 - Download VirtualBox on Mac
