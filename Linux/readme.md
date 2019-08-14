@@ -10,8 +10,10 @@ How Shell knows what program you want to run ?
 it search for that program on Shell's $PATH 
 which is just a list of folders that contain these programs.
 ```
+```
 - echo $PATH
 - which cal  // show where is cal to run
+```
 ### command
 - https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
 - command (case sensitive) --> options --> inputs
