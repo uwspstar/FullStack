@@ -50,7 +50,9 @@ which is just a list of folders that contain these programs.
 - !1
 - !2
 ```
-
+### Linux Manual
+- Using the Linux Manual
+https://www.udemy.com/linux-mastery/learn/lecture/8264124#overview
 
 ### VirtualBox
 - Download VirtualBox on Mac
