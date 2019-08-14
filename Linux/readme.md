@@ -4,7 +4,7 @@
 https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
 
 ### $PATH 
-
+- command name need to be on the shell's search PATH
 ```
 How Shell knows what program you want to run ?
 it search for that program on Shell's $PATH 
