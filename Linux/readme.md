@@ -1,6 +1,7 @@
 # Linux
 ### command
 - https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
+- command --> options --> inputs
 ```
 - pwd //Print Working Directory.
 - ls
