@@ -69,6 +69,8 @@ Section 8: System Administration tools and Daemons
 - man -k which
 - which -a cal date echo
 ```
+- anything in [...] is option
+- anything in <...> is mandatory
 
 ### VirtualBox
 - Download VirtualBox on Mac
