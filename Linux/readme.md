@@ -1,7 +1,16 @@
 # Linux
 ### command
 - https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
-- command --> options --> inputs
+- command (case sensitive) --> options --> inputs
+- commandName options inputs
+- $PATH ```echo $PATH```
+```
+How Shell knows what program you want to run ?
+it search for that program on Shell's $PATH 
+which is just a list of folders that contain these programs.
+```
+
+- command example
 ```
 - pwd //Print Working Directory.
 - ls
