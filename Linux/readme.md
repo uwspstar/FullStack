@@ -1,8 +1,8 @@
 # Linux
-### command
-- https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
-- command (case sensitive) --> options --> inputs
-- commandName options inputs
+
+- Terminals, Commands and Shells
+https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
+
 ### $PATH 
 - echo $PATH
 ```
@@ -10,7 +10,11 @@ How Shell knows what program you want to run ?
 it search for that program on Shell's $PATH 
 which is just a list of folders that contain these programs.
 ```
-- command example
+### command
+- https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
+- command (case sensitive) --> options --> inputs
+- commandName options inputs
+
 ```
 - pwd //Print Working Directory.
 - ls
@@ -35,10 +39,9 @@ which is just a list of folders that contain these programs.
 - !1
 - !2
 ```
-- Terminals, Commands and Shells
-https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
-- Install Ubuntu in Mac with Virtual Box
-https://www.youtube.com/watch?v=4SbTXqPk_1Y
+
+
+### VirtualBox
 - Download VirtualBox on Mac
 https://www.virtualbox.org/wiki/Downloads
 ```
@@ -48,9 +51,14 @@ https://www.virtualbox.org/wiki/Downloads
 - Make sure Allow apps downloaded from: App store and identified developers is checked 
 (click "allow" )
 ```
+### Ubuntu
+- Install Ubuntu in Mac with Virtual Box
+https://www.youtube.com/watch?v=4SbTXqPk_1Y
 - "command" + "space" to find the virtualbox
 - "app store" search "the unarchiver" and download it
-- CentOS 7 – Gnome Desktop VDI – Download
+
+### CentOS 7
+- Download CentOS 7 – Gnome Desktop VDI – 
 https://www.linuxtrainingacademy.com/vdi/
 ```
 Login and Password Information for the Image:
