@@ -21,6 +21,7 @@ which is just a list of folders that contain these programs.
 - date -u
 - date --univeral
 - chain the command, -abcd same as -a -b -c -d
+- cal -A 1 -B 1 // one month early, one month after
 ```
 
 ```
