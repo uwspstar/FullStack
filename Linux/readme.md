@@ -70,7 +70,9 @@ Section 6: Games
 Section 7: Miscellanea
 Section 8: System Administration tools and Daemons
 ```
-- man -k  // serach manual ```IF "man" not working, use "help", such as, "help cd"```
+- man -k  ```// serach manual``` 
+- man ls  ```IF "man" not working, use "help", such as, "help cd"```
+- help cd ```IF "help" not working, use "man", such as, "man ls"```
 ```
 - man -k which
 - which -a cal date echo
