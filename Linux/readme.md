@@ -75,6 +75,8 @@ Section 8: System Administration tools and Daemons
 - man -k which
 - which -a cal date echo
 - man -l "list directory"  // including the "...word..."
+- ls -l
+- ls -lh // same as " - ls -l --human-readable"
 ```
 - anything in [...] is option
 - anything in <...> is mandatory
