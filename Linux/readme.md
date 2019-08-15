@@ -70,6 +70,7 @@ Section 6: Games
 Section 7: Miscellanea
 Section 8: System Administration tools and Daemons
 ```
+### man & help
 - man -k  ```// serach manual``` 
 - man ls  ```// serach manual IF "man" not working, use "help", such as, "help cd"```
 - help cd ```// serach manual IF "help" not working, use "man", such as, "man ls"```
