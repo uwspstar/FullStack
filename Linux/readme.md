@@ -43,10 +43,21 @@ Section 8: System Administration tools and Daemons
 - man -l "list directory"  // including the "...word..."
 - ls -l
 - ls -lh // same as " - ls -l --human-readable"
+- cat
 ```
 - anything in [...] is option
 - anything in <...> is mandatory
 - anything with "|" is OR option
+
+- cat 1>output.txt
+```
+Every data stream not only has a name like standard outputs and imports on that 
+but it also has a number associated with it.
+- Standard Input is number zero
+- Standard output is number one 
+- Standard error is number two
+
+```
 
 ### command
 - https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
