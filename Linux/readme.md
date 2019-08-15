@@ -107,3 +107,9 @@ Root Password: adminuser
 ```
 - download CentOS
 http://isoredirect.centos.org/centos/7/isos/x86_64/CentOS-7-x86_64-DVD-1810.iso
+
+- Install windows 10/7 on mac using virtualbox
+https://medium.com/oceanize-geeks/install-windows-10-7-on-mac-using-virtualbox-109be82b6037
+
+### Download Windows 10 ISO
+Download Windows 10 ISO from this link: https://www.microsoft.com/en-us/software-download/windows10ISO
