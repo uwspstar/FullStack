@@ -19,6 +19,35 @@ which is just a list of folders that contain these programs.
 - echo $PATH
 - which cal  // show where is cal to run
 ```
+### Linux Manual
+- Using the Linux Manual
+https://www.udemy.com/linux-mastery/learn/lecture/8264124#overview
+- 8 Sections
+```
+Section 1: User Commands
+Section 2: System Calls
+Section 3: C Library Functions
+Section 4: Devices and Special Files
+Section 5: File Formats and Conventions
+Section 6: Games
+Section 7: Miscellanea
+Section 8: System Administration tools and Daemons
+```
+### man & help
+- man -k  ```// serach manual``` 
+- man ls  ```// serach manual IF "man" not working, use "help", such as, "help cd"```
+- help cd ```// serach manual IF "help" not working, use "man", such as, "man ls"```
+```
+- man -k which
+- which -a cal date echo
+- man -l "list directory"  // including the "...word..."
+- ls -l
+- ls -lh // same as " - ls -l --human-readable"
+```
+- anything in [...] is option
+- anything in <...> is mandatory
+- anything with "|" is OR option
+
 ### command
 - https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
 - https://www.commandlinux.com/
@@ -56,34 +85,6 @@ which is just a list of folders that contain these programs.
 - !1
 - !2
 ```
-### Linux Manual
-- Using the Linux Manual
-https://www.udemy.com/linux-mastery/learn/lecture/8264124#overview
-- 8 Sections
-```
-Section 1: User Commands
-Section 2: System Calls
-Section 3: C Library Functions
-Section 4: Devices and Special Files
-Section 5: File Formats and Conventions
-Section 6: Games
-Section 7: Miscellanea
-Section 8: System Administration tools and Daemons
-```
-### man & help
-- man -k  ```// serach manual``` 
-- man ls  ```// serach manual IF "man" not working, use "help", such as, "help cd"```
-- help cd ```// serach manual IF "help" not working, use "man", such as, "man ls"```
-```
-- man -k which
-- which -a cal date echo
-- man -l "list directory"  // including the "...word..."
-- ls -l
-- ls -lh // same as " - ls -l --human-readable"
-```
-- anything in [...] is option
-- anything in <...> is mandatory
-- anything with "|" is OR option
 
 ### VirtualBox
 - Download VirtualBox on Mac
