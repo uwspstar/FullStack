@@ -53,10 +53,13 @@ Section 8: System Administration tools and Daemons
 - cat 1>>output.txt // cat >> output.txt . // append text next line
 - cat -k bla 2>> error.txt
 - cat 1>> output.txt 2>> error.txt
+- cat > input.txt . // input from screen to input.txt
+- cat < input.txt  // dispay content to screen from input.txt
+- cat 0< input.txt 1>>output.txt 2>>error.txt
 - which open
 - open output.txt
 - rm output.txt
--
+
 ```
 
 - anything in [...] is option
