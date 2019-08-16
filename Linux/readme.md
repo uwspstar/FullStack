@@ -52,9 +52,11 @@ Section 8: System Administration tools and Daemons
 - cat 1>output.txt // cat > output.txt
 - cat 1>>output.txt // cat >> output.txt . // append text next line
 - cat -k bla 2>> error.txt
+- cat 1>> output.txt 2>> error.txt
 - which open
 - open output.txt
 - rm output.txt
+-
 ```
 
 - anything in [...] is option
