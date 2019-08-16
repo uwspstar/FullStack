@@ -43,9 +43,15 @@ Section 8: System Administration tools and Daemons
 - man -l "list directory"  // including the "...word..."
 - ls -l
 - ls -lh // same as " - ls -l --human-readable"
-- cat
+```
+### cat 
+- ( 0 is input, 1 is output, 2 is error)
+- ">" is overwrite
+- ">>" is append
+```
 - cat 1>output.txt // cat > output.txt
 - cat 1>>output.txt // cat >> output.txt . // append text next line
+- cat -k bla 2>> error.txt
 - which open
 - open output.txt
 - rm output.txt
