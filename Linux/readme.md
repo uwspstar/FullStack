@@ -44,7 +44,13 @@ Section 8: System Administration tools and Daemons
 - ls -l
 - ls -lh // same as " - ls -l --human-readable"
 - cat
+- cat 1>output.txt // cat > output.txt
+- cat 1>>output.txt // cat >> output.txt . // append text next line
+- which open
+- open output.txt
+- rm output.txt
 ```
+
 - anything in [...] is option
 - anything in <...> is mandatory
 - anything with "|" is OR option
