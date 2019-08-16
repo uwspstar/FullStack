@@ -16,6 +16,9 @@ https://github.com/zhiwehu/Python-programming-exercises
 ### Python 3 Cheat Sheet by Mosh Hamedani
 https://programmingwithmosh.com/python/python-3-cheat-sheet/
 
+### Python Tutorial for Beginners [Full Course] 2019 by Mosh Hamedani
+https://www.youtube.com/watch?v=_uQrJ0TkZlc&t=4025s
+
 ### Effective Python: 59 Specific Ways to Write Better Python (Effective Software Development Series)
 https://www.amazon.com/Effective-Python-Specific-Software-Development/dp/0134034287
 
