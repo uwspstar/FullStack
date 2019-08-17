@@ -426,3 +426,7 @@ for num in range(1, 6):
 ```
 ### 07/18/2019
 - lower case
+
+### 08/17/2019
+- number, float , boolean, string
+- use "_" underscor for name
