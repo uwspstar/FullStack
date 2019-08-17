@@ -432,7 +432,7 @@ for num in range(1, 6):
 - use "_" underscore for name ``` user_name = "xing"````
 - put sapce between "=" ``` user_name = "xing"````
 
-### string function
+### string
 - len("string lenght")
 - string in 0 index in python 
 ``` 
@@ -442,3 +442,10 @@ for num in range(1, 6):
 "python_string"[0:]  // whole string
 "python_string"[:3]  // "pyt"
 ```
+```
+- \\
+- \n
+- \"
+- \'
+```
+``` f"{first_name} - {last_name}" ```
