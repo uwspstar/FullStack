@@ -501,3 +501,6 @@ print(math.pi)
 print(math.ceil(math.e))
 print(math.e)
 ```
+### type
+- print(type(5))  # <class 'int'>
+- print(type(range(5)))  # <class 'range'>
