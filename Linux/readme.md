@@ -49,24 +49,28 @@ Section 8: System Administration tools and Daemons
 - ">" is overwrite
 - ">>" is append
 ```
-- cat 1>output.txt // cat > output.txt
-- cat 1>>output.txt // cat >> output.txt . // append text next line
-- cat -k bla 2>> error.txt
-- cat 1>> output.txt 2>> error.txt
-- cat > input.txt . // input from screen to input.txt
-- cat < input.txt  // dispay content to screen from input.txt
-- cat 0< input.txt 1>>output.txt 2>>error.txt
-- which open
-- open output.txt
-- rm output.txt
+$> cat 1>output.txt // cat > output.txt
+$> cat 1>>output.txt // cat >> output.txt . // append text next line
+$> cat -k bla 2>> error.txt
+$> cat 1>> output.txt 2>> error.txt
+$> cat > input.txt . // input from screen to input.txt
+$> cat < input.txt  // dispay content to screen from input.txt
+$> cat 0< input.txt 1>>output.txt 2>>error.txt
+$> which open
+$> open output.txt
+$> rm output.txt
 
 ```
-
+### cut
+```
+$> cut -f 2 -d " " output.txt
+$> date | cut -f 4 -d " " 1>>output.txt
+```
 - anything in [...] is option
 - anything in <...> is mandatory
 - anything with "|" is OR option
 
-- cat 1>output.txt
+- $> cat 1>output.txt
 ```
 Every data stream not only has a name like standard outputs and imports on that 
 but it also has a number associated with it.
@@ -83,37 +87,40 @@ but it also has a number associated with it.
 - commandName options inputs
 - "-" short option "--" long name option 
 ```
-- date -u
-- date --univeral
+$> date -u
+$> date --univeral
 - chain the command, -abcd same as -a -b -c -d
-- cal -A 1 -B 1 // one month early, one month after
+$> cal -A 1 -B 1 // one month early, one month after
 ```
 
 ```
-- pwd //Print Working Directory.
-- ls
-- ls -a
-- ls -l
-- cd // change directory
+$> pwd //Print Working Directory.
+$> ls
+$> ls -a
+$> ls -l
+$> cd // change directory
 - one dot is current directory, two dots is parent directory
 ```
 ```
 "control" + "option" + "T" -> open terminal
 "control" + "D" -> close terminal
-- echo hello
-- cal
-- cal -y
-- cal 2019
-- date
-- clear
+$> echo hello
+$> cal
+$> cal -y
+$> cal 2019
+$> date
+$> clear
+
+```
+### history
+- $> history
+```
 - "control" + "L"
 - arrow key "up" and "down" for history
-- history
-- history -c; history -w;  // clear history and write the changes
+$> history -c; history -w;  // clear history and write the changes
 - !1
 - !2
 ```
-
 ### VirtualBox
 - Download VirtualBox on Mac
 https://www.virtualbox.org/wiki/Downloads
