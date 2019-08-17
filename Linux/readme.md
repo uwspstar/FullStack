@@ -73,6 +73,7 @@ $> cal | tee -a output.txt | cut -f 2 -d " " 1>> output.txt
 ### xargs
 ```
 $> date | xargs echo
+$>date | xargs echo "hello Xing"  //hello Xing Sat Aug 17 18:06:57 CDT 2019
 ```
 - anything in [...] is option
 - anything in <...> is mandatory
