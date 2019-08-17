@@ -431,3 +431,14 @@ for num in range(1, 6):
 - number, float , boolean, string
 - use "_" underscore for name ``` user_name = "xing"````
 - put sapce between "=" ``` user_name = "xing"````
+
+### string function
+- len("string lenght")
+- string in 0 index in python 
+``` 
+"python_string"[0] //"p"
+"python_string"[-1] // "g"
+"python_string"[0:3] // "pyt" index 3 is NOT include
+"python_string"[0:]  // whole string
+"python_string"[:3]  // "pyt"
+```
