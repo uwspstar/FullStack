@@ -410,7 +410,7 @@ for num in range(1, 6):
 times = 1
 while times < 6:
     print("\U0001f600" * times)
-    times += 1 // without this line, it will print forever, 
+    times += 1 #  without this line, it will print forever, 
 ```
 ```
 Don't forget to add the + before the = sign when incrementing!
@@ -428,7 +428,7 @@ for num in range(1, 6):
 - lower case
 
 ### 08/17/2019
-- number, float , boolean, string
+- number, boolean, string
 - use "_" underscore for name ``` user_name = "xing"````
 - put sapce between "=" ``` user_name = "xing"````
 
@@ -463,8 +463,21 @@ print(g in "python string") # return boolean
 - find vs in 
 ```
 test_string = "python string"
-print(test_string.find("str")) // return index, no found, return "-1"
-print("g" in test_string) // return boolean
-print("g" not in test_string) // return boolean
+print(test_string.find("str")) # return index, no found, return "-1"
+print("g" in test_string) # return boolean
+print("g" not in test_string) # return boolean
 ```
-
+```
+x = input("x: "
+print(type(x))
+bool(x)
+int(x)
+str(x)
+float(x)
+```
+### Falsy value
+```
+# ""
+# 0
+# None
+```
