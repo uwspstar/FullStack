@@ -436,11 +436,11 @@ for num in range(1, 6):
 - len("string length")
 - string in 0 index in python 
 ``` 
-"python_string"[0] //"p"
-"python_string"[-1] // "g"
-"python_string"[0:3] // "pyt" index 3 is NOT include
-"python_string"[0:]  // whole string
-"python_string"[:3]  // "pyt"
+"python_string"[0] # "p"
+"python_string"[-1] # "g"
+"python_string"[0:3] # "pyt" index 3 is NOT include
+"python_string"[0:]  # whole string
+"python_string"[:3]  # "pyt"
 ```
 ```
 - \\
@@ -452,18 +452,19 @@ for num in range(1, 6):
 ```
 "python_string".upper()
 "python_string".lower()
-"python string".title() // "Python String"
-" python string ".strip() // remove white space
+"python string".title() # "Python String"
+" python string ".strip() # remove white space
 " python string ".lstrip()
 " python string ".rstrip()
-"python string ".find("str") // return index
+"python string ".find("str") # return index
 "python string ".replace("str","ttt")
-print(g in "python string") // return boolean
+print(g in "python string") # return boolean
 ```
 - find vs in 
 ```
 test_string = "python string"
 print(test_string.find("str")) // return index, no found, return "-1"
 print("g" in test_string) // return boolean
+print("g" not in test_string) // return boolean
 ```
 
