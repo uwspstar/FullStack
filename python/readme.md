@@ -433,6 +433,10 @@ for num in range(1, 6):
 - put sapce between "=" ``` user_name = "xing"````
 
 ### string
+```
+for x in "Python_String":
+    print(f"🥳 : { x }")
+```
 - len("string length")
 - string in 0 index in python 
 ``` 
