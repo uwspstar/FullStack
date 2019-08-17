@@ -489,3 +489,15 @@ for x in range(5):
     for y in range(4):
         print(f"({x},{y})")
 ```
+### math
+```
+import random
+import math
+number = random.randint(25, 50)
+a = 100
+print(number + a)
+print(math.floor(math.pi))
+print(math.pi)
+print(math.ceil(math.e))
+print(math.e)
+```
