@@ -70,6 +70,10 @@ $> date | cut -f 4 -d " " 1>>output.txt
 ```
 $> cal | tee -a output.txt | cut -f 2 -d " " 1>> output.txt
 ```
+### xargs
+```
+$> date | xargs echo
+```
 - anything in [...] is option
 - anything in <...> is mandatory
 - anything with "|" is OR option
