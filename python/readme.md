@@ -481,3 +481,11 @@ float(x)
 # 0
 # None
 ```
+
+- message = "over" if number > 30 else "opps" # one line code replace if elif
+### loop
+```
+for x in range(5):
+    for y in range(4):
+        print(f"({x},{y})")
+```
