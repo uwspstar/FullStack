@@ -488,11 +488,39 @@ float(x)
 
 - message = "over" if number > 30 else "opps" # one line code replace if elif
 ### loop
+- for
+- count += 1 # NOT count++ syntax error
 ```
 for x in range(5):
     for y in range(4):
         print(f"({x},{y})")
+ 
+for x in [1, 2, 3, 4]:
+    print(f"🥳 : { x }")
+    
+    
+count = 0
+for num in range(1, 10):
+    if num % 2 == 0:
+        count += 1 # NOT count++ snytax error
+        print(f"num {num} is even numbers")
+print(f"there are {count} even numbers")
 ```
+- while
+```
+number = 100
+while number > 0:
+    print(number)
+    number //= 2
+    
+while True:
+    command = input("> ").lower()
+    if command == "quit":
+        break
+    else:
+        print(f"{command} is not right")
+```
+
 ### math
 ```
 import random
