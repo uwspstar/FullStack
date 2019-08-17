@@ -429,4 +429,5 @@ for num in range(1, 6):
 
 ### 08/17/2019
 - number, float , boolean, string
-- use "_" underscor for name
+- use "_" underscore for name ``` user_name = "xing"````
+- put sapce between "=" ``` user_name = "xing"````
