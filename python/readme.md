@@ -563,6 +563,13 @@ while a < 10:
     a = b
     b = sum
 ```
+### function
+- param vs arguments
+```
+def greet(frist_name, last_name) # param
+
+greet("Xing", "Wang") # arguments
+```
 ### math
 ```
 import random
