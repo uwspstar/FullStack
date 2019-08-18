@@ -570,6 +570,25 @@ def greet(frist_name, last_name) # param
 
 greet("Xing", "Wang") # arguments
 ```
+- *xargs
+```
+def get_numbers(*numbers):
+    value = 1
+    for num in numbers:
+        value *= num
+    return value
+
+
+print(get_numbers(1, 2, 3, 4))
+```
+- ** xxargs
+```
+def get_user(**user):
+    print(user)
+
+
+get_user(id=1, first_name="xing", age=30)
+```
 ### math
 ```
 import random
