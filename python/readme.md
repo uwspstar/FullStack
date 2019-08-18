@@ -479,6 +479,10 @@ int(x)
 str(x)
 float(x)
 ```
+- list , lists are a mutable type
+```
+Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
+```
 ### Falsy value
 ```
 # ""
