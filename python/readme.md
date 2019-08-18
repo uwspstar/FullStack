@@ -479,7 +479,8 @@ int(x)
 str(x)
 float(x)
 ```
-- list , lists are a mutable type
+### list
+- lists are a mutable type
 ```
 Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
 ```
@@ -524,7 +525,23 @@ while True:
     else:
         print(f"{command} is not right")
 ```
+```
+# Fibonacci series:
+# the sum of two elements defines the next
+a, b = 0, 1
+while a < 10:
+    print(a)
+    # print(b)
+    a, b = b, a+b
 
+a = 0
+b = 1
+while a < 10:
+    sum = a + b
+    print(a)
+    a = b
+    b = sum
+```
 ### math
 ```
 import random
