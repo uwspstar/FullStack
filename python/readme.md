@@ -510,6 +510,14 @@ for num in range(1, 10):
         count += 1 # NOT count++ snytax error
         print(f"num {num} is even numbers")
 print(f"there are {count} even numbers")
+
+
+words = ["this", "hello is pyton3", "goooooog 🦊"]
+for w in words[:]:  # Loop over a slice copy of the entire list.
+    if len(w) > 6:
+        words.insert(0, w)
+print(words)
+        
 ```
 - while
 ```
