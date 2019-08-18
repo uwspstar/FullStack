@@ -431,6 +431,9 @@ for num in range(1, 6):
 - number, boolean, string
 - use "_" underscore for name ``` user_name = "xing"````
 - put sapce between "=" ``` user_name = "xing"````
+### Debug on Mac with VScode
+- "fn" touch bar "F9"   --> break line
+- "fn" touch bar "F5"   --> run
 
 ### string
 ```
@@ -581,7 +584,7 @@ def get_numbers(*numbers):
 
 print(get_numbers(1, 2, 3, 4))
 ```
-- ** xxargs
+- ** xxargs # as a dictonary
 ```
 def get_user(**user):
     print(user)
