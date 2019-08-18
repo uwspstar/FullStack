@@ -525,14 +525,15 @@ while True:
     else:
         print(f"{command} is not right")
 ```
+- multiple assignment
 ```
 # Fibonacci series:
 # the sum of two elements defines the next
-a, b = 0, 1
+a, b = 0, 1 # multiple assignment
 while a < 10:
     print(a)
     # print(b)
-    a, b = b, a+b
+    a, b = b, a+b # multiple assignment
 
 a = 0
 b = 1
