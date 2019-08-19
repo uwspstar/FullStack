@@ -483,8 +483,10 @@ str(x)
 float(x)
 ```
 ### list
+https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 - lists are a mutable type
 - list(range(5)) # [0, 1, 2, 3, 4]
+
 ```
 Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
 ```
