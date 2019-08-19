@@ -1,0 +1,62 @@
+# Data Structures
+- https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
+
+### Lists
+- a[len(a):] = [x]
+- list.append(x) # stack
+- pop([i])  # stack
+- string.strip() # remove white space
+- insert, remove or sort that only modify the list have no return value printed
+```
+they return the default None. 
+This is a design principle for all mutable data structures in Python.
+```
+- Using Lists as Stacks
+```
+- (“last-in, first-out”)
+To add an item to the top of the stack, use append(). 
+To retrieve an item from the top of the stack, use pop() without an explicit index.
+```
+```
+>>> stack = [3, 4, 5]
+>>> stack.append(6) # stack [3, 4, 5, 6]
+>>> stack.pop() # stack [3, 4, 5]
+```
+
+- Using Lists as Queues
+```
+- (“first-in, first-out”)
+however, lists are not efficient for this purpose. 
+While appends and pops from the end of list are fast, 
+doing inserts or pops from the beginning of a list is slow 
+(because all of the other elements have to be shifted by one).
+
+*** To implement a queue, use collections.deque
+```
+```
+- collections.deque # use collections.deque
+
+>>> from collections import deque
+>>> queue = deque(["Xing", "John", "Michael"])
+>>> queue.append("Terry")           # Terry arrives
+>>> queue.append("Graham")          # Graham arrives
+>>> queue.popleft()                 # The first to arrive now leaves
+'Xing'
+>>> queue.popleft()                 # The second to arrive now leaves
+'John'
+>>> queue                           # Remaining queue in order of arrival
+deque(['Michael', 'Terry', 'Graham'])
+
+```
+```
+>>> [(x, y) for x in [1,2,3] for y in [3,1,4] if x != y]
+[(1, 3), (1, 4), (2, 3), (2, 1), (2, 4), (3, 1), (3, 4)]
+
+
+>>> vec = [[1,2,3], [4,5,6], [7,8,9]]
+>>> [num for elem in vec for num in elem]
+[1, 2, 3, 4, 5, 6, 7, 8, 9]
+```
+
+
+
