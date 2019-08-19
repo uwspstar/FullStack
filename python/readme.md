@@ -486,7 +486,12 @@ float(x)
 https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 - lists are a mutable type
 - list(range(5)) # [0, 1, 2, 3, 4]
-
+- list.sort(key=None, reverse=False)
+- insert, remove or sort that only modify the list have no return value printed 
+```
+insert, remove or sort return the default None. 
+This is a design principle for all mutable data structures in Python.
+```
 ```
 Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
 ```
