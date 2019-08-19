@@ -107,7 +107,8 @@ $> pwd //Print Working Directory.
 $> ls
 $> ls -a
 $> ls -l
-$> cd // change directory
+$> cd  //-->change directory
+$>cd /
 - one dot is current directory, two dots is parent directory
 ```
 ```
