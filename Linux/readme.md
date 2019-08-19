@@ -108,7 +108,9 @@ $> ls
 $> ls -a
 $> ls -l
 $> cd  //-->change directory
-$>cd /
+$> cd /
+$> cd . 
+$> cd ..
 - one dot is current directory, two dots is parent directory
 ```
 ```
