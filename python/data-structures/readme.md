@@ -7,6 +7,7 @@
 - pop([i])  # stack
 - string.strip() # remove white space
 - insert, remove or sort that only modify the list have no return value printed
+- [1] * num_one + [2] * num_two + [3] * num_three
 ```
 they return the default None. 
 This is a design principle for all mutable data structures in Python.
