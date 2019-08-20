@@ -95,3 +95,14 @@ and their elements are usually homogeneous and are accessed by iterating over th
 ('hello',)
 ```
 - ```>>> x, y, z = t```
+
+### class
+```
+class Person:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+ ```
