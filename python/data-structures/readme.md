@@ -94,4 +94,4 @@ and their elements are usually homogeneous and are accessed by iterating over th
 >>> singleton
 ('hello',)
 ```
-- >>> x, y, z = t
+- ```>>> x, y, z = t```
