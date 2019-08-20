@@ -88,7 +88,18 @@ but it also has a number associated with it.
 - Standard error is number two
 
 ```
-
+### GREP
+- global regular expression print by Srijan Kishore
+https://www.howtoforge.com/tutorial/linux-grep-command/
+```
+grep 'word' filename
+grep 'word' file1 file2 file3
+grep 'string1 string2'  filename
+cat otherfile | grep 'something'
+command | grep 'something'
+command option1 | grep 'data'
+grep --color 'data' fileName
+```
 ### command
 - https://www.youtube.com/watch?v=j6vKLJxAKfw&list=PL-osiE80TeTvGhHkpvfmKWOiIPF8UVy6c
 - https://www.commandlinux.com/
