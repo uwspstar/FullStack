@@ -58,6 +58,40 @@ deque(['Michael', 'Terry', 'Graham'])
 >>> [num for elem in vec for num in elem]
 [1, 2, 3, 4, 5, 6, 7, 8, 9]
 ```
+```
+matrix = [
+    [1, 2, 3, 4],
+    [5, 6, 7, 8],
+    [9, 10, 11, 12],
+]
 
+>>> list(zip(*matrix))
+# [(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]
 
+print(list(zip("abcd", *matrix)))
+# [('a', 1, 5, 9), ('b', 2, 6, 10), ('c', 3, 7, 11), ('d', 4, 8, 12)]
 
+```
+### Tuples and Sequences
+
+- A tuple consists of a number of values separated by commas, for instance:
+```
+Though tuples may seem similar to lists, 
+they are often used in different situations and for different purposes. 
+Tuples are immutable, 
+and usually contain a heterogeneous sequence of elements that are accessed via unpacking 
+(see later in this section) or indexing (or even by attribute in the case of namedtuples). 
+Lists are mutable, 
+and their elements are usually homogeneous and are accessed by iterating over the list.
+```
+```
+>>> empty = ()
+>>> singleton = 'hello',    # <-- note trailing comma
+>>> len(empty)
+0
+>>> len(singleton)
+1
+>>> singleton
+('hello',)
+```
+- >>> x, y, z = t
