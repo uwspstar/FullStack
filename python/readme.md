@@ -488,6 +488,11 @@ https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 - list(range(5)) # [0, 1, 2, 3, 4]
 - list.sort(key=None, reverse=False)
 - insert, remove or sort that only modify the list have no return value printed 
+- zip
+```
+>>> list(zip(*matrix))
+[(1, 5, 9), (2, 6, 10), (3, 7, 11), (4, 8, 12)]
+```
 ```
 insert, remove or sort return the default None. 
 This is a design principle for all mutable data structures in Python.
