@@ -18,6 +18,8 @@ Curly braces or the set() function can be used to create sets.
 >>> a | b   # letters in a or b or both {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
 >>> a & b   # letters in both a and b {'a', 'c'}
 >>> a ^ b   # letters in a or b but not both {'r', 'd', 'b', 'm', 'z', 'l'}
+
+>>> a = {x for x in 'abracadabra' if x not in 'abc'} # {'r', 'd'}
 ```
 
 ### Lists
