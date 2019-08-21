@@ -1,5 +1,20 @@
 # Data Structures
+- https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
 - https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
+
+### Dictionaries 
+- dictionaries are indexed by keys
+- keys can be any immutable type; strings and numbers can always be keys
+- Tuples can be used as keys if they contain only strings, numbers, or tuples;
+```
+*** if a tuple contains any mutable object either directly or indirectly, 
+it cannot be used as a key. ***
+```
+-  can’t use lists as keys
+```
+since lists can be modified in place using index assignments, 
+slice assignments, or methods like append() and extend()
+```
 
 ### set
 - A set is an unordered collection with no duplicate elements
