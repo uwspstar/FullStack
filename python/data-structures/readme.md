@@ -3,6 +3,9 @@
 - https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 
 ### Dictionaries 
+- dictionary as a set of key: value pairs, 
+```with the requirement that the keys are unique (within one dictionary). ```
+- A pair of braces creates an empty dictionary: {}.
 - dictionaries are indexed by keys
 - keys can be any immutable type; strings and numbers can always be keys
 - Tuples can be used as keys if they contain only strings, numbers, or tuples;
@@ -15,7 +18,20 @@ it cannot be used as a key. ***
 since lists can be modified in place using index assignments, 
 slice assignments, or methods like append() and extend()
 ```
-
+-  delete a key:value pair with del. 
+- The dict() constructor builds dictionaries directly from sequences of key-value pairs:
+```
+>>> dict([('sape', 4139), ('guido', 4127), ('jack', 4098)])
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
+```
+```
+>>> {x: x**2 for x in (2, 4, 6)}
+{2: 4, 4: 16, 6: 36}
+```
+```
+>>> dict(sape=4139, guido=4127, jack=4098)
+{'sape': 4139, 'guido': 4127, 'jack': 4098}
+```
 ### set
 - A set is an unordered collection with no duplicate elements
 - *** Note: to create an empty set you have to use set(), not {}; ***
