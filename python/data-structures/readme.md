@@ -2,6 +2,7 @@
 - https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 
 ### Lists
+- print(string[::-1]) # reverse a string
 - a[len(a):] = [x]
 - list.append(x) # stack
 - pop([i])  # stack
