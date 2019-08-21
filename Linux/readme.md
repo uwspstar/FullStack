@@ -4,6 +4,22 @@ Mac OS X is a Unix OS and its command line is 99.9% the same as any Linux distri
 Both are using bash as default shell .
 *** UNIX is to DOS as Linux is to Windows
 ```
+### basic
+- Navigate using these commands:
+  - cd "change directory"
+  - pwd "print working directory"
+  - ls "list contents"
+- Remember these aliases:
+  - / is root directory
+  - ~ is home
+  - . is current
+  - .. is parent
+- Manipulate files with:
+  - "mkdir" create directories
+  - "touch" create files
+  - "mv" move and rename
+  - "rm" to remove files, "-r" to remove directories
+
 - absolute paths 
 ```
 Files and directories have absolute paths based on the root, where each additional level down adds a " /".
