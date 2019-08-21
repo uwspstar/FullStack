@@ -1,6 +1,9 @@
 # Python 
 https://docs.python.org/3.7/tutorial/index.html
 
+### FAQ
+https://docs.python.org/3/faq/programming.html#id1
+
 ### Learn Python by Building a Blockchain & Cryptocurrency by Maximilian Schwarzmüller
 https://www.udemy.com/learn-python-by-building-a-blockchain-cryptocurrency
 
@@ -511,6 +514,10 @@ This is a design principle for all mutable data structures in Python.
 ```
 Unlike strings, which are immutable, lists are a mutable type, i.e. it is possible to change their content:
 ```
+
+# Sequence Types — list, tuple, range
+https://docs.python.org/3/library/stdtypes.html#typesseq
+
 ### Falsy value
 ```
 # ""
