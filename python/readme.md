@@ -1,7 +1,7 @@
 # Python 
 https://docs.python.org/3.7/tutorial/index.html
 
-### FAQ
+### FAQ (Must Read, help a lot !!!)
 https://docs.python.org/3/faq/programming.html#id1
 
 ### Learn Python by Building a Blockchain & Cryptocurrency by Maximilian Schwarzmüller
