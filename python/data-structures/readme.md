@@ -44,6 +44,13 @@ odds = [num for num in numbers if num % 2 != 0]
 nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
 [[print(val) for val in l] for l in nested_list]
 ```
+- how to write a nest list
+```
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+[[] for list in nested_list] # step 1
+[[for x in list] for list in nested_list] # step 2
+```
 - print(string[::-1]) # reverse a string
 - a[len(a):] = [x]
 - list.append(x) # stack
