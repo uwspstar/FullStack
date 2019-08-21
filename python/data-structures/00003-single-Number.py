@@ -5,17 +5,17 @@
 # Example:
 # Input: [4, 3, 2, 4, 1, 3, 2]
 
--  with XOR 
+# with XOR 
 def singleNumber(nums):
-  unique = 0
+  num = 0
   for n in nums:
-    unique ^= n
-  return unique
+    num ^= n
+  return num
 
 
 print singleNumber([4, 3, 2, 4, 1, 3, 2])
 
-- nest loop
+# nest loop
 def singleNumber(nums):
   for i in range(len(nums)):
     no_found = True
@@ -29,7 +29,7 @@ def singleNumber(nums):
     
 print singleNumber([4, 3, 2, 4, 1, 3, 2])
 
-- with dictory
+# with dictory
 
 def singleNumber(nums):
   my_dict = {}
