@@ -1,6 +1,28 @@
 # Data Structures
 - https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 
+### set
+- A set is an unordered collection with no duplicate elements
+- *** Note: to create an empty set you have to use set(), not {}; ***
+
+```
+Curly braces or the set() function can be used to create sets.
+- a = set('abracadabra') # {'a', 'r', 'b', 'c', 'd'}
+- basket = {'apple', 'orange', 'apple', 'pear', 'orange', 'banana'}
+```
+```
+>>> a = set('abracadabra') # unique letters in a {'a', 'r', 'b', 'c', 'd'}
+>>> b = set('alacazam')                            
+>>> a - b                              # letters in a but not in b
+{'r', 'd', 'b'}
+>>> a | b                              # letters in a or b or both
+{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+>>> a & b                              # letters in both a and b
+{'a', 'c'}
+>>> a ^ b                              # letters in a or b but not both
+{'r', 'd', 'b', 'm', 'z', 'l'}
+```
+
 ### Lists
 ```
 - slices are quite useful when making copies of lists
