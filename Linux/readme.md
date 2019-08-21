@@ -28,7 +28,11 @@ will create a new child directory inside the current directory.
 ```
 - "touch" followed by the filename and file-type extension 
 will create a new file of that type.
- ``
+
+- renamed 
+Files can be moved or renamed using the "mv" (" move") keyword, 
+which takes two arguments: the source and the destination
+```
 - Terminals, Commands and Shells
 https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
 
