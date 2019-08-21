@@ -9,6 +9,7 @@
 - dictionaries are indexed by keys
 - keys can be any immutable type; strings and numbers can always be keys
 - Tuples can be used as keys if they contain only strings, numbers, or tuples;
+- https://medium.com/python-pandemonium/python-dictionaries-45cacc2b76aa
 ```
 *** if a tuple contains any mutable object either directly or indirectly, 
 it cannot be used as a key. ***
