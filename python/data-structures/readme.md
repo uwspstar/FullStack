@@ -25,8 +25,10 @@ Curly braces or the set() function can be used to create sets.
 ### Lists
 ```
 - slices are quite useful when making copies of lists
-- list comprehension is used everywhere when iterating over lists, strings, ranges and even more data types!
-- nested lists are essential for building more complex data structures like matrices, game boards and mazes
+- list comprehension is used everywhere 
+when iterating over lists, strings, ranges and even more data types!
+- nested lists are essential for building more complex data structures 
+like matrices, game boards and mazes
 - swapping is quite useful when shuffling or sorting
 ```
 - [bool(val) for val in [0, [], '']] # [False, False, False]
