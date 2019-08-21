@@ -4,7 +4,16 @@ Mac OS X is a Unix OS and its command line is 99.9% the same as any Linux distri
 Both are using bash as default shell .
 *** UNIX is to DOS as Linux is to Windows
 ```
-
+- absolute paths 
+```
+Files and directories have absolute paths based on the root, where each additional level down adds a " /".
+The absolute path for "Xing" is:  /Users/Xing
+```
+- home directory
+```
+a special directory called "home", which is also known as "~". 
+This is the default directory upon opening your terminal.
+```
 - Terminals, Commands and Shells
 https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
 
