@@ -8,22 +8,22 @@
 http://python.slides.com/colt/web-scraping#/30
 
 - 1a. Initialize a local repository on your computer
-```git init```
-OR
+```$>git init```
+- OR
 - 1b. Clone (download) an online repository onto your computer
-```git clone https://github.com/<your_github_handle>/<your_repo>.git```
+```$>git clone https://github.com/<your_github_handle>/<your_repo>.git```
 
 - 2. Change (create, edit, move, remove) files on your computer
-```echo "just putting text in this file" >> README.md```
+```$>echo "just putting text in this file" >> README.md```
 
 - 3. Stage the files to be committed
-```git add .```
+```$>git add .```
 
 - 4. Commit the files to a new version
-```git commit -m "my first commit"```
+```$>git commit -m "my first commit"```
 
 - 5. Push changes to the online repository
-```git push origin master```
+```$>git push origin master```
 
 - http://python.slides.com/colt/web-scraping#/31  by Scolt
 ```
