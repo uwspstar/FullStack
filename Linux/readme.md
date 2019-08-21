@@ -23,6 +23,11 @@ This allows for relative navigation
 ```
 - "mkdir" ("make directory") followed by the name of the new directory 
 will create a new child directory inside the current directory.
+
+- Removing Directories
+Directories can also be deleted using the "rm" keyword, 
+with the added option "-r" ("recursive"). 
+You can also use "-f" ("force") to prevent warnings.
 ```
 - file
 ```
