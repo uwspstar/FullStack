@@ -47,6 +47,7 @@ def singleNumber(nums):
 print(singleNumber([4, -1,3, 2, 4, 1, 1,3, 2]))
 
 
+# with dictory
 def singleNumber(nums):
   my_dict = {}
   for x in nums: 
