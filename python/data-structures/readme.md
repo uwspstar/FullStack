@@ -2,6 +2,12 @@
 - https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 
 ### Lists
+```
+- slices are quite useful when making copies of lists
+- list comprehension is used everywhere when iterating over lists, strings, ranges and even more data types!
+- nested lists are essential for building more complex data structures like matrices, game boards and mazes
+- swapping is quite useful when shuffling or sorting
+```
 - [bool(val) for val in [0, [], '']] # [False, False, False]
 ```
 numbers = [1, 2, 3, 4, 5, 6]
@@ -9,6 +15,11 @@ evens = [num for num in numbers if num % 2 == 0]
 odds = [num for num in numbers if num % 2 != 0]
 
 [num*2 if num % 2 == 0 else num/2 for num in numbers] # [0.5, 4, 1.5, 8, 2.5, 12]
+```
+- nested list
+```
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+[[print(val) for val in l] for l in nested_list]
 ```
 - print(string[::-1]) # reverse a string
 - a[len(a):] = [x]
