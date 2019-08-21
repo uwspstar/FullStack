@@ -9,7 +9,7 @@ http://python.slides.com/colt/web-scraping#/30
 
 - 1a. Initialize a local repository on your computer
 ```git init```
-
+OR
 - 1b. Clone (download) an online repository onto your computer
 ```git clone https://github.com/<your_github_handle>/<your_repo>.git```
 
