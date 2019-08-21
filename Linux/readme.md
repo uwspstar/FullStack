@@ -28,6 +28,10 @@ will create a new child directory inside the current directory.
 Directories can also be deleted using the "rm" keyword, 
 with the added option "-r" ("recursive"). 
 You can also use "-f" ("force") to prevent warnings.
+
+**** Warning: "rm -rf" is a dangerous command! 
+Be extremely careful what folder you pass to it 
+because you will never get it back ****
 ```
 - file
 ```
