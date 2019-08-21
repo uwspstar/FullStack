@@ -19,6 +19,16 @@ The dot "." stands for current directory,
 and dot-dot ".." stands for parent directory. 
 This allows for relative navigation
 ```
+- directory
+```
+- "mkdir" ("make directory") followed by the name of the new directory 
+will create a new child directory inside the current directory.
+```
+- file
+```
+- "touch" followed by the filename and file-type extension 
+will create a new file of that type.
+ ``
 - Terminals, Commands and Shells
 https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
 
