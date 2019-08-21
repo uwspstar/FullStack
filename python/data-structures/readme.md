@@ -2,6 +2,7 @@
 - https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 
 ### Lists
+- [bool(val) for val in [0, [], '']] # [False, False, False]
 - print(string[::-1]) # reverse a string
 - a[len(a):] = [x]
 - list.append(x) # stack
