@@ -5,7 +5,7 @@
 - GitHub is an online service that hosts git repositories for developers.
 
 ### 5 steps by Scolt
-http://python.slides.com/colt/web-scraping#/36
+http://python.slides.com/colt/web-scraping#/30
 
 - 1a. Initialize a local repository on your computer
 ```git init```
