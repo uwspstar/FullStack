@@ -41,7 +41,7 @@ def singleNumber(nums):
   
   print(f"my_dict : {my_dict}")
   for key, val in my_dict.items():
-    if my_dict[key] == 1:
+    if val == 1:
       return key
  
 print(singleNumber([4, -1,3, 2, 4, 1, 1,3, 2]))
