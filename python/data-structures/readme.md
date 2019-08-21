@@ -12,15 +12,12 @@ Curly braces or the set() function can be used to create sets.
 ```
 ```
 >>> a = set('abracadabra') # unique letters in a {'a', 'r', 'b', 'c', 'd'}
->>> b = set('alacazam')                            
->>> a - b                              # letters in a but not in b
-{'r', 'd', 'b'}
->>> a | b                              # letters in a or b or both
-{'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
->>> a & b                              # letters in both a and b
-{'a', 'c'}
->>> a ^ b                              # letters in a or b but not both
-{'r', 'd', 'b', 'm', 'z', 'l'}
+>>> b = set('alacazam')   
+
+>>> a - b   # letters in a but not in b {'r', 'd', 'b'}
+>>> a | b   # letters in a or b or both {'a', 'c', 'r', 'd', 'b', 'm', 'z', 'l'}
+>>> a & b   # letters in both a and b {'a', 'c'}
+>>> a ^ b   # letters in a or b but not both {'r', 'd', 'b', 'm', 'z', 'l'}
 ```
 
 ### Lists
