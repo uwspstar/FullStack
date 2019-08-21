@@ -3,6 +3,13 @@
 
 ### Lists
 - [bool(val) for val in [0, [], '']] # [False, False, False]
+```
+numbers = [1, 2, 3, 4, 5, 6]
+evens = [num for num in numbers if num % 2 == 0]
+odds = [num for num in numbers if num % 2 != 0]
+
+[num*2 if num % 2 == 0 else num/2 for num in numbers] # [0.5, 4, 1.5, 8, 2.5, 12]
+```
 - print(string[::-1]) # reverse a string
 - a[len(a):] = [x]
 - list.append(x) # stack
