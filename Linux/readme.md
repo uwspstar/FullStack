@@ -18,7 +18,7 @@ This is the default directory upon opening your terminal.
 The dot "." stands for current directory, 
 and dot-dot ".." stands for parent directory. 
 This allows for relative navigation
-``
+```
 - Terminals, Commands and Shells
 https://www.udemy.com/linux-mastery/learn/lecture/8226844#overview
 
