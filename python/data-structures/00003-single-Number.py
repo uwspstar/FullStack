@@ -45,3 +45,16 @@ def singleNumber(nums):
       return key
  
 print(singleNumber([4, -1,3, 2, 4, 1, 1,3, 2]))
+
+
+def singleNumber(nums):
+  my_dict = {}
+  for x in nums: 
+      my_dict[x] = my_dict.get(x,0) + 1 
+  
+  print(f"my_dict : {my_dict}")
+  for key, val in my_dict.items():
+    if val == 1:
+      return key
+ 
+print(singleNumber([4, -1,3, 2, 4, 1, 1,3, 2]))
