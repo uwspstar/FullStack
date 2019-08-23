@@ -622,6 +622,16 @@ def get_user(**user):
 
 get_user(id=1, first_name="xing", age=30)
 ```
+- map
+```
+map(function, iterables)
+
+def myfunc(a, b):
+  return a + b
+
+x = map(myfunc, ('apple', 'banana', 'cherry'), ('orange', 'lemon', 'pineapple'))
+# ['appleorange', 'bananalemon', 'cherrypineapple']
+```
 ### math
 ```
 import random
