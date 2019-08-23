@@ -5,6 +5,11 @@ Both are using bash as default shell .
 *** UNIX is to DOS as Linux is to Windows
 ```
 ### basic
+- *** the difference between an absolute file path and a relative file path? ***
+```
+  - An absolute file path starts at the root (/) folder 
+  - A relative file path starts from the shell's current working directory
+```
 - Navigate using these commands:
   - cd "change directory"
   - pwd "print working directory"
