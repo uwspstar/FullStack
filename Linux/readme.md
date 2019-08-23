@@ -9,6 +9,7 @@ Both are using bash as default shell .
 ```
   - An absolute file path starts at the root (/) folder 
   - A relative file path starts from the shell's current working directory
+  - starts with a "." which means "the current folder".
 ```
 - Navigate using these commands:
   - cd "change directory"
@@ -55,6 +56,9 @@ Be extremely careful what folder you pass to it
 because you will never get it back ****
 ```
 - file
+```
+$> file output.txt
+```
 ```
 - "touch" followed by the filename and file-type extension 
 will create a new file of that type.
