@@ -18,7 +18,7 @@ Both are using bash as default shell .
   - ls D* // open all D* folder
   - ls ?.txt // open file such as 1.txt a.txt, M.txt, etc , only match one
   - $> ls D?w* // math download foler D?w*
-  - ls file[123456789].txt
+  - ls file[0123456789].txt // same as ls file[0-9].txt
   
 - Remember these aliases:
   - / is root directory
