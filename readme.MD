@@ -9,6 +9,8 @@ On macOS control+command+space pulls up the Emoji keyboard
 
 # git ssh & sourcetree
 - https://github.com/uwspstar/FullStack/tree/master/ssh
+- Generate and Load SSH Keys into SourceTree with PuTTY
+https://confluence.atlassian.com/sourcetreekb/generate-and-load-ssh-keys-into-sourcetree-with-putty-790629663.html
 ```
 Deploy keys
 Once a key has been attached to one repository as a deploy key, it cannot be used on another repository. If you're running into this error while setting up deploy keys, see "Managing deploy keys" in the GitHub Developer documentation.
