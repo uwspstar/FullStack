@@ -44,6 +44,10 @@ https://www.udemy.com/dart-and-flutter-the-complete-developers-guide/learn/lectu
 export PATH="$PATH:$HOME/play/workspace/tools/mac:$HOME/play/workspace/tools/generic:$HOME/bin"
 
 ```
+### install tree for Mac
+- ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+- brew install tree
+
 # Azure / Web Jobs
 - https://github.com/uwspstar/FullStack/tree/master/azure/WebJobs
 # React
