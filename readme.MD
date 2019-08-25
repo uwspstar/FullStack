@@ -48,6 +48,13 @@ export PATH="$PATH:$HOME/play/workspace/tools/mac:$HOME/play/workspace/tools/gen
 - ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 - brew install tree
 
+### REST & RESTful API
+```
+Representational State Transfer (REST) is a software architectural style 
+that defines a set of constraints to be used for creating Web services. 
+Web services that conform to the REST architectural style, 
+called RESTful Web services (RWS), provide interoperability between computer systems on the Internet.
+```
 # Azure / Web Jobs
 - https://github.com/uwspstar/FullStack/tree/master/azure/WebJobs
 # React
