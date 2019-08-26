@@ -12,6 +12,9 @@ b_list = [1,2,3,4,5]
 print(tuple(b_list))
 print(list(a_tuple))
 ```
+- bin(n) # 2
+- oct(n) # 8
+- hex(n) # 16
 ### Dictionaries 
 - dictionary as a set of key: value pairs, 
 ```with the requirement that the keys are unique (within one dictionary). ```
