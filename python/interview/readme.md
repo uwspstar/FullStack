@@ -21,3 +21,5 @@ Python has a number of build-in types:
 Integers in Python3 are unbounded—the maximum integer representable is a function of the
 available memory. 
 ```
+- XOR
+https://www.youtube.com/watch?v=PyfKCvHALj8
