@@ -53,7 +53,7 @@ You can also verify this by changing the value of x and see how the results of t
 ```
 
 ### Day 3
-- Why are default values shared between objects?¶
+- Why are default values shared between objects?
 ```
 For example, don’t write:
 
