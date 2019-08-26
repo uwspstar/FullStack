@@ -75,3 +75,23 @@ it is good programming practice to not use mutable objects as default values.
 Instead, use None as the default value and inside the function,
 check if the parameter is None and create a new list/dictionary/whatever if it is. 
 ```
+- What is the difference between arguments and parameters?
+```
+Parameters are defined by the names that appear in a function definition, whereas arguments are the values actually passed to a function when calling it. Parameters define what types of arguments a function can accept. For example, given the function definition:
+
+def func(foo, bar=None, **kwargs):
+    pass
+foo, bar and kwargs are parameters of func. However, when calling func, for example:
+
+func(42, bar=314, extra=somevar)
+the values 42, 314, and somevar are arguments.
+```
+```
+If we have a mutable object (list, dict, set, etc.), 
+we can use some specific operations to mutate it 
+and all the variables that refer to it will see the change.
+
+If we have an immutable object (str, int, tuple, etc.), 
+all the variables that refer to it will always see the same value, 
+but operations that transform that value into a new value always return a new object.
+```
