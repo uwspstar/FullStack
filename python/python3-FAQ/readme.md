@@ -3,7 +3,7 @@ https://docs.python.org/3/faq/programming.html#faq-multidimensional-list
 
 - using a module is also the basis for implementing the Singleton design pattern.
 
-### Day 1
+### Day 1 🐸
 ```
 >>> x = 10
 >>> def foo():
@@ -18,7 +18,7 @@ that variable becomes local to that scope and shadows any similarly named variab
 - Why am I getting an UnboundLocalError when the variable has a value?
 https://docs.python.org/3/faq/programming.html#id8
 
-### Day 2
+### Day 2 🙈
 - Why do lambdas defined in a loop with different values all return the same result?
 Assume you use a for loop to define a few different lambdas (or even plain functions), e.g.:
 
@@ -52,7 +52,7 @@ so all the functions now return 4**2, i.e. 16.
 You can also verify this by changing the value of x and see how the results of the lambdas change:
 ```
 
-### Day 3
+### Day 3 🐷
 - Why are default values shared between objects?
 ```
 For example, don’t write:
