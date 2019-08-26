@@ -22,6 +22,14 @@ https://docs.python.org/3/faq/programming.html#id8
 - Why do lambdas defined in a loop with different values all return the same result?
 Assume you use a for loop to define a few different lambdas (or even plain functions), e.g.:
 
+- print(squares[i]())  # print lambdas
+
+```
+>>> print(squares) # print lambdas
+>>>
+[<function <lambda> at 0x7f0fa26e65f0>, <function <lambda> at 0x7f0fa26e6680>, <function <lambda> at 0x7f0fa26e6710>, <function <lambda> at 0x7f0fa26e67a0>, <function<lambda> at 0x7f0fa26e6830>]
+
+```
 ```
 >>> squares = []
 >>> for x in range(5):
@@ -42,4 +50,28 @@ and it is accessed when the lambda is called — not when it is defined.
 At the end of the loop, the value of x is 4, 
 so all the functions now return 4**2, i.e. 16. 
 You can also verify this by changing the value of x and see how the results of the lambdas change:
+```
+
+### Day 3
+- Why are default values shared between objects?¶
+```
+For example, don’t write:
+
+>>>def foo(mydict={}):
+    ...
+    
+but:
+
+>>>def foo(mydict=None):
+    if mydict is None:
+        mydict = {}  # create a new dict for local namespace
+        
+
+By definition, immutable objects such as numbers, strings, tuples, and None, are safe from change. 
+Changes to mutable objects such as dictionaries, lists, and class instances can lead to confusion.
+
+Because of this feature, 
+it is good programming practice to not use mutable objects as default values. 
+Instead, use None as the default value and inside the function,
+check if the parameter is None and create a new list/dictionary/whatever if it is. 
 ```
