@@ -2,6 +2,16 @@
 - https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
 - https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 
+```
+You can use the tuple() function to return a tuple version of the value passed to it 
+and similarly the list() function to convert to a list:
+
+a_tuple = (1,2,3,4,5,6,7,8,9,10)
+b_list = [1,2,3,4,5]
+
+print(tuple(b_list))
+print(list(a_tuple))
+```
 ### Dictionaries 
 - dictionary as a set of key: value pairs, 
 ```with the requirement that the keys are unique (within one dictionary). ```
