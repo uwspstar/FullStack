@@ -18,6 +18,7 @@ that variable becomes local to that scope and shadows any similarly named variab
 - Why am I getting an UnboundLocalError when the variable has a value?
 https://docs.python.org/3/faq/programming.html#id8
 
+### Day 2
 - Why do lambdas defined in a loop with different values all return the same result?
 Assume you use a for loop to define a few different lambdas (or even plain functions), e.g.:
 
