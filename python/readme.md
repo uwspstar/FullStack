@@ -1,4 +1,45 @@
 # Python 
+```
+# enumerate
+some_list = [-1, 3, 5, -9]
+print(some_list)
+# for idx, value in enumerate(some_list):
+#     print(idx, value)
+
+# reverse()
+# This method does not return any value but reverse the given object from the list.
+# so print(some_list.reverse()) not working
+print(some_list.reverse()) 
+# some_list.reverse()
+print(some_list)
+
+# min
+print(min(some_list))
+
+# string
+x = 'bug' * 3
+print (x) # prints ‘bugbugbug'
+
+# List
+x = [8, 5] * 3
+print (x) # prints [8, 5, 8, 5, 8, 5]
+
+# sorting
+# – Returns a new list of items in sorted order – Does not change the original list
+# String
+x = 'bug'
+print (sorted(x)) # prints ['b', 'g', 'u']
+
+x = 'bug'
+print (x.reverse()) # ERROR 'str' object has no attribute 'reverse'
+print (x.sort()) # ERROR 'str' object has no attribute 'sort'
+ 
+#  List
+x = ['pig', 'cow', 'horse']
+print (sorted(x)) # prints ['cow', 'horse', 'pig']
+
+```
+### resouce
 https://docs.python.org/3.7/tutorial/index.html
 
 ### FAQ (Must Read, help a lot !!!)
