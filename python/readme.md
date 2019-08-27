@@ -1,8 +1,17 @@
 # Python 
 ```
-# enumerate
+
 some_list = [-1, 3, 5, -9]
+some_dict = dict(x=1,y=3)
 print(some_list)
+
+# get only for dict
+# print(some_list.get(10, 0)) # list' object has no attribute 'get'
+print(some_dict.get("x", 0)) 
+# list' object has no attribute 'get', key has to be a string
+
+
+# enumerate
 # for idx, value in enumerate(some_list):
 #     print(idx, value)
 
