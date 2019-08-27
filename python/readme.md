@@ -1,5 +1,7 @@
 # Python 
 ```
+# None, True, False
+# list(), tuple(), dict(), set()
 
 some_list = [-1, 3, 5, -9]
 some_dict = dict(x=1,y=3)
