@@ -6,7 +6,19 @@
 ```
 On macOS control+command+space pulls up the Emoji keyboard
 ```
+# A parity bit (error detecting code)
+```
+A parity bit, or check bit, is a bit added to a string of binary code to ensure 
+that the total number of 1-bits in the string is even or odd[1]. 
+Parity bits are used as the simplest form of error detecting code.
 
+There are two variants of parity bits: even parity bit and odd parity bit.
+
+In the case of even parity, 
+for a given set of bits, the occurrences of bits whose value is 1 is counted. 
+If that count is odd, the parity bit value is set to 1, 
+making the total count of occurrences of 1s in the whole set (including the parity bit) an even number.
+```
 # git ssh & sourcetree
 - https://github.com/uwspstar/FullStack/tree/master/ssh
 - Generate and Load SSH Keys into SourceTree with PuTTY
