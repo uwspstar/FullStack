@@ -1,4 +1,46 @@
 # Python 
+
+### Class Inheritance
+```
+class Person( object ):     
+  
+        # __init__ is known as the constructor          
+        def __init__(self, name, idnumber):    
+                self.name = name 
+                self.idnumber = idnumber 
+        def display(self): 
+                print(self.name) 
+                print(self.idnumber) 
+  
+# child class 
+class Employee( Person ):            
+        def __init__(self, name, idnumber, salary, post): 
+                self.salary = salary 
+                self.post = post 
+  
+                # invoking the __init__ of the parent class  
+                Person.__init__(self, name, idnumber)  
+  
+                  
+# creation of an object variable or an instance 
+a = Person('Rahul', 886012)     
+  
+# calling a function of the class Person using its instance 
+a.display()  
+```
+- sum()
+- mean() # average 
+```
+import statistics 
+  
+# list of positive integer numbers 
+data1 = [1, 3, 4, 5, 7, 9, 2] 
+  
+x = statistics.mean(data1) 
+  
+# Printing the mean 
+print("Mean is :", x)
+```
 ```
 # None, True, False
 # list(), tuple(), dict(), set()
