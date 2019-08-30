@@ -1,5 +1,16 @@
 # Python 
 
+### sort() vs sorted()
+```
+The syntax of sort() method is:
+list.sort(key=..., reverse=...)
+
+Alternatively, you can also use Python's in-built function sorted() for the same purpose.
+sorted(list, key=..., reverse=...)
+
+Note: Simplest difference between sort() and sorted() is: 
+sort() doesn't return any value while, sorted() returns an iterable list.
+```
 ### Class Inheritance
 ```
 class Person( object ):     
