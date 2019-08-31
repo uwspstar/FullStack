@@ -14,6 +14,26 @@ so it will be using V8 instead of Chakra.
 - Internet Explorer continues to use its version of Chakra.
 - Facebook created the Hermes engine for Android apps built for the React Native framework
 ```
+### loop function
+- function is obj
+```
+var arr = [];
+
+arr.push(function() {
+	console.log('Hello world 1');
+});
+arr.push(function() {
+	console.log('Hello world 2');
+});
+arr.push(function() {
+	console.log('Hello world 3');
+});
+
+arr.forEach(function(item) {
+	item();
+});
+
+```
 ### Advanced JavaScript Concepts by Andrei Neagoie
 https://www.udemy.com/advanced-javascript-concepts/
 ### Object-oriented Programming in JavaScript by Mosh Hamedani
