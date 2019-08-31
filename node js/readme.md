@@ -42,8 +42,17 @@ A buffer cannot be resized
 ```
 - Piping
 ```
-
+Piping is a mechanism to connect output of one stream to another stream
+It is normnally used to get date from one stream and to pass output of the stream to another stream
+There is not limit on  piping operations
 ```
+- sync vs async ( pererred , never block)
+```
+async methods takes a last parametr as completion function callback
+and first parameter of the callback function is error.
+```
+- fs module (file base operations, providing both sync and async method )
+- http module ( web based operations)
 
 
 
