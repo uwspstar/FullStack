@@ -9,6 +9,7 @@ this is resolved absolute path. The value inside a module is the path to the mod
 - ```setTimeout``` (run the callback after time ) 
 vs ```setInterval``` (repeat run the callback after time) 
 vs```clearTimeout``` (stop)
+vs```clearInterval(t)```
 
 - streams (readable and writable stream)
 ```
