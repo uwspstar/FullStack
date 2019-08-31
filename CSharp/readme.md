@@ -13,7 +13,16 @@
 ### Array vs ArrayList
 
 ### Abstract Class vs Interface
+- Since multiple inheritance in C Sharp is deprecated
+```
+One by one the main mechanical difference is that 
+an abstract class can have a default implementation
+whereas an interface is just a bunch of member declarations.
 
+A client couldn't do that with an abstract class instead of an interface.
+Since multiple inheritance in C Sharp is deprecated.
+
+```
 
 ### Implementing "Dispose" Pattern
 
@@ -24,6 +33,9 @@
 ### What is Interning?
 
 ### Constant vs Readonly
+```
+Const variables are resolved at compile time while Read-Only are resolved in runtime.
+```
 
 ### Lock vs Monitor
 
