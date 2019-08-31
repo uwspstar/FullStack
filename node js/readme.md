@@ -1,4 +1,54 @@
 # Node JS
+
+### basic
+- what's the package.json
+- uninstall dependency 
+```
+$>npm uninstall dependency-name
+```
+- update dependency
+```
+$>npm update
+```
+- what's the blocking code
+```
+if application has to wait for some I/O operation in order to
+complete its excution any further then the code responsible
+for waiting is known as blocking code
+```
+- Callback function
+- how node prevents blocking code?
+```
+by providing callback function.
+Callback function gets called whenever corresponding event triggered
+```
+- what is Event Loop?
+```
+node is a single threaded application 
+but is uspport concurrency via concept of event and callbacks.
+As every API of node js are asynchronous and being a single threed, 
+it uses aysnc function calls to maintain the concurrency.
+Node uses observer pattern.
+Node thread keeps an evnet loop and whenever any task get commpleted, 
+it fires the corresponding event which signals the event listener function to get executed
+```
+- buffer class
+```
+buffer class is a global class and can be accessed in application 
+without importing buffer module.
+A buffer is a kind of an array of intergers
+and corresponds to a raw memory allocation outside the v8 heap.
+A buffer cannot be resized
+```
+- Piping
+```
+
+```
+
+
+
+
+### resource
 - Node JS: Advanced Concepts by Stephen Grider
 https://www.udemy.com/advanced-node-for-developers
 - Node.js: The Complete Guide to Build RESTful APIs (2018) by Mosh Hamedani
