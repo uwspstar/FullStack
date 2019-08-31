@@ -73,8 +73,23 @@ and first parameter of the callback function is error.
 ```
 - fs module (file base operations, providing both sync and async method )
 - http module ( web based operations)
+- npm: validator // https://www.npmjs.com/package/validator
+```
+$>npm install validator@10.8.0
+```
+- Installing an npm Module Globally ```Not all modules are designed to be installed globally```
+```
+$>npm install -g nodemon@1.18.5
 
-
+***
+A globally installed module is not added as a dependency to your project. 
+That means you won’t see it listed in package.json or package-lock.json. 
+You also won’t find its code in node_modules. 
+```
+- process.argv
+```
+Node.js application can access the command line arguments that were provided using process.argv.
+```
 
 
 ### resource
