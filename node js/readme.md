@@ -1,6 +1,22 @@
 # Node JS
 
 ### basic
+- ```__filename```
+```
+this is resolved absolute path. The value inside a module is the path to the module file
+```
+- ```__dirname``` 
+- ```setTimeout``` (run the callback after time ) vs ```clearTimeout``` (stop)
+
+- streams (readable and writable stream)
+```
+objects that allows you to read data from a source 
+or write data to a destination in continous fashion
+
+- Duplex-stream : both read and write operation
+- Transform - A type of duplex , the output is computed based on input
+```
+
 - what's the package.json
 - uninstall dependency 
 ```
@@ -40,6 +56,7 @@ A buffer is a kind of an array of intergers
 and corresponds to a raw memory allocation outside the v8 heap.
 A buffer cannot be resized
 ```
+- Chaining
 - Piping
 ```
 Piping is a mechanism to connect output of one stream to another stream
