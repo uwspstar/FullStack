@@ -6,7 +6,9 @@
 this is resolved absolute path. The value inside a module is the path to the module file
 ```
 - ```__dirname``` 
-- ```setTimeout``` (run the callback after time ) vs ```clearTimeout``` (stop)
+- ```setTimeout``` (run the callback after time ) 
+vs ```setInterval``` (repeat run the callback after time) 
+vs```clearTimeout``` (stop)
 
 - streams (readable and writable stream)
 ```
