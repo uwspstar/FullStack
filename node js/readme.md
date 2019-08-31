@@ -90,8 +90,35 @@ You also won’t find its code in node_modules.
 ```
 Node.js application can access the command line arguments that were provided using process.argv.
 ```
+- JSON.stringify ```converts a JavaScript object into a JSON string```
+- JSON.parse ```converts a JSON string into a JavaScript object```
+```
+JavaScript provides two methods for working with JSON. 
+The first is JSON.stringify and the second is JSON.parse
+JSON.stringify converts a JavaScript object into a JSON string
+JSON.parse converts a JSON string into a JavaScript object.
 
+JSON only supports double-quotes) vs JavaScript object
 
+const book = {
+  title: 'Ego is the Enemy',
+  author: 'Ryan Holiday'
+}
+
+// Covert JavaScript object into JSON string
+const bookJSON = JSON.stringify(book)
+
+// Covert JSON string into object
+const bookObject = JSON.parse(bookJSON)
+console.log(bookObject.title)
+```
+- JSON ```(only supports double-quotes)``` vs JavaScript object
+```
+JSON looks similar to a JavaScript object, 
+but there are some differences. 
+The mostobvious is that all properties are wrapped in double-quotes. 
+Single-quotes can’t be used here, as JSON only supports double-quotes. You can see this in the example JSON below.
+```
 ### resource
 - Node JS: Advanced Concepts by Stephen Grider
 https://www.udemy.com/advanced-node-for-developers
