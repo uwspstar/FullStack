@@ -39,10 +39,7 @@ https://www.udemy.com/advanced-javascript-concepts/
 ### Object-oriented Programming in JavaScript by Mosh Hamedani
 https://www.udemy.com/javascript-object-oriented-programming/
 
-### 06/02/2019
-- Javascript Engine ( such as V8)
-### 06/12/2019
-- DOMContentLoaded
+### DOMContentLoaded
 ```
 The DOMContentLoaded event fires when the initial HTML document has been completely loaded and parsed, without waiting for stylesheets, images, and subframes to finish loading.
 
@@ -99,7 +96,7 @@ var x = location.hash;
 ### webpack
 - https://www.udemy.com/javascript-object-oriented-programming/learn/lecture/10020730#overview
 
-### 07/03/2019
+### create an object
 ```
 // The simplest way to create an object is using an object literal 
 const circle = { 
@@ -177,7 +174,7 @@ Object.defineProperty(this, 'defaultLocation', {
     set: function(value) { defaultLocation = value; }
 });
 ```
-### 07/04/2019
+### Object.getPrototypeOf
 ```
 // Every object (except the root object) has a prototype (parent). 
 // To get the prototype of an object:
@@ -221,7 +218,7 @@ Object.keys(obj);
 // To get all the properties (own + prototype): 
 for (let key in obj) { }
 ```
-### 07/05/2019
+### Module formats
 ```
 
 // Module formats
@@ -248,7 +245,7 @@ import {Square} from './square';
 // We use Webpack to combine our JavaScript files into a
 // bundle. 
 ```
-### 07/20/2019
+### basic
 - Object Literals
 - Factories
 - factory function (use return)
