@@ -1,6 +1,14 @@
 # Node JS
 
 ### basic
+- Error-first callback
+```
+Error-first callback; it's a callback that takes an error object as their first parameter.
+That first parameter will be null if there's no error.
+Otherwise, it will contain an object defining the error.
+this is just a standard pattern so we know in node 
+what order to place our parameters in
+```
 - Call Stack and Memory Heap
 - Array.isArray([1,2]) vs Array.isArray([]) vs typeof []
 ```
