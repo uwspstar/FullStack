@@ -175,6 +175,18 @@ A socket is the line across which information flows, if you want to think of it 
 It's where the information actually flows as it's moving from one computer to another.
 It's the idea of a socket.
 ```
+- protocol
+```
+A protocol is really just a set of rules that two sides agree on to use when communicating.
+So both the client and the server are programmed to understand that particular set of rules.
+It's agreed upon between all of the code, all of the services and applications 
+that are involved in the communication itself.
+It's kind of like two people from different countries agreeing to speak the same language.
+So there might be various protocols involved in any particular communication on the internet.
+```
+
+
+
 ### resource
 - Node JS: Advanced Concepts by Stephen Grider
 https://www.udemy.com/advanced-node-for-developers
