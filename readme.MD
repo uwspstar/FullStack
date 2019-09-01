@@ -27,7 +27,11 @@ https://confluence.atlassian.com/sourcetreekb/generate-and-load-ssh-keys-into-so
 Deploy keys
 Once a key has been attached to one repository as a deploy key, it cannot be used on another repository. If you're running into this error while setting up deploy keys, see "Managing deploy keys" in the GitHub Developer documentation.
 ```
-
+# JWKS (JSON Web Key Set) Endpoints
+```
+There are many formats to publish public keys, 
+but here is one that will feel familiar: JWKS which is short for Json Web Key Set.
+```
 # Default port
 ```
 *** 20: File Transfer Protocol (FTP) Data Transfer
