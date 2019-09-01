@@ -2,8 +2,8 @@
 ### JavaScript engine
 ```
 - V8 from Google is the most used JavaScript engine. Other uses include the Node.js runtime system.
-- SpiderMonkey is developed by Mozilla for use in Firefox and its forks. T
-he GNOME Shell uses it for extension support.
+- SpiderMonkey is developed by Mozilla for use in Firefox and its forks. 
+The GNOME Shell uses it for extension support.
 - JavaScriptCore is Apple's engine for its Safari browser. 
 Other WebKit-based browsers also use it. 
 KJS from KDE was the starting point for its development.
