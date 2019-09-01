@@ -169,6 +169,12 @@ through the array after finding the first match.
 - node inspect app.js ```debuge```
 - Asynchronous
 - Binary Data, Character Sets, and Encodings
+- socket
+```
+A socket is the line across which information flows, if you want to think of it that way.
+It's where the information actually flows as it's moving from one computer to another.
+It's the idea of a socket.
+```
 ### resource
 - Node JS: Advanced Concepts by Stephen Grider
 https://www.udemy.com/advanced-node-for-developers
