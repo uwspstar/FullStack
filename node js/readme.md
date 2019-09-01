@@ -1,6 +1,7 @@
 # Node JS
 
 ### basic
+- Call Stack and Memory Heap
 - Array.isArray([1,2]) vs Array.isArray([]) vs typeof []
 ```
 console.log(Array.isArray([1,2])) //true 
@@ -140,7 +141,7 @@ through the array after finding the first match.
 ```
 - node inspect app.js ```debuge```
 - Asynchronous
-
+- Binary Data, Character Sets, and Encodings
 ### resource
 - Node JS: Advanced Concepts by Stephen Grider
 https://www.udemy.com/advanced-node-for-developers
