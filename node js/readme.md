@@ -119,6 +119,22 @@ but there are some differences.
 The mostobvious is that all properties are wrapped in double-quotes. 
 Single-quotes can’t be used here, as JSON only supports double-quotes. You can see this in the example JSON below.
 ```
+- Arrow functions 
+```
+Arrow functions don’t bind their own this value. 
+Instead, the this value of the scope in which it was defined is accessible.
+```
+- Array Find method
+```
+const user = users.find((user) => user.name === 'George Hudson')
+
+Array Find method
+The find method allows you to find a single item in an array. It’s similar to filter, though returns a single element as opposed to an array of elements. find will stop its search
+through the array after finding the first match.
+```
+- node inspect app.js ```debuge```
+- Asynchronous
+
 ### resource
 - Node JS: Advanced Concepts by Stephen Grider
 https://www.udemy.com/advanced-node-for-developers
