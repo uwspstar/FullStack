@@ -1,6 +1,12 @@
 # Node JS
 
 ### basic
+- Array.isArray([1,2]) vs Array.isArray([]) vs typeof []
+```
+console.log(Array.isArray([1,2])) //true 
+console.log(Array.isArray([])) //true 
+console.log(typeof []) //object
+```
 - ```__filename```
 ```
 this is resolved absolute path. The value inside a module is the path to the module file
@@ -178,15 +184,16 @@ uses, for example).
 ▪ Finally, you will be asked to review your entries and to confirm they are
 correct. Type ‘yes’ and press enter.
 ```
-### 06/03/2019
+### Node Core
 - Node has 50% js and 50% C++
 - https://github.com/nodejs/node
 - process.binding() // bind C++ code to js
 - OS scheduler decide which thread should be processed
 - Event loop
+
 ### Fetch vs axios
 https://www.udemy.com/react-redux/learn/lecture/12531294#overview
-### 06/04/2019
+
 ### Express
 ```
 $>mkdir express-demo
@@ -388,8 +395,7 @@ You also won’t find its code in node_modules.
 Globally installed modules are located in a special directory in your
 machine which is created and managed by npm.
 ```
-### 06/07/2019
-- process.argv
+### process.argv
 ```
 // print process.argv
 process.argv.forEach((val, index) => {
@@ -460,7 +466,6 @@ const user = users.find((user) => user.name === 'George Hudson')
  // callback is invoked with three arguments: 
  the value of the element, the index of the element, and the Array object being traversed
 ```
-### 06/08/2019
 ### debug
 - $>node inspect app.js // hit 2 times ctrl + c quit
 - $>restart
@@ -472,7 +477,8 @@ console.log('Thing two)
 ```
 ### Asynchronous
 - Call Stack, Callback Queue, and Event Loop
-https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/lecture/13728912#overview
+  - https://www.udemy.com/understand-nodejs/learn/lecture/3586868#overview
+  - https://www.udemy.com/the-complete-nodejs-developer-course-2/learn/lecture/13728912#overview
 ```
 We can actually do other stuff inside of the call stack, so JavaScript itself is a single threaded programming
 language.
@@ -511,7 +517,6 @@ And this is why our function doesn't run right away. The event loop needs to wai
 So at this point Maine actually continues to run the next thing we see is that line eleven of our program
 
 ```
-### 06/09/2019
 ### request
 ```
 const request = require('request')
@@ -527,9 +532,10 @@ request({ url: url }, (error, response) => {
 - darksky.net
 - mapbox.com
 - JSON Formatter //Chrome extension for printing JSON  chrome://chrome/extensions/
-### 06/10/2019
-- node use globle instead of using window (js)
+
+###  node use globle instead of using window (js)
 - in node, every file is module
+
 ### class ChildClass extends ParentClass { ... }
 ```
 class Square extends Polygon {
@@ -574,8 +580,7 @@ assets.
 
 Additionally we should also deploy a load balancer to distribute user traffic over a number of Naude
 ```
-### 06/11/2019
-- Arrow functions don’t bind their own this value. 
+### Arrow functions don’t bind their own this value. 
 - $> node inspect app.js //debug
 ```
 The request library json option. Set json to true and request will automatically parse the JSON into a JavaScript object for you.
@@ -592,7 +597,7 @@ response.body.currently.precipProbability + '% chance of rain.')
 be provided
 - A callback function is a function that’s passed as an argument to another function
 
-### 06/12/2019
+### command
 - Linux sh command https://www.computerhope.com/unix/ush.htm
 - https://www.youtube.com/watch?v=AO0jzD1hpXc
 ```
@@ -625,6 +630,7 @@ var b = document.querySelector("button");
 b.setAttribute("name", "helloButton");
 b.setAttribute("disabled", "");
 ```
+### loop Object {key1:value1, k2:v2}
 - Object.keys(obj) 
 ``` 
 In ES5, if the argument to this method is not an object (a primitive), then it will cause a TypeError. In ES2015, a non-object argument will be coerced to an object.
@@ -680,9 +686,11 @@ a reusable block of code whose existence does not accidentally impact other code
 ```
 an agreed upon standard for how code modules should be structured
 ```
-- First-class functions vs. Function Expressions
+### First-class functions vs. Function Expressions
 ```
-First-Class Functions :  everything you can do with other types, you can do with Functions. You can use functions like strings, numbers, etc. (i.e. pass them around,
+First-Class Functions :  
+everything you can do with other types, you can do with Functions. 
+You can use functions like strings, numbers, etc. (i.e. pass them around,
 set variables equal to them, put them in arrays, and more)
 
 function logGreeting(fn) {
