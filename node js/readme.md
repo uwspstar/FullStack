@@ -85,13 +85,21 @@ readable.on('data', function(chunk) {
 	writable.write(chunk);
 });
 ```
-- Chaining
 - Piping
 ```
+To connect two streams. You write to one stream what is being read from another.
+
 Piping is a mechanism to connect output of one stream to another stream
 It is normnally used to get date from one stream and to pass output of the stream to another stream
 There is not limit on  piping operations
 ```
+- Chaining
+```
+In pipe's case it returns what we pass to it, the destination.
+So when the method returns an object, we can then immediately call more methods on that object,
+that's called chaining 
+```
+
 - sync vs async ( pererred , never block)
 ```
 async methods takes a last parametr as completion function callback
