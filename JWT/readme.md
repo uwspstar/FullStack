@@ -135,6 +135,9 @@ being able to publish the validating key gives us built-in key rotation and revo
     Note that the browser will still append the cookie to each request sent back to the server, 
     just like with any other cookie.
     ```
+    - Advantages of HTTP Only cookies
+      - avoid XSS ``` XSS : a script injection attack```
+      
 ### 4. Storing and using the JWT on the client side
   - Checking User Expiration
 ### 5. Sending The JWT back to the server on each request
