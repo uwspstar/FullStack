@@ -223,7 +223,14 @@ GET / POST / DELETE / PUT / PATCH / HEAD / OPTIONS / TRACE
 > PUT :replaces all current representations of the target resource with the request payload
 > PATCH : apply partial modifications to a resource.
 ```
-
+- REST ( just an architectural style )
+```
+REST is an architectural style for building APIs.
+It stands for representational state transfer.
+```
+- RESTful API ( follow REST style)
+### Express application generator
+- https://expressjs.com/en/starter/generator.html
 ### resource
 - Node JS: Advanced Concepts by Stephen Grider
 https://www.udemy.com/advanced-node-for-developers
