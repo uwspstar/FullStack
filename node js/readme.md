@@ -1,6 +1,25 @@
 # Node JS
 
 ### basic
+
+- function as object ****
+```
+finction is object, so you can create properity for the function
+
+const app = function(req, res){ ... };
+app.request = {"__proto__":req, app: app };
+app.response = {"__proto__":res, app: app }
+app.init() 
+
+```
+- npm init --yes
+- nodemon
+- package.json
+- semantic version
+- npm Global Installation
+```
+2.0.0  Major.Minor.Bug
+```
 - Error-first callback
 ```
 Error-first callback; it's a callback that takes an error object as their first parameter.
@@ -15,6 +34,11 @@ what order to place our parameters in
 console.log(Array.isArray([1,2])) //true 
 console.log(Array.isArray([])) //true 
 console.log(typeof []) //object
+
+const myArray = new Array(10);
+console.log(myArray); //[ <10 empty items> ]
+console.log(typeof myArray) ///object
+
 ```
 - ```__filename```
 ```
@@ -34,7 +58,6 @@ or write data to a destination in continous fashion
 - Duplex-stream : both read and write operation
 - Transform - A type of duplex , the output is computed based on input
 ```
-
 - what's the package.json
 - uninstall dependency 
 ```
@@ -50,7 +73,14 @@ if application has to wait for some I/O operation in order to
 complete its excution any further then the code responsible
 for waiting is known as blocking code
 ```
-- Callback function
+- Callback function 
+```
+function pass as param, and call in the last step
+function fn(user, callback) {
+	//do something here
+	callback(); // call the function
+}
+```
 - how node prevents blocking code?
 ```
 by providing callback function.
@@ -186,7 +216,13 @@ So there might be various protocols involved in any particular communication on 
 ```
 - MIME
 - Http_Parse
+- http method 
+```
+GET / POST / DELETE / PUT / PATCH / HEAD / OPTIONS / TRACE
 
+> PUT :replaces all current representations of the target resource with the request payload
+> PATCH : apply partial modifications to a resource.
+```
 
 ### resource
 - Node JS: Advanced Concepts by Stephen Grider
