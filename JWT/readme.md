@@ -120,24 +120,40 @@ being able to publish the validating key gives us built-in key rotation and revo
     the browser will automatically with each request append the cookies for a particular domain 
     or sub-domain to the headers of the HTTP request.
     This means that if we store the JWT in a cookie, 
-    we will not need any further client logic for sending back the cookie to the application server with each request, 
+    we will not need any further client logic for sending back the cookie 
+    to the application server with each request, 
     assuming the login page and the application share the same root domain.
     
     Besides setting a cookie with the JWT value, we also set a couple of security properties 
-    such as : Unique security properties of Cookies - HttpOnly and Secure Flags
-    
+    such as : Unique security properties of Cookies - HttpOnly and Secure Flags 
+    ```
+    -  A Cookie can be marked 1) HttpOnly and 2) Secure (*** used together for maximum security)
+    ```
     A Cookie can be marked as Secure, meaning that the browser 
     will only append the cookie to the request if it's being made over an HTTPS connection.
-    ```
-    - Cookie can also be marked as Http Only
-    ```
+   
+    Cookie can also be marked as Http Only 
     meaning that it's not accessible by the Javascript code at all! 
     Note that the browser will still append the cookie to each request sent back to the server, 
     just like with any other cookie.
+    
+    The two flags Secure and Http Only can and are often used together for maximum security,
     ```
     - Advantages of HTTP Only cookies
       - avoid XSS ``` XSS : a script injection attack```
-      
+    - Disadvantages of Cookies - XSRF/ CSRF (Cross-Site Request Forgery)
+    ```
+    we choose to store our JWT in a cookie then we need to also put in place some defenses against XSRF.
+    ```
+    - Cookies and Third-Party Authentication providers
+    ```
+    A potential problem with receiving the session JWT in a cookie is
+    that we would not be able to receive it from a third-party web domain, 
+    that handles the authentication logic.
+    
+    an application running on app.example.com cannot access cookies 
+    from another domain like security-provider.com.
+    ```
 ### 4. Storing and using the JWT on the client side
   - Checking User Expiration
 ### 5. Sending The JWT back to the server on each request
