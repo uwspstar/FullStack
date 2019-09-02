@@ -184,7 +184,8 @@ that are involved in the communication itself.
 It's kind of like two people from different countries agreeing to speak the same language.
 So there might be various protocols involved in any particular communication on the internet.
 ```
-
+- MIME
+- Http_Parse
 
 
 ### resource
