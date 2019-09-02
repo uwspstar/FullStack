@@ -1,7 +1,7 @@
 
 # JWT-based Authentication
 - Angular Security - Authentication With JSON Web Tokens (JWT): The Complete Guide by Angular University
-https://blog.angular-university.io/angular-jwt-authentication/
+https://blog.angular-university.io/angular-jwt-authentication/  (Highly Recommand !!!)
 
 ### 1. JWT-based Authentication in a Nutshell
 ```
@@ -217,11 +217,83 @@ being able to publish the validating key gives us built-in key rotation and revo
   }
 
   ```
+  - Using Session Information on the client side
+  ```
+  the client application needs to know if the user is logged in or logged out, 
+  in order to decide if certain UI elements 
+  such as the Login / Logout menu buttons should be displayed or not.
+  ```
 ### 5. Sending The JWT back to the server on each request
   - build an Authentication HTTP Interceptor
+  
 ### 6. Validating User Requests
  - Building a custom Express middleware for JWT validation
- - Configuring a JWT validation middleware using express-jwt
+ ```
+ extract the JWT from the Authorization header, and check the timestamp and the user identifier.
+ 
+ import * as express from 'express';
+  const app: Application = express();
+  //... define checkIfAuthenticated middleware
+  // check if user authenticated only in certain routes
+  
+  app.route('/api/lessons')
+  .get(checkIfAuthenticated, readAllLessons);
+
+ ```
+ - The ```checkIfAuthenticated middleware``` 
+ ```
+ will either report an error if no valid JWT is present, 
+ or allow the request to continue through the middleware chain.
+ ```
+ - Configuring a JWT validation middleware using ```express-jwt```
+ https://github.com/auth0/express-jwt#error-handling
+ ```
+  const expressJwt = require('express-jwt');
+  
+  const RSA_PUBLIC_KEY = fs.readFileSync('./demos/public.key');
+  
+  const checkIfAuthenticated = expressJwt({
+    secret: RSA_PUBLIC_KEY
+  });
+
+  app.route('/api/lessons')
+  .get(checkIfAuthenticated, readAllLessons);
+ ```
  - Validating JWT Signatures - RS256
+ ```
+ one of the main advantages of using RS256 signatures is 
+ that we don't have to install the public key locally in the application server
+ Imagine that the server had several running instances: 
+ replacing the public key everywhere at the same time would be problematic.
+ ```
+ - Leveraging RS256 Signatures (publicly accessible Url)
+ ```
+ Instead of installing the public key on the Application server, 
+ it's much better to have the Authentication server publish the JWT-validating public key 
+ in a publicly accessible Url.
+ 
+ The only thing that an attacker can do with the public key is to validate signatures of existing JWTs, 
+ which is of no use for the attacker.
+ 
+ There is no way that the attacker could use the public key to forge newly create JWTs, 
+ or somehow use the public key to guess the value of the private signing key.
+ ```
 ### 7. JWKS (JSON Web Key Set) endpoints and key rotation
+- JWKS or JSON Web Key Set is a JSON-based standard for publishing public keys in a REST endpoint.
+https://auth0.com/docs/jwks
+- node-jwks-rsa
+```
+const jwksRsa = require('jwks-rsa');
+const expressJwt = require('express-jwt');
+const checkIfAuthenticated = expressJwt({
+secret: jwksRsa.expressJwtSecret({
+cache: true,
+rateLimit: true,
+jwksUri: "https://angularuniv-security-course.auth0.com/.well-known/jwks.json"
+}),
+algorithms: ['RS256']
+});
+app.route('/api/lessons')
+.get(checkIfAuthenticated, readAllLessons);
+```
 ### RS256 vs HS256
