@@ -154,8 +154,69 @@ being able to publish the validating key gives us built-in key rotation and revo
     an application running on app.example.com cannot access cookies 
     from another domain like security-provider.com.
     ```
+    - best of the two solutions`
+    ```     
+    Here is what the solution would look like:
+    • an externally hosted login page running on our own subdomain login.example.com, 
+    and an application running on example.com
+    • that page sets an HTTP Only and Secure Cookie containing the JWT, 
+    giving us good protection against many types of XSS attacks that rely on stealing user identity
+    • Plus we need to add some XSRF defenses, but there are well-understood solutions for that
+    
+    This would give us maximum protection against both password and identity token theft scenarios:
+    • the Application never gets the password in the first place
+    • the Application code never accesses the session JWT, only the browser
+    • the application is not vulnerable to request forgery (XSRF)
+    ```
+    - Sending the JWT back in the HTTP response body
+    ```
+    // this is the session token we created above
+    const jwtBearerToken = jwt.sign(...);
+    
+    // set it in the HTTP Response body
+    res.status(200).json({
+      idToken: jwtBearerToken,
+      expiresIn: ...
+    });
+    
+    Not using cookies has the advantage that our application is no longer vulnerable to XSRF, 
+    which is one advantage of this approach.
+    ```
 ### 4. Storing and using the JWT on the client side
   - Checking User Expiration
+  ```
+  There are many places where we could save the JWT (other than cookies). 
+  A practical place to store the JWT is on Local Storage, 
+  which is a key/value store for string values that is ideal for storing a small amount of data.
+  
+  Note that Local Storage has a synchronous API (****)
+  
+  private setSession(authResult) {
+    const expiresAt = moment().add(authResult.expiresIn,'second');
+    localStorage.setItem('id_token', authResult.idToken);
+    localStorage.setItem("expires_at", JSON.stringify(expiresAt.valueOf()) );
+  }
+
+  logout() {
+    localStorage.removeItem("id_token");
+    localStorage.removeItem("expires_at");
+  }
+
+  public isLoggedIn() {
+    return moment().isBefore(this.getExpiration());
+  }
+
+  isLoggedOut() {
+    return !this.isLoggedIn();
+  }
+
+  getExpiration() {
+    const expiration = localStorage.getItem("expires_at");
+    const expiresAt = JSON.parse(expiration);
+    return moment(expiresAt);
+  }
+
+  ```
 ### 5. Sending The JWT back to the server on each request
   - build an Authentication HTTP Interceptor
 ### 6. Validating User Requests
