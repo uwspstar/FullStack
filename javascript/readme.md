@@ -14,6 +14,10 @@ so it will be using V8 instead of Chakra.
 - Internet Explorer continues to use its version of Chakra.
 - Facebook created the Hermes engine for Android apps built for the React Native framework
 ```
+### Babel + TypeScript
+- Babel is a Javascript compiler that takes your modern JS code and returns  browser compatible JS (older JS code).
+- Typescript is a superset of Javascript that compiles down to Javascript
+
 ### loop function
 - function is obj
 ```
