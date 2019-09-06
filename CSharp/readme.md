@@ -1,5 +1,56 @@
 # C#
 
+### serialization
+### ref & out parameters?
+
+```
+An argument passed as ref must be initialized 
+before passing to the method whereas out parameter needs 
+not to be initialized before passing to a method.
+```
+
+### public, static and void
+
+### Can multiple catch blocks be executed?
+```
+No, Multiple catch blocks can't be executed. 
+Once the proper catch code executed, 
+the control is transferred to the finally block 
+and then the code that follows the finally block gets executed.
+```
+
+### C# is managed code 
+```
+because Common language runtime can compile C# code to Intermediate language.
+```
+###  directcast and ctype
+```
+DirectCast is used to convert the type of an object 
+that requires the run-time type to be the same as the specified type in DirectCast.
+
+Ctype is used for conversion where the conversion is defined between the expression and the type.
+```
+### singleton design pattern in C#?
+
+```
+In singleton pattern, 
+a class can only have one instance and provides access point to it globally.
+ 
+Public sealed class Singleton
+{
+  Private static readonly Singleton _instance = new Singleton();
+}
+```
+
+###  "throw" and "throw ex"
+```
+What is difference between the "throw" and "throw ex" in .NET?
+
+"Throw" statement preserves original error stack 
+whereas "throw ex" have the stack trace from their throw point. 
+It is always advised to use "throw" 
+because it provides more accurate error information.
+```
 ### Class vs Structure
 ```
 - classes are reference types allocated on the heap
