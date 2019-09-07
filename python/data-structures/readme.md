@@ -2,6 +2,7 @@
 - https://docs.python.org/3/tutorial/datastructures.html#tuples-and-sequences
 - https://docs.python.org/3.7/tutorial/datastructures.html#more-on-lists
 
+### List vs. tuple vs. Set vs. Dictionary
 ```
 You can use the tuple() function to return a tuple version of the value passed to it 
 and similarly the list() function to convert to a list:
