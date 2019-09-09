@@ -4,9 +4,8 @@
 ### ref & out parameters?
 
 ```
-An argument passed as ref must be initialized 
-before passing to the method whereas out parameter needs 
-not to be initialized before passing to a method.
+An argument passed as ref must be initialized before passing to the method 
+whereas out parameter needs not to be initialized before passing to a method.
 ```
 
 ### public, static and void
