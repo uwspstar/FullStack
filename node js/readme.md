@@ -1,7 +1,7 @@
 # Node JS
 
 ### basic
-
+- REPL (Read, Eval, Print, and Loop) in the context of Node.js.
 - What is an Event loop in Node.js and how does it work?
 ```
 An event loop in Node.js handles all the asynchronous callbacks in an application. 
