@@ -2,6 +2,12 @@
 
 ### basic
 - REPL (Read, Eval, Print, and Loop) in the context of Node.js.
+```
+- Read: Reads the user’s input, parses it into JavaScript data-structure and then stores it in the memory.
+- Eval: Receives and evaluates the data structure.
+- Print: Prints the final result.
+- Loop: Loops the provided command until CTRL+C is pressed twice.
+```
 - What is an Event loop in Node.js and how does it work?
 ```
 An event loop in Node.js handles all the asynchronous callbacks in an application. 
