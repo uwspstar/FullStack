@@ -2,6 +2,19 @@
 
 ### basic
 
+- What is an Event loop in Node.js and how does it work?
+```
+An event loop in Node.js handles all the asynchronous callbacks in an application. 
+It is one of the most important aspects of Node.js and the reason behind Node.js have non-blocking I/O. 
+Since Node.js is an event-driven language, 
+you can easily attach a listener to an event 
+and then when the event occurs the callback will be executed by the specific listener.
+Whenever functions like setTimeout, http.get, and fs.readFile are called, 
+Node.js executed the event loop and then proceeds with the further code without waiting for the output. 
+Once the entire operation is finished, Node.js receives the output and then executes the callback function. 
+This is why all the callback functions are placed in a queue in a loop. Once the response is received, 
+they are executed one by one.
+```
 - function as object ****
 ```
 finction is object, so you can create properity for the function
