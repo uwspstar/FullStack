@@ -1,4 +1,9 @@
 # C#
+### ++x and x++
+```
+++x i.e. pre-increment operator uses the principle ‘change-then-use’ 
+while, x++ i.e. post-increment operator uses the principle ‘use-then-change’.
+```
 
 ### delegate vs events
 ```
