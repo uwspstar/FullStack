@@ -1,6 +1,20 @@
 # C#
 
+### delegate vs events
+```
+An event is just a wrapper for a multicast delegate.
+Adding a public event to a class is almost the same as adding a public multicast delegate field.
+
+In both cases, subscriber objects can register for notifications, 
+and in both cases the publisher object can send notifications to the subscribers. 
+However, a public multicast delegate has the undesirable property 
+that external objects can invoke the delegate, 
+something we’d normally want to restrict to the publisher. 
+Hence events – an event adds public methods to the containing class to add and remove receivers, 
+but does not make the invocation mechanism public.
+```
 ### serialization
+
 ### ref & out parameters?
 
 ```
