@@ -103,16 +103,16 @@ Const variables are resolved at compile time while Read-Only are resolved in run
 
 ### Attribute
 ```
-An attributes is a declarative tag that is used to convey information about the behaviors of various elements (classes, methods, assemblies, structures, enumerators, etc). it is access at compile time or run-time. Attributes are declare with a square brackets [] which is places above the elements.
-
+An attributes is a declarative tag 
+that is used to convey information about the behaviors of various elements
+(classes, methods, assemblies, structures, enumerators, etc). 
+it is access at compile time or run-time. 
+Attributes are declare with a square brackets []
 [Obsolete(“Don’t use Old method, please use New method”, true)]
 
-For example consider the bellow class. If we call the old method it will through error message.
-
+//For example consider the bellow class. If we call the old method it will through error message.
 public class myClass
-
 {
-
     [Obsolete("Don't use Old method, please use New method", true)]
 
     public string Old() { return "Old"; }
@@ -124,92 +124,70 @@ public class myClass
 myClass omyClass = new myClass();
 
 omyClass.Old();
+```
 
-Question 2. Why Attributes Are Used?
+### Why Attributes Are Used?
+```
+In a program the attributes are used for adding metadata, 
+like compiler instruction or other information (comments, description, etc).
+```
+### The Types Of Attributes?
 
-Answer :
+- the pre-defined attributes
+- custom built attributes
 
-In a program the attributes are used for adding metadata, like compiler instruction or other information (comments, description, etc).
+### Pre-define attributes are three types:
+ - AttributeUsage 
+ - Conditional
+ - Obsolete // This marks a program that some entity should not be used.
 
-C#. NET Interview Questions
-Question 3. What Are The Types Of Attributes?
+### Custom Attributes
+```to store declarative information and can be retrieved at run-time.```
 
-Answer :
+### Reflection
+```
+Reflection is a process 
+by which a computer program can monitor and modify its own structure and behavior. 
+It is a way to explore the structure of assemblies at run time 
+(classes, resources, methods). 
+Reflection is the capability to find out the information 
+about objects, metadata, and application details (assemblies) at run-time. 
 
-The Microsoft .Net Framework provides two types of attributes: the pre-defined attributes and custom built attributes.
-
-Pre-define attributes are three types:
-
-AttributeUsage
-Conditional
-Obsolete
-This marks a program that some entity should not be used.
-
-
- 
-Question 4. What Is Custom Attributes?
-
-Answer :
-
-The Microsoft .Net Framework allows creating custom attributes that can be used to store declarative information and can be retrieved at run-time.
-
-C#. NET Tutorial
-Question 5. What Is Reflection?
-
-Answer :
-
-Reflection is a process by which a computer program can monitor and modify its own structure and behavior. It is a way to explore the structure of assemblies at run time (classes, resources, methods). Reflection is the capability to find out the information about objects, metadata, and application details (assemblies) at run-time. We need to include System.Reflection namespace to perform reflections in C#. For example consider the following C# codes, which will returns some meta information’s.
+//We need to include System.Reflection namespace to perform reflections in C#. 
 
 public class MyClass
-
 {
-
     public virtual int Add(int numb1, int numb2)
-
     {                
-
         return numb1 + numb2;
-
     }
-
     public virtual int Subtract(int numb1, int numb2)
-
     {
-
         return numb1 - numb2;
-
     }
-
 }
 
 static void Main(string[] args)
-
 {
-
     MyClass oMyClass = new MyClass();
-
+    
     //Type information.
-
     Type oMyType = oMyClass.GetType();
-
+    
     //Method information.
-
-MethodInfo oMyMethodInfo = oMyType.GetMethod("Subtract");
-
-Console.WriteLine("nType information:" + oMyType.FullName);
-
- Console.WriteLine("nMethod info:" + oMyMethodInfo.Name);            
-
-Console.Read();
-
+    MethodInfo oMyMethodInfo = oMyType.GetMethod("Subtract");
+    
+    Console.WriteLine("nType information:" + oMyType.FullName);
+    Console.WriteLine("nMethod info:" + oMyMethodInfo.Name);            
+    Console.Read();
 }
-
-C Interview Questions
-Question 6. Why We Need Reflection In C#?
-
-Answer :
-
-Reflections needed when we want to determine / inspect contents of an assembly. For example: at Visual Studio editor intelligence, when we type “.” (dot) before any object, it gives us all the members of the object. This is possible for Reflection.
+```
+### Why We Need Reflection In C#?
+```
+Reflections needed when we want to determine / inspect contents of an assembly. 
+For example: at Visual Studio editor intelligence, 
+when we type “.” (dot) before any object, it gives us all the members of the object. 
+This is possible for Reflection.
 
 Beside this we need reflection for the following purposes:
 
@@ -219,24 +197,24 @@ It allows dynamic/late binding to methods and properties
 In serialization, it is used to serialize and de-serialize objects
 In web service, it is used to create and consume SOAP messages and also to generate WSDL
 Debugging tools can use reflection to examine the state of an object.
-
+```
  
-Question 7. What Is Dynamic Keyword?
+### Dynamic Keyword
+```
+The dynamic is a keyword
+which was introduced in .NET 4.0. Computer programming languages
+two types: strongly typed and dynamically typed. 
 
-Answer :
+In strongly types all types checks are happened at compile time, 
 
-The dynamic is a keyword which was introduced in .NET 4.0. Computer programming languages are two types: strongly typed and dynamically typed. In strongly types all types checks are happened at compile time, in dynamic types all types of checks are happened at run time.
+*** in dynamic types all types of checks are happened at run time.
 
-For example consider the following code
-
+// For example consider the following code
 dynamic x = "c#";
+x++; // It will not provide error at compile time but will provide error at run time.
 
-x++;
-
-It will not provide error at compile time but will provide error at run time.
-
-C Tutorial ASP.NET Interview Questions
-Question 8. When To Use Dynamic?
+```
+### When To Use Dynamic
 
 Answer :
 
