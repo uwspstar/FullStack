@@ -36,7 +36,31 @@ Once the proper catch code executed,
 the control is transferred to the finally block 
 and then the code that follows the finally block gets executed.
 ```
+### struct vs class
+```
+Struct
 
+The struct is value type in C# and it inherits from System.Value Type.
+Struct is usually used for smaller amounts of data.
+Struct can’t be inherited to other types.
+A structure can't be abstract.
+No need to create object by new keyword.
+Do not have permission to create any default constructor.
+
+Class
+
+The class is reference type in C# and it inherits from the System.Object Type.
+Classes are usually used for large amounts of data.
+Classes can be inherited to other class.
+A class can be abstract type.
+We can create a default constructor.
+```
+### Boxing vs Unboxing
+```
+The process of converting from a value type to a reference type is called boxing.
+The process of converting from a reference type to a value type is called unboxing.
+
+```
 ### C# is managed code 
 ```
 because Common language runtime can compile C# code to Intermediate language.
@@ -79,6 +103,20 @@ because it provides more accurate error information.
 - classes implement as a semantic of copying by a reference.
 ```
 
+### Interface vs Abstract Class
+```
+A class can implement any number of interfaces but a subclass can at most use only one abstract class.
+An abstract class can have non-abstract methods (concrete methods) 
+while in case of interface all the methods has to be abstract.
+An abstract class can declare or use any variables while an interface is not allowed to do so.
+In an abstract class all data member or functions are private by default 
+while in interface all are public, we can’t change them manually.
+In an abstract class we need to use abstract keyword to declare abstract methods 
+while in an interface we don’t need to use that.
+An abstract class can’t be used for multiple inheritance while interface can be used as multiple inheritance.
+An abstract class use constructor while in an interface we don’t have any type of constructor.
+```
+### enum
 ### Array vs ArrayList
 
 ### Abstract Class vs Interface
