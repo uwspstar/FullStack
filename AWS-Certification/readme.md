@@ -49,3 +49,11 @@ providing compute resources with security and robust networking functionality.
 - A region is a geographical area divided into Availability Zones. Each region contains at least two Availability Zones.
 - The number of Edge Locations is greater than the number of Availability Zones, which is greater than the number of Regions.
 - CloudFront content is cached in Edge Locations.
+- Which of the following is not a component of IAM?
+- When you create a new user, that user
+```
+that user will be able to interact with AWS 
+using their *** access key ID ***  and *** Secret access key *** using the API, CLI, or the AWS SDKs.
+To access the console you use an account and password combination. 
+To access AWS programmatically you use a Key and Secret Key combination
+```
