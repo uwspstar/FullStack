@@ -5,6 +5,12 @@
 while, x++ i.e. post-increment operator uses the principle ‘use-then-change’.
 ```
 ### partial classes
+### Are Private Class -label Variables Inherited ?
+```
+Yes, but it is not accessible.
+we generally know that they are inherited but not accessible.
+```
+
 ### IEnumerable<>
 ### IEnumerable and IQueryable
 ```
@@ -615,49 +621,29 @@ but also the version of the assembly.
 ```
 ### What Is A Satellite Assembly ?
 
-Answer :
+```
+When we write the code, 
+a  multicultural or multilingual application in .NET 
+and want to distribute the core application separately from the localized modules,
+the localized assemblies that modify the core application ,that is known  as Satellite assembly.
+```
+How Do We Inherit From A Class In C# ?
+```
+we use a colon (:) and then the name of the base class.
+```
 
-When we write the code, a  multicultural or multilingual application in .NET and want to distribute the core application separately from the localized modules,the localized assemblies that modify the core application ,that is known  as Satellite assembly.
-
-Windows Communication Foundation (WCF) Interview Questions
-Question 37. How Do We Inherit From A Class In C# ?
-
-Answer :
-
-In c#, we use a colon (:) and then the name of the base class.
-
-Question 38. Does C# Support Multiple Inheritance ?
-
-Answer :
-
+### Does C# Support Multiple Inheritance ?
+```
 No, we use interface for this purpose.
+```
+### What Is The Top .net Class ? ```System.Object```
 
-Question 39. Are Private Class -label Variables Inherited ?
+### How Does Method Overloading Different From Overriding ?
 
-Answer :
-
-Yes, but it is not accessible.we generally know that they are inherited but not accessible.
-
-Question 40. What Is The Implicit Name Of The Parameter That Gets Passed Into Class "set" Method ?
-
-Answer :
-
-Value and it's datatype(it depends whatever variable we are changing).
-
-C and C++ Interview Questions
-Question 41. What Is The Top .net Class ?
-
-Answer :
-
-System.Object
-
-Question 42. How Does Method Overloading Different From Overriding ?
-
-Answer :
-
-A method overloading simply involves having a method with the same name within the class. whereas in method overriding we can change method behaviour for a derived class.
-
-
+```
+A method overloading simply involves having a method with the same name within the class. 
+whereas in method overriding we can change method behaviour for a derived class.
+```
 
 # Can We Override Private Virtual Method ? ```No```
 
