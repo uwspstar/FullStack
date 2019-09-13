@@ -102,7 +102,11 @@ because it provides more accurate error information.
 - structures implemented this semantic of copying by value 
 - classes implement as a semantic of copying by a reference.
 ```
-
+### extension method 
+```
+An extension method is a special kind of static method, 
+but they are called as if they were instance methods on the extended type
+```
 ### Interface vs Abstract Class
 ```
 A class can implement any number of interfaces but a subclass can at most use only one abstract class.
