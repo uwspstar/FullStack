@@ -430,93 +430,52 @@ anyone can see the XML file which creates security issue.
 We can overcome it by using XML serialization.
 ```
 ### Serialization?
-
-Answer :
-
+```
 Serialization is used in the following purposes:
 
 To pass an object from on application to another
 In SOAP based web services
 To transfer data through cross platforms, cross devices
-Windows Presentation Foundation(WPF) Tutorial
-Question 14. Give Examples Where Serialization Is Used?
 
-Answer :
+Serialization is used to save session state in ASP.NET applications, 
+to copy objects to the clipboard in Windows Forms. 
+It is also used to pass objects from one application domain to another. Web services uses serialization.
+```
+### Generics
+```
+the most powerful features introduced in C# 2.0. 
+It is a type-safe data structure that allows us to write codes that works for any data types.
 
-Serialization is used to save session state in ASP.NET applications, to copy objects to the clipboard in Windows Forms. It is also used to pass objects from one application domain to another. Web services uses serialization.
+A generic class is a special kind of class that can handle any types of data. 
+We specify the data types during the object creations of that class. 
+It is declared with the bracket <>. 
+For example consider the following Comparer class, 
+which has a method that compare two value and returns as Boolean output.
 
-
- 
-Question 15. What Is Generics?
-
-Answer :
-
-Generics are the most powerful features introduced in C# 2.0. It is a type-safe data structure that allows us to write codes that works for any data types.
-
-Windows Communication Foundation (WCF) Interview Questions
-Question 16. What Is A Generic Class?
-
-Answer :
-
-A generic class is a special kind of class that can handle any types of data. We specify the data types during the object creations of that class. It is declared with the bracket <>. For example consider the following Comparer class, which has a method that compare two value and returns as Boolean output.
-
-public class Comparer
-
-{
-
-    public bool Compare(Unknown t1, Unknown t2)
-
-  {  
-
-         if (t1.Equals(t2))
-
-      {
-
-            return true;
-
-        }
-
-        else
-
-        {
-
-            return false;
-
-        }
-
-    }
-
-}
-
-Comparer oComparerInt = new Comparer();
-
-Console.WriteLine(oComparerInt.Compare(10, 10));
-
-Comparer oComparerStr = new Comparer();
-
-Console.WriteLine(oComparerStr.Compare("jdhsjhds", "10"));
-
-
- 
-Windows Communication Foundation (WCF) Tutorial
-Question 17. Why We Should Use Generics?
-
-Answer :
-
-Generic provides lot of advantages during programming. We should use generics for the following reasons:
+Generic provides lot of advantages during programming. 
+We should use generics for the following reasons:
 
 It allows creating class, methods which are type-safe
 It is faster. Because it reduce boxing/un-boxing
 It increase the code performance
 It helps to maximize code reuse, and type safety
-C and C++ Interview Questions
-Question 18. What Is Collections In C#?
+```
 
-Answer :
+### Collections
+```
+Sometimes we need to work with related objects for data storage and retrieval. 
+There are two ways to work with related objects.
+One is array and another one is collections. 
+Arrays are most useful for creating and working with a fixed number of strongly-typed objects. 
+Collections are enhancement of array which provides a more flexible way to work with groups of objects.
 
-Sometimes we need to work with related objects for data storage and retrieval. There are two ways to work with related objects. One is array and another one is collections. Arrays are most useful for creating and working with a fixed number of strongly-typed objects. Collections are enhancement of array which provides a more flexible way to work with groups of objects.
-
-The Microsoft .NET framework provides specialized classes for data storage and retrieval. Collections are one of them. Collection is a data structure that holds data in different ways. Collections are two types. One is standard collections, which is found under System.Collections namespace and another one is generic collections, which is found under System.Collections.Generic namespace.The generic collections are more flexible and preferable to work with data.
+The Microsoft .NET framework provides specialized classes for data storage and retrieval. 
+Collections are one of them. 
+Collection is a data structure that holds data in different ways. 
+Collections are two types. 
+One is standard collections, which is found under System.Collections namespace 
+and another one is generic collections, which is found under System.Collections.Generic namespace.
+The generic collections are more flexible and preferable to work with data.
 
 Some commonly used collections under System.Collections namespace are given bellow:
 
@@ -526,18 +485,22 @@ Hashtable
 Stack
 Queue
 BitArray
-
+```
  
-C Interview Questions
-Question 19. What Is Unsafe Code?
+### Unsafe Code?
 
-Answer :
-
-In order to maintain security and type safety, C# does not support pointer generally. But by using unsafe keyword we can define an unsafe context in which pointer can be used. The unsafe code or unmanaged code is a code block that uses a pointer variable. In the CLR, unsafe code is referred to as unverifiable code. In C#, the unsafe code is not necessarily dangerous. The CLR does not verify its safety. The CLR will only execute the unsafe code if it is within a fully trusted assembly. If we use unsafe code, it is our own responsibility to ensure that the code does not introduce security risks or pointer errors.
-
-Question 20. What Are The Properties Of Unsafe Code?
-
-Answer :
+```
+In order to maintain security and type safety, 
+C# does not support pointer generally. 
+But by using unsafe keyword we can define an unsafe context 
+in which pointer can be used. 
+The unsafe code or unmanaged code is a code block that uses a pointer variable. 
+In the CLR, unsafe code is referred to as unverifiable code. 
+In C#, the unsafe code is not necessarily dangerous. 
+The CLR does not verify its safety. 
+The CLR will only execute the unsafe code if it is within a fully trusted assembly. 
+If we use unsafe code, it is our own responsibility to ensure 
+that the code does not introduce security risks or pointer errors.
 
 Some properties of unsafe codes are given bellow:
 
@@ -547,21 +510,16 @@ Unsafe code is required in order to call native functions that require pointers
 Using unsafe code brings security and stability risks
 In order to compile unsafe code, the application must be compiled with /unsafe
 
- 
-C# OOPS Interview Questions
-Question 21. Can Unsafe Code Be Executed In Untrusted Environment?
+an Unsafe Code Be Executed In Untrusted Environment?
 
-Answer :
+Unsafe code cannot be executed in an un-trusted environment. 
+For example, we cannot run unsafe code directly from the Internet.
 
-Unsafe code cannot be executed in an un-trusted environment. For example, we cannot run unsafe code directly from the Internet.
+For compiling unsafe code, 
+we have to specify the /unsafe command-line switch with command-line compiler.
 
-Question 22. How To Compile Unsafe Code?
-
-Answer :
-
-For compiling unsafe code, we have to specify the /unsafe command-line switch with command-line compiler.
-
-For example: to compile a program named “myClass.cs” containing unsafe code the command line command is:
+For example: 
+to compile a program named “myClass.cs” containing unsafe code the command line command is:
 
 csc /unsafe myClass.cs
 
@@ -572,11 +530,10 @@ The steps are given bellow:
 Open project properties
 Click on the Build tab
 Select the option “Allow unsafe code”
+```
+### Pointer?
 
- 
-Question 23. What Is Pointer?
-
-Answer :
+```
 
 Pointer is a variable that stores the memory address of another variable. Pointers in C# have the same capabilities as in C or C++.
 
@@ -586,8 +543,9 @@ int    *i    // pointer of an integer
 float  *f    // pointer to a float
 double *d    // pointer to a double
 char   *ch   // pointer to a character
-C# Developer Multi Threading Interview Questions
-Question 24. Should I Use Unsafe Code In C#?
+```
+
+### Should I Use Unsafe Code In C#
 
 Answer :
 
