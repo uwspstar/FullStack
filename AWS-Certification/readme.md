@@ -57,3 +57,8 @@ using their *** access key ID ***  and *** Secret access key *** using the API, 
 To access the console you use an account and password combination. 
 To access AWS programmatically you use a Key and Secret Key combination
 ```
+- Which statement best describes IAM
+```
+IAM allows you to manage 
+users, groups, roles, and their corresponding level of access to the AWS Platform
+```
