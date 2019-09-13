@@ -178,8 +178,7 @@ An abstract class use constructor while in an interface we don’t have any type
 ### enum
 ### Array vs ArrayList
 ```
-ArrayList strong type.
-Array item can have different type
+ArrayList can have different type
 ```
 
 ### Abstract Class vs Interface
@@ -545,98 +544,76 @@ double *d    // pointer to a double
 char   *ch   // pointer to a character
 ```
 
-### Should I Use Unsafe Code In C#
+### How Can We Sort The Elements Of The Array In Descending Order
+```
+arr.Sort ().Reverse() Methods.
+```
+### Can We Store Multiple Data Types In System.array ?
 
-Answer :
-
-In C#, pointer is really used and Microsoft disengaged to use it. But there are some situations that require pointer. We can use pointer if required at our own risk. Some sonorous are given bellow:
-
-To deal with existing structures on disk
-Some advanced COM or Platform Invoke scenarios that involve pointer
-To performance critical codes
-
+```
+No., but Arraylist can
+```
  
-ASP.NET Interview Questions
-Question 25. How Can We Sort The Elements Of The Array In Descending Order ?
+### System.array.copyto() vs System.array.clone()
+```
+System.Array.CopyTo()-->
+It require a destination array to be existed before 
+and it must be capable to hold all the elements in the source array 
+from the index that is specified to copy from the source array.
 
-Answer :
+System.Array.Clone()-->
+It does not require the destination array to be existed as it creates a new one from scratch.
 
-For This,First we call the Sort () method and then call Reverse() Methods.
-
-Question 26. Can We Store Multiple Data Types In System.array ?
-
-Answer :
-
-No.
-
-
- 
-Question 27. What Is The Difference Between The System.array.copyto() And System.array.clone() ?
-
-Answer :
-
-System.Array.CopyTo()-->It require a destination array to be existed before and it must be capable to hold all the elements in the source array from the index that is specified to copy from the source array.
-
-System.Array.Clone()-->It does not require the destination array to be existed as it creates a new one from scratch.
-
-Note-These both are used as a shallow copy.
-
-C & Data Structures Interview Questions
-Question 28. What Is Difference Between String And Stringbuilder ?
-
-Answer :
-
+*** These both are used as a shallow copy.
+```
+### String vs Stringbuilder
+```
 StringBuilder is more efficient than string.
-
 String :- It is Immutable and resides within System Namespace.
-
 StringBuilder:-It is mutable and resides System.Text Namespace.
-
-Question 29. What Is Class Sortedlist Underneath?
-
-Answer :
-
+```
+### What Is Class Sortedlist Underneath
+```
 It is a Hash Table.
+```
 
-Question 30. What Is The .net Data Type That Allow The Retrieval Of Data By A Unique Key ?
+### What Is The .net Data Type That Allow The Retrieval Of Data By A Unique Key 
 
-Answer :
-
+```
 Hash Table
+```
 
-Question 31. Is Finally Block Get Executed If The Exception Is Not Occured ?
+### Is Finally Block Get Executed If The Exception Is Not Occured ```Yes```
 
-Answer :
+### Can Multiple Catch () Block Get Executed If The Exception Is Not Occured ?
 
-Yes.
+```
+No, Once the proper catch code fires off ,
+the control is transferred to the finally block(if any),
+and the whatever follows the finally block.
+```
 
-Question 32. Can Multiple Catch () Block Get Executed If The Exception Is Not Occured ?
+### Multicast Delegate 
 
-Answer :
-
-No,Once the proper catch code fires off ,the control is transferred to the finally block(if any),and the whatever follows the finally block.
-
-Question 33. What Is Multicast Delegate ?
-
-Answer :
-
+```
 The Multicast delegate is a delegate that points to and eventually fires off several methods.
-
-Windows Presentation Foundation(WPF) Interview Questions
-Question 34. What Are The Ways To Deploy An Assembly ?
-
-Answer :
-
+```
+### The Ways To Deploy An Assembly
+```
 An MSI Installer
 A CAB archive
 XCopy command
-Question 35. What Is The Dll Hell Problem Solved In .net ?
+```
 
-Answer :
+### What Is The Dll Hell Problem Solved In .net 
 
-In .NET, Assembly versioning allows the application to specify not only the library it needs to run ,but also the version of the assembly.
+```
+In .NET, Assembly versioning allows the application to specify
+not only the library it needs to run ,
+but also the version of the assembly.
 
-Question 36. What Is A Satellite Assembly ?
+```
+### What Is A Satellite Assembly ?
 
 Answer :
 
