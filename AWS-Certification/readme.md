@@ -63,3 +63,4 @@ IAM allows you to manage
 users, groups, roles, and their corresponding level of access to the AWS Platform
 ```
 - Using ```SAML``` (Security Assertion Markup Language 2.0), you can give your federated users ```single sign-on (SSO)``` access to the AWS Management Console.
+- In what language are policy documents written? ```JSON```
