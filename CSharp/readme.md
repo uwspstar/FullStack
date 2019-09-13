@@ -177,6 +177,10 @@ An abstract class use constructor while in an interface we don’t have any type
 ```
 ### enum
 ### Array vs ArrayList
+```
+ArrayList strong type.
+Array item can have different type
+```
 
 ### Abstract Class vs Interface
 - Since multiple inheritance in C Sharp is deprecated
@@ -366,56 +370,66 @@ x++; // It will not provide error at compile time but will provide error at run 
 
 ```
 ### constant vs readonly 
+```
+constant assign value at declarer and cannot change after assign
+readonly assign value at runtime, and cannot change after assign
+```
+
 ### When To Use Dynamic
-
-Answer :
-
+```
 The biggest practical use of the dynamic keyword is when we operate on MS Office.
-
-
- 
-Question 9. What Is The Difference Between Reflection And Dynamic?
-
-Answer :
-
-Both Reflection and dynamic are used to operate on an object during run time. But they have some differences:
+```
+### Reflection vs Dynamic?
+```
+Both Reflection and dynamic are used to operate on an object during run time. 
+But they have some differences:
 
 Dynamic uses reflection internally
-Reflection can invoke both public and private members of an object. But dynamic can only invoke public members of an object
-C & Data Structures Interview Questions
-Question 10. What Is Serialization?
+Reflection can invoke both public and private members of an object. 
 
-Answer :
+But dynamic can only invoke public members of an object
+```
+### Serialization vs De-serialization
+```
+When we want to transport an object through network 
+then we need to convert the object into a stream of bytes. 
+Serialization is a process to convert a complex objects into stream of bytes 
+for storage (database, file, cache, etc) or transfer. 
+Its main purpose is to save the state of an object.
 
-When we want to transport an object through network then we need to convert the object into a stream of bytes. Serialization is a process to convert a complex objects into stream of bytes for storage (database, file, cache, etc) or transfer. Its main purpose is to save the state of an object.
-
-De-serialization is the reverse process of creating an object from a stream of bytes to their original form.
-
-ASP.NET Tutorial
-Question 11. What Are The Types Of Serialization?
-
-Answer :
-
+De-serialization is the reverse process of 
+creating an object from a stream of bytes to their original form.
+```
+### Types Of Serialization?
+```
 The types of Serializations are given bellow:
 
 1  Binary Serialization
-            In this process all the public, private, read only members are serialized and convert into stream of bytes. This is used when we want a complete conversion of our objects.
+            In this process all the public, private, 
+            read only members are serialized and convert into stream of bytes. 
+            This is used when we want a complete conversion of our objects.
 2  SOAP Serialization
-           In this process only public members are converted into SOAP format. This is used in web services.
+           In this process only public members are converted into SOAP format. 
+           This is used in web services.
 3  XML Serialization
-            In this process only public members are converted into XML. This is a custom serialization. Required namespaces: System.Xml, System.Xml.Serialization.
+            In this process only public members are converted into XML. T
+            his is a custom serialization. Required namespaces: System.Xml, System.Xml.Serialization.
 
-Windows Presentation Foundation(WPF) Interview Questions
-Question 12. Why Serialization And Deserialization?
+```
+### Serialization And Deserialization?
 
-Answer :
-
-For example consider, we have a very complex object and we need XML format to show it on HTML page. Then we can create a XML file in the disk, writes all the necessary data on the XML file, and use it for the HTML page. But this is not good approach for large number of users. Extra space is required; anyone can see the XML file which creates security issue. We can overcome it by using XML serialization.
-
-
- 
-C#. NET Interview Questions
-Question 13. When To Use Serialization?
+```
+For example consider, we have a very complex object 
+and we need XML format to show it on HTML page. 
+Then we can create a XML file in the disk, 
+writes all the necessary data on the XML file, 
+and use it for the HTML page. 
+But this is not good approach for large number of users. 
+Extra space is required; 
+anyone can see the XML file which creates security issue. 
+We can overcome it by using XML serialization.
+```
+### Serialization?
 
 Answer :
 
