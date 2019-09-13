@@ -64,3 +64,15 @@ users, groups, roles, and their corresponding level of access to the AWS Platfor
 ```
 - Using ```SAML``` (Security Assertion Markup Language 2.0), you can give your federated users ```single sign-on (SSO)``` access to the AWS Management Console.
 - In what language are ```policy documents``` written? ```JSON```
+- In what language are policy documents written?
+```
+NO access to any AWS services
+```
+- You have a client who is considering a move to AWS. In establishing a new account, what is the first thing the company should do?
+```
+Set up an account using their company email address
+```
+- A new employee has just started work, and it is your job to give her administrator access to the AWS console. You have given her a user name, an access key ID, a secret access key, and you have generated a password for her. She is now able to log in to the AWS console, but she is unable to interact with any AWS services. What should you do next?
+```
+Grant her Administrator access by adding her to the Administrators' group
+```
