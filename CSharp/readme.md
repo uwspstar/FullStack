@@ -237,8 +237,9 @@ A client couldn't do that with an abstract class instead of an interface.
 Since multiple inheritance in C Sharp is deprecated.
 
 ```
-### ref vs out
-### this vs static method
+### ref vs out ```ref with value, out not```
+
+### this vs static method ```We can't use this in a static method```
 ```
 We can't use this in a static method 
 because the keyword 'this' returns a reference to the current instance of the class containing it. 
