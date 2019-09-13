@@ -4,9 +4,16 @@
 ++x i.e. pre-increment operator uses the principle ‘change-then-use’ 
 while, x++ i.e. post-increment operator uses the principle ‘use-then-change’.
 ```
-
+### sealed classes 
+```
+Sealed classes are used to restrict the inheritance feature of object oriented programming. 
+Once a class is defined as a sealed class, the class cannot be inherited
+```
 ### delegate vs events
 ```
+A delegate is a solution for situations 
+in which you want to pass methods around to other methods
+
 An event is just a wrapper for a multicast delegate.
 Adding a public event to a class is almost the same as adding a public multicast delegate field.
 
