@@ -657,43 +657,24 @@ Answer :
 
 A method overloading simply involves having a method with the same name within the class. whereas in method overriding we can change method behaviour for a derived class.
 
-C# OOPS Interview Questions
-Question 43. Can We Override Private Virtual Method ?
 
-Answer :
 
-No.
+# Can We Override Private Virtual Method ? ```No```
 
-Question 44. Can We Declare The Override Method Static While The Original Method Is Non Static ?
+### Can We Declare The Override Method Static While The Original Method Is Non Static ? ```No.```
+### What Is An Interface Class
 
-Answer :
+```
+This is an abstract class with public abstract methods , 
+all of which must be implemented in the inherited classes.
+```
+### Can We Inherit Multiple Interfaces ? ```Yes.```
 
-No.
+### Can We Allow Class To Be Inherited ,but Prevent The Method From Being Overridden ?
 
-Question 45. Can We Prevent My Class From Being Inherited And Becoming A Base Class From The Other Classes ?
-
-Answer :
-
-Yes.
-
-Question 46. What Is An Interface Class ?
-
-Answer :
-
-This is an abstract class with public abstract methods , all of which must be implemented in the inherited classes.
-
-Question 47. Can We Inherit Multiple Interfaces ?
-
-Answer :
-
-Yes.
-
-Question 48. Can We Allow Class To Be Inherited ,but Prevent The Method From Being Overridden ?
-
-Answer :
-
+```
 Yes, first create class as public and make it's method sealed.
-
+```
 
 ### What Is Signature Used For Overloaded A Method ?
 ```
