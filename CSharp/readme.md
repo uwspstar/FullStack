@@ -130,7 +130,13 @@ A client couldn't do that with an abstract class instead of an interface.
 Since multiple inheritance in C Sharp is deprecated.
 
 ```
-
+### ref vs out
+### this vs static method
+```
+We can't use this in a static method 
+because the keyword 'this' returns a reference to the current instance of the class containing it. 
+Static methods (or any static member) do not belong to a particular instance. 
+``
 ### Implementing "Dispose" Pattern
 
 ### Encapsulation and Information Hiding
@@ -271,6 +277,7 @@ dynamic x = "c#";
 x++; // It will not provide error at compile time but will provide error at run time.
 
 ```
+### constant vs readonly 
 ### When To Use Dynamic
 
 Answer :
