@@ -268,6 +268,25 @@ Public sealed class Singleton
   Private static readonly Singleton _instance = new Singleton();
 }
 ```
+### Hashtable
+```
+A Hashtable is a collection that stores (Keys, Values) pairs. 
+Here, the Keys are used to find the storage location 
+and is immutable and cannot have duplicate entries in a Hashtable
+```
+### LINQ
+```
+LINQ stands for Language Integrated Query. 
+LINQ is a data querying methodology which provides querying capabilities to .NET languages 
+with a syntax similar to a SQL query
+```
+### anonymous Data in LINQ
+```
+var anonymousData = from pl in data    
+    select new {    
+        pl.FirstName, pl.LastName    
+    }; 
+```
 ### dispose vs finalize
 ```
 The finalize and dispose, both methods are used to free unmanaged resources.  
@@ -819,4 +838,23 @@ Use different order of parameters
 In an interface, all methods must be abstract but in abstract class some methods can be concrete.
 In interface No accessibility modifiers are alloweded 
 but in abstract class a accessibility modifier are alloweded.
+```
+### System.IO namespace
+```
+The System.IO namespace provides four classes that allow you to manipulate individual files, 
+as well as interact with a machine directory structure. 
+The Directory and File directly extends System.Object 
+and supports the creation, copying, moving and deletion of files 
+using various static methods. 
+They only contain static methods and are never instantiated. 
+The FileInfo and DirecotryInfo types are derived from the abstract class FileSystemInfo type 
+and they are typically, employed for obtaining the full details of a file or directory 
+because their members tend to return strongly typed objects. 
+They implement roughly the same public methods as a Directory and a File 
+but they are stateful and the members of these classes are not static.
+```
+
+
+
+
 ```
