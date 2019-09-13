@@ -20,6 +20,15 @@ if both are compatible to that type. Else it returns a null.
 Yes, but it is not accessible.
 we generally know that they are inherited but not accessible.
 ```
+### Nullable<>
+```
+Any data type can be declared nullable type with the help of operator "?". 
+int? i = null;  
+"var" is not compatible with nullable types. 
+if you declare the following, you will get an error.
+
+var? i = null;  // Error
+```
 ### Throw Exception vs Throw
 ```
 *** The best practice to use throw instead of throw(ex)
