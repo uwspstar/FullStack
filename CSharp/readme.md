@@ -83,7 +83,28 @@ Public sealed class Singleton
   Private static readonly Singleton _instance = new Singleton();
 }
 ```
+### dispose vs finalize
+```
+The finalize and dispose, both methods are used to free unmanaged resources.  
 
+Finalize used to free unmanaged resources those are not in use 
+like files, database connections in application domain and more, 
+held by an object before that object is destroyed.
+
+In the Internal process it is called by Garbage Collector 
+and can’t called manual by user code or any service.
+Finalize belongs to System.Object class.
+Implement it when you have unmanaged resources in your code,
+and make sure that these resources are freed when the Garbage collection happens.
+Dispose
+
+Dispose is also used to free unmanaged resources those are not in use 
+like files, database connections in Application domain at any time.
+Dispose explicitly it is called by manual user code.
+If we need to dispose method so must implement that class by IDisposable interface.
+It belongs to IDisposable interface.
+Implement this when you are writing a custom class that will be used by other users.
+```
 ###  "throw" and "throw ex"
 ```
 What is difference between the "throw" and "throw ex" in .NET?
@@ -140,7 +161,36 @@ Since multiple inheritance in C Sharp is deprecated.
 We can't use this in a static method 
 because the keyword 'this' returns a reference to the current instance of the class containing it. 
 Static methods (or any static member) do not belong to a particular instance. 
-``
+```
+### string vs StringBuilder
+```
+String
+
+String is an immutable object. 
+Immutable like when we create string object in code 
+so we cannot modify or change that object in any operations 
+like insert new value, replace or append any value with existing value in string object, 
+when we have to do some operations to change string simply it will 
+dispose the old value of string object 
+and it will create new instance in memory for hold the new value in string object like,
+
+It’s an immutable object that hold string value.
+Performance wise string is slow because its’ create a new instance to override or change the previous value.
+String belongs to System namespace.
+StringBuilder
+
+System.Text.Stringbuilder is mutable object 
+which also hold the string value, 
+mutable means once we create a System.Text.Stringbuilder object 
+we can use this object for any operation like insert value in existing string 
+with insert functions also replace or append without 
+creating new instance of System.Text.Stringbuilder for every time 
+so it’s use the previous object so it’s work fast as compare than System.String. 
+
+StringBuilder is a mutable object.
+Performance wise StringBuilder is very fast because it will use same instance of StringBuilder object to perform any operation like insert value in existing string.
+StringBuilder belongs to System.Text.Stringbuilder namespace.
+```
 ### Implementing "Dispose" Pattern
 
 ### Encapsulation and Information Hiding
