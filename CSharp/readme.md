@@ -69,6 +69,39 @@ It does not show full stack trace.So when you use throw(ex) it will reset stack 
 
 **** So it’s always best practice to use throw instead of throw(ex).
 ```
+### Method overloading
+```
+we can use a method with the same name but different signatures. 
+Object Pool is a container of objects that are ready for use. 
+Whenever there is a request for a new object, the pool manager will take the request 
+and it will be served by allocating an object from the pool.
+```
+### Object Pooling in .NET
+```
+Object Pooling in .NET allows objects to keep in the memory pool so the objects can be reused without recreating them.
+```
+### Access Modifiers
+```
+there are 6 different types of Access Modifiers.
+
+
+1) public	There are no restrictions on accessing public members.
+
+2) private	Access is limited to within the class definition. 
+This is the *** default access modifier type *** if none is formally specified
+
+3) protected	Access is limited to within the class definition 
+and any class that inherits from the class
+
+4) internal	Access is limited exclusively to classes defined within the current project assembly
+
+5) protected internal	Access is limited to the current assembly 
+and types derived from the containing class. 
+All members in current project and all members in derived class can access the variables.
+
+6) private protected	Access is limited to the containing class or types derived 
+from the containing class within the current assembly.
+```
 ### IEnumerable<>
 ### IEnumerable and IQueryable
 ```
@@ -95,10 +128,50 @@ The definition of "executing an expression tree" is specific to a query provider
 For example, it may involve translating the expression tree to an appropriate query language for the underlying data source. Queries that do not return enumerable results are executed when the Execute method is called.
 
 ```
-### sealed classes 
+### sealed classes ```the class cannot be inherited```
 ```
 Sealed classes are used to restrict the inheritance feature of object oriented programming. 
-Once a class is defined as a sealed class, the class cannot be inherited
+Once a class is defined as a sealed class, the class cannot be inherited.
+
+A sealed class, in C#, 
+is a class that cannot be inherited by any class but can be instantiated. 
+The design intent of a sealed class is to indicate that 
+the class is specialized and there is 
+no need to extend it to provide any additional functionality t
+hrough inheritance to override its behavior
+
+```
+### example for polymorphism
+### virtual method ```created in the base class that can be overridden in the derived class```
+```
+A virtual method is a method that can be redefined in derived classes. 
+A virtual method has an implementation in a base class as well as derived the class.
+It is used when a method's basic functionality is the same 
+but sometimes more functionality is needed in the derived class. 
+A virtual method is created in the base class that can be overridden in the derived class. 
+We create a virtual method in the base class using the virtual keyword and that method is overridden in the derived class using the override keyword.
+
+When a method is declared as a virtual method in a base class 
+then that method can be defined in a base class 
+and it is optional for the derived class to override that method. 
+The overriding method also provides more than one form for a method. 
+Hence it is also an example for polymorphism.
+
+When a method is declared as a virtual method in a base class 
+and that method has the same definition in a derived class 
+then there is no need to override it in the derived class. 
+But when a virtual method has a different definition in the base class 
+and the derived class then there is a need to override it in the derived class.
+
+When a virtual method is invoked, 
+the run-time type of the object is checked for an overriding member. 
+The overriding member in the most derived class is called, 
+which might be the original member, if no derived class has overridden the member.
+
+Virtual Method
+
+By default, methods are non-virtual. We can't override a non-virtual method.
+*** We can't use the virtual modifier with the static, abstract, private or override modifiers.
 ```
 ### delegate vs events
 ```
@@ -115,6 +188,20 @@ that external objects can invoke the delegate,
 something we’d normally want to restrict to the publisher. 
 Hence events – an event adds public methods to the containing class to add and remove receivers, 
 but does not make the invocation mechanism public.
+```
+### using ```using Directive & Using Statement```
+```
+There are two ways to use the using keyword in C#. 
+
+1) using Directive
+Generally we use the using keyword to add namespaces in code-behind and class files. 
+Then it makes available all the classes, interfaces and abstract classes 
+and their methods and properties in the current page. 
+
+
+2) Using Statement
+This is another way to use the using keyword in C#. 
+It plays a vital role in *** improving performance in Garbage Collection. *** 
 ```
 ### serialization
 
