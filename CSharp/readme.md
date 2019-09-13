@@ -701,10 +701,9 @@ Open project properties
 Click on the Build tab
 Select the option “Allow unsafe code”
 ```
-### Pointer?
+### Pointer
 
 ```
-
 Pointer is a variable that stores the memory address of another variable. Pointers in C# have the same capabilities as in C or C++.
 
 Some examples are given bellow:
@@ -719,7 +718,7 @@ char   *ch   // pointer to a character
 ```
 arr.Sort ().Reverse() Methods.
 ```
-### Can We Store Multiple Data Types In System.array ?
+### Can We Store Multiple Data Types In System.array
 
 ```
 No., but Arraylist can
@@ -810,7 +809,7 @@ A method overloading simply involves having a method with the same name within t
 whereas in method overriding we can change method behaviour for a derived class.
 ```
 
-# Can We Override Private Virtual Method ? ```No```
+### Can We Override Private Virtual Method ? ```No```
 
 ### Can We Declare The Override Method Static While The Original Method Is Non Static ? ```No.```
 ### What Is An Interface Class
