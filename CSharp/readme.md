@@ -4,6 +4,16 @@
 ++x i.e. pre-increment operator uses the principle ‘change-then-use’ 
 while, x++ i.e. post-increment operator uses the principle ‘use-then-change’.
 ```
+###  is vs as ```is (return true or false) vs as (return obj)```
+```
+we use the "is" operator to check the object type. 
+If two objects are of the same type, it returns true, else it returns false.
+
+The "as" operator behaves in similar way as the "is" operator. 
+The only difference is it returns the object 
+if both are compatible to that type. Else it returns a null.
+
+```
 ### partial classes
 ### Are Private Class -label Variables Inherited ?
 ```
