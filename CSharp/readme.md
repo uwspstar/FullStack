@@ -10,7 +10,46 @@ while, x++ i.e. post-increment operator uses the principle ‘use-then-change’
 Yes, but it is not accessible.
 we generally know that they are inherited but not accessible.
 ```
+### Throw Exception vs Throw
+```
+*** The best practice to use throw instead of throw(ex)
 
+The basic difference is that the Throw exception overwrites the stack trace 
+and this makes it hard to find the original code line number that has thrown the exception.
+
+Throw basically retains the stack information and adds to the stack information in the exception that it is thrown.
+
+Let us see what it means rather speaking so many words to better understand the differences. I am using a console application to easily test and see how the usage of the two differ in their functionality.
+
+using System;  
+using System.Collections.Generic;  
+using System.Linq;  
+using System.Text;  
+namespace TestingThrowExceptions {  
+    class Program {  
+        public void ExceptionMethod() {  
+            throw new Exception("Original Exception occurred in ExceptionMethod");  
+        }  
+        static void Main(string[] args) {  
+            Program p = new Program();  
+            try {  
+                p.ExceptionMethod();  
+            } catch (Exception ex) {  
+                throw ex;  
+            }  
+        }  
+    }  
+}  
+Now run the code by pressing the F5 key of the keyboard and see what happens. 
+It returns an exception and look at the stack trace:
+
+So you can see in first image we have got full stack trace information 
+where the actual exception called at line 22 and again rethrow at line 15
+While in the another screenshot you can see there is only information about line 15. 
+It does not show full stack trace.So when you use throw(ex) it will reset stack trace.
+
+**** So it’s always best practice to use throw instead of throw(ex).
+```
 ### IEnumerable<>
 ### IEnumerable and IQueryable
 ```
