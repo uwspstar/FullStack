@@ -853,8 +853,20 @@ because their members tend to return strongly typed objects.
 They implement roughly the same public methods as a Directory and a File 
 but they are stateful and the members of these classes are not static.
 ```
-
-
-
+### Reflection
+```
+Reflection is the process of runtime type discovery 
+to inspect metadata, CIL code, late binding and self-generating code. 
+At run time by using reflection, 
+we can access the same "type" information as displayed 
+by the ildasm utility at design time. 
+The reflection is analogous to reverse engineering i
+n which we can break an existing *.exe or *.dll assembly 
+to explore defined significant contents information, 
+including methods, fields, events and properties.
 
 ```
+
+
+
+
