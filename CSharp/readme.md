@@ -4,6 +4,33 @@
 ++x i.e. pre-increment operator uses the principle ‘change-then-use’ 
 while, x++ i.e. post-increment operator uses the principle ‘use-then-change’.
 ```
+### partial classes
+### IEnumerable<>
+### IEnumerable and IQueryable
+```
+IEnumerable
+
+Is the parent interface for all non-generic collections 
+in System.Collections namespace like ArrayList, HastTable etc. t
+hat can be enumerated. 
+For the generic version of this interface as IEnumerable<T> 
+which a parent interface of all generic collections class 
+in System.Collections.Generic namespace like List<> and more. 
+
+IQueryable
+
+As per MSDN IQueryable interface is intended for implementation by query providers. 
+It is only supposed to be implemented by providers that also implement IQueryable<T>. 
+If the provider does not also implement IQueryable<T>, 
+the standard query operators cannot be used on the provider's data source.
+
+The IQueryable interface inherits the IEnumerable interface 
+so that if it represents a query, the results of that query can be enumerated. 
+Enumeration causes the expression tree associated with an IQueryable object to be executed. 
+The definition of "executing an expression tree" is specific to a query provider. 
+For example, it may involve translating the expression tree to an appropriate query language for the underlying data source. Queries that do not return enumerable results are executed when the Execute method is called.
+
+```
 ### sealed classes 
 ```
 Sealed classes are used to restrict the inheritance feature of object oriented programming. 
@@ -718,15 +745,16 @@ Answer :
 
 Yes, first create class as public and make it's method sealed.
 
-Question 49. What Is Signature Used For Overloaded A Method ?
 
-Answer :
-
+### What Is Signature Used For Overloaded A Method ?
+```
 Use different data types
 Use different number of parameters
 Use different order of parameters
-Question 50. What Is The Difference Between An Interface And Abstract Class ?
-
-Answer :
-
-In an interface, all methods must be abstract but in abstract class some methods can be concrete.In interface No accessibility modifiers are alloweded but in abstract class a accessibility modifier are alloweded.
+```
+### An Interface vs Abstract Class ?
+```
+In an interface, all methods must be abstract but in abstract class some methods can be concrete.
+In interface No accessibility modifiers are alloweded 
+but in abstract class a accessibility modifier are alloweded.
+```
