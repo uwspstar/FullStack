@@ -24,10 +24,10 @@
   ```
   ```
   What's important is that you understand that each location is not a region.
-  It's actually just a sort of a smaller location that NWS have 
+  It's actually just a sort of a smaller location that AWS have 
   and its use for caching content and there's always going to be more edge locations 
   than there are regions currently there's over 150 edge locations around the world.
-```
+  ```
 - understand the difference between a region and availability zone and an edgy location
 ```
 A region is a physical location in the world which combines two or more availability zones.
