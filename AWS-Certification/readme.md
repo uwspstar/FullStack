@@ -29,15 +29,24 @@
   than there are regions currently there's over 150 edge locations around the world.
   ```
 - understand the difference between a region and availability zone and an edgy location
-```
-A region is a physical location in the world which combines two or more availability zones.
-And so you have a London region you have a Sydney region Singapore region et cetera 
-and availability zone is one or more discrete data centers 
-each with redundant power networking connectivity housed in separate facilities 
-and then an edge location is just an endpoint for AWB which is used for cachin content.
-Typically this consists of cloud front which is Amazon's content delivery network
-```
+  ```
+  A region is a physical location in the world which combines two or more availability zones.
+  And so you have a London region you have a Sydney region Singapore region et cetera,
+  and availability zone is one or more discrete data centers,
+  each with redundant power networking connectivity housed in separate facilities, 
+  and then, an edge location is just an endpoint for AWS which is used for caching content.
+  Typically this consists of cloudfront which is Amazon's content delivery network (CDN)
+  ```
+- Cloudfront (Amazon's CDN)
 - ```VPC``` stands for ```Virtual Private Cloud```
+- What Is Amazon VPC?
+  ```
+  Amazon Virtual Private Cloud (Amazon VPC) enables you 
+  to launch AWS resources into a virtual network that you've defined. 
+  This virtual network closely resembles a traditional network 
+  that you'd operate in your own data center, 
+  with the benefits of using the scalable infrastructure of AWS
+  ```
 - An AWS VPC is a component of which group of AWS services
 ```
 A Virtual Private Cloud (VPC) is a virtual network dedicated to a single AWS account. 
