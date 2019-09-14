@@ -9,24 +9,24 @@
   - network and content delivery compute is mostly
 
 - region
-```
-region is just simply a geographical area.
-So each region consists of two or more availability zones.
-```
-- availability zone
-```
-one availability zone could be two or three data centers that are all within say a couple of miles
-```
+  ```
+  region is just simply a geographical area.
+  So each region consists of two or more availability zones.
+  ```
+- availability zone (AZ)
+  ```
+  one availability zone could be two or three data centers that are all within say a couple of miles
+  ```
 - edge location
-```
-an edge location or locations are endpoints for the US 
-which you use for caching content so typically this consists of cloud front
-```
-```
-What's important is that you understand that each location is not a region.
-It's actually just a sort of a smaller location that NWS have 
-and its use for caching content and there's always going to be more edge locations 
-than there are regions currently there's over 150 edge locations around the world.
+  ```
+  an edge location or locations are endpoints for the US 
+  which you use for caching content so typically this consists of *** cloudfront
+  ```
+  ```
+  What's important is that you understand that each location is not a region.
+  It's actually just a sort of a smaller location that NWS have 
+  and its use for caching content and there's always going to be more edge locations 
+  than there are regions currently there's over 150 edge locations around the world.
 ```
 - understand the difference between a region and availability zone and an edgy location
 ```
