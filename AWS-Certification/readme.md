@@ -87,7 +87,7 @@
   Grant her Administrator access by adding her to the Administrators' group
   ```
 - What level of access does the ```"root"``` account have? ```Administrator Access```
-- Power User Access allows
+- ```Power User``` Access allows
   ```
   Accesss to all AWS services except the management of groups and users within IAM
   ```
