@@ -87,6 +87,7 @@
   Grant her Administrator access by adding her to the Administrators' group
   ```
 - What level of access does the ```"root"``` account have? ```Administrator Access```
+- configured multi-factor authentication on the root account
 - ```Power User``` Access allows
   ```
   Accesss to all AWS services except the management of groups and users within IAM
@@ -102,18 +103,27 @@
   and your organization's unique AWS console login URL
   ```
 - Every user you create in the IAM systems starts with ```No Permissions```
-- ``` Policy``` is a document that provides a formal statement of one or more permissions.
+- ``` Policy``` is a document that provides a formal statement of one or more ```permissions```.
 - You have created a new AWS account for your company, and you have also configured multi-factor authentication on the root account. You are about to create your new users. What strategy should you consider in order to ensure that there is good security on this account.
   ```
-  Enact a strong password policy: user passwords mush be changed every 45 days, 
+  Enact a strong password policy: 
+  user passwords mush be changed every 45 days, 
   with each password containing a combination of capital letters, lower case letters, numbers 
   and special symboles
   ```
-- S3
+- S3 (Simple Storage Service)
   ```
-  can be anywhere from 0 bytes all the way up to 5 TB terabytes.
-  ``
+  Amazon S3 is object storage built to store 
+  and retrieve any amount of data from anywhere on the Internet. 
+  It’s a simple storage service that offers an extremely durable, highly available, 
+  and infinitely scalable data storage infrastructure at very low costs.
+  ```
+  - https://aws.amazon.com/s3/faqs/
+  
+- S3 is object storage can be``` 0 bytes``` all the way up to ```5 TB terabytes```.
+
 - Bucket ```bucket``` is basically just a folder.
+
 - Bucket Name
   ```
   only one web address available so you have to make sure your bucket names 
