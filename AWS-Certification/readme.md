@@ -10,7 +10,7 @@
 
 - region
 ```
-a region or region is just simply a geographical area.
+region is just simply a geographical area.
 So each region consists of two or more availability zones.
 ```
 - availability zone
