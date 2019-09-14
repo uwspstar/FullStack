@@ -61,12 +61,12 @@
 - IAM (identity access management)
 - Which of the following is not a component of IAM?
 - When you create a new user, that user
-```
-that user will be able to interact with AWS 
-using their *** access key ID ***  and *** Secret access key *** using the API, CLI, or the AWS SDKs.
-```
-- To access the console you use an account and password combination. 
-- To access AWS programmatically you use a Key and Secret Key combination
+  ```
+  that user will be able to interact with AWS programmatically
+  using their *** access key ID ***  and *** Secret access key *** using the API, CLI, or the AWS SDKs.
+  ```
+- To access the ```console``` you use an ```account``` and ```password``` combination. 
+- To access AWS ```programmatically``` you use a ```Key``` and ```Secret Key``` combination
 - Which statement best describes IAM
   ```
   IAM allows you to manage 
