@@ -69,12 +69,12 @@
 - To access AWS ```programmatically``` you use a ```Key``` and ```Secret Key``` combination
 - Which statement best describes IAM
   ```
-  IAM allows you to manage 
-  users, groups, roles, and their corresponding level of access to the AWS Platform
+  IAM allows you to manage
+  users, groups, roles, and policy ( which is their corresponding level of access to the AWS Platform )
   ```
 - Using ```SAML``` (Security Assertion Markup Language 2.0), you can give your federated users ```single sign-on (SSO)``` access to the AWS Management Console.
 - In what language are ```policy documents``` written? ```JSON```
-- In what language are policy documents written?
+- In what default policy given?
   ```
   NO access to any AWS services
   ```
