@@ -48,11 +48,11 @@
   with the benefits of using the scalable infrastructure of AWS
   ```
 - An AWS VPC is a component of which group of AWS services
-```
-A Virtual Private Cloud (VPC) is a virtual network dedicated to a single AWS account. 
-It is logically isolated from other virtual networks in the AWS cloud, 
-providing compute resources with security and robust networking functionality.
-```
+  ```
+  A Virtual Private Cloud (VPC) is a virtual network dedicated to a single AWS account. 
+  It is logically isolated from other virtual networks in the AWS cloud, 
+  providing compute resources with security and robust networking functionality.
+  ```
 - Each region is a separate geographic area. Each region has multiple, isolated locations known as Availability Zones.
 - An Availability Zone (AZ) is a distinct location within an AWS Region. Each Region comprises at least two AZs.
 - A region is a geographical area divided into Availability Zones. Each region contains at least two Availability Zones.
