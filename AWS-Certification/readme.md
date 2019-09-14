@@ -102,7 +102,7 @@
   instead, you mush generate a password for the user, and supply the user with this password 
   and your organization's unique AWS console login URL
   ```
-- Every user you create in the IAM systems starts with ```No Permissions```
+- Every user you create in the IAM systems ```starts``` with ```No Permissions```
 - ``` Policy``` is a document that provides a formal statement of one or more ```permissions```.
 - You have created a new AWS account for your company, and you have also configured multi-factor authentication on the root account. You are about to create your new users. What strategy should you consider in order to ensure that there is good security on this account.
   ```
@@ -122,7 +122,7 @@
   
 - S3 is object storage can be``` 0 bytes``` all the way up to ```5 TB terabytes```.
 
-- Bucket ```bucket``` is basically just a folder.
+- Bucket ```bucket``` is basically just a ```folder```.
 
 - Bucket Name
   ```
