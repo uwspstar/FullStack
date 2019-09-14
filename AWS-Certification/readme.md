@@ -49,6 +49,7 @@ providing compute resources with security and robust networking functionality.
 - A region is a geographical area divided into Availability Zones. Each region contains at least two Availability Zones.
 - The number of Edge Locations is greater than the number of Availability Zones, which is greater than the number of Regions.
 - CloudFront content is cached in Edge Locations.
+- IAM (identity access management)
 - Which of the following is not a component of IAM?
 - When you create a new user, that user
 ```
@@ -98,6 +99,17 @@ using their *** access key ID ***  and *** Secret access key *** using the API, 
   Enact a strong password policy: user passwords mush be changed every 45 days, 
   with each password containing a combination of capital letters, lower case letters, numbers 
   and special symboles
+  ```
+- S3
+  ```
+  can be anywhere from 0 bytes all the way up to 5 TB terabytes.
+  ``
+- Bucket ```bucket``` is basically just a folder.
+- Bucket Name
+  ```
+  only one web address available so you have to make sure your bucket names 
+  are unique and when you upload, such as 
+  https://s3-eu-west-1/amazonaws.com/acloudguru
   ```
 - You have been asked to advise on a scaling concern. The client has an elegant solution that works well. As the information base grows they use CloudFormation to spin up another stack made up of an S3 bucket and supporting compute instances. The trigger for creating a new stack is when the PUT rate approaches 100 PUTs per second. The problem is that as the business grows that number of buckets is growing into the hundreds and will soon be in the thousands. You have been asked what can be done to reduce the number of buckets without changing the basic architecture.
 
