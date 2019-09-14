@@ -81,3 +81,7 @@ using their *** access key ID ***  and *** Secret access key *** using the API, 
   ```
   Accesss to all AWS services except the management of groups and users within IAM
   ```
+- You are a solutions architect working for a large engineering company that are moving from a legacy infrastructure to AWS. You have configured the company's first AWS account and you have set up IAM. Your company is based in Andorra, but there will be a small subsidiary operating out of South Korea, so that office will need its own AWS environment. Which of the following statements is true?
+  ```
+  you will need to configure users and policy documents one onece, as these are are applied globally.
+  ```
