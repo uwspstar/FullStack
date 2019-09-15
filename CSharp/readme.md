@@ -3,6 +3,15 @@
 ```
 ++x i.e. pre-increment operator uses the principle ‘change-then-use’ 
 while, x++ i.e. post-increment operator uses the principle ‘use-then-change’.
+
+// us JS as example
+let arr = [ 0, 1, 2 ]
+let k = 0;
+arr[k++] = -1;
+k = 1;
+arr = [-1, 1, 2]
+
+
 ```
 ###  is vs as ```is (return true or false) vs as (return obj)```
 ```
