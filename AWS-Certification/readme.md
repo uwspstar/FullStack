@@ -337,9 +337,38 @@ It has complete Admin access
   - Subresources
     - Access control Lists
     - Torrent
-
-
-
+- Read after Write consistency for PUTS of a new Objects
+- Eventual Consistency for overwrite PUTS and DELETES (can take some time to propagate)
+- S3 standard
+  ```
+  99.99% availablity 99,9999999% durablility, stored redundantly across muliple devices in muliple facilitys 
+  and is dsgined to sustain the loss of 3 facilities concurrently
+  ```
+- S3- IA
+  ```
+  (Infrequently Accessed): For data that is accessed less frequently, 
+  but requires rapid access when needed. Lower fee than S3, but you are charged a retrieval fee 
+  ```
+- S3 One Zone- IA
+  ```
+  For where you want a lower-cost option for infrequently access data, 
+  but do not require the multiple aavilablitty Zone data resilience
+  ```
+- S3 - Intelligent Tiering
+  ```
+  Designed to iptimized cosets by automatically moving  data to the most cost-effective accesss tier, 
+  without performance impact or operational overhead
+  ```
+- S3 Glacier
+  ```
+  S3 Glacier is a secure , durable, and low-cost storage class for data archiving. 
+  Retrieval times configurable from minutes to hours
+  ```
+- S3 Glacier Deep Archive
+  ```
+  S# Glacier Deep Archive is Amazon S3's lowest-cost storage class 
+  where a retrieval time of 12 hours is acceptable
+  ```
 
 
 
