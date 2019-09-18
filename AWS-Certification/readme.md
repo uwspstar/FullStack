@@ -286,10 +286,57 @@
   through the activation process you can use the AWB management console 
   to create this storage Gateway option that is right for you.
   ```
-  
-  
+- Storage gateways three different types
+  - File Gateway (NFS & SMB)
+  - Volume Gateway (iSCSI)
+    - Stored Volumes
+    - Cached Volumes
+  - Tape Gateway (VTL)
+ 
+### Exam Tips:
+- File Gate way
+  ```
+  File Gateway - for flat files, stored directly on S3
+  ```
+- Volume Gateway
+  - Stored Volumes - Entired Dataset is stored on site and is aysnchromosly backed up to S3
+  - Cached Volumes - Entore Dataset is stored on S3 and the most frequently accesssed data is cached on site.
+- Gateway Virtual Tpe Libray
 
-
+### Exam Tips:
+- Indentity Accesss Management Consists of The  Following 
+  - Users
+  - Groups
+  - Roles
+  - Policies
+- IAM is universal. It does not apply to regions at this time
+- The "root account" is simply the account created when first setup your AWS account. 
+It has complete Admin access
+- New users are assigned Access Key ID & Secret Access Keys when first created.
+- These are not the same as a password. You cannot use the Access key ID & Secret Access Key to Login in to the console. You can use this to access AWS via the APIs and Command Line, however/
+- You only get to view tehse once. If you lose them, you have to regenerate them. So, save them in a secure location
+- Always setup Multifcator Authentication on your root account.
+- You can create and customise your own password rotation policies.
+- S3 is Object-based: i.e allows you to upload files.
+- Files can be from 0 Bytes to 5 TB
+- There is unlimited storage
+- Files are stored in Buckets.
+- S3 is a universal namespace. That is, names mmust be unique globally
+- https://s3-eu-west-1.amazonaws.com/uwspstar
+- Not suitable to install an operating system on
+- Successful uploads will generated a HTTP 200 status code
+- By defaultm all newly created buckets are PRIVATE. You can setup access control to your buckets using
+  - Bucket Policies
+  - Access Control Lists
+- S3 buckets can be configured to create access logs which log all requests made to the S3 bucket. This can be sent to another bucket and event another bucket in another account
+- The key Fundamentals of S3 Are:
+  - Key ( This is simply the name of the object)
+  - Value( this is simply the data and is made up of a sequence of bytes).
+  - Version ID (important for versioning)
+  - Metdata (Data about data your are stroing)
+  - Subresources
+    - Access control Lists
+    - Torrent
 
 
 
