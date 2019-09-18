@@ -38,6 +38,8 @@
   Typically this consists of cloudfront which is Amazon's content delivery network (CDN)
   ```
 - Cloudfront (Amazon's CDN)
+
+
 - ```VPC``` stands for ```Virtual Private Cloud```
 - What Is Amazon VPC?
   ```
@@ -227,6 +229,64 @@
   At its heart it is a way of using AWS S3 managed storage to supplement on-premise storage. 
   It can also be used within a VPC in a similar way.
   ```
+ ### Exam Tips:
+  - Edge Location - This is the location where content will be cached. This is separate to an AWS Region/AZ
+  - Origin - This is the origin of all the files that the CDN will distribute. This can be either an S# Bucket, an EC2 instance, an Elastic Load Balancer, or Route53.
+  - Distribution - This is the name given the CDN which consists of a collection of Edge Locations.
+  - Web Distribution - Typically used for Websites.
+  - RTMP - Used for Media Streaming
+  - Edge locations are not hust READ only - you can write to them too. (ie put an object on to them,)
+  - Objects are cached for the life of TTL (Time To Live)
+  - You can invalidate cached objects, but you will be charged.
+  
+ ### Snowball
+ ``` 
+  snowball is a petabytesscale data transport solution 
+  that uses secure appliances to transfer large amounts of data into and out of AWP.
+  it's a big desk it's a way of getting a huge amount of data into AWS 
+  and you can also use it to export data from eight of us 
+  and using snowball addresses common challenges with large scale
+  data transfers including high network costs long transfer times and security concerns.
+  Transferring data would snowball is simple far secure and can be as little as one fifth the cost of
+  using high speed Internet and snowball basically comes in two flavors.
+  You've got 50 terabytes or 80 terabytes.
+  So snowball uses multiple layers of security designed to protect your data including tamper resistant
+  enclosures 256 bit encryption and an industry standard trusted platform module 
+  or TPM which is designed
+  to ensure both security and full chain of custody of your data 
+  and once your data transfer job has been processed 
+  and verified NWS performs a software erasure of the snowball appliance and they do it in such
+  a way that you can't just take a snowball and restore the data from previous customers 
+  as well it's completely wiped.
+  So it's basically they nuke it essentially.
+  We also have a snowball edge so snowball edge comes in 100 terabytes worth of data.
+  And this is a device with an onboard storage and compute capabilities.
+  You can actually run like lambda functions from snowball edge.
+  ```
+- Snowball can inport to S3 and Export from S3
+
+### storage Gateway
+- storage Gateway
+  ```
+  what is storage Gateway.
+  Well it comes in a bunch of different flavors 
+  but basically it's a service that connects an on premise software appliance 
+  with cloud based storage to provide seamless and secure integration 
+  between an organization's on premise I.T. environment 
+  and Adobe as a storage infrastructure and the service enables you to securely
+  store data to the AWB cloud for scalable and cost effective storage.
+  ```
+- storage gateways software appliance
+  ```
+  So storage gateways software appliance is available for you to download as a virtual machine image 
+  that you install on a host in your data center and storage Gateway supports 
+  either VM where's ASX AI or Microsoft's hyper v as the hypervisor.
+  So that's a hypervisor is just what you run virtual machines on.
+  And once you've installed your gateway and associate it with your Adobe s account 
+  through the activation process you can use the AWB management console 
+  to create this storage Gateway option that is right for you.
+  ```
+  
   
 
 
