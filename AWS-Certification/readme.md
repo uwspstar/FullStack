@@ -369,7 +369,27 @@ It has complete Admin access
   S# Glacier Deep Archive is Amazon S3's lowest-cost storage class 
   where a retrieval time of 12 hours is acceptable
   ```
-
+- Encrypition in Transit is achieved by
+  - SSL/TLS
+- Encryption At Rest (Server Side) is acchieved by 
+  - S3 Managed Keys - SSE- S3
+  - AWS Key Management Service, Managed Keys - SSE-KMS
+  - Server Side Encryption With Customer Provided Keys-SSE-C
+- Client Side Encryption
+- Cross Region Replication
+  - Versioning mush be enabled on both the source and destination buckets.
+  - Regions must be unique.
+  - Files in an existing bucket are not replicated automatically
+  - All subsequent updated files will be replicated automatically
+  - Delete markers are not replicated
+  - Deleting individual versions or delete markers will not be replicated
+  - Understand whnat Cross Region Replication is at a high level.
+- Lifecycle Policies
+  - Automates moving your objects between the different storage tiers.
+  - Can be used in conjunction with versioning.
+  - Can be applied to current versions and prvious versions
+  
+  
 
 
 
