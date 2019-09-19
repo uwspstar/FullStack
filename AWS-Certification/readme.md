@@ -388,6 +388,20 @@ It has complete Admin access
   - Automates moving your objects between the different storage tiers.
   - Can be used in conjunction with versioning.
   - Can be applied to current versions and prvious versions
+- CloudFront
+  - Edge Location - This is the location where content will be cached. This is separate to an AWS Region/AZ
+  - Origin - This is the origin of all the files that the CDN will distribute. This can be either an S3 bucket, and EC2 Instance, and Elastic Load Balancer, or Route53
+  - Distribution This isthe name given the CDN which consists of a collection of Edge Locations
+  - Web Distribution - Typically used for websites.
+  - Edge location are not just READ only - you can write to them too, (ie put an object on to them)
+  - Objects are cached for the life of the TTL (Time To Live)
+  - You can clear cached objects, but you will be charged
+- Snowball
+  - Understand what Snowball is
+  - Import to S3
+  - Export to S3
+- File Gateway
+  - 
   
   
 
