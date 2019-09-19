@@ -408,6 +408,19 @@ StringBuilder is a mutable object.
 Performance wise StringBuilder is very fast because it will use same instance of StringBuilder object to perform any operation like insert value in existing string.
 StringBuilder belongs to System.Text.Stringbuilder namespace.
 ```
+### What’s the difference between the Array.CopyTo() and Array.Clone()?
+```
+The Array.Clone() method creates a shallow copy of an array. 
+A shallow copy of an Array copies only the elements of the Array, 
+whether they are reference types or value types, 
+but it does not copy the objects that the references refer to. 
+The references in the new Array point to the same objects 
+that the references in the original Array point to.
+
+The CopyTo() static method of the Array class copies a section of an array to another array. 
+The CopyTo method copies all the elements of an array to another one-dimension array.
+```
+
 ### Implementing "Dispose" Pattern
 
 ### Encapsulation and Information Hiding
