@@ -401,7 +401,14 @@ It has complete Admin access
   - Import to S3
   - Export to S3
 - File Gateway
-  - 
+  - File Gateway - For flat files, stored directly on S3
+- Volume Gateway
+  - Stored Volumes - Entire Dataset is stored on site and is asynchronously backed up to S3
+  - Cached Volumes - Entire Dataset is stored on S3 and the most frequently accessed data is cached on site.
+- Cateway Virtual Tape Library
+  - Used for backup and uses po-ular backup applications like NetBackup, Backup, Veeam etc.
+- Read teh S3 FAQs before taking the exam. it comes up ALOT!
+  
   
   
 
