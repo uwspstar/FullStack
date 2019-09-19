@@ -28,3 +28,16 @@ who brought the concepts of design patterns in their book “Elements of reusabl
  Also, to control the singleton access we need to provide a static property 
  that returns a single instance of the object.
  ```
+```
+private static Singleton instance = null;
+
+public static Singleton GetInstance
+{
+  get
+  {
+      if (instance == null)
+          instance = new Singleton();
+      return instance;
+  }
+}
+```
