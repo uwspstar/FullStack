@@ -339,7 +339,7 @@ It has complete Admin access
     - Torrent
 - Read after Write consistency for PUTS of a new Objects
 - Eventual Consistency for overwrite PUTS and DELETES (can take some time to propagate)
-- S3 standard
+- S3 standard (99.99% availablity)
   ```
   99.99% availablity 99,9999999% durablility, stored redundantly across muliple devices in muliple facilitys 
   and is dsgined to sustain the loss of 3 facilities concurrently
@@ -347,9 +347,14 @@ It has complete Admin access
 - S3- IA
   ```
   (Infrequently Accessed): For data that is accessed less frequently, 
-  but requires rapid access when needed. Lower fee than S3, but you are charged a retrieval fee 
+  but requires rapid access when needed. Lower fee than S3, but you are charged a retrieval fee.
+  
+  The need to immediate access is an important requirement along with cost. 
+  Glacier has a long recovery time at a low cost or a shorter recovery time at a high cost, 
+  and 1Zone-IA has a lower Availability level 
+  which means that it may not be available when needed.
   ```
-- S3 One Zone- IA
+- S3 One Zone- IA  (99.50% availability)
   ```
   For where you want a lower-cost option for infrequently access data, 
   but do not require the multiple avilablitty Zone data resilience.
@@ -361,6 +366,17 @@ It has complete Admin access
   Glacier is cheaper, but has a long retrieval time. 
   RRS has effectively been deprecated. 
   It still exists but is not a service that AWS want to sell anymore.
+  
+  The key driver here is cost, so an awareness of cost is necessary to answer this. 
+  Full S3 is quite expensive at around $0.023 per GB for the lowest band. 
+  S3 standard IA is $0.0125 per GB, 
+  S3 One-Zone-IA is $0.01 per GB, 
+  and Legacy S3-RRS is around $0.024 per GB for the lowest band. 
+  Of the offered solutions SS3 One-Zone-IA is the cheapest suitable option. 
+  Glacier cannot be considered as it is not intended for direct access,
+  however it comes in at around $0.004 per GB. 
+  Of course you spotted that RRS is being deprecated, 
+  and there is no such thing as S3 – Provisioned IOPS. In this case OneZone
   ```
 - S3 - Intelligent Tiering
   ```
@@ -375,7 +391,10 @@ It has complete Admin access
 - S3 Glacier Deep Archive
   ```
   S# Glacier Deep Archive is Amazon S3's lowest-cost storage class 
-  where a retrieval time of 12 hours is acceptable
+  where a retrieval time of 12 hours is acceptable.
+  
+  The record shortage must be; safe, durable, low cost, and the recovery can be slow. 
+  All features of Glacier.
   ```
 - Encrypition in Transit is achieved by
   - SSL/TLS
