@@ -352,7 +352,15 @@ It has complete Admin access
 - S3 One Zone- IA
   ```
   For where you want a lower-cost option for infrequently access data, 
-  but do not require the multiple aavilablitty Zone data resilience
+  but do not require the multiple avilablitty Zone data resilience.
+  
+  S3 – OneZone-IA is the recommended storage for 
+  when you want cheaper storage for infrequently accessed objects. 
+  It has the same durability but less availability. 
+  There can be cost implications if you use it frequently or use it for short lived storage. 
+  Glacier is cheaper, but has a long retrieval time. 
+  RRS has effectively been deprecated. 
+  It still exists but is not a service that AWS want to sell anymore.
   ```
 - S3 - Intelligent Tiering
   ```
