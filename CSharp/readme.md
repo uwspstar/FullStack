@@ -874,7 +874,13 @@ to explore defined significant contents information,
 including methods, fields, events and properties.
 
 ```
-
+###  What are the differences between IEnumerable and IQueryable?
+```
+IQueryable interface is intended for implementation by query providers. 
+It is only supposed to be implemented by providers that also implement IQueryable<T>. 
+If the provider does not also implement IQueryable<T>, 
+the standard query operators cannot be used on the provider's data source.
+```
 
 
 
