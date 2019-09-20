@@ -441,7 +441,7 @@ It has complete Admin access
  - On an EBS-backed instance, the default action is for the root EBS volume to be deleted when the instance is terminated
  - EBS Root Volumes of you DEFAULT AMI's cannot be encrypted. You can also use a third party tool (such as bit locker etc) to encrypt the root volume, or this can be done when creating AMI's (lab to follow) in the AWS console or using the API.
  - Additional volumes can be encrypted
- ### Exam Tips
+### Exam Tips
  - Allinbound traffic is blocked by default
  - All outbound traffice is allowed
  - Changes to security groups take effect immediately
@@ -461,11 +461,34 @@ It has complete Admin access
   - Throughput Optimised Hard Disk Drive
   - Cold Hard Disk Drive
   - Magnetic
- - Volumes exist on EBS, Think of EBS as a virtual hard disk
- - Snapshots exist on S3. Think of snapshots as a photograph of the disk
- - Snapshots are point in time copies of Volumes
- - Snapshots are incremental - this means that only the blocks that have changed since your last snamshot are moved to S3.
- - the first snapshot may take some time
+  ### Exam Tips
+  - Volumes exist on EBS, Think of EBS as a virtual hard disk
+  - Snapshots exist on S3. Think of snapshots as a photograph of the disk
+  - Snapshots are point in time copies of Volumes
+  - Snapshots are incremental - this means that only the blocks that have changed since your last snamshot are moved to S3.
+  - the first snapshot may take some time
+  - To created a snapshot for Amazon EBS volumes that serve as root devices, you should stope the instance before taking the snapshot.
+  - Howevre you can take a snap while the instance is running
+  - You  can create AMI's from both Voulumes and Snapshots.
+  - You can change EBS volume sizes on the fly, incluing changing the size and storage type.
+  Volumes will ALWAYS be in the same AZ as the EC2 instance
+  - To move an ES3 volume from on AZ to another, tke a snapshot of it, create an AMI from the sanpshot and then use the AMI to launch to lunch the EC2 instance in a new AZ.
+  - To move an ES2 volume from one region to another, take a snapshot of it, create an AMI from the snapshot and then copy the AMI from one region to the other. Then use the copied AMI to launch the new EC2 instance in the new region
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
  
  
   
