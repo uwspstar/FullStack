@@ -435,6 +435,46 @@ It has complete Admin access
 - Cateway Virtual Tape Library
   - Used for backup and uses po-ular backup applications like NetBackup, Backup, Veeam etc.
 - Read teh S3 FAQs before taking the exam. it comes up ALOT!
+ 
+ ### Exam Tips
+ - Termination Protection is turned off by default, you must turn it on.
+ - On an EBS-backed instance, the default action is for the root EBS volume to be deleted when the instance is terminated
+ - EBS Root Volumes of you DEFAULT AMI's cannot be encrypted. You can also use a third party tool (such as bit locker etc) to encrypt the root volume, or this can be done when creating AMI's (lab to follow) in the AWS console or using the API.
+ - Additional volumes can be encrypted
+ ### Exam Tips
+ - Allinbound traffic is blocked by default
+ - All outbound traffice is allowed
+ - Changes to security groups take effect immediately
+ - You can have any number of EC2 instances within a security group
+ - You can have multiple security groups attached to ECS instances
+ - Security Group are STATEFUL
+ - if you created an inbound rule allowing traffice inm the traffice is automatically allowed back out again.
+ - you cannot block specific IO address using Security Groups, instead use Network Access Control Lists
+ - You can specify allow rules, but not deny rules.
+### EBS
+  ```
+  Amazon Elastic Block Store (EBS) provides persistend block storage volumes for use with Amazon EC2 instances in the AWS Cloud. Each Amazon EBS volume is automatically replicated within its Availability Zone to protect you from component failure, offering high availability and durability.
+  ```
+- 5 different Types of EBS Storage
+  - General Purpose (SSD)
+  - Provisioned IOPS (SSD) ```really really fast```
+  - Throughput Optimised Hard Disk Drive
+  - Cold Hard Disk Drive
+  - Magnetic
+ - Volumes exist on EBS, Think of EBS as a virtual hard disk
+ - Snapshots exist on S3. Think of snapshots as a photograph of the disk
+ - Snapshots are point in time copies of Volumes
+ - Snapshots are incremental - this means that only the blocks that have changed since your last snamshot are moved to S3.
+ - the first snapshot may take some time
+ 
+ 
+  
+
+  
+ 
+ 
+ 
+ 
   
   
   
