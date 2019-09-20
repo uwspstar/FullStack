@@ -474,6 +474,7 @@ It has complete Admin access
   Volumes will ALWAYS be in the same AZ as the EC2 instance
   - To move an ES3 volume from on AZ to another, tke a snapshot of it, create an AMI from the sanpshot and then use the AMI to launch to lunch the EC2 instance in a new AZ.
   - To move an ES2 volume from one region to another, take a snapshot of it, create an AMI from the snapshot and then copy the AMI from one region to the other. Then use the copied AMI to launch the new EC2 instance in the new region
+  ### AMI Types (EBS vs Instance Store)
  
  
  
