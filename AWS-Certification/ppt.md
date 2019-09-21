@@ -43,3 +43,11 @@ from disasters)
 - This way, one can login into AWS using their company credentials
 - Identity Federation uses the SAML standard (Active Directory)
 
+### IAM 101
+- One IAM User per PHYSICAL PERSON
+- One IAM Role per Application
+- IAM credentials should NEVER BE SHARED
+- Never, ever, ever, ever, write IAM credentials in code. EVER.
+- And even less, NEVER EVER EVER COMMIT YOUR IAM credentials
+- Never use the ROOT account except for initial setup.
+- Never use ROOT IAM Credentials
