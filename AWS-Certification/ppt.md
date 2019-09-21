@@ -85,8 +85,8 @@ from disasters)
 - It’s good to maintain one separate security group for SSH access
 - If your application is ```not accessible (time out)```, then it’s a ```security group issue```
 - If your application gives a ```“connection refused“ ```error, then it’s ```an application error``` or it’s not launched
-- All inbound traffic is ```blocked by default```
-- All outbound traffic is ```authorised by default```
+- All ```inbound``` traffic is ```blocked by default```
+- All ```outbound``` traffic is ```authorised by default```
 
 
 
