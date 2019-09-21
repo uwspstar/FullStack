@@ -59,6 +59,18 @@ from disasters)
   - Storing data on virtual drives (EBS)
   - Distributing load across machines (ELB)
   - Scaling the services using an auto-scaling group (ASG)
+  
+### SSH (port 22)
+- tool Putty windows
+
+### Security Groups
+- Security Groups are the fundamental of network security in AWS
+- They control how traffic is allowed into or out of our EC2 Machines.
+- It is the most fundamental skill to learn to troubleshoot networking issues
+- inbound and outbound port
+
+
+
 
 
 
