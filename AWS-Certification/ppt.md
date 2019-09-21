@@ -51,3 +51,21 @@ from disasters)
 - And even less, NEVER EVER EVER COMMIT YOUR IAM credentials
 - Never use the ROOT account except for initial setup.
 - Never use ROOT IAM Credentials
+
+### EC2
+- EC2 is one of most popular of AWS offering, Knowing EC2 is fundamental to understand how the Cloud works
+- It mainly consists (EC2), (EBS), (ELB), (ASG):
+  - Renting virtual machines (EC2)
+  - Storing data on virtual drives (EBS)
+  - Distributing load across machines (ELB)
+  - Scaling the services using an auto-scaling group (ASG)
+
+
+
+
+
+
+
+
+
+
