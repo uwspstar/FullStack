@@ -30,3 +30,13 @@ from disasters)
 - IAM is at the center of AWS
 - Policies are written in JSON (JavaScript Object Notation)
 
+### IAM
+- IAM has a global view
+- Permissions are governed by Policies (JSON)
+- MFA (Multi Factor Authentication) can be setup
+- IAM has predefined “managed policies”
+- We’ll see IAM policies in details in the future
+- It’s best to give users the minimal amount of permissions they need to perform their job (least privilege principles)
+
+
+
