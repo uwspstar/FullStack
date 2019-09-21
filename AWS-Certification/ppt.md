@@ -144,6 +144,18 @@ from disasters)
   ```
 - The EC2 User Data Script runs with the root user
 
+### EC2 Instance Launch Types
+- On Demand Instances: short workload, predictable pricing
+- Reserved Instances: long workloads (>= 1 year)
+- Convertible Reserved Instances: long workloads with flexible instances
+- Scheduled Reserved Instances: launch within time window you reserve
+- Spot Instances: short workloads, for cheap, can lose instances
+- Dedicated Instances: no other customers will share your hardware
+- Dedicated Hosts: book an entire physical server, control instance placement
+
+
+
+
 
 
 
