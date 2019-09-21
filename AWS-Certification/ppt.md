@@ -22,3 +22,7 @@ from disasters)
 - Users must be created with proper permissions
 - IAM is at the center of AWS
 - Policies are written in JSON (JavaScript Object Notation)
+- Users: Usually a physical person
+- Groups: Functions (admins, devops) Teams (engineering, design…) Contains users!
+- Roles: Internal usage within AWS resources
+- Policies: (JSON Documents) Defines what each of the above can and cannot do
