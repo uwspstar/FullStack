@@ -88,8 +88,26 @@ from disasters)
 - All ```inbound``` traffic is ```blocked by default```
 - All ```outbound``` traffic is ```authorised by default```
 
+### Private vs Public IP (IPv4)
+- Networking has two sorts of IPs. IPv4 and IPv6:
+  - IPv4: 1.160.10.240
+  - IPv6: 3ffe: 1900:4545:3:200:f8ff:fe21:67cf
+- IPv4 is still the most common format used online.
+- IPv6 is newer and solves problems for the Internet of Things (IoT).
+- IPv4 allows for 3.7 billion different addresses in the public space
+- IPv4: [0-255].[0-255].[0-255].[0-255].
 
-
+### Private vs Public IP (IPv4) Fundamental Differences
+- Public IP:
+  - Public IP means the machine can be identified on the internet (WWW)
+  - Must be unique across the whole web (not two machines can have the same public IP).
+  - Can be geo-located easily
+- Private IP:
+  - Private IP means the machine can only be identified on a private network only
+  - The IP must be unique across the private network
+  - BUT two different private networks (two companies) can have the same IPs.
+  - Machines connect to WWW using an internet gateway (a proxy)
+  - Only a specified range of IPs can be used as private IP
 
 
 
