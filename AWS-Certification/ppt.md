@@ -122,7 +122,14 @@ from disasters)
   • Instead, use a random public IP and register a DNS name to it
   • Or, as we’ll see later, use a Load Balancer and don’t use a public IP
   ```
-
+### Private vs Public IP (IPv4)
+- By default, your EC2 machine comes with:
+  - A private IP for the internal AWS Network
+  - A public IP, for the WWW.
+- When we are doing SSH into our EC2 machines:
+- We can’t use a private IP, because we are not in the same network
+- We can only use the public IP.
+- If your machine is stopped and then started, ```the public IP can change```
 
 
 
