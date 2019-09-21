@@ -1,6 +1,10 @@
 
 # AWS Certified Solutions Architect - Associate
 
+- AWS (Amazon Web Services) is a Cloud Provider
+- They provide you with servers and services that you can use on
+demand and scale easily
+
 - AWS certified Solutions Architect associate exam.
   - security identity 
   - compute
