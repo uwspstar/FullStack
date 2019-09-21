@@ -18,6 +18,7 @@ from disasters)
   - Users
   - Groups
   - Roles
+  - Policies
 - Root account should never be used (and shared)
 - Users must be created with proper permissions
 - IAM is at the center of AWS
