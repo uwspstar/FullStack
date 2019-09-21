@@ -11,3 +11,14 @@ but separate from the other ones (so that they’re isolated
 from disasters)
 - AWS Consoles are region scoped
 (except IAM, S3 & Route53)
+
+### IAM
+- IAM (Identity and Access Management)
+- Your whole AWS security is there: 
+  - Users
+  - Groups
+  - Roles
+- Root account should never be used (and shared)
+- Users must be created with proper permissions
+- IAM is at the center of AWS
+- Policies are written in JSON (JavaScript Object Notation)
