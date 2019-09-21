@@ -68,6 +68,18 @@ from disasters)
 - They control how traffic is allowed into or out of our EC2 Machines.
 - It is the most fundamental skill to learn to troubleshoot networking issues
 - inbound and outbound port
+- Security groups are acting as a “firewall” on EC2 instances
+  ```
+  - regulate: 
+    - Access to Ports
+    - Authorised IP ranges – IPv4 and IPv6
+    - Control of inbound network (from other to the instance)
+    - Control of outbound network (from the instance to other)
+  ```
+
+
+
+
 
 
 
