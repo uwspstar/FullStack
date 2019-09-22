@@ -175,6 +175,12 @@ This is best practice when you have a big organisation
 ```
 - Never share your IAM credentials. If your colleagues need access to AWS they'll need their own account
 - You pay for an EC2 instance compute component ```only when it's in running state```
+- You are getting a permission error exception when trying to SSH into your Linux Instance
+```
+the key is missing permissions chmod 0400
+The exam expects you to know this, even if you used Windows / Putty to SSH into your instances. 
+If you're a windows user, just have a quick look at the Linux SSH lecture!
+```
 
 
 
