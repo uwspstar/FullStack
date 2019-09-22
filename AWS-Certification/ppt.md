@@ -173,6 +173,8 @@ I'll create multiple IAM users and groups and assign policies to groups.
 New users will be added to groups
 This is best practice when you have a big organisation
 ```
+- Never share your IAM credentials. If your colleagues need access to AWS they'll need their own account
+- You pay for an EC2 instance compute component ```only when it's in running state```
 
 
 
