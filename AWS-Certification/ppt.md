@@ -156,7 +156,32 @@ from disasters)
 - Dedicated Instances: no other customers will share your hardware
 - Dedicated Hosts: book an entire physical server, control instance placement
 
+### EC2 On Demand
+- Pay for what you use (```billing per second```, after the first minute)
+- Has the highest cost but ```NO upfront payment```
+- No long term commitment
+- Recommended for ```short-term``` and ```un-interrupted workloads```, where you can't predict how the application will behave.
 
+### EC2 Reserved Instances
+- Up to 75% discount compared to On-demand
+- Pay upfront for what you use with long term commitment
+- Reservation period can be 1 or 3 years
+- Reserve a specific instance type
+- Recommended for steady state usage applications (think database)
+- Convertible Reserved Instance
+  - can change the EC2 instance type 
+  - Up to 54% discount
+  - Scheduled Reserved Instances
+  - launch within time window you reserve
+  - When you require a fraction of day / week / month
+  
+  
+  
+  
+  
+  
+  
+  
 ### Quize
 - ap-northeast-1a is a...```AZ```
   ```Anything that ends with a letter is an AZ```
