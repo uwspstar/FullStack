@@ -268,12 +268,30 @@ load for example), it can burst, and CPU can be VERY good.
   - Do not use an AMI you don’t trust!
   - Some AMIs might come with malware or may not be secure for your enterprise
 
+### AMI Storage
+- Your AMI take space and they live in Amazon S3
+- Amazon S3 is a durable, cheap and resilient storage where most of your backups will live (but you won’t see them in the S3 console)
+- By default, your AMIs are ```private, and locked for your account / region```
+- You can also make your AMIs public and share them with other AWS accounts or sell them on the AMI Marketplace
+
+### AMI Pricing
+- AMIs live in Amazon S3, so you get charged for the actual space in takes in Amazon S3
+  - Amazon S3 pricing in US-EAST-1:
+    - First 50 TB / month: $0.023 per GB
+    - Next 450 TB / month: $0.022 per GB
+- Overall it is quite inexpensive to store private AMIs.
+- Make sure to remove the AMIs you don’t use
 
 
-
-
-
-
+### Cross Account AMI Copy (FAQ + Exam Tip)
+- You can share an AMI with another AWS account.
+- Sharing an AMI does not affect the ownership of the AMI.
+- If you copy an AMI that has been shared with your account, you are the owner of the target AMI in your account.
+- To copy an AMI that was shared with you from another account, the owner of the source AMI must grant you read permissions for the storage that backs the AMI, either the associated EBS snapshot (for an Amazon EBS-backed AMI) or an associated S3 bucket (for an instance store-backed AMI).
+- ```Limits:```
+- You can't copy an encrypted AMI that was shared with you from another account. Instead,if the underlying snapshot and encryption key were shared with you, you can copy the snapshot while re- encrypting it with a key of your own. You own the copied snapshot, and can register it as a new AMI.
+- You can't copy an AMI with an associated billing Product code that was shared with you from another account. This includes Windows AMIs and AMIs from the AWS Marketplace. To copy a shared AMI with a billing Product code, launch an EC2 instance in your account using the shared AMI and then create an AMI from the instance.
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Copy ingAMIs.html
 
 ### Quize
 - ap-northeast-1a is a...```AZ```
