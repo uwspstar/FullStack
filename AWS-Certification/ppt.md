@@ -229,6 +229,50 @@ load for example), it can burst, and CPU can be VERY good.
 - Read more here: https://aws.amazon.com/blogs/aws/new-t2-unlimited- going-beyond-the-burst-with-high-performance/
 
 
+### IAM vs AMI
+- Identity and access management (IAM)
+- Amazon Machine Image (AMI)
+
+### What’s an AMI?
+- As we saw, AWS comes with base images such as:
+  - Ubuntu
+  - Fedora
+  - RedHat
+  - Windows
+  - Etc...
+- These images can be customised at runtime using EC2 User data
+- But what if we could create our own image, ready to go? 
+- That’s an AMI – an image to use to create our instances 
+- AMIs can be built for Linux or Windows machines
+
+### Why would you use a custom AMI?
+- Using a custom built AMI can provide the following advantages:
+  - Pre-installed packages needed
+  - Faster boot time (no need for ec2 user data at boot time)
+  - Machine comes configured with monitoring / enterprise software
+  - Security concerns – control over the machines in the network
+  - Control of maintenance and updates of AMIs over time
+  - Active Directory Integration out of the box
+  - Installing your app ahead of time (for faster deploys when auto-scaling)
+  - Using someone else’s AMI that is optimised for running an app, DB, etc...
+- ```AMI are built for a specific AWS region (!)```
+
+### Using Public AMIs
+- You can leverage AMIs from other people
+- You can also pay for other people’s AMI by the hour 
+  - These people have optimised the software
+  - The machine is easy to run and configure
+  - You basically rent “exper tise” from the AMI creator
+- AMI can be found and published on the Amazon Marketplace
+- ```Warning:```
+  - Do not use an AMI you don’t trust!
+  - Some AMIs might come with malware or may not be secure for your enterprise
+
+
+
+
+
+
 
 
 ### Quize
