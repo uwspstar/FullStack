@@ -171,17 +171,66 @@ from disasters)
 - Convertible Reserved Instance
   - can change the EC2 instance type 
   - Up to 54% discount
-  - Scheduled Reserved Instances
+- Scheduled Reserved Instances
   - launch within time window you reserve
   - When you require a fraction of day / week / month
   
+### EC2 Spot Instances
+- Can get a discount of up to 90% compared to On-demand
+- You bid a price and get the instance as long as its under the price
+- Price varies based on offer and demand
+- Spot instances are reclaimed with a 2 minute notification warning when the spot price goes above your bid
+- Used for batch jobs, Big Data analysis, or workloads that are resilient to failures.
+- Not great for critical jobs or databases
   
+### EC2 Dedicated Hosts
+- Physical dedicated EC2 server for your use
+- Full control of EC2 Instance placement
+- Visibility into the underlying sockets / physical cores of the hardware
+- Allocated for your account for a 3 year period reservation
+- More expensive
+- Useful for software that have complicated licensing model (BYOL – Bring Your Own License)
+- Or for companies that have strong regulatory or compliance needs  
   
+### EC2 Dedicated Instances
+- Instances running on hardware that’s dedicated to you
+- May share hardware with other instances in same account
+- No control over instance placement (can move hardware after Stop / Start)  
+
+### Which host is right for me?
+- On demand: coming and staying in resort whenever we like, we pay the full price
+- Reserved: like planning ahead and if we plan to stay for a long time, we may get a good discount.
+- Spot instances: the hotel allows people to bid for the empty rooms and the highest bidder keeps the rooms.You can get kicked out at any time
+- Dedicated Hosts: We book an entire building of the resort
   
-  
-  
-  
-  
+### EC2 InstanceTypes – Main ones
+- R: applications that needs a lot of RAM – in-memory caches
+- C: applications that needs good CPU – compute / databases
+- M: applications that are balanced (think “medium”) – general / web app • I: applications that need good local I/O (instance storage) – databases
+- G: applications that need a GPU – video rendering / machine learning
+- T2 / T3: burstable instances (up to a capacity) • T2 / T3 - unlimited: unlimited burst
+- Real-world tip: use https://www.ec2instances.info
+
+### Burstable Instances (T2/T3)
+- AWS has the concept of burstable instances (T2/T3 machines)
+- Burst means that overall, the instance has OK CPU performance.
+- When the machine needs to process something unexpected (a spike in
+load for example), it can burst, and CPU can be VERY good.
+- If the machine bursts, it utilizes “burst credits”
+- If all the credits are gone, the CPU becomes BAD
+- If the machine stops bursting, credits are accumulated over time
+- Burstable instances can be amazing to handle unexpected traffic and getting the insurance that it will be handled correctly
+- If your instance consistently runs low on credit, you need to move to a different kind of non-burstable instance
+
+### T2/T3 Unlimited
+- Nov 2017: It is possible to have an “unlimited burst credit balance”
+- You pay extra money if you go over your credit balance, but you don’t lose in performance
+- Overall, it is a new offering, so be careful, costs could go high if you’re not monitoring the health of your instances
+- Read more here: https://aws.amazon.com/blogs/aws/new-t2-unlimited- going-beyond-the-burst-with-high-performance/
+
+
+
+
 ### Quize
 - ap-northeast-1a is a...```AZ```
   ```Anything that ends with a letter is an AZ```
