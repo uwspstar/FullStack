@@ -159,34 +159,39 @@ from disasters)
 
 ### Quize
 - ap-northeast-1a is a...```AZ```
-```Anything that ends with a letter is an AZ```
+  ```Anything that ends with a letter is an AZ```
 - AZ are in isolated data centers
-```
-this helps guarantee that multi AZ won't all fail at once (due to a meteorological disaster for example). Read more here: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html
-```
+  ```
+  this helps guarantee that multi AZ won't all fail at once (due to a meteorological disaster 
+    for example). Read more here: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html
+  ```
 - IAM components ```Users, Roles, Groups, Policies```
 - IAM is a global service (encompasses all regions)
 - An IAM user can belong to multiple groups
 - You are getting started with AWS and your manager wants things to remain simple yet secure. He wants management of engineers to be easy, and not re-invent the wheel every time someone joins your company. What will you do?
-```
-I'll create multiple IAM users and groups and assign policies to groups.
-New users will be added to groups
-This is best practice when you have a big organisation
-```
+  ```
+  I'll create multiple IAM users and groups and assign policies to groups.
+  New users will be added to groups
+  This is best practice when you have a big organisation
+  ```
 - Never share your IAM credentials. If your colleagues need access to AWS they'll need their own account
 - You pay for an EC2 instance compute component ```only when it's in running state```
 - You are getting a permission error exception when trying to SSH into your Linux Instance
-```
-the key is missing permissions chmod 0400
-The exam expects you to know this, even if you used Windows / Putty to SSH into your instances. 
-If you're a windows user, just have a quick look at the Linux SSH lecture!
-```
+  ```
+  the key is missing permissions chmod 0400
+  The exam expects you to know this, even if you used Windows / Putty to SSH into your instances. 
+  If you're a windows user, just have a quick look at the Linux SSH lecture!
+  ```
 - You are getting a network timeout when trying to SSH into your EC2 instance
-```
-your security groups are misconfigured
-Remember this during your hands on. Any timeout errors 
-(not just in SSH but also HTTP for example) means a misconfiguration of your security groups
-```
+  ```
+  your security groups are misconfigured
+  Remember this during your hands on. Any timeout errors 
+  (not just in SSH but also HTTP for example) means a misconfiguration of your security groups
+  ```
+- When a security group is created, what is the default behavior?
+  ```
+  Deny all traffice inbound and allow all traffic outbound
+  ```
 
 
 
