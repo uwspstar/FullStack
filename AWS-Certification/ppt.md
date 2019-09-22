@@ -192,7 +192,8 @@ from disasters)
   ```
   Deny all traffice inbound and allow all traffic outbound
   ```
-
+- Security groups can reference all of the following except: DNS name
+- you want to provide startup instructions to your EC2 instances, you should be using ```EC2 Use Data```
 
 
 
