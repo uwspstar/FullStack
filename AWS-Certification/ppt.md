@@ -181,7 +181,12 @@ the key is missing permissions chmod 0400
 The exam expects you to know this, even if you used Windows / Putty to SSH into your instances. 
 If you're a windows user, just have a quick look at the Linux SSH lecture!
 ```
-
+- You are getting a network timeout when trying to SSH into your EC2 instance
+```
+your security groups are misconfigured
+Remember this during your hands on. Any timeout errors 
+(not just in SSH but also HTTP for example) means a misconfiguration of your security groups
+```
 
 
 
