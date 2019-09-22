@@ -157,7 +157,22 @@ from disasters)
 - Dedicated Hosts: book an entire physical server, control instance placement
 
 
-
+### Quize
+- ap-northeast-1a is a...```AZ```
+```Anything that ends with a letter is an AZ```
+- AZ are in isolated data centers
+```
+this helps guarantee that multi AZ won't all fail at once (due to a meteorological disaster for example). Read more here: https://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/Concepts.RegionsAndAvailabilityZones.html
+```
+- IAM components ```Users, Roles, Groups, Policies```
+- IAM is a global service (encompasses all regions)
+- An IAM user can belong to multiple groups
+- You are getting started with AWS and your manager wants things to remain simple yet secure. He wants management of engineers to be easy, and not re-invent the wheel every time someone joins your company. What will you do?
+```
+I'll create multiple IAM users and groups and assign policies to groups.
+New users will be added to groups
+This is best practice when you have a big organisation
+```
 
 
 
