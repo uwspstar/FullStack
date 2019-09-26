@@ -3,7 +3,7 @@
 ```
 ++x i.e. pre-increment operator uses the principle ‘change-then-use’ 
 while, x++ i.e. post-increment operator uses the principle ‘use-then-change’.
-
+https://aws.amazon.com/certification/certification-prep/
 // us JS as example
 let arr = [ 0, 1, 2 ]
 let k = 0;
@@ -223,75 +223,75 @@ the control is transferred to the finally block
 and then the code that follows the finally block gets executed.
 ```
 ### struct vs class ```struct is value type on stack, class is reference type in heap```
+
+- Struct
+    ```
+    The struct is value type in C# and it inherits from System.Value Type.
+    Struct is usually used for smaller amounts of data.
+    Struct can’t be inherited to other types.
+    A structure can't be abstract.
+    No need to create object by new keyword.
+    Do not have permission to create any default constructor.
 ```
-Struct
-
-The struct is value type in C# and it inherits from System.Value Type.
-Struct is usually used for smaller amounts of data.
-Struct can’t be inherited to other types.
-A structure can't be abstract.
-No need to create object by new keyword.
-Do not have permission to create any default constructor.
-
-Class
-
-The class is reference type in C# and it inherits from the System.Object Type.
-Classes are usually used for large amounts of data.
-Classes can be inherited to other class.
-A class can be abstract type.
-We can create a default constructor.
+- Class
+    ```
+    The class is reference type in C# and it inherits from the System.Object Type.
+    Classes are usually used for large amounts of data.
+    Classes can be inherited to other class.
+    A class can be abstract type.
+    We can create a default constructor.
 ```
 ### Boxing vs Unboxing
-```
-The process of converting from a value type to a reference type is called boxing.
-The process of converting from a reference type to a value type is called unboxing.
+- boxing ```The process of converting from a value type to a reference type is called boxing.```
+- unboxing ```The process of converting from a reference type to a value type is called unboxing.```
 
-```
 ### C# is managed code 
 ```
 because Common language runtime can compile C# code to Intermediate language.
 ```
 ###  directcast and ctype
-```
-DirectCast is used to convert the type of an object 
-that requires the run-time type to be the same as the specified type in DirectCast.
-
-Ctype is used for conversion where the conversion is defined between the expression and the type.
-```
+- DirectCast 
+    ```
+    DirectCast is used to convert the type of an object 
+    that requires the run-time type to be the same as the specified type in DirectCast.
+    ```
+- Ctype
+    ```
+    Ctype is used for conversion where the conversion is defined between the expression and the type.
+    ```
 ### singleton design pattern in C#?
 
-```
-In singleton pattern, 
-a class can only have one instance and provides access point to it globally.
- 
-Public sealed class Singleton
-{
-  Private static readonly Singleton _instance = new Singleton();
-}
-```
-### Hashtable
-```
-A Hashtable is a collection that stores (Keys, Values) pairs. 
-Here, the Keys are used to find the storage location 
-and is immutable and cannot have duplicate entries in a Hashtable
-```
-### LINQ
-```
-LINQ stands for Language Integrated Query. 
-LINQ is a data querying methodology which provides querying capabilities to .NET languages 
-with a syntax similar to a SQL query
-```
-### anonymous Data in LINQ
-```
-var anonymousData = from pl in data    
-    select new {    
-        pl.FirstName, pl.LastName    
-    }; 
-```
-### dispose vs finalize
-```
-The finalize and dispose, both methods are used to free unmanaged resources.  
+    ```
+    In singleton pattern, 
+    a class can only have one instance and provides access point to it globally.
 
+    Public sealed class Singleton
+    {
+      Private static readonly Singleton _instance = new Singleton();
+    }
+    ```
+### Hashtable
+    ```
+    A Hashtable is a collection that stores (Keys, Values) pairs. 
+    Here, the Keys are used to find the storage location 
+    and is immutable and cannot have duplicate entries in a Hashtable
+    ```
+### LINQ
+    ```
+    LINQ stands for Language Integrated Query. 
+    LINQ is a data querying methodology which provides querying capabilities to .NET languages 
+    with a syntax similar to a SQL query
+    ```
+### anonymous Data in LINQ  ```(var)```
+    ```
+    var anonymousData = from pl in data    
+        select new {    
+            pl.FirstName, pl.LastName    
+        }; 
+    ```
+### dispose vs finalize
+- The finalize and dispose, both methods are used to free unmanaged resources. 
+```
 Finalize used to free unmanaged resources those are not in use 
 like files, database connections in application domain and more, 
 held by an object before that object is destroyed.
