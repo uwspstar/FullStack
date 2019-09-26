@@ -91,28 +91,18 @@ and it will be served by allocating an object from the pool.
 Object Pooling in .NET allows objects to keep in the memory pool 
 so the objects can be reused without recreating them.
 ```
-### Access Modifiers
-```
-there are 6 different types of Access Modifiers.
+### Access Modifiers ```6 different types of Access Modifiers```
 
-
-1) public	There are no restrictions on accessing public members.
-
-2) private	Access is limited to within the class definition. 
+- 1) public	There are no restrictions on accessing public members.
+- 2) private	Access is limited to within the class definition. 
 This is the *** default access modifier type *** if none is formally specified
-
-3) protected	Access is limited to within the class definition 
-and any class that inherits from the class
-
-4) internal	Access is limited exclusively to classes defined within the current project assembly
-
-5) protected internal	Access is limited to the current assembly 
-and types derived from the containing class. 
+- 3) protected	Access is limited to within the class definition and any class that ```inherits``` from the class
+- 4) internal	Access is limited exclusively to classes defined within the ```current project assembly```
+- 5) protected internal	Access is limited to the ``current assembly```  and types derived from the containing class. 
 All members in current project and all members in derived class can access the variables.
-
-6) private protected	Access is limited to the containing class or types derived 
+- 6) private protected	Access is limited to the containing class or types derived 
 from the containing class within the current assembly.
-```
+
 ### IEnumerable<> ```IEnumerable<T>```
 ### IEnumerable and IQueryable
 ```
@@ -152,6 +142,7 @@ provide any additional functionality through inheritance to override its behavio
 
 ```
 ### example for polymorphism
+- overloading
 ### virtual method ```created in the base class that can be overridden in the derived class```
 ```
 A virtual method is a method that can be redefined in derived classes. 
@@ -186,14 +177,14 @@ By default, methods are non-virtual. We can't override a non-virtual method.
 ```
 ### delegate vs events
 ```
-A delegate is a solution for situations 
-in which you want to pass methods around to other methods
+A delegate is a solution for situations in which you want to pass methods around to other methods
 
 An event is just a wrapper for a multicast delegate.
 Adding a public event to a class is almost the same as adding a public multicast delegate field.
 
 In both cases, subscriber objects can register for notifications, 
 and in both cases the publisher object can send notifications to the subscribers. 
+
 However, a public multicast delegate has the undesirable property 
 that external objects can invoke the delegate, 
 something we’d normally want to restrict to the publisher. 
@@ -216,13 +207,12 @@ It plays a vital role in *** improving performance in Garbage Collection. ***
 ```
 ### serialization
 
-### ref & out parameters?
+### ref & out parameters? ```ref must be initialized```
 
 ```
 An argument passed as ref must be initialized before passing to the method 
 whereas out parameter needs not to be initialized before passing to a method.
 ```
-
 ### public, static and void
 
 ### Can multiple catch blocks be executed?
@@ -232,7 +222,7 @@ Once the proper catch code executed,
 the control is transferred to the finally block 
 and then the code that follows the finally block gets executed.
 ```
-### struct vs class
+### struct vs class ```struct is value type on stack, class is reference type in heap```
 ```
 Struct
 
@@ -896,6 +886,11 @@ It is only supposed to be implemented by providers that also implement IQueryabl
 If the provider does not also implement IQueryable<T>, 
 the standard query operators cannot be used on the provider's data source.
 ```
+### REST vs RESTful
+- REST is acronym for REpresentational State Transfer. It is architectural style
+### Comparing SOAP vs REST APIs
+- SOAP – Simple Object Access Protocol : defines a very strongly typed messaging framework which relies heavily on XML and schemas. 
+- REST -REpresentational State Transfer : is an architectural style which makes use of existing and widely adopted technologies, specifically HTTP, and does not create any new standards.
 
 ### HTTP methods
 - HTTP METHOD	CRUD	ENTIRE COLLECTION (E.G. /USERS)	SPECIFIC ITEM (E.G. /USERS/123)
