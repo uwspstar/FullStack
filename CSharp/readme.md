@@ -47,7 +47,8 @@ and this makes it hard to find the original code line number that has thrown the
 
 Throw basically retains the stack information and adds to the stack information in the exception that it is thrown.
 
-Let us see what it means rather speaking so many words to better understand the differences. I am using a console application to easily test and see how the usage of the two differ in their functionality.
+Let us see what it means rather speaking so many words to better understand the differences. 
+I am using a console application to easily test and see how the usage of the two differ in their functionality.
 
 using System;  
 using System.Collections.Generic;  
@@ -78,7 +79,7 @@ It does not show full stack trace.So when you use throw(ex) it will reset stack 
 
 **** So it’s always best practice to use throw instead of throw(ex).
 ```
-### Method overloading
+### Method overloading vs override
 ```
 we can use a method with the same name but different signatures. 
 Object Pool is a container of objects that are ready for use. 
@@ -87,7 +88,8 @@ and it will be served by allocating an object from the pool.
 ```
 ### Object Pooling in .NET
 ```
-Object Pooling in .NET allows objects to keep in the memory pool so the objects can be reused without recreating them.
+Object Pooling in .NET allows objects to keep in the memory pool 
+so the objects can be reused without recreating them.
 ```
 ### Access Modifiers
 ```
@@ -125,7 +127,7 @@ in System.Collections.Generic namespace like List<> and more.
 
 IQueryable
 
-As per MSDN IQueryable interface is intended for implementation by query providers. 
+As per MSDN IQueryable interface is intended for implementation by *** query providers. *** 
 It is only supposed to be implemented by providers that also implement IQueryable<T>. 
 If the provider does not also implement IQueryable<T>, 
 the standard query operators cannot be used on the provider's data source.
