@@ -113,7 +113,7 @@ All members in current project and all members in derived class can access the v
 6) private protected	Access is limited to the containing class or types derived 
 from the containing class within the current assembly.
 ```
-### IEnumerable<>
+### IEnumerable<> ```IEnumerable<T>```
 ### IEnumerable and IQueryable
 ```
 IEnumerable
@@ -147,9 +147,8 @@ Once a class is defined as a sealed class, the class cannot be inherited.
 A sealed class, in C#, 
 is a class that cannot be inherited by any class but can be instantiated. 
 The design intent of a sealed class is to indicate that 
-the class is specialized and there is 
-no need to extend it to provide any additional functionality t
-hrough inheritance to override its behavior
+the class is specialized and there is no need to extend it to 
+provide any additional functionality through inheritance to override its behavior
 
 ```
 ### example for polymorphism
@@ -160,7 +159,8 @@ A virtual method has an implementation in a base class as well as derived the cl
 It is used when a method's basic functionality is the same 
 but sometimes more functionality is needed in the derived class. 
 A virtual method is created in the base class that can be overridden in the derived class. 
-We create a virtual method in the base class using the virtual keyword and that method is overridden in the derived class using the override keyword.
+We create a virtual method in the base class using the virtual keyword 
+and that method is overridden in the derived class using the override keyword.
 
 When a method is declared as a virtual method in a base class 
 then that method can be defined in a base class 
@@ -897,5 +897,11 @@ If the provider does not also implement IQueryable<T>,
 the standard query operators cannot be used on the provider's data source.
 ```
 
-
+### HTTP methods
+- HTTP METHOD	CRUD	ENTIRE COLLECTION (E.G. /USERS)	SPECIFIC ITEM (E.G. /USERS/123)
+- POST	```Create```	201 (Created), ‘Location’ header with link to /users/{id} containing new ID.	Avoid using POST on single resource
+- GET	Read	200 (OK), list of users. Use pagination, sorting and filtering to navigate big lists.	200 (OK), single user. 404 (Not Found), if ID not found or invalid.
+- PUT	```Update/Replace```	404 (Not Found), unless you want to update every resource in the entire collection of resource.	200 (OK) or 204 (No Content). Use 404 (Not Found), if ID not found or invalid.
+- PATCH	```Partial Update/Modify```	404 (Not Found), unless you want to modify the collection itself.	200 (OK) or 204 (No Content). Use 404 (Not Found), if ID not found or invalid.
+- DELETE	Delete	404 (Not Found), unless you want to delete the whole collection — use with caution.	200 (OK). 404 (Not Found), if ID not found or invalid.
 
