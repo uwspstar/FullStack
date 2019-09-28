@@ -120,7 +120,14 @@ It does not show full stack trace.So when you use throw(ex) it will reset stack 
 
 **** So it’s always best practice to use throw instead of throw(ex).
 ```
-
+### Parsing XML. ```CDE```
+```
+- System.Xml.XmlReader.Create(Stream stream) builds an internal model that holds the whole XML file.
+- System.Xml.Linq.XElement can be used to modify the existing XML file.
+- Using System.Xml.Serialization.XmlSerializer can be used when the XML stream is expected to conform to a known XML schema.
+- System.Xml.Linq.XElement.Load(Stream stream) builds an internal model that holds the whole XML file.
+- Executing System.Xml.Linq.XElement.Load(Stream stream) is faster than executing System.Xml.XmlReader.Create(Stream stream).
+```
 ### Recycling Bin.NET LINQ ```AD```
 ```
 public class RecyclingBin
