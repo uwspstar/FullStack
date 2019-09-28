@@ -10,9 +10,50 @@ let k = 0;
 arr[k++] = -1;
 k = 1;
 arr = [-1, 1, 2]
-
-
 ```
+### Which statements are true for an int/Integer built in .NET data type? ```AC```
+``` 
+- It supports bitwise operators.
+- On a 64bit system, it can contain the number 2^48.
+- The ToString method can be used for formatting a numerical value.
+- The expression a/b will return infinity if a has value 1 and b has value 0.
+- It is unsigned by default and does not support negative values.
+```
+### Inheritance.NET OOP ```BCDF```
+A class inherits a base class and it overrides a method from that base class. 
+``` 
+- The base class can be sealed in C# (NotInheritable in Visual Basic).
+- The base class can be abstract in C# (MustInherit in Visual Basic).
+- The method from the base class can be abstract in C# (MustOverride in Visual Basic).
+- The method from the base class can be virtual in C# (Overridable in Visual Basic).
+- The method from the base class does not need to have any modifier.
+- The method from the base class can have only a protected modifier.
+- The method in the overriding class must have the override (Overrides in Visual Basic). 
+```
+###  Crab Inheritance.NET OOP PUBLIC ```AD```
+```
+public class Crab 
+{
+    public virtual string PinchClaws()
+    {
+        return "clap clap";
+    }
+}
+
+public class CoconutCrab : Crab
+{
+    public override string PinchClaws()
+    {
+        return "CLAP CLAP";
+    }
+}
+ 
+- Calling PinchClaws() on an instance of CoconutCrab will return "CLAP CLAP".
+- Calling PinchClaws() on an instance of Crab will return "CLAP CLAP".
+- Casting an instance of CoconutCrab into Crab and then calling the PinchClaws method will return "clap clap".
+- Casting an instance of Crab into CoconutCrab will throw an exception
+```
+
 ###  is vs as ```is (return true or false) vs as (return obj)```
 ```
 we use the "is" operator to check the object type. 
