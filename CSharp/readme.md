@@ -120,6 +120,32 @@ It does not show full stack trace.So when you use throw(ex) it will reset stack 
 
 **** So it’s always best practice to use throw instead of throw(ex).
 ```
+
+### Recycling Bin.NET LINQ ```AD```
+```
+public class RecyclingBin
+{
+    protected List<string> recyclables = new List<string>();
+    
+    public void Add(string recyclable)
+    {
+        if (recyclable.Split(' ').Length > 1)
+        {
+            recyclables.Add(recyclable);
+        }
+    }
+    
+    public List<IGrouping<string, string>> SortRecyclables()
+    {
+        return recyclables.GroupBy(recyclable => recyclable.Split(' ').First()).ToList();
+    }
+}
+ 
+- One of the groups returned from SortRecyclables will have "metal" as its key and will contain "metal bar" and "metal pipe".
+- One of the groups returned from SortRecyclables will have "wire" as its key and will contain "copper wire".
+- The List returned from SortRecyclables will not be evaluated in the SortRecyclables method.
+- The Add method will add a new recyclable only if it contains a space.
+```
 ### Method overloading vs override
 ```
 we can use a method with the same name but different signatures. 
