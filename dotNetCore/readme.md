@@ -20,3 +20,89 @@ Select all the methods that can be used to pass data from the controller to the 
 - By using the view's helper methods.
 - By using ViewData dictionary.
 ```
+### Razor
+```
+public class Meal
+{
+    public string Name { get; set; }
+    public double Calories { get; set; }
+    public List<string> Ingredients { get; set; }
+}
+The following template for Razor view engine accepts a Meal as model. Fill in the blanks with the simplest variants so that correct properties are printed.
+
+<html>
+<body>
+  <h1>Name: @Model.Name</h1>
+  <p>Calories: @Model.Calories</p>
+  <p>Ingredients:</p>
+  <ul>
+    @foreach (var ingredient in Model.Ingredients )
+    {
+        <li>@ingredient</li>
+    }
+  </ul>
+</body>
+</html>
+```
+
+### Add actions to the AddressController
+```
+@model Address
+
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Create a new address</title>
+</head>
+<body>
+  <form method="post" action="/user/address/save">
+    <label asp-for="Street">Street:</label>
+    <input type="text" asp-for="Street" />
+    <label asp-for="City">City:</label>
+    <input type="text" asp-for="City" />
+    <input type="submit" value="Submit" />
+  </form>
+</body>
+</html>
+
+Add actions to the AddressController so that:
+
+On requests to "user/address/create", the view above should be returned.
+On submitting the form from the view above, AddressController should add the Address that was submitted into the AddressController.addresses field and then redirect to the "user/address/create" URL.
+Actions should use attribute routing
+
+using System;
+using System.Collections.Generic;
+using System.Diagnostics;
+using System.Linq;
+using System.Threading.Tasks;
+using Microsoft.AspNetCore.Mvc;
+
+public class AddressController : Controller
+{
+    public static List<Address> addresses = new List<Address>();
+    
+    [Route("user/address/create")]
+    
+    public IActionResult Create() {
+       return View();
+    }
+    
+    
+    [Route("user/address/save")]
+    
+    public IActionResult Save(Address model) {
+    
+       addresses.Add(model);
+    
+       return Redirect("user/address/create");
+    }
+}
+
+public class Address
+{
+	public string Street { get; set; }
+
+	public string City { get; set; }
+}
+```
