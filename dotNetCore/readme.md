@@ -28,7 +28,8 @@ public class Meal
     public double Calories { get; set; }
     public List<string> Ingredients { get; set; }
 }
-The following template for Razor view engine accepts a Meal as model. Fill in the blanks with the simplest variants so that correct properties are printed.
+The following template for Razor view engine accepts a Meal as model. 
+Fill in the blanks with the simplest variants so that correct properties are printed.
 
 <html>
 <body>
@@ -68,7 +69,10 @@ The following template for Razor view engine accepts a Meal as model. Fill in th
 Add actions to the AddressController so that:
 
 On requests to "user/address/create", the view above should be returned.
-On submitting the form from the view above, AddressController should add the Address that was submitted into the AddressController.addresses field and then redirect to the "user/address/create" URL.
+On submitting the form from the view above, 
+AddressController should add the Address 
+that was submitted into the AddressController.addresses field 
+and then redirect to the "user/address/create" URL.
 Actions should use attribute routing
 
 using System;
