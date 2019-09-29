@@ -110,3 +110,26 @@ public class Address
 	public string City { get; set; }
 }
 ```
+### avoid live node (infinite loop)
+```
+function appendChildren(decorateDivFunction) {
+  var allDivs = document.getElementsByTagName("div");
+  allDivs = [].slice.call(allDivs, 0); //avoid live node
+
+  for (var i = 0; i < allDivs.length; i++) {
+    var newDiv = document.createElement("div");
+    decorateDivFunction(newDiv);
+    allDivs[i].appendChild(newDiv);
+  }
+}
+
+// Example case. 
+document.body.innerHTML = `
+<div id="a">
+  <div id="b">
+  </div>
+</div>`;
+
+//appendChildren(function(div) {});
+console.log(document.body.innerHTML);
+```
