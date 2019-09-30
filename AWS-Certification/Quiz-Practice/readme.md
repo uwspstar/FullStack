@@ -10,5 +10,5 @@ Traffic to the internet gateway is allowed by default
 A) When the NAT instance state is terminated     
 B) When the NAT instance state is pending   
 C) When the NAT instance state is running   
-D) When  the NAT instance state is stopped
+D) When the NAT instance state is stopped
 ```
