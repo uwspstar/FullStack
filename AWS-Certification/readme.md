@@ -1,6 +1,13 @@
 
 # AWS Certified Solutions Architect - Associate
-
+- IAM
+```
+- Delete your root access keys
+- Activate MFA on your root account
+- Create individual IAM users
+- Use groups to assign permissions
+- Apply an IAM password policy
+```
 - AWS (Amazon Web Services) is a Cloud Provider
 - They provide you with servers and services that you can use on
 demand and scale easily
