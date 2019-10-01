@@ -1,5 +1,7 @@
 # MongoDB
 - MongoDB is an document database. It stores data in JSON like documents.
+- Instead of tables, a MongoDB database stores its data in collections.
+- Documents are analogous to records or rows in a relational database table.
 - https://www.mongodb.com/download-center/community
 ### Install 
 - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
