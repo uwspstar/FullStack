@@ -488,7 +488,11 @@ It has complete Admin access
   ### AMI Types (EBS vs Instance Store)
  
  
- 
+### what is a VPC flow log.
+
+- Well VPC flow logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces within your VPC.
+- flow log data is stored using Amazon Cloud watch logs, 
+- after you've created a flow log you can view and retrieve data in Amazon Cloud watch logs.
  
  
  
