@@ -3,6 +3,9 @@
 ```
 ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, 
 cloud-based, Internet-connected applications.
+
+ASP.NET Core is a redesign of ASP.NET 4.x. For this reason it was initially, called ASP.NET 5, 
+but later renamed to ASP.NET Core 1.0.
 ```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
