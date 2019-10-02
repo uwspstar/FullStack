@@ -53,7 +53,15 @@ public class CoconutCrab : Crab
 - Casting an instance of CoconutCrab into Crab and then calling the PinchClaws method will return "clap clap".
 - Casting an instance of Crab into CoconutCrab will throw an exception
 ```
-
+### Parsing XML.NET CLASS LIBRARY PUBLIC ```BCD```
+```
+Which statements are true for the .NET technologies you can use to process XML data?
+a. System.Xml.XmlReader.Create(Stream stream) builds an internal model that holds the whole XML file.
+b. System.Xml.Linq.XElement can be used to modify the existing XML file.
+c. Using System.Xml.Serialization.XmlSerializer can be used when the XML stream is expected to conform to a known XML schema.
+d. System.Xml.Linq.XElement.Load(Stream stream) builds an internal model that holds the whole XML file.
+e. Executing System.Xml.Linq.XElement.Load(Stream stream) is faster than executing System.Xml.XmlReader.Create(Stream stream).
+```
 ###  is vs as ```is (return true or false) vs as (return obj)```
 ```
 we use the "is" operator to check the object type. 
