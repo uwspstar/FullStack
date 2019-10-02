@@ -7,6 +7,12 @@ cloud-based, Internet-connected applications.
 ASP.NET Core is a redesign of ASP.NET 4.x. For this reason it was initially, called ASP.NET 5, 
 but later renamed to ASP.NET Core 1.0.
 ```
+### Cross Platform
+```
+ASP.NET 4.x applications run only on windows platform, 
+where as ASP.NET Core applications can be developed and run across different platforms 
+like Windows, macOS, or Linux.
+```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
