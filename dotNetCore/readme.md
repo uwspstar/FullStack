@@ -1,5 +1,9 @@
 # .NET Core
-
+### What is ASP.NET Core and what are it's benefits
+```
+ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, 
+cloud-based, Internet-connected applications.
+```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
