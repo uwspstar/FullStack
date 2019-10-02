@@ -7,6 +7,10 @@ cloud-based, Internet-connected applications.
 ASP.NET Core is a redesign of ASP.NET 4.x. For this reason it was initially, called ASP.NET 5, 
 but later renamed to ASP.NET Core 1.0.
 ```
+### Unified Programming Model for MVC and Web API 
+```
+With ASP.NET core, we use the same unified programming model to create MVC style web applications and ASP.NET Web API's. 
+```
 ### Cross Platform
 ```
 ASP.NET 4.x applications run only on windows platform, 
