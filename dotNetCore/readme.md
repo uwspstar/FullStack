@@ -34,7 +34,20 @@ unit testing ASP.NET Core applications is easy.
 The .NET Core Runtime is already included in the SDK. 
 So, if you have installed the SDK, there is no need to install .NET Core Runtime 
 ```
+### Main() method and it is the ```entry point``` for that console application
+```
+public class Program
+{
+    public static void Main(string[] args)
+    {
+        CreateWebHostBuilder(args).Build().Run();
+    }
 
+    public static IWebHostBuilder CreateWebHostBuilder(string[] args) =>
+        WebHost.CreateDefaultBuilder(args)
+            .UseStartup<Startup>();
+}
+```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
