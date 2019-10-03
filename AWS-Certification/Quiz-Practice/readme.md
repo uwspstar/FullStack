@@ -1,4 +1,8 @@
 # VPC
+### You have five VPCs in a 'hub and spoke' configuration, with VPC 'A' in the center and individually paired with VPCs 'B', 'C', 'D', and 'E', which make up the 'spokes'. There are no other VPC connections. Which of the following VPCs can VPC 'B' communicate with directly?
+```
+As transitive peering is not allowed, VPC 'B' can communicate directly only with VPC 'A'.
+```
 ### How many internet gateways can I attach to my custom VPC ```One```
 ### Which of the following allows you to SSH or RDP into an EC2 instance located in a private subnet
 ```
