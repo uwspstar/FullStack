@@ -128,6 +128,8 @@ We will discuss deploying ASP.NET Core applications on IIS in our upcoming video
 ### With out of process hosting There are 2 web servers - An internal web server ```Kestrel``` and an external web server ```IIS, Nginx or Apache```. 
 ### With InProcess hosting, there is only one web server i.e the IIS that hosts the asp.net core application. 
 ```we do not have the performance penalty of proxying requests between internal and external web server.```
+ 
+
 ### Kestrel is a cross-platform web server for ASP.NET Core. The process used to host the app is ```dotnet.exe```
 ```
 It is supported on all platforms and versions that .NET Core supports. 
@@ -142,6 +144,19 @@ In Kestrel, the process used to host the app is dotnet.exe.
 ### >dotnet run 
 ### In case of Kestrel, the process used to host and execute the app is dotnet.exe
 
+
+### ASP.NET Core ```default``` is ```OutOfProcess hosting```
+### Out of Process Hosting in ASP.NET Core (2 ways to configure Out of Process hosting) 
+
+- Option 1 : Add <AspNetCoreHostingModel> element to the app's project file with a value of OutOfProcess
+```
+<AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+```
+- Option 2 : The default is OutOfProcess hosting. 
+```
+So if we remove the <AspNetCoreHostingModel> element from the project file, 
+OutOfProcess hosting will be used by default.
+```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
