@@ -69,6 +69,8 @@ CreateDefaultBuilder() method sets up a web host with certain defaults.
 ```
 ### As part of setting up a web host, ```Startup``` class is also configured using the ```UseStartup()``` extension method of IWebHostBuilder class.
 ### Startup
+- ConfigureServices() method ```configures services``` required by the application
+- Configure() method sets up the application's ```request processing pipeline```
 ```
 public class Startup
 {
