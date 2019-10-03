@@ -1,4 +1,8 @@
 # VPC
+
+### Security groups act like a firewall at the instance level, whereas _________ are an additional layer of security that act at the subnet level. 
+```NACLs```
+### Security Groups are stateful and Network Access Control Lists are stateless.
 ### You have five VPCs in a 'hub and spoke' configuration, with VPC 'A' in the center and individually paired with VPCs 'B', 'C', 'D', and 'E', which make up the 'spokes'. There are no other VPC connections. Which of the following VPCs can VPC 'B' communicate with directly?
 ```
 As transitive peering is not allowed, VPC 'B' can communicate directly only with VPC 'A'.
