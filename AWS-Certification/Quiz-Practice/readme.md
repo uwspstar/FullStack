@@ -1,3 +1,5 @@
+# VPC
+
 ### Which of the below statements is true for any VPC security group, by default, when it is created? ```C```
 ```
 All inbound traffic rule will be explicitly denied
@@ -12,6 +14,7 @@ B) When the NAT instance state is pending
 C) When the NAT instance state is running   
 D) When the NAT instance state is stopped
 ```
+
 ### Are you permitted to conduct your own vulnerability scans on your own VPC without alerting AWS first?
 ```
 Until recently customers were not permitted to conduct penetration testing without AWS engagement. 
