@@ -148,14 +148,19 @@ In Kestrel, the process used to host the app is dotnet.exe.
 ### ASP.NET Core ```default``` is ```OutOfProcess hosting```
 ### Out of Process Hosting in ASP.NET Core (2 ways to configure Out of Process hosting) 
 
-- Option 1 : Add <AspNetCoreHostingModel> element to the app's project file with a value of OutOfProcess
+	- Option 1 : Add <AspNetCoreHostingModel> element to the app's project file with a value of OutOfProcess
+	```
+	<AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
+	```
+	- Option 2 : The default is OutOfProcess hosting. 
+	```
+	So if we remove the <AspNetCoreHostingModel> element from the project file, 
+	OutOfProcess hosting will be used by default.
+	```
+### With out of process hosting ```The internal web server is Kestrel and the external web server can be IIS, Nginx or Apache.```
 ```
-<AspNetCoreHostingModel>OutOfProcess</AspNetCoreHostingModel>
-```
-- Option 2 : The default is OutOfProcess hosting. 
-```
-So if we remove the <AspNetCoreHostingModel> element from the project file, 
-OutOfProcess hosting will be used by default.
+Depending on how you are running the asp.net core application, 
+the external web server may or may not be used. 
 ```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
