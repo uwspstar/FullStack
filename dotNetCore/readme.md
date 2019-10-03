@@ -62,11 +62,15 @@ which runs the web application and it begins listening for incoming HTTP request
 - CreateWebHostBuilder() method calls CreateDefaultBuilder() static method of the WebHost class.
 ```
 ### CreateDefaultBuilder() sets up a web host with certain defaults
+- Setting up the web server 
+- Loading the host and application configuration from various configuration sources and 
+- Configuring logging
 ```
 CreateDefaultBuilder() method creates a web host with pre-configured defaults. 
 CreateDefaultBuilder() method does several things to create a web host.
 CreateDefaultBuilder() method sets up a web host with certain defaults.
 ```
+### An ASP.NET core application can be hosted ```InProcess``` or ```OutOfProcess```.
 ### As part of setting up a web host, ```Startup``` class is also configured using the ```UseStartup()``` extension method of IWebHostBuilder class.
 ### Startup
 - ConfigureServices() method ```configures services``` required by the application
