@@ -67,6 +67,28 @@ CreateDefaultBuilder() method creates a web host with pre-configured defaults.
 CreateDefaultBuilder() method does several things to create a web host.
 CreateDefaultBuilder() method sets up a web host with certain defaults.
 ```
+### As part of setting up a web host, ```Startup``` class is also configured using the ```UseStartup()``` extension method of IWebHostBuilder class.
+### Startup
+```
+public class Startup
+{
+    public void ConfigureServices(IServiceCollection services)
+    { }
+
+    public void Configure(IApplicationBuilder app, IHostingEnvironment env)
+    {
+        if (env.IsDevelopment())
+        {
+            app.UseDeveloperExceptionPage();
+        }
+
+        app.Run(async (context) =>
+        {
+            await context.Response.WriteAsync("Hello World!");
+        });
+    }
+}
+```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
