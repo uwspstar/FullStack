@@ -1,5 +1,16 @@
 # VPC
-
+### To save administration headaches, a consultant advises that you leave all security groups in web-facing subnets open on port 22 to 0.0.0.0/0 CIDR. That way, you can connect wherever you are in the world. Is this a good security design?
+```
+0.0.0.0/0 would allow ANYONE from ANYWHERE to connect to your instances. 
+This is generally a bad plan. 
+The phrase 'web-facing subnets' does not mean just web servers. 
+It would include any instances in that subnet some of which you may not strangers attacking. 
+You would only allow 0.0.0.0/0 on port 80 or 443 to to connect to your public facing Web Servers, 
+or preferably only to an ELB. 
+Good security starts by limiting public access to only what the customer needs. 
+Please see the AWS Security whitepaper for complete details.
+```
+### By default, how many VPCs am I allowed in each AWS region? ```FIVE```
 ### Security groups act like a firewall at the instance level, whereas _________ are an additional layer of security that act at the subnet level. 
 ```NACLs```
 ### Security Groups are stateful and Network Access Control Lists are stateless.
