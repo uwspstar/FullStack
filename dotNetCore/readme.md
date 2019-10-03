@@ -74,9 +74,11 @@ CreateDefaultBuilder() method sets up a web host with certain defaults.
 ```
 public class Startup
 {
+	//configures services
     public void ConfigureServices(IServiceCollection services)
     { }
-
+    
+	// processing pipeline
     public void Configure(IApplicationBuilder app, IHostingEnvironment env)
     {
         if (env.IsDevelopment())
