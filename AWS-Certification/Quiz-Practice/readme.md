@@ -30,3 +30,9 @@ Plus a default SG with an allow rule 'All traffic, all protocols, all ports, fro
 ```
 You may have only one internet gateway per VPC.
 ```
+### When peering VPCs, you may peer your VPC only with another VPC in your same AWS account. ```FALSE```
+```
+You may peer a VPC to another VPC that's in your same account, or to any VPC in any other account.
+```
+### An application load balancer must be deployed into at least two subnets. ```TRUE```
+```An application load balancer must be deployed into at least two subnets.```
