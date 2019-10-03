@@ -7,6 +7,9 @@ cloud-based, Internet-connected applications.
 ASP.NET Core is a redesign of ASP.NET 4.x. For this reason it was initially, called ASP.NET 5, 
 but later renamed to ASP.NET Core 1.0.
 ```
+### Dependency Injection 
+```ASP.NET Core has built-in support for dependency injection.```
+
 ### Unified Programming Model for MVC and Web API 
 ```
 With ASP.NET core, we use the same unified programming model to create MVC style web applications and ASP.NET Web API's. 
@@ -17,9 +20,27 @@ ASP.NET 4.x applications run only on windows platform,
 where as ASP.NET Core applications can be developed and run across different platforms 
 like Windows, macOS, or Linux.
 ```
+### Testability
+```
+With built-in dependency injection 
+and the unified programming model for creating Web Applications and Web API's, 
+unit testing ASP.NET Core applications is easy.
+```
+### Middleware ```Modular HTTP Request Pipeline``` 
+```ASP.NET Core Provides Modularity with Middleware Components.``` 
+
+### SDK
+```
+The .NET Core Runtime is already included in the SDK. 
+So, if you have installed the SDK, there is no need to install .NET Core Runtime 
+```
+
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
+
+### the project file does not contain any folder or file reference
+```The File System determines what files and folders belong to the project.```
 
 ### 1. Action Attributes ```CD```
 ```
