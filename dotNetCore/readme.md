@@ -97,6 +97,39 @@ public class Startup
     }
 }
 ```
+### InProcess hosting in ASP.NET Core ```defaults to the in-process hosting```
+```
+To configure InProcess hosting, 
+add <AspNetCoreHostingModel> element to the app's project file with a value of InProcess
+<AspNetCoreHostingModel>InProcess</AspNetCoreHostingModel>
+
+When we create a new ASP.NET Core project using one of the available project templates, 
+the project defaults to the in-process hosting model for all IIS and IIS Express scenarios.
+
+```
+### UseIIS() method ```IIS worker process (w3wp.exe or iisexpress.exe)```
+```
+In case of InProcess hosting, CreateDefaultBuilder() method calls UseIIS() method 
+and host the app inside of the IIS worker process (w3wp.exe or iisexpress.exe). 
+
+From a performance standpoint, 
+InProcess hosting delivers significantly higher request throughput than OutOfProcess hosting.
+
+In the case of IIS, the process name that executes the app is w3wp 
+and in the case of IIS Express it is iisexpress.
+```
+### To get the process name executing the app, use ```System.Diagnostics.Process.GetCurrentProcess().ProcessName```
+###  the project from Visual Studio default uses ```IISExpress```. We do not IISExpress it for production 
+```
+IIS Express is a lightweight, self-contained version of IIS, 
+optimized for application development. We do not use it for production. In production we use IIS.
+We will discuss deploying ASP.NET Core applications on IIS in our upcoming videos.
+```
+### With out of process hosting There are 2 web servers - An internal web server ```Kestrel``` and an external web server ```IIS, Nginx or Apache```. 
+### With InProcess hosting, there is only one web server i.e the IIS that hosts the asp.net core application. 
+```we do not have the performance penalty of proxying requests between internal and external web server.```
+### out of process hosting
+
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
