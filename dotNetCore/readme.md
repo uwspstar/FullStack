@@ -182,6 +182,19 @@ provides an additional layer of configuration and security
 ```
 IIS Express takes the incoming HTTP request and forwards it to Kestrel for processing. Kestrel process the request and sends the response to IIS Express. IIS Express, in turn sends that response to the browser
 ```
+### With Out of Process Hosting, whether you use a reverse proxy server or not,  it is the Kestrel server that hosts the application and process the request. 
+```
+The reverse proxy server if used,
+takes the incoming HTTP request and forwards it to the Kestrel server.
+Similarly it takes the response from the Kestrel server and sends it to the client. 
+So the name of the process that hosts the application is dotnet.exe.
+```
+### Can we run an asp.net core application without using the built in kestrel web server ? ```YES```
+```
+If we use the InProcess hosting model, 
+the application is hosted inside of the IIS worker process (w3wp.exe or iisexpress.exe). 
+Kestrel is not used with InProcess hosting model.
+```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
