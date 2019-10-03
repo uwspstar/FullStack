@@ -12,7 +12,8 @@ but later renamed to ASP.NET Core 1.0.
 
 ### Unified Programming Model for MVC and Web API 
 ```
-With ASP.NET core, we use the same unified programming model to create MVC style web applications and ASP.NET Web API's. 
+With ASP.NET core, we use the same unified programming model to 
+create MVC style web applications and ASP.NET Web API's. 
 ```
 ### Cross Platform
 ```
