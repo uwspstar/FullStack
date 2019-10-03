@@ -1,5 +1,16 @@
 # VPC
-
+### How many internet gateways can I attach to my custom VPC ```One```
+### Which of the following allows you to SSH or RDP into an EC2 instance located in a private subnet
+```
+A Bastion host allows you to securely administer (via SSH or RDP) an EC2 instance 
+located in a private subnet. Don't confuse Bastions and NATs, 
+which allow outside traffic to reach an instance in a private subnet.
+```
+### a chief advantage of using VPC endpoints to connect your VPC to services such as S3
+```
+In contrast to a NAT gateway, traffic between your VPC and the other service 
+does not leave the Amazon network when using VPC endpoints.
+```
 ### Which of the below statements is true for any VPC security group, by default, when it is created? ```C```
 ```
 All inbound traffic rule will be explicitly denied
