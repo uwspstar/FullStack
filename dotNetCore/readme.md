@@ -128,7 +128,19 @@ We will discuss deploying ASP.NET Core applications on IIS in our upcoming video
 ### With out of process hosting There are 2 web servers - An internal web server ```Kestrel``` and an external web server ```IIS, Nginx or Apache```. 
 ### With InProcess hosting, there is only one web server i.e the IIS that hosts the asp.net core application. 
 ```we do not have the performance penalty of proxying requests between internal and external web server.```
-### out of process hosting
+### Kestrel is a cross-platform web server for ASP.NET Core. The process used to host the app is ```dotnet.exe```
+```
+It is supported on all platforms and versions that .NET Core supports. 
+It is included by default as internal server in ASP.NET Core. 
+Kestrel can be used, by itself as an edge server i.e Internet-facing web server 
+that can directly process the incoming HTTP requests from the client. 
+In Kestrel, the process used to host the app is dotnet.exe.
+```
+### When we run a .NET Core application using the .NET Core CLI (Command-Line Interface), the application uses Kestrel as the web server. 
+
+### The .NET Core CLI is a cross-platform tool
+### >dotnet run 
+### In case of Kestrel, the process used to host and execute the app is dotnet.exe
 
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
