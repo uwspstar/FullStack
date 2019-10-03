@@ -162,6 +162,26 @@ In Kestrel, the process used to host the app is dotnet.exe.
 Depending on how you are running the asp.net core application, 
 the external web server may or may not be used. 
 ```
+
+### Kestrel can be used as the internet facing web server that process the incoming HTTP requests directly. 
+```
+In this model we are not using an external web server. 
+Only Kestrel is used and it is this server that faces the internet, 
+to directly handle the incoming HTTP requests. 
+When we run the asp.net core application using the .NET core CLI, 
+Kestrel is the only web server that is used to handle and process the incoming HTTP request.
+```
+### Kestrel can also be used in combination with a reverse proxy server, such as IIS, Nginx, or Apache.
+### If Kestrel can be used by itself as a web server, why do we need a reverse proxy server.
+```
+With Out of Process Hosting, 
+using a reverse proxy server is a good choice as it 
+provides an additional layer of configuration and security
+```
+### When we run an asp.net core application directly from Visual Studio it uses by default IIS Express. Since we have configured our application to use Out of Process hosting, IIS Express in this case acts a reverse proxy server.
+```
+IIS Express takes the incoming HTTP request and forwards it to Kestrel for processing. Kestrel process the request and sends the response to IIS Express. IIS Express, in turn sends that response to the browser
+```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
 - AddSingleton vs AddScoped vs AddTransient https://www.youtube.com/watch?v=v6Nr7Zman_Y
