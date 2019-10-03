@@ -36,6 +36,9 @@ So, if you have installed the SDK, there is no need to install .NET Core Runtime
 ```
 ### Main() method and it is the ```entry point``` for that console application
 ```
+an asp.net core application initially starts as a console application 
+and the Main() method in Program.cs file is the entry point. 
+
 public class Program
 {
     public static void Main(string[] args)
@@ -47,6 +50,21 @@ public class Program
         WebHost.CreateDefaultBuilder(args)
             .UseStartup<Startup>();
 }
+```
+### CreateWebHostBuilder() ```calls CreateDefaultBuilder() static method```
+```
+- CreateWebHostBuilder() method returns an object that implements IWebHostBuilder. 
+- On this object, Build() method is called 
+which builds a web host that hosts our asp.net core web application.
+- On the web host Run() method is called, 
+which runs the web application and it begins listening for incoming HTTP requests.
+- CreateWebHostBuilder() method calls CreateDefaultBuilder() static method of the WebHost class.
+```
+### CreateDefaultBuilder() sets up a web host with certain defaults
+```
+CreateDefaultBuilder() method creates a web host with pre-configured defaults. 
+CreateDefaultBuilder() method does several things to create a web host.
+CreateDefaultBuilder() method sets up a web host with certain defaults.
 ```
 ### ASP NET Core dependency injection
 - ASP NET Core dependency injection tutorial https://www.youtube.com/watch?v=BPGtVpu81ek
