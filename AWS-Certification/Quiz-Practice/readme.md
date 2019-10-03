@@ -26,3 +26,7 @@ In a custom VPC with new subnets in each AZ,
 there is a route that supports communication across all subnets/AZs. 
 Plus a default SG with an allow rule 'All traffic, all protocols, all ports, from anything using this default SG'.
 ```
+###  You can accelerate your application by adding a second internet gateway to your VPC. ```FALSE```
+```
+You may have only one internet gateway per VPC.
+```
