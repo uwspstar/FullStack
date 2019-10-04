@@ -81,3 +81,5 @@ You may peer a VPC to another VPC that's in your same account, or to any VPC in 
 ```
 # AMI
 ### Creating an AMI after installing the applications allows you to start more EC2 instances directly from that AMI, hence bypassing the need to install the application (as it's already installed)
+
+# ELB & ASG
