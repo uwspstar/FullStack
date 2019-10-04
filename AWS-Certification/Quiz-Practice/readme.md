@@ -67,3 +67,15 @@ You may peer a VPC to another VPC that's in your same account, or to any VPC in 
 ```
 ### An application load balancer must be deployed into at least two subnets. ```TRUE```
 ```An application load balancer must be deployed into at least two subnets.```
+
+# EC2
+### EC2 Instance Types – Main ones
+```
+• R: applications that needs a lot of RAM – in-memory caches
+• C: applications that needs good CPU – compute / databases
+• M: applications that are balanced (think “medium”) – general / web app
+• I: applications that need good local I/O (instance storage) – databases
+• G: applications that need a GPU – video rendering / machine learning
+• T2 / T3: burstable instances (up to a capacity)
+• T2 / T3 - unlimited: unlimited burst
+```
