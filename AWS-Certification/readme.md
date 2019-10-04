@@ -493,7 +493,8 @@ It has complete Admin access
 - Well VPC flow logs is a feature that enables you to capture information about the IP traffic going to and from network interfaces within your VPC.
 - flow log data is stored using Amazon Cloud watch logs, 
 - after you've created a flow log you can view and retrieve data in Amazon Cloud watch logs.
- 
+
+### Creating an AMI after installing the applications allows you to start more EC2 instances directly from that AMI, hence bypassing the need to install the application (as it's already installed)
  
  
  
