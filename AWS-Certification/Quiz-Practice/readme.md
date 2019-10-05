@@ -1,4 +1,16 @@
 # VPC
+### You created a subnet in a custom VPC and launched an EC2 instance in that subnet. During the EC2 instance creation, using AWS console, you did not choose the option to assign a public IP address to your instance. This instance now needs access to the Internet, but it has no public IP address. ```D```
+```
+How would you solve this internet connectivity issue for this EC2 instance?  
+
+A- The instance will always have a public DNS attached to the instance by default     
+
+B- Allocate and attach an Elastic IP directly to the instance     
+
+C- The instance would not launch if the public IP is not assigned     
+
+D- Create an internet gateway, attach it to the VPC, do the needed route table  configuration for a public subnet. Adjust security group, and N ACLs  configurations to facilitate this, and finally, attach an elastic IP to the instance to connect to the Internet  
+```
 ### You are the AWS SME at YCDIT2, Inc. Your AWS SysOps administrator created a VPC with a public subnet. He created and attached an Internet Gateway to the VPC, and launched an EC2 instance with a public IP in the subnet. He also created a security group for the EC2 instance. When trying to connect to the EC2 instance from the Internet, he was not able to. From the statements below, which could be a possible reason for his inability to connect?  (Choose 2) ```AB```
 ```
 A- There is no entry in the route table pointing to the internet gateway as a Target     
