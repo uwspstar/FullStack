@@ -563,7 +563,10 @@ however Lambda like EC2 and ECS supports hyper-threading on one or more virtual 
 (if your code supports hyper-threading).
 ```
 
+# EC2
+### Spread Placement Groups can be deployed across availability zones since they spread the instances further apart. Cluster Placement Groups can only exist in one Availabiity Zone since they are focused on keeping instances together, which you cannot do across Availability Zones
 
+### There are slight differences between a normal 'new' Security Group and a 'default' security group in the default VPC. For an 'new' security group nothing is allowed in by default.
 
 
 
