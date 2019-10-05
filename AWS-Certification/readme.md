@@ -498,7 +498,7 @@ It has complete Admin access
  
 ### Although creating a new NIC & associating an EIP also results in your instance being accessible from the internet, it leaves your instance with 2 NICs & 2 private IPs as well as the public address and is therefore not the simplest solution. 
 
-### By default, any user-created VPC subnet WILL NOT automatically assign public IPv4 addresses to instances – the only subnet that does this is the “default” VPC subnets automatically created by AWS in your account.
+### By default, any user-created ```VPC subnet``` WILL NOT automatically assign public IPv4 addresses to instances – the only ```subnet``` that does this is the ```“default” VPC subnets``` automatically created by AWS in your account.
 
 ### Each subnet must reside entirely within one Availability Zone and cannot span zones.
 
@@ -507,6 +507,8 @@ It has complete Admin access
 ### In a custom VPC with new subnets in each AZ, there is a route that supports communication across all subnets/AZs. Plus a default SG with an allow rule 'All traffic, all protocols, all ports, from anything using this default SG'.
 
 ### You may have only one internet gateway per VPC.
+
+### You may peer a VPC to another VPC that's in your same account, or to any VPC in any other account.
  
  
  
