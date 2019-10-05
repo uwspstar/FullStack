@@ -1,4 +1,8 @@
 # VPC
+### You are running at desired capacity of 3 and the maximum capacity of 3. You have alarms set at 60% CPU to scale out your application. Your application is now running at 80% capacity. What will happen?
+```
+The capacity of your ASG cannot go over the maximum capacity you have allocated during scale out events
+```
 ### You created a subnet in a custom VPC and launched an EC2 instance in that subnet. During the EC2 instance creation, using AWS console, you did not choose the option to assign a public IP address to your instance. This instance now needs access to the Internet, but it has no public IP address. ```D```
 ```
 How would you solve this internet connectivity issue for this EC2 instance?  
