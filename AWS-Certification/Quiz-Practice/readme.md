@@ -1,4 +1,15 @@
 # VPC
+### You are the AWS architect at YCDIT2, Inc. You have been tasked to design and launch an EC2 NAT instance in a public subnet in your client’s VPC. After creating and successfully testing the NAT Instance. You have also updated you private subnet’s route table such that the NAT device is the target for traffic destined to the Internet. However, the private subnet EC2 instances are still not able to connect to the Internet for updates and patch download. ```D```
+```
+Which of the following steps could be a possible reason for this problem?  
+
+A) NAT instance is launched with only one ENI in the public subnet     
+B) The NAT instance has not been configured with the proper NAT rules to 
+process the private instance’s traffic intended for the internet     
+C) The NAT instance will not work, you need to configure static, 
+one-to-one NATon the VPC Internet Gateway for private subnet’s instances to connect to the Internet     
+D) Disabling the Source/Destination Check attribute on the NAT instance
+```
 ### To save administration headaches, a consultant advises that you leave all security groups in web-facing subnets open on port 22 to 0.0.0.0/0 CIDR. That way, you can connect wherever you are in the world. Is this a good security design?
 ```
 0.0.0.0/0 would allow ANYONE from ANYWHERE to connect to your instances. 
