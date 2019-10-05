@@ -543,8 +543,11 @@ Lambda needs to have a role associated with it that provide credentials with rig
 This is exactly the same as needing a role on an EC2 instance to access S3 or DDB.
 ```
  
-  
-  
+### In which direction(s) does Lambda scale automatically?  
+```
+Lambda scales out automatically - each time your function is triggered, a new, 
+separate instance of that function is started. There are limits, but these can be adjusted on request.
+```
   
 
 
