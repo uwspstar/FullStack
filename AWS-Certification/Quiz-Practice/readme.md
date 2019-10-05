@@ -99,3 +99,7 @@ Look into the X-Forwarded-For header in the backend. This header is created by y
 ```
 Health checks ensure your ELB won't send traffic to unhealthy (crashed) instances
 ```
+### You are designing a high performance application that will require millions of connections to be handled, as well as low latency. The best Load Balancer for this is
+```
+NLB provide the highest performance if your application needs it
+```
