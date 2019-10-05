@@ -548,7 +548,14 @@ This is exactly the same as needing a role on an EC2 instance to access S3 or DD
 Lambda scales out automatically - each time your function is triggered, a new, 
 separate instance of that function is started. There are limits, but these can be adjusted on request.
 ```
-  
+### AWS X-Ray helps developers analyze and debug production, distributed applications, such as those built using a microservices & serverless architectures.
+
+### You have created a serverless application to add metadata to images that are uploaded to a specific S3 bucket. To do this, your lambda function is configured to trigger whenever a new image is created in the bucket. What will happen when multiple users upload multiple different images at the same time?
+```
+Each time a Lambda function is triggered, 
+an isolated instance of that function is invoked. 
+Multiple triggers result in multiple concurrent invocations, one for each time it is triggered
+```
 
 
 
