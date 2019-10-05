@@ -521,13 +521,12 @@ It has complete Admin access
 As transitive peering is not allowed, VPC 'B' can communicate directly only with VPC 'A'.
 ```
  
- 
- 
- 
- 
- 
- 
-  
+### Security Groups are stateful and Network Access Control Lists are stateless.
+
+### Security groups act like a firewall at the instance level, whereas _________ are an additional layer of security that act at the subnet level. 
+```
+Network ACLs
+```
 
   
  
