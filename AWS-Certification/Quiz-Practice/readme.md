@@ -1,4 +1,41 @@
-# ALB
+# ELB & ASG
+### Your application load balancer is hosting 3 target groups with hostnames being users.example.com, api.external.example.com and checkout.example.com. You would like to expose HTTPS traffic for each of these hostnames. How do you configure your ALB SSL certificates to make this work?
+```
+SNI (Server Name Indication) is a feature allowing you to expose multiple SSL certs if the client supports it. Read more here: https://aws.amazon.com/blogs/aws/new-application-load-balancer-sni/
+```
+### Load Balancers provide a a static DNS name we can use in our application. The reason being that AWS wants your load balancer to be accessible using a static endpoint, even if the underlying infrastructure that AWS manages changes.
+
+### You are running a website with a load balancer and 10 EC2 instances. Your users are complaining about the fact that your website always asks them to re-authenticate when they switch pages. You are puzzled, because it's working just fine on your machine and in the dev environment with 1 server. What could be the reason?
+```
+Stickiness ensures traffic is sent to the same backend instance for a client. This helps maintaining session data
+```
+
+### Your application is using an Application Load Balancer. It turns out your application only sees traffic coming from private IP which are in fact your load balancer's. What should you do to find the true IP of the clients connected to your website?
+```
+Look into the X-Forwarded-For header in the backend. This header is created by your load balancer and passed on to your backend application
+```
+### You quickly created an ELB and it turns out your users are complaining about the fact that sometimes, the servers just don't work. You realise that indeed, your servers do crash from time to time. How to protect your users from seeing these crashes?
+```
+Health checks ensure your ELB won't send traffic to unhealthy (crashed) instances
+```
+### You are designing a high performance application that will require millions of connections to be handled, as well as low latency. The best Load Balancer for this is
+```
+NLB provide the highest performance if your application needs it
+```
+### Application Load Balancers handle all these protocols except ```TCP```
+
+### You are running a website with a load balancer and 10 EC2 instances. Your users are complaining about the fact that your website always asks them to re-authenticate when they switch pages. You are puzzled, because it's working just fine on your machine and in the dev environment with 1 server. What could be the reason?
+```
+```
+### Load Balancers provide a
+```
+static DNS name we can use in our application
+The reason being that AWS wants your load balancer to be accessible using a static endpoint, even if the underlying infrastructure that AWS manages changes
+```
+### An ASG spawns across 2 availability zones. AZ-A has 3 EC2 instances and AZ-B has 4 EC2 instances. The ASG is about to go into a scale-in event. What will happen? ```balance across AZ first```
+```
+Make sure you remember the Default Termination Policy for ASG. It tries to balance across AZ first, and then delete based on the age of the launch configuration.
+```
 ### A web application hosted in EC2 is managed by an ASG. You are exposing this application through an Application Load Balancer. The ALB is deployed on the VPC with the following CIDR: 192.168.0.0/18. How do you configure the EC2 instance security group to ensure only the ALB can access the port 80?
 ```
 Open up the EC2 security on port 80 to the ALB's Security group
@@ -184,25 +221,3 @@ You may peer a VPC to another VPC that's in your same account, or to any VPC in 
 # AMI
 ### Creating an AMI after installing the applications allows you to start more EC2 instances directly from that AMI, hence bypassing the need to install the application (as it's already installed)
 
-# ELB & ASG
-
-### Load Balancers provide a a static DNS name we can use in our application. The reason being that AWS wants your load balancer to be accessible using a static endpoint, even if the underlying infrastructure that AWS manages changes.
-
-### You are running a website with a load balancer and 10 EC2 instances. Your users are complaining about the fact that your website always asks them to re-authenticate when they switch pages. You are puzzled, because it's working just fine on your machine and in the dev environment with 1 server. What could be the reason?
-```
-Stickiness ensures traffic is sent to the same backend instance for a client. This helps maintaining session data
-```
-
-### Your application is using an Application Load Balancer. It turns out your application only sees traffic coming from private IP which are in fact your load balancer's. What should you do to find the true IP of the clients connected to your website?
-```
-Look into the X-Forwarded-For header in the backend. This header is created by your load balancer and passed on to your backend application
-```
-### You quickly created an ELB and it turns out your users are complaining about the fact that sometimes, the servers just don't work. You realise that indeed, your servers do crash from time to time. How to protect your users from seeing these crashes?
-```
-Health checks ensure your ELB won't send traffic to unhealthy (crashed) instances
-```
-### You are designing a high performance application that will require millions of connections to be handled, as well as low latency. The best Load Balancer for this is
-```
-NLB provide the highest performance if your application needs it
-```
-### Application Load Balancers handle all these protocols except ```TCP```
