@@ -496,6 +496,13 @@ It has complete Admin access
 
 ### Creating an AMI after installing the applications allows you to start more EC2 instances directly from that AMI, hence bypassing the need to install the application (as it's already installed)
  
+### Although creating a new NIC & associating an EIP also results in your instance being accessible from the internet, it leaves your instance with 2 NICs & 2 private IPs as well as the public address and is therefore not the simplest solution. 
+
+### By default, any user-created VPC subnet WILL NOT automatically assign public IPv4 addresses to instances – the only subnet that does this is the “default” VPC subnets automatically created by AWS in your account.
+
+### Each subnet must reside entirely within one Availability Zone and cannot span zones.
+
+### Until recently customers were not permitted to conduct penetration testing without AWS engagement. However that has changed. There are still conditions though.
  
  
  
