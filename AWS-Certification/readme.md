@@ -556,6 +556,15 @@ Each time a Lambda function is triggered,
 an isolated instance of that function is invoked. 
 Multiple triggers result in multiple concurrent invocations, one for each time it is triggered
 ```
+### As a DevOps engineer you are told to prepare complete solution to run a piece of code that required multi-threaded processing. The code has been running on an old custom-built server based around a 4 core Intel Xeon processor. Which of these best describe the AWS compute services that could be used?
+```
+The exact ratio of cores to memory has varied over time for Lambda instances, 
+however Lambda like EC2 and ECS supports hyper-threading on one or more virtual CPUs
+(if your code supports hyper-threading).
+```
+
+
+
 
 
 
