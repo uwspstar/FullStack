@@ -83,4 +83,15 @@ You may peer a VPC to another VPC that's in your same account, or to any VPC in 
 ### Creating an AMI after installing the applications allows you to start more EC2 instances directly from that AMI, hence bypassing the need to install the application (as it's already installed)
 
 # ELB & ASG
-### The reason being that AWS wants your load balancer to be accessible using a static endpoint, even if the underlying infrastructure that AWS manages changes
+
+### Load Balancers provide a a static DNS name we can use in our application. The reason being that AWS wants your load balancer to be accessible using a static endpoint, even if the underlying infrastructure that AWS manages changes.
+
+### You are running a website with a load balancer and 10 EC2 instances. Your users are complaining about the fact that your website always asks them to re-authenticate when they switch pages. You are puzzled, because it's working just fine on your machine and in the dev environment with 1 server. What could be the reason?
+```
+Stickiness ensures traffic is sent to the same backend instance for a client. This helps maintaining session data
+```
+
+### Your application is using an Application Load Balancer. It turns out your application only sees traffic coming from private IP which are in fact your load balancer's. What should you do to find the true IP of the clients connected to your website?
+```
+Look into the X-Forwarded-For header in the backend. This header is created by your load balancer and passed on to your backend application
+```
