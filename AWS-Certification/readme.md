@@ -568,9 +568,9 @@ however Lambda like EC2 and ECS supports hyper-threading on one or more virtual 
 
 ### There are slight differences between a normal 'new' Security Group and a 'default' security group in the default VPC. For an 'new' security group nothing is allowed in by default.
 
+### Tagging is a key part of managing an environment. Even in a lab, it is easy to lose track of the purpose of a resources, and tricky determine why it was created and if it is still needed. This can rapidly translate into lost time and lost money.
 
-
-
+### Spread placement groups have a specific limitation that you can only have a maximum of 7 running instances per Availability Zone and therefore this is the only correct option. Deploying instances in a single Availability Zone is unique to Cluster Placement Groups only and therefore is not correct. The last two remaining options are common to all placement group types and so are not specific to Spread Placement Groups.
 
 
 
