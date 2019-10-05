@@ -504,6 +504,9 @@ It has complete Admin access
 
 ### Until recently customers were not permitted to conduct penetration testing without AWS engagement. However that has changed. There are still conditions though.
  
+### In a custom VPC with new subnets in each AZ, there is a route that supports communication across all subnets/AZs. Plus a default SG with an allow rule 'All traffic, all protocols, all ports, from anything using this default SG'.
+
+### You may have only one internet gateway per VPC.
  
  
  
