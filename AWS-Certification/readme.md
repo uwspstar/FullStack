@@ -509,10 +509,17 @@ It has complete Admin access
 ### You may have only one internet gateway per VPC.
 
 ### You may peer a VPC to another VPC that's in your same account, or to any VPC in any other account.
+
+### An application load balancer must be deployed into at least two subnets.
  
+### In contrast to a NAT gateway, traffic between your VPC and the other service does not leave the Amazon network when using VPC endpoints.
  
- 
- 
+### A Bastion host allows you to securely administer (via SSH or RDP) an EC2 instance located in a private subnet. Don't confuse Bastions and NATs, which allow outside traffic to reach an instance in a private subnet.
+
+### You have five VPCs in a 'hub and spoke' configuration, with VPC 'A' in the center and individually paired with VPCs 'B', 'C', 'D', and 'E', which make up the 'spokes'. There are no other VPC connections. Which of the following VPCs can VPC 'B' communicate with directly?
+```
+As transitive peering is not allowed, VPC 'B' can communicate directly only with VPC 'A'.
+```
  
  
  
