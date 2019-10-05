@@ -95,3 +95,7 @@ Stickiness ensures traffic is sent to the same backend instance for a client. Th
 ```
 Look into the X-Forwarded-For header in the backend. This header is created by your load balancer and passed on to your backend application
 ```
+### You quickly created an ELB and it turns out your users are complaining about the fact that sometimes, the servers just don't work. You realise that indeed, your servers do crash from time to time. How to protect your users from seeing these crashes?
+```
+Health checks ensure your ELB won't send traffic to unhealthy (crashed) instances
+```
