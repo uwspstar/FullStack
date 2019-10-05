@@ -1,4 +1,26 @@
 # VPC
+### You are the AWS SME at YCDIT2, Inc. Your AWS SysOps administrator created a VPC with a public subnet. He created and attached an Internet Gateway to the VPC, and launched an EC2 instance with a public IP in the subnet. He also created a security group for the EC2 instance. When trying to connect to the EC2 instance from the Internet, he was not able to. From the statements below, which could be a possible reason for his inability to connect?  (Choose 2) ```AB```
+```
+A- There is no entry in the route table pointing to the internet gateway as a Target     
+
+B- The admin did not configure the security group after he created it     
+
+C- The security group is denying any outbound traffic to the Internet     
+
+D- The admin forgot to create a NACL for the EC2 instance 
+```
+### After creating a VPC with CIDR 10.0.0.0/16. with the lack of proper architecture, The AWS SysOps admin created one large subnet of CIDR 10.0.0.0/16. later on, another subnet was needed to host another tier of an application being deployed. The admin is trying to create another subnet of CIDR 10.0.1.0/24. ```C```
+```
+Can she create the second subnet without disrupting services to the first subnet?  
+
+A) Yes, she can configure the new subnet, and AWS will automatically adjust the VPC subnets so both can exist.     
+
+B) Yes, Edit the fist subnet from the console to make room for the second one     
+
+C) No, It is not possible to create a second subnet as the intended one overlaps with the existing one.     
+
+D) Yes, Delete the VPC and create a new one   
+```
 ### You have created a VPC with CIDR 10.0.0.0/24. The VPC has two subnets: public (10.0.0.0/25) and private (10.0.0.128/25). For an anticipated project you want to increase the CIDR range your VPC CIDR block, How can you do this?
 ```
 A) Change the subnet sizes to /28 subnets, then you will have more room to grow your VPC CIDR     
