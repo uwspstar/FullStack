@@ -1,4 +1,18 @@
 # VPC
+### You have created a VPC with CIDR 10.0.0.0/24. The VPC has two subnets: public (10.0.0.0/25) and private (10.0.0.128/25). For an anticipated project you want to increase the CIDR range your VPC CIDR block, How can you do this?
+```
+A) Change the subnet sizes to /28 subnets, then you will have more room to grow your VPC CIDR     
+B) You can always change a VPC's original CIDR block as needed
+C) You can add additional VPC CIDR blocks, but can’t change the existing one     
+D) Delete all the subnets first, only then you can modify the size of the VPC   
+```
+### At which EC2 instance states can the source/destination check attribute be changed? (Choose two) ```CD```
+```
+A) When the NAT instance state is terminated     
+B) When the NAT instance state is pending   
+C) When the NAT instance state is running   
+D) When  the NAT instance state is stopped 
+```
 ### You are the AWS architect at YCDIT2, Inc. You have been tasked to design and launch an EC2 NAT instance in a public subnet in your client’s VPC. After creating and successfully testing the NAT Instance. You have also updated you private subnet’s route table such that the NAT device is the target for traffic destined to the Internet. However, the private subnet EC2 instances are still not able to connect to the Internet for updates and patch download. ```D```
 ```
 Which of the following steps could be a possible reason for this problem?  
