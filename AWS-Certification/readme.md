@@ -528,6 +528,8 @@ As transitive peering is not allowed, VPC 'B' can communicate directly only with
 Network ACLs
 ```
 ### In a ```default VPC```, all Amazon EC2 instances are assigned two IP addresses at launch.
+
+### When I create a ```new security group```, all outbound traffic is allowed by default
   
  
  
