@@ -530,6 +530,8 @@ Network ACLs
 ### In a ```default VPC```, all Amazon EC2 instances are assigned two IP addresses at launch.
 
 ### When I create a ```new security group```, all outbound traffic is allowed by default
+
+### By default, ```5``` VPCs am I allowed in each AWS region
   
  
  
