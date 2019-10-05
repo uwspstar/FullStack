@@ -533,9 +533,15 @@ Network ACLs
 
 ### By default, ```5``` VPCs am I allowed in each AWS region
   
+### 0.0.0.0/0 would allow ANYONE from ANYWHERE to connect to your instances. This is generally a bad plan. The phrase 'web-facing subnets' does not mean just web servers. It would include any instances in that subnet some of which you may not strangers attacking. You would only allow 0.0.0.0/0 on port 80 or 443 to to connect to your public facing Web Servers, or preferably only to an ELB. Good security starts by limiting public access to only what the customer needs. Please see the AWS Security whitepaper for complete details. 
  
- 
- 
+# Lambda
+### You have created a simple serverless website using S3, Lambda, API Gateway and DynamoDB. Your website will process the contact details of your customers, predict an expected delivery date of their order and store their order in DynamoDB. You test the website before deploying it into production and you notice that although the page executes, and the lambda function is triggered, it is unable to write to DynamoDB. What could be the cause of this issue?
+```
+Like any services in AWS, 
+Lambda needs to have a role associated with it that provide credentials with rights to other services. 
+This is exactly the same as needing a role on an EC2 instance to access S3 or DDB.
+```
  
   
   
