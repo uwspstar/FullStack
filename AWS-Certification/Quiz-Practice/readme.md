@@ -32,6 +32,8 @@ does not leave the Amazon network when using VPC endpoints.
 ```
 ### Which of the below statements is true for any VPC security group, by default, when it is created? ```C```
 ```
+
+
 All inbound traffic rule will be explicitly denied
 All inbound traffic is allowed by default
 All outbound traffic is allowed by default
@@ -103,3 +105,4 @@ Health checks ensure your ELB won't send traffic to unhealthy (crashed) instance
 ```
 NLB provide the highest performance if your application needs it
 ```
+### Application Load Balancers handle all these protocols except ```TCP```
