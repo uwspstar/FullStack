@@ -1,8 +1,16 @@
-# VPC
+# ALB
+### I have an ASG and an ALB, and I setup my ASG to get health status of instances thanks to my ALB. One instance has just been reported unhealthy. What will happen?
+```
+Because the ASG has been configured to leverage the ALB health checks, unhealthy instances will be terminated
+```
+
 ### You are running at desired capacity of 3 and the maximum capacity of 3. You have alarms set at 60% CPU to scale out your application. Your application is now running at 80% capacity. What will happen?
 ```
 The capacity of your ASG cannot go over the maximum capacity you have allocated during scale out events
 ```
+
+# VPC
+
 ### You created a subnet in a custom VPC and launched an EC2 instance in that subnet. During the EC2 instance creation, using AWS console, you did not choose the option to assign a public IP address to your instance. This instance now needs access to the Internet, but it has no public IP address. ```D```
 ```
 How would you solve this internet connectivity issue for this EC2 instance?  
