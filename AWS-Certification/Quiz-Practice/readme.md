@@ -1,4 +1,33 @@
 # ALB
+### A web application hosted in EC2 is managed by an ASG. You are exposing this application through an Application Load Balancer. The ALB is deployed on the VPC with the following CIDR: 192.168.0.0/18. How do you configure the EC2 instance security group to ensure only the ALB can access the port 80?
+```
+Open up the EC2 security on port 80 to the ALB's Security group
+This is the most secure way of ensuring only the ALB can access the EC2 instances. Referencing by security groups in rules is an extremely powerful rule and many questions at the exam rely on it. Make sure you fully master the concepts behind it!
+```
+
+### You would like to expose a fixed static IP to your end users for compliance purposes, so they can write firewall rules that will be stable and approved by regulators. Which Load Balancer should you use?
+```
+Network Load Balancers expose a public static IP, 
+whereas an Application or Classic Load Balancer exposes a static DNS (URL)
+Load Balancing Overview
+```
+### You would like to expose a fixed static IP to your end users for compliance purposes, so they can write firewall rules that will be stable and approved by regulators. Which Load Balancer should you use?
+
+### Running an application on an auto scaling group that scales the number of instances in and out is called
+```
+Horizontal Scalability
+```
+### Scaling an instance from an r4.large to an r4.4xlarge is called
+```
+Vertical Scalability
+```
+
+### Your boss wants to scale your ASG based on the number of requests per minute your application makes to your database.
+```
+You create a CloudWatch custom metric and build an alarm on this ti scale your ASG
+Auto Scaling Groups Overview. 
+The metric "requests per minute" is not an AWS metric, hence it needs to be a custom metric
+```
 ### I have an ASG and an ALB, and I setup my ASG to get health status of instances thanks to my ALB. One instance has just been reported unhealthy. What will happen?
 ```
 Because the ASG has been configured to leverage the ALB health checks, unhealthy instances will be terminated
