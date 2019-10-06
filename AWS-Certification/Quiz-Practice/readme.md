@@ -1,12 +1,42 @@
 # EBS
+### You would like to have a high performance cache for your application that mustn't be shared. You don't mind losing the cache upon termination of your instance. Which storage mechanism do you recommend as a Solution Architect? ```C```
+  ```
+  a) EFS
+  b) EBS
+  c) Instance Store
+  ```
+  ```
+  Instance Store provide the best disk performance
+  ````
+### You would like to have the same data being accessible as an NFS drive cross AZ on all your EC2 instances. What do you recommend? ```A```
+  ```
+  a) Mount an EFS
+  b) Mount an EBS
+  c) Mount an Instance Store
+  ```
+  ```
+  EFS is a network file system (NFS) and allows to mount the same file system on EC2 instances that are in different AZ
+  ```
+
+### You would like to leverage EBS volumes in parallel to linearly increase performance, while accepting greater failure risks. Which RAID mode helps you in achieving that?
+  ```
+  RAID 0
+  See https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/raid-config.html
+  ```
+### Although EBS is already a replicated solution, your company SysOps advised you to use a RAID mode that will mirror data and will allow your instance to not be affected if an EBS volume entirely fails. Which RAID mode did he recommend to you?
+  ```
+  RAID 1
+  See https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/raid-config.html
+  ```
+
 ### What is true with Instance-Store backed EC2?
-```
-https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-lifetime The data in an instance store persists only during the lifetime of its associated instance. 
-If an instance reboots (intentionally or unintentionally), 
-data in the instance store persists. 
-However, data in the instance store is lost under any of the following circumstances: 
-The underlying disk drive fails The instance stops The instance terminates
-```
+  ```
+  https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-lifetime The data in an instance store persists only during the lifetime of its associated instance. 
+  If an instance reboots (intentionally or unintentionally), 
+  data in the instance store persists. 
+  However, data in the instance store is lost under any of the following circumstances: 
+  The underlying disk drive fails The instance stops The instance terminates
+  ```
 ### You have provisioned an 8TB gp2 EBS volume and you are running out of IOPS. What is NOT a way to increase performance?
 ```
 EBS IOPS peaks at 16,000 IOPS. or equivalent 5334 GB.
