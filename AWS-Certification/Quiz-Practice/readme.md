@@ -1,4 +1,16 @@
 # EBS
+### What is true with Instance-Store backed EC2?
+```
+https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-lifetime The data in an instance store persists only during the lifetime of its associated instance. 
+If an instance reboots (intentionally or unintentionally), 
+data in the instance store persists. 
+However, data in the instance store is lost under any of the following circumstances: 
+The underlying disk drive fails The instance stops The instance terminates
+```
+### You have provisioned an 8TB gp2 EBS volume and you are running out of IOPS. What is NOT a way to increase performance?
+```
+EBS IOPS peaks at 16,000 IOPS. or equivalent 5334 GB.
+```
 ### EBS Volumes are created for a specific AZ. It is possible to migrate them between different AZ through backup and restore
 
 # ELB & ASG
