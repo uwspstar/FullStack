@@ -1,3 +1,6 @@
+# EBS
+### EBS Volumes are created for a specific AZ. It is possible to migrate them between different AZ through backup and restore
+
 # ELB & ASG
 ### IAM roles attached to an ASG will get assigned to EC2 instances
 
