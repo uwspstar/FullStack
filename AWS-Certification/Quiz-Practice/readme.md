@@ -1,4 +1,10 @@
 # EBS
+### In order to enable encryption at rest using EC2 and Elastic Block Store, you must ________.
+```
+The use of encryption at rest is default requirement for many industry compliance certifications.
+Using AWS managed keys to provide EBS encryption at rest is a relatively painless 
+and reliable way to protect assets and demonstrate your professionalism in any commercial situation.
+```
 ### You would like to have a high performance cache for your application that mustn't be shared. You don't mind losing the cache upon termination of your instance. Which storage mechanism do you recommend as a Solution Architect? ```C```
   ```
   a) EFS
