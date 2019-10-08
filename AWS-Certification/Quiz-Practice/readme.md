@@ -1,11 +1,13 @@
 # RDS
 ### One analytics application is currently performing its queries against your main production database. These queries slow down the database which impacts the main user experience. What should you do to improve the situation?
 ```
-Read Replicas will help as our analytics application can now perform queries against it, and these queries won't impact the main production database. 
+Read Replicas will help as our analytics application can now perform queries against it,
+and these queries won't impact the main production database. 
 ```
 ### Your application functions on an ASG behind an ALB. Users have to constantly log back in and you'd rather not enable stickiness on your ALB as you fear it will overload some servers. What should you do?
 ```
-Storing Session Data in ElastiCache is a common pattern to ensuring different instances can retrieve your user's state if needed
+Storing Session Data in ElastiCache is a common pattern 
+to ensuring different instances can retrieve your user's state if needed
 ```
 
 ### You want to ensure your Redis cluster will always be available
@@ -15,15 +17,20 @@ Multi AZ ensures high availability
 ###
 Which RDS Classic (not Aurora) feature does not require us to change our SQL connection string?
 ```
-Multi AZ keeps the same connection string regardless of which database is up. Read Replicas imply we need to reference them individually in our application as each read replica will have its own DNS name
+Multi AZ keeps the same connection string regardless of which database is up. 
+Read Replicas imply we need to reference them individually in our application 
+as each read replica will have its own DNS name
 ```
 ### We have setup read replicas on our RDS database, but our users are complaining that upon updating their social media posts, they do not see the update right away
 ```
-Read Replicas have asynchronous replication and therefore it's likely our users will only observe eventual consistency.
+Read Replicas have asynchronous replication 
+and therefore it's likely our users will only observe eventual consistency.
 ```
 ### Our RDS database struggles to keep up with the demand of the users from our website. Our million users mostly read news, and we don't post news very often. Which solution is NOT adapted to this problem?
 ```
-Our RDS database struggles to keep up with the demand of the users from our website. Our million users mostly read news, and we don't post news very often. Which solution is NOT adapted to this problem?
+Our RDS database struggles to keep up with the demand of the users from our website. 
+Our million users mostly read news, 
+and we don't post news very often. Which solution is NOT adapted to this problem?
 ```
 ### My company would like to have a MySQL database internally that is going to be available even in case of a disaster in the AWS Cloud. I should setup
 ```
