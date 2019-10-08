@@ -1,5 +1,10 @@
 # RDS
+### One analytics application is currently performing its queries against your main production database. These queries slow down the database which impacts the main user experience. What should you do to improve the situation?
+
 ### Your application functions on an ASG behind an ALB. Users have to constantly log back in and you'd rather not enable stickiness on your ALB as you fear it will overload some servers. What should you do?
+```
+Storing Session Data in ElastiCache is a common pattern to ensuring different instances can retrieve your user's state if needed
+```
 
 ### You want to ensure your Redis cluster will always be available
 ```
