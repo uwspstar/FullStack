@@ -1,4 +1,16 @@
 # RDS
+### You would like to ensure you have a database available in another region if a disaster happens to your main region. Which database do you recommend?
+```
+```
+### Which RDS database technology does NOT support IAM authentication?
+```
+Oracle
+```
+### You have a requirement to use TDE (Transparent Data Encryption) on top of KMS. Which database technology does ```NOT``` support TDE on RDS?
+```
+PostgreSQL
+```
+
 ### One analytics application is currently performing its queries against your main production database. These queries slow down the database which impacts the main user experience. What should you do to improve the situation?
 ```
 Read Replicas will help as our analytics application can now perform queries against it,
