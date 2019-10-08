@@ -34,7 +34,6 @@ and reliable way to protect assets and demonstrate your professionalism in any c
   RAID 1
   See https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/raid-config.html
   ```
-
 ### What is true with Instance-Store backed EC2?
   ```
   https://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html#instance-store-lifetime The data in an instance store persists only during the lifetime of its associated instance. 
