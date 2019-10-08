@@ -1,6 +1,8 @@
 # RDS
 ### One analytics application is currently performing its queries against your main production database. These queries slow down the database which impacts the main user experience. What should you do to improve the situation?
-
+```
+Read Replicas will help as our analytics application can now perform queries against it, and these queries won't impact the main production database. 
+```
 ### Your application functions on an ASG behind an ALB. Users have to constantly log back in and you'd rather not enable stickiness on your ALB as you fear it will overload some servers. What should you do?
 ```
 Storing Session Data in ElastiCache is a common pattern to ensuring different instances can retrieve your user's state if needed
