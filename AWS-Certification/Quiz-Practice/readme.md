@@ -1,6 +1,12 @@
 # RDS
+### How can you enhance the security of your Redis cache to force users to enter a password?
+```
+Use Redis Auth
+IAM Auth is not supported for Redis
+```
 ### You would like to ensure you have a database available in another region if a disaster happens to your main region. Which database do you recommend?
 ```
+Global Databases allow you to have cross region replication
 ```
 ### Which RDS database technology does NOT support IAM authentication?
 ```
