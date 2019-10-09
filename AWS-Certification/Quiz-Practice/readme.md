@@ -1,5 +1,25 @@
 # ROUTE53
-
+### You have purchased a domain on Godaddy and would like to use it with Route 53. What do you need to change to make this work?
+```
+Private hosted zones are meant to be used for internal network queries and are not publicly accessible. 
+Public Hosted Zones are meant to be used for people requesting your website through the public internet. 
+Finally, NS records must be updated on the 3rd party registrar. 
+```
+### You have a legal requirement that people in any country but France should not be able to access your website. Which Route 53 record helps you in achieving this?
+```
+Geo Location
+```
+### You want your users to get the best possible user experience and that means minimizing the response time from your servers to your users. Which routing policy will help?
+```
+Latency will evaluate the latency results and help your users get a DNS response 
+that will minimize their latency (e.g. response time)
+```
+### After updating a Route 53 record to point "myapp.mydomain.com" from an old Load Balancer to a new load balancer, it looks like the users are still not redirected to your new load balancer. You are wondering why...
+```
+DNS records have a TTL (Time to Live) in order for clients to know for 
+how long to caches these values and not overload the DNS with DNS requests. 
+TTL should be set to strike a balance between how long the value should be cached vs how much pressure should go on the DNS. 
+```
 ### You have deployed a new Elastic Beanstalk environment and would like to direct 5% of your production traffic to this new environment, in order to monitor for CloudWatch metrics and ensuring no bugs exist. What type of Route 53 records allows you to do so?
 ```
 Weighted allows you to redirect a part of the traffic based on a weight (hence a percentage). 
