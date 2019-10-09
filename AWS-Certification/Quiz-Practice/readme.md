@@ -15,7 +15,7 @@ Global Databases allow you to have cross region replication
 ```
 ### Which RDS database technology does NOT support IAM authentication?
 ```
-Oracle
+Oracle, current IAM only support MySQL and PostgreSQL
 ```
 ### You have a requirement to use TDE (Transparent Data Encryption) on top of KMS. Which database technology does ```NOT``` support TDE on RDS?
 ```
