@@ -1,4 +1,9 @@
 # RDS
+### Which RDS Classic (not Aurora) feature does not require us to change our SQL connection string?
+```
+Multi AZ keeps the same connection string regardless of which database is up. 
+Read Replicas imply we need to reference them individually in our application as each read replica will have its own DNS name
+```
 ### How can you enhance the security of your Redis cache to force users to enter a password?
 ```
 Use Redis Auth
@@ -24,6 +29,9 @@ and these queries won't impact the main production database.
 ```
 ### Your application functions on an ASG behind an ALB. Users have to constantly log back in and you'd rather not enable stickiness on your ALB as you fear it will overload some servers. What should you do?
 ```
+RDS could work to store session data, 
+but wouldn't provide as high of a performance as ElastiCache. 
+
 Storing Session Data in ElastiCache is a common pattern 
 to ensuring different instances can retrieve your user's state if needed
 ```
