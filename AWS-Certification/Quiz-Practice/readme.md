@@ -1,4 +1,10 @@
 # ROUTE53
+
+### You have deployed a new Elastic Beanstalk environment and would like to direct 5% of your production traffic to this new environment, in order to monitor for CloudWatch metrics and ensuring no bugs exist. What type of Route 53 records allows you to do so?
+```
+Weighted allows you to redirect a part of the traffic based on a weight (hence a percentage). 
+It's common to use to send a part of a traffic to a new application you're deploying
+```
 ### You have purchased "mycoolcompany.com" on the AWS registrar and would like for it to point to lb1-1234.us-east-2.elb.amazonaws.com . What sort of Route 53 record is impossible to setup for this?
 ```
 The DNS protocol does not allow you to create a CNAME record for the top node of a DNS namespace 
