@@ -1,3 +1,10 @@
+# ROUTE53
+### You have purchased "mycoolcompany.com" on the AWS registrar and would like for it to point to lb1-1234.us-east-2.elb.amazonaws.com . What sort of Route 53 record is impossible to setup for this?
+```
+The DNS protocol does not allow you to create a CNAME record for the top node of a DNS namespace 
+(mycoolcompany.com), also known as the zone apex
+```
+
 # RDS
 ### Which RDS Classic (not Aurora) feature does not require us to change our SQL connection string?
 ```
@@ -8,8 +15,9 @@ Read Replicas imply we need to reference them individually in our application as
 ```
 Use Redis Auth
 IAM Auth is not supported for Redis
+Security Groups helps filter traffic going to your ElastiCache instances but cannot help with application level authentication
 ```
-### You would like to ensure you have a database available in another region if a disaster happens to your main region. Which database do you recommend?
+### You would like to ensure you have a database available in another ```region``` if a disaster happens to your main region. Which database do you recommend?
 ```
 Global Databases allow you to have cross region replication
 ```
