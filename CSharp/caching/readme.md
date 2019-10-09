@@ -12,4 +12,7 @@ implement cache in a single process. When the process dies, the cache dies with 
 ```
 save cache outside of process memory (in a file, or in a database)
 ```
-- Distributed Cache
+- Distributed Cache :  like Redis
+```
+With a distributed cache, it is stored in an external service, and shared cache for several machines.  This means if one server saved a cache item, other servers can use it as well. Services like Redis are great for this.
+```
