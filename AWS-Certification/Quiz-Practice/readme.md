@@ -1,4 +1,9 @@
 # Classic Architecture
+### As a solution architect managing a complex ERP software suite, you are orchestrating a migration to the AWS cloud. The software traditionally takes well over an hour to setup on a Linux machine, and you would like to make sure your application does leverage the ASG feature of auto scaling based on the demand. How do you recommend you speed up the installation process?
+```
+Golden AMI are a standard in making sure you snapshot a state after an application installation so that future instances can boot up from that AMI quickly.
+```
+
 ### You are looking to store shared software updates data across 100s of EC2 instances. The software updates should be dynamically loaded on the EC2 instances and shouldn't require heavy operations. What do you suggest?
 ```
 EFS is a network file system (NFS) and allows to mount the same file system to 100s of EC2 instances. 
