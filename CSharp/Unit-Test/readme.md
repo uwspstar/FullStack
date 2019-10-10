@@ -19,11 +19,12 @@
       - testStudentIsNotAdmittedIfMandatoryFieldsAreMissing
    
   4) Feature to be tested
-  5) Should_ExpectedBehavior_When_StateUnderTest
+  5) Should_ExpectedBehavior_When_StateUnderTest  [I recommand to use]
       such as
-      Should_ThrowException_When_AgeLessThan18
-      Should_FailToWithdrawMoney_ForInvalidAccount
-      Should_FailToAdmit_IfMandatoryFieldsAreMissing
+      - Should_ThrowException_When_AgeLessThan18
+      - Should_FailToWithdrawMoney_ForInvalidAccount
+      - Should_FailToAdmit_IfMandatoryFieldsAreMissing
   6) When_StateUnderTest_Expect_ExpectedBehavior
   7) Given_Preconditions_When_StateUnderTest_Then_ExpectedBehavior
    ```
+- [I recommand to use] "Should_ExpectedBehavior_When_StateUnderTest", I use it for both backend and frontend test
