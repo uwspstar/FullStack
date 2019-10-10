@@ -1,3 +1,23 @@
+# Classic Architecture
+### You are looking to store shared software updates data across 100s of EC2 instances. The software updates should be dynamically loaded on the EC2 instances and shouldn't require heavy operations. What do you suggest?
+```
+RDS is meant to store relational datasets, not big binary files.
+Store the software updates on EBS and Sync them using data replication software 
+from one to one master in each AZ
+requires too many operations and is not a native AWS features
+```
+### You have an ASG that scales on demand based on the traffic going to your new website: TriangleSunglasses.Com. You would like to optimise for cost, so you have selected an ASG that scales based on demand going through your ELB. Still, you want your solution to be highly available so you have selected the minimum instances to 2. How can you further optimize the cost while respecting the requirements?
+```
+Reserve two EC2 instance
+```
+### NOT help make our application tier stateless
+```
+EBS volumes are created for a specific AZ and can only be attached to one EC2 instance at a time. 
+This will not help make our application stateles
+Offload Data in RDS help as the data can now be accessed from multiple servers.
+Store the session data in ElasticCache elp as the session data can now be accessed from multiple servers
+
+```
 # ROUTE53
 ### You have purchased a domain on Godaddy and would like to use it with Route 53. What do you need to change to make this work?
 ```
