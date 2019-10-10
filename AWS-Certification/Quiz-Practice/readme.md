@@ -1,7 +1,17 @@
 # Classic Architecture
+### My deployments on Elastic Beanstalk have been painfully slow, and after looking at the logs, I realize this is due to the fact that my dependencies are resolved on each EC2 machine at deployment time. How can I speed up my deployment with the minimal impact?
+```
+Golden AMI are a standard in making sure save the state after the installation 
+or pulling dependencies so that future instances can boot up from that AMI quickly.
+```
+### I am creating an application and would like for it to be running with minimal cost in a development environment with Elastic Beanstalk. I should run it in
+```
+Single instance Mode :  one EC2 instance and one Elastic IP
+```
 ### As a solution architect managing a complex ERP software suite, you are orchestrating a migration to the AWS cloud. The software traditionally takes well over an hour to setup on a Linux machine, and you would like to make sure your application does leverage the ASG feature of auto scaling based on the demand. How do you recommend you speed up the installation process?
 ```
-Golden AMI are a standard in making sure you snapshot a state after an application installation so that future instances can boot up from that AMI quickly.
+Golden AMI are a standard in making sure you snapshot a state after an application installation 
+so that future instances can boot up from that AMI quickly.
 ```
 
 ### You are looking to store shared software updates data across 100s of EC2 instances. The software updates should be dynamically loaded on the EC2 instances and shouldn't require heavy operations. What do you suggest?
