@@ -1,6 +1,8 @@
 # Classic Architecture
 ### You are looking to store shared software updates data across 100s of EC2 instances. The software updates should be dynamically loaded on the EC2 instances and shouldn't require heavy operations. What do you suggest?
 ```
+EFS is a network file system (NFS) and allows to mount the same file system to 100s of EC2 instances. 
+Publishing software updates their allow each EC2 instance to access them.
 RDS is meant to store relational datasets, not big binary files.
 Store the software updates on EBS and Sync them using data replication software 
 from one to one master in each AZ
