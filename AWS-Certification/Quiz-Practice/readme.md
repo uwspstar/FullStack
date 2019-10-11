@@ -1,4 +1,40 @@
+# Identity Access Management & S3
+### You work for a busy digital marketing company who currently store their data on-premise. They are looking to migrate to AWS S3 and to store their data in buckets. Each bucket will be named after their individual customers, followed by a random series of letters and numbers. Once written to S3 the data is rarely changed, as it has already been sent to the end customer for them to use as they see fit. However, on some occasions, customers may need certain files updated quickly, and this may be for work that has been done months or even years ago. You would need to be able to access this data immediately to make changes in that case, but you must also keep your ```storage costs extremely low```. The data is not easily reproducible if lost. Which S3 storage class should you choose to minimize costs and to maximize retrieval times?
+```
+The need to immediate access is an important requirement along with cost. 
+Glacier has a long recovery time at a low cost or a shorter recovery time at a high cost, and 1Zone-IA has a lower Availability level which means that it may not be available when needed.
+```
+### How many S3 buckets can I have per account by default?
+```
+100
+```
+
 # Overall
+### In which of the following is CloudFront content cached?
+```
+CloudFront content is cached in Edge Locations.
+```
+### Which of the following is correct?
+```
+The number of Edge Locations is greater than the number of Availability Zones, 
+which is greater than the number of Regions.
+```
+### What is an AWS region?
+```
+A region is a geographical area divided into Availability Zones. 
+Each region contains at least two Availability Zones.
+```
+### Which statement best describes Availability Zones?
+```
+Distinct location from within an AWS region that are engineered to be isolated from failures
+An Availability Zone (AZ) is a distinct location within an AWS Region. 
+Each Region comprises at least two AZs
+```
+### What does an AWS Region consist of?
+```
+Each region is a separate geographic area. 
+Each region has multiple, isolated locations known as Availability Zones.
+```
 ### An AWS VPC is a component of which group of AWS services?
 ```
 Networking Services
