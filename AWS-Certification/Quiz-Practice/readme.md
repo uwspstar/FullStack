@@ -1,4 +1,8 @@
 # Identity Access Management & S3
+### What is the availability of objects stored in S3?
+```
+99.99%
+```
 ### You work for a busy digital marketing company who currently store their data on-premise. They are looking to migrate to AWS S3 and to store their data in buckets. Each bucket will be named after their individual customers, followed by a random series of letters and numbers. Once written to S3 the data is rarely changed, as it has already been sent to the end customer for them to use as they see fit. However, on some occasions, customers may need certain files updated quickly, and this may be for work that has been done months or even years ago. You would need to be able to access this data immediately to make changes in that case, but you must also keep your ```storage costs extremely low```. The data is not easily reproducible if lost. Which S3 storage class should you choose to minimize costs and to maximize retrieval times?
 ```
 The need to immediate access is an important requirement along with cost. 
