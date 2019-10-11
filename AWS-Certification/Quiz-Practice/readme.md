@@ -1,3 +1,32 @@
+# S3
+### Your company does not trust S3 for encryption and wants it to happen on the application. You recommend
+```
+With Client Side Encryption you perform the encryption yourself and send the encrypted data to AWS directly. 
+AWS does not know your encryption keys and cannot decrypt your data.
+```
+### Your company wants data to be encrypted in S3, and maintain control of the rotation policy for the encryption keys, but not know the encryption keys values. You recommend
+```
+With SSE-KMS you let AWS manage the encryption keys but you have full control of the key rotation policy
+With SSE-S3 you let go of the management of the encryption keys and cannot define a key rotation policy
+```
+### Your client wants to make sure the encryption is happening in S3, but wants to fully manage the encryption keys and never store them in AWS. You recommend
+```
+SSE-C, Here you have full control over the encryption keys, and let AWS do the encryption
+```
+### You've added files in your bucket and then enabled versioning. The files you've already added will have which version?
+```
+null
+```
+### I tried creating an S3 bucket named "dev" but it didn't work. This is a new AWS Account and I have no buckets at all. What is the cause?
+```
+Bucket names must be globally unique and "dev" is already taken
+```
+### You're trying to upload a 25 GB file on S3 and it's not working
+```
+you should suer Multi Part upload whe your file is bigger than 5GB
+Multi Part Upload is also recommended as soon as the file is over 100MB
+```
+
 # Classic Architecture
 ### My deployments on Elastic Beanstalk have been painfully slow, and after looking at the logs, I realize this is due to the fact that my dependencies are resolved on each EC2 machine at deployment time. How can I speed up my deployment with the minimal impact?
 ```
