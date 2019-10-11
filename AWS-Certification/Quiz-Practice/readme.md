@@ -1,4 +1,18 @@
 # Identity Access Management & S3
+
+### You are a solutions architect who works with a large digital media company. The company has decided that they want to operate within the Japanese region and they need a bucket called "testbucket" set up immediately to test their web application on. You log in to the AWS console and try to create this bucket in the Japanese region however you are told that the bucket name is already taken. What should you do to resolve this?
+```
+Bucket names are global, not regional. This is a popular bucket name and is already taken.
+You should choose another bucket name
+```
+### What does S3 stand for?
+```
+Simple Storage Service
+```
+### S3 has what consistency model for PUTS of new objects?
+```
+Read after write consistence
+```
 ### What is the availability of objects stored in S3?
 ```
 99.99%
