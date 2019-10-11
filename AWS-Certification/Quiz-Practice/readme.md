@@ -1,3 +1,15 @@
+# Overall
+### An AWS VPC is a component of which group of AWS services?
+```
+Networking Services
+A Virtual Private Cloud (VPC) is a virtual network dedicated to a single AWS account. 
+It is logically isolated from other virtual networks in the AWS cloud, 
+providing compute resources with security and robust networking functionality.
+```
+### What is an Amazon VPC?
+```
+VPC stands for Virtual Private Cloud.
+```
 # S3
 ### Your company does not trust S3 for encryption and wants it to happen on the application. You recommend
 ```
