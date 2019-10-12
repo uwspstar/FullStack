@@ -1,4 +1,5 @@
 # Git
+- Git MERGE vs REBASE https://www.youtube.com/watch?v=CRlGDDprdOQ
 
 ### Git vs Github
 - Git is the most popular "version control system" - a tool to keep track of file changes over time. 
