@@ -1,6 +1,7 @@
 # Git
 - Git MERGE vs REBASE https://www.youtube.com/watch?v=CRlGDDprdOQ
 - Introduction to Git cherry-pick https://www.youtube.com/watch?v=-ndmel-4wsk
+- https://www.themoderncoder.com/a-better-git-workflow-with-rebase/ 
 - https://www.youtube.com/watch?v=f1wnYdLEpgI
 
 ###  DO NOT REBASE COMMITS THAT EXISTS OUTSIDE YOUR REPO
