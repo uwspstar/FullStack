@@ -1,4 +1,14 @@
 # Advanced S3: CloudFront,Snowball, Storage Gateway, Athena
+### How can you ensure that only users who access our website through Canada are authorized in CloudFront?
+```
+Geo Restriction allows you to specify a list of whitelisted or blacklisted countries 
+in your CloudFront distribution.
+```
+### You are hosting highly dynamic content in Amazon S3 in us-east-1. Recently, there has been a need to make that data available with low latency in Singapore. What do you recommend using?
+```
+Because the data is dynamic, CloudFront would not be an effective solution, because of the TTL caching features
+S3 CRR allows you to replicate the data from one bucket in a region to another bucket in another region
+```
 ### Which features allows us to distribute paid content from S3 securely, globally, if the S3 bucket is secured to only exchange data with CloudFront?
 ```
 CloudFront Signed URL are commonly used to distribute paid content through dynamic CloudFront Signed URL generation.
