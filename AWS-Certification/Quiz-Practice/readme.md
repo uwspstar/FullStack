@@ -1,5 +1,8 @@
 # Advanced S3: CloudFront,Snowball, Storage Gateway, Athena
-
+### You are looking to provide temporary URLs to a growing list of federated users in order to allow them to perform a file upload on S3 to a specific location. What should you use?
+```
+Pre-Signed URL are temporary and grant time-limited access to some actions in your S3 bucket.
+```
 ### You are looking for your entire S3 bucket to be available fully in a different region so you can perform data analysis optimally at the lowest possible cost. Which feature should you use?
 ```
 S3 CRR is used to replicate data from an S3 bucket to another one in a different region
