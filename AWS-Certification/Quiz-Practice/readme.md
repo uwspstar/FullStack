@@ -1,4 +1,32 @@
 # Advanced S3: CloudFront,Snowball, Storage Gateway, Athena
+### Which features allows us to distribute paid content from S3 securely, globally, if the S3 bucket is secured to only exchange data with CloudFront?
+```
+CloudFront Signed URL are commonly used to distribute paid content through dynamic CloudFront Signed URL generation.
+```
+### Which of the following is a Serverless data analysis service allowing you to query data in S3?
+```
+athena
+```
+### You want to expose a virtually infinite storage for your tape backups. You want to keep the same software as today and want a iSCSI compatible interface. What do you use?
+```
+Tape gateway
+```
+### You need to move hundreds of Terabytes into the cloud in S3, and after that pre-process it using many EC2 instances in order to clean the data. You have a 1 Gbit/s broadband and would like to optimise the process of moving the data and pre-processing it, in order to save time. What do you recommend?
+```
+Snowball Edge is the right answer as it comes with computing capabilities 
+and allows use to pre-process the data while it's being moved in Snowball, 
+so we save time on the pre-processing side as well.
+
+```
+
+### Which of the following is ```NOT``` a Glacier retrieval mode?
+```
+instant 10 second
+```
+### How can you automate the transition of S3 objects between their different tiers?
+```
+use s3 lifeCycle rule
+```
 ### You are looking to provide temporary URLs to a growing list of federated users in order to allow them to perform a file upload on S3 to a specific location. What should you use?
 ```
 Pre-Signed URL are temporary and grant time-limited access to some actions in your S3 bucket.
