@@ -1,4 +1,8 @@
 # HA Architecture
+### Can I "force" a failover for any RDS instance that has multi-AZ configured?
+```
+Yes
+```
 ### Placement groups can either be of the type 'cluster', 'spread', or 'partition'. Choose options from below which are only specific to Spread Placement Groups.
 ```
 There is only one answer that is specific to Spread Placement Groups, 
