@@ -1,3 +1,10 @@
+# Advanced S3: CloudFront,Snowball, Storage Gateway, Athena
+### You have enabled versioning and want to be extra-careful when it comes to deleting files on S3. What should you enable to prevent accidental permanent deletions ?
+```
+MFA Delete forces users to use MFA tokens before deleting objects. 
+It's an extra level of security to prevent accidental deletes
+```
+
 # Identity Access Management & S3
 
 ### What is the minimum file size that I can store on S3?
