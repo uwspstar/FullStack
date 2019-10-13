@@ -1,4 +1,11 @@
 # HA Architecture
+### If you are told that an EC2 instance is being changed to have more RAM, Is this considered scaling up or scaling out
+```
+Scaling out is where you have more of the same resource separately working in parallel 
+(visualize services sitting side by side). 
+Scaling up is where you make it bigger and bigger like and ugly tower with more floors being added 
+after the initial design was finished.
+```
 
 ### You have been tasked with creating a resilient website for your company. You create the Classic Load Balancer with a standard health check, a Route 53 alias pointing at the ELB, and a launch configuration based on a reliable Linux AMI. You have also checked all the security groups, NACLs, routes, gateways and NATs. You run the first test and cannot reach your web servers via the ELB or directly. What might be wrong?
 ```
