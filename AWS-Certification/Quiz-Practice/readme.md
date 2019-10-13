@@ -1,4 +1,10 @@
 # HA Architecture
+### In discussions about cloud services the words 'availability', 'durability', 'reliability' and 'resiliency' are often used. Which term is used to refer to the likelihood that a resource ability to recover from damage or disruption?
+```
+Resiliency can be described as the ability to a system to self heal after damage or an event. 
+Note that this does not mean 
+that it will be available continuously during the event, only that it will self recover.
+```
 ### In discussions about cloud services the words 'availability', 'durability', 'reliability' and 'resiliency' are often used. Which term is used to refer to the likelihood that a resource will continue to exist until you decide to remove it?
 ```
 Durability refers to the on-going existence of the object or resource. 
