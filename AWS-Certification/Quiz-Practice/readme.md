@@ -1,4 +1,8 @@
 # HA Architecture
+### In S3 the durability of my files is ________.
+```
+99.999999999%
+```
 ### You need to use an object-based storage solution to store your critical, non-replaceable data in a cost-effective way. This data will be frequently updated and will need some form of version control enabled on it. Which S3 storage solution should you use?
 ```
 The key point in the questions is that the data is non-replaceable and is frequently updated. 
