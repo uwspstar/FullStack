@@ -1,4 +1,13 @@
 # HA Architecture
+### In discussions about cloud services the words 'availability', 'durability', 'reliability' and 'resiliency' are often used. Which term is used to refer to the likelihood that a resource will continue to exist until you decide to remove it?
+```
+Durability refers to the on-going existence of the object or resource. 
+Note that it does not mean you can access it, only that it continues to exist.
+```
+### In discussions about cloud services the words 'availability', 'durability', 'reliability' and 'resiliency' are often used. Which term is used to refer to the likelihood that you can access a resource or service when you need it?
+```
+Each word has a specific meaning and your ability to select the correct answer may depend on understanding the difference. Availability can be described as the % of a time period when the service will be able to respond to your request in some fashion.
+```
 ### If you are told that an EC2 instance is being changed to have more RAM, Is this considered scaling up or scaling out
 ```
 Scaling out is where you have more of the same resource separately working in parallel 
