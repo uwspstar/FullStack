@@ -1,4 +1,11 @@
 # HA Architecture
+### In discussions about cloud services the words 'availability', 'durability', 'reliability' and 'resiliency' are often used. Which term is used to refer to the likelihood that a resource will work as designed?
+```
+Reliability is closely related to availability, 
+however a system can be 'available' but not be working properly. 
+Reliability is the probability that a system will work as designed. 
+This term is not used much in AWS, but is still worth understanding.
+```
 ### In discussions about cloud services the words 'availability', 'durability', 'reliability' and 'resiliency' are often used. Which term is used to refer to the likelihood that a resource ability to recover from damage or disruption?
 ```
 Resiliency can be described as the ability to a system to self heal after damage or an event. 
