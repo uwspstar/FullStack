@@ -1,4 +1,19 @@
 # HA Architecture
+### Placement groups can either be of the type 'cluster', 'spread', or 'partition'. Choose options from below which are only specific to Spread Placement Groups.
+```
+There is only one answer that is specific to Spread Placement Groups, 
+and that is the final option. 
+Whilst some of these answers are correct for either Cluster Placement Groups only, 
+or for both Cluster and Spread Placement Groups, 
+the question stated that only options specific to Spread Placement Groups should be chosen. 
+This would rule out two options as they are true for both Spread & Cluster type placement groups. 
+The Logical grouping of instances within a single Availability Zone is only true of Cluster Placement Groups 
+and is also incorrect.
+```
+### When you have deployed an RDS database into multiple availability zones, can you use the secondary database as an independent read node?
+```
+NO
+```
 ### In S3 the durability of my files is ________.
 ```
 99.999999999%
