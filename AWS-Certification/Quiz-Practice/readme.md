@@ -1,3 +1,11 @@
+# HA Architecture
+###
+You have a website with three distinct services, each hosted by different web server autoscaling groups. Which AWS service should you use?
+```
+The ALB has functionality to distinguish traffic for different targets 
+(mysite.co/accounts vs. mysite.co/sales vs. mysite.co/support) 
+and distribute traffic based on rules for target group, condition, and priority.
+```
 # Advanced S3: CloudFront,Snowball, Storage Gateway, Athena
 ### How can you ensure that only users who access our website through Canada are authorized in CloudFront?
 ```
