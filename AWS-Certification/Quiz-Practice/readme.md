@@ -1,4 +1,15 @@
 # HA Architecture
+### You work for a major news network in Europe. They have just released a new mobile app that allows users to post their photos of newsworthy events in real-time. Your organization expects this app to grow very quickly, essentially doubling its user base each month. The app uses S3 to store the images, and you are expecting sudden and sizable increases in traffic to S3 when a major news event takes place (as users will be uploading large amounts of content.) You need to keep your storage costs to a minimum, and you are happy to temporally lose access to up to 0.1% of uploads per year. With these factors in mind, which storage media should you use to keep costs as low as possible?
+```
+The key drivers here are availability and cost, so an awareness of cost is necessary to answer this. 
+Full S3 is quite expensive at around $0.023 per GB for the lowest band. 
+S3 standard IA is $0.0125 per GB, S3 OneZone-IA is $0.01 per GB, 
+and Legacy S3-RRS is around $0.024 per GB for the lowest band. 
+Of the offered solutions S3 One Zone-IA is the cheapest suitable option. 
+Glacier cannot be considered as it is not intended for direct access, 
+however it comes in at around $0.004 per GB. 
+S3 has an availability of 99.99%, S3-IA has an availability of 99.9% while S3-1Zone-IA only has 99.5%.
+```
 ### In discussions about cloud services the words 'availability', 'durability', 'reliability' and 'resiliency' are often used. Which term is used to refer to the likelihood that a resource will work as designed?
 ```
 Reliability is closely related to availability, 
