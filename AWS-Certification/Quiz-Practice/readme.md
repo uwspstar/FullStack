@@ -1,4 +1,20 @@
 # HA Architecture
+### You need to use an object-based storage solution to store your critical, non-replaceable data in a cost-effective way. This data will be frequently updated and will need some form of version control enabled on it. Which S3 storage solution should you use?
+```
+The key point in the questions is that the data is non-replaceable and is frequently updated. 
+The 1st excludes anything the has reduced durability, 
+the second excluded anything with long recall, 
+reduced availability, or billing based on infrequent access.
+```
+### You work for a manufacturing company that operate a hybrid infrastructure with systems located both in a local data center and in AWS, connected via AWS Direct Connect. Currently, all on-premise servers are backed up to a local NAS, but your CTO wants you to decide on the best way to store copies of these backups in AWS. He has asked you to propose a solution which will provide access to the files within milliseconds should they be needed, but at the same time minimizes cost. As these files will be copies of backups stored on-premise, availability is not as critical as durability. Choose the best option from the following which meets the brief.
+```
+S3 OneZone-IA provides on-line access to files, 
+while offering the same 11 9's of durability as all other storage classes. 
+The trade-off is in the availability - 99.5% as opposed to 99.9%-99.99%. 
+However in this brief as cost is more important than availability, 
+S3 OneZone-IA is the logical choice . 
+RRS is deprecated and new uses are strongly discouraged by AWS.
+```
 ### You work for a major news network in Europe. They have just released a new mobile app that allows users to post their photos of newsworthy events in real-time. Your organization expects this app to grow very quickly, essentially doubling its user base each month. The app uses S3 to store the images, and you are expecting sudden and sizable increases in traffic to S3 when a major news event takes place (as users will be uploading large amounts of content.) You need to keep your storage costs to a minimum, and you are happy to temporally lose access to up to 0.1% of uploads per year. With these factors in mind, which storage media should you use to keep costs as low as possible?
 ```
 The key drivers here are availability and cost, so an awareness of cost is necessary to answer this. 
