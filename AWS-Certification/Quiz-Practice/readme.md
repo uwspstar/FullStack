@@ -1,4 +1,19 @@
 # Advanced S3: CloudFront,Snowball, Storage Gateway, Athena
+
+### You are looking for your entire S3 bucket to be available fully in a different region so you can perform data analysis optimally at the lowest possible cost. Which feature should you use?
+```
+S3 CRR is used to replicate data from an S3 bucket to another one in a different region
+```
+### You suspect some of your employees to try to access files in S3 that they don't have access to. How can you verify this is indeed the case without them noticing?
+```
+Enable s3 access log and analyze them using Athena
+Restricting their IAM policies could be noticed by the users
+
+```
+### You would like all your files in S3 to be encrypted by default. What is the optimal way of achieving this?
+```
+Enable the "Default Encryption" on S3
+```
 ### You have enabled versioning and want to be extra-careful when it comes to deleting files on S3. What should you enable to prevent accidental permanent deletions ?
 ```
 MFA Delete forces users to use MFA tokens before deleting objects. 
