@@ -1,5 +1,5 @@
 # Unit Test
-- if you think the "unit" is class, then only test public method, otherwize, test private method also
+- if you think the "unit" is class, then only test public method, otherwize, test private method also. However, test private method may against SOLID priciple (S)
 - how to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
 - https://www.youtube.com/watch?v=Krj3-h198KQ
