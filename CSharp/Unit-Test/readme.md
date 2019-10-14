@@ -1,18 +1,24 @@
 # Unit Test
 - Unit Testing for C# Developers https://www.udemy.com/course/unit-testing-csharp/learn/lecture/8997466#overview
 - if you think the "unit" is class, then only test public method, otherwize, test private method also. However, test private method may against SOLID priciple (S)
-- how to test private method How to unit test private methods using VSTS unit test?
+
+### basic
+- each test should have a single responsibility, and should ideally be less than ten lines of code. 
+
+
+### how to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
 - https://www.youtube.com/watch?v=Krj3-h198KQ
-- ExcludeFromCodeCoverage
-- Test method requirements
+### ExcludeFromCodeCoverage
+
+### Test method requirements
   ```
   A test method must meet the following requirements:
   1) It's decorated with the [TestMethod] attribute.
   2) It returns void.
   3) It cannot have parameters.
   ```
- - 7 popular unit tests naming conventions by Ajitesh Kumar
+### 7 popular unit tests naming conventions by Ajitesh Kumar
  https://dzone.com/articles/7-popular-unit-test-naming
   ```
   1) MethodName_StateUnderTest_ExpectedBehavior
