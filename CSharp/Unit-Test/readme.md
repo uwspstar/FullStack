@@ -1,4 +1,5 @@
 # Unit Test
+- Unit Testing for C# Developers https://www.udemy.com/course/unit-testing-csharp/learn/lecture/8997466#overview
 - if you think the "unit" is class, then only test public method, otherwize, test private method also. However, test private method may against SOLID priciple (S)
 - how to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
