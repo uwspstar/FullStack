@@ -198,6 +198,14 @@ So the name of the process that hosts the application is dotnet.exe.
 3. Environment variables
 4. Command-line arguments
 ```
+### appsettings.json https://csharp-video-tutorials.blogspot.com/2019/01/aspnet-core-appsettingsjson-file.html
+```
+To access configuration information in the Startup class, inject the IConfiguration service provided by the Framework
+```
+###  In ASP.NET Core Dependency Injection is an integral part. 
+```
+Dependency Injection allow us to create systems that are loosely coupled, extensible and easily testable. 
+```
 ### Can we run an asp.net core application without using the built in kestrel web server ? ```YES```
 ```
 If we use the InProcess hosting model, 
