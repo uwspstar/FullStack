@@ -179,16 +179,24 @@ With Out of Process Hosting,
 using a reverse proxy server is a good choice as it 
 provides an additional layer of configuration and security
 ```
-### When we run an asp.net core application directly from Visual Studio it uses by default IIS Express. Since we have configured our application to use Out of Process hosting, IIS Express in this case acts a reverse proxy server.
+### When we run an asp.net core application directly from Visual Studio it uses by default IIS Express. Since we have configured our application to use Out of Process hosting, IIS Express in this case acts a ```reverse proxy server.```
 ```
 IIS Express takes the incoming HTTP request and forwards it to Kestrel for processing. Kestrel process the request and sends the response to IIS Express. IIS Express, in turn sends that response to the browser
 ```
-### With Out of Process Hosting, whether you use a reverse proxy server or not,  it is the Kestrel server that hosts the application and process the request. 
+### With Out of Process Hosting, whether you use a reverse proxy server or not,  it is the ```Kestrel server``` that hosts the application and process the request. 
 ```
 The reverse proxy server if used,
 takes the incoming HTTP request and forwards it to the Kestrel server.
 Similarly it takes the response from the Kestrel server and sends it to the client. 
 So the name of the process that hosts the application is dotnet.exe.
+```
+
+### In ASP.NET Core application configuration settings can come from the following different configurations sources.
+```
+1. Files (appsettings.json, appsettings.{Environment}.json, where {Environment} is the app's current hosting environment)
+2. User secrets
+3. Environment variables
+4. Command-line arguments
 ```
 ### Can we run an asp.net core application without using the built in kestrel web server ? ```YES```
 ```
