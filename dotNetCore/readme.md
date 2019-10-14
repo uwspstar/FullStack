@@ -206,6 +206,33 @@ To access configuration information in the Startup class, inject the IConfigurat
 ```
 Dependency Injection allow us to create systems that are loosely coupled, extensible and easily testable. 
 ```
+### ASP.NET Core IConfiguration service
+- CreateDefaultBuilder() method of the WebHost class which is automatically invoked when the application starts
+- the later configuration sources override the earlier configuration sources.
+```
+IConfiguration service is setup to read configuration information 
+from all the various configuration sources in asp.net core.
+If you have a configuration setting with the same key in multiple configuration sources, 
+the later configuration sources override the earlier configuration sources.
+
+CreateDefaultBuilder() method of the WebHost class which is automatically invoked when the application starts, 
+reads the configuration sources in a specific order.
+
+To see the order in which the configuration sources are read, 
+please check out ConfigureAppConfiguration() method on the following link
+https://github.com/aspnet/MetaPackages/blob/release/2.2/src/Microsoft.AspNetCore/WebHost.cs
+
+Upon inspecting the file, you will see, the following is the default order 
+in which the various configuration sources are read
+	1) appsettings.json, 
+	2) appsettings.{Environment}.json
+	3) User secrets
+	4) Environment variables
+	5) Command-line arguments
+You can change this order if you want to or even add your own custom configuration sources in addition to all the existing configuration sources.
+```
+
+
 ### Can we run an asp.net core application without using the built in kestrel web server ? ```YES```
 ```
 If we use the InProcess hosting model, 
