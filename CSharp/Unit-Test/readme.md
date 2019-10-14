@@ -16,6 +16,7 @@
 
 ### name convention
 - The name of the method on our test is [MethodName] _```[scenario testing]``` _ ```[expected behavior]```. With this convention,
+- [I recommand to use] "Should_ExpectedBehavior_When_StateUnderTest", I use it for both backend and frontend test
 
 ### How to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
@@ -49,4 +50,4 @@ https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
   6) When_StateUnderTest_Expect_ExpectedBehavior
   7) Given_Preconditions_When_StateUnderTest_Then_ExpectedBehavior
    ```
-- [I recommand to use] "Should_ExpectedBehavior_When_StateUnderTest", I use it for both backend and frontend test
+### [I recommand to use] "Should_ExpectedBehavior_When_StateUnderTest", I use it for both backend and frontend test
