@@ -1,4 +1,5 @@
 # Unit Test
+- if you think the "unit" is class, then only test public method, otherwize, test private method also
 - https://www.youtube.com/watch?v=Krj3-h198KQ
 - ExcludeFromCodeCoverage
 - Test method requirements
