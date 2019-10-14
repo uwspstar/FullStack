@@ -2,7 +2,7 @@
 - Unit Testing for C# Developers https://www.udemy.com/course/unit-testing-csharp/learn/lecture/8997466#overview
 - if you think the "unit" is class, then only test public method, otherwize, test private method also. However, test private method may against SOLID priciple (S)
 
-### basic
+### Basic
 - each test should have a single responsibility, and should ideally be less than ten lines of code. 
 - each test should not have any logic. So you should not have any conditional statements, loops and other kinds of logic in your tests. NO IF ... ESLE...FOREACH ...
 - tests methods should not call each other
@@ -12,7 +12,7 @@
 
 
 
-### how to test private method How to unit test private methods using VSTS unit test?
+### How to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
 - https://www.youtube.com/watch?v=Krj3-h198KQ
 ### ExcludeFromCodeCoverage
@@ -24,7 +24,7 @@ https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
   2) It returns void.
   3) It cannot have parameters.
   ```
-### 7 popular unit tests naming conventions by Ajitesh Kumar
+### 7 Popular unit tests naming conventions by Ajitesh Kumar
  https://dzone.com/articles/7-popular-unit-test-naming
   ```
   1) MethodName_StateUnderTest_ExpectedBehavior
