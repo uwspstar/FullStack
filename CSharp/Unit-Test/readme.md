@@ -9,8 +9,8 @@
 - if you have a simple C# class that is mainly a property bag, you should not test these properties
 - you want to separate unit and integration tests, because unit test execute fast, integration tests take longer. 
 - run unit tests frequently as we're writing code, and run integration tests just before committing our code to the repository 
-
-
+- the plural name here. This indicates that this class has multiple tests. 
+- So if you have a class called reservation, you should have a class called reservation tests.
 
 ### How to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
