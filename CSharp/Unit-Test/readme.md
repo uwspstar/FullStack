@@ -14,6 +14,8 @@
 ### How many test ?
 - Often, the number of tests is equal to or greater than the number of execution paths. 
 
+### name convention
+- The name of the method on our test is [MethodName] _```[scenario testing]``` _ ```[expected behavior]```. With this convention,
 
 ### How to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
