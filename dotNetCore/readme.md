@@ -71,6 +71,7 @@ CreateDefaultBuilder() method does several things to create a web host.
 CreateDefaultBuilder() method sets up a web host with certain defaults.
 ```
 ### An ASP.NET core application can be hosted ```InProcess``` or ```OutOfProcess```.
+- The internal web server is ```Kestrel``` and the external web server can be ```IIS, Nginx or Apache```
 ### As part of setting up a web host, ```Startup``` class is also configured using the ```UseStartup()``` extension method of IWebHostBuilder class.
 ### Startup
 - ConfigureServices() method ```configures services``` required by the application
