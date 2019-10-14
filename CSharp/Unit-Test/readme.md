@@ -4,7 +4,9 @@
 
 ### basic
 - each test should have a single responsibility, and should ideally be less than ten lines of code. 
-
+- each test should not have any logic. So you should not have any conditional statements, loops and other kinds of logic in your tests. NO IF ... ESLE...FOREACH ...
+- tests methods should not call each other
+- if you have a simple C# class that is mainly a property bag, you should not test these properties
 
 ### how to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
