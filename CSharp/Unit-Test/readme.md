@@ -11,6 +11,9 @@
 - run unit tests frequently as we're writing code, and run integration tests just before committing our code to the repository 
 - the plural name here. This indicates that this class has multiple tests. 
 - So if you have a class called reservation, you should have a class called reservation tests.
+### How many test ?
+- Often, the number of tests is equal to or greater than the number of execution paths. 
+
 
 ### How to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
