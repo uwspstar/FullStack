@@ -13,6 +13,10 @@
 - So if you have a class called reservation, you should have a class called reservation tests.
 - should be trustworthy
 
+### practice
+- Testing Strings
+- Testing Arrays and Collections
+- 
 
 ### How many test ?
 - Often, the number of tests is equal to or greater than the number of execution paths. 
