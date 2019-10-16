@@ -6,3 +6,10 @@
 Select the Tools > NuGet Package Manager > Manage NuGet Packages for Solution... menu command, 
 or right-click the solution and select Manage NuGet Packages...:
 ```
+- Consolidate tab
+```
+Developers typically consider it bad practice to use different versions of the same NuGet package 
+across different projects in the same solution. When you choose to manage packages for a solution, 
+the Package Manager UI provides a Consolidate tab on which you can easily see 
+where packages with distinct version numbers are used by different projects in the solution:
+```
