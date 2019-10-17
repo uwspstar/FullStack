@@ -8,7 +8,9 @@
   ```
   Warning
 
-  When using a scoped service in a middleware, inject the service into the Invoke or InvokeAsync method. Don't inject via constructor injection because it forces the service to behave like a singleton. For more information, see Write custom ASP.NET Core middleware.
+  When using a scoped service in a middleware, inject the service into the Invoke or InvokeAsync method. 
+  Don't inject via constructor injection because it forces the service to behave like a singleton. 
+  For more information, see Write custom ASP.NET Core middleware.
   ```
 
 ### Singleton
