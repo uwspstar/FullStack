@@ -26,6 +26,8 @@
   It's dangerous to resolve a scoped service from a singleton. 
   It may cause the service to have incorrect state when processing subsequent requests.
   ```
+# AddSingleton vs AddScoped vs AddTransient
+
 ### AddSingleton() 
 - As the name implies, AddSingleton() method creates a Singleton service. A Singleton service is created when it is first requested. This same instance is then used by all the subsequent requests. So in general, a Singleton service is created only one time per application and that single instance is used throughout the application life time.
 
@@ -34,3 +36,11 @@
 
 ### AddScoped() 
 - This method creates a Scoped service. A new instance of a Scoped service is created once per request within the scope. For example, in a web application it creates 1 instance per each http request but uses the same instance in the other calls within that same web request.
+
+```
+public void ConfigureServices(IServiceCollection services)
+{
+    services.AddMvc();
+    services.AddSingleton<IEmployeeRepository, MockEmployeeRepository>();
+}
+```
