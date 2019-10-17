@@ -11,3 +11,4 @@
 - For objects larger than 100 megabytes, customers should consider using the Multipart Upload capability.
 - S3 You can use access control mechanisms such as bucket policies and Access Control Lists (ACLs) to selectively grant permissions to users and groups of users.
 - SSE-S3 provides an integrated solution where Amazon handles key management and key protection using multiple layers of security. You should choose SSE-S3 if you prefer to have Amazon manage your keys.
+- Use SSE-C if you want to maintain your own encryption keys, but don’t want to implement or leverage a client-side encryption library.
