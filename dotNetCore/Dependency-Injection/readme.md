@@ -1,7 +1,7 @@
 # Dependency Injection
 - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.0#service-lifetimes
 ### Transient
-- Transient lifetime services (AddTransient) are created each time they're requested from the service container. This lifetime works best for lightweight, stateless services.
+- Transient lifetime services (AddTransient) are created each time they're requested from the service container. This lifetime works best for ```lightweight, stateless services```.
 
 ### Scoped
 - Scoped lifetime services (AddScoped) are created once per client request (connection).
