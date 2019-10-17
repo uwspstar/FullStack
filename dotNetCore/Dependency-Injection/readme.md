@@ -4,7 +4,7 @@
 - Transient lifetime services (AddTransient) are created each time they're requested from the service container. This lifetime works best for ```lightweight, stateless services```.
 
 ### Scoped
-- Scoped lifetime services (AddScoped) are created once per client request (connection).
+- Scoped lifetime services (AddScoped) are created once ```per client request (connection)```.
   ```
   Warning
 
