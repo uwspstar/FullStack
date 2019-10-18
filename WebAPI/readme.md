@@ -1,4 +1,24 @@
 # .NET Web API
+### model binding
+```
+By default, model binding gets data in the form of key-value pairs from the following sources in an HTTP request:
+```
+- Form fields
+- The request body (For controllers that have the [ApiController] attribute.)
+- Route data
+- Query string parameters
+- Uploaded files
+
+```
+If the default behavior doesn't give the right results, 
+you can use one of the following attributes to specify the source to use for any given target.
+```
+- [FromQuery] - Gets values from the query string.
+- [FromRoute] - Gets values from route data.
+- [FromForm] - Gets values from posted form fields.
+- [FromBody] - Gets values from the request body.
+- [FromHeader] - Gets values from HTTP headers.
+
 ### Routing
 - Attribute Routing in ASP.NET Web API 2
 https://docs.microsoft.com/en-us/aspnet/web-api/overview/web-api-routing-and-actions/attribute-routing-in-web-api-2
