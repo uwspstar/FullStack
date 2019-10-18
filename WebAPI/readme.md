@@ -1,7 +1,8 @@
 # .NET Web API
 ### model binding
 ```
-By default, model binding gets data in the form of key-value pairs from the following sources in an HTTP request:
+By default, model binding gets data in the form of key-value pairs 
+from the following sources in an HTTP request:
 ```
 - Form fields
 - The request body (For controllers that have the [ApiController] attribute.)
