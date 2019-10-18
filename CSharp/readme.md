@@ -2,6 +2,9 @@
 
 ### try/catch
 - A try/catch block has some performance cost, so you'll only want to use them when you really need them
+- Avoid using an empty catch block, like catch (Exception) {} , which does not take appropriate action to
+expose or handle an error. An empty or non-informative catch block can hide exceptions and can make
+your code more difficult to debug instead of easier.
 
 ### ++x and x++
 ```
