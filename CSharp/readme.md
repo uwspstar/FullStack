@@ -1,7 +1,7 @@
 # C#
 
 ### try/catch
-- A try/catch block has some performance cost, so you'll only want to use them when you really need them,
+- A try/catch block has some performance cost, so you'll only want to use them when you really need them
 
 ### ++x and x++
 ```
