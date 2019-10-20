@@ -35,7 +35,15 @@ public int this[int x, int y]
 - Reserve the compile-time constants for when performance is critical and the value of the constant will never change between releases.
 - Compile-time constants can also be declared inside methods. 
 - Read-only constants cannot be declared with method scope.
-
+- A compile-time constant is replaced with the value of that constant in your object code
+- Runtime constants are evaluated at runtime.
+- Compile-time constants can be used only for prim- itive types (built-in integral and floating-point types), enums, or strings. 
+- Compile-time constants are limited to numbers and strings.
+```
+// Does not compile, use readonly instead:
+private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
+```
+- runtime constants can be any type
 
 
 
