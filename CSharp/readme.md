@@ -6,6 +6,14 @@
 expose or handle an error. An empty or non-informative catch block can hide exceptions and can make
 your code more difficult to debug instead of easier.
 
+### Properties Vs Fields In C#
+```
+Fields are normal variable members of a class. 
+Properties are an abstraction to get and set their values.
+Fields are normal variable members of a class. 
+Generally, you should declare your fields as private, 
+then use Properties to get and set their values.
+```
 ### ++x and x++
 ```
 ++x i.e. pre-increment operator uses the principle ‘change-then-use’ 
