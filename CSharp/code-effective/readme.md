@@ -33,3 +33,20 @@ public int this[int x, int y]
 - For that reason, you should prefer runtime constants over compile-time constants. 
 - Compile-time constants are slightly faster, but far less flexible, than runtime constants.
 - Reserve the compile-time constants for when performance is critical and the value of the constant will never change between releases.
+- Compile-time constants can also be declared inside methods. 
+- Read-only constants cannot be declared with method scope.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
