@@ -10,3 +10,5 @@ public class Program
             Console.WriteLine(val.GetType());
         }
     }
+//System.Byte
+//System.Int32
