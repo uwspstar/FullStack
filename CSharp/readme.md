@@ -1,5 +1,5 @@
 # C#
-
+- Secrets https://blog.submain.com/app-config-basics-best-practices/  (App.Config: Basics and Best Practices)
 ### try/catch
 - A try/catch block has some performance cost, so you'll only want to use them when you really need them
 - Avoid using an empty catch block, like catch (Exception) {} , which does not take appropriate action to
