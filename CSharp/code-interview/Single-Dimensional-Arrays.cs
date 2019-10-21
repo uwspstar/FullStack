@@ -41,36 +41,42 @@ public class Program
 
 using System;
 public class Program
+{
+    static void arrayMethod(int[] a)
     {
-       static void arrayMethod(int[] a)
+      int[] b = new int[5] {1,1,1,1,1};
+      a = b;
+      foreach(var y in b) 
+      {
+        Console.WriteLine("y = " + y);
+      }
+        
+      Console.WriteLine("a.Length = " + a.Length);
+        
+      foreach(var x in a) 
+      {
+        Console.WriteLine("x = " + x);
+      }
+    }
+    public static void Main(string[] args)
+    {
+        int[] arr = new int[10];
+        // [0,0,0,0,0,0,0,0,0,0]
+        foreach(var a in arr) 
         {
-          int[] b = new int[5];
-          a = b;
-          foreach(var y in b) 
-          {
-            Console.WriteLine("y = " + y);
-          }
-           
-          Console.WriteLine("a.Length = " + a.Length);
-           
-          foreach(var x in a) 
-          {
-            Console.WriteLine("x = " + x);
-          }
+          Console.WriteLine("arr = " + a);
         }
-        public static void Main(string[] args)
+        
+        arrayMethod(arr);
+        
+        Console.WriteLine(arr.Length);
+        
+        foreach(var a in arr) 
         {
-            int[] arr = new int[10];
-            // [0,0,0,0,0,0,0,0,0,0]
-            foreach(var a in arr) 
-            {
-              Console.WriteLine("arr = " + a);
-            }
-           
-            arrayMethod(arr);
-            Console.WriteLine(arr.Length);
+          Console.WriteLine("arr2 = " + a);
         }
     }
+}
 
 /*
 
@@ -84,17 +90,26 @@ arr = 0
 arr = 0
 arr = 0
 arr = 0
-y = 0
-y = 0
-y = 0
-y = 0
-y = 0
+y = 1
+y = 1
+y = 1
+y = 1
+y = 1
 a.Length = 5
-x = 0
-x = 0
-x = 0
-x = 0
-x = 0
+x = 1
+x = 1
+x = 1
+x = 1
+x = 1
 10
-
+arr2 = 0
+arr2 = 0
+arr2 = 0
+arr2 = 0
+arr2 = 0
+arr2 = 0
+arr2 = 0
+arr2 = 0
+arr2 = 0
+arr2 = 0
 */
