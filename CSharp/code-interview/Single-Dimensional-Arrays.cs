@@ -36,3 +36,62 @@ public class Program
     
     
  // 10
+
+
+using System;
+public class Program
+    {
+       static void arrayMethod(int[] a)
+        {
+          int[] b = new int[5];
+          a = b;
+          foreach(var y in b) 
+          {
+            Console.WriteLine("y = " + y);
+          }
+          Console.WriteLine("a.Length = " + a.Length);
+          foreach(var x in a) 
+          {
+            Console.WriteLine("x = " + x);
+          }
+        }
+        public static void Main(string[] args)
+        {
+            int[] arr = new int[10];
+            // [0,0,0,0,0,0,0,0,0,0]
+            foreach(var a in arr) 
+            {
+              Console.WriteLine("arr = " + a);
+            }
+           
+            arrayMethod(arr);
+            Console.WriteLine(arr.Length);
+        }
+    }
+
+/*
+
+arr = 0
+arr = 0
+arr = 0
+arr = 0
+arr = 0
+arr = 0
+arr = 0
+arr = 0
+arr = 0
+arr = 0
+y = 0
+y = 0
+y = 0
+y = 0
+y = 0
+a.Length = 5
+x = 0
+x = 0
+x = 0
+x = 0
+x = 0
+10
+
+*/
