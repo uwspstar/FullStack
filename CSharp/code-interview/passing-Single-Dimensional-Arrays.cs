@@ -44,6 +44,11 @@ public class Program
 {
     static void arrayMethod(int[] a)
     {
+      foreach(var x1 in a) 
+      {
+        Console.WriteLine("x1 = " + x1);
+      }
+        
       int[] b = new int[5] {1,1,1,1,1};
       a = b;
       foreach(var y in b) 
@@ -90,6 +95,16 @@ arr = 0
 arr = 0
 arr = 0
 arr = 0
+x1 = 0
+x1 = 0
+x1 = 0
+x1 = 0
+x1 = 0
+x1 = 0
+x1 = 0
+x1 = 0
+x1 = 0
+x1 = 0
 y = 1
 y = 1
 y = 1
