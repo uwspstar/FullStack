@@ -1,5 +1,6 @@
-//Single-Dimensional Arrays
-//https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/single-dimensional-arrays
+// Single-Dimensional Arrays
+// https://davidtranscend.com/blog/c-sharp-passing-parameters/
+// https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/single-dimensional-arrays
 /*
 int[] array3;
 array3 = new int[] { 1, 3, 5, 7, 9 };   // OK
