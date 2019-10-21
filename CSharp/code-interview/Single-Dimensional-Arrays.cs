@@ -37,6 +37,7 @@ public class Program
     
  // 10
 
+//value type vs reference type
 
 using System;
 public class Program
@@ -49,7 +50,9 @@ public class Program
           {
             Console.WriteLine("y = " + y);
           }
+           
           Console.WriteLine("a.Length = " + a.Length);
+           
           foreach(var x in a) 
           {
             Console.WriteLine("x = " + x);
