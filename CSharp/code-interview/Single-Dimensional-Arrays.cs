@@ -1,6 +1,11 @@
 //Single-Dimensional Arrays
 //https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/arrays/single-dimensional-arrays
 /*
+int[] array3;
+array3 = new int[] { 1, 3, 5, 7, 9 };   // OK
+//array3 = {1, 3, 5, 7, 9};   // Error
+
+
 SomeType[] array4 = new SomeType[10];
 
 The result of this statement depends on whether SomeType is a value type or a reference type. 
