@@ -1,4 +1,20 @@
 # ES3
+- Cross-region replication is a bucket-level configuration that enables automatic, asynchronous copying of objects across buckets in different AWS Regions. We refer to these buckets as source bucket and destination bucket. These buckets can be owned by different AWS accounts.
+
+- AWS CloudFront can be used to improve the performance of your website where network latency is an issue.
+- Amazon S3 Transfer Acceleration enables fast, easy, and secure transfers of files over long distances between your client and an S3 bucket. Transfer Acceleration takes advantage of Amazon CloudFront’s globally distributed edge locations. As the data arrives at an edge location, data is routed to Amazon S3 over an optimized network path.
+
+- The Amazon S3 notification feature enables you to receive notifications when certain events happen in your bucket. To enable notifications, you must first add a notification configuration identifying the events you want Amazon S3 to publish, and the destinations where you want Amazon S3 to send the event notifications.
+
+- DELETE call on object does not delete latest version unless DELETE call is made with latest version id.
+
+- When versioning is enabled, a simple DELETE cannot permanently delete an object. Instead, Amazon S3 inserts a delete marker in the bucket, and that marker becomes the current version of the object with a new ID. When you try to GET an object whose current version is a delete marker, Amazon S3 behaves as though the object has been deleted (even though it has not been erased) and returns a 404 error.
+- To permanently delete versioned objects, you must use DELETE Object versionId.
+
+The following figure shows that deleting a specified object version permanently removes that object.
+- When you delete an object in a versioning-enabled bucket, all versions remain in the bucket and Amazon S3 creates a delete marker for the object. To undelete the object, you must delete this delete marker.
+
+To undelete an object, you must delete the delete marker. Select the check box next to the delete marker of the object to recover, and then choose delete from the More menu.
 - When versioning is enabled on S3 bucket and a new version is added to an existing object, remember that older version still remains and AWS charges same price for old verions and new versions.
 
 - AWS S3 bucket policy does not grant permissions based on the web application URLs. However, you can setup a condition in the policy to restrict access only if the request is being sent from a certain URL using “aws:Referer” context-key.
