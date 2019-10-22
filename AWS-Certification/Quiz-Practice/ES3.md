@@ -1,4 +1,13 @@
 # ES3
+- public access is not required to be enabled for writing logs into S3 bucket. Only access required is PutObject for Log Delivery group.
+
+- although by default, Log Delivery group permission is disabled, permission will be granted when the bucket is selected as target for logging.
+
+- S3 buckets would often be restricted using bucket policy with Effect as Deny except for whitelisted IAM resources who would require access.
+
+- Server access logging provides detailed records for the requests that are made to a bucket. Server access logs are useful for many applications. For example, access log information can be useful in security and access audits.
+
+For details on logging for S3, refer documentation here. 
 - System metadata:
 ```
 Metadata such as object creation date is system controlled where only Amazon S3 can modify the value.
