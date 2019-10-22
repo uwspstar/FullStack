@@ -1,4 +1,15 @@
 # ES3
+- When versioning is enabled on S3 bucket and a new version is added to an existing object, remember that older version still remains and AWS charges same price for old verions and new versions.
+
+- AWS S3 bucket policy does not grant permissions based on the web application URLs. However, you can setup a condition in the policy to restrict access only if the request is being sent from a certain URL using “aws:Referer” context-key.
+
+- Content-Length and Content-MD5 are system metadata for object. They are set during creating/uploading an object. However, these paramaters do not enable web application to send requests to S3 bucket.
+
+- enabling public access will not enable web application to send requests to S3 bucket. Further more, AWS does not recommend enabling public access on an S3 bucket unless you are hosting static assets which can be accessed by all.
+
+- Cross-origin resource sharing (CORS) defines a way for client web applications that are loaded in one domain to interact with resources in a different domain. With CORS support, you can build rich client-side web applications with Amazon S3 and selectively allow cross-origin access to
+
+your Amazon S3 resources.
 - public access is not required to be enabled for writing logs into S3 bucket. Only access required is PutObject for Log Delivery group.
 
 - although by default, Log Delivery group permission is disabled, permission will be granted when the bucket is selected as target for logging.
@@ -7,7 +18,6 @@
 
 - Server access logging provides detailed records for the requests that are made to a bucket. Server access logs are useful for many applications. For example, access log information can be useful in security and access audits.
 
-For details on logging for S3, refer documentation here. 
 - System metadata:
 ```
 Metadata such as object creation date is system controlled where only Amazon S3 can modify the value.
