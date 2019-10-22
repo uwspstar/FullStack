@@ -1,4 +1,14 @@
 # ES3
+- The File Gateway presents a file interface that enables you to store files as objects in Amazon S3 using the industry-standard NFS and SMB file protocols, and access those files via NFS and SMB from your datacenter or Amazon EC2, or access those files as objects with the S3 API.
+- with Cached Volumen Gateway, you store your data in Amazon Simple Storage Service (Amazon S3) and retain a copy of frequently accessed data subsets locally. we can take incremental backups, called snapshots of the storage volume in S3.  All gateway data and snapshot data for cached volumes is stored in Amazon S3 and encrypted at rest using server-side encryption (SSE). However, you can't access this data with the Amazon S3 API or other tools such as the Amazon S3 Management Console.
+- with stored volumes, you store the entire set of volume data on-premises and store periodic point-in-time backups (snapshots) in AWS. In this model, your on-premises storage is primary, delivering low-latency access to your entire dataset. AWS storage is the backup that you can restore in the event of a disaster in your data center.
+
+- AWS provides strong consistency for DynamoDB, not for S3
+- EFS provides read-after-write consistency.
+- Eventual consistency is for overwrite PUTS and DELETES.
+- Amazon S3 provides read-after-write consistency for PUTS of new objects in your S3 bucket in all regions with one caveat. The caveat is that if you make a HEAD or GET request to the key name (to find if the object exists) before creating the object, Amazon S3 provides eventual consistency for read-after-write
+- Amazon S3 offers eventual consistency for overwrite PUTS and DELETES in all regions.
+- AWS does not provide strong consistency for DELETES.
 - Storage class property is at object level, not at bucket level. Following are different storage classes.
 - metadata is at object level property, not bucket level.For detailed information on object metadata
 
