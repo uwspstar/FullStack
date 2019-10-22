@@ -1,5 +1,5 @@
 # VPC
-### Which of the following ```default``` settings are incorrect for a newly created S3 bucket? (choose 2 options) ```BD```
+### Which of the following ```default``` settings are ```incorrect``` for a newly created S3 bucket? (choose 2 options) ```BD```
 
 A. Encryption is not enabled.
 B. Transfer Acceleration is enabled.
