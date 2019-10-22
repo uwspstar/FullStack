@@ -1,4 +1,13 @@
 # ES3
+- AWS S3 storage is virtually unlimited. No need to provision any storage upfront.
+
+- we need to calculate the "UsageValue" of the S3 BUCKET and one of the criteria for determining this is "The number of requests during the specified time period"
+
+- If the images need to be highly available and frequently accessed, choose STANDARD. 
+- If the images need not be highly available but frequently accessed, choose REDUCED_REDUNDANCY class.
+- If the images need to be highly available but not frequently accessed, choose STANDARD_IA class.
+- If the images need not be highly available and not frequently accessed, choose ONEZONE_IA  
+
 - S3 is a managed service and not part of VPC. So enabling VPC flow logs does not report traffic sent to S3 bucket.
 
 - Using the information collected by ```CloudTrail```, you can determine what request was made to Amazon S3, the source IP address from which the request was made, who made the request, when it was made, and so on. This information helps you to track changes made to your AWS resources and to troubleshoot operational issues
