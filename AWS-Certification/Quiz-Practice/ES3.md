@@ -1,4 +1,17 @@
 # ES3
+- System metadata:
+```
+Metadata such as object creation date is system controlled where only Amazon S3 can modify the value.
+
+Other system metadata, such as the storage class configured for the object and whether the object has server-side encryption enabled, are examples of system metadata whose values you control. If your bucket is configured as a website, sometimes you might want to redirect a page request to another page or an external URL. In this case, a webpage is
+an object in your bucket. Amazon S3 stores the page redirect value as system metadata whose value you control.
+When you create objects, you can configure values of these system metadata items or update the values when you need to
+```
+- User-defined metadata:
+```
+When uploading an object, you can also assign metadata to the object. You provide this optional information as a name-value (key-value) pair when you send a PUT or POST request to create the object. When you upload objects using the REST API, the optional user-defined metadata names must begin with "x-amz-meta-" to distinguish them from other HTTP headers
+```
+- AWS S3 bucket objects contain two kinds of metadata, system metadata and user-defined metadata.
 - AWS S3 storage is virtually unlimited. No need to provision any storage upfront.
 
 - we need to calculate the "UsageValue" of the S3 BUCKET and one of the criteria for determining this is "The number of requests during the specified time period"
