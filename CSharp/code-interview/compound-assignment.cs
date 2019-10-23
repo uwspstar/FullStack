@@ -1,4 +1,6 @@
 # compound assignment
+// https://www.tutorialspoint.com/compound-assignment-operators-in-chash
+// ^= Bitwise XOR Assignment
 
 bool test = true;
 test &= false;
@@ -27,5 +29,7 @@ public class Program
 
         num1 ^= num2 ^= num1 ^= num2;
         Console.WriteLine(num1 + ","+ num2); //0, 30
+        
+        Console.WriteLine(num1 = num1 ^ num2); // 30
     }
 }
