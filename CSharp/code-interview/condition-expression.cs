@@ -6,6 +6,9 @@ public class Program
 {      
   public static void Main(string[] args)
     {
+    
+      Console.WriteLine (true  ? x : 0); //66
+    
       char x = 'A'; //char
       int i = 0;
       Console.WriteLine (x); //A
