@@ -1,5 +1,7 @@
 // https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/classes-and-structs/static-classes-and-static-class-members
 
+// Static without instance
+
 // Static methods can be overloaded but not overridden, 
 // because they belong to the class, and not to any instance of the class.
 
