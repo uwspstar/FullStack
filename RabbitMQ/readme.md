@@ -7,3 +7,4 @@
 - The message content is a byte array, so you can encode whatever you like there.
 ### Work Queues
 - The ```main idea``` behind Work Queues (aka: Task Queues) is to avoid doing a resource-intensive task immediately and having to wait for it to complete. Instead we schedule the task to be done later.
+- One of the advantages of using a Task Queue is the ability to easily ```parallelise work```. If we are building up a backlog of work, we can just add more workers and that way, scale easily.
