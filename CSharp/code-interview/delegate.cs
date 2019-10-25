@@ -1,4 +1,4 @@
-// https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/delegates/
+// https://docs.microsoft.com/en-us/dotnet/api/system.delegate?view=netframework-4.8
 
 using System;
 using System.Collections.Generic;
