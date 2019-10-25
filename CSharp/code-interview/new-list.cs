@@ -18,3 +18,22 @@ public class Program
     }
     
    //  Using the generic type `System.Collections.Generic.List<T>' requires `1' type argument(s)
+
+
+using System;
+using System.Collections.Generic;
+public class Program
+    {
+        public static void Main(string[] args)
+        {
+            string[] strings = { "abc", "def", "ghi" };
+            var actions = new List();
+            foreach (string str in strings)
+              actions.Add(() => { Console.WriteLine(str); });
+
+            foreach (var action in actions)
+              action();
+        }
+    }
+
+   //  Using the generic type `System.Collections.Generic.List<T>' requires `1' type argument(s)
