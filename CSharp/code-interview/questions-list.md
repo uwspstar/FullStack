@@ -1,6 +1,6 @@
-- 1) find how many time the word repeat inside a file
-- 2) gabage collection
-- 3) performance issue encount
-- 4) SOLID  https://itnext.io/solid-principles-explanation-and-examples-715b975dcad4
-- 5) Depended Injection
-- 6) Sigleton
+- find how many time the word repeat inside a file
+- gabage collection
+- performance issue encount
+- SOLID  https://itnext.io/solid-principles-explanation-and-examples-715b975dcad4
+- Depended Injection
+- Sigleton
