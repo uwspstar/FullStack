@@ -26,3 +26,5 @@ It just does not matter. Because they have no state :)
 Stateful singletons: You must have exactly one instance of this class, 
 because it represents some globally shared state.
 ```
+- a thread-safe which is a crucial requirement when implementing a Singleton pattern.
+ 
