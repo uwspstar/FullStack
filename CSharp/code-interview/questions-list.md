@@ -27,4 +27,4 @@ Stateful singletons: You must have exactly one instance of this class,
 because it represents some globally shared state.
 ```
 - a thread-safe which is a crucial requirement when implementing a Singleton pattern.
- 
+- https://www.davidtanzer.net/david's%20blog/2016/03/14/6-reasons-why-you-should-avoid-singletons.html
