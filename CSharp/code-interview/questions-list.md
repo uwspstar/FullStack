@@ -17,6 +17,7 @@ using (var sr = new StreamReader("")) {
 - https://itnext.io/solid-principles-explanation-and-examples-715b975dcad4
 ### Dependency Injection
 - https://docs.microsoft.com/en-us/aspnet/core/fundamentals/dependency-injection?view=aspnetcore-3.0
+- https://www.youtube.com/watch?v=01C8selSVCY&t=454s
 ### Sigleton
 - Why you should not use Singleton?
 ```
