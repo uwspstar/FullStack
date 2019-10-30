@@ -1,5 +1,10 @@
 # FAQ C# Interview
+### Parameter Binding in ASP.NET Web API
+- https://docs.microsoft.com/en-us/aspnet/web-api/overview/formats-and-model-binding/parameter-binding-in-aspnet-web-api
+
 ### design a facebook, and post comments api with user and pagenation
+- such as API URL - /api/v1/comments/{id}/{pageNumber}/{pageSize}
+- such as API URL - http://localhost:#####/api/comments/12345?&pageNumber=1&pageSize=5
 
 ### find how many time the word repeat inside a file
 ```
