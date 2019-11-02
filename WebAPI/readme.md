@@ -1,4 +1,6 @@
 # .NET Web API
+- http://www.software-architects.com/content/images/blog/2015/09/RESTful%20Web%20API%20Design.pdf
+
 ### IHttpActionResult vs HttpResponseMessage
 - https://www.youtube.com/watch?v=cNR7gDPJtQI
 
