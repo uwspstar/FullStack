@@ -1,4 +1,9 @@
 # .NET Web API
+### IHttpActionResult vs HttpResponseMessage
+- https://www.youtube.com/watch?v=cNR7gDPJtQI
+
+### Post vs Put
+- https://www.youtube.com/watch?v=1xVK2m817Bw
 ### model binding
 ```
 By default, model binding gets data in the form of key-value pairs 
