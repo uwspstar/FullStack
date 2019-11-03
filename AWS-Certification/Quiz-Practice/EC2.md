@@ -1,5 +1,12 @@
 
 # EC2
+### What answer lists all the instance pricing categories that EC2 provides?
+```
+A. On-demand, Reserved, and Spot instances
+B. On-Demand, Reserved, Shared, and Custom
+C. On-Demand, Spot Instances, Shared and Dedicated 
+D. On-Demand, Reserved, Spot, and Custom
+```
 ### A client has requested additional compute power for end-of-year transaction processing. You estimate that they will need an additional 10 servers during a three-day period. You begin creating the servers by specifying the instance type in the AWS console. What are some of the viewable instance attributes in the AWS console for the instance type that you decide to choose? (Choose 3 answers)
 ```
 A. Storage (size and type)
