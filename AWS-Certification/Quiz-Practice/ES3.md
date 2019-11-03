@@ -1,5 +1,11 @@
 
 # ES3
+### Which of the following does Amazon S3 provide?
+```
+A. A transient storage in the cloud
+B. A highly encrypted virtual disk in the cloud C. A virtual server in the cloud
+D. A highly-scalable cloud storage
+```
 ### Does Amazon S3 provide a filesystem?
 ```
 A. Yes, NFS (Network File System).
