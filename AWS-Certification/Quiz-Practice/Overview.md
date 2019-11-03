@@ -1,4 +1,12 @@
 # Overview
+### Which choice is a stated benefit of using AWS?
+```
+A. data center servers specifically for your account
+B. security configuration is entirely managed by AWS 
+C. system compliance is entirely managed by AWS
+D. reduced effort to meet compliance requirements
+```
+
 ### ___ also called Virtual Machine Monitor (VMM), is software/hardware platform virtualization software that allows multiple operating systems to run on a host computer concurrently
 ```
 A. AWS VMOP
