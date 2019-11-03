@@ -1,4 +1,13 @@
 # Overview
+
+### What is a common use case for Amazon Lightsail?
+```
+A. to process large compute jobs with minimal administrative requirements
+B. to process individual steps in a process automatically based on changes in your system status
+C. to host simple websites, blogs or small applications 
+D. to manage scaling of Amazon EC2 instances
+```
+
 ### Which choice is a stated benefit of using AWS?
 ```
 A. data center servers specifically for your account
