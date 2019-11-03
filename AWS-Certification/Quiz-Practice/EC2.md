@@ -1,5 +1,12 @@
 
 # EC2
+### A client has requested additional compute power for end-of-year transaction processing. You estimate that they will need an additional 10 servers during a three-day period. You begin creating the servers by specifying the instance type in the AWS console. What are some of the viewable instance attributes in the AWS console for the instance type that you decide to choose? (Choose 3 answers)
+```
+A. Storage (size and type)
+B. Virtual CPUs
+C. Amazon Machine Image (AMI) 
+D. Memory
+```
 
 ### An Amazon EC2 Instance Store provides temporary block-level storage for your instance. An instance store is ideal for temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content. Ephemeral storage is ideal for
 ```
