@@ -1,4 +1,11 @@
+
 # ES3
+### Which of the following happens when a bucket is created?
+A. By default, versioning is disabled.
+B. By default, versioning is enabled for the US Standard region buckets. 
+C. By default, versioning is enabled.
+D. By default, versioning is disabled only for the local region of the user.
+
 - Cross-region replication is a bucket-level configuration that enables automatic, asynchronous copying of objects across buckets in different AWS Regions. We refer to these buckets as source bucket and destination bucket. These buckets can be owned by different AWS accounts.
 
 - AWS CloudFront can be used to improve the performance of your website where network latency is an issue.
