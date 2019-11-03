@@ -1,5 +1,12 @@
 
 # ES3
+### Does Amazon S3 provide a filesystem?
+```
+A. Yes, NFS (Network File System).
+B. Yes, any Filesystem of your choice.
+C. No, it only stores streams of data
+D. No, it's an object store, with buckets and objects
+```
 ### Which of the following happens when a bucket is created?
 A. By default, versioning is disabled.
 B. By default, versioning is enabled for the US Standard region buckets. 
