@@ -216,7 +216,7 @@ D. Use of auto scaling to prevent the need to predict and guess your capacity an
 Explanation: One of the best practices of the reliability pillar of the Well-Architected Framework is to 'stop guessing capacity.' This looks at the use of Auto Scaling to prevent the need to predict and guess your capacity and demand requirement which aids in a better end-user experience. Reference: https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf Answer: D
 
 Question No:23
-Elastic Load Balancing automatically distributes incoming traffic across multiple instances.
+### Elastic Load Balancing automatically distributes incoming traffic across multiple instances.
 A. RDS 
 B. M3 
 C. EC2
@@ -227,43 +227,46 @@ The load balancer serves as a single point of contact for clients, which increas
 Reference: http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/SvcIntro.html Answer: C
 
 Question No:24
-You are designing an AWS VPC for a large healthcare organization. The majority of the departments will require basic, low to medium throughput for their day to day operations. But the Radiology and MRI group continually sends very large imaging files and requires low latency and up to 10 Gbps throughput in a single availability zone. What configuration will best meet these requirements?
+### You are designing an AWS VPC for a large healthcare organization. The majority of the departments will require basic, low to medium throughput for their day to day operations. But the Radiology and MRI group continually sends very large imaging files and requires low latency and up to 10 Gbps throughput in a single availability zone. What configuration will best meet these requirements?
 A. Create the Radiology/MRI instances in a Placement Group.
 B. Use Direct Connect for Radiology/MRI.
 C. Use a VPN for Radiology/MRI.
-D. Create the Radiology/MRI instances in a Read Replica Group. Answer: A
+D. Create the Radiology/MRI instances in a Read Replica Group.
+
 Explanation: A placement group is a logical grouping of instances within a single Availability Zone. Placement groups are recommended for applications that benefit from low network latency, high network throughput, or both. To provide the lowest latency, and the highest packet-per-second network performance for your placement group, choose an instance type that supports enhanced networking.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html Answer: A
+
 Question No:25
-Why does AWS recommend using stateless cloud applications, when possible?
+### Why does AWS recommend using stateless cloud applications, when possible?
 A. They offer a higher degree of encryption for data in transit.
- 
-AWS_SAA-C01 Exam
 B. They are more secure than stateful applications.
 C. Decoupling layers enables more scalability and resilience
-D. They are more always more cost effective than stateful applications. Answer: C
+D. They are more always more cost effective than stateful applications. 
+
 Explanation: A stateless application needs no knowledge of previous application actions, and stores no session data, and thus can be scaled horizontally with minimal friction.
-Reference: https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf
+Reference: https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf Answer: C
+
 Question No:26
-You are managing a group of EC2 instances in your company's VPC. Your VPC has been experiencing much higher network traffic than expected and it is not expected to subside. You are considering using EC2 instances with enhanced networking capability. What benefits can enhanced networking instances provide? (Choose 3 answers)
+### You are managing a group of EC2 instances in your company's VPC. Your VPC has been experiencing much higher network traffic than expected and it is not expected to subside. You are considering using EC2 instances with enhanced networking capability. What benefits can enhanced networking instances provide? (Choose 3 answers)
 A. Lower latency
 B. Less jitter
 C. Less packet loss
-D. More packets per second Answer: A,B,D
+D. More packets per second
+
 Explanation: Enhanced networking uses single root I/O virtualization (SR-IOV) to provide high-performance networking capabilities on supported instance types. SR-IOV is a method of device virtualization that provides higher I/O performance and lower CPU utilization when compared to traditional virtualized network interfaces. Enhanced networking provides higher bandwidth, higher packet per second (PPS) performance, and consistently lower inter-instance latencies.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/enhanced-networking.html  Answer: A,B,D
+
 Question No:27
-You have set up an AWS environment which contains several on-demand EC2 instances dedicated to a high profile client that your company is currently involved with. Unfortunately the project has been postponed due to the fact that the company is having a cash flow problem.
- 
-AWS_SAA-C01 Exam
-Consequently you do not want to incur charges for these on-demand instances, but you also want to ensure that you do not lose all of your hard work and hence need to keep all the data that is currently contained on these instances. Which of the following will minimize charges for these instances whilst keeping all the data available for a later time when the project begins again? (Choose 2 answers)
+### You have set up an AWS environment which contains several on-demand EC2 instances dedicated to a high profile client that your company is currently involved with. Unfortunately the project has been postponed due to the fact that the company is having a cash flow problem. Consequently you do not want to incur charges for these on-demand instances, but you also want to ensure that you do not lose all of your hard work and hence need to keep all the data that is currently contained on these instances. Which of the following will minimize charges for these instances whilst keeping all the data available for a later time when the project begins again? (Choose 2 answers)
 A. Stop all the instances.
-B. Take a snapshot of all the instances and then terminate all the instances. C. Terminate all the instances.
-D. Terminate all the instances and then make an image of all the instances. Answer: A,B
-Explanation: If you stop the instances you will not be charged and the data will still be kept. If you terminate the instances you will lose all your data. If you take a snapshot of all the instances and then terminate all the instances you will not be charged but will still have all your data in the snapshot which can be restored later.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html
+B. Take a snapshot of all the instances and then terminate all the instances. 
+C. Terminate all the instances.
+D. Terminate all the instances and then make an image of all the instances.
+
+Explanation: If you stop the instances you will not be charged and the data will still be kept. If you terminate the instances you will lose all your data. If you take a snapshot of all the instances and then terminate all the instances you will not be charged but will still have all your data in the snapshot which can be restored later. Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-lifecycle.html  Answer: A,B
+
 Question No:28
-You have been asked to set up a public website on AWS with the following criteria:
+### You have been asked to set up a public website on AWS with the following criteria:
 . You want the database and the application web server running on an Amazon VPC.
 . You want the database to be able to connect to the Internet so that it can be automatically updated to the correct patch level.
 . You do not want to receive any incoming traffic from the Internet to the database.
@@ -271,15 +274,13 @@ Which solution would satisfy all of the above requirements for your planned publ
 A. Deploy both the public website and the database in a public subnet. Assign the database to a security group that only allows access from the IP of the public website.
 B. Use CloudFront to sit in front of the database. Configure the database as the origin.
 C. Deploy both the public website and the database in a public subnet. Create a network access control list (NACL) and attach to the public subnet that blocks all incoming requests from the Internet.
-D. Deploy the public website in a public subnet. Deploy the database in a private subnet which
- 
-AWS_SAA-C01 Exam
-connects to the Internet via a NAT gateway.
-Answer: D
+D. Deploy the public website in a public subnet. Deploy the database in a private subnet which connects to the Internet via a NAT gateway.
+
 Explanation: You want the database to be able to connect to the Internet, so you need to either set it up on a public subnet or set it up on a private subnet which connects to the Internet via a NAT gateway.
-Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html
+Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Scenario2.html Answer: D
+
 Question No:29
-An EC2 instance has one additional EBS volume attached to it. How can a user attach the same volume to another running instance in the same AZ?
+### An EC2 instance has one additional EBS volume attached to it. How can a user attach the same volume to another running instance in the same AZ?
 A. No need to detach. Just select the volume and attach it to the new instance, it will take care of mapping internally
 B. Attach the volume as read only to the second instance
 C. Detach the volume first and attach to new instance
