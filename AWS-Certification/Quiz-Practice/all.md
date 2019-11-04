@@ -1,13 +1,13 @@
-AWS_SAA-C01 Exam
-Volume: 486 Questions
+
 Question No:1
-If you determine that the resources on a launched Amazon EC2 instance are insufficient to handle the workload of an application, you can resize the instance without performing any migration as long as your root device is a(n) volume.
+- If you determine that the resources on a launched Amazon EC2 instance are insufficient to handle the workload of an application, you can resize the instance without performing any migration as long as your root device is a(n) volume.
 A. persistent
 B. SSD
 C. instance store D. EBS
-Answer: D
+
 Explanation: As your needs change, you might find that your instance is over-utilized (the instance type is too small) or under-utilized (the instance type is too large). If the root devicefor your instance is an Elastic Block Store (EBS) volume, you can change the size of the instance simply by changing its instance type, which is known as resizing it. If the root device for your instance is an instance store volume, you must migrate your application to a new instance with the instance type that you want.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html Answer: D
+
 Question No:2
 How does AWS define cloud computing?
 A. A physical pool of compute, storage and network resources that can’t be accessed over the internet.
