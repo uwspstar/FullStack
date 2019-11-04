@@ -321,35 +321,38 @@ D. time required for system restoration; data loss measured in time
 
 Explanation: A recovery time objective (RTO) is the time it takes to restore system service after a disruption, while a recovery point objective (RPO) is an acceptable amount of data loss measured in time. The two concepts are interrelated. The amount of data loss a business can tolerate usually determines the desired recovery time objective. The desired RTO then generally determines the disaster recovery method.
 Reference: https://en.wikipedia.org/wiki/Recovery_point_objective Answer: D
+
 Question No:33
-You are designing a cloud solution for your client which is an accounting company withseveral proprietary applications. Some of these applications are not portable to the cloud and will dictate that you design a hybrid solution. You need to enable traffic flow between the AWS VPC and the on-premises applications and your design will include a VPN to facilitate this communication. A VPN only subnet will need to be created. For a VPN only subnet, where should a route in the route table direct traffic?
+### You are designing a cloud solution for your client which is an accounting company withseveral proprietary applications. Some of these applications are not portable to the cloud and will dictate that you design a hybrid solution. You need to enable traffic flow between the AWS VPC and the on-premises applications and your design will include a VPN to facilitate this communication. A VPN only subnet will need to be created. For a VPN only subnet, where should a route in the route table direct traffic?
 A. Jump box
 B. On-premises router
-C. Virtual Private Gateway D. Internet Gateway Answer: C
-Explanation: Each subnet must be associated with a route table, which specifies the allowed routes for outbound traffic leaving the subnet. Every subnet that you create is automatically associated with the main route table for the VPC. If a subnet doesn't have a route to the Internet
-   
-AWS_SAA-C01 Exam
-gateway, but has its traffic routed to a virtual private gateway for a VPN connection, the subnet is known as a VPN-only subnet.
-Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html
+C. Virtual Private Gateway 
+D. Internet Gateway
+
+Explanation: Each subnet must be associated with a route table, which specifies the allowed routes for outbound traffic leaving the subnet. Every subnet that you create is automatically associated with the main route table for the VPC. If a subnet doesn't have a route to the Internet gateway, but has its traffic routed to a virtual private gateway for a VPN connection, the subnet is known as a VPN-only subnet.
+Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Subnets.html Answer: C
+
 Question No:34
-Which disaster recovery method generally has the highest RTO and RPO, but requires the least cost, in terms of resources, to restore service?
-A. Backup and restore B. Multi-site
+### Which disaster recovery method generally has the highest RTO and RPO, but requires the least cost, in terms of resources, to restore service?
+A. Backup and restore 
+B. Multi-site
 C. Pilot light
-D. Warm standby Answer: A
+D. Warm standby
+
 Explanation: With the backup and restore method of recovery, data is backed up to an AWS storage service, such as Amazon S3. The data can be imported into AWS using a variety of options such as storage gateway, AWS Snowball (import/export), Direct Connect, VPN or the internet. In the event of a disaster, archives can be recovered from Amazon S3, and the data can then be restored directly to cloud resources. This method takes the longest time, but requires the least investment because it is essentially a system of archiving data consistently and retrieving it when needed. Aside from data transfer and storage, no complex applications or smaller version of your service needs to be kept running offsite.
-Reference: https://d1.awsstatic.com/whitepapers/aws-disaster-recovery.pdf
+Reference: https://d1.awsstatic.com/whitepapers/aws-disaster-recovery.pdf Answer: A
+
 Question No:35
-You are leading the migration of a client's compute environment to the cloud. In a requirements meeting, you are discussing the types of EC2 instances needed as well as tenancy options. The majority of the environment can utilize a basic design but you have uncovered some special circumstances. The client has several server bound software licenses that need to be utilized. What tenancy option will best meet this requirement?
+### You are leading the migration of a client's compute environment to the cloud. In a requirements meeting, you are discussing the types of EC2 instances needed as well as tenancy options. The majority of the environment can utilize a basic design but you have uncovered some special circumstances. The client has several server bound software licenses that need to be utilized. What tenancy option will best meet this requirement?
 A. Dedicated host
 B. Shared tenancy
 C. Dedicated instance
- 
-AWS_SAA-C01 Exam
 D. Dual Tenancy
-Answer: A
+
 Explanation: Tenancy options provided by AWS are shared tenancy, dedicated instances, and dedicated hosts. An Amazon EC2 Dedicated Host is a physical server with EC2 instance capacity fully dedicated to your use. Dedicated Hosts can help you address compliance requirements and reduce costs by allowing you to use your existing server-bound software licenses.
-Reference: https://aws.amazon.com/ec2/dedicated-hosts/
- Question No:36
+Reference: https://aws.amazon.com/ec2/dedicated-hosts/ Answer: A
+
+Question No:36
 In regards to AWS infrastructure, a(n) cache data and reduce latency.
 A. region
 B. edge location
