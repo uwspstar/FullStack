@@ -1,157 +1,169 @@
 
 Question No:1
-- If you determine that the resources on a launched Amazon EC2 instance are insufficient to handle the workload of an application, you can resize the instance without performing any migration as long as your root device is a(n) volume.
+### If you determine that the resources on a launched Amazon EC2 instance are insufficient to handle the workload of an application, you can resize the instance without performing any migration as long as your root device is a(n) volume.
 A. persistent
 B. SSD
-C. instance store D. EBS
+C. instance store 
+D. EBS
 
-Explanation: As your needs change, you might find that your instance is over-utilized (the instance type is too small) or under-utilized (the instance type is too large). If the root devicefor your instance is an Elastic Block Store (EBS) volume, you can change the size of the instance simply by changing its instance type, which is known as resizing it. If the root device for your instance is an instance store volume, you must migrate your application to a new instance with the instance type that you want.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html Answer: D
+Explanation: As your needs change, you might find that your instance is over-utilized (the instance type is too small) or under-utilized (the instance type is too large). If the root devicefor your instance is an Elastic Block Store (EBS) volume, you can change the size of the instance simply by changing its instance type, which is known as resizing it. If the root device for your instance is an instance store volume, you must migrate your application to a new instance with the instance type that you want. Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instance-resize.html Answer: D
 
 Question No:2
-How does AWS define cloud computing?
+### How does AWS define cloud computing?
 A. A physical pool of compute, storage and network resources that can’t be accessed over the internet.
 B. The term used to describe virtualized technology.
 C. A pool of servers offering compute resources that are designed to be issued exclusively to individual tenants (users and organizations).
-D. The on-demand delivery of IT resources through a cloud services platform via the Internet with pay-as-you-go pricing.
-Answer: D
- 
-AWS_SAA-C01 Exam
-Explanation: Cloud computing provides a simple way to access servers, storage, databases and a broad set of application services over the Internet. A cloud services platform such as Amazon Web Services owns and maintains the network-connected hardware required for these application services, while you provision and use what you need via a web application. Reference: https://d0.awsstatic.com/whitepapers/aws-overview.pdf
+D. The on-demand delivery of IT resources through a cloud services platform via the Internet with pay-as-you-go pricing. 
+
+Explanation: Cloud computing provides a simple way to access servers, storage, databases and a broad set of application services over the Internet. A cloud services platform such as Amazon Web Services owns and maintains the network-connected hardware required for these application services, while you provision and use what you need via a web application. Reference: https://d0.awsstatic.com/whitepapers/aws-overview.pdf Answer: D
+
 Question No:3
-In Amazon Elastic Compute Cloud, when taking a snapshot, what is the status of the snapshot until it is completed?
-A. Stalled B. Running C. Working D. Pending Answer: D
+### In Amazon Elastic Compute Cloud, when taking a snapshot, what is the status of the snapshot until it is completed?
+A. Stalled 
+B. Running 
+C. Working 
+D. Pending 
+
 Explanation: In Amazon Elastic Compute Cloud, the status of the snapshot is 'pending' until the snapshot is complete.
-Reference: http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html
+Reference: http://docs.amazonwebservices.com/AWSEC2/latest/UserGuide/ebs-creating-snapshot.html Answer: D
+
 Question No:4
-Which of the following is not a characteristic of Amazon Elastic Compute Cloud (Amazon EC2)?
+### Which of the following is not a characteristic of Amazon Elastic Compute Cloud (Amazon EC2)?
 A. It increases the need to forecast traffic by providing dynamic IP addresses for static cloud computing.
 B. It eliminates your need to invest in hardware up front, so you can develop and deploy applications faster.
 C. It can be used to launch as many EC2 instances as needed up to the AWS instance limit for a region.
-D. It offers scalable computing capacity in the Amazon Web Services (AWS) cloud. Answer: A
- 
-AWS_SAA-C01 Exam
-Explanation: Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic. Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html
+D. It offers scalable computing capacity in the Amazon Web Services (AWS) cloud. 
+
+Explanation: Amazon Elastic Compute Cloud (Amazon EC2) provides scalable computing capacity in the Amazon Web Services (AWS) cloud. Using Amazon EC2 eliminates your need to invest in hardware up front, so you can develop and deploy applications faster. You can use Amazon EC2 to launch as many or as few virtual servers as you need, configure security and networking, and manage storage. Amazon EC2 enables you to scale up or down to handle changes in requirements or spikes in popularity, reducing your need to forecast traffic. Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/concepts.html Answer: A
+
 Question No:5
-Which of the following happens when a bucket is created?
+### Which of the following happens when a bucket is created?
 A. By default, versioning is disabled.
-B. By default, versioning is enabled for the US Standard region buckets. C. By default, versioning is enabled.
-D. By default, versioning is disabled only for the local region of the user. Answer: A
-Explanation: A user can enable versioning with AWS S3 only at the bucket level. Versioning is disabled by default when a bucket is created.
-Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html
+B. By default, versioning is enabled for the US Standard region buckets. 
+C. By default, versioning is enabled.
+D. By default, versioning is disabled only for the local region of the user. 
+
+Explanation: A user can enable versioning with AWS S3 only at the bucket level. Versioning is disabled by default when a bucket is created. Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/ObjectVersioning.html Answer: A
+
 Question No:6
-An Elastic Cloud Compute (EC2) instance can be best described as .
+### An Elastic Cloud Compute (EC2) instance can be best described as .
 A. a Windows 10 virtual machine running locally on a Type I hypervisor
 B. any AMI virtual machine running locally on a Type II hypervisor
 C. a Linux Red Hat virtual machine running locally on a Type I hypervisor
-D. a copy of the AMI running as a virtual server on a host computer in the data center Answer: D
-Explanation: An EC2 Instance is a copy of an Amazon Machine Image (AMI) that is running as a virtual server on a host computer in Amazon’s data center. When you create/launch an instance you must select the instance type. This determines the hardware characteristics (32-bit or 64-bit;
-  
-AWS_SAA-C01 Exam
-amount of RAM, amount and type of CPUs, and hard drive capacity) of the virtual machine. Reference: https://aws.amazon.com/ec2/
+D. a copy of the AMI running as a virtual server on a host computer in the data center
+
+Explanation: An EC2 Instance is a copy of an Amazon Machine Image (AMI) that is running as a virtual server on a host computer in Amazon’s data center. When you create/launch an instance you must select the instance type. This determines the hardware characteristics (32-bit or 64-bit; amount of RAM, amount and type of CPUs, and hard drive capacity) of the virtual machine. Reference: https://aws.amazon.com/ec2/  Answer: D
+
 Question No:7
-A   , also called Virtual Machine Monitor (VMM), is software/hardware platform virtualization software that allows multiple operating systems to run on a host computer concurrently
+### A   , also called Virtual Machine Monitor (VMM), is software/hardware platform virtualization software that allows multiple operating systems to run on a host computer concurrently
 A. AWS VMOP
 B. Hypervisor
 C. OS Virtualizer
-D. AWS Virtual Monitor Answer: B
-Explanation: A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines. This is the base of cloud computing services like Amazon AWS and the way they run instances (also called virtual machines).
-Reference: http://en.wikipedia.org/wiki/Hypervisor
+D. AWS Virtual Monitor
+
+Explanation: A hypervisor or virtual machine monitor (VMM) is a piece of computer software, firmware or hardware that creates and runs virtual machines. This is the base of cloud computing services like Amazon AWS and the way they run instances (also called virtual machines). Reference: http://en.wikipedia.org/wiki/Hypervisor Answer: B
+
 Question No:8
-Does Amazon S3 provide a filesystem?
+### Does Amazon S3 provide a filesystem?
 A. Yes, NFS (Network File System).
 B. Yes, any Filesystem of your choice.
 C. No, it only stores streams of data
-D. No, it's an object store, with buckets and objects. Answer: D
-Explanation: Amazon Simple Storage Service (S3) is an object storage organized in a hierarchy of buckets and objects that can be easily managed and accessed by your users and applications. Reference: http://docs.aws.amazon.com/AmazonS3/latest/gsg/GetStartedWithS3.html
+D. No, it's an object store, with buckets and objects.
+
+Explanation: Amazon Simple Storage Service (S3) is an object storage organized in a hierarchy of buckets and objects that can be easily managed and accessed by your users and applications. Reference: http://docs.aws.amazon.com/AmazonS3/latest/gsg/GetStartedWithS3.html Answer: D
  
-AWS_SAA-C01 Exam
 Question No:9
-Amazon provides durable, block-level storage volumes you can attach to a running instance and which persist beyond the life of the instance.
+### Amazon provides durable, block-level storage volumes you can attach to a running instance and which persist beyond the life of the instance.
 A. Elastic Block Store
 B. Elastic File System
-C. Persistent Block Store D. EC2 Instance Store Answer: A
-Explanation: Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance. You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates. For example, Amazon EBS is the recommended storage option when you run a database on an instance. An EBS volume behaves like a raw, unformatted, external block device that you can attach to a single instance. The volume persists independently from the running life of an instance.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html
+C. Persistent Block Store 
+D. EC2 Instance Store
+
+Explanation: Amazon EBS provides durable, block-level storage volumes that you can attach to a running instance. You can use Amazon EBS as a primary storage device for data that requires frequent and granular updates. For example, Amazon EBS is the recommended storage option when you run a database on an instance. An EBS volume behaves like a raw, unformatted, external block device that you can attach to a single instance. The volume persists independently from the running life of an instance. Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/Storage.html  Answer: A
+
 Question No:10
-Which choice is a stated benefit of using AWS?
+### Which choice is a stated benefit of using AWS?
 A. data center servers specifically for your account
-B. security configuration is entirely managed by AWS C. system compliance is entirely managed by AWS
-D. reduced effort to meet compliance requirements Answer: D
+B. security configuration is entirely managed by AWS 
+C. system compliance is entirely managed by AWS
+D. reduced effort to meet compliance requirements
+
 Explanation: AWS services are designed to comply with common compliance regulations, such as PCI DSS level. You will have to configure services to meet your specific compliance needs, but segments of your IT system on AWS should comply will several standard compliance regulations immediately.
-You can request dedicated instances, but you cannot select specific data centers for your account, and with the Shared Responsibility Model, AWS will not assist you in configurations to meet your security or compliance requirements.
- 
-AWS_SAA-C01 Exam
-Reference: https://d0.awsstatic.com/whitepapers/aws-overview.pdf
+You can request dedicated instances, but you cannot select specific data centers for your account, and with the Shared Responsibility Model, AWS will not assist you in configurations to meet your security or compliance requirements. Reference: https://d0.awsstatic.com/whitepapers/aws-overview.pdf  Answer: D
+
 Question No:11
-An Amazon EC2 Instance Store provides temporary block-level storage for your instance. An instance store is ideal for temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content. Ephemeral storage is ideal for
-. A. persistent data
-B. high-performance storage of user files C. storing critical system files
+### An Amazon EC2 Instance Store provides temporary block-level storage for your instance. An instance store is ideal for temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content. Ephemeral storage is ideal for
+A. persistent data
+B. high-performance storage of user files 
+C. storing critical system files
 D. non-persistent data
-Answer: D
+
 Explanation: An Amazon EC2 Instance Store provides temporary block-level storage for your instance. An instance store is ideal for temporary storage of information that changes frequently, such as buffers, caches, scratch data, and other temporary content. Ephemeral storage is ideal for non-persistent data.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/InstanceStorage.html Answer: D
+
 Question No:12
-Which of the following does Amazon S3 provide?
+### Which of the following does Amazon S3 provide?
 A. A transient storage in the cloud
-B. A highly encrypted virtual disk in the cloud C. A virtual server in the cloud
+B. A highly encrypted virtual disk in the cloud 
+C. A virtual server in the cloud
 D. A highly-scalable cloud storage
-Answer: D
-Explanation: Amazon S3 provides Scalable Storage in the Cloud. Amazon Simple Storage Service (Amazon S3) is object storage with a simple web service interface to store and retrieve any amount of data from anywhere on the web. It is designed to deliver 99.999999999% durability, and scale past trillions of objects worldwide.
-  
-AWS_SAA-C01 Exam
-Reference: https://aws.amazon.com/s3/
+
+Explanation: Amazon S3 provides Scalable Storage in the Cloud. Amazon Simple Storage Service (Amazon S3) is object storage with a simple web service interface to store and retrieve any amount of data from anywhere on the web. It is designed to deliver 99.999999999% durability, and scale past trillions of objects worldwide. Reference: https://aws.amazon.com/s3/ Answer: D
+
 Question No:13
-What is a common use case for Amazon Lightsail?
+### What is a common use case for Amazon Lightsail?
 A. to process large compute jobs with minimal administrative requirements
 B. to process individual steps in a process automatically based on changes in your system status
-C. to host simple websites, blogs or small applications D. to manage scaling of Amazon EC2 instances Answer: C
-Explanation: With its simplicity and small scale uses, Amazon Lightsail is commonly used to host simple websites, small applications and blogs. You can run multiple Lightsail instances together, allowing them to communicate and it's even possible, if required, to connect it to other AWS resources and to your existing VPC running within AWS via a peering connection. Reference: https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail
+C. to host simple websites, blogs or small applications 
+D. to manage scaling of Amazon EC2 instances
+
+Explanation: With its simplicity and small scale uses, Amazon Lightsail is commonly used to host simple websites, small applications and blogs. You can run multiple Lightsail instances together, allowing them to communicate and it's even possible, if required, to connect it to other AWS resources and to your existing VPC running within AWS via a peering connection. Reference: https://lightsail.aws.amazon.com/ls/docs/getting-started/article/what-is-amazon-lightsail  Answer: C
+
 Question No:14
-To enable access to or from the Internet for instances in a VPC subnet, you must:
-A. ensure that instances in your subnet have only private IP addresses. B. attach an existing datastore to a virtual machine.
+### To enable access to or from the Internet for instances in a VPC subnet, you must:
+A. ensure that instances in your subnet have only private IP addresses. 
+B. attach an existing datastore to a virtual machine.
 C. ensure that your network access control and security group rules block the relevant traffic flowing into your instance.
-D. ensure that your subnet's route table points to the Internet Gateway. Answer: D
+D. ensure that your subnet's route table points to the Internet Gateway.
+
 Explanation: To enable access to or from the Internet for instances in a VPC subnet, you must do the following:
 . Attach an Internet Gateway to your VPC.
 . Ensure that your subnet's route table points to the Internet gateway.
- 
-AWS_SAA-C01 Exam
 . Ensure that instances in your subnet have public IP addresses or Elastic IP addresses.
-. Ensure that your network access control and security group rules allow the relevant traffic to flow to and from your instance.
-Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Internet_Gateway.html
+. Ensure that your network access control and security group rules allow the relevant traffic to flow to and from your instance. Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_Internet_Gateway.html  Answer: D
+
 Question No:15
-A client has requested additional compute power for end-of-year transaction processing. You estimate that they will need an additional 10 servers during a three-day period. You begin creating the servers by specifying the instance type in the AWS console. What are some of the viewable instance attributes in the AWS console for the instance type that you decide to choose? (Choose 3 answers)
+### A client has requested additional compute power for end-of-year transaction processing. You estimate that they will need an additional 10 servers during a three-day period. You begin creating the servers by specifying the instance type in the AWS console. What are some of the viewable instance attributes in the AWS console for the instance type that you decide to choose? (Choose 3 answers)
 A. Storage (size and type)
 B. Virtual CPUs
-C. Amazon Machine Image (AMI) D. Memory
-Answer: A,B,D
+C. Amazon Machine Image (AMI) 
+D. Memory
+
 Explanation: The instance type defines the virtual hardware of the EC2 instance. You can select an instance to meet your needs depending on these factors: the number of virtual CPUs, network performance, memory, and storage (size and type). Instance types are grouped into families based on these characteristics and you can scale up in size.
-Reference: https://aws.amazon.com/ec2/instance-types/
+Reference: https://aws.amazon.com/ec2/instance-types/ Answer: A,B,D
+
 Question No:16
-What answer lists all the instance pricing categories that EC2 provides?
+### What answer lists all the instance pricing categories that EC2 provides?
 A. On-demand, Reserved, and Spot instances
 B. On-Demand, Reserved, Shared, and Custom
-C. On-Demand, Spot Instances, Shared and Dedicated D. On-Demand, Reserved, Spot, and Custom
-Answer: A
- 
-AWS_SAA-C01 Exam
+C. On-Demand, Spot Instances, Shared and Dedicated 
+D. On-Demand, Reserved, Spot, and Custom
+
 Explanation: The specific pricing options AmazonEC2 instances can be either On-Demand, Reserved or Spot instances.
 With on-demand instances, you can pay for compute capacity by the second (with a minimum one-minute charge), or by the hour, depending on the operating system you select for your virtual machine instance. With on-demand pricing, there is no long-term commitments or upfront payments.
 Reserved Instances provide you with a significant discount (up to 75%) compared to On-Demand instance pricing. Amazon EC2 Spot instances allow you to bid on spare Amazon EC2 computing capacity for up to 90% off the on-demand price.
-There are also tenancy options, which determine the AWS hardware your instances are hosted on. This is technically different than the pricing options. AWS offers shared tenancy by default, as well as dedicated tenancy, and finally dedicated host tenancy. Shared tenancy means your instances can be hosted on any available hardware in a given availability zone, and will still be secure and separate from other instances with shared tenancy. Dedicated tenancy means your instances only alone run on a specific, single-tenant AWS server. A Dedicated Host is a physical EC2 server dedicated for your use, and you can actually control the server settings. The ability to control the server settings is what separates dedicated tenancy from dedicated host tenancy. The pay-as-you-go pricing was previously per instance-hour, but was updated on October 2, 2017 to include some instance types and operating systems that can be billed at per second. Reference: http://aws.amazon.com/ec2/faqs/
+There are also tenancy options, which determine the AWS hardware your instances are hosted on. This is technically different than the pricing options. AWS offers shared tenancy by default, as well as dedicated tenancy, and finally dedicated host tenancy. Shared tenancy means your instances can be hosted on any available hardware in a given availability zone, and will still be secure and separate from other instances with shared tenancy. Dedicated tenancy means your instances only alone run on a specific, single-tenant AWS server. A Dedicated Host is a physical EC2 server dedicated for your use, and you can actually control the server settings. The ability to control the server settings is what separates dedicated tenancy from dedicated host tenancy. The pay-as-you-go pricing was previously per instance-hour, but was updated on October 2, 2017 to include some instance types and operating systems that can be billed at per second. Reference: http://aws.amazon.com/ec2/faqs/ Answer: A
+
 Question No:17
-Which of the following is the most accurate definition of the Amazon Machine Images (AMIs)?
+### Which of the following is the most accurate definition of the Amazon Machine Images (AMIs)?
 A. It is a template that contains a software configuration (for example, an operating system, an application server, and applications).
 B. It is a storage volume for temporary data that's deleted when you stop or terminate your instances.
 C. It is a template that contains configurations of CPU, memory, storage, and networking capacity for your instances.
 D. It is a web service that makes it easier to set up, operate, and scale a relational database in the cloud.
-Answer: A
+
 Explanation: One of the main features of Amazon EC2 is Amazon Machine Images (AMIs), which is a template that contains a software configuration (for example, an operating system, an application server, and applications). AMIs contain common software configurations for public use.
- 
-AWS_SAA-C01 Exam
 Moreover, users can create their custom AMI or AMIs. This ability helps users to quickly and easily start new instances that have everything they need.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html Answer: A
 Question No:18
 Each Amazon region is designed to be completely isolated from the other Amazon regions so that
 .
