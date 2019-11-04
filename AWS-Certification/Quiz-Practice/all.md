@@ -284,38 +284,43 @@ Question No:29
 A. No need to detach. Just select the volume and attach it to the new instance, it will take care of mapping internally
 B. Attach the volume as read only to the second instance
 C. Detach the volume first and attach to new instance
-D. Terminate the first instance and only then attach to the new instance Answer: C
+D. Terminate the first instance and only then attach to the new instance 
+
 Explanation: If an EBS volume is attached to a running EC2 instance, the user needs to detach the volume from the original instance and then attach it to a new running instance. The user doesn't need to stop / terminate the original instance.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ebs-detaching-volume.html Answer: C
+
 Question No:30
-A client has requested additional compute power for end-of-year transaction processing. You estimate that they will need an additional 10 servers during a three-day period. You begin creating the servers by specifying the instance type and selecting an AMI. What two key features do the instance type and AMI encapsulate? (Choose 2 answers)
+### A client has requested additional compute power for end-of-year transaction processing. You estimate that they will need an additional 10 servers during a three-day period. You begin creating the servers by specifying the instance type and selecting an AMI. What two key features do the instance type and AMI encapsulate? (Choose 2 answers)
 A. The software loaded on the instance
-B. The number of virtual licenses for software provided C. The key pair for the instance
- 
-AWS_SAA-C01 Exam
+B. The number of virtual licenses for software provided 
+C. The key pair for the instance
 D. The amount of virtual hardware dedicated to the instance
-Answer: A,D
+
 Explanation: When creating an EC2 instance, by selecting the instance type and the Amazon Machine Image (AMI), you are selecting the the hardware type of the machine and the type of software you want on the machine, respectively. Various Linux types as well as Windows operating systems are available. In certain instances, you can also choose an AMI that comes with a database.
-Reference: https://aws.amazon.com/ec2/instance-types/
+Reference: https://aws.amazon.com/ec2/instance-types/ Answer: A,D
+
 Question No:31
-You have been assigned to a client which is a Federal agency and is utilizing a hybrid cloud environment. The agency distributes large amounts of sensitive data throughout the world. Your task is to ensure that the distribution of this data is secure using various encryption techniques as well as security groups and Access Control Lists. One of the requirements is to distribute content utilizing Cloudfront for optimal performance but to completely restrict access from within certain blacklisted countries. What service can you use with Cloudfront to fulfill this requirement?
-A. server side encryption B. IAM Roles
+### You have been assigned to a client which is a Federal agency and is utilizing a hybrid cloud environment. The agency distributes large amounts of sensitive data throughout the world. Your task is to ensure that the distribution of this data is secure using various encryption techniques as well as security groups and Access Control Lists. One of the requirements is to distribute content utilizing Cloudfront for optimal performance but to completely restrict access from within certain blacklisted countries. What service can you use with Cloudfront to fulfill this requirement?
+A. server side encryption 
+B. IAM Roles
 C. firewall rules
-D. geo restriction Answer: D
+D. geo restriction 
+
 Explanation: You can use geo restriction, also known as geoblocking, to prevent users in specific geographic locations from accessing content that you're distributing through a CloudFront web distribution.
 To use geo restriction, you have two options:
 . Use the CloudFront geo restriction feature. Use this option to restrict access to all of the files that are associated with a distribution and to restrict access at the country level.
 . Use a third-party geolocation service. Use this option to restrict access to a subset of the files that are associated with a distribution or to restrict access at a finer granularity than the country level.
-Reference: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/georestrictions.html
+Reference: http://docs.aws.amazon.com/AmazonCloudFront/latest/DeveloperGuide/georestrictions.html Answer: D
  
-AWS_SAA-C01 Exam
 Question No:32
-A recovery time objective (RTO) is related to , while a recovery point objective (RPO) is related to .
-A. the actual time for a system to restore; the estimated time for a system to restore B. the estimated time for a system to restore; the actual time for a system to restore C. data loss measured in time; time required for system restoration
+### A recovery time objective (RTO) is related to__ , while a recovery point objective (RPO) is related to__ .
+A. the actual time for a system to restore; the estimated time for a system to restore 
+B. the estimated time for a system to restore; the actual time for a system to restore 
+C. data loss measured in time; time required for system restoration
 D. time required for system restoration; data loss measured in time
-Answer: D
+
 Explanation: A recovery time objective (RTO) is the time it takes to restore system service after a disruption, while a recovery point objective (RPO) is an acceptable amount of data loss measured in time. The two concepts are interrelated. The amount of data loss a business can tolerate usually determines the desired recovery time objective. The desired RTO then generally determines the disaster recovery method.
-Reference: https://en.wikipedia.org/wiki/Recovery_point_objective
+Reference: https://en.wikipedia.org/wiki/Recovery_point_objective Answer: D
 Question No:33
 You are designing a cloud solution for your client which is an accounting company withseveral proprietary applications. Some of these applications are not portable to the cloud and will dictate that you design a hybrid solution. You need to enable traffic flow between the AWS VPC and the on-premises applications and your design will include a VPN to facilitate this communication. A VPN only subnet will need to be created. For a VPN only subnet, where should a route in the route table direct traffic?
 A. Jump box
