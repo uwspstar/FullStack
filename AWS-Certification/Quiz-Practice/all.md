@@ -164,24 +164,27 @@ D. It is a web service that makes it easier to set up, operate, and scale a rela
 Explanation: One of the main features of Amazon EC2 is Amazon Machine Images (AMIs), which is a template that contains a software configuration (for example, an operating system, an application server, and applications). AMIs contain common software configurations for public use.
 Moreover, users can create their custom AMI or AMIs. This ability helps users to quickly and easily start new instances that have everything they need.
 Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html Answer: A
+
 Question No:18
-Each Amazon region is designed to be completely isolated from the other Amazon regions so that
-.
+### Each Amazon region is designed to be completely isolated from the other Amazon regions so that
 A. they provide better security
 B. they reduce the operational costs
-C. they achieve the greatest possible fault tolerance and stability D. they provide low latency connections
-Answer: C
+C. they achieve the greatest possible fault tolerance and stability 
+D. they provide low latency connections
+
 Explanation: Each Amazon region is designed to be completely isolated from the other Amazon regions. This achieves the greatest possible fault tolerance and stability.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.ht ml
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-regions-availability-zones.html Answer: C
+
 Question No:19
-Is it possible to access S3 objects from the Internet?
+### Is it possible to access S3 objects from the Internet?
 A. No, there is no way to access any S3 objects from the Internet.
-B. Yes, it is possible if proper public readable accesses and ACLs are set. C. No, only a general overview of S3 objects can be read from the Internet. D. Yes, but it has to pass through EC2.
-Answer: B
+B. Yes, it is possible if proper public readable accesses and ACLs are set. 
+C. No, only a general overview of S3 objects can be read from the Internet. 
+D. Yes, but it has to pass through EC2.
+
 Explanation: You must grant read permission on the specific objects to make them publicly accessible so that your users can view them on your website. You make objects publicly readable by using either the object ACL or by writing a bucket policy.
-  
-AWS_SAA-C01 Exam
-Reference: https://aws.amazon.com/articles/5050
+Reference: https://aws.amazon.com/articles/5050 Answer: B
+
 Question No:20
 By default, are volumes that you attach as you launch the instance automatically deleted when the instance terminates?
 A. No, but you can manually enable this behavior.
