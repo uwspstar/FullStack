@@ -186,43 +186,46 @@ Explanation: You must grant read permission on the specific objects to make them
 Reference: https://aws.amazon.com/articles/5050 Answer: B
 
 Question No:20
-By default, are volumes that you attach as you launch the instance automatically deleted when the instance terminates?
+### By default, are volumes that you attach as you launch the instance automatically deleted when the instance terminates?
 A. No, but you can manually enable this behavior.
 B. Yes, but any additional EBS volumes that you attach at launch, or any EBS volumes that you attach to an existing instance persist even after the instance terminates.
 C. No
 D. No, but any additional EBS volumes that you attach at launch needs to be replaced before deletion.
-Answer: B
+
 Explanation: By default, Amazon EBS root device volumes are automatically deleted when the instance terminates. However, by default, any additional EBS volumes that you attach at launch, or any EBS volumes that you attach to an existing instance persist even after the instance terminates.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/terminating-instances.html Answer: B
+
 Question No:21
-Which of the following would be considered features of using Elastic Load Balancing to automatically distribute incoming application traffic across multiple Amazon EC2 instances? (Choose 3 answers)
+### Which of the following would be considered features of using Elastic Load Balancing to automatically distribute incoming application traffic across multiple Amazon EC2 instances? (Choose 3 answers)
 A. Elastic Load Balancing ensures that only healthy Amazon EC2 instances receive traffic by detecting unhealthy instances and rerouting traffic across the remaining healthy instances.
 B. Elastic Load Balancing delivers your content through a worldwide network of edge locations.
 C. Elastic Load Balancing automatically scales its request handling capacity to meet the demands of application traffic.
 D. Elastic Load Balancing works with Amazon Virtual Private Cloud (VPC) to provide robust networking and security features.
- 
-AWS_SAA-C01 Exam
-Answer: A,C,D
+
 Explanation: Elastic Load Balancing works with Amazon Virtual Private Cloud (VPC) to provide robust networking and security features. Elastic Load Balancing ensures that only healthy Amazon EC2 instances receive traffic by detecting unhealthy instances and rerouting traffic across the remaining healthy instances. Elastic Load Balancing automatically scales its request handling capacity to meet the demands of application traffic.
 CloudFront delivers your content through a worldwide network of edge locations. Using Elastic Beanstalk, you can quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications.
-Reference: https://aws.amazon.com/elasticloadbalancing/
+Reference: https://aws.amazon.com/elasticloadbalancing/ Answer: A,C,D
+
 Question No:22
-What does the phrase 'stop guessing capacity' mean?
+### What does the phrase 'stop guessing capacity' mean?
 A. To use elastic IP addresses to increase high availability
 B. To implement self-healing processes
 C. To set correct data storage lifecycles
 D. Use of auto scaling to prevent the need to predict and guess your capacity and demand requirement
-Answer: D
-Explanation: One of the best practices of the reliability pillar of the Well-Architected Framework is to 'stop guessing capacity.' This looks at the use of Auto Scaling to prevent the need to predict and guess your capacity and demand requirement which aids in a better end-user experience. Reference: https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf
+
+Explanation: One of the best practices of the reliability pillar of the Well-Architected Framework is to 'stop guessing capacity.' This looks at the use of Auto Scaling to prevent the need to predict and guess your capacity and demand requirement which aids in a better end-user experience. Reference: https://d1.awsstatic.com/whitepapers/architecture/AWS_Well-Architected_Framework.pdf Answer: D
+
 Question No:23
 Elastic Load Balancing automatically distributes incoming traffic across multiple instances.
-A. RDS B. M3 C. EC2
-  
-AWS_SAA-C01 Exam
-D. DB Answer: C
+A. RDS 
+B. M3 
+C. EC2
+D. DB 
+
 Explanation: AWS provides the Elastic Load Balancing service to automatically distribute the incoming traffic across multiple Amazon Elastic Compute Cloud (Amazon EC2) instances.
 The load balancer serves as a single point of contact for clients, which increases the availability of your application. You can add and remove instances from your load balancer as your needs change, without disrupting the overall flow of requests to your application.
-Reference: http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/SvcIntro.html
+Reference: http://docs.aws.amazon.com/ElasticLoadBalancing/latest/DeveloperGuide/SvcIntro.html Answer: C
+
 Question No:24
 You are designing an AWS VPC for a large healthcare organization. The majority of the departments will require basic, low to medium throughput for their day to day operations. But the Radiology and MRI group continually sends very large imaging files and requires low latency and up to 10 Gbps throughput in a single availability zone. What configuration will best meet these requirements?
 A. Create the Radiology/MRI instances in a Placement Group.
