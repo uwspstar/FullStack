@@ -353,60 +353,61 @@ Explanation: Tenancy options provided by AWS are shared tenancy, dedicated insta
 Reference: https://aws.amazon.com/ec2/dedicated-hosts/ Answer: A
 
 Question No:36
-In regards to AWS infrastructure, a(n) cache data and reduce latency.
+### In regards to AWS infrastructure, a(n) cache data and reduce latency.
 A. region
 B. edge location
 C. data center
-D. availability zone Answer: B
+D. availability zone
 is deployed in highly populated areas to
- Explanation: Edge Locations are AWS sites deployed in major cities and highly populated areas. Edge Locations are not used to deploy your main infrastructures. Instead they are used by AWS services such as AWS CloudFront to cache data and reduce latency for end user access. Reference: https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf
+
+Explanation: Edge Locations are AWS sites deployed in major cities and highly populated areas. Edge Locations are not used to deploy your main infrastructures. Instead they are used by AWS services such as AWS CloudFront to cache data and reduce latency for end user access. Reference: https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf  Answer: B
+
 Question No:37
-What choices below are benefits of using AWS managed services? (Choose 2 answers.)
+### What choices below are benefits of using AWS managed services? (Choose 2 answers.)
 A. service specialization
 B. lower cost and complexity
 C. reduced time to market
-D. Increased control over the service operating system and custom installations Answer: B,C
+D. Increased control over the service operating system and custom installations
 
-AWS_SAA-C01 Exam
 Explanation: The AWS managed services reduce the amount of development time required to design and implement a working service, and reduce the operational cost, time and technical knowledge required. As a trade-off, developers have less control over how the operating system and other components operate 'under the hood' and managed services in general offer a standard set of options that are not customized for each user.
-Reference: https://d0.awsstatic.com/whitepapers/aws-overview.pdf
+Reference: https://d0.awsstatic.com/whitepapers/aws-overview.pdf Answer: B,C
+
 Question No:38
-Which choice is a stated benefit of using AWS?
+### Which choice is a stated benefit of using AWS?
 A. system compliance is entirely managed by AWS
 B. reduced effort to meet compliance requirements
 C. data center servers specifically for your account
-D. security configuration is entirely managed by AWS Answer: B
+D. security configuration is entirely managed by AWS
+
 Explanation: AWS services are designed to comply with common compliance regulations, such as PCI DSS level. You will have to configure services to meet your specific compliance needs, but segments of your IT system on AWS should comply will several standard compliance regulations immediately.
 You can request dedicated instances, but you cannot select specific data centers for your account, and with the Shared Responsibility Model, AWS will not assist you in configurations to meet your security or compliance requirements.
-Reference: https://d0.awsstatic.com/whitepapers/aws-overview.pdf
+Reference: https://d0.awsstatic.com/whitepapers/aws-overview.pdf  Answer: B
+
 Question No:39
-You are managing a very basic blog with no dynamic content on an EC2 instance which uses a mysql database . You post an article that to your surprise goes viral causing millions of people to visit your website. This increase in traffic causes a strain on your DB server which is dynamically servicing the blog content. How might you quickly resolve this issue and make the blog post infinitely scaleable? (Choose 2 answers)
+### You are managing a very basic blog with no dynamic content on an EC2 instance which uses a mysql database . You post an article that to your surprise goes viral causing millions of people to visit your website. This increase in traffic causes a strain on your DB server which is dynamically servicing the blog content. How might you quickly resolve this issue and make the blog post infinitely scaleable? (Choose 2 answers)
 A. Create a static HTML page using S3 and use Route 53 to point the DNS to the static S3 bucket. Use Reduced Redundancy Storage (RRS) on the S3 bucket.
 B. Create a static HTML page using S3 and use Route 53 to point the DNS to the static S3 bucket.
- 
-AWS_SAA-C01 Exam
 C. Use spot EC2 instances to increase your capacity
 D. Create a database read replica and route read queries from your applications to the read replica.
-Answer: A,B
+
 Explanation: You can host a static website on Amazon S3. On a static website, individual web pages include static content. They may also contain client-side scripts. Because your storage on Amazon S3 is virtually unlimited you can scale infinitely. You also do not need to service dynamic content so a database is not needed.
 Reduced Redundancy Storage (RRS) is an Amazon S3 storage option that enables customers to reduce their costs by storing noncritical, reproducible data at lower levels of redundancy than Amazon S3’s standard storage.
-The two answers are correct as using RRS doesn't alter the solution to the problem in any way. Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html
+The two answers are correct as using RRS doesn't alter the solution to the problem in any way. Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/WebsiteHosting.html Answer: A,B
+
 Question No:40
-You have designed an application which does the following.
+### You have designed an application which does the following.
 . It checks for new items in an S3 bucket once per hour.
 . If new items exist, a message is added to an SQS queue.
 . It has several EC2 instances which retrieve messages from the SQS queue, parse the file, and send you an email containing the relevant information from the file.
 You upload a test file to the bucket, wait a couple hours and find that you have hundreds of emails from the application.
 Which of the following is the most likely cause for this volume of email? (Choose 2 answers)
 A. To keep multiple instances from processing the same SQS message, your application must delete the SQS message after processing it.
-B. Messages are not being deleted following processing. C. You are being spammed
+B. Messages are not being deleted following processing. 
+C. You are being spammed
 D. Your SQS queue is not large enough
-Answer: A,B
-Explanation: Many instances can poll a single queue, but to keep multiple instances from processing the same SQS message, your application must delete the SQS message after processing it. While SQS does not guarantee a message will be processed only once, the same message being processed many times is probably an indication that the message is not being
- 
-AWS_SAA-C01 Exam
-deleted following processing
-Reference: http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-how-i t-works.html#sqs-basic-requirements
+
+Explanation: Many instances can poll a single queue, but to keep multiple instances from processing the same SQS message, your application must delete the SQS message after processing it. While SQS does not guarantee a message will be processed only once, the same message being processed many times is probably an indication that the message is not being deleted following processing Reference: http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-how-i t-works.html#sqs-basic-requirements Answer: A,B
+
 Question No:41
 You are leading the design of your company's AWS cloud environment. Your requirements make it clear that a few departments will require a low latency network and up to 10GB of performance. You decide that Placement Groups would be a good option for thesedepartments. What requirements for EC2 instances should be met when deployed in Placement Groups? (Choose 2 answers)
 A. EC2 instances must be in multi-AZ for fault tolerance.
