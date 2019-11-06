@@ -409,15 +409,17 @@ D. Your SQS queue is not large enough
 Explanation: Many instances can poll a single queue, but to keep multiple instances from processing the same SQS message, your application must delete the SQS message after processing it. While SQS does not guarantee a message will be processed only once, the same message being processed many times is probably an indication that the message is not being deleted following processing Reference: http://docs.aws.amazon.com/AWSSimpleQueueService/latest/SQSDeveloperGuide/sqs-how-i t-works.html#sqs-basic-requirements Answer: A,B
 
 Question No:41
-You are leading the design of your company's AWS cloud environment. Your requirements make it clear that a few departments will require a low latency network and up to 10GB of performance. You decide that Placement Groups would be a good option for thesedepartments. What requirements for EC2 instances should be met when deployed in Placement Groups? (Choose 2 answers)
+### You are leading the design of your company's AWS cloud environment. Your requirements make it clear that a few departments will require a low latency network and up to 10GB of performance. You decide that ```Placement Groups``` would be a good option for these departments. What requirements for EC2 instances should be met when deployed in Placement Groups? (Choose 2 answers)
 A. EC2 instances must be in multi-AZ for fault tolerance.
 B. EC2 instances must be reserved instances.
 C. EC2 instances must be in a single Availability Zone.
-D. Choose instance types that support enhanced networking . Answer: C,D
+D. Choose instance types that support enhanced networking .
+
 Explanation: A placement group is a logical grouping of instances within a single Availability Zone. Placement groups are recommended for applications that benefit from low network latency, high network throughput, or both. To provide the lowest latency, and the highest packet-per-second network performance for your placement group, choose an instance type that supports enhanced networking.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html Answer: C,D
+
 Question No:42
-You are designing a web application that needs to be highly available and handle a high percentage of read traffic. You are planning on designing a multi-AZ environment for high availability. You are considering using read replicas to help offset some of the read traffic. Your client wants to discuss multiple options for handling large amounts of read traffic. What other option can you suggest to handle the read traffic?
+### You are designing a web application that needs to be highly available and handle a high percentage of read traffic. You are planning on designing a multi-AZ environment for high availability. You are considering using read replicas to help offset some of the read traffic. Your client wants to discuss multiple options for handling large amounts of read traffic. What other option can you suggest to handle the read traffic?
 A. Promote the standby server to a read replica when needed. B. Store read traffic on Redshift.
 C. Use Elasticache to cache frequently used data.
  
