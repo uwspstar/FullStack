@@ -420,35 +420,35 @@ Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.h
 
 Question No:42
 ### You are designing a web application that needs to be highly available and handle a high percentage of read traffic. You are planning on designing a multi-AZ environment for high availability. You are considering using read replicas to help offset some of the read traffic. Your client wants to discuss multiple options for handling large amounts of read traffic. What other option can you suggest to handle the read traffic?
-A. Promote the standby server to a read replica when needed. B. Store read traffic on Redshift.
+A. Promote the standby server to a read replica when needed. 
+B. Store read traffic on Redshift.
 C. Use Elasticache to cache frequently used data.
- 
-AWS_SAA-C01 Exam
 D. Use DynamoDB to handle read traffic.
-Answer: C
-Explanation: Amazon ElastiCache is a web service that makes it easy to deploy and run Memcached or Redis protocol-compliant server nodes in the cloud. Amazon ElastiCache improves the performance of web applications by allowing you to retrieve information from a fast, managed, in-memory system, instead of relying entirely on slower disk-based databases. Amazon ElastiCache is ideally suited as a front-end for Amazon Web Services like Amazon RDS and Amazon DynamoDB, providing extremely low latency for high performance applications and offloading some of the request volume while these services provide long lasting data durability. Reference: https://aws.amazon.com/elasticache/faqs/
+
+Explanation: Amazon ElastiCache is a web service that makes it easy to deploy and run Memcached or Redis protocol-compliant server nodes in the cloud. Amazon ElastiCache improves the performance of web applications by allowing you to retrieve information from a fast, managed, in-memory system, instead of relying entirely on slower disk-based databases. Amazon ElastiCache is ideally suited as a front-end for Amazon Web Services like Amazon RDS and Amazon DynamoDB, providing extremely low latency for high performance applications and offloading some of the request volume while these services provide long lasting data durability. Reference: https://aws.amazon.com/elasticache/faqs/ Answer: C
+
 Question No:43
-Which of the following would be considered features of using Elastic Load Balancing to automatically distribute incoming application traffic across multiple Amazon EC2 instances? (Choose 3 answers)
+### Which of the following would be considered features of using Elastic Load Balancing to automatically distribute incoming application traffic across multiple Amazon EC2 instances? (Choose 3 answers)
 A. Elastic Load Balancing automatically scales its request handling capacity to meet the demands of application traffic.
 B. Elastic Load Balancing ensures that only healthy Amazon EC2 instances receive traffic by detecting unhealthy instances and rerouting traffic across the remaining healthy instances.
 C. Using Elastic Load Balancing you can quickly deploy and manage applications in the AWS cloud without worrying about the infrastructure that runs those applications.
 D. Elastic Load Balancing works with Amazon Virtual Private Cloud (VPC) to provide robust networking and security features.
-Answer: A,B,D
+
 Explanation: Elastic Load Balancing works with Amazon Virtual Private Cloud (VPC) to provide robust networking and security features. Elastic Load Balancing ensures that only healthy Amazon EC2 instances receive traffic by detecting unhealthy instances and rerouting traffic across the remaining healthy instances. Elastic Load Balancing automatically scales its request handling capacity to meet the demands of application traffic.
 CloudFront delivers your content through a worldwide network of edge locations. Using Elastic Beanstalk, you can quickly deploy and manage applications in the AWS Cloud without worrying about the infrastructure that runs those applications.
-Reference: https://aws.amazon.com/elasticloadbalancing/
- 
-AWS_SAA-C01 Exam
+Reference: https://aws.amazon.com/elasticloadbalancing/ Answer: A,B,D
+
 Question No:44
-You have been assigned to a client with an existing AWS cloud environment. They have a VPC with multiple web servers in a public subnet and database servers in a private subnet. They purchased reserved Linux instances up-front but are finding they underestimated their workload and would like to scale now. What can you do with these instances to scale them without violating the term agreement of these instances?
+### You have been assigned to a client with an existing AWS cloud environment. They have a VPC with multiple web servers in a public subnet and database servers in a private subnet. They purchased reserved Linux instances up-front but are finding they underestimated their workload and would like to scale now. What can you do with these instances to scale them without violating the term agreement of these instances?
 A. Change to a larger instance of any type.
 B. Change to Spot instances of a larger type.
 C. Change to a larger instance within the same instance family. D. Change to On-Demand instances of a larger type.
-Answer: C
+
 Explanation: A Reserved Instance (RI) is an EC2 offering that provides you with a significant discount on EC2 usage when you commit to a one-year or three-year term. You can modify the Availability Zone of the RI, change the scope of the RI from Availability Zone to region (and vice-versa), change the network platform from EC2-VPC to EC2-Classic (and vice versa) or modify instance sizes within the same instance family (on the Linux/Unix platform).
-Reference: https://aws.amazon.com/ec2/faqs/
+Reference: https://aws.amazon.com/ec2/faqs/ Answer: C
+
 Question No:45
-You are designing an AWS VPC for a large healthcare organization. The majority of the departments will require basic, low to medium throughput for their day to day operations. But the Radiology and MRI group continually sends very large imaging files and requires low latency and up to 10 Gbps throughput in a single availability zone. What configuration will best meet these requirements?
+### You are designing an AWS VPC for a large healthcare organization. The majority of the departments will require basic, low to medium throughput for their day to day operations. But the Radiology and MRI group continually sends very large imaging files and requires low latency and up to 10 Gbps throughput in a single availability zone. What configuration will best meet these requirements?
 A. Create the Radiology/MRI instances in a Read Replica Group. B. Use a VPN for Radiology/MRI.
 C. Create the Radiology/MRI instances in a Placement Group. D. Use Direct Connect for Radiology/MRI.
 Answer: C
