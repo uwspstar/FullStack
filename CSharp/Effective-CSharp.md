@@ -9,3 +9,4 @@
 - ```The data binding mechanism uses reflection to find a named property in a type:```
 - Because properties are implemented with methods, ```adding multithreaded support is easier.```  
 - ```Properties have all the language features of methods.``` Properties can be virtual:
+- You can extend properties to be abstract and define properties as part of an interface definitio
