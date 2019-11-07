@@ -8,3 +8,4 @@
 - ```Data binding ties a property of an object to a user interface control.```
 - ```The data binding mechanism uses reflection to find a named property in a type:```
 - Because properties are implemented with methods, ```adding multithreaded support is easier.```  
+- ```Properties have all the language features of methods.``` Properties can be virtual:
