@@ -1,7 +1,4 @@
 
-# Sample code and snippets used in the .NET documentation
-- https://github.com/dotnet/samples
-
 # VSCODE shortcuts
 - https://github.com/uwspstar/FullStack/tree/master/VSCODE
 # Emoji
