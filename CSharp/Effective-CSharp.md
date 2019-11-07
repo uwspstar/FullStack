@@ -10,3 +10,4 @@
 - Because properties are implemented with methods, ```adding multithreaded support is easier.```  
 - ```Properties have all the language features of methods.``` Properties can be virtual:
 - You can extend properties to be abstract and define properties as part of an interface definitio
+- You can specify different accessibility modifiers to the get and set accessors in a property in C#.
