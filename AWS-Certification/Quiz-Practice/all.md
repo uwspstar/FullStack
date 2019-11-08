@@ -451,19 +451,18 @@ Question No:45
 ### You are designing an AWS VPC for a large healthcare organization. The majority of the departments will require basic, low to medium throughput for their day to day operations. But the Radiology and MRI group continually sends very large imaging files and requires low latency and up to 10 Gbps throughput in a single availability zone. What configuration will best meet these requirements?
 A. Create the Radiology/MRI instances in a Read Replica Group. B. Use a VPN for Radiology/MRI.
 C. Create the Radiology/MRI instances in a Placement Group. D. Use Direct Connect for Radiology/MRI.
-Answer: C
-Explanation: A placement group is a logical grouping of instances within a single Availability
- 
-AWS_SAA-C01 Exam
-Zone. Placement groups are recommended for applications that benefit from low network latency, high network throughput, or both. To provide the lowest latency, and the highest packet-per-second network performance for your placement group, choose an instance type that supports enhanced networking.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html
+
+Explanation: A placement group is a logical grouping of instances within a single Availability Zone. Placement groups are recommended for applications that benefit from low network latency, high network throughput, or both. To provide the lowest latency, and the highest packet-per-second network performance for your placement group, choose an instance type that supports enhanced networking.
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/placement-groups.html Answer: C
+
 Question No:46
-You have taken over an account where the client has an existing AWS cloud environment.They have an RDS backend using MySQL. They have a medium sized instance for their database and are using magnetic volumes for their storage. Due to a recent innovation by the company they are expecting an exponential increase in traffic on their website. You plan on scaling up by increasing the instance size of the database and adding read replicas. What other step can you take to scale up the environment?
+### You have taken over an account where the client has an existing AWS cloud environment.They have an RDS backend using MySQL. They have a medium sized instance for their database and are using magnetic volumes for their storage. Due to a recent innovation by the company they are expecting an exponential increase in traffic on their website. You plan on scaling up by increasing the instance size of the database and adding read replicas. What other step can you take to scale up the environment?
 A. Upgrade from Magnetic storage to General Purpose (SSD). B. Make sure backups are done during off peak hours.
 C. Create a multi-AZ environment.
-D. Use an Elastic Load Balancer to route traffic efficiently. Answer: A
+D. Use an Elastic Load Balancer to route traffic efficiently.
+
 Explanation: To handle a higher load in your database, you can vertically scale up your master database quickly by moving to a larger instance size. If you are using magnetic storage you can scale up vertically by upgrading to General Purpose (SSD) storage or even Provisioned IOPS (SSD). To scale horizontally you can add read replicas to offload read traffic.
-Reference: https://aws.amazon.com/blogs/database/scaling-your-amazon-rds-instance-vertically-and-h orizontally/
+Reference: https://aws.amazon.com/blogs/database/scaling-your-amazon-rds-instance-vertically-and-h orizontally/  Answer: A
 Question No:47
 You've been assigned to a client in the process of designing their AWS Virtual Private Cloud. The technical staff for the client has a basic knowledge of AWS. One of the admins is proposing the use of Network Address Translation (NAT) instances for use with private subnets. You bring up the more recent emergence of NAT Gateways to provide internet access to private subnets. What benefits can using a NAT Gateway instead of a NAT instance provide? (Choose 2 answers)
 A. NAT Gateway provides better availability.
