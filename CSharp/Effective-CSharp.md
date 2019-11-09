@@ -11,6 +11,16 @@
 - ```Properties have all the language features of methods.``` Properties can be virtual:
 - You can extend properties to be abstract and define properties as part of an interface definitio
 - You can specify different accessibility modifiers to the get and set accessors in a property in C#.
+```
+public int this[int index]
+{
+  get => theValues[index];
+  set => theValues[index] = value;
+}
+private int[] theValues = new int[100]
+// accessing an indexer
+int val = someObject[i];
+```
 
 ### Use Optional Parameters to Minimize Method Overloads
 - Named parameters mean that in any API with default parameters, you need to specify only those parameters you intend to use. This approach is much simpler than working with multiple overloads.
