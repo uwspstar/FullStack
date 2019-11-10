@@ -463,50 +463,52 @@ D. Use an Elastic Load Balancer to route traffic efficiently.
 
 Explanation: To handle a higher load in your database, you can vertically scale up your master database quickly by moving to a larger instance size. If you are using magnetic storage you can scale up vertically by upgrading to General Purpose (SSD) storage or even Provisioned IOPS (SSD). To scale horizontally you can add read replicas to offload read traffic.
 Reference: https://aws.amazon.com/blogs/database/scaling-your-amazon-rds-instance-vertically-and-h orizontally/  Answer: A
+
 Question No:47
-You've been assigned to a client in the process of designing their AWS Virtual Private Cloud. The technical staff for the client has a basic knowledge of AWS. One of the admins is proposing the use of Network Address Translation (NAT) instances for use with private subnets. You bring up the more recent emergence of NAT Gateways to provide internet access to private subnets. What benefits can using a NAT Gateway instead of a NAT instance provide? (Choose 2 answers)
+### You've been assigned to a client in the process of designing their AWS Virtual Private Cloud. The technical staff for the client has a basic knowledge of AWS. One of the admins is proposing the use of Network Address Translation (NAT) instances for use with private subnets. You bring up the more recent emergence of NAT Gateways to provide internet access to private subnets. What benefits can using a NAT Gateway instead of a NAT instance provide? (Choose 2 answers)
 A. NAT Gateway provides better availability.
- 
-AWS_SAA-C01 Exam
 B. NAT Gateway provides higher bandwidth.
-C. NAT Gateway requires less administrative effort than NAT instances. D. NAT Gateways provide auto scaling .
-Answer: A,C
+C. NAT Gateway requires less administrative effort than NAT instances. 
+D. NAT Gateways provide auto scaling .
+
 Explanation: NAT gateways provides better availability, and requires less administrative effort. For common use cases, it is recommend that you use a NAT gateway rather than a NAT instance. NAT gateways are in each Availability Zone and are implemented with redundancy. NAT instances use a script to manage failover. NAT Gateways are high bandwidth and support bursts of up to 10Gbps. NAT instance bandwidth is dependent on the bandwidth of the instance type but are typically lower bandwidth than NAT Gateways.
-Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html
+Reference: http://docs.aws.amazon.com/AmazonVPC/latest/UserGuide/VPC_NAT_Instance.html Answer: A,C
+
 Question No:48
-You've been placed in charge of your company's VPC. Part of your plan is to develop efficient use of auto scaling of EC2 instances and a key to this will be bootstrapping for newly created instances. You want to configure new instances as quickly as possible to get them in to service efficiently upon startup. What benefits of bootstrapping can you utilize? (Choose 3 answers)
-A. Bootstrapping can enroll an instance into a directory service. B. Bootstrapping can install application software.
+### You've been placed in charge of your company's VPC. Part of your plan is to develop efficient use of auto scaling of EC2 instances and a key to this will be bootstrapping for newly created instances. You want to configure new instances as quickly as possible to get them in to service efficiently upon startup. What benefits of bootstrapping can you utilize? (Choose 3 answers)
+A. Bootstrapping can enroll an instance into a directory service. 
+B. Bootstrapping can install application software.
 C. Bootstrapping can increase network throughput.
 D. Bootstrapping can apply patches and OS updates.
-Answer: A,B,D
+
 Explanation: When you launch an instance in Amazon EC2, you have the option of passing user data to the instance that can be used to perform common automated configuration tasks and even run scripts after the instance starts. You can pass two types of user data to Amazon EC2: shell scripts and cloud-init directives.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/user-data.html Answer: A,B,D
+
 Question No:49
-You are helping a client design a static website which will potentially grow exponentially in the
- 
-AWS_SAA-C01 Exam
-first few years of existence. You outline the benefits of using S3 to host this Website. What characteristics of S3 elasticity and scalability can you feature? (Choose 2 answers)
+### You are helping a client design a static website which will potentially grow exponentially in the first few years of existence. You outline the benefits of using S3 to host this Website. What characteristics of S3 elasticity and scalability can you feature? (Choose 2 answers)
 A. S3 supports an unlimited number of files in a bucket.
 B. S3 bucket names can be replicated in multiple regions.
-C. S3 asynchronously replicates information to all availability zones within a region. D. S3 asynchronously replicates information to other regions.
-Answer: A,C
+C. S3 asynchronously replicates information to all availability zones within a region. 
+D. S3 asynchronously replicates information to other regions.
+
 Explanation: With Amazon S3, you can store as much data as you want and access it when needed. S3 supports and unlimited number of files in a bucket so it is not necessary to know your storage needs up front or try to estimate. S3 can be scaled quickly and appropriately to meet the storage demands of your environment. S3 asynchronously replicates information to all availability zones within a region. Amazon S3 scales to support very high request rates. If your request rate grows steadily, Amazon S3 automatically partitions your buckets as needed to support higher request rates.
-Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/request-rate-perf-considerations.html
+Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/request-rate-perf-considerations.html Answer: A,C
+
 Question No:50
-You run a stateless web application with the following components:
+### You run a stateless web application with the following components:
 . An Elastic Load Balancer.
 . Web/Application servers on EC2.
 . A MySQL RDS database with 3000 provisioned IOPS.
 You notice that the average response time for users is increasing. Looking at CloudWatch, you observe 97% CPU usage on the Web/Application servers and 20% CPU usage on the database. The average number of database disk operations varies between 1000 and 1500. How would you improve performance? (Choose 2 answers)
-A. Use Auto Scaling to add additional Web/Application servers based on CPU load threshold B. Use Amazon RDS Read Replicas to improve your IOPS
+A. Use Auto Scaling to add additional Web/Application servers based on CPU load threshold 
+B. Use Amazon RDS Read Replicas to improve your IOPS
 C. Choose a different EC2 instance type for the Web/Application servers with a more appropriate CPU/Memory ratio
 D. Increase your provisioned IOPS to 5000
- 
-AWS_SAA-C01 Exam
-Answer: A,C
+
 Explanation: Because of the 97% CPU usage on the Web/Application servers using larger instance types or using auto scaling to add more servers will alleviate this problem.
 You have 3000 provisioned IOPS and the average number of database disk operations varies between 1000 and 1500 so you do not need to change your database at all.
-Reference: https://d0.awsstatic.com/whitepapers/aws-web-hosting-best-practices.pdf
+Reference: https://d0.awsstatic.com/whitepapers/aws-web-hosting-best-practices.pdf Answer: A,C
+
 Question No:51
 You are setting up your company's Virtual Private Cloud (VPC). It is time to select the virtual hardware and the software to be provisioned for the instances you will launch within the VPC. You will do this by selecting the Instance Types and Amazon Machine Images (AMI). Which item is not defined by the AMI?
 A. Virtual CPUs
