@@ -522,18 +522,18 @@ Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-
 Question No:52
 ### You are managing cloud storage for your company, which wants the technical staff to have some latitude in managing the buckets under your supervision. In an effort to increase visibility and accountability on bucket management, you'd like to know who is accessing the buckets, and to be notified of delete actions. What features can provide this information for S3 buckets? (Choose 2 answers)
 A. Enable S3 server access logs on the buckets.
- 
-AWS_SAA-C01 Exam
 B. Enable bucket monitoring.
-C. Turn on event notifications for delete actions. D. Enable CloudWatch on the buckets.
-Answer: A,C
+C. Turn on event notifications for delete actions. 
+D. Enable CloudWatch on the buckets.
+
 Explanation: S3 Event Notifications can be set up on objects stored in S3. An event could be set up to notify when a delete is performed. Logging is turned off by default but can be enabled. When enabled, they can track requests to your S3 bucket.
 S3 Server Access Logging tracks detailed information not currently available with CloudWatch metrics or CloudTrail logs. To track requests for access to your bucket, you can enable access logging. Each access log record provides details about a single access request, such as the requester, bucket name, request time, request action, response status, and error code, if any. Access log information can be useful in security and access audits. It can also help you learn about your customer base and understand your Amazon S3 bill.
 For more on server access logs (https://docs.aws.amazon.com/AmazonS3/latest/dev/ServerLogs.html)
 For more on event notifications (https://docs.aws.amazon.com/AmazonS3/latest/dev/NotificationHowTo.html)
-Reference: https://aws.amazon.com/s3/faqs/
+Reference: https://aws.amazon.com/s3/faqs/ Answer: A,C
+
 Question No:53
-You are deploying a two-tiered web application with web servers in a public subnet of yourVPC and your database isolated in a private subnet. Your requirements call for the web tier to be highly available. Which services listed will be needed to make the web-tier highly available. (Choose 3 answers)
+### You are deploying a two-tiered web application with web servers in a public subnet of yourVPC and your database isolated in a private subnet. Your requirements call for the web tier to be highly available. Which services listed will be needed to make the web-tier highly available. (Choose 3 answers)
 A. Route 53
 B. Elastic Load Balancer C. Multi-AZ for RDS
 D. Auto Scaling
