@@ -510,14 +510,17 @@ You have 3000 provisioned IOPS and the average number of database disk operation
 Reference: https://d0.awsstatic.com/whitepapers/aws-web-hosting-best-practices.pdf Answer: A,C
 
 Question No:51
-You are setting up your company's Virtual Private Cloud (VPC). It is time to select the virtual hardware and the software to be provisioned for the instances you will launch within the VPC. You will do this by selecting the Instance Types and Amazon Machine Images (AMI). Which item is not defined by the AMI?
+### You are setting up your company's Virtual Private Cloud (VPC). It is time to select the virtual hardware and the software to be provisioned for the instances you will launch within the VPC. You will do this by selecting the Instance Types and Amazon Machine Images (AMI). Which item is ```not defined``` by the AMI?
 A. Virtual CPUs
 B. Operating system
-C. The initial state of any patches D. Application or System Software Answer: A
-Explanation: An Amazon Machine Image (AMI) is a template that contains a software configuration (for example, an operating system, an application server, and applications). The AMI includes the operating system, initial state of any patches, and any application software. For example, you can select an AMI that has SQL Server. The virtual CPUs are not part of the AMI but are defined by the instance type.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html
+C. The initial state of any patches 
+D. Application or System Software
+
+Explanation: An Amazon Machine Image (AMI) is a template that contains a ```software configuration``` (for example, an operating system, an application server, and applications). The AMI includes the operating system, initial state of any patches, and any application software. For example, you can select an AMI that has SQL Server. The virtual CPUs are not part of the AMI but are defined by the instance type.
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/ec2-instances-and-amis.html Answer: A
+
 Question No:52
-You are managing cloud storage for your company, which wants the technical staff to have some latitude in managing the buckets under your supervision. In an effort to increase visibility and accountability on bucket management, you'd like to know who is accessing the buckets, and to be notified of delete actions. What features can provide this information for S3 buckets? (Choose 2 answers)
+### You are managing cloud storage for your company, which wants the technical staff to have some latitude in managing the buckets under your supervision. In an effort to increase visibility and accountability on bucket management, you'd like to know who is accessing the buckets, and to be notified of delete actions. What features can provide this information for S3 buckets? (Choose 2 answers)
 A. Enable S3 server access logs on the buckets.
  
 AWS_SAA-C01 Exam
