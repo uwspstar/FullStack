@@ -533,34 +533,34 @@ For more on event notifications (https://docs.aws.amazon.com/AmazonS3/latest/dev
 Reference: https://aws.amazon.com/s3/faqs/ Answer: A,C
 
 Question No:53
-### You are deploying a two-tiered web application with web servers in a public subnet of yourVPC and your database isolated in a private subnet. Your requirements call for the web tier to be highly available. Which services listed will be needed to make the web-tier highly available. (Choose 3 answers)
+### You are deploying a two-tiered web application with web servers in a public subnet of your VPC and your database isolated in a private subnet. Your requirements call for the web tier to be highly available. Which services listed will be needed to make the web-tier highly available. (Choose 3 answers)
 A. Route 53
-B. Elastic Load Balancer C. Multi-AZ for RDS
+B. Elastic Load Balancer 
+C. Multi-AZ for RDS
 D. Auto Scaling
-Answer: A,B,D
-Explanation: The key is that the requirement is for high availability at the web-tier. While multi-AZ deployments and cross-region replication can contribute to high availability, they are each at the storage tier. Route 53 with Health Checks and Failover, Elastic Load Balancer (with
- 
-AWS_SAA-C01 Exam
-health checks and various forms of load balancing, and auto scaling groups create high availability at the web tier.
-Reference: https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf
+
+Explanation: The key is that the requirement is for high availability at the web-tier. While multi-AZ deployments and cross-region replication can contribute to high availability, they are each at the storage tier. Route 53 with Health Checks and Failover, Elastic Load Balancer (with ealth checks and various forms of load balancing, and auto scaling groups create high availability at the web tier.
+Reference: https://d0.awsstatic.com/whitepapers/AWS_Cloud_Best_Practices.pdf Answer: A,B,D
+
 Question No:54
-You have been chosen to lead the design of an AWS cloud environment for an accounting firm. The firm needs high availability and scalability and your team is considering a multi-AZ deployment. In addition, the firm expects to need Online Analytics processing (OLAP) for their Actuarial Department. What AWS service is best to meet the OLAP requirement?
-A. Amazon RDS with DynamoDB for caching B. Amazon Elasticahe
+### You have been chosen to lead the design of an AWS cloud environment for an accounting firm. The firm needs high availability and scalability and your team is considering a multi-AZ deployment. In addition, the firm expects to need Online Analytics processing (OLAP) for their Actuarial Department. What AWS service is best to meet the OLAP requirement?
+A. Amazon RDS with DynamoDB for caching 
+B. Amazon Elasticahe
 C. Amazon RDS
 D. Amazon Redshift
-Answer: D
+ 
 Explanation: Amazon Redshift is a fast, fully managed data warehouse that makes it simple and cost-effective to analyze all your data using standard SQL and your existing Business Intelligence (BI) tools. It allows you to run complex analytic queries against petabytes of structured data, using sophisticated query optimization, columnar storage on high-performance local disks, and massively parallel query execution.
-Reference: https://aws.amazon.com/redshift/
+Reference: https://aws.amazon.com/redshift/ Answer: D
+
 Question No:55
-You are working for a government contractor as an AWS Cloud Architect. You had to get a security clearance for the job and the company data is extremely sensitive. You need to design an environment which protects data at rest as well as in transit. The first step in your design is to use https (port 443) with server certificate authentication for data in transit. What other step can you take to secure data in transit?
+### You are working for a government contractor as an AWS Cloud Architect. You had to get a security clearance for the job and the company data is extremely sensitive. You need to design an environment which protects data at rest as well as in transit. The first step in your design is to use https (port 443) with server certificate authentication for data in transit. What other step can you take to secure data in transit?
 A. Use Identity and Access Management roles. B. Use 7zip to encrypt data.
 C. Use server-side encryption.
 D. Use SSL/TLS for the database connection.
- 
-AWS_SAA-C01 Exam
-Answer: D
+
 Explanation: AWS Certificate Manager is a service that lets you easily provision, manage, and deploy Secure Sockets Layer/Transport Layer Security (SSL/TLS) certificates for use with AWS services. You can use SSL from your application to encrypt a connection to a DB instance running MySQL, MariaDB, Amazon Aurora, SQL Server, Oracle, or PostgreSQL.
-Reference: https://aws.amazon.com/certificate-manager/
+Reference: https://aws.amazon.com/certificate-manager/ Answer: D
+
 Question No:56
 Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time. You have been given the task of setting up a number of services to be used in conjunction with CloudWatch. Which of the following services could be used to accomplish your task? (Choose 3 answers)
 A. Amazon Simple Notification Service (Amazon SNS) B. Auto Scaling
