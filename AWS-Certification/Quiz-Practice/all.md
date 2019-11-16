@@ -562,23 +562,27 @@ Explanation: AWS Certificate Manager is a service that lets you easily provision
 Reference: https://aws.amazon.com/certificate-manager/ Answer: D
 
 Question No:56
-Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time. You have been given the task of setting up a number of services to be used in conjunction with CloudWatch. Which of the following services could be used to accomplish your task? (Choose 3 answers)
-A. Amazon Simple Notification Service (Amazon SNS) B. Auto Scaling
+### Amazon CloudWatch monitors your Amazon Web Services (AWS) resources and the applications you run on AWS in real time. You have been given the task of setting up a number of services to be used in conjunction with CloudWatch. Which of the following services could be used to accomplish your task? (Choose 3 answers)
+A. Amazon Simple Notification Service (Amazon SNS) 
+B. Auto Scaling
 C. AWS Direct Connect
-D. AWS Identity and Access Management (IAM) Answer: A,B,D
+D. AWS Identity and Access Management (IAM)
+
 Explanation: The following services are used in conjunction with Amazon CloudWatch:
 . Amazon Simple Notification Service (Amazon SNS).
 . Auto Scaling enables you to automatically launch or terminate Amazon EC2 instances based on user-defined policies, health status checks, and schedules.
-. AWS CloudTrail enables you to monitor the calls made to the Amazon CloudWatch API for your account, including calls made by the AWS Management Console, AWS CLI, and other services. Reference: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.htm l
+. AWS CloudTrail enables you to monitor the calls made to the Amazon CloudWatch API for your account, including calls made by the AWS Management Console, AWS CLI, and other services. Reference: http://docs.aws.amazon.com/AmazonCloudWatch/latest/monitoring/WhatIsCloudWatch.html Answer: A,B,D
+
 Question No:57
-You have been contracted by a client to move their compute environment to the cloud. They have several web servers and two MySQL databases in a multi-tier environment. They need all servers to be highly available.. They would like their database to have the speed and reliability of a high-end database but do not have the resources to convert their queries. Which RDS option best meets these requirements?
+### You have been contracted by a client to move their compute environment to the cloud. They have several web servers and two MySQL databases in a multi-tier environment. They need all servers to be highly available.. They would like their database to have the speed and reliability of a high-end database but do not have the resources to convert their queries. Which RDS option best meets these requirements?
  
-AWS_SAA-C01 Exam
 A. Aurora
 B. Oracle
-C. SQL Server D. MySQL Answer: A
+C. SQL Server 
+D. MySQL Answer: A
 Explanation: Amazon supports MySQL but it is not the best option in this instance for speed and reliability. Oracle and SQL Server meet the requirement of speed and reliability but will require rewriting of most queries. Amazon Aurora is a relational database engine that combines the speed and reliability of high-end commercial databases with the simplicity and cost- effectiveness of open source databases. Amazon Aurora with MySQL-compatibility delivers up to five times the performance of MySQL without requiring any changes to most MySQL applications.
-Reference: https://aws.amazon.com/rds/aurora/faqs/
+Reference: https://aws.amazon.com/rds/aurora/faqs/ Answer: A
+
 Question No:58
 You are assigned to lead your company's migration to an AWS cloud environment. Your company has a large software development division and you are gathering requirements for their instances as well as EBS volumes. This department will often have multiple projects going on at one time, which calls for multiple dev, test, and prod environments. They want dev and test to simulate production loads so they will be moderately IO intensive. What type of EBS volume is best suited for dev and test environments?
 A. Magnetic volumes
