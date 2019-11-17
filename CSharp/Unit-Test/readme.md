@@ -32,7 +32,6 @@ Test an application through its user-interface.
 ### practice
 - Testing Strings
 - Testing Arrays and Collections
-- 
 
 ### How many test ?
 - Often, the number of tests is equal to or greater than the number of execution paths. 
