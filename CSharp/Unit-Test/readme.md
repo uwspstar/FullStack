@@ -29,14 +29,14 @@ Test an application through its user-interface.
 - So if you have a class called reservation, you should have a class called reservation tests.
 - should be trustworthy
 
-### practice
+### Practice
 - Testing Strings
 - Testing Arrays and Collections
 
 ### How many test ?
 - Often, the number of tests is equal to or greater than the number of execution paths. 
 
-### name convention
+### Name Convention
 - The name of the method on our test is [MethodName] _```[scenario testing]``` _ ```[expected behavior]```. With this convention,
 - [I recommand to use] "Should_ExpectedBehavior_When_StateUnderTest", I use it for both backend and frontend test
 
