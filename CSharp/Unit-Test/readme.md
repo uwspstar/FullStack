@@ -8,6 +8,10 @@ Test a unit of the application
 without its external dependencies such as files, databases, message queues, web services and so on.
 ```
 - Intergration
+```
+An integration test, tests a class or a component with its external dependencies.
+So, it tests the integration of your application code with these concrete dependencies like files, databases and so on.
+```
 - End to End
 ### Basic
 - each test should have a single responsibility, and should ideally be less than ten lines of code. 
