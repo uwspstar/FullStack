@@ -18,6 +18,7 @@ Test an application through its user-interface.
 ```
 
 ### Basic
+- all the test should be "public void ..."
 - each test should have a single responsibility, and should ideally be less than ten lines of code. 
 - each test should not have any logic. So you should not have any conditional statements, loops and other kinds of logic in your tests. NO IF ... ESLE...FOREACH ...
 - tests methods should not call each other
