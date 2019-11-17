@@ -3,6 +3,10 @@
 - if you think the "unit" is class, then only test public method, otherwize, test private method also. However, test private method may against SOLID priciple (S)
 ### Automation Test
 - Unit
+```
+Test a unit of the application 
+without its external dependencies such as files, databases, message queues, web services and so on.
+```
 - Intergration
 - End to End
 ### Basic
