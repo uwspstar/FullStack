@@ -1,7 +1,10 @@
 # Unit Test
 - Unit Testing for C# Developers https://www.udemy.com/course/unit-testing-csharp/learn/lecture/8997466#overview
 - if you think the "unit" is class, then only test public method, otherwize, test private method also. However, test private method may against SOLID priciple (S)
-
+### Automation Test
+- Unit
+- Intergration
+- End to End
 ### Basic
 - each test should have a single responsibility, and should ideally be less than ten lines of code. 
 - each test should not have any logic. So you should not have any conditional statements, loops and other kinds of logic in your tests. NO IF ... ESLE...FOREACH ...
