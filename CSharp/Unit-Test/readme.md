@@ -13,6 +13,10 @@ An integration test, tests a class or a component with its external dependencies
 So, it tests the integration of your application code with these concrete dependencies like files, databases and so on.
 ```
 - End to End
+```
+Test an application through its user-interface.
+```
+
 ### Basic
 - each test should have a single responsibility, and should ideally be less than ten lines of code. 
 - each test should not have any logic. So you should not have any conditional statements, loops and other kinds of logic in your tests. NO IF ... ESLE...FOREACH ...
