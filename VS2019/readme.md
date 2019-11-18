@@ -1,10 +1,10 @@
 # VS2019
-
--  Ctrl+T to find anything in your solution
 - https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio
 
 ### Visual Studio tips and tricks by Mads Kristensen
 https://devblogs.microsoft.com/visualstudio/visual-studio-tips-and-tricks/ 
+-  Ctrl+T to find anything in your solution
+- Copy any JSON fragment to the clipboard and paste it as strongly typed .NET classes into any C# 
 
 
 
