@@ -1,8 +1,12 @@
 # VS2019
-- Visual Studio tips and tricks by Mads Kristensen
+
+-  Ctrl+T to find anything in your solution
+- https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio
+
+### Visual Studio tips and tricks by Mads Kristensen
 https://devblogs.microsoft.com/visualstudio/visual-studio-tips-and-tricks/ 
 
-- https://docs.microsoft.com/en-us/nuget/consume-packages/install-use-packages-visual-studio
+
 
 ### Manage packages for the solution
 - Managing packages for a solution is a convenient means to work with multiple projects simultaneously.
