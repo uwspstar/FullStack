@@ -4,6 +4,9 @@
 ```
 C# 4 introduces a new type, dynamic. The type is a static type, 
 but an object of type dynamic bypasses static type checking.
+no compiler error is reported. 
+However, the error does not escape notice indefinitely. 
+It is caught at run time and causes a run-time
 ```
 ### try/catch
 - A try/catch block has some performance cost, so you'll only want to use them when you really need them
