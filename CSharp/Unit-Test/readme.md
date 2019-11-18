@@ -1,6 +1,7 @@
 # Unit Test
 - Unit Testing for C# Developers https://www.udemy.com/course/unit-testing-csharp/learn/lecture/8997466#overview
 - if you think the "unit" is class, then only test public method, otherwize, test private method also. However, test private method may against SOLID priciple (S)
+
 ### Automation Test
 - Unit
 ```
@@ -16,7 +17,6 @@ So, it tests the integration of your application code with these concrete depend
 ```
 Test an application through its user-interface.
 ```
-
 ### Basic
 - all the test should be```public void ...```
 - each test should have a single responsibility, and should ideally be less than ten lines of code. 
@@ -43,6 +43,7 @@ Test an application through its user-interface.
 ### How to test private method How to unit test private methods using VSTS unit test?
 https://www.youtube.com/watch?v=Vq6Gcs9LrPQ
 - https://www.youtube.com/watch?v=Krj3-h198KQ
+
 ### ExcludeFromCodeCoverage
 
 ### Test method requirements
