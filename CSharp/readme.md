@@ -1,5 +1,6 @@
 # C#
 - Secrets https://blog.submain.com/app-config-basics-best-practices/  (App.Config: Basics and Best Practices)
+### Higher Order Function
 ### tuples
 ### dynamic
 ```
