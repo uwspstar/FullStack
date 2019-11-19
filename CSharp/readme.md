@@ -1,5 +1,6 @@
 # C#
 - Secrets https://blog.submain.com/app-config-basics-best-practices/  (App.Config: Basics and Best Practices)
+### tuples
 ### dynamic
 ```
 C# 4 introduces a new type, dynamic. The type is a static type, 
