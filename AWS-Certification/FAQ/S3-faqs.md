@@ -28,3 +28,10 @@ Amazon S3 also offers capabilities to manage your data throughout its lifecycle.
 - SSE-S3 provides an integrated solution where Amazon handles key management and key protection using multiple layers of security. You should choose SSE-S3 if you prefer to have Amazon manage your keys.
 - Use SSE-C if you want to maintain your own encryption keys, but don’t want to implement or leverage a client-side encryption library.
 - You can limit access to your bucket from a specific Amazon VPC Endpoint or a set of endpoints using Amazon S3 bucket policies. S3 bucket policies now support a condition
+### Amazon S3 is a simple key-based object store. 
+```
+When you store data, you assign a unique object key that can later be used to retrieve the data. 
+Keys can be any string, and they can be constructed to mimic hierarchical attributes. 
+Alternatively, 
+you can use S3 Object Tagging to organize your data across all of your S3 buckets and/or prefixes
+```
