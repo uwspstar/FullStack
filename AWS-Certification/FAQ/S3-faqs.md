@@ -67,7 +67,8 @@ such as HTTP referrer and IP address.
 
 With ACLs, 
 customers can grant specific permissions (i.e. READ, WRITE, FULL_CONTROL) to specific users 
-for an individual bucket or object. 
+for an individual bucket or object.
+ 
 With Query String Authentication, 
 customers can create a URL to an Amazon S3 object which is only valid for a limited time.
 
