@@ -36,3 +36,10 @@ Alternatively,
 you can use S3 Object Tagging to organize your data across all of your S3 buckets and/or prefixes
 ```
 ### charged for accessing Amazon S3 through the AWS Management Console
+### How am I charged if my Amazon S3 buckets are accessed from another AWS account?
+```
+Normal Amazon S3 pricing applies when your storage is accessed by another AWS Account. 
+Alternatively, 
+you may choose to configure your bucket as a Requester Pays bucket, 
+in which case the requester will pay the cost of requests and downloads of your Amazon S3 data.
+```
