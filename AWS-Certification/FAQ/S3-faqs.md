@@ -83,7 +83,4 @@ Alternatively,
 customers who need to capture IAM/user identity information in their logs 
 can configure AWS CloudTrail Data Events.
 ```
-### 
-3
-
-such as granting write privileges to a subset of Amazon S3 resources. 
+### Encrypting data stored on Amazon S3. (SSE-S3, SSE-C, SSE-KMS, or a client library)
