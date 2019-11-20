@@ -43,3 +43,12 @@ Alternatively,
 you may choose to configure your bucket as a Requester Pays bucket, 
 in which case the requester will pay the cost of requests and downloads of your Amazon S3 data.
 ```
+### You can use access control mechanisms such as bucket policies and Access Control Lists (ACLs) to selectively grant permissions to users and groups of users.
+
+### 4 mechanisms for controlling access to Amazon S3 resources: 
+```
+- 1) Identity and Access Management (IAM) policies, 
+- 2) bucket policies, 
+- 3) Access Control Lists (ACLs), and 
+- 4) Query String Authentication.
+```
