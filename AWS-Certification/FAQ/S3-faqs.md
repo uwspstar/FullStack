@@ -51,4 +51,24 @@ in which case the requester will pay the cost of requests and downloads of your 
 - 2) bucket policies, 
 - 3) Access Control Lists (ACLs), and 
 - 4) Query String Authentication.
+
+
+IAM enables organizations with multiple employees to create 
+and manage multiple users under a single AWS account. 
+With IAM policies, 
+customers can grant IAM users fine-grained control to their Amazon S3 bucket 
+or objects while also retaining full control over everything the users do. 
+
+With bucket policies, 
+customers can define rules which apply broadly across all requests to their Amazon S3 resources, 
+such as granting write privileges to a subset of Amazon S3 resources. 
+Customers can also restrict access based on an aspect of the request, 
+such as HTTP referrer and IP address. 
+
+With ACLs, 
+customers can grant specific permissions (i.e. READ, WRITE, FULL_CONTROL) to specific users 
+for an individual bucket or object. 
+With Query String Authentication, 
+customers can create a URL to an Amazon S3 object which is only valid for a limited time.
+
 ```
