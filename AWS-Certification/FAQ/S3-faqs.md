@@ -5,7 +5,18 @@
 ### Amazon S3 is object storage (not for install OS, not for database ), only for files
 ### Amazon S3 objects can range in size from a minimum of 0 bytes to a maximum of 5 terabytes.
 ### 6 storage classes https://aws.amazon.com/s3/storage-classes/
+```
+Amazon S3 offers a range of storage classes designed for different use cases. 
+These include 
+1) S3 Standard for general-purpose storage of frequently accessed data; 
+2) S3 Intelligent-Tiering for data with unknown or changing access patterns; 
+3) S3 Standard-Infrequent Access (S3 Standard-IA) and 
+4) S3 One Zone-Infrequent Access (S3 One Zone-IA) for long-lived, but less frequently accessed data; and Amazon 
+5) S3 Glacier (S3 Glacier) and Amazon 
+6) S3 Glacier Deep Archive (S3 Glacier Deep Archive) for long-term archive and digital preservation. 
 
+Amazon S3 also offers capabilities to manage your data throughout its lifecycle. Once an S3 Lifecycle policy is set, your data will automatically transfer to a different storage class without any changes to your application.  
+```
 - The S3 Intelligent-Tiering storage class is designed to optimize costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead. 
 - The S3 Standard storage class is designed for 99.99% availability, the S3 Standard-IA storage class is designed for 99.9% availability, and the S3 One Zone-IA storage class is designed for 99.5% availability.
 - Amazon S3’s massive scale enables us to spread load evenly, so that no individual application is affected by traffic spikes
