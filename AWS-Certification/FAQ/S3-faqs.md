@@ -35,3 +35,4 @@ Keys can be any string, and they can be constructed to mimic hierarchical attrib
 Alternatively, 
 you can use S3 Object Tagging to organize your data across all of your S3 buckets and/or prefixes
 ```
+### charged for accessing Amazon S3 through the AWS Management Console
