@@ -83,9 +83,7 @@ Alternatively,
 customers who need to capture IAM/user identity information in their logs 
 can configure AWS CloudTrail Data Events.
 ```
+### 
+3
 
-
-
-
-
-5) S3 Glacier (S3 Glacier) and Amazon 
+such as granting write privileges to a subset of Amazon S3 resources. 
