@@ -84,3 +84,16 @@ customers who need to capture IAM/user identity information in their logs
 can configure AWS CloudTrail Data Events.
 ```
 ### Encrypting data stored on Amazon S3. (SSE-S3, SSE-C, SSE-KMS, or a client library)
+- choose SSE-S3 if you prefer to have Amazon manage your keys.
+- Use SSE-C if you want to maintain your own encryption keys, but don’t want to implement or leverage a client-side encryption library.
+- AWS KMS, there are separate permissions for the use of the master key, providing an additional layer of control as well as protection against unauthorized access to your objects stored in Amazon S3. AWS KMS provides an audit trail so you can see who used your key to access which object and when, as well as view failed attempts to access data from users without permission to decrypt the data. Also, AWS KMS provides additional security controls to support customer efforts to comply with PCI-DSS, HIPAA/HITECH, and FedRAMP industry requirements.
+- Use a client-side library if you want to maintain control of your encryption keys, are able to implement or use a client-side encryption library, and need to have your objects encrypted before they are sent to Amazon S3 for storage.
+
+
+
+
+
+
+
+
+
