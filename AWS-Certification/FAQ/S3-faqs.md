@@ -1,6 +1,6 @@
 
-### S3 https://aws.amazon.com/s3/faqs/
-### EC2 https://aws.amazon.com/ec2/faqs/
+# S3 
+- https://aws.amazon.com/s3/faqs/
 
 - The S3 Intelligent-Tiering storage class is designed to optimize costs by automatically moving data to the most cost-effective access tier, without performance impact or operational overhead. 
 - The S3 Standard storage class is designed for 99.99% availability, the S3 Standard-IA storage class is designed for 99.9% availability, and the S3 One Zone-IA storage class is designed for 99.5% availability.
