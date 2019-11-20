@@ -91,6 +91,12 @@ can configure AWS CloudTrail Data Events.
 
 ### A VPC endpoint enables you to privately connect your VPC to supported AWS services and VPC endpoint services powered by PrivateLink without requiring an internet gateway, NAT device, VPN connection, or AWS Direct Connect connection.
 
+### Amazon Macie?
+```
+Amazon Macie is an AI-powered security service 
+that helps you prevent data loss by automatically discovering, 
+classifying, and protecting sensitive data stored in Amazon S3
+```
 
 
 
