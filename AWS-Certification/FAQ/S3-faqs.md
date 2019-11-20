@@ -73,3 +73,19 @@ With Query String Authentication,
 customers can create a URL to an Amazon S3 object which is only valid for a limited time.
 
 ```
+### Amazon S3 support data access auditing?
+
+```
+customers can optionally configure an Amazon S3 bucket 
+to create access log records for all requests made against it. 
+
+Alternatively, 
+customers who need to capture IAM/user identity information in their logs 
+can configure AWS CloudTrail Data Events.
+```
+
+
+
+
+
+5) S3 Glacier (S3 Glacier) and Amazon 
