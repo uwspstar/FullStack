@@ -579,26 +579,33 @@ Question No:57
 A. Aurora
 B. Oracle
 C. SQL Server 
-D. MySQL Answer: A
+D. MySQL
+
 Explanation: Amazon supports MySQL but it is not the best option in this instance for speed and reliability. Oracle and SQL Server meet the requirement of speed and reliability but will require rewriting of most queries. Amazon Aurora is a relational database engine that combines the speed and reliability of high-end commercial databases with the simplicity and cost- effectiveness of open source databases. Amazon Aurora with MySQL-compatibility delivers up to five times the performance of MySQL without requiring any changes to most MySQL applications.
 Reference: https://aws.amazon.com/rds/aurora/faqs/ Answer: A
 
 Question No:58
-You are assigned to lead your company's migration to an AWS cloud environment. Your company has a large software development division and you are gathering requirements for their instances as well as EBS volumes. This department will often have multiple projects going on at one time, which calls for multiple dev, test, and prod environments. They want dev and test to simulate production loads so they will be moderately IO intensive. What type of EBS volume is best suited for dev and test environments?
+### You are assigned to lead your company's migration to an AWS cloud environment. Your company has a large software development division and you are gathering requirements for their instances as well as EBS volumes. This department will often have multiple projects going on at one time, which calls for multiple dev, test, and prod environments. They want dev and test to simulate production loads so they will be moderately IO intensive. What type of EBS volume is best suited for dev and test environments?
+
 A. Magnetic volumes
-B. Instance Store volumes C. Provisioned IOPS SSD D. General purpose SSD Answer: D
+B. Instance Store volumes 
+C. Provisioned IOPS SSD 
+D. General purpose SSD
+
 Explanation: Amazon RDS provides three storage types: magnetic, General Purpose (SSD), and Provisioned IOPS (input/output operations per second). They differ in performance characteristics and price, allowing you to tailor your storage performance and cost to the needs of your database workload. General Purpose (SSD), also called gp2, volumes offer cost-effective storage that is ideal for a broad range of workloads.
- 
-AWS_SAA-C01 Exam
-Reference: http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html
+Reference: http://docs.aws.amazon.com/AmazonRDS/latest/UserGuide/CHAP_Storage.html Answer: D
+
 Question No:59
-A media company has contracted you to design their AWS cloud environment. They host websites and have many well known bloggers who post daily and weekly blogs as well as podcasts. Your analysis of their existing traffic reveals that their database traffic will be nearly 90% read traffic. From this analysis your design will include read replicas so you know that you have to choose a database engine which supports read replicas. Which AWS RDS engines support read replicas?
+### A media company has contracted you to design their AWS cloud environment. They host websites and have many well known bloggers who post daily and weekly blogs as well as podcasts. Your analysis of their existing traffic reveals that their database traffic will be nearly 90% read traffic. From this analysis your design will include read replicas so you know that you have to choose a database engine which supports read replicas. Which AWS RDS engines support read replicas?
+
 A. Oracle and SQL Server
-B. MySQL, MariaDB, PostgreSQL, Aurora C. They all support read replicas
+B. MySQL, MariaDB, PostgreSQL, Aurora 
+C. They all support read replicas
 D. MySQL, SQL Server, Oracle
-Answer: B
+ 
 Explanation: Amazon RDS Read Replicas provide enhanced performance and durability for database (DB) instances. This replication feature makes it easy to elastically scale out beyond the capacity constraints of a single DB Instance for read-heavy database workloads. You can create one or more replicas of a given source DB Instance and serve high-volume application read traffic from multiple copies of your data, thereby increasing aggregate read throughput. Read replicas can also be promoted when needed to become standalone DB instances.
-Read replicas are available in Amazon RDS for MYSQL, MariaDB, PostgreSQL, and Aurora. Reference: https://aws.amazon.com/rds/details/read-replicas/
+Read replicas are available in Amazon RDS for MYSQL, MariaDB, PostgreSQL, and Aurora. Reference: https://aws.amazon.com/rds/details/read-replicas/ Answer: B
+
 Question No:60
 Your client, a media company, wants to transfer large video files to AWS cloud storage. You recommend implementing multipart uploading and need to define an uploading policy for them. The policy needs to clearly define the parameters for when multipart uploading should be used. Which rules belong in this policy? (Choose 3 answers)
 A. Multipart uploads must be used for objects greater than 5 GB.
