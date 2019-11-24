@@ -607,15 +607,16 @@ Explanation: Amazon RDS Read Replicas provide enhanced performance and durabilit
 Read replicas are available in Amazon RDS for MYSQL, MariaDB, PostgreSQL, and Aurora. Reference: https://aws.amazon.com/rds/details/read-replicas/ Answer: B
 
 Question No:60
-Your client, a media company, wants to transfer large video files to AWS cloud storage. You recommend implementing multipart uploading and need to define an uploading policy for them. The policy needs to clearly define the parameters for when multipart uploading should be used. Which rules belong in this policy? (Choose 3 answers)
+### Your client, a media company, wants to transfer large video files to AWS cloud storage. You recommend implementing multipart uploading and need to define an uploading policy for them. The policy needs to clearly define the parameters for when multipart uploading should be used. Which rules belong in this policy? (Choose 3 answers)
+
 A. Multipart uploads must be used for objects greater than 5 GB.
-B. Multipart uploads should be used for objects greater than 100 MB. C. Multipart uploads should be used when the object size is unknown.
- 
-AWS_SAA-C01 Exam
+B. Multipart uploads should be used for objects greater than 100 MB. 
+C. Multipart uploads should be used when the object size is unknown.
 D. Multipart uploads must be used for objects greater than 50 MB.
-Answer: A,B,C
+ 
 Explanation: In general, multipart upload should be used for objects greater than 100 MB. It must be used for objects greater than 5 GB. You can set an object lifecycle to delete incomplete multipart uploads after a certain period of time. This will save storage costs on uploads that have been aborted for various reasons.
-Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html
+Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html Answer: A,B,C
+
 Question No:61
 A bucket owner from Account Red allows Account Blue's IAM users to upload or access objects in his bucket. An IAM user of Account Blue is trying to access an object created by the IAM user of account Red. What will happen in this scenario?
 A. It is not possible to give permission to multiple IAM users
