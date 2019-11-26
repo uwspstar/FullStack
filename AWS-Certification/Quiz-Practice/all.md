@@ -618,23 +618,28 @@ Explanation: In general, multipart upload should be used for objects greater tha
 Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/mpuoverview.html Answer: A,B,C
 
 Question No:61
-A bucket owner from Account Red allows Account Blue's IAM users to upload or access objects in his bucket. An IAM user of Account Blue is trying to access an object created by the IAM user of account Red. What will happen in this scenario?
+### A bucket owner from Account Red allows Account Blue's IAM users to upload or access objects in his bucket. An IAM user of Account Blue is trying to access an object created by the IAM user of account Red. What will happen in this scenario?
+
 A. It is not possible to give permission to multiple IAM users
 B. Amazon S3 will verify proper rights given by the owner of Account Blue to the IAM user, the permissions granted by bucket owner, as well as the permissions given by IAM user Red to the object.
-C. It is not possible that the IAM user of one account accesses objects of the other IAM user D. The bucket policy may not be created as S3 will give error due to conflict of Access Rights Answer: B
+C. It is not possible that the IAM user of one account accesses objects of the other IAM user 
+D. The bucket policy may not be created as S3 will give error due to conflict of Access Rights
+
 Explanation: If a IAM user is trying to perform some action on an object belonging to another AWS user’s bucket, S3 will verify whether the owner of the IAM user has given sufficient permission to him. It also verifies the policy for the bucket as well as the policy defined by the object owner.
-Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-auth-workflow-object-ope ration.html
+Reference: http://docs.aws.amazon.com/AmazonS3/latest/dev/access-control-auth-workflow-object-ope ration.html Answer: B
+
 Question No:62
-You are placed in charge of migrating a client to an AWS cloud environment. One of the first steps you want to take is getting a plan in place for user account, other accounts, and Identity and Access Management. You plan on creating administrator accounts then locking away the root account. You notice that the client has several Service Accounts for access to applications in their on-premises environment. Given that all their applications can be migrated to the cloud,
- 
-AWS_SAA-C01 Exam
-what would be an appropriate replacement for these service accounts? A. Cross-account access for access to the applications
+### You are placed in charge of migrating a client to an AWS cloud environment. One of the first steps you want to take is getting a plan in place for user account, other accounts, and Identity and Access Management. You plan on creating administrator accounts then locking away the root account. You notice that the client has several Service Accounts for access to applications in their on-premises environment. Given that all their applications can be migrated to the cloud,
+
+what would be an appropriate replacement for these service accounts? 
+A. Cross-account access for access to the applications
 B. Services Account should be migrated to AWS
 C. Federation for access to the applications
 D. Amazon EC2 roles for access to the applications
-Answer: D
+
 Explanation: Applications must sign their API requests with AWS credentials. Therefore, if you are an application developer, you need a strategy for managing credentials for your applications that run on EC2 instances. It is best practice to use IAM roles so that your applications can securely make API requests from your instances, without requiring you to manage the security credentials that the applications use.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html Answer: D
+
 Question No:63
 A user is accessing an EC2 instance on the SSH port from IP address 10.20.30.40/32. Which one is a secure way to configure that the instance can be accessed only from this IP address?
 A. In the security group, open port 22 for IP 10.20.30.40/0 B. In the security group, open port 22 for IP 10.20.30.40
