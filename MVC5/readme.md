@@ -166,3 +166,4 @@ Well, here’s one way. It’s a bit verbose, but it works.
 - The partial view itself looks much like a normal view, except it doesn’t specify a layout:
 ```<h2>@ViewBag.Message</h2>```
 
+- If the input names match the property names, why can’t you write a generic piece of code that pushes values around based on a naming convention? This is exactly what the model binding feature of ASP.NET MVC provides.
