@@ -27,7 +27,8 @@ public ActionResult Index() {   return View("NotIndex"); }
 ```
 public ActionResult Index() {   return View("~/Views/Example/Index.cshtml"); }
 
-When using the tilde syntax, you must supply the file extension of the view because this bypasses the view engine’s internal lookup mechanism for fi nding views
+When using the tilde syntax, you must supply the file extension of the view 
+because this bypasses the view engine’s internal lookup mechanism for fi nding views
 
 
 ```
