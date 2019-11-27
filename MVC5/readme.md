@@ -244,3 +244,30 @@ Any additional properties are ignored.
 -  A POST request generally modifi es state on the server, and repeating the request might produce undesirable effects 
 - Many browsers help a user avoid repeating a POST request. 
 - Web applications generally use GET requests for reads and POST requests for writes (which typically include updates, creates, and deletes)
+
+### Search Form
+```
+<form action="/Home/Search" method="get">   <input type="text" name="q" />   <input type="submit" value="Search" /> </form>
+
+public ActionResult Search(string q) 
+{   var albums = storeDB.Albums                      
+  .Include("Artist")                       
+  .Where(a => a.Title.Contains(q))                       
+  .Take(10);   
+  return View(albums); 
+}
+
+Notice how the Search action expects to receive a string parameter named q. 
+The MVC framework automatically fi nds this value in the query string,
+when the name q is present, and also fi nds the value in posted form values 
+if you made your search form issue a POST instead of a GET.
+
+
+@using (Html.BeginForm("Search", "Home", FormMethod.Get)) 
+{   
+  <input type="text" name="q" />   
+  <input type="submit" value="Search" /> 
+}
+
+
+```
