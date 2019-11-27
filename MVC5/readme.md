@@ -1,7 +1,10 @@
-
+- In general use, controllers are called via a URL, they execute your custom code, and they return a view
+- usually return the appropriate ActionResult, which handles things such as HTTP status codes, calling the View templating system, and so on.
+- input parameter embed it directly within the URL itself
+- ASP.NET MVC’s default routing convention is to treat the segment of a URL after the action method name as a parameter named ID.
 -  a controller class was that it inherits from System.Web.Mvc.Controller. 
 -  controllers are really at the heart. Every request goes through a controller, whereas some will not need to make use of models and views.
-
+- We’re using the HttpUtility.HtmlEncode utility method to sanitize the user input. This prevents users from injecting JavaScript code or HTML markup into our view
 - M odels: Classes that represent the data of the application and that use validation logic to enforce business rules for that data.
 - V iews: Template files that your application uses to dynamically generate HTML responses.
 - C ontrollers: Classes that handle incoming browser requests, retrieve model data, and then specify view templates that return a response to the browser.
