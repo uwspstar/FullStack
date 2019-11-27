@@ -71,3 +71,16 @@ To work around this, either use ViewData["Name"]
 or cast the value to a specifi c type: (string)ViewBag.Name.
 
 ```
+- ViewDataDictionary is a specialized dictionary class, not just a generic Dictionary. One reason for this is that it has an additional Model property that allows for a specifi c model object to be available to the view. 
+-  A common application of this technique is using the ViewBag to provide form options for a dropdown. 
+- One easy approach to displaying extra data that isn’t a part of your view’s main model is to simply stick that data in the ViewBag
+- One recommended approach is to write a custom view model class. You can think of a view model as a model that exists just to supply information for a view
+```
+public class ShoppingCartViewModel 
+{  
+  public IEnumerable<Product> Products { get; set; }   
+  public decimal CartTotal { get; set; }  
+  public string Message { get; set; } 
+}
+
+```
