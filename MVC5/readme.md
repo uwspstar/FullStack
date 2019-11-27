@@ -296,6 +296,39 @@ The last example demonstrates the essence of HTML helpers.
 They don’t take away your control, 
 but they do save you from writing lots of code.
 
+
+
+
 ```
 ### HTML HELPERS
 - HTML helpers are methods you can invoke on the Html property of a view
+- You also have access to URL helpers (via the Url property), and
+- Ajax helpers (via the Ajax property). 
+- All these helpers have the same goal: to make views easy to author
+- behind the scenes the helper is coordinating with the routing engine to generate a proper URL, so the code is more resilient to changes in the application deployment location.
+```
+@{Html.BeginForm("Search", "Home", FormMethod.Get);}   
+<input type="text" name="q" />   
+<input type="submit" value="Search" /> 
+@{Html.EndForm();}
+```
+- All the helpers that output model values will HTML encode the values before renderin
+-  Encoding by default helps you to avoid cross-site scripting attacks (XSS). 
+```
+@Html.TextArea("text", "hello <br/> world")
+
+<textarea cols="20" id="text" name="text" rows="2">  hello &lt;br /&gt; world </textarea>
+```
+- Nearly every HTML helper in the MVC framework includes an htmlAttributes parameter in one of its overloaded methods
+- You’ll also fi nd an htmlAttributes parameter of type IDictionary<string, object> in a different overload
+- You can see you’ve set target=" _blank" using the htmlAttributes parameter. 
+```
+@using (Html.BeginForm("Search", "Home", FormMethod.Get,       
+  new { target = "_blank" ", @class="editForm",  data_validatable=true }))
+
+Another problem is setting attributes with a dash in the name (like data-val). 
+Dashes are not valid in C# property names, 
+but all HTML helpers convert an underscore in a property name to a dash when rendering the HTML. 
+ 
+<form action="/Home/Search" class="editForm" data-validatable="true"     method="get" target="_blank">
+```
