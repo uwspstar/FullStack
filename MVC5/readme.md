@@ -7,3 +7,4 @@
 - A view template should never perform business logic or interact with a database directly.
 - ViewBag is a dynamic object, which means you can put whatever you want in to it
 - the view model approach to passing data is generally much preferred over the view bag approach
+-  ViewBag is useful when you want to pass information not related to the view model and you don’t want to create a view model just to pass the information.
