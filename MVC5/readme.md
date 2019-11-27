@@ -334,3 +334,40 @@ but all HTML helpers convert an underscore in a property name to a dash when ren
 ```
 - Every Razor view inherits an Html property from its base class. 
 - The Html property is of type System.Web.Mvc.HtmlHelper<T> where T is a generic type parameter representing the type of the model for the view (dynamic by default). 
+  
+### System.Web.Mvc.HtmlHelper<T>
+-  The class provides a few instance methods you can invoke in a view, such as EnableClientValidation
+- AntiForgeryToken is an instance method, 
+- BeginForm is an extension method
+- Extension methods are a wonderful approach to building HTML helpers for two reasons 
+  -  First, extension methods in C# are available only when the namespace of the extension method is in scope
+- All MVC’s extension methods for HtmlHelper live in the System.Web.Mvc.Html namespace 
+-  If you don’t like the built-in extension methods, you can remove this namespace and build your own.
+- Html.BeginForm 
+- Html.ValidationSummary - displays an unordered list of all validation errors in the ModelState dictionary. 
+```
+  @using (Html.BeginForm()) {   
+    @Html.ValidationSummary(excludePropertyErrors: true)   
+    <fieldset>       
+      <legend>Edit Album</legend>
+         <p>           
+           <input type="submit" value="Save" />       
+        </p>   
+    </fieldset> 
+ }
+
+```
+- Html.ValidationSummary - displays an unordered list of all validation errors in the ModelState dictionary. 
+```
+Assume you have the following code somewhere in the controller action rendering the edit view:
+ModelState.AddModelError("", "This is all wrong!"); ModelState.AddModelError("Title", "What a terrible name!");
+```
+  
+  
+  
+  
+  
+  
+  
+  
+  
