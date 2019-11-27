@@ -142,4 +142,14 @@ $(function () {
 ```
 @section Footer {    This is the <strong>footer</strong>. }
 
+Earlier, it was pointed out that, by default, 
+a view must supply content for every defi ned section. 
+So what happens when you want to add a new section to a layout? Will that break every view?
+
+Fortunately, the RenderSection method has an overload that allows you to specify t
+hat the section is not required. 
+To mark the Footer section as optional you can pass in false for the required parameter:
+
+<footer>@RenderSection("Footer", required: false)</footer>
+
 ```
