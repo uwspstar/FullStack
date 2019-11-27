@@ -137,7 +137,7 @@ $(function () {
     <footer>@RenderSection("Footer")</footer> 
   </body> 
 </html>
----
+```
 - The @section syntax specifi es the contents for a section defi ned in the layout.
 ```
 @section Footer {    This is the <strong>footer</strong>. }
