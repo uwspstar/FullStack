@@ -167,3 +167,46 @@ Well, here’s one way. It’s a bit verbose, but it works.
 ```<h2>@ViewBag.Message</h2>```
 ### model binding 
 - If the input names match the property names, why can’t you write a generic piece of code that pushes values around based on a naming convention? This is exactly what the model binding feature of ASP.NET MVC provides.
+- The model binder is a bit like a search-and-rescue dog.
+
+### A WORD ON MODEL BINDING SECURITY
+```
+ASP.NET MVC 5 now includes a comment with warning about over-posting attacks 
+as well as the Bind attribute that restricts the binding behavior:
+
+// POST: /StoreManager/Edit/5 
+// To protect from overposting attacks, please enable the 
+// specific properties you want to bind to, for more details see 
+// http://go.microsoft.com/fwlink/?LinkId=317598. 
+
+[HttpPost] [ValidateAntiForgeryToken] public ActionResult Edit    
+([Bind(      
+Include="AlbumId,GenreId,ArtistId,Title,Price,AlbumArtUrl")]      
+Album album)
+
+```
+- Model binding implicitly goes to work when you have an action parameter. 
+- You can also explicitly invoke model binding using the UpdateModel and TryUpdateModel methods in your controller. 
+- TryUpdateModel also invokes model binding, but doesn’t throw an exception
+-  You can check model state any time after model binding occurs to see whether model binding succeeded:
+```
+[HttpPost] public ActionResult Edit() 
+{   
+  var album = new Album();   
+  TryUpdateModel(album);   
+  if (ModelState.IsValid)
+  {       
+    db.Entry(album).State = EntityState.Modified;       
+    db.SaveChanges();       
+    return RedirectToAction("Index");   
+  }   
+  else   
+  {       
+  ViewBag.GenreId = new SelectList(db.Genres, "GenreId",                                        
+  "Name", album.GenreId);       
+  ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId",                                        
+  "Name", album.ArtistId);       return View(album);   
+  } 
+}
+
+```
