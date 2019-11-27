@@ -54,3 +54,20 @@ is to declare the namespace in the web.config fi le within the Views directory.
 </system.web.webPages.razor>
 
 ```
+
+### VIEWDATA AND VIEWBAG
+```
+One obvious difference is that ViewBag works only when the key you’re accessing is a valid C# identifi er. 
+For example, if you place a value in ViewData["Key With Spaces"], 
+you can’t access that value using ViewBag because the code won’t compile.
+
+Another key issue to consider is that you cannot pass in dynamic values as parameters to extension methods. 
+The C# compiler must know the real type of every parameter at compile time 
+in order to choose the correct extension method.
+
+If any parameter is dynamic, compilation will fail. 
+For example, this code will always fail: @Html.TextBox("name", ViewBag.Name). 
+To work around this, either use ViewData["Name"] 
+or cast the value to a specifi c type: (string)ViewBag.Name.
+
+```
