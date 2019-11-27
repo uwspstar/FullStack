@@ -221,3 +221,26 @@ UpdateModel(product, new[] { "Title", "Price", "AlbumArtUrl" });
 Any additional properties are ignored.
 ```
 
+### Forms and HTML Helpers
+- A form is a container for input elements: buttons, checkboxes, text inputs, and more
+-  two most important attributes of a form tag: the action and the method attributes
+- The action attribute tells a web browser where to send the information, so naturally the action contains a URL
+- The method attribute tells the browser whether to use an HTTP POST or HTTP GET when sending the information. 
+```
+ However, the default method value is “get,” so by default a form sends an HTTP GET request:
+ 
+<form action="http://www.bing.com/search" method="get">   
+  <input name="q" type="text" />   
+  <input type="submit" value="Search!" /> 
+</form>
+
+ ```
+ ###  GET or to POST
+- When a user submits a form using an HTTP GET request, the browser takes the input names and values inside the form and puts them in the query string.  http://www.bing .com/search?q=love.
+- You can also give the method attribute the value post, in which case the browser does not place the input values into the query string, but places them inside the body of the HTTP request instead. 
+-  Unlike the POST request, you can bookmark the GET request because all the parameters are in the URL. You can use the URLs as hyperlinks in an e-mail or a web page and preserve all the form input values.
+- Even more importantly, the GET verb is the right tool for the job because GET represents an idempotent, read-only operation.
+- You can send a GET request to a server repeatedly with no ill effects, because a GET does not (or should not) change state on the server
+-  A POST request generally modifi es state on the server, and repeating the request might produce undesirable effects 
+- Many browsers help a user avoid repeating a POST request. 
+- Web applications generally use GET requests for reads and POST requests for writes (which typically include updates, creates, and deletes)
