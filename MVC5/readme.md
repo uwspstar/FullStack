@@ -75,6 +75,7 @@ or cast the value to a specifi c type: (string)ViewBag.Name.
 -  A common application of this technique is using the ViewBag to provide form options for a dropdown. 
 - One easy approach to displaying extra data that isn’t a part of your view’s main model is to simply stick that data in the ViewBag
 - One recommended approach is to write a custom view model class. You can think of a view model as a model that exists just to supply information for a view
+- This gives you the benefi ts of a strongly typed view (including type checking, IntelliSense, and freedom from having to cast untyped ViewDataDictionary objects) 
 ```
 public class ShoppingCartViewModel 
 {  
@@ -83,4 +84,39 @@ public class ShoppingCartViewModel
   public string Message { get; set; } 
 }
 
+```
+### HTML Encoding 
+- Given that many cases exist where a view is used to display user input, such as a blog post comment or a product review, the potential always exists for cross-site script injection attacks (also known as XSS)
+- The good news is that Razor expressions are automatically HTML encoded.
+```
+@{   string message = "<script>alert('haacked!');</script>"; } <span>@message</span>
+
+This code does not result in an alert box popping up but instead renders the encoded HTML:
+
+<span>&lt;script&gt;alert(&#39;haacked!&#39;);&lt;/script&gt;</span>
+
+```
+- However, in cases where you intend to show HTML markup, you can return an instance of System .Web.IHtmlString and Razor will not encode it. 
+```
+For example, 
+all the view helpers discussed later in this section return instances of this interface 
+because they want HTML to be rendered to the page.
+You can also create an instance of HtmlString or use the Html.Raw convenience method:
+
+@{   string message = "<strong>This is bold!</strong>"; } <span>@Html.Raw(message)</span>
+
+This results in the message being displayed without HTML encoding:
+<span><strong>This is bold!</strong></span>
+
+```
+- This automatic HTML encoding is great for mitigating XSS vulnerabilities by encoding user input meant to be displayed as HTML, but it is not suffi cient for displaying user input within JavaScript. 
+- When setting variables in JavaScript to values supplied by the user, using JavaScript string encoding and not just HTML encoding is important. Use the @Ajax.JavaScriptStringEncode to encode the input. 
+```
+Here’s the same code again using this method to better protect against XSS attacks:
+<script type="text/javascript">   
+$(function () {       
+  var message = 'Hello @Ajax.JavaScriptStringEncode(ViewBag.Username)';       
+  $("#message").html(message).show('slow');   
+}); 
+</script>
 ```
