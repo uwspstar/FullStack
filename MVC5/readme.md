@@ -152,4 +152,14 @@ To mark the Footer section as optional you can pass in false for the required pa
 
 <footer>@RenderSection("Footer", required: false)</footer>
 
+But wouldn’t it be nicer 
+if you could defi ne some default content if the section isn’t defined in the view? 
+Well, here’s one way. It’s a bit verbose, but it works.
+
+<footer>  
+  @if (IsSectionDefined("Footer")) {       RenderSection("Footer");   }  
+  else {       <span>This is the default footer.</span>   } 
+</footer>
+
 ```
+
