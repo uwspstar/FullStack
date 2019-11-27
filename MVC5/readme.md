@@ -15,3 +15,16 @@
 - the view model approach to passing data is generally much preferred over the view bag approach
 -  ViewBag is useful when you want to pass information not related to the view model and you don’t want to create a view model just to pass the information.
 - get in the habit of checking that Add Unit Tests box for every project you create.
+-  You could supply a different view name, as follows:
+```
+public ActionResult Index() {   return View("NotIndex"); }
+```
+
+- You can use the tilde syntax to provide the full path to the view, as follows:
+```
+public ActionResult Index() {   return View("~/Views/Example/Index.cshtml"); }
+
+When using the tilde syntax, you must supply the file extension of the view because this bypasses the view engine’s internal lookup mechanism for fi nding views
+
+
+```
