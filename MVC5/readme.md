@@ -332,3 +332,5 @@ but all HTML helpers convert an underscore in a property name to a dash when ren
  
 <form action="/Home/Search" class="editForm" data-validatable="true"     method="get" target="_blank">
 ```
+- Every Razor view inherits an Html property from its base class. 
+- The Html property is of type System.Web.Mvc.HtmlHelper<T> where T is a generic type parameter representing the type of the model for the view (dynamic by default). 
