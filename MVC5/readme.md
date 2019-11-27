@@ -138,7 +138,7 @@ $(function () {
   </body> 
 </html>
 ```
-- The @section syntax specifi es the contents for a section defi ned in the layout.
+- The @section syntax specifi es the contents for a section defined in the layout.
 ```
 @section Footer {    This is the <strong>footer</strong>. }
 
@@ -162,4 +162,7 @@ Well, here’s one way. It’s a bit verbose, but it works.
 </footer>
 
 ```
+### PARTIAL VIEW
+- The partial view itself looks much like a normal view, except it doesn’t specify a layout:
+```<h2>@ViewBag.Message</h2>```
 
