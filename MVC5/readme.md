@@ -124,3 +124,22 @@ $(function () {
 </script>
 ```
 - Understanding the security implications of HTML and JavaScript encoding is very important. Incorrect encoding can put both your site and your users at risk.
+
+### layout
+- A layout may have multiple sections. For example, add a footer section to the previous layout, SiteLayout.cshtml:
+```
+<!DOCTYPE html> 
+<html> 
+<head><title>@ViewBag.Title</title></head> 
+  <body>   
+    <h1>@ViewBag.Title</h1>   
+    <div id="main-content">@RenderBody()</div>   
+    <footer>@RenderSection("Footer")</footer> 
+  </body> 
+</html>
+---
+- The @section syntax specifi es the contents for a section defi ned in the layout.
+```
+@section Footer {    This is the <strong>footer</strong>. }
+
+```
