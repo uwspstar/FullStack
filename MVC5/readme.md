@@ -247,7 +247,10 @@ Any additional properties are ignored.
 
 ### Search Form
 ```
-<form action="/Home/Search" method="get">   <input type="text" name="q" />   <input type="submit" value="Search" /> </form>
+<form action="/Home/Search" method="get">   
+  <input type="text" name="q" />   
+  <input type="submit" value="Search" /> 
+</form>
 
 public ActionResult Search(string q) 
 {   var albums = storeDB.Albums                      
@@ -271,3 +274,28 @@ if you made your search form issue a POST instead of a GET.
 
 
 ```
+### BeginForm  & GetVirtualPath
+```
+The BeginForm HTML helper asks the routing engine how to reach the Search action of the HomeController. 
+Behind the scenes it uses the method named GetVirtualPath on the Routes property exposed by RouteTable
+— that’s where your web application registered all its routes in global.asax. 
+If you did all this without an HTML helper, you would have to write all the following code:
+
+@{   
+  var context = this.ViewContext.RequestContext;   
+  var values = new RouteValueDictionary{       
+  { "controller", "home" }, { "action", "index" }   };   
+  var path = RouteTable.Routes.GetVirtualPath(context, values); 
+ } 
+<form action="@path.VirtualPath" method="get">   
+<input type="text" name="q" />   
+<input type="submit" value="Search2" />
+</form>
+
+The last example demonstrates the essence of HTML helpers. 
+They don’t take away your control, 
+but they do save you from writing lots of code.
+
+```
+### HTML HELPERS
+- HTML helpers are methods you can invoke on the Html property of a view
