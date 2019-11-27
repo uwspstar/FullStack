@@ -109,10 +109,13 @@ This results in the message being displayed without HTML encoding:
 <span><strong>This is bold!</strong></span>
 
 ```
+### HTML Encoding  vs JavaScript string encoding
+
 - This automatic HTML encoding is great for mitigating XSS vulnerabilities by encoding user input meant to be displayed as HTML, but it is not suffi cient for displaying user input within JavaScript. 
 - When setting variables in JavaScript to values supplied by the user, using JavaScript string encoding and not just HTML encoding is important. Use the @Ajax.JavaScriptStringEncode to encode the input. 
 ```
 Here’s the same code again using this method to better protect against XSS attacks:
+
 <script type="text/javascript">   
 $(function () {       
   var message = 'Hello @Ajax.JavaScriptStringEncode(ViewBag.Username)';       
@@ -120,3 +123,4 @@ $(function () {
 }); 
 </script>
 ```
+- Understanding the security implications of HTML and JavaScript encoding is very important. Incorrect encoding can put both your site and your users at risk.
