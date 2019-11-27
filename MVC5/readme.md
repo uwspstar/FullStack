@@ -202,11 +202,22 @@ Album album)
   }   
   else   
   {       
-  ViewBag.GenreId = new SelectList(db.Genres, "GenreId",                                        
-  "Name", album.GenreId);       
-  ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId",                                        
-  "Name", album.ArtistId);       return View(album);   
+    ViewBag.GenreId = new SelectList(db.Genres, "GenreId",                                        
+    "Name", album.GenreId);       
+    ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId",                                        
+    "Name", album.ArtistId);       
+    return View(album);   
   } 
 }
 
 ```
+- to using the Bind attribute to restrict implicit model binding, you can also restrict binding when you use UpdateModel and TryUpdateModel. Both methods have an override allowing you to specify an includeProperties parameter. 
+```
+This parameter contains an array of property names you’re explicitly allowing to be bound, 
+as shown in the following code:
+
+UpdateModel(product, new[] { "Title", "Price", "AlbumArtUrl" });
+
+Any additional properties are ignored.
+```
+
