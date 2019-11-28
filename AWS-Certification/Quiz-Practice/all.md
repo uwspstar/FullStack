@@ -641,23 +641,29 @@ Explanation: Applications must sign their API requests with AWS credentials. The
 Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/iam-roles-for-amazon-ec2.html Answer: D
 
 Question No:63
-A user is accessing an EC2 instance on the SSH port from IP address 10.20.30.40/32. Which one is a secure way to configure that the instance can be accessed only from this IP address?
-A. In the security group, open port 22 for IP 10.20.30.40/0 B. In the security group, open port 22 for IP 10.20.30.40
-C. In the security group, open port 22 for IP 10.20.30.40/32 D. In the security group, open port 22 for IP 10.20.30.0 Answer: C
-Explanation: In AWS EC2, while configuring a security group, the user needs to specify the IP address in CIDR notation. The CIDR IP range 10.20.30.40/32 says it is for a single IP 10.20.30.40. If the user specifies the IP as 10.20.30.40 only, the security group will not accept and ask for it in a CIDR format.
+### A user is accessing an EC2 instance on the SSH port from IP address 10.20.30.40/32. Which one is a secure way to configure that the instance can be accessed only from this IP address?
+
+A. In the security group, open port 22 for IP 10.20.30.40/0 
+B. In the security group, open port 22 for IP 10.20.30.40
+C. In the security group, open port 22 for IP 10.20.30.40/32 
+D. In the security group, open port 22 for IP 10.20.30.0
+
+Explanation: In AWS EC2, while configuring a security group, the user needs to specify the IP address in CIDR notation. The CIDR IP range 10.20.30.40/32 says it is for a single IP 10.20.30.40. If the user specifies the IP as 10.20.30.40 only, the security group will not accept and ask for it in a CIDR format.Answer: C
 Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html
  
-AWS_SAA-C01 Exam
 Question No:64
-If you do not specify a security group when launching an Amazon EC2 instance, the instance will be associated with the security group.
+### If you do not specify a security group when launching an Amazon EC2 instance, the instance will be associated with the security group.
+
 A. default
-B. placement group C. account
+B. placement group 
+C. account
 D. subnet
-Answer: A
+
 Explanation: Your AWS account automatically has a default security group per VPC for EC2- VPC and per region for EC2-Classic. If you don't specify a security group when you launch an instance, the instance is automatically associated with the default security group. A default security group is named default, and it has an ID assigned by AWS. The default rules for such a security group are to allow all inbound traffic from other instances associated with the default security group, and all outbound traffic.
-Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#defau lt-security-group
+Reference: http://docs.aws.amazon.com/AWSEC2/latest/UserGuide/using-network-security.html#defau lt-security-group Answer: A
+
 Question No:65
-You are asked to temporarily share AWS S3 bucket content within your organization. You begin setting up pre-signed URLs on individual buckets. For pre-signed URLs, you must provide several pieces of data. Which of the listed items must you provide? (Choose 3 answers)
+### You are asked to temporarily share AWS S3 bucket content within your organization. You begin setting up pre-signed URLs on individual buckets. For pre-signed URLs, you must provide several pieces of data. Which of the listed items must you provide? (Choose 3 answers)
 A. Your bucket name
 B. The availability zone of your bucket
 C. The expiration date and time of the URL D. Your security credentials
