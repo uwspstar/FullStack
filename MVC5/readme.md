@@ -1009,11 +1009,88 @@ public string Password { get; set; }
 - Hidden inputs are a great way to keep information in a form so the browser will send the data back to the server, but the user won’t be able to see or edit the data  
 - The HiddenInput attribute lives in the System.Web.Mvc namespace and tells the runtime to render an input element with a type of hidden. 
   
-  
-  
-  
-  
-  
-  
-  
- 
+### Membership, Authorization, and Security
+- Requiring login with the Authorize Attribute   
+- Requiring role membership using the Authorize Attribute 
+- Using security vectors in a web application
+- Coding defensively
+### Never, ever trust any data your users give you. Ever
+- ASP.NET MVC doesn’t have as many automatic protections as ASP.NET Web Forms does to secure your page against malicious users.  
+- Any time you render data that originated as user input, encode it.  
+- Think about what portions of your site should be available for anonymous access, and require authentication on the others.   
+- Don’t try to sanitize your users’ HTML input yourself (using regular expressions or some other method)—you’ll lose.  
+- Use HTTP-only cookies when you don’t need to access cookies via client-side script (which is most of the time).
+- Remember that external input isn’t just obvious form fields; 
+- it includes URL query string values, hidden form fi elds, Ajax requests, results of external web services you’re using, and more
+- Consider using the AntiXSS encoder (a component of the Microsoft Web Protection Library, which is now distributed with ASP.NET 4.5 and higher).
+
+### USING THE AUTHORIZE ATTRIBUTE TO REQUIRE LOGIN
+- using the Authorize action fi lter on a controller, on specific actions within a controller, or even globally for the entire application
+- ```authentication``` is verifying that users are who they say they are, using some form of login mechanism (username/password, OpenID, OAuth and so on— something that says “this is who I am”).
+- ```Authorization``` is verifying that they can do what they want to do with respect to your site. This is usually achieved using some type of role-based or claim-based system.
+- ```Without any parameters```, the Authorize attribute just requires that the user is logged in to the site in any capacity—in other words, it just ```forbids anonymous access```
+```
+[Authorize]       
+public ActionResult Buy(int id) {           
+  var album = GetAlbums().Single(a => a.AlbumId == id);
+  //Charge the user and ship the album!!!           
+  return View(album);       
+}
+```
+### USING URL AUTHORIZATION
+- A good approach to security is to always put the security check as close as possible 
+- This way, no matter how the user got to the resource, there will always be a security check
+- In this case, you don’t want to rely on routing and URL authorization to secure a controller; 
+- you really want to secure the controller itself. The AuthorizeAttribute serves this purpose
+-  With ```ASP.NET Web Forms``` (NOT MVC), you can secure a directory on your site by locking it down in the ```web.config```:
+```
+<location path= "Admin" allowOverride="false"> 
+  <system.web>  
+    <authorization>    
+      <allow roles= "Administrator" />    
+      <deny users="?" />  
+    </authorization> 
+  </system.web> 
+</location>
+```
+- ```With MVC``` that approach ```won’t work``` so well for two reasons
+- Requests no longer map to physical directories
+- There may be more than one way to route to the same controller
+### How AuthorizeAttribute Works with Forms Authentication and the AccountController 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
