@@ -963,10 +963,10 @@ public class Order : IValidatableObject {
         yield return new ValidationResult("The last name has too many words!", new []{"LastName"});       
       }   
   }   
-// rest of Order implementation and properties   
-// ... 
+  // rest of Order implementation and properties  // 
 }
 ```
+
 ### Display
 ```
 [Required]     
@@ -974,3 +974,46 @@ public class Order : IValidatableObject {
 [Display(Name="First Name"),  Order=15001] 
 public string FirstName { get; set; }
 ```
+### ScaffoldColumn
+- The ScaffoldColumn attribute hides a property from HTML helpers such as EditorForModel and DisplayForModel:
+```
+[ScaffoldColumn(false)]       
+public string Username { get; set; }
+```
+### DisplayFormat
+- The ApplyFormatInEditMode parameter is false by default
+- One reason ApplyFormatInEditMode is false by default is because the MVC model binder might not like to parse a value formatted for display.
+```
+[DisplayFormat(ApplyFormatInEditMode=true, DataFormatString="{0:c}")] 
+public decimal Total { get; set; }
+
+```
+### ReadOnly
+- the EditorForModel helper will still display an enabled input for the property, so only the model binder respects the ReadOnly attribute
+```
+[ReadOnly(true)]            
+public decimal Total { get; set; }
+```
+### DataType  
+- The DataType attribute enables you to provide the runtime with information about the specifi c purpose of a property.
+```
+[Required] 
+[DataType(DataType.Password)] 
+[Display(Name="Password")] 
+public string Password { get; set; }
+```
+### UIHint 
+- The UIHint attribute gives the ASP.NET MVC runtime the name of a template to use when rendering output with the templated helpers (such as DisplayFor and EditorFor).
+  
+### HiddenInput 
+- Hidden inputs are a great way to keep information in a form so the browser will send the data back to the server, but the user won’t be able to see or edit the data  
+- The HiddenInput attribute lives in the System.Web.Mvc namespace and tells the runtime to render an input element with a type of hidden. 
+  
+  
+  
+  
+  
+  
+  
+  
+ 
