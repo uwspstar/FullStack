@@ -949,5 +949,28 @@ public class MaxWordsAttribute : ValidationAttribute {
   } 
 }
 ```
-
-
+### IValidatableObject
+- A model object can announce this capability by implementing the IValidatableObject interface. 
+- The method the MVC runtime calls to perform validation is named Validate instead of IsValid
+- more important, the return type and parameters are different.
+- The return type for Validate is an IEnumerable<ValidationResult> instead of a single ValidationResult
+- No value parameter is passed to Validate because you are inside an instance method of the model and can refer to the property values directly.
+- the code uses the C# yield return syntax to build the enumerable return value
+```
+public class Order : IValidatableObject {   
+  public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)   {       
+      if (LastName != null && LastName.Split(' ').Length > 10)       {           
+        yield return new ValidationResult("The last name has too many words!", new []{"LastName"});       
+      }   
+  }   
+// rest of Order implementation and properties   
+// ... 
+}
+```
+### Display
+```
+[Required]     
+[StringLength(160, MinimumLength=3)] 
+[Display(Name="First Name"),  Order=15001] 
+public string FirstName { get; set; }
+```
