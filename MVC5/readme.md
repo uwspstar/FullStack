@@ -540,9 +540,89 @@ and determined that the best HTML element to use was the textarea element
 
 ```
 - Html.RadioButton
+```
+@Html.RadioButton("color", "red") 
+@Html.RadioButton("color", "blue", true) 
+@Html.RadioButton("color", "green")
 
 
+<input id="color" name="color" type="radio" value="red" /> 
+<input checked="checked" id="color" name="color" type="radio" value="blue" /> 
+<input id="color" name="color" type="radio" value="green" />
 
+@Html.RadioButtonFor(m => m.GenreId, "1") Rock 
+@Html.RadioButtonFor(m => m.GenreId, "2") Jazz 
+@Html.RadioButtonFor(m => m.GenreId, "3") Pop
+```
+- Html.CheckBox
+- You are probably wondering why the helper renders a hidden input in addition to the checkbox input. 
+- The helper renders two inputs because the HTML specifi cation indicates that a browser will submit a value for a checkbox only when the checkbox is on (selected). 
+```
+@Html.CheckBox("IsDiscounted")
+
+<input id="IsDiscounted" name="IsDiscounted" type="checkbox" value="true" /> 
+<input name="IsDiscounted" type="hidden" value="false" />
+```
+### RENDERING HELPERS
+- Rendering helpers produce links to other resources inside an application, 
+- and can also enable you to build those reusable pieces of UI known as partial views
+- Notice that you specify the controller name without the Controller suffi x. You never specify the controller’s type name.
+- ```Html.ActionLink``` and ```Html.RouteLink ```
+```
+@Html.ActionLink("Link Text", "AnotherAction")
+<a href="/Home/AnotherAction">LinkText</a>
+@Html.ActionLink("Link Text", "Index", "ShoppingCart")
+
+@Html.ActionLink("Edit link text", "Edit", "StoreManager", new {id=10720}, null)
+```
+- The RouteLink helper follows the same pattern as the ActionLink helper, but also accepts a route name and does not have arguments for controller name and action name. 
+```
+@Html.RouteLink("Link Text", new {action="AnotherAction"})
+```
+### URL Helpers
+- The URL helpers are similar to the HTML ActionLink and RouteLink helpers, 
+- but instead of returning HTML they build URLs and return the URLs as strings. 
+- There are three helpers:```Action```, ```Content```, ```RouteUrl```
+- Url.Action
+```
+<span> 
+  @Url.Action("Browse", "Store", new { genre = "Jazz" }, null)       
+</span>
+
+<span>           
+  /Store/Browse?genre=Jazz       
+</span>
+```
+- Url.Content
+- Using a tilde as the fi rst character in the parameter you pass to the Content helper lets the helper generate the proper URL no matter where your application is deployed 
+- (think of the tilde as representing the application root directory). 
+- In ASP.NET MVC 5, which uses Razor version 3, the tilde character is resolved automatically 
+- when it appears in the src attribute for script, style, and img elements.  
+```
+<script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"       
+  type="text/javascript">
+</script
+
+<script src="~/Scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
+
+```
+###  ```Html.Partial``` and ```Html.RenderPartial```
+- In general, you should ```prefer Partial``` to RenderPartial because Partial is more convenient
+- The Partial helper renders a partial view into a string.
+- Partial has four overloads
+```
+public void Partial(string partialViewName); 
+public void Partial(string partialViewName, object model); 
+public void Partial(string partialViewName, ViewDataDictionary viewData); 
+public void Partial(string partialViewName, object model, ViewDataDictionary viewData);
+```
+- The RenderPartial helper is similar to Partial, but RenderPartial writes directly to the response output stream instead of returning a string.
+- For this reason, you must place RenderPartial inside a code block instead of a code expression. 
+```
+@Html.Partial("AlbumDisplay")
+@{Html.RenderPartial("AlbumDisplay "); } @Html.Partial("AlbumDisplay ")
+
+```
 
 
 
