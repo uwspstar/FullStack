@@ -807,11 +807,147 @@ public string LastName { get; set; }
 
 ```
 - The preceding code assumes you have a resource file in the project named ErrorMessages.resx with the appropriate entries inside (LastNameRequired and LastNameTooLong). 
+-  For ASP.NET to use localized resource files, you must have the UICulture property of the current thread set to the proper culture
+- https://docs.microsoft.com/en-us/previous-versions/bz9tc508(v=vs.140)?redirectedfrom=MSDN
 
+### Looking Behind the Annotation Curtain Looking Behind the Annotation Curtain
+- The validation features of ASP.NET MVC are part of a coordinated system involving model binders, model metadata, model validators, and model state
+### Validation and Model Binding
+- By default, the ASP.NET MVC framework executes validation logic during model binding. 
+```
+[HttpPost] public ActionResult Create(Album album) {   
+// the album parameter was created via model binding   
+// .. 
+}
 
+[HttpPost] public ActionResult Edit(int id, FormCollection collection) {   
+var album = storeDB.Albums.Find(id);   
+if(TryUpdateModel(album))   {      // ...   } 
+}
 
+```
+- After the model binder is fi nished updating the model properties with new values, the model binder uses the current model metadata and ultimately obtains all the validators for the model.
+- The MVC runtime provides a validator to work with data annotations (the DataAnnotationsModelValidator). 
+- This model validator can fi nd all the validation attributes and execute the validation logic inside. 
+- The model binder catches all the failed validation rules and places them into model state.
 
+### Validation and Model State
+-  If any errors exist in model state, ModelState.IsValid returns false.
+```
+ModelState.IsValid == false 
+ModelState.IsValidField("LastName") == false 
+ModelState["LastName"].Errors.Count > 0
 
+var lastNameErrorMessage = ModelState["LastName"].Errors[0].ErrorMessage;
 
+@Html.ValidationMessageFor(m => m.LastName)
+
+```
+### Controller Actions and Validation Errors 
+```
+[HttpPost] public ActionResult AddressAndPayment(Order newOrder) {   
+  if (ModelState.IsValid)   {                    
+      newOrder.Username = User.Identity.Name;       
+      newOrder.OrderDate = DateTime.Now;
+      storeDB.Orders.Add(newOrder);       
+      storeDB.SaveChanges();
+      // Process the order       
+      var cart = ShoppingCart.GetCart(this);       
+      cart.CreateOrder(newOrder); 
+      
+      return RedirectToAction("Complete", new { id = newOrder.OrderId });   
+    }   
+    // Invalid -- redisplay with errors   
+    return View(newOrder);      
+  }
+```
+-  You could also implement the action using an explicit call to UpdateModel or TryUpdateModel.
+```
+[HttpPost] public ActionResult AddressAndPayment(FormCollection collection) {   
+  var newOrder = new Order();   
+  UpdateModel(newOrder);  
+  
+  if (ModelState.IsValid)   {                    
+    newOrder.Username = User.Identity.Name;       
+    newOrder.OrderDate = DateTime.Now;       
+    storeDB.Orders.Add(newOrder);       
+    storeDB.SaveChanges();
+    // Process the order       
+    var cart = ShoppingCart.GetCart(this);       
+    art.CreateOrder(newOrder);                   
+    return RedirectToAction("Complete", new { id = newOrder.OrderId });   
+   }   
+  // Invalid -- redisplay with errors   
+  return View(newOrder);     
+}
+
+[HttpPost] public ActionResult AddressAndPayment(FormCollection collection) {   
+  var newOrder = new Order();   
+  if(TryUpdateModel(newOrder)) {                    
+    newOrder.Username = User.Identity.Name;       
+    newOrder.OrderDate = DateTime.Now;       
+    storeDB.Orders.Add(newOrder);       
+    storeDB.SaveChanges();
+    // Process the order       
+    var cart = ShoppingCart.GetCart(this);       
+    art.CreateOrder(newOrder);                   
+    return RedirectToAction("Complete", new { id = newOrder.OrderId });   
+   }   
+  // Invalid -- redisplay with errors   
+  return View(newOrder);     
+}
+
+```
+### CUSTOM VALIDATION LOGIC
+- Packaging validation logic into a custom data annotation
+- Packaging validation logic into a model object itself
+- All the validation annotations (such as Required and Range) ultimately derive from the ValidationAttribute base class.
+- The base class is abstract and lives in the System .ComponentModel.DataAnnotations namespace
+- Your validation logic will also live in a class deriving from ValidationAttribute:
+```
+using System.ComponentModel.DataAnnotations;
+namespace MvcMusicStore.Infrastructure {   
+  public class MaxWordsAttribute : ValidationAttribute   
+  { ...  } 
+}
+```
+- To implement the validation logic, you need to override one of the IsValid methods provided by the base class.
+-  Overriding the IsValid version taking a ValidationContext parameter provides more information to use inside the IsValid method 
+- (the ValidationContext parameter gives you access to the model type, model object instance, and friendly display name of the property you are validating, among other pieces of information).
+```
+public class MaxWordsAttribute : ValidationAttribute {    
+  public MaxWordsAttribute(int maxWords)   {       
+    _maxWords = maxWords;   
+  } 
+  protected override ValidationResult IsValid (object value, ValidationContext validationContext)   {   
+    if (value != null) {           
+      var valueAsString = value.ToString();           
+      if (valueAsString.Split(' ').Length > _maxWords) {               
+        return new ValidationResult("Too many words!");           
+      }       
+    }
+    return ValidationResult.Success;   
+  } 
+}
+```
+- The problem with the last block of code is the hard-coded error message
+```
+public class MaxWordsAttribute : ValidationAttribute {    
+  public MaxWordsAttribute(int maxWords) :base("{0} has too many words.") 
+  {       
+    _maxWords = maxWords;   
+  } 
+  protected override ValidationResult IsValid (object value, ValidationContext validationContext)   {   
+    if (value != null) {           
+      var valueAsString = value.ToString();           
+      if (valueAsString.Split(' ').Length > _maxWords) { 
+        var errorMessage = FormatErrorMessage(validationContext.DisplayName);
+        return new ValidationResult(errorMessage);           
+      }       
+    }
+    return ValidationResult.Success;   
+  } 
+}
+```
 
 
