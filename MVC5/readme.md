@@ -453,4 +453,30 @@ public ActionResult Edit(int id) {
 @Html.TextBox("Album.Price")
 <input id="Album_Price" name="Album.Price" type="text" value="11" />
 
+
+@{   ViewBag.Title = "Edit - " + Model.Title; }
+
 ```
+
+### Strongly Typed Helpers
+- Notice that the strongly typed helpers have the same names as the previous helpers you’ve been using, but with a For suffi x.
+```
+@model MvcMusicStore.Models.Album
+
+@using (Html.BeginForm()) {   @Html.ValidationSummary(excludePropertyErrors: true)   
+<fieldset>       
+  <legend>Edit Album</legend>       
+  <p>           
+    @Html.LabelFor(m => m.GenreId)                 
+    @Html.DropDownListFor(m => m.GenreId, ViewBag.Genres as SelectList)       
+  </p>                   
+  <p>                               
+    @Html.TextBoxFor(m => m.Title)                   
+    @Html.ValidationMessageFor(m => m.Title)       
+  </p>       
+  <input type="submit" value="Save" />   
+</fieldset> }
+
+
+```
+### Helpers and Model Metadata
