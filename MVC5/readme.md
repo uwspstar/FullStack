@@ -410,8 +410,47 @@ public ActionResult Edit(int id) {
    return View(album); 
 }
 ```
-  
-  
-  
-  
-  
+- Html.ValidationMessag 
+```
+[HttpPost] 
+public ActionResult Edit(int id, FormCollection collection) {   
+    var album = storeDB.Albums.Find(id);
+    ModelState.AddModelError("Title", "What a terrible name!");
+    return View(album); 
+}
+
+
+@Html.ValidationMessage("Title")
+
+<span class="field-validation-error" 
+  data-valmsg-for="Title"     
+  data-valmsg-replace="true">What a terrible name! 
+</span>
+
+@Html.ValidationMessage("Title", "Something is wrong with your title")
+
+<span class="field-validation-error" data-valmsg-for="Title"    data-valmsg-replace="false">
+Something is wrong with your title
+
+```
+### Helpers, Models, and View Data  
+- all values in the ViewBag object are also available through ViewData
+```
+public ActionResult Edit(int id) {   
+  ViewBag.Price = 10.0;   
+  return View(); 
+}
+
+@Html.TextBox("Price")
+<input id="Price" name="Price" type="text" value="10" />
+
+
+public ActionResult Edit(int id) {   
+  ViewBag.Album = new Album {Price = 11);   
+  return View(); 
+}
+
+@Html.TextBox("Album.Price")
+<input id="Album_Price" name="Album.Price" type="text" value="11" />
+
+```
