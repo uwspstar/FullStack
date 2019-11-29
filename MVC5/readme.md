@@ -360,7 +360,15 @@ but all HTML helpers convert an underscore in a property name to a dash when ren
 - Html.ValidationSummary - displays an unordered list of all validation errors in the ModelState dictionary. 
 ```
 Assume you have the following code somewhere in the controller action rendering the edit view:
-ModelState.AddModelError("", "This is all wrong!"); ModelState.AddModelError("Title", "What a terrible name!");
+ModelState.AddModelError("", "This is all wrong!"); 
+ModelState.AddModelError("Title", "What a terrible name!");
+
+<div class="validation-summary-errors">   
+  <ul>       
+    <li>This is all wrong!</li>   
+  </ul> 
+</div>
+
 ```
   
   
