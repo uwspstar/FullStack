@@ -620,23 +620,81 @@ public void Partial(string partialViewName, object model, ViewDataDictionary vie
 - For this reason, you must place RenderPartial inside a code block instead of a code expression. 
 ```
 @Html.Partial("AlbumDisplay")
-@{Html.RenderPartial("AlbumDisplay "); } @Html.Partial("AlbumDisplay ")
+
+@{Html.RenderPartial("AlbumDisplay "); } 
+ 
+```
+### Html.Action and Html.RenderAction 
+- the difference between Action and RenderAction is that RenderAction writes directly to the response (which can bring a slight effi ciency gain). 
+- Action and RenderAction are similar to the Partial and RenderPartial helpers
+- The Partial helper typically helps a view render a portion of a view’s model using view markup in a separate file.
+- Action, on the other hand, executes a separate controller action and displays the results. 
+- Action offers more fl exibility and reuse because the controller action can build a different model and make use of a separate controller context.
+```
+public class MyController : Controller {  
+public ActionResult Index() {   
+  return View();  
+}
+
+[ChildActionOnly]  
+public ActionResult Menu() {    
+  var menu = GetMenuFromSomewhere();    
+  return PartialView(menu);  
+  } 
+}
+
+The Menu action builds a menu model and returns a partial view with just the menu:
+@model Menu <ul> 
+@foreach (var item in Model.MenuItem) {  
+  <li>@item.Text</li> 
+} 
+</ul>
+
+In your Index.cshtml view, you can now call into the Menu action to display the menu:
+
+<html> 
+<head><title>Index with Menu</title></head> 
+<body>   
+  @Html.Action("Menu")   
+  <h1>Welcome to the Index View</h1> 
+</body> 
+</html>
+```
+- Notice that the Menu action is marked with a ```ChildActionOnlyAttribute```. 
+- ```The attribute prevents the runtime from invoking the action directly via a URL```. 
+- Instead, only a call to Action or RenderAction can invoke a child action. 
+- The ChildActionOnlyAttribute isn’t required, but is generally ```recommended``` for child actions.
+
+### Passing Values to RenderAction
+```
+// M-odle
+public class MenuOptions {   
+  public int Width { get; set; }   
+  public int Height { get; set; } 
+} 
+
+// C-onstroller
+[ChildActionOnly] 
+public ActionResult Menu(MenuOptions options) {   
+  return PartialView(options); 
+}
+
+// V-iew
+@Html.Action("Menu", new {   
+  options = new MenuOptions { Width=400, Height=500 } 
+})
 
 ```
+- Another thing to note is that RenderAction honors the ActionName attribute when calling an action name.
+```
+// you’ll need to make sure to use CoolMenu as the action name and not Menu when calling RenderAction:
 
-
-
-
-
-
-
-
-
-
-
-
-
-
+[ChildActionOnly] 
+[ActionName("CoolMenu")] 
+public ActionResult Menu(MenuOptions options) {   
+  return PartialView(options); 
+}
+```
 
 
 
