@@ -336,6 +336,7 @@ but all HTML helpers convert an underscore in a property name to a dash when ren
 - The Html property is of type System.Web.Mvc.HtmlHelper<T> where T is a generic type parameter representing the type of the model for the view (dynamic by default). 
   
 ### System.Web.Mvc.HtmlHelper<T>
+  
 -  The class provides a few instance methods you can invoke in a view, such as EnableClientValidation
 - AntiForgeryToken is an instance method, 
 - BeginForm is an extension method
@@ -370,10 +371,45 @@ ModelState.AddModelError("Title", "What a terrible name!");
 </div>
 
 ```
-  
-  
-  
-  
+- Html.TextBox and Html.TextArea
+```
+@Html.TextBox("Title", Model.Title)
+<input id="Title" name="Title" type="text"      value="For Those About To Rock We Salute You" />
+
+@Html.TextArea("text", "hello <br/> world")
+<textarea cols="20" id="text" name="text" rows="2">hello &lt;br /&gt; world </textarea>
+
+@Html.TextArea("text", "hello <br /> world", 10, 80, null)
+<textarea cols="80" id="text" name="text" rows="10">hello &lt;br /&gt; world </textarea>
+```
+- Html.Label
+```
+Html.Label(“GenreId”) 
+<label for="GenreId">Genre</label>
+```
+- Html.DropDownList and Html.ListBox  
+```
+public ActionResult Edit(int id) {                                          
+  var album = storeDB.Albums.Single(a => a.AlbumId == id);
+   ViewBag.Genres = new SelectList(storeDB.Genres.OrderBy(g => g.Name),
+                                    "GenreId", "Name", album.GenreId);   
+    return View(album); 
+}
+
+
+public ActionResult Edit(int id) {                                          
+  var album = storeDB.Albums.Single(a => a.AlbumId == id);
+  ViewBag.Genres =       storeDB.Genres              
+   .OrderBy(g => g.Name)              
+   .AsEnumerable()              
+   .Select(g => new SelectListItem { 
+     Text = g.Name,                               
+     Value = g.GenreId.ToString(),                               
+     Selected = album.GenreId == g.GenreId                            
+   });   
+   return View(album); 
+}
+```
   
   
   
