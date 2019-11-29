@@ -1,3 +1,7 @@
+# Professional ASP.NET MVC 5 1st Edition
+- by Jon Galloway  (Author), Brad Wilson (Author), K. Scott Allen (Author), David Matson (Author)
+- https://www.amazon.com/Professional-ASP-NET-MVC-Jon-Galloway/dp/1118794753/
+
 ### Basic
 - In general use, controllers are called via a URL, they execute your custom code, and they return a view
 - usually return the appropriate ActionResult, which handles things such as HTTP status codes, calling the View templating system, and so on.
@@ -459,7 +463,7 @@ public ActionResult Edit(int id) {
 ```
 
 ### Strongly Typed Helpers
-- Notice that the strongly typed helpers have the same names as the previous helpers you’ve been using, but with a For suffi x.
+- Notice that the strongly typed helpers have the same names as the previous helpers you’ve been using, but with a ```For suffi x```.
 ```
 @model MvcMusicStore.Models.Album
 
@@ -480,3 +484,83 @@ public ActionResult Edit(int id) {
 
 ```
 ### Helpers and Model Metadata
+- Helpers do more than just look up data inside ViewData; they also take advantage of available model metadata
+- The helper asks the runtime whether any model metadata is available for GenreId, and the runtime provides information from the DisplayName attribute decorating
+```
+@Html.Label("GenreId")
+<label for="GenreId">Genre</label>
+
+[DisplayName("Genre")] 
+public int GenreId    { get; set; }
+```
+
+### Templated Helpers
+- The templated helpers in ASP.NET MVC build HTML using metadata and a template.
+- The metadata includes information about a model value (its name and type), as well as model metadata (added through data annotations or a custom provider).
+- The templated helpers are ```Html.Display``` and ```Html.Editor```,
+```
+the Html.TextBoxFor helper renders the following HTML for an album’s Title property:
+<input id="Title" name="Title" type="text"      value="For Those About To Rock We Salute You" />
+
+Instead of using Html.TextBoxFor, you can switch to using the following code:
+@Html.EditorFor(m => m.Title
+
+[Required(ErrorMessage = "An Album Title is required")] 
+[StringLength(160)] 
+[DataType(DataType.MultilineText)] 
+public string   Title      { get; set; }
+
+<textarea class="text-box multi-line" id="Title" name="Title">   Let There Be Rock </textarea>
+
+Because you asked for an editor in the generic sense, the EditorFor helper looked at the metadata 
+and determined that the best HTML element to use was the textarea element
+```
+- The DisplayForModel and EditorForModel helpers build the HTML for an entire model object
+
+### Helpers and ModelState
+- ModelState is a byproduct of model binding and holds all validation errors detected during model binding. 
+- Model state also holds the raw values the user submits to update a model.
+- Helpers used to render form fi elds automatically look up their current value in the ModelState dictionary. 
+- The helpers use the name expression as a key into the ModelState dictionary. 
+- If an attempted value exists in ModelState, the helper uses the value from ModelState ```instead of``` a value in view data.
+- The ModelState lookup allows bad values to preserve themselves after model binding fails
+
+### OTHER INPUT HELPERS
+- Html.Hidden
+```
+@Html.Hidden("wizardStep", "1")
+<input id="wizardStep" name="wizardStep" type="hidden" value="1" />
+@Html.HiddenFor(m => m.WizardStep)
+```
+- Html.Password
+```
+@Html.Password("UserPassword")
+<input id="UserPassword" name="UserPassword" type="password" value="" />
+@Html.PasswordFor(m => m.UserPassword)
+
+```
+- Html.RadioButton
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
