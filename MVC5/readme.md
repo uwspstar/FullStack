@@ -276,7 +276,6 @@ if you made your search form issue a POST instead of a GET.
   <input type="submit" value="Search" /> 
 }
 
-
 ```
 ### BeginForm  & GetVirtualPath
 ```
@@ -299,10 +298,6 @@ If you did all this without an HTML helper, you would have to write all the foll
 The last example demonstrates the essence of HTML helpers. 
 They don’t take away your control, 
 but they do save you from writing lots of code.
-
-
-
-
 ```
 ### HTML HELPERS
 - HTML helpers are methods you can invoke on the Html property of a view
@@ -317,7 +312,7 @@ but they do save you from writing lots of code.
 @{Html.EndForm();}
 ```
 - All the helpers that output model values will HTML encode the values before renderin
--  Encoding by default helps you to avoid cross-site scripting attacks (XSS). 
+- Encoding by default helps you to avoid cross-site scripting attacks (XSS). 
 ```
 @Html.TextArea("text", "hello <br/> world")
 
@@ -348,8 +343,8 @@ but all HTML helpers convert an underscore in a property name to a dash when ren
   -  First, extension methods in C# are available only when the namespace of the extension method is in scope
 - All MVC’s extension methods for HtmlHelper live in the System.Web.Mvc.Html namespace 
 -  If you don’t like the built-in extension methods, you can remove this namespace and build your own.
-- Html.BeginForm 
-- Html.ValidationSummary - displays an unordered list of all validation errors in the ModelState dictionary. 
+- ```Html.BeginForm``` 
+- ```Html.ValidationSummary``` - displays an unordered list of all validation errors in the ModelState dictionary. 
 ```
   @using (Html.BeginForm()) {   
     @Html.ValidationSummary(excludePropertyErrors: true)   
@@ -362,7 +357,7 @@ but all HTML helpers convert an underscore in a property name to a dash when ren
  }
 
 ```
-- Html.ValidationSummary - displays an unordered list of all validation errors in the ModelState dictionary. 
+- ```Html.ValidationSummary``` - displays an unordered list of all validation errors in the ModelState dictionary. 
 ```
 Assume you have the following code somewhere in the controller action rendering the edit view:
 ModelState.AddModelError("", "This is all wrong!"); 
@@ -375,7 +370,7 @@ ModelState.AddModelError("Title", "What a terrible name!");
 </div>
 
 ```
-- Html.TextBox and Html.TextArea
+- ```Html.TextBox and Html.TextArea```
 ```
 @Html.TextBox("Title", Model.Title)
 <input id="Title" name="Title" type="text"      value="For Those About To Rock We Salute You" />
@@ -386,12 +381,12 @@ ModelState.AddModelError("Title", "What a terrible name!");
 @Html.TextArea("text", "hello <br /> world", 10, 80, null)
 <textarea cols="80" id="text" name="text" rows="10">hello &lt;br /&gt; world </textarea>
 ```
-- Html.Label
+- ```Html.Label```
 ```
 Html.Label(“GenreId”) 
 <label for="GenreId">Genre</label>
 ```
-- Html.DropDownList and Html.ListBox  
+- ```Html.DropDownList and Html.ListBox```  
 ```
 public ActionResult Edit(int id) {                                          
   var album = storeDB.Albums.Single(a => a.AlbumId == id);
@@ -414,7 +409,7 @@ public ActionResult Edit(int id) {
    return View(album); 
 }
 ```
-- Html.ValidationMessag 
+- ```Html.ValidationMessag``` 
 ```
 [HttpPost] 
 public ActionResult Edit(int id, FormCollection collection) {   
@@ -495,7 +490,7 @@ public int GenreId    { get; set; }
 ```
 
 ### Templated Helpers
-- The templated helpers in ASP.NET MVC build HTML using metadata and a template.
+- The ```templated helpers``` in ASP.NET MVC build HTML using metadata and a template.
 - The metadata includes information about a model value (its name and type), as well as model metadata (added through data annotations or a custom provider).
 - The templated helpers are ```Html.Display``` and ```Html.Editor```,
 ```
@@ -518,7 +513,7 @@ and determined that the best HTML element to use was the textarea element
 - The DisplayForModel and EditorForModel helpers build the HTML for an entire model object
 
 ### Helpers and ModelState
-- ModelState is a byproduct of model binding and holds all validation errors detected during model binding. 
+- ```ModelState``` is a byproduct of model binding and holds all validation errors detected during model binding. 
 - Model state also holds the raw values the user submits to update a model.
 - Helpers used to render form fi elds automatically look up their current value in the ModelState dictionary. 
 - The helpers use the name expression as a key into the ModelState dictionary. 
@@ -526,20 +521,20 @@ and determined that the best HTML element to use was the textarea element
 - The ModelState lookup allows bad values to preserve themselves after model binding fails
 
 ### OTHER INPUT HELPERS
-- Html.Hidden
+- ```Html.Hidden```
 ```
 @Html.Hidden("wizardStep", "1")
 <input id="wizardStep" name="wizardStep" type="hidden" value="1" />
 @Html.HiddenFor(m => m.WizardStep)
 ```
-- Html.Password
+- ```Html.Password```
 ```
 @Html.Password("UserPassword")
 <input id="UserPassword" name="UserPassword" type="password" value="" />
 @Html.PasswordFor(m => m.UserPassword)
 
 ```
-- Html.RadioButton
+- ```Html.RadioButton```
 ```
 @Html.RadioButton("color", "red") 
 @Html.RadioButton("color", "blue", true) 
@@ -554,7 +549,7 @@ and determined that the best HTML element to use was the textarea element
 @Html.RadioButtonFor(m => m.GenreId, "2") Jazz 
 @Html.RadioButtonFor(m => m.GenreId, "3") Pop
 ```
-- Html.CheckBox
+- ```Html.CheckBox```
 - You are probably wondering why the helper renders a hidden input in addition to the checkbox input. 
 - The helper renders two inputs because the HTML specifi cation indicates that a browser will submit a value for a checkbox only when the checkbox is on (selected). 
 ```
@@ -583,7 +578,7 @@ and determined that the best HTML element to use was the textarea element
 - The URL helpers are similar to the HTML ActionLink and RouteLink helpers, 
 - but instead of returning HTML they build URLs and return the URLs as strings. 
 - There are three helpers:```Action```, ```Content```, ```RouteUrl```
-- Url.Action
+- ```Url.Action```
 ```
 <span> 
   @Url.Action("Browse", "Store", new { genre = "Jazz" }, null)       
@@ -593,7 +588,7 @@ and determined that the best HTML element to use was the textarea element
   /Store/Browse?genre=Jazz       
 </span>
 ```
-- Url.Content
+- ```Url.Content```
 - Using a tilde as the fi rst character in the parameter you pass to the Content helper lets the helper generate the proper URL no matter where your application is deployed 
 - (think of the tilde as representing the application root directory). 
 - In ASP.NET MVC 5, which uses Razor version 3, the tilde character is resolved automatically 
@@ -695,6 +690,124 @@ public ActionResult Menu(MenuOptions options) {
   return PartialView(options); 
 }
 ```
+### Data Annotations and Validation
+- Using data annotations for validation
+- Creating your own validation logic
+- Using model metadata annotations
+- When you talk about validation in an MVC design pattern context, you are primarily ```focusing on validating model value```
+- MVC validation features can help you validate model values. 
+- The validation features are extensible
+-  a declarative style of validation using attributes known as ```data annotations```.
+### ANNOTATING ORDERS FOR VALIDATION
+- The problem is that customers can leave nearly the entire form blank and click the Submit Order button at the bottom of the form.
+- You’ll fi x this problem using data annotations.
+### Using Validation Annotations 
+- Attribute-based validation ensures that your client- and server-side validation rules are kept in sync, because they’re declared in only one place.   
+- Data annotations are attributes you can find in the ```System.ComponentModel.DataAnnotations``` namespace
+- These attributes provide ```server-side``` validation, and the framework also supports ```client-side``` validation when you use one of the attributes on a model property. 
+- This client-server synchronized validation is a pretty big deal—enforcing the same rules in JavaScript and on the server is important. 
+- ```Required```
+```
+[Required] 
+public string FirstName { get; set; }
+```
+- Like all the built-in validation attributes, the ```Required``` attribute delivers both server-side and clientside validation logic 
+- although internally, it is another, different component in the MVC framework that delivers the client-side validation logic for the attribute through a validation adapter design
+- However, even if customers do not have JavaScript enabled in their browser, the validation logic will catch an empty name property on the server, and they’ll see the exact same error message. 
+
+- ```StringLength```
+```
+[Required] 
+[StringLength(160)]
+public string FirstName { get; set; }
+
+// MinimumLength is an optional, named parameter you can use to specify the minimum length for a string.
+[Required] 
+[StringLength(160, MinimumLength=3)] 
+public string FirstName { get; set; }
+
+```
+- ```RegularExpression```
+- Regular expressions are an effi cient and terse means to enforce the shape and contents of a string value.
+```
+[RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}")] public string Email { get; set; }
+```
+- ```Range```
+```
+[Range(35,44)] 
+public int Age { get; set;}
+
+// The Range attribute can work with integers and doubles, 
+and another overloaded version of the constructor takes a Type parameter 
+and two strings (which can allow you to add a range to date and decimal properties, for example).
+
+[Range(typeof(decimal), "0.00", "49.99")] 
+public decimal Price { get; set; }
+
+```
+- ```Compare```
+```
+[RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}")] 
+public string Email { get; set; }
+
+[Compare("Email")] 
+public string EmailConfirm { get; set; }
+
+```
+- ```Remote```
+- Remote only exists because data annotations are extensible
+- The ASP.NET MVC framework adds an additional Remote validation attribute. 
+- This attribute is in the ```System.Web.Mvc``` namespace
+- The Remote attribute enables you to perform ```client-side``` validation with a ```server callback```.
+```
+[Remote("CheckUserName", "Account")] 
+public string UserName { get; set; }
+// With the Remote attribute you can send the UserName value to the server, 
+// and compare the value against the values in the database.
+```
+- Inside the attribute you can set the name of the action, and the name of the controller the client code should call. 
+- The client code will send the value the user entered for the UserName property automatically, and an overload of the attribute constructor allows you to specify additional fields to send to the server.
+```
+public JsonResult CheckUserName(string username) {   
+  var result = Membership.FindUsersByName(username).Count == 0;   
+  return Json(result, JsonRequestBehavior.AllowGet); 
+}
+// The controller action will take a parameter with the name of the property to validate 
+// and return a true or false wrapped in JavaScript Object Notation (JSON).
+
+```
+### Custom Error Messages and Localization
+```
+[RegularExpression(@"[A-Za-z0-9._%+-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}",                   
+ErrorMessage="Email doesn't look like a valid email address.")] 
+public string Email { get; set; }
+```
+- ErrorMessage is the name of the parameter in every validation attribute.
+```
+[Required(ErrorMessage="Your last name is required")] 
+[StringLength(160, ErrorMessage="Your last name is too long")] 
+public string LastName { get; set; }
+```
+- The custom error message can also have a single format item in the string. 
+```
+[Required(ErrorMessage="Your {0} is required.")] 
+[StringLength(160, ErrorMessage="{0} is too long.")]
+public string LastName { get; set; }
+
+```
+- In applications built for international markets, the ```hard-coded error messages``` are a ```bad idea```. 
+- Fortunately, all the validation attributes also allow you to specify a resource type and a resource name for localized error messages:
+```
+[Required(ErrorMessageResourceType=typeof(ErrorMessages),         
+ErrorMessageResourceName="LastNameRequired")] 
+
+[StringLength(160, ErrorMessageResourceType = typeof(ErrorMessages),
+ErrorMessageResourceName = "LastNameTooLong")] 
+public string LastName { get; set; }
+
+```
+- The preceding code assumes you have a resource file in the project named ErrorMessages.resx with the appropriate entries inside (LastNameRequired and LastNameTooLong). 
+
 
 
 
