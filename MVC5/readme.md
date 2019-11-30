@@ -1057,8 +1057,23 @@ public ActionResult Buy(int id) {
 - Requests no longer map to physical directories
 - There may be more than one way to route to the same controller
 ### How AuthorizeAttribute Works with Forms Authentication and the AccountController 
+- The ASP.NET MVC template with Individual User Accounts authentication includes an AccountController that implements support for both local accounts and external accounts managed by OpenID and OAuth authentication
+- The AuthorizeAttribute is an authorization fi lter, which means that it executes before the associated controller action.
+- The AuthorizeAttribute performs its main work in the OnAuthorization method, which is a standard method defi ned in the IAuthorizationFilter interface. 
+```
+IPrincipal user = httpContext.User; 
+if (!user.Identity.IsAuthenticated) {       
+  return false; 
+}
+if (_usersSplit.Length > 0 &&  !_usersSplit.Contains(user.Identity.Name, StringComparer.OrdinalIgnoreCase)) {       
+  return false; 
+}
+if (_rolesSplit.Length > 0 && !_rolesSplit.Any(user.IsInRole)) {       
+  return false; 
+}
+return true;
 
-
+```
 
 
 
