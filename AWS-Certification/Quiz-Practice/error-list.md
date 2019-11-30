@@ -10,3 +10,9 @@ but has a long retrieval time.
 RRS has effectively been deprecated. 
 It still exists but is not a service that AWS want to sell anymore.
 ```
+- You work for a health insurance company that amasses a large number of patients' health records. Each record will be used once when assessing a customer, and will then need to be securely stored for a period of 7 years. In some rare cases, you may need to retrieve this data within 24 hours of a claim being lodged. Given these requirements, which type of AWS storage would deliver the least expensive solution?
+```
+The recovery rate is a key decider. 
+The record shortage must be; safe, durable, low cost, and the recovery can be slow. 
+All features of Glacier
+```
