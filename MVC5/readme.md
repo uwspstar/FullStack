@@ -1223,8 +1223,23 @@ public partial class Startup {
 }
 
 ```
+### Conﬁ guring OAuth Providers
+- the MVC 5 OAuth middleware does not depend on an external OAuth implementation.
+-  http://go.microsoft.com/fwlink/?LinkId=301864
+- Facebook authentication using the following call in Startup.Auth.cs:
+```
+public partial class Startup {       
+  public void ConfigureAuth(IAppBuilder app) {             
+    // Use a cookie to temporarily store information about              
+    // a user logging in with a third party login provider                            
+    app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+    app.UseFacebookAuthentication(                
+      appId: "123456789012",                
+      appSecret: "abcdefabcdefdecafbad");       
+  } 
+}
 
-
+```
 
 
 
