@@ -1060,12 +1060,16 @@ public ActionResult Buy(int id) {
 - The ASP.NET MVC template with Individual User Accounts authentication includes an AccountController that implements support for both local accounts and external accounts managed by OpenID and OAuth authentication
 - The AuthorizeAttribute is an authorization fi lter, which means that it executes before the associated controller action.
 - The AuthorizeAttribute performs its main work in the OnAuthorization method, which is a standard method defi ned in the IAuthorizationFilter interface. 
+- If the user fails authorization, an HttpUnauthorizedResult action result is returned, which produces an HTTP 401 (Unauthorized) status code.
+- A ```401``` status code is an entirely accurate response to an unauthorized request, but it’s not entirely friendly. 
+- Most websites don’t return a raw HTTP ```401``` response for the browser to handle. 
+- Instead, they commonly use an HTTP ```302``` to redirect the user to the login page in order to authenticate a user with rights to view the original page
 ```
 IPrincipal user = httpContext.User; 
 if (!user.Identity.IsAuthenticated) {       
   return false; 
 }
-if (_usersSplit.Length > 0 &&  !_usersSplit.Contains(user.Identity.Name, StringComparer.OrdinalIgnoreCase)) {       
+if (_usersSplit.Length > 0 &&  !_usersSplit.Contains(user.Identity.Name, StringComparer.OrdinalIgnoreCase)) {
   return false; 
 }
 if (_rolesSplit.Length > 0 && !_rolesSplit.Any(user.IsInRole)) {       
@@ -1074,10 +1078,151 @@ if (_rolesSplit.Length > 0 && !_rolesSplit.Any(user.IsInRole)) {
 return true;
 
 ```
+-  When you’re using cookie-based authentication (the default for an ASP.NET MVC application using the individual user accounts such as username / password or OAuth login), ASP.NET MVC handles the response conversion from a 401 to a 302 redirect for you automatically.
+- In ASP.NET MVC 5, the 401 to 302 redirection process is handled by OWIN (Open Web Interface for .NET) middleware components
+- Cookie-based authentication is handled by the CookieAuthenticationHandler (found in the Microsoft. Owin.Cookies namespace).
+- http://brockallen.com/2013/08/07/owin-authentication-middleware-architecture/
+```
+In previous versions of ASP.NET MVC, 
+this redirection is handled by the FormsAuthenticationModule OnLeave method, 
+which instead redirects to the application login page defi ned in the application’s web.config, 
+as shown here:
+<authentication mode="Forms"> 
+  <forms loginUrl="~/Account/LogOn" timeout="2880" /> 
+</authentication>
+This redirection address includes a return URL, 
+so after completing login successfully, 
+the Account LogOn action redirects to the originally requested page.
+```
+- The AuthorizeAttribute is a standard authorization attribute, implementing IAuthorizeFilter. You can create your own authorization fi lters.
+### Windows Authentication
+-  Windows Authentication option, authentication is effectively handled outside of the application by the web browser, Windows, and IIS. 
+- Startup.Auth.cs is not included in the project, and no authentication middleware is confi gured.
+-  To confi gure Windows Authentication, this template includes the following line in ```web .config```:
+```
+<authentication mode="Windows" />
+```
+### Securing Entire Controllers 
+```
+[Authorize] public class CheckoutController : Controller
+```
+### Securing Your Entire Application Using a Global Authorization Filter 
+- requiring authorization by default and making exceptions in the few places where anonymous access is allowed
+- configuring the AuthorizeAttribute as a global filter and allowing anonymous access to specific controllers or methods using the AllowAnonymous attribute is a good idea
+- To register the AuthorizeAttribute as a global fi lter, add it to the global fi lters collection in the RegisterGlobalFilters method, located in \App_Start\FilterConfig.cs:
+```
+public static void RegisterGlobalFilters(GlobalFilterCollection filters) {
+  filters.Add(new System.Web.Mvc.AuthorizeAttribute());    
+  filters.Add(new HandleErrorAttribute()); 
+}
+```
+- GLOBAL AUTHORIZATION IS GLOBAL ONLY TO MVC
+- Keep in mind that a global fi lter applies only to MVC controller actions. It doesn’t secure Web Forms, static content, or other ASP.NET handlers.
+- MVC 4 added a new AllowAnonymous attribute. 
+- You can place AllowAnonymous on any methods (or entire controllers) to opt out of authorization as desired.
+```
+// // GET: /Account/Login 
+[AllowAnonymous] 
+public ActionResult Login(string returnUrl) {
+  ViewBag.ReturnUrl = returnUrl;       
+  return View(); 
+}
 
+// This way, even if you register the AuthorizeAttribute as a global filter, users can access the login actions.
+```
+### USING AUTHORIZEATTRIBUTE TO REQUIRE ROLE MEMBERSHIP
+- AuthorizeAttribute allows you to specify both roles and users, as shown here:
+```
+[Authorize(Roles="Administrator")] 
+public class StoreManagerController : Controller
+// This restricts access to the StoreManagerController to users who belong to the Administrator role. 
+```
+- the Roles parameter can take more than one role. You can pass in a comma-delimited list:
+```
+[Authorize(Roles="Administrator,SuperAdmin")] 
+public class TopSecretController:Controller
+```
+- You can also authorize by a list of users:
+```
+[Authorize(Users="Jon,Phil,Scott,Brad,David")] 
+public class TopSecretController:Controller
+```
+- And you can combine them, as well:
+```
+[Authorize(Roles="UsersNamedScott", Users="Jon,Phil,Brad,David")] 
+public class TopSecretController:Controller
+```
+- Managing your permissions based on roles instead of users is generally considered a better idea, 
+```
+for several reasons:
 
+- Users can come and go, and a specifi c user is likely to require (or lose) permissions over time. 
+- Managing role membership is generally easier than managing user membership.
+- Role-based management enables you to have different access lists across deployment environments.
+```
+- When you’re creating role groups, consider using privileged-based role groups
+```
+For example, 
+roles named CanAdjustCompensation and CanEditAlbums are more granular 
+and ultimately more manageable than overly generic groups like Administrator 
+followed by the inevitable SuperAdmin and the equally inevitable SuperSuperAdmin.
+```
+- ASP.NET has supported claims-based authorization since .NET 4.5, although it’s not surfaced by AuthorizeAttribute. 
 
+### the difference between roles and claims
+- This means that roles are really a specifi c case of claims, because membership in a role is just one simple claim.
+- Role membership is a simple Boolean—a user either is a member of the role or not. 
+- A claim can contain a value, not just a simple Boolean. 
+- This means that users’ claims might include their username, their corporate division, the groups or level of other users they are allowed to administer, and so on.
+- So with claims, you wouldn’t need a bunch of roles to manage the extent of compensation adjustment powers (CanAdjustCompensationForEmployees, CanAdjustCompensationForManagers, and so on).
+- A single claim token can hold rich information about exactly which employees you rule.
 
+### EXTENDING USER IDENTITY
+- t http://asp.net/identity
+
+### Storing additional user proﬁ le data 
+-  adding properties to your ApplicationUser class (found in /Models/IdentityModels.cs). 
+```
+public class ApplicationUser : IdentityUser 
+{   
+  public string Address { get; set; }   
+  public string TwitterHandle { get; set; } 
+}
+
+```
+
+### Persistance control 
+- http://www.asp.net/identity/overview/extensibility/overview-of-custom-storage-providers-for-aspnet-identity.
+
+### Managing users and roles
+-  http://azure.microsoft.com/en-us/documentation/articles/web-sites-dotnet-deploy-aspnet-mvc-app-membership-oauth-sql-database/.
+
+### EXTERNAL LOGIN VIA OAUTH AND OPENID
+- Maintaining a local database of usernames and secret passwords is a large security liability.
+- Website registration is annoying
+- OAuth and OpenID are open standards for authentication
+- NOTE Technically, the OAuth protocol was designed for authorization, but in general use it’s frequently used for authentication.
+- These protocols allow your users to log in to your site using their existing accounts on other trusted sites (called providers), such as Google, Twitter, Microsoft, and others. 
+
+### Registering External Login Provider
+- Authorization providers are confi gured in App_Start\Startup.Auth.cs
+- http://go.microsoft.com/fwlink/?LinkId=301864
+
+### Conﬁguring OpenID Providers
+- OAuth is not really designed for authentication; it was designed for resource sharing between sites. 
+- However, it was more widely adopted by providers (Twitter, Facebook, Microsoft Account, and so on) than OpenID, and implementing sites and users followed. 
+- The example code to implement Google provider support is already included in Startup.Auth.cs, 
+```
+public partial class Startup {       
+  public void ConfigureAuth(IAppBuilder app)       {             
+  // Use a cookie to temporarily store information about              
+  // a user logging in with a third party login provider                         
+    app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+    app.UseGoogleAuthentication();       
+  } 
+}
+
+```
 
 
 
