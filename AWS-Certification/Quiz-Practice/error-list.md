@@ -1,5 +1,20 @@
-- Power User Access allows Access to all AWS services except the management of groups and users within IAM.
-
+# IAM & S3
+- Power User Access allows 
+```
+Access to all AWS services except the management of groups and users within IAM.
+```
+- What does S3 stand for?
+```
+Simple Storage Service
+```
+- What is the minimum file size that I can store on S3?
+```
+0 bytes
+```
+- What is AWS Storage Gateway?
+```
+It is a physical or virtual appliance that can be used to cache S3 locally at a customer's site.
+```
 - You run a meme creation website where users can create memes and then download them for use on their own sites. The original images are stored in S3 and each meme's metadata in DynamoDB. You need to decide upon a low-cost storage option for the memes, themselves. If a meme object is unavailable or lost, a Lambda function will automatically recreate it using the original file from S3 and the metadata from DynamoDB. Which storage solution should you use to store the non-critical, easily reproducible memes in the most cost-effective way?
 ```
 S3 – OneZone-IA is the recommended storage for when you want cheaper storage for infrequently accessed objects. 
