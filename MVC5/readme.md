@@ -1334,11 +1334,25 @@ Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 - CssEncod 
 ```
 -  @using statement to bring in the AntiXSS encoder namespace, and then you can use the Encoder.JavaScriptEncode helper function.
-```@using Microsoft.Security.Application ```
-
-
-
-
+```
+@using Microsoft.Security.Application 
+...
+@section scripts {    
+  @if(ViewBag.UserName != null) {    
+    <script type="text/javascript">        
+      $(function () {                
+        var msg = 'Welcome, @Encoder.JavaScriptEncode(                    
+        ViewBag.UserName, false)!';          
+        $("#welcome-message").html(msg).hide().show('slow');        
+      });    
+    </script>    
+  } 
+}
+```
+### Threat: Cross-Site Request Forgery
+- A cross-site request forgery (CSRF, pronounced C-surf, also known by the acronym XSRF)
+- XSS plus a confused deputy
+-  ```deputy``` is your browser, and it’s being tricked into misusing its authority in representing you to a remote website. 
 
 
 
