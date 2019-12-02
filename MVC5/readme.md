@@ -1258,7 +1258,13 @@ public ActionResult Login(string returnUrl) {
 - Google reports a user who logs in once via HTTP and later via HTTPS as two different people. 
 ### UNDERSTANDING THE SECURITY VECTORS IN A WEB APPLICATION
 ### Threat: Cross-Site Scripting
-
+- cross-site scripting (XSS). 
+- XSS can be carried out in one of two ways:
+```
+by a user entering nasty script commands into a website that accepts unsanitized user input 
+or by user input being directly displayed on a page
+```
+- A cross-site request forgery (CSRF, pronounced C-surf, also known by the acronym XSRF) 
 
 
 
