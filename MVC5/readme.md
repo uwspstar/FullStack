@@ -1240,7 +1240,24 @@ public partial class Startup {
 }
 
 ```
-
+### Security Implications of External Logins 
+### Trusted External Login Providers
+### Requiring SSL for Login
+- The callback from an external provider to your site contains security tokens that allow access to your site and contain user information. 
+- To enforce HTTPS for this callback, applications that support external logins should require HTTPS for access to the AccountController’s Login GET method using the RequireHttps attribute:
+```
+// // GET: /Account/Login
+[RequireHttps] 
+[AllowAnonymous] 
+public ActionResult Login(string returnUrl) {
+  ViewBag.ReturnUrl = returnUrl;
+  return View();
+}
+```
+- Additionally, using HTTPS with Google authentication is important. 
+- Google reports a user who logs in once via HTTP and later via HTTPS as two different people. 
+### UNDERSTANDING THE SECURITY VECTORS IN A WEB APPLICATION
+### Threat: Cross-Site Scripting
 
 
 
