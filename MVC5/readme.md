@@ -1361,12 +1361,29 @@ Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 &amount=1000&toaccountnumber= 23234554333&from=checking" />.
 
 ```
+### Preventing CSRF Attacks 
+### Token Veriﬁ cation 
+- The simplest way to do this is to embed a hidden input into each form request that contains a unique value. You can do this with the HTML Helpers by including this in every form:
+```
+<form action="/account/register" method="post"> 
+@Html.AntiForgeryToken() … 
+</form>
 
+Html.AntiForgeryToken outputs an encrypted value as a hidden input:
+<input type="hidden" value="012837udny31w90hjhf7u">
 
+This value matches another value that is stored as a session cookie in the user’s browser. 
+When the form is posted, these values are matched using an ActionFilter:
 
+[ValidateAntiforgeryToken] 
+public ActionResult Register(…)
 
+This handles most CSRF attacks — but not all of them. 
+```
+### Idempotent GETs 
+-  If an operation is idempotent, it can be executed multiple times without changing the result. 
+-  In general, a good general rule is that you can prevent a whole class of CSRF attacks by only changing things in your DB or on your site by using POST. 
+- This means registration, logout, login, and so forth. At the very least, this limits the confused deputy attacks somewhat.
 
-
-
-
+### HttpReferrer Validation 
 
