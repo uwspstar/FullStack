@@ -1432,15 +1432,41 @@ Response.Cookies["MyCookie].HttpOnly=true
 - The simplest way to prevent an over-posting attack is to use the BindAttribute to explicitly control which properties you want the Model Binder to bind to.
 - You can place BindAttribute either on the Model class or in the controller action parameter. 
 -  You can use either a whitelist approach (discussed previously), which specifi es all the fi elds you’ll allow binding to [Bind(Include="Name, Comment")], or you can just exclude fi elds you don’t want to be bound to using a blacklist approach [Bind(Exclude="ReviewID, ProductID, Product, Approved"]. 
-- Generally using a whitelist is a lot safer, because making sure you just list the properties you want bound is easier than enumerating all the properties you don’t want bound
+- Generally using a ```whitelist is a lot safer```, because making sure you just list the properties you want bound is easier than enumerating all the properties you don’t want bound
+- the best—way to deal with over-posting is to avoid binding directly to the data model. using a ```ViewModel```
+```
+public class ReviewViewModel { 
+  public string Name { get; set; } 
+  public string Comment { get; set; } 
+}
+```
+- http://bradwilson.typepad.com/ blog/2010/01/input-validation-vs-model-validation-in-aspnet-mvc. html.
+### Threat: Open Redirection 
+- Any web application that redirects to a URL that is specifi ed via the request, such as the query string or form data, can potentially be tampered with to redirect users to an external, malicious URL. This tampering is called an ```open redirection attack```.
+-  you must verify that the redirection URL hasn’t been tampered with
+-  ReturnUrl query string parameter is not validated, an attacker can modify it to inject any URL address into the parameter to conduct an open redirection attack. 
+```
+/Account/LogOn?ReturnUrl=%2fAccount%2fChangePassword%2f
+```
+### Looking at the Vulnerable Code in the AccountController LogOn Action 
+- MVC 5 Login action
+```
+return RedirectToLocal(returnUrl);
+```
+### Taking Additional Actions When an Open Redirect Attempt Is Detected 
+-  You may want to take additional actions when an open redirect is detected.
+```
+private ActionResult RedirectToLocal(string returnUrl) {  
+  if (Url.IsLocalUrl(returnUrl))  {    
+    return Redirect(returnUrl);  }  
+  else  {     
+    // Actions on for detected open redirect go here.     
+    string message = string.Format("Open redirect to to {0} detected.", returnUrl);     
+    ErrorSignal.FromCurrentContext().Raise(new System.Security.SecurityException(message));     
+    return RedirectToAction("SecurityWarning", "Home");  
+  } 
+}
 
-
-
-
-
-
-
-
-
+```
 
 
