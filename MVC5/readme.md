@@ -1353,8 +1353,14 @@ Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 - A cross-site request forgery (CSRF, pronounced C-surf, also known by the acronym XSRF)
 - XSS plus a confused deputy
 -  ```deputy``` is your browser, and it’s being tricked into misusing its authority in representing you to a remote website. 
+-  [ValidateAntiForgeryToken]
+- the session cookie information is what keeps you from logging in for every page request! The browser has to remember something!
+```
+"OMG you're right! How weird!
+<img src =" http://widelyusedbank.example.com?function=transfer
+&amount=1000&toaccountnumber= 23234554333&from=checking" />.
 
-
+```
 
 
 
