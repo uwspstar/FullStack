@@ -1400,23 +1400,39 @@ public class IsPostedFromThisSiteAttribute : AuthorizeAttribute {
  }
 
 ```
+- You can then use this fi lter on the Register method, as follows:
+```
+[IsPostedFromThisSite] public ActionResult Register(…
+```
+### Threat: Cookie Stealing
 
+- Cookies are one of the things that make the Web usable, as most sites use cookies to identify users after login
+- Websites use cookies to store information between page requests or browsing sessions
 
+### There are two types of cookies:
+- Session cookies: Stored in the browser’s memory and are transmitted via the header during every request
+- Persistent cookies: Stored in actual text fi les on your computer’s hard drive and are transmitted the same way.
+- The main difference is that session cookies are forgotten when your session ends—persistent cookies are not, and a site will remember you the next time you come along.
+### Preventing Cookie Theft with HttpOnl
+You can stop script access to all cookies in your site by adding a simple flag: ```HttpOnly```. You can set this flag in the ```web.config```, as follows:
+```
+<httpCookies domain="" httpOnlyCookies="true" requireSSL="false" />
+```
+You can also set it individually for each cookie you write:
+```
+Response.Cookies["MyCookie"].Value="Remembering you…"; 
+Response.Cookies["MyCookie].HttpOnly=true
+```
+### Threat: Over-Posting 
+- An over-posting attack exploits a feature that is common to many web frameworks that are based on the MVC architectural pattern.
+-  In March 2012, this exact attack was used in a widely publicized attack on the GitHub.com site, exploiting the mass assignment feature Ruby on Rails
+- The model binder has no idea what fi elds you’ve included on your form and will happily set the Approved property to true.
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+### Preventing Over-Posting with the Bind Attribut
+- The simplest way to prevent an over-posting attack is to use the BindAttribute to explicitly control which properties you want the Model Binder to bind to.
+- You can place BindAttribute either on the Model class or in the controller action parameter. 
+-  You can use either a whitelist approach (discussed previously), which specifi es all the fi elds you’ll allow binding to [Bind(Include="Name, Comment")], or you can just exclude fi elds you don’t want to be bound to using a blacklist approach [Bind(Exclude="ReviewID, ProductID, Product, Approved"]. 
+- Generally using a whitelist is a lot safer, because making sure you just list the properties you want bound is easier than enumerating all the properties you don’t want bound
 
 
 
