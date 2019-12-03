@@ -1386,4 +1386,45 @@ This handles most CSRF attacks — but not all of them.
 - This means registration, logout, login, and so forth. At the very least, this limits the confused deputy attacks somewhat.
 
 ### HttpReferrer Validation 
+- HttpReferrer validation is handled using an ActionFilter, wherein you check to see whether the client that posted the form values was indeed your site:
+```
+public class IsPostedFromThisSiteAttribute : AuthorizeAttribute {   
+  public override void OnAuthorize(AuthorizationContext filterContext)   {       
+    if (filterContext.HttpContext != null)       {           
+        if (filterContext.HttpContext.Request.UrlReferrer == null)               
+          throw new System.Web.HttpException("Invalid submission");
+        if (filterContext.HttpContext.Request.UrlReferrer.Host !="mysite.com")                   
+          throw new System.Web.HttpException("This form wasn't submitted from this site!");       
+     }   
+   } 
+ }
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
