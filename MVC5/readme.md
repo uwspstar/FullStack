@@ -1505,3 +1505,70 @@ Setting deployment / retail to true does a few things:
 - http://www.wrox.com/WileyCDA/WroxTitle/Beginning-ASP-NET-Security.productCd-0470743654.html
 
 ### Ajax
+### The jQuery Function
+- is aliased to the $ sign (because $ requires less typing and is a legal function name in JavaScript)
+```
+$(function () {
+   $("#album-list img").mouseover(function () {
+       $(this).animate({ height: '+=25', width: '+=25' })
+              .animate({ height: '-=25', width: '-=25' });
+   });
+})
+```
+- The first line of code invokes the jQuery function ($) and passes an anonymous JavaScript function as the first parameter
+- the this keyword (this points to the element where the event occurred). 
+```
+When you pass a function as the first parameter, 
+jQuery assumes you are providing a function to execute 
+as soon as the browser is finished building a document object model (DOM) 
+from HTML supplied by the server—that is, 
+the code will run after the HTML page is done loading from the server.
+```
+### jQuery Selector
+- EXAMPLE MEANING
+```
+$("#header") Find the element with an id of "header"
+$(".editor-label") Find all elements with a class name of ".editor-label"
+$("div") Find all <div> elements
+$("#header div") Find all <div> elements that are descendants of the element with an id of "header"
+$("#header > div") Find all <div> elements that are children of the element with an id of "header"
+$("a:even") Find evenly numbered anchor tags
+```
+### jQuery Events
+- NOTE The jQuery on method (and the corresponding off method, to unsubscribe from an event) was added in jQuery 1.7 to provide a unifi ed API for event binding. 
+- The on method replaces the previous bind, live, and delegate methods; in fact, if you look at the source code you can see that the bind, live, and delegate methods just pass the call to on. 
+- method chaining
+- jQuery shortcuts
+
+### Using jQuery
+- The core jQuery library is the fi le named jquery-<version>.js
+-  a jQuery script reference is included in the footer of the site layout (/Views/Shared/_Layout.cshtml), 
+```
+  <script src="~/Scripts/jquery-1.10.2.js"></script>
+```
+- Razor view engine will resolve the ~ operator to the root of the current website
+- the type attribute as text/javascript isn’t needed in HTML 5.
+- in ```/Views/Shared/_Layout.cshtml``` as shown in the following code:
+```
+@Scripts.Render("~/bundles/jquery")
+```
+ - NOTE The previous call renders the predefi ned "jquery" script bundle from /App_Start/BundleConfig.cs.
+```
+public static void RegisterBundles(BundleCollection bundles) 
+{
+  bundles.Add(new ScriptBundle("~/bundles/jquery").Include( 
+  "~/Scripts/jquery-{version}.js"));
+  //Other bundles removed for brevity... 
+}
+```
+### Visual Studio shows IntelliSense based on method names and any inline triple-slash comments included in scripts.
+### scripts
+- _references.js is just a list of JavaScript libraries in your project, written out using triple-slash (///) comments. 
+- http://madskristensen.net/post/ the-story-behind-_referencesjs.
+- .min.js fi les. Each contains a minimized version of another script fi le. JavaScript minimization is the process of shrinking a JavaScript fi le by removing comments, thus shortening variable names, and other processes that reduce the fi le size. 
+- Respond.js is a tiny JavaScript library, included because it’s required by Bootstrap. It’s what’s known as a polyfi ll: a JavaScript library that adds support for newer browser standards to older browsers.
+- Modernizr.js is a JavaScript library that helps you build modern applications by modernizing older browsers.  For example, one important job of Modernizr is to enable the new HTML 5 elements (such as header, nav, and menu) on browsers that don’t natively support HTML 5 elements (like Internet Explorer 6). 
+
+### AJAX HELPERS
+- Ajax helpers also create forms and links that point to controller actions, but they behave asynchronously. When using these helpers, you don’t need to write any script code to make the asynchrony work.
+
