@@ -1477,4 +1477,31 @@ private ActionResult RedirectToLocal(string returnUrl) {
 ### Using Conﬁ guration Transforms 
 - recommend you use web.config transforms to manage the customErrors setting based on the build confi guration
 ```
+ <system.web>
+  <compilation xdt:Transform="RemoveAttributes(debug)" /> 
+  <customErrors defaultRedirect="GenericError.htm"       
+  mode="RemoteOnly" xdt:Transform="Replace">       
+    <error statusCode="500" redirect="InternalError.htm"/>     
+  </customErrors>
+ </system.web>
 ```
+### Using Retail Deployment Conﬁ guration in Production
+```
+<system.web>  
+  <deployment retail="true" /> 
+</system.web>
+
+Setting deployment / retail to true does a few things:
+ ➤ customErrors mode is set to On (the most secure setting) 
+ ➤ Trace output is disabled 
+ ➤ Debug is disabled
+
+```
+### Using a Dedicated Error Logging System
+- http://code.google.com/p/ elmah/
+### SECURITY RECAP AND HELPFUL RESOURCES
+- Table 7-1 (PAGE 209)
+- http://msdn.microsoft.com/en-us/security/default.aspx
+- http://www.wrox.com/WileyCDA/WroxTitle/Beginning-ASP-NET-Security.productCd-0470743654.html
+
+### Ajax
