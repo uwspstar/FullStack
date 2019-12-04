@@ -1677,6 +1677,71 @@ private List<Artist> GetArtists(string searchString)
 }
 
 ```
+### CLIENT VALIDATION
+- Client-side validation relies on the jQuery Validation plugin.
+- The data annotations make these properties required, and also put in some restrictions on the length
+- Client validation for data annotation attributes is on by default with the MVC framework
+- The model binder in ASP.NET MVC performs server-side validation against these properties when it sets their values. 
+- These built-in attributes also trigger client-side validation
+```
+[Required(ErrorMessage = "An Album Title is required")] 
+[StringLength(160)] 
+public string  Title { get; set; }
+```
+### jQuery Validation
+-  jQuery Validation plugin (jquery.validate) exists in the Scripts folder
+-  If you want client-side validation, you’ll need a reference to the jqueryval bundle to the applicable views
+- For example, the last few lines of /Views/Account/Login.cshtml are as follows:
+```
+@section Scripts {    
+  @Scripts.Render("~/bundles/jqueryval") 
+}
+```
+- the bundle will include both jquery.validate.js and jquery.validate.unobtrusive.js—everything you need for unobtrusive validation based on jQuery Validation.
+- Looking in ```/App_Start/BundleConfig.cs```, we can see that this bundle includes all scripts matching the pattern ```~/Scripts/jquery.validate*.```
+```
+bundles.Add(new ScriptBundle("~/bundles/jqueryval")
+.Include( "~/Scripts/jquery.validate*"));
+```
+- By default, unobtrusive JavaScript and client-side validation are enabled. 
+- root-level web.config fi le in a new application, you’ll see the following appSettings confi guration section:
+```
+ <appSettings>   
+   <add key="ClientValidationEnabled" value="true"/>   
+   <add key="UnobtrusiveJavaScriptEnabled" value="true"/> 
+ </appSettings>
+ ```
+- The jqueryval bundle references two scripts
+```
+- The first reference is to the minifi ed jQuery Validation plugin
+- The second reference is to Microsoft’s unobtrusive adapter for jQuery Validation
+```
+- The TextBoxFor helper is the key. The helper builds out inputs for a model based on metadata. 
+```@Html.TextBoxFor(model => model.Price)```
+### Custom Validation 
+```
+public class MaxWordsAttribute : ValidationAttribute   
+public MaxWordsAttribute(int maxWords) 
+...
+protected override ValidationResult IsValid(
+...
 
- 
+[Required(ErrorMessage = "An Album Title is required")] 
+[StringLength(160)] [MaxWords(10)] 
+public string   Title { get; set; }
 
+```
+### IClientValidatable
+- The IClientValidatable interface defi nes a single method: GetClientValidationRules. 
+```
+public class MaxWordsAttribute : ValidationAttribute,  IClientValidatable 
+...
+public IEnumerable<ModelClientValidationRule> GetClientValidationRules(
+  ModelMetadata metadata, ControllerContext context) 
+...
+```
+- Inside of CustomValidators.js, adding two additional references will give you all the IntelliSense you need. Alternatively, you could add these references to _references.js.
+```
+/// <reference path="jquery.validate.js" /> 
+/// <reference path="jquery.validate.unobtrusive.js" />
+```
