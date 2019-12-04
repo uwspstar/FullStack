@@ -1745,3 +1745,4 @@ public IEnumerable<ModelClientValidationRule> GetClientValidationRules(
 /// <reference path="jquery.validate.js" /> 
 /// <reference path="jquery.validate.unobtrusive.js" />
 ```
+### jQuery UI
