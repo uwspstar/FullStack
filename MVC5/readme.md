@@ -1570,5 +1570,67 @@ public static void RegisterBundles(BundleCollection bundles)
 - Modernizr.js is a JavaScript library that helps you build modern applications by modernizing older browsers.  For example, one important job of Modernizr is to enable the new HTML 5 elements (such as header, nav, and menu) on browsers that don’t natively support HTML 5 elements (like Internet Explorer 6). 
 
 ### AJAX HELPERS
-- Ajax helpers also create forms and links that point to controller actions, but they behave asynchronously. When using these helpers, you don’t need to write any script code to make the asynchrony work.
+- NOTE The Ajax functionality of the Ajax helpers will not work without a reference to the ```jquery.unobtrusive-ajax.js``` script. 
+- ```If you’re having trouble with the Ajax helpers, this is the fi rst thing you should check.```
+- Ajax helpers also create forms and links that point to controller actions, but they behave asynchronously. 
+- When using these helpers, you don’t need to write any script code to make the asynchrony work.
+- Behind the scenes, these Ajax helpers depend on the unobtrusive MVC extensions for jQuery. 
+```
+@section Scripts {    
+<script src="~/Scripts/App/MusicScripts.js"></script>    
+<script src="~/Scripts/jquery.unobtrusive-ajax.min.js"> 
+</script> }
+```
+### Ajax ActionLinks
+- Ajax helpers are available through the Ajax property inside a Razor view. 
+- Like HTML helpers, most of the methods on this property are extension methods (except for the AjaxHelper type).
+- The ActionLink method of the Ajax property creates an anchor tag with asynchronous 
+ behavior.
+ ```
+ <div id="dailydeal">    
+   @Ajax.ActionLink("Click here to see today's special!",        
+   "DailyDeal",        
+   null,        
+   new AjaxOptions        
+   {            
+     UpdateTargetId = "dailydeal",            
+     InsertionMode = InsertionMode.Replace,            
+     HttpMethod = "GET"        },        
+     new {@class = "btn btn-primary"}
+   ) 
+ </div>
+
+//To have a response available, you’ll need a DailyDeal action on the HomeController:
+
+public ActionResult DailyDeal() {            
+    var album = GetDailyDeal();
+    return PartialView("_DailyDeal", album);        
+}
+// Select an album and discount it by 50%        
+private Album GetDailyDeal() 
+{            
+  var album = storeDB.Albums                
+  .OrderBy(a => System.Guid.NewGuid())                
+  .First();
+  album.Price *= 0.5m;            
+  return album;        
+}
+//new Guids are generated in semi-random order, ordering by NewGuid essentially shuffl es them
+```
+- The target action for an Ajax action link can return plain text or HTML. In this case, you’ll return HTML by rendering a partial view. 
+- Just because you can use Ajax links doesn’t mean you should use them everywhere. 
+### HTML 5 Attributes 
+- most of these attributes have a prefi x of data- (we say they are data dash attributes).
+```
+$(function () {       
+  $("a[data-ajax]=true"). 
+  // do something   
+});
+```
+ 
+ 
+ 
+ 
+ 
+ 
 
