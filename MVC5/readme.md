@@ -1627,10 +1627,56 @@ $(function () {
   // do something   
 });
 ```
- 
- 
- 
- 
- 
+### Ajax Forms - asynchronous forms
+```
+<div class="panel panel-default">    
+  <div class="panel-heading">Artist search</div>
+  <div class="panel-body">       
+   @using (Ajax.BeginForm("ArtistSearch", "Home", 
+   new AjaxOptions           
+   {               
+     InsertionMode = InsertionMode.Replace,               
+     HttpMethod = "GET",               
+     OnFailure = "searchFailed",               
+     LoadingElementId = "ajax-loader",               
+     UpdateTargetId = "searchresults",           
+   }))        
+   {            
+     <input type="text" name="q" />            
+     <input type="submit" value="search" />            
+     <img id="ajax-loader" 
+       src="@Url.Content("~/Images/ajax-loader.gif")" 
+       style="display:none" />        
+   }        
+   <div id="searchresults"></div>    
+  </div>
+</div>
+```
+```
+function searchFailed() {   
+  $("#searchresults").html("Sorry, there was a problem with the search."); 
+}
+```
+-  Notice you’ve specifi ed a LoadingElementId as part of the options
+- The client framework automatically shows this element when an asynchronous request is in progress.  
+- You typically put an animated spinner inside this element to let the user know some work is in progress in the background.  
+- When the client receives the response, the unobtrusive scripts place the content into the DOM. In this example, you replace an element with the id of searchresults.
+- query the database and render a partial view
+```
+public ActionResult ArtistSearch(string q) 
+{   
+  var artists = GetArtists(q);
+  return PartialView(artists); 
+}
+
+private List<Artist> GetArtists(string searchString) 
+{   
+  return storeDB.Artists       
+  .Where(a => a.Name.Contains(searchString))       
+  .ToList(); 
+}
+
+```
+
  
 
