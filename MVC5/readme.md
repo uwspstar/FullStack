@@ -1468,5 +1468,13 @@ private ActionResult RedirectToLocal(string returnUrl) {
 }
 
 ```
+### PROPER ERROR REPORTING AND THE STACK TRACE
+- There are ```three possible settings for the customErrors mode```:
+- ```On``` is the safest for production servers, because it always hides error messages. 
+- ```RemoteOnly``` shows generic errors to most users, but exposes the full error messages to users with server access. 
+- The most vulnerable setting is ```Off```, which exposes detailed error messages to anyone who visits your website.
 
-
+### Using Conﬁ guration Transforms 
+- recommend you use web.config transforms to manage the customErrors setting based on the build confi guration
+```
+```
