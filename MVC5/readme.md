@@ -47,13 +47,13 @@ is to declare the namespace in the web.config fi le within the Views directory.
 <system.web.webPages.razor> 
 … 
 <pages pageBaseType="System.Web.Mvc.WebViewPage">   
-  <namespaces>     
-    <add namespace="System.Web.Mvc" />     
-    <add namespace="System.Web.Mvc.Ajax" />     
-    <add namespace="System.Web.Mvc.Html" />     
-    <add namespace="System.Web.Routing" />
-    <add namespace="MvcMusicStore.Models" />   
-  </namespaces> 
+<namespaces>     
+  <add namespace="System.Web.Mvc" />     
+  <add namespace="System.Web.Mvc.Ajax" />     
+  <add namespace="System.Web.Mvc.Html" />     
+  <add namespace="System.Web.Routing" />
+  <add namespace="MvcMusicStore.Models" />   
+</namespaces> 
 </pages> 
 </system.web.webPages.razor>
 
@@ -83,9 +83,9 @@ or cast the value to a specifi c type: (string)ViewBag.Name.
 ```
 public class ShoppingCartViewModel 
 {  
-  public IEnumerable<Product> Products { get; set; }   
-  public decimal CartTotal { get; set; }  
-  public string Message { get; set; } 
+public IEnumerable<Product> Products { get; set; }   
+public decimal CartTotal { get; set; }  
+public string Message { get; set; } 
 }
 
 ```
@@ -122,8 +122,8 @@ Here’s the same code again using this method to better protect against XSS att
 
 <script type="text/javascript">   
 $(function () {       
-  var message = 'Hello @Ajax.JavaScriptStringEncode(ViewBag.Username)';       
-  $("#message").html(message).show('slow');   
+var message = 'Hello @Ajax.JavaScriptStringEncode(ViewBag.Username)';       
+$("#message").html(message).show('slow');   
 }); 
 </script>
 ```
@@ -135,11 +135,11 @@ $(function () {
 <!DOCTYPE html> 
 <html> 
 <head><title>@ViewBag.Title</title></head> 
-  <body>   
-    <h1>@ViewBag.Title</h1>   
-    <div id="main-content">@RenderBody()</div>   
-    <footer>@RenderSection("Footer")</footer> 
-  </body> 
+<body>   
+  <h1>@ViewBag.Title</h1>   
+  <div id="main-content">@RenderBody()</div>   
+  <footer>@RenderSection("Footer")</footer> 
+</body> 
 </html>
 ```
 - The @section syntax specifi es the contents for a section defined in the layout.
@@ -161,8 +161,8 @@ if you could defi ne some default content if the section isn’t defined in the 
 Well, here’s one way. It’s a bit verbose, but it works.
 
 <footer>  
-  @if (IsSectionDefined("Footer")) {       RenderSection("Footer");   }  
-  else {       <span>This is the default footer.</span>   } 
+@if (IsSectionDefined("Footer")) {       RenderSection("Footer");   }  
+else {       <span>This is the default footer.</span>   } 
 </footer>
 
 ```
@@ -196,22 +196,22 @@ Album album)
 ```
 [HttpPost] public ActionResult Edit() 
 {   
-  var album = new Album();   
-  TryUpdateModel(album);   
-  if (ModelState.IsValid)
-  {       
-    db.Entry(album).State = EntityState.Modified;       
-    db.SaveChanges();       
-    return RedirectToAction("Index");   
-  }   
-  else   
-  {       
-    ViewBag.GenreId = new SelectList(db.Genres, "GenreId",                                        
-    "Name", album.GenreId);       
-    ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId",                                        
-    "Name", album.ArtistId);       
-    return View(album);   
-  } 
+var album = new Album();   
+TryUpdateModel(album);   
+if (ModelState.IsValid)
+{       
+  db.Entry(album).State = EntityState.Modified;       
+  db.SaveChanges();       
+  return RedirectToAction("Index");   
+}   
+else   
+{       
+  ViewBag.GenreId = new SelectList(db.Genres, "GenreId",                                        
+  "Name", album.GenreId);       
+  ViewBag.ArtistId = new SelectList(db.Artists, "ArtistId",                                        
+  "Name", album.ArtistId);       
+  return View(album);   
+} 
 }
 
 ```
@@ -231,15 +231,15 @@ Any additional properties are ignored.
 - The action attribute tells a web browser where to send the information, so naturally the action contains a URL
 - The method attribute tells the browser whether to use an HTTP POST or HTTP GET when sending the information. 
 ```
- However, the default method value is “get,” so by default a form sends an HTTP GET request:
- 
+However, the default method value is “get,” so by default a form sends an HTTP GET request:
+
 <form action="http://www.bing.com/search" method="get">   
-  <input name="q" type="text" />   
-  <input type="submit" value="Search!" /> 
+<input name="q" type="text" />   
+<input type="submit" value="Search!" /> 
 </form>
 
- ```
- ###  GET or to POST
+```
+###  GET or to POST
 - When a user submits a form using an HTTP GET request, the browser takes the input names and values inside the form and puts them in the query string.  http://www.bing .com/search?q=love.
 - You can also give the method attribute the value post, in which case the browser does not place the input values into the query string, but places them inside the body of the HTTP request instead. 
 -  Unlike the POST request, you can bookmark the GET request because all the parameters are in the URL. You can use the URLs as hyperlinks in an e-mail or a web page and preserve all the form input values.
@@ -252,16 +252,16 @@ Any additional properties are ignored.
 ### Search Form
 ```
 <form action="/Home/Search" method="get">   
-  <input type="text" name="q" />   
-  <input type="submit" value="Search" /> 
+<input type="text" name="q" />   
+<input type="submit" value="Search" /> 
 </form>
 
 public ActionResult Search(string q) 
 {   var albums = storeDB.Albums                      
-  .Include("Artist")                       
-  .Where(a => a.Title.Contains(q))                       
-  .Take(10);   
-  return View(albums); 
+.Include("Artist")                       
+.Where(a => a.Title.Contains(q))                       
+.Take(10);   
+return View(albums); 
 }
 
 Notice how the Search action expects to receive a string parameter named q. 
@@ -272,8 +272,8 @@ if you made your search form issue a POST instead of a GET.
 
 @using (Html.BeginForm("Search", "Home", FormMethod.Get)) 
 {   
-  <input type="text" name="q" />   
-  <input type="submit" value="Search" /> 
+<input type="text" name="q" />   
+<input type="submit" value="Search" /> 
 }
 
 ```
@@ -285,11 +285,11 @@ Behind the scenes it uses the method named GetVirtualPath on the Routes property
 If you did all this without an HTML helper, you would have to write all the following code:
 
 @{   
-  var context = this.ViewContext.RequestContext;   
-  var values = new RouteValueDictionary{       
-  { "controller", "home" }, { "action", "index" }   };   
-  var path = RouteTable.Routes.GetVirtualPath(context, values); 
- } 
+var context = this.ViewContext.RequestContext;   
+var values = new RouteValueDictionary{       
+{ "controller", "home" }, { "action", "index" }   };   
+var path = RouteTable.Routes.GetVirtualPath(context, values); 
+} 
 <form action="@path.VirtualPath" method="get">   
 <input type="text" name="q" />   
 <input type="submit" value="Search2" />
@@ -323,38 +323,38 @@ but they do save you from writing lots of code.
 - You can see you’ve set target=" _blank" using the htmlAttributes parameter. 
 ```
 @using (Html.BeginForm("Search", "Home", FormMethod.Get,       
-  new { target = "_blank" ", @class="editForm",  data_validatable=true }))
+new { target = "_blank" ", @class="editForm",  data_validatable=true }))
 
 Another problem is setting attributes with a dash in the name (like data-val). 
 Dashes are not valid in C# property names, 
 but all HTML helpers convert an underscore in a property name to a dash when rendering the HTML. 
- 
+
 <form action="/Home/Search" class="editForm" data-validatable="true"     method="get" target="_blank">
 ```
 - Every Razor view inherits an Html property from its base class. 
 - The Html property is of type System.Web.Mvc.HtmlHelper<T> where T is a generic type parameter representing the type of the model for the view (dynamic by default). 
-  
+
 ### System.Web.Mvc.HtmlHelper<T>
-  
+
 -  The class provides a few instance methods you can invoke in a view, such as EnableClientValidation
 - AntiForgeryToken is an instance method, 
 - BeginForm is an extension method
 - Extension methods are a wonderful approach to building HTML helpers for two reasons 
-  -  First, extension methods in C# are available only when the namespace of the extension method is in scope
+-  First, extension methods in C# are available only when the namespace of the extension method is in scope
 - All MVC’s extension methods for HtmlHelper live in the System.Web.Mvc.Html namespace 
 -  If you don’t like the built-in extension methods, you can remove this namespace and build your own.
 - ```Html.BeginForm``` 
 - ```Html.ValidationSummary``` - displays an unordered list of all validation errors in the ModelState dictionary. 
 ```
-  @using (Html.BeginForm()) {   
-    @Html.ValidationSummary(excludePropertyErrors: true)   
-    <fieldset>       
-      <legend>Edit Album</legend>
-         <p>           
-           <input type="submit" value="Save" />       
-        </p>   
-    </fieldset> 
- }
+@using (Html.BeginForm()) {   
+  @Html.ValidationSummary(excludePropertyErrors: true)   
+  <fieldset>       
+    <legend>Edit Album</legend>
+       <p>           
+         <input type="submit" value="Save" />       
+      </p>   
+  </fieldset> 
+}
 
 ```
 - ```Html.ValidationSummary``` - displays an unordered list of all validation errors in the ModelState dictionary. 
@@ -364,9 +364,9 @@ ModelState.AddModelError("", "This is all wrong!");
 ModelState.AddModelError("Title", "What a terrible name!");
 
 <div class="validation-summary-errors">   
-  <ul>       
-    <li>This is all wrong!</li>   
-  </ul> 
+<ul>       
+  <li>This is all wrong!</li>   
+</ul> 
 </div>
 
 ```
@@ -389,41 +389,41 @@ Html.Label(“GenreId”)
 - ```Html.DropDownList and Html.ListBox```  
 ```
 public ActionResult Edit(int id) {                                          
-  var album = storeDB.Albums.Single(a => a.AlbumId == id);
-   ViewBag.Genres = new SelectList(storeDB.Genres.OrderBy(g => g.Name),
-                                    "GenreId", "Name", album.GenreId);   
-    return View(album); 
+var album = storeDB.Albums.Single(a => a.AlbumId == id);
+ ViewBag.Genres = new SelectList(storeDB.Genres.OrderBy(g => g.Name),
+                                  "GenreId", "Name", album.GenreId);   
+  return View(album); 
 }
 
 
 public ActionResult Edit(int id) {                                          
-  var album = storeDB.Albums.Single(a => a.AlbumId == id);
-  ViewBag.Genres =       storeDB.Genres              
-   .OrderBy(g => g.Name)              
-   .AsEnumerable()              
-   .Select(g => new SelectListItem { 
-     Text = g.Name,                               
-     Value = g.GenreId.ToString(),                               
-     Selected = album.GenreId == g.GenreId                            
-   });   
-   return View(album); 
+var album = storeDB.Albums.Single(a => a.AlbumId == id);
+ViewBag.Genres =       storeDB.Genres              
+ .OrderBy(g => g.Name)              
+ .AsEnumerable()              
+ .Select(g => new SelectListItem { 
+   Text = g.Name,                               
+   Value = g.GenreId.ToString(),                               
+   Selected = album.GenreId == g.GenreId                            
+ });   
+ return View(album); 
 }
 ```
 - ```Html.ValidationMessag``` 
 ```
 [HttpPost] 
 public ActionResult Edit(int id, FormCollection collection) {   
-    var album = storeDB.Albums.Find(id);
-    ModelState.AddModelError("Title", "What a terrible name!");
-    return View(album); 
+  var album = storeDB.Albums.Find(id);
+  ModelState.AddModelError("Title", "What a terrible name!");
+  return View(album); 
 }
 
 
 @Html.ValidationMessage("Title")
 
 <span class="field-validation-error" 
-  data-valmsg-for="Title"     
-  data-valmsg-replace="true">What a terrible name! 
+data-valmsg-for="Title"     
+data-valmsg-replace="true">What a terrible name! 
 </span>
 
 @Html.ValidationMessage("Title", "Something is wrong with your title")
@@ -436,8 +436,8 @@ Something is wrong with your title
 - all values in the ViewBag object are also available through ViewData
 ```
 public ActionResult Edit(int id) {   
-  ViewBag.Price = 10.0;   
-  return View(); 
+ViewBag.Price = 10.0;   
+return View(); 
 }
 
 @Html.TextBox("Price")
@@ -445,8 +445,8 @@ public ActionResult Edit(int id) {
 
 
 public ActionResult Edit(int id) {   
-  ViewBag.Album = new Album {Price = 11);   
-  return View(); 
+ViewBag.Album = new Album {Price = 11);   
+return View(); 
 }
 
 @Html.TextBox("Album.Price")
@@ -464,16 +464,16 @@ public ActionResult Edit(int id) {
 
 @using (Html.BeginForm()) {   @Html.ValidationSummary(excludePropertyErrors: true)   
 <fieldset>       
-  <legend>Edit Album</legend>       
-  <p>           
-    @Html.LabelFor(m => m.GenreId)                 
-    @Html.DropDownListFor(m => m.GenreId, ViewBag.Genres as SelectList)       
-  </p>                   
-  <p>                               
-    @Html.TextBoxFor(m => m.Title)                   
-    @Html.ValidationMessageFor(m => m.Title)       
-  </p>       
-  <input type="submit" value="Save" />   
+<legend>Edit Album</legend>       
+<p>           
+  @Html.LabelFor(m => m.GenreId)                 
+  @Html.DropDownListFor(m => m.GenreId, ViewBag.Genres as SelectList)       
+</p>                   
+<p>                               
+  @Html.TextBoxFor(m => m.Title)                   
+  @Html.ValidationMessageFor(m => m.Title)       
+</p>       
+<input type="submit" value="Save" />   
 </fieldset> }
 
 
@@ -581,11 +581,11 @@ and determined that the best HTML element to use was the textarea element
 - ```Url.Action```
 ```
 <span> 
-  @Url.Action("Browse", "Store", new { genre = "Jazz" }, null)       
+@Url.Action("Browse", "Store", new { genre = "Jazz" }, null)       
 </span>
 
 <span>           
-  /Store/Browse?genre=Jazz       
+/Store/Browse?genre=Jazz       
 </span>
 ```
 - ```Url.Content```
@@ -595,7 +595,7 @@ and determined that the best HTML element to use was the textarea element
 - when it appears in the src attribute for script, style, and img elements.  
 ```
 <script src="@Url.Content("~/Scripts/jquery-1.10.2.min.js")"       
-  type="text/javascript">
+type="text/javascript">
 </script
 
 <script src="~/Scripts/jquery-1.5.1.min.js" type="text/javascript"></script>
@@ -617,7 +617,7 @@ public void Partial(string partialViewName, object model, ViewDataDictionary vie
 @Html.Partial("AlbumDisplay")
 
 @{Html.RenderPartial("AlbumDisplay "); } 
- 
+
 ```
 ### Html.Action and Html.RenderAction 
 - the difference between Action and RenderAction is that RenderAction writes directly to the response (which can bring a slight effi ciency gain). 
@@ -628,20 +628,20 @@ public void Partial(string partialViewName, object model, ViewDataDictionary vie
 ```
 public class MyController : Controller {  
 public ActionResult Index() {   
-  return View();  
+return View();  
 }
 
 [ChildActionOnly]  
 public ActionResult Menu() {    
-  var menu = GetMenuFromSomewhere();    
-  return PartialView(menu);  
-  } 
+var menu = GetMenuFromSomewhere();    
+return PartialView(menu);  
+} 
 }
 
 The Menu action builds a menu model and returns a partial view with just the menu:
 @model Menu <ul> 
 @foreach (var item in Model.MenuItem) {  
-  <li>@item.Text</li> 
+<li>@item.Text</li> 
 } 
 </ul>
 
@@ -650,8 +650,8 @@ In your Index.cshtml view, you can now call into the Menu action to display the 
 <html> 
 <head><title>Index with Menu</title></head> 
 <body>   
-  @Html.Action("Menu")   
-  <h1>Welcome to the Index View</h1> 
+@Html.Action("Menu")   
+<h1>Welcome to the Index View</h1> 
 </body> 
 </html>
 ```
@@ -664,19 +664,19 @@ In your Index.cshtml view, you can now call into the Menu action to display the 
 ```
 // M-odle
 public class MenuOptions {   
-  public int Width { get; set; }   
-  public int Height { get; set; } 
+public int Width { get; set; }   
+public int Height { get; set; } 
 } 
 
 // C-onstroller
 [ChildActionOnly] 
 public ActionResult Menu(MenuOptions options) {   
-  return PartialView(options); 
+return PartialView(options); 
 }
 
 // V-iew
 @Html.Action("Menu", new {   
-  options = new MenuOptions { Width=400, Height=500 } 
+options = new MenuOptions { Width=400, Height=500 } 
 })
 
 ```
@@ -687,7 +687,7 @@ public ActionResult Menu(MenuOptions options) {
 [ChildActionOnly] 
 [ActionName("CoolMenu")] 
 public ActionResult Menu(MenuOptions options) {   
-  return PartialView(options); 
+return PartialView(options); 
 }
 ```
 ### Data Annotations and Validation
@@ -769,8 +769,8 @@ public string UserName { get; set; }
 - The client code will send the value the user entered for the UserName property automatically, and an overload of the attribute constructor allows you to specify additional fields to send to the server.
 ```
 public JsonResult CheckUserName(string username) {   
-  var result = Membership.FindUsersByName(username).Count == 0;   
-  return Json(result, JsonRequestBehavior.AllowGet); 
+var result = Membership.FindUsersByName(username).Count == 0;   
+return Json(result, JsonRequestBehavior.AllowGet); 
 }
 // The controller action will take a parameter with the name of the property to validate 
 // and return a true or false wrapped in JavaScript Object Notation (JSON).
@@ -846,55 +846,55 @@ var lastNameErrorMessage = ModelState["LastName"].Errors[0].ErrorMessage;
 ### Controller Actions and Validation Errors 
 ```
 [HttpPost] public ActionResult AddressAndPayment(Order newOrder) {   
-  if (ModelState.IsValid)   {                    
-      newOrder.Username = User.Identity.Name;       
-      newOrder.OrderDate = DateTime.Now;
-      storeDB.Orders.Add(newOrder);       
-      storeDB.SaveChanges();
-      // Process the order       
-      var cart = ShoppingCart.GetCart(this);       
-      cart.CreateOrder(newOrder); 
-      
-      return RedirectToAction("Complete", new { id = newOrder.OrderId });   
-    }   
-    // Invalid -- redisplay with errors   
-    return View(newOrder);      
-  }
+if (ModelState.IsValid)   {                    
+    newOrder.Username = User.Identity.Name;       
+    newOrder.OrderDate = DateTime.Now;
+    storeDB.Orders.Add(newOrder);       
+    storeDB.SaveChanges();
+    // Process the order       
+    var cart = ShoppingCart.GetCart(this);       
+    cart.CreateOrder(newOrder); 
+
+    return RedirectToAction("Complete", new { id = newOrder.OrderId });   
+  }   
+  // Invalid -- redisplay with errors   
+  return View(newOrder);      
+}
 ```
 -  You could also implement the action using an explicit call to UpdateModel or TryUpdateModel.
 ```
 [HttpPost] public ActionResult AddressAndPayment(FormCollection collection) {   
-  var newOrder = new Order();   
-  UpdateModel(newOrder);  
-  
-  if (ModelState.IsValid)   {                    
-    newOrder.Username = User.Identity.Name;       
-    newOrder.OrderDate = DateTime.Now;       
-    storeDB.Orders.Add(newOrder);       
-    storeDB.SaveChanges();
-    // Process the order       
-    var cart = ShoppingCart.GetCart(this);       
-    art.CreateOrder(newOrder);                   
-    return RedirectToAction("Complete", new { id = newOrder.OrderId });   
-   }   
-  // Invalid -- redisplay with errors   
-  return View(newOrder);     
+var newOrder = new Order();   
+UpdateModel(newOrder);  
+
+if (ModelState.IsValid)   {                    
+  newOrder.Username = User.Identity.Name;       
+  newOrder.OrderDate = DateTime.Now;       
+  storeDB.Orders.Add(newOrder);       
+  storeDB.SaveChanges();
+  // Process the order       
+  var cart = ShoppingCart.GetCart(this);       
+  art.CreateOrder(newOrder);                   
+  return RedirectToAction("Complete", new { id = newOrder.OrderId });   
+ }   
+// Invalid -- redisplay with errors   
+return View(newOrder);     
 }
 
 [HttpPost] public ActionResult AddressAndPayment(FormCollection collection) {   
-  var newOrder = new Order();   
-  if(TryUpdateModel(newOrder)) {                    
-    newOrder.Username = User.Identity.Name;       
-    newOrder.OrderDate = DateTime.Now;       
-    storeDB.Orders.Add(newOrder);       
-    storeDB.SaveChanges();
-    // Process the order       
-    var cart = ShoppingCart.GetCart(this);       
-    art.CreateOrder(newOrder);                   
-    return RedirectToAction("Complete", new { id = newOrder.OrderId });   
-   }   
-  // Invalid -- redisplay with errors   
-  return View(newOrder);     
+var newOrder = new Order();   
+if(TryUpdateModel(newOrder)) {                    
+  newOrder.Username = User.Identity.Name;       
+  newOrder.OrderDate = DateTime.Now;       
+  storeDB.Orders.Add(newOrder);       
+  storeDB.SaveChanges();
+  // Process the order       
+  var cart = ShoppingCart.GetCart(this);       
+  art.CreateOrder(newOrder);                   
+  return RedirectToAction("Complete", new { id = newOrder.OrderId });   
+ }   
+// Invalid -- redisplay with errors   
+return View(newOrder);     
 }
 
 ```
@@ -907,8 +907,8 @@ var lastNameErrorMessage = ModelState["LastName"].Errors[0].ErrorMessage;
 ```
 using System.ComponentModel.DataAnnotations;
 namespace MvcMusicStore.Infrastructure {   
-  public class MaxWordsAttribute : ValidationAttribute   
-  { ...  } 
+public class MaxWordsAttribute : ValidationAttribute   
+{ ...  } 
 }
 ```
 - To implement the validation logic, you need to override one of the IsValid methods provided by the base class.
@@ -916,37 +916,37 @@ namespace MvcMusicStore.Infrastructure {
 - (the ValidationContext parameter gives you access to the model type, model object instance, and friendly display name of the property you are validating, among other pieces of information).
 ```
 public class MaxWordsAttribute : ValidationAttribute {    
-  public MaxWordsAttribute(int maxWords)   {       
-    _maxWords = maxWords;   
-  } 
-  protected override ValidationResult IsValid (object value, ValidationContext validationContext)   {   
-    if (value != null) {           
-      var valueAsString = value.ToString();           
-      if (valueAsString.Split(' ').Length > _maxWords) {               
-        return new ValidationResult("Too many words!");           
-      }       
-    }
-    return ValidationResult.Success;   
-  } 
+public MaxWordsAttribute(int maxWords)   {       
+  _maxWords = maxWords;   
+} 
+protected override ValidationResult IsValid (object value, ValidationContext validationContext)   {   
+  if (value != null) {           
+    var valueAsString = value.ToString();           
+    if (valueAsString.Split(' ').Length > _maxWords) {               
+      return new ValidationResult("Too many words!");           
+    }       
+  }
+  return ValidationResult.Success;   
+} 
 }
 ```
 - The problem with the last block of code is the hard-coded error message
 ```
 public class MaxWordsAttribute : ValidationAttribute {    
-  public MaxWordsAttribute(int maxWords) :base("{0} has too many words.") 
-  {       
-    _maxWords = maxWords;   
-  } 
-  protected override ValidationResult IsValid (object value, ValidationContext validationContext)   {   
-    if (value != null) {           
-      var valueAsString = value.ToString();           
-      if (valueAsString.Split(' ').Length > _maxWords) { 
-        var errorMessage = FormatErrorMessage(validationContext.DisplayName);
-        return new ValidationResult(errorMessage);           
-      }       
-    }
-    return ValidationResult.Success;   
-  } 
+public MaxWordsAttribute(int maxWords) :base("{0} has too many words.") 
+{       
+  _maxWords = maxWords;   
+} 
+protected override ValidationResult IsValid (object value, ValidationContext validationContext)   {   
+  if (value != null) {           
+    var valueAsString = value.ToString();           
+    if (valueAsString.Split(' ').Length > _maxWords) { 
+      var errorMessage = FormatErrorMessage(validationContext.DisplayName);
+      return new ValidationResult(errorMessage);           
+    }       
+  }
+  return ValidationResult.Success;   
+} 
 }
 ```
 ### IValidatableObject
@@ -958,12 +958,12 @@ public class MaxWordsAttribute : ValidationAttribute {
 - the code uses the C# yield return syntax to build the enumerable return value
 ```
 public class Order : IValidatableObject {   
-  public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)   {       
-      if (LastName != null && LastName.Split(' ').Length > 10)       {           
-        yield return new ValidationResult("The last name has too many words!", new []{"LastName"});       
-      }   
-  }   
-  // rest of Order implementation and properties  // 
+public IEnumerable<ValidationResult> Validate(ValidationContext validationContext)   {       
+    if (LastName != null && LastName.Split(' ').Length > 10)       {           
+      yield return new ValidationResult("The last name has too many words!", new []{"LastName"});       
+    }   
+}   
+// rest of Order implementation and properties  // 
 }
 ```
 
@@ -1004,11 +1004,11 @@ public string Password { get; set; }
 ```
 ### UIHint 
 - The UIHint attribute gives the ASP.NET MVC runtime the name of a template to use when rendering output with the templated helpers (such as DisplayFor and EditorFor).
-  
+
 ### HiddenInput 
 - Hidden inputs are a great way to keep information in a form so the browser will send the data back to the server, but the user won’t be able to see or edit the data  
 - The HiddenInput attribute lives in the System.Web.Mvc namespace and tells the runtime to render an input element with a type of hidden. 
-  
+
 ### Membership, Authorization, and Security
 - Requiring login with the Authorize Attribute   
 - Requiring role membership using the Authorize Attribute 
@@ -1032,9 +1032,9 @@ public string Password { get; set; }
 ```
 [Authorize]       
 public ActionResult Buy(int id) {           
-  var album = GetAlbums().Single(a => a.AlbumId == id);
-  //Charge the user and ship the album!!!           
-  return View(album);       
+var album = GetAlbums().Single(a => a.AlbumId == id);
+//Charge the user and ship the album!!!           
+return View(album);       
 }
 ```
 ### USING URL AUTHORIZATION
@@ -1045,12 +1045,12 @@ public ActionResult Buy(int id) {
 -  With ```ASP.NET Web Forms``` (NOT MVC), you can secure a directory on your site by locking it down in the ```web.config```:
 ```
 <location path= "Admin" allowOverride="false"> 
-  <system.web>  
-    <authorization>    
-      <allow roles= "Administrator" />    
-      <deny users="?" />  
-    </authorization> 
-  </system.web> 
+<system.web>  
+  <authorization>    
+    <allow roles= "Administrator" />    
+    <deny users="?" />  
+  </authorization> 
+</system.web> 
 </location>
 ```
 - ```With MVC``` that approach ```won’t work``` so well for two reasons
@@ -1067,13 +1067,13 @@ public ActionResult Buy(int id) {
 ```
 IPrincipal user = httpContext.User; 
 if (!user.Identity.IsAuthenticated) {       
-  return false; 
+return false; 
 }
 if (_usersSplit.Length > 0 &&  !_usersSplit.Contains(user.Identity.Name, StringComparer.OrdinalIgnoreCase)) {
-  return false; 
+return false; 
 }
 if (_rolesSplit.Length > 0 && !_rolesSplit.Any(user.IsInRole)) {       
-  return false; 
+return false; 
 }
 return true;
 
@@ -1088,7 +1088,7 @@ this redirection is handled by the FormsAuthenticationModule OnLeave method,
 which instead redirects to the application login page defi ned in the application’s web.config, 
 as shown here:
 <authentication mode="Forms"> 
-  <forms loginUrl="~/Account/LogOn" timeout="2880" /> 
+<forms loginUrl="~/Account/LogOn" timeout="2880" /> 
 </authentication>
 This redirection address includes a return URL, 
 so after completing login successfully, 
@@ -1112,8 +1112,8 @@ the Account LogOn action redirects to the originally requested page.
 - To register the AuthorizeAttribute as a global fi lter, add it to the global fi lters collection in the RegisterGlobalFilters method, located in \App_Start\FilterConfig.cs:
 ```
 public static void RegisterGlobalFilters(GlobalFilterCollection filters) {
-  filters.Add(new System.Web.Mvc.AuthorizeAttribute());    
-  filters.Add(new HandleErrorAttribute()); 
+filters.Add(new System.Web.Mvc.AuthorizeAttribute());    
+filters.Add(new HandleErrorAttribute()); 
 }
 ```
 - GLOBAL AUTHORIZATION IS GLOBAL ONLY TO MVC
@@ -1124,8 +1124,8 @@ public static void RegisterGlobalFilters(GlobalFilterCollection filters) {
 // // GET: /Account/Login 
 [AllowAnonymous] 
 public ActionResult Login(string returnUrl) {
-  ViewBag.ReturnUrl = returnUrl;       
-  return View(); 
+ViewBag.ReturnUrl = returnUrl;       
+return View(); 
 }
 
 // This way, even if you register the AuthorizeAttribute as a global filter, users can access the login actions.
@@ -1185,8 +1185,8 @@ followed by the inevitable SuperAdmin and the equally inevitable SuperSuperAdmin
 ```
 public class ApplicationUser : IdentityUser 
 {   
-  public string Address { get; set; }   
-  public string TwitterHandle { get; set; } 
+public string Address { get; set; }   
+public string TwitterHandle { get; set; } 
 }
 
 ```
@@ -1214,12 +1214,12 @@ public class ApplicationUser : IdentityUser
 - The example code to implement Google provider support is already included in Startup.Auth.cs, 
 ```
 public partial class Startup {       
-  public void ConfigureAuth(IAppBuilder app)       {             
-  // Use a cookie to temporarily store information about              
-  // a user logging in with a third party login provider                         
-    app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
-    app.UseGoogleAuthentication();       
-  } 
+public void ConfigureAuth(IAppBuilder app)       {             
+// Use a cookie to temporarily store information about              
+// a user logging in with a third party login provider                         
+  app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+  app.UseGoogleAuthentication();       
+} 
 }
 
 ```
@@ -1229,14 +1229,14 @@ public partial class Startup {
 - Facebook authentication using the following call in Startup.Auth.cs:
 ```
 public partial class Startup {       
-  public void ConfigureAuth(IAppBuilder app) {             
-    // Use a cookie to temporarily store information about              
-    // a user logging in with a third party login provider                            
-    app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
-    app.UseFacebookAuthentication(                
-      appId: "123456789012",                
-      appSecret: "abcdefabcdefdecafbad");       
-  } 
+public void ConfigureAuth(IAppBuilder app) {             
+  // Use a cookie to temporarily store information about              
+  // a user logging in with a third party login provider                            
+  app.UseExternalSignInCookie(DefaultAuthenticationTypes.ExternalCookie);
+  app.UseFacebookAuthentication(                
+    appId: "123456789012",                
+    appSecret: "abcdefabcdefdecafbad");       
+} 
 }
 
 ```
@@ -1250,8 +1250,8 @@ public partial class Startup {
 [RequireHttps] 
 [AllowAnonymous] 
 public ActionResult Login(string returnUrl) {
-  ViewBag.ReturnUrl = returnUrl;
-  return View();
+ViewBag.ReturnUrl = returnUrl;
+return View();
 }
 ```
 - Additionally, using HTTPS with Google authentication is important. 
@@ -1338,15 +1338,15 @@ Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
 @using Microsoft.Security.Application 
 ...
 @section scripts {    
-  @if(ViewBag.UserName != null) {    
-    <script type="text/javascript">        
-      $(function () {                
-        var msg = 'Welcome, @Encoder.JavaScriptEncode(                    
-        ViewBag.UserName, false)!';          
-        $("#welcome-message").html(msg).hide().show('slow');        
-      });    
-    </script>    
-  } 
+@if(ViewBag.UserName != null) {    
+  <script type="text/javascript">        
+    $(function () {                
+      var msg = 'Welcome, @Encoder.JavaScriptEncode(                    
+      ViewBag.UserName, false)!';          
+      $("#welcome-message").html(msg).hide().show('slow');        
+    });    
+  </script>    
+} 
 }
 ```
 ### Threat: Cross-Site Request Forgery
@@ -1389,15 +1389,15 @@ This handles most CSRF attacks — but not all of them.
 - HttpReferrer validation is handled using an ActionFilter, wherein you check to see whether the client that posted the form values was indeed your site:
 ```
 public class IsPostedFromThisSiteAttribute : AuthorizeAttribute {   
-  public override void OnAuthorize(AuthorizationContext filterContext)   {       
-    if (filterContext.HttpContext != null)       {           
-        if (filterContext.HttpContext.Request.UrlReferrer == null)               
-          throw new System.Web.HttpException("Invalid submission");
-        if (filterContext.HttpContext.Request.UrlReferrer.Host !="mysite.com")                   
-          throw new System.Web.HttpException("This form wasn't submitted from this site!");       
-     }   
-   } 
- }
+public override void OnAuthorize(AuthorizationContext filterContext)   {       
+  if (filterContext.HttpContext != null)       {           
+      if (filterContext.HttpContext.Request.UrlReferrer == null)               
+        throw new System.Web.HttpException("Invalid submission");
+      if (filterContext.HttpContext.Request.UrlReferrer.Host !="mysite.com")                   
+        throw new System.Web.HttpException("This form wasn't submitted from this site!");       
+   }   
+ } 
+}
 
 ```
 - You can then use this fi lter on the Register method, as follows:
@@ -1436,8 +1436,8 @@ Response.Cookies["MyCookie].HttpOnly=true
 - the best—way to deal with over-posting is to avoid binding directly to the data model. using a ```ViewModel```
 ```
 public class ReviewViewModel { 
-  public string Name { get; set; } 
-  public string Comment { get; set; } 
+public string Name { get; set; } 
+public string Comment { get; set; } 
 }
 ```
 - http://bradwilson.typepad.com/ blog/2010/01/input-validation-vs-model-validation-in-aspnet-mvc. html.
@@ -1457,14 +1457,14 @@ return RedirectToLocal(returnUrl);
 -  You may want to take additional actions when an open redirect is detected.
 ```
 private ActionResult RedirectToLocal(string returnUrl) {  
-  if (Url.IsLocalUrl(returnUrl))  {    
-    return Redirect(returnUrl);  }  
-  else  {     
-    // Actions on for detected open redirect go here.     
-    string message = string.Format("Open redirect to to {0} detected.", returnUrl);     
-    ErrorSignal.FromCurrentContext().Raise(new System.Security.SecurityException(message));     
-    return RedirectToAction("SecurityWarning", "Home");  
-  } 
+if (Url.IsLocalUrl(returnUrl))  {    
+  return Redirect(returnUrl);  }  
+else  {     
+  // Actions on for detected open redirect go here.     
+  string message = string.Format("Open redirect to to {0} detected.", returnUrl);     
+  ErrorSignal.FromCurrentContext().Raise(new System.Security.SecurityException(message));     
+  return RedirectToAction("SecurityWarning", "Home");  
+} 
 }
 
 ```
@@ -1477,24 +1477,24 @@ private ActionResult RedirectToLocal(string returnUrl) {
 ### Using Conﬁ guration Transforms 
 - recommend you use web.config transforms to manage the customErrors setting based on the build confi guration
 ```
- <system.web>
-  <compilation xdt:Transform="RemoveAttributes(debug)" /> 
-  <customErrors defaultRedirect="GenericError.htm"       
-  mode="RemoteOnly" xdt:Transform="Replace">       
-    <error statusCode="500" redirect="InternalError.htm"/>     
-  </customErrors>
- </system.web>
+<system.web>
+<compilation xdt:Transform="RemoveAttributes(debug)" /> 
+<customErrors defaultRedirect="GenericError.htm"       
+mode="RemoteOnly" xdt:Transform="Replace">       
+  <error statusCode="500" redirect="InternalError.htm"/>     
+</customErrors>
+</system.web>
 ```
 ### Using Retail Deployment Conﬁ guration in Production
 ```
 <system.web>  
-  <deployment retail="true" /> 
+<deployment retail="true" /> 
 </system.web>
 
 Setting deployment / retail to true does a few things:
- ➤ customErrors mode is set to On (the most secure setting) 
- ➤ Trace output is disabled 
- ➤ Debug is disabled
+➤ customErrors mode is set to On (the most secure setting) 
+➤ Trace output is disabled 
+➤ Debug is disabled
 
 ```
 ### Using a Dedicated Error Logging System
@@ -1509,10 +1509,10 @@ Setting deployment / retail to true does a few things:
 - is aliased to the $ sign (because $ requires less typing and is a legal function name in JavaScript)
 ```
 $(function () {
-   $("#album-list img").mouseover(function () {
-       $(this).animate({ height: '+=25', width: '+=25' })
-              .animate({ height: '-=25', width: '-=25' });
-   });
+ $("#album-list img").mouseover(function () {
+     $(this).animate({ height: '+=25', width: '+=25' })
+            .animate({ height: '-=25', width: '-=25' });
+ });
 })
 ```
 - The first line of code invokes the jQuery function ($) and passes an anonymous JavaScript function as the first parameter
@@ -1544,7 +1544,7 @@ $("a:even") Find evenly numbered anchor tags
 - The core jQuery library is the fi le named jquery-<version>.js
 -  a jQuery script reference is included in the footer of the site layout (/Views/Shared/_Layout.cshtml), 
 ```
-  <script src="~/Scripts/jquery-1.10.2.js"></script>
+<script src="~/Scripts/jquery-1.10.2.js"></script>
 ```
 - Razor view engine will resolve the ~ operator to the root of the current website
 - the type attribute as text/javascript isn’t needed in HTML 5.
@@ -1552,13 +1552,13 @@ $("a:even") Find evenly numbered anchor tags
 ```
 @Scripts.Render("~/bundles/jquery")
 ```
- - NOTE The previous call renders the predefi ned "jquery" script bundle from /App_Start/BundleConfig.cs.
+- NOTE The previous call renders the predefi ned "jquery" script bundle from /App_Start/BundleConfig.cs.
 ```
 public static void RegisterBundles(BundleCollection bundles) 
 {
-  bundles.Add(new ScriptBundle("~/bundles/jquery").Include( 
-  "~/Scripts/jquery-{version}.js"));
-  //Other bundles removed for brevity... 
+bundles.Add(new ScriptBundle("~/bundles/jquery").Include( 
+"~/Scripts/jquery-{version}.js"));
+//Other bundles removed for brevity... 
 }
 ```
 ### Visual Studio shows IntelliSense based on method names and any inline triple-slash comments included in scripts.
@@ -1585,35 +1585,35 @@ public static void RegisterBundles(BundleCollection bundles)
 - Ajax helpers are available through the Ajax property inside a Razor view. 
 - Like HTML helpers, most of the methods on this property are extension methods (except for the AjaxHelper type).
 - The ActionLink method of the Ajax property creates an anchor tag with asynchronous 
- behavior.
- ```
- <div id="dailydeal">    
-   @Ajax.ActionLink("Click here to see today's special!",        
-   "DailyDeal",        
-   null,        
-   new AjaxOptions        
-   {            
-     UpdateTargetId = "dailydeal",            
-     InsertionMode = InsertionMode.Replace,            
-     HttpMethod = "GET"        },        
-     new {@class = "btn btn-primary"}
-   ) 
- </div>
+behavior.
+```
+<div id="dailydeal">    
+ @Ajax.ActionLink("Click here to see today's special!",        
+ "DailyDeal",        
+ null,        
+ new AjaxOptions        
+ {            
+   UpdateTargetId = "dailydeal",            
+   InsertionMode = InsertionMode.Replace,            
+   HttpMethod = "GET"        },        
+   new {@class = "btn btn-primary"}
+ ) 
+</div>
 
 //To have a response available, you’ll need a DailyDeal action on the HomeController:
 
 public ActionResult DailyDeal() {            
-    var album = GetDailyDeal();
-    return PartialView("_DailyDeal", album);        
+  var album = GetDailyDeal();
+  return PartialView("_DailyDeal", album);        
 }
 // Select an album and discount it by 50%        
 private Album GetDailyDeal() 
 {            
-  var album = storeDB.Albums                
-  .OrderBy(a => System.Guid.NewGuid())                
-  .First();
-  album.Price *= 0.5m;            
-  return album;        
+var album = storeDB.Albums                
+.OrderBy(a => System.Guid.NewGuid())                
+.First();
+album.Price *= 0.5m;            
+return album;        
 }
 //new Guids are generated in semi-random order, ordering by NewGuid essentially shuffl es them
 ```
@@ -1623,38 +1623,38 @@ private Album GetDailyDeal()
 - most of these attributes have a prefi x of data- (we say they are data dash attributes).
 ```
 $(function () {       
-  $("a[data-ajax]=true"). 
-  // do something   
+$("a[data-ajax]=true"). 
+// do something   
 });
 ```
 ### Ajax Forms - asynchronous forms
 ```
 <div class="panel panel-default">    
-  <div class="panel-heading">Artist search</div>
-  <div class="panel-body">       
-   @using (Ajax.BeginForm("ArtistSearch", "Home", 
-   new AjaxOptions           
-   {               
-     InsertionMode = InsertionMode.Replace,               
-     HttpMethod = "GET",               
-     OnFailure = "searchFailed",               
-     LoadingElementId = "ajax-loader",               
-     UpdateTargetId = "searchresults",           
-   }))        
-   {            
-     <input type="text" name="q" />            
-     <input type="submit" value="search" />            
-     <img id="ajax-loader" 
-       src="@Url.Content("~/Images/ajax-loader.gif")" 
-       style="display:none" />        
-   }        
-   <div id="searchresults"></div>    
-  </div>
+<div class="panel-heading">Artist search</div>
+<div class="panel-body">       
+ @using (Ajax.BeginForm("ArtistSearch", "Home", 
+ new AjaxOptions           
+ {               
+   InsertionMode = InsertionMode.Replace,               
+   HttpMethod = "GET",               
+   OnFailure = "searchFailed",               
+   LoadingElementId = "ajax-loader",               
+   UpdateTargetId = "searchresults",           
+ }))        
+ {            
+   <input type="text" name="q" />            
+   <input type="submit" value="search" />            
+   <img id="ajax-loader" 
+     src="@Url.Content("~/Images/ajax-loader.gif")" 
+     style="display:none" />        
+ }        
+ <div id="searchresults"></div>    
+</div>
 </div>
 ```
 ```
 function searchFailed() {   
-  $("#searchresults").html("Sorry, there was a problem with the search."); 
+$("#searchresults").html("Sorry, there was a problem with the search."); 
 }
 ```
 -  Notice you’ve specifi ed a LoadingElementId as part of the options
@@ -1665,15 +1665,15 @@ function searchFailed() {
 ```
 public ActionResult ArtistSearch(string q) 
 {   
-  var artists = GetArtists(q);
-  return PartialView(artists); 
+var artists = GetArtists(q);
+return PartialView(artists); 
 }
 
 private List<Artist> GetArtists(string searchString) 
 {   
-  return storeDB.Artists       
-  .Where(a => a.Name.Contains(searchString))       
-  .ToList(); 
+return storeDB.Artists       
+.Where(a => a.Name.Contains(searchString))       
+.ToList(); 
 }
 
 ```
@@ -1694,7 +1694,7 @@ public string  Title { get; set; }
 - For example, the last few lines of /Views/Account/Login.cshtml are as follows:
 ```
 @section Scripts {    
-  @Scripts.Render("~/bundles/jqueryval") 
+@Scripts.Render("~/bundles/jqueryval") 
 }
 ```
 - the bundle will include both jquery.validate.js and jquery.validate.unobtrusive.js—everything you need for unobtrusive validation based on jQuery Validation.
@@ -1706,11 +1706,11 @@ bundles.Add(new ScriptBundle("~/bundles/jqueryval")
 - By default, unobtrusive JavaScript and client-side validation are enabled. 
 - root-level web.config fi le in a new application, you’ll see the following appSettings confi guration section:
 ```
- <appSettings>   
-   <add key="ClientValidationEnabled" value="true"/>   
-   <add key="UnobtrusiveJavaScriptEnabled" value="true"/> 
- </appSettings>
- ```
+<appSettings>   
+ <add key="ClientValidationEnabled" value="true"/>   
+ <add key="UnobtrusiveJavaScriptEnabled" value="true"/> 
+</appSettings>
+```
 - The jqueryval bundle references two scripts
 ```
 - The first reference is to the minifi ed jQuery Validation plugin
@@ -1737,7 +1737,7 @@ public string   Title { get; set; }
 public class MaxWordsAttribute : ValidationAttribute,  IClientValidatable 
 ...
 public IEnumerable<ModelClientValidationRule> GetClientValidationRules(
-  ModelMetadata metadata, ControllerContext context) 
+ModelMetadata metadata, ControllerContext context) 
 ...
 ```
 - Inside of CustomValidators.js, adding two additional references will give you all the IntelliSense you need. Alternatively, you could add these references to _references.js.
@@ -1768,14 +1768,14 @@ data-autocomplete-source="@Url.Action("QuickSearch", "Home")" />
 ```
 public ActionResult QuickSearch(string term) 
 {   
-  var artists = GetArtists(term).Select(a => new {value = a.Name});   
-  return Json(artists, JsonRequestBehavior.AllowGet); 
+var artists = GetArtists(term).Select(a => new {value = a.Name});   
+return Json(artists, JsonRequestBehavior.AllowGet); 
 } 
 private List<Artist> GetArtists(string searchString) 
 {   
-  return storeDB.Artists       
-    .Where(a => a.Name.Contains(searchString))       
-    .ToList(); 
+return storeDB.Artists       
+  .Where(a => a.Name.Contains(searchString))       
+  .ToList(); 
 }
 ```
 ### JSON HIJACKING
@@ -1783,3 +1783,75 @@ private List<Artist> GetArtists(string searchString)
 - If you need to send JSON in response to a GET, using ```JsonRequestBehavior.AllowGet``` as the second parameter to the Json method.
 ### jQuery.ajax for Maximum Flexibility 
 ### Bootstrap Plugins 
+### IMPROVING AJAX PERFORMANCE
+- http://msdn.microsoft.com/en-us/library/bg182326.aspx
+### Using Content Delivery Networks 
+-  script source URL starts with two slashes, omitting the usual http: or https: when you’re requesting scripts from a CDN so your references will work regardless of whether your page uses HTTP or HTTPS
+```
+<script src="//ajax.aspnetcdn.com/ajax/jQuery/jquery-1.10.2.min.js"       type="text/javascript"></script>
+```
+### Script Optimizations 
+### Bundling and Miniﬁ cation
+```
+@Scripts.Render("~/bundles/jquery") 
+@Styles.Render("~/Content/css")
+```
+### Routing
+-  a ```URI``` just ```identifies a resource```, but a ```URL``` also tells you ```how to get it```
+- ```URL``` itself, ```Uniform Resource Locator```
+- ```URI``` generally stands for ```Uniform Resource Identifi er```
+-  A URI is a string that identifies a resource. All URLs are technically URIs
+-  guidelines for high-quality URLs
+```
+➤ A domain name that is easy to remember and easy to spell
+➤ Short URLs
+➤ Easy-to-type URLs
+➤ URLs that refl ect the site structure
+➤ URLs that are hackable to allow users to move to higher levels of the information architecture by hacking off the end of the URL
+➤ Persistent URLs, which don’t change
+```
+### Comparing Routing to URL Rewriting 
+- The key difference is that URL rewriting is focused on mapping one URL to another URL
+### Routing Approaches 
+- traditional routing
+- attribute routing
+### Route URLs 
+- in ```Global.asax.cs```,  ```Application_Start``` method contains a call to the ```RegisterRoutes``` method.
+- ```RegisterRoutes``` method is the central control point for your routes and is located in the ```~/App_Start/RouteConfig.cs```
+- more than one URL for your action
+```
+[Route("")] 
+[Route("home")] 
+[Route("home/index")] 
+public ActionResult Index() {    
+  return View(); 
+}
+// your home page to be accessible through the URLs /, /home, and /home/index. 
+```
+### Route Values
+- route parameter:
+```
+[Route("person/{id}")] 
+public ActionResult Details(int id) 
+{    
+  // Do some work    
+  return View(); 
+}
+```
+- ```RouteValueDictionary``` accessible via the ```RequestContext```
+### Controller Routes
+- When you defi ne a route on the controller class, you can use a ```special route parameter``` named ```action```, and it serves as a placeholder for any action name
+```
+[Route("home/{action}")] public class HomeController : Controller 
+{    
+  public ActionResult Index()    
+  {        
+    return View();    
+  }
+  public ActionResult About()    
+  {        
+    return View();    
+  }
+}
+```
+- When you specify a route attribute at the action level, you’re overriding anything specifi ed at the controller level
