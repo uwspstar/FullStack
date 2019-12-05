@@ -1747,3 +1747,39 @@ public IEnumerable<ModelClientValidationRule> GetClientValidationRules(
 ```
 ### jQuery UI
 - jQuery UI is a jQuery plugin that includes both effects and widgets.
+-  NuGet package (Install-Package jQuery.UI.Combined)
+```
+@Scripts.Render("~/bundles/jquery") @Scripts.Render("~/bundles/bootstrap")       
+<script src="~/Scripts/jquery-ui-1.10.3.min.js">
+</script> @RenderSection("scripts", required: false
+```
+- create a version-independent bundle in ```/App_Start/BundleConfig.cs:```
+```
+bundles.Add(new ScriptBundle("~/bundles/jqueryui")
+.Include( "~/Scripts/jquery-ui-{version}.js"));
+```
+### Autocomplete with jQuery UI 
+```
+<input type="text" name="q"         
+data-autocomplete-source="@Url.Action("QuickSearch", "Home")" />
+```
+
+### Building the Data Sourc
+```
+public ActionResult QuickSearch(string term) 
+{   
+  var artists = GetArtists(term).Select(a => new {value = a.Name});   
+  return Json(artists, JsonRequestBehavior.AllowGet); 
+} 
+private List<Artist> GetArtists(string searchString) 
+{   
+  return storeDB.Artists       
+    .Where(a => a.Name.Contains(searchString))       
+    .ToList(); 
+}
+```
+### JSON HIJACKING
+- By default, the ASP.NET MVC framework does not allow you to respond to an HTTP GET request with a JSON payload. 
+- If you need to send JSON in response to a GET, using ```JsonRequestBehavior.AllowGet``` as the second parameter to the Json method.
+### jQuery.ajax for Maximum Flexibility 
+### Bootstrap Plugins 
