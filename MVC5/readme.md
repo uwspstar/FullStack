@@ -1746,3 +1746,4 @@ public IEnumerable<ModelClientValidationRule> GetClientValidationRules(
 /// <reference path="jquery.validate.unobtrusive.js" />
 ```
 ### jQuery UI
+- jQuery UI is a jQuery plugin that includes both effects and widgets.
