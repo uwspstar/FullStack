@@ -50,9 +50,22 @@ public class StringHelper
 Instead we have to call it as shown below.
 string result = StringHelper.ChangeFirstLetterCase(strName);
 
-Convert ChangeFirstLetterCase() method to an extension method 
-Convert ChangeFirstLetterCase() method to an extension method t
+Convert ChangeFirstLetterCase() method to an extension method
 string result = strName.ChangeFirstLetterCase();
+
+To convert ChangeFirstLetterCase() method to an extension method, make the following 2 changes
+1. Make StringHelper static class
+2. The type the method extends should be passed as a first parameter with this keyword preceeding it.
+
+
+public static class StringHelper
+{
+    public static string ChangeFirstLetterCase(this string inputString)
+    {
+        return inputString;
+    }
+}
+
 ```
 
 
