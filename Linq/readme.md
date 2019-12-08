@@ -67,6 +67,12 @@ public static class StringHelper
 }
 
 ```
+- Since all LINQ extension methods are defined in Enumerable class, the syntax will be as shown below.
+```
+List<int> Numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+
+IEnumerable<int> EvenNumbers = Enumerable.Where(Numbers, n => n % 2 == 0); 
+```
 ### WHERE
 - 2 overloaded versions of WHERE extension method in Enumerable class
 ```
@@ -77,6 +83,38 @@ public static IEnumerable<TSource> Where<TSource>(
 public static IEnumerable<TSource> Where<TSource>(
     this IEnumerable<TSource> source,
     Func<TSource, int, bool> predicate);
+```
+### LINQ Aggregate
+```
+int[] Numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
+int smallestNumber = Numbers.Min();
+int smallestEvenNumber = Numbers.Where(n => n % 2 == 0).Min();
+int largestNumber = Numbers.Max();
+int largestEvenNumber = Numbers.Where(n => n % 2 == 0).Max();
+int sumOfAllNumbers = Numbers.Sum();
+int sumOfAllEvenNumbers = Numbers.Where(n => n % 2 == 0).Sum();
+int countOfAllNumbers = Numbers.Count();
+int countOfAllEvenNumbers = Numbers.Where(n => n % 2 == 0).Count();
+double averageOfAllNumbers = Numbers.Average();
+double averageOfAllEvenNumbers = Numbers.Where(n => n % 2 == 0).Average();
+
+```
+### How Aggregate() function works?
+```
+string[] countries = { "India", "US", "UK", "Canada", "Australia" };
+string result = countries.Aggregate((a, b) => a + ", " + b);
+
+Step 1. First "India" is concatenated with "US" to produce result "India, US"
+
+Step 2. Result in Step 1 is then concatenated with "UK" to produce result "India, US, UK"
+
+Step 3: Result in Step 2 is then concatenated with "Canada" to produce result "India, US, UK, Canada"
+
+This goes on until the last element in the array to produce the final single string "India, US, UK, Canada, Australia"
+
+One of the overloaded version of Aggregate() function has a Seed parameter. 
+If we pass 10 as the value for Seed parameter
+int result = Numbers.Aggregate(10, (a, b) => a * b);
 ```
 
 
