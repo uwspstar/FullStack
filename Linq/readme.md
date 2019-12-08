@@ -73,20 +73,7 @@ List<int> Numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 IEnumerable<int> EvenNumbers = Enumerable.Where(Numbers, n => n % 2 == 0); 
 ```
-### WHERE
-- The WHERE standard query operator belong to Restriction Operators category in LINQ.
-- 2 overloaded versions of WHERE extension method in Enumerable class
-```
-public static IEnumerable<TSource> Where<TSource>(
-    this IEnumerable<TSource> source,
-    Func<TSource, bool> predicate);
 
-public static IEnumerable<TSource> Where<TSource>(
-    this IEnumerable<TSource> source,
-    Func<TSource, int, bool> predicate);
-```
-### Predicate?
-- A predicate is a function to test each element for a condition
  
 ### LINQ Aggregate
 ```
@@ -126,6 +113,36 @@ Step 2: Result (20) in Step 1 is then multiplied with 3 (20X3) to produce result
 Step 3: Result (60) in Step 2 is then multiplied with 4 (60X4) to produce result 240
 Step 4: Result (240) in Step 3 is then multiplied with 5 (240X5) to produce final result 1200
 ```
+### WHERE
 
+- The WHERE standard query operator belong to Restriction Operators category in LINQ.
+- 2 overloaded versions of WHERE extension method in Enumerable class
 
+```
+public static IEnumerable<TSource> Where<TSource>(
+
+    this IEnumerable<TSource> source,
+
+    Func<TSource, bool> predicate);
+
+public static IEnumerable<TSource> Where<TSource>(
+
+    this IEnumerable<TSource> source,
+
+    Func<TSource, int, bool> predicate);
+
+```
+
+### Predicate?
+
+- A predicate is a function to test each element for a condition
+```
+IEnumerable<int> evenNumbers = numbers.Where(num => num % 2 == 0);
+
+can be rewritten as shown below
+
+Func<int, bool> predicate = i => i % 2 == 0;
+IEnumerable<int> evenNumbers = numbers.Where(predicate);
+```
+```
 
