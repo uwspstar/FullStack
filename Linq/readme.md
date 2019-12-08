@@ -120,15 +120,11 @@ Step 4: Result (240) in Step 3 is then multiplied with 5 (240X5) to produce fina
 
 ```
 public static IEnumerable<TSource> Where<TSource>(
-
     this IEnumerable<TSource> source,
-
     Func<TSource, bool> predicate);
 
 public static IEnumerable<TSource> Where<TSource>(
-
     this IEnumerable<TSource> source,
-
     Func<TSource, int, bool> predicate);
 
 ```
