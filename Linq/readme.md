@@ -67,6 +67,16 @@ public static class StringHelper
 }
 
 ```
+### WHERE
+- 2 overloaded versions of WHERE extension method in Enumerable class
+```
+public static IEnumerable<TSource> Where<TSource>(
+    this IEnumerable<TSource> source,
+    Func<TSource, bool> predicate);
 
+public static IEnumerable<TSource> Where<TSource>(
+    this IEnumerable<TSource> source,
+    Func<TSource, int, bool> predicate);
+```
 
 
