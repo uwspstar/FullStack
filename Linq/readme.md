@@ -74,6 +74,7 @@ List<int> Numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 IEnumerable<int> EvenNumbers = Enumerable.Where(Numbers, n => n % 2 == 0); 
 ```
 ### WHERE
+- The WHERE standard query operator belong to Restriction Operators category in LINQ.
 - 2 overloaded versions of WHERE extension method in Enumerable class
 ```
 public static IEnumerable<TSource> Where<TSource>(
@@ -84,6 +85,9 @@ public static IEnumerable<TSource> Where<TSource>(
     this IEnumerable<TSource> source,
     Func<TSource, int, bool> predicate);
 ```
+### Predicate?
+- A predicate is a function to test each element for a condition
+ 
 ### LINQ Aggregate
 ```
 int[] Numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
@@ -111,10 +115,17 @@ Step 2. Result in Step 1 is then concatenated with "UK" to produce result "India
 Step 3: Result in Step 2 is then concatenated with "Canada" to produce result "India, US, UK, Canada"
 
 This goes on until the last element in the array to produce the final single string "India, US, UK, Canada, Australia"
-
-One of the overloaded version of Aggregate() function has a Seed parameter. 
+```
+- One of the overloaded version of Aggregate() function has a Seed parameter. 
+```
 If we pass 10 as the value for Seed parameter
 int result = Numbers.Aggregate(10, (a, b) => a * b);
+
+Step 1: Multiply (10X2) to produce result 20
+Step 2: Result (20) in Step 1 is then multiplied with 3 (20X3) to produce result 60
+Step 3: Result (60) in Step 2 is then multiplied with 4 (60X4) to produce result 240
+Step 4: Result (240) in Step 3 is then multiplied with 5 (240X5) to produce final result 1200
 ```
+
 
 
