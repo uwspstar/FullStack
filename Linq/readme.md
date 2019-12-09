@@ -140,5 +140,8 @@ can be rewritten as shown below
 Func<int, bool> predicate = i => i % 2 == 0;
 IEnumerable<int> evenNumbers = numbers.Where(predicate);
 ```
+ 
+### SelectMany
 ```
-
+IEnumerable<string> allSubjects = Student.GetAllStudetns().SelectMany(s => s.Subjects);
+```
