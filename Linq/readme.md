@@ -155,3 +155,26 @@ IEnumerable<string> allSubjects = (from student in Student.GetAllStudetns()
                                  select subject)
                                  .Distinct();
 ```
+```
+var result = Student.GetAllStudetns().SelectMany(s => s.Subjects, (student, subject) =>
+    new { StudentName = student.Name, Subject = subject });
+
+foreach (var v in result)
+{
+    Console.WriteLine(v.StudentName + " - " + v.Subject);
+}
+
+
+var result = from student in Student.GetAllStudetns()
+                    from subject in student.Subjects
+                    select new { StudnetName = student.Name, Subject = subject };
+
+foreach (var v in result)
+{
+    Console.WriteLine(v.StudnetName + " - " + v.Subject);
+}
+
+```
+
+
+
