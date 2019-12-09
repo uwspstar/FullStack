@@ -144,4 +144,8 @@ IEnumerable<int> evenNumbers = numbers.Where(predicate);
 ### SelectMany
 ```
 IEnumerable<string> allSubjects = Student.GetAllStudetns().SelectMany(s => s.Subjects);
+
+IEnumerable<string> allSubjects = from student in Student.GetAllStudetns()
+                                from subject in student.Subjects
+                                select subject;
 ```
