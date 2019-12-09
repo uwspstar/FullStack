@@ -175,6 +175,25 @@ foreach (var v in result)
 }
 
 ```
-
-
+### Select vs SelectMany 
+- in this example, the Select() method returns List of List<string>
+```
+    IEnumerable<List<string>> result = Student.GetAllStudetns().Select(s => s.Subjects);
+foreach (List<string> stringList in result)
+{
+    foreach (string str in stringList)
+    {
+        Console.WriteLine(str);
+    }
+}
+```
+- SelectMany() on the other hand, flattens queries that return lists of lists into a single list. So in this case to print all the subjects we have to use just one foreach loop.
+```
+IEnumerable<string> result = Student.GetAllStudetns().SelectMany(s => s.Subjects);
+foreach (string str in result)
+{
+    Console.WriteLine(str);
+}
+```
+    
 
