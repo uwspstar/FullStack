@@ -239,3 +239,4 @@ IEnumerable<Student> result = from student in Student.GetAllStudetns()
 // Example 3: Reverses the items in the collection.
 IEnumerable<Student> result = students.Reverse();
 ```
+###  Partitioning Operators
