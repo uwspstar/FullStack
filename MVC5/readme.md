@@ -1855,3 +1855,7 @@ public ActionResult Details(int id)
 }
 ```
 - When you specify a route attribute at the action level, you’re overriding anything specifi ed at the controller level
+-  a URI just identifi es a resource, but a URL also tells you how to get it.
+ - The key difference is that URL rewriting is focused on mapping one URL to another URL
+ - Another key difference is that Routing also helps generate URLs using the same mapping rules that it uses to match incoming URLs. 
+ 
