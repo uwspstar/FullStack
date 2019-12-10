@@ -101,7 +101,8 @@ Step 2. Result in Step 1 is then concatenated with "UK" to produce result "India
 
 Step 3: Result in Step 2 is then concatenated with "Canada" to produce result "India, US, UK, Canada"
 
-This goes on until the last element in the array to produce the final single string "India, US, UK, Canada, Australia"
+This goes on until the last element in the array 
+to produce the final single string "India, US, UK, Canada, Australia"
 ```
 - One of the overloaded version of Aggregate() function has a Seed parameter. 
 ```
@@ -178,7 +179,7 @@ foreach (var v in result)
 ### Select vs SelectMany 
 - in this example, the Select() method returns List of List<string>
 ```
-    IEnumerable<List<string>> result = Student.GetAllStudetns().Select(s => s.Subjects);
+IEnumerable<List<string>> result = Student.GetAllStudetns().Select(s => s.Subjects);
 foreach (List<string> stringList in result)
 {
     foreach (string str in stringList)
@@ -197,4 +198,20 @@ foreach (string str in result)
 ```
 ### OrderBy, OrderByDescending, ThenBy, and ThenByDescending
 - OrderBy, OrderByDescending, ThenBy, and ThenByDescending can be used to sort data. Reverse method simply reverses the items in a given collection.    
+```
+// Example 1: Sort Students by Name in ascending order
+IEnumerable<Student> result = Student.GetAllStudents().OrderBy(s => s.Name);
 
+// Example 2: Rewrite Example 1 using SQL like syntax
+IEnumerable<Student> result = from student in Student.GetAllStudents()
+                              orderby student.Name
+                              select student;
+
+// Example 3: Sort Students by Name in descending order
+IEnumerable<Student> result = Student.GetAllStudents().OrderByDescending(s => s.Name);
+
+// Example 4: Rewrite Example 3 using SQL like syntax
+IEnumerable<Student> result = from student in Student.GetAllStudents()
+                              orderby student.Name descending
+                              select student;
+```
