@@ -215,3 +215,27 @@ IEnumerable<Student> result = from student in Student.GetAllStudents()
                               orderby student.Name descending
                               select student;
 ```
+- ```OrderBy``` or ```OrderByDescending``` work fine when we want to sort a collection just ```by one value``` or expression. 
+
+- If want to ```sort by more than one value``` or expression, that's when we use ```ThenBy``` or ```ThenByDescending``` along with OrderBy or OrderByDescending.
+
+- ```OrderBy``` or ```OrderByDescending``` performs the ```primary sort```. 
+- ```ThenBy``` or ```ThenByDescending``` is used for ```adding secondary sort```. 
+- Secondary Sort operators (ThenBy or ThenByDescending ) can be used more than once in the same LINQ query.
+```
+// Example 1: 
+// a) Sorts Students first by TotalMarks in ascending order(Primary Sort) 
+// b) The 4 Students with TotalMarks of 800, will then be sorted by Name in ascending order (First Secondary Sort)
+// c) The 2 Students with Name of John, will then be sorted by StudentID in ascending order (Second Secondary Sort)
+
+IEnumerable<Student> result = Student.GetAllStudetns()
+.OrderBy(s => s.TotalMarks).ThenBy(s => s.Name).ThenBy(s => s.StudentID);
+
+
+IEnumerable<Student> result = from student in Student.GetAllStudetns()
+                              orderby student.TotalMarks, student.Name, student.StudentID
+                              select student;
+                              
+// Example 3: Reverses the items in the collection.
+IEnumerable<Student> result = students.Reverse();
+```
