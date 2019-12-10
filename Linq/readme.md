@@ -195,5 +195,6 @@ foreach (string str in result)
     Console.WriteLine(str);
 }
 ```
-    
+### OrderBy, OrderByDescending, ThenBy, and ThenByDescending
+- OrderBy, OrderByDescending, ThenBy, and ThenByDescending can be used to sort data. Reverse method simply reverses the items in a given collection.    
 
