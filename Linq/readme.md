@@ -242,10 +242,26 @@ IEnumerable<Student> result = students.Reverse();
 ```
 ###  Partitioning Operators
 - Take method returns a specified number of elements from the start of the collection. The number of items to return is specified using the count parameter this method expects.
+```
+IEnumerable<string> result = countries.Take(3);
+
+IEnumerable<string> result = (from country in countries
+                           select country).Take(3);
+                                                   
+```
 - Skip method skips a specified number of elements in a collection and then returns the remaining elements. The number of items to skip is specified using the count parameter this method expects. 
+```
+IEnumerable<string> result = countries.Skip(3);
+```
 ```
 Please Note: For the same argument value, the Skip method returns all of the items that the Take method would not return.
 ```
 - TakeWhile method returns elements from a collection as long as the given condition specified by the predicate is true. 
+```
+IEnumerable<string> result = countries.TakeWhile(s => s.Length > 2);
+```
 - SkipWhile method skips elements in a collection as long as the given condition specified by the predicate is true, and then returns the remaining elements.
+```
+IEnumerable<string> result = countries.SkipWhile(s => s.Length > 2);
+```
 
