@@ -242,7 +242,7 @@ IEnumerable<Student> result = from student in Student.GetAllStudetns()
 // Example 3: Reverses the items in the collection.
 IEnumerable<Student> result = students.Reverse();
 ```
-###  Partitioning Operators
+### Partitioning Operators
 - Take method returns a specified number of elements from the start of the collection. The number of items to return is specified using the count parameter this method expects.
 ```
 IEnumerable<string> result = countries.Take(3);
@@ -265,12 +265,12 @@ IEnumerable<string> result = countries.TakeWhile(s => s.Length > 2);
 ```
 IEnumerable<string> result = countries.SkipWhile(s => s.Length > 2);
 ```
-### implementing paging using Skip and Take
+### Implementing paging using Skip and Take
 - http://csharp-video-tutorials.blogspot.com/2014/07/part-13-implement-paging-using-skip-and.html
 ```
 IEnumerable<Student> result = students.Skip((pageNumber - 1) * pageSize).Take(pageSize);
  ```
-### deferred execution vs Immediate execution
+### Deferred execution vs Immediate execution
 - http://csharp-video-tutorials.blogspot.com/2014/07/part-14-linq-query-deferred-execution.html
 - LINQ operators can be broadly classified into 2 categories based on the behaviour of query execution
 ```
