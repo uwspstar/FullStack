@@ -264,4 +264,7 @@ IEnumerable<string> result = countries.TakeWhile(s => s.Length > 2);
 ```
 IEnumerable<string> result = countries.SkipWhile(s => s.Length > 2);
 ```
-
+### implementing paging using Skip and Take
+```
+IEnumerable<Student> result = students.Skip((pageNumber - 1) * pageSize).Take(pageSize);
+ ```
