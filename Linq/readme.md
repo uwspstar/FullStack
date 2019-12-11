@@ -1,5 +1,6 @@
 # Linq
 - http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html
+- https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf
 
 - LINQ stands for Language Integrated Query. LINQ enables us to query any type of data store (SQL Server, XML documents, Objects in memory etc).
 - LINQ provider is a component between the LINQ query and the actual data source
@@ -240,3 +241,11 @@ IEnumerable<Student> result = from student in Student.GetAllStudetns()
 IEnumerable<Student> result = students.Reverse();
 ```
 ###  Partitioning Operators
+- Take method returns a specified number of elements from the start of the collection. The number of items to return is specified using the count parameter this method expects.
+- Skip method skips a specified number of elements in a collection and then returns the remaining elements. The number of items to skip is specified using the count parameter this method expects. 
+```
+Please Note: For the same argument value, the Skip method returns all of the items that the Take method would not return.
+```
+- TakeWhile method returns elements from a collection as long as the given condition specified by the predicate is true. 
+- SkipWhile method skips elements in a collection as long as the given condition specified by the predicate is true, and then returns the remaining elements.
+
