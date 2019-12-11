@@ -226,8 +226,10 @@ IEnumerable<Student> result = from student in Student.GetAllStudents()
 ```
 // Example 1: 
 // a) Sorts Students first by TotalMarks in ascending order(Primary Sort) 
-// b) The 4 Students with TotalMarks of 800, will then be sorted by Name in ascending order (First Secondary Sort)
-// c) The 2 Students with Name of John, will then be sorted by StudentID in ascending order (Second Secondary Sort)
+// b) The 4 Students with TotalMarks of 800, 
+will then be sorted by Name in ascending order (First Secondary Sort)
+// c) The 2 Students with Name of John, 
+will then be sorted by StudentID in ascending order (Second Secondary Sort)
 
 IEnumerable<Student> result = Student.GetAllStudetns()
 .OrderBy(s => s.TotalMarks).ThenBy(s => s.Name).ThenBy(s => s.StudentID);
@@ -253,9 +255,8 @@ IEnumerable<string> result = (from country in countries
 ```
 IEnumerable<string> result = countries.Skip(3);
 ```
-```
-Please Note: For the same argument value, the Skip method returns all of the items that the Take method would not return.
-```
+- For the same argument value, the Skip method returns all of the items that the Take method would not return.
+ 
 - TakeWhile method returns elements from a collection as long as the given condition specified by the predicate is true. 
 ```
 IEnumerable<string> result = countries.TakeWhile(s => s.Length > 2);
