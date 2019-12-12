@@ -328,10 +328,10 @@ a) keySelector - A function to extract a key from each element
 Dictionary<int, Student> result = listStudents.ToDictionary(x => x.StudentID);
 
 ```
-### ToLookup : Just like a dictionary, 
-```
-a Lookup is a collection of key/value pairs. A dictionary cannot contain keys with identical values, where as a Lookup can.
-```
+### ToLookup
+- Just like a dictionary, 
+- a Lookup is a collection of key/value pairs. A dictionary cannot contain keys with identical values, where as a Lookup can.
+
 ```
 // Group employees by JobTitle
 var employeesByJobTitle = listEmployees.ToLookup(x => x.JobTitle);
