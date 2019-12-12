@@ -403,3 +403,25 @@ var result = dbContext.Employees.AsEnumerable()
                       .Where(x => x.Gender == "Male")
                       .OrderByDescending(x => x.Salary).Take(5);
 ```
+### GroupBy
+- GroupBy creates and returns a sequence of IGrouping<K,V>
+- This operator takes a flat sequence of items, organize that sequence into groups (IGrouping<K,V>) based on a specific key and return groups of sequences. 
+```
+var employeeGroup = from employee in Employee.GetAllEmployees()
+                    group employee by employee.Department;
+
+foreach (var group in employeeGroup)
+{
+    Console.WriteLine("{0} - {1}", group.Key, group.Count());
+}
+```
+```
+var employeeGroup = from employee in Employee.GetAllEmployees()
+                  group employee by employee.Department into eGroup
+                  orderby eGroup.Key
+                  select new
+                  {
+                       Key = eGroup.Key,
+                       Employees = eGroup.OrderBy(x => x.Name)
+                  };
+```                                     
