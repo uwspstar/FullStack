@@ -303,8 +303,51 @@ IEnumerable<Student> result = (from student in listStudents
 List<int> result = numbers.ToList();
 ```
 - ToArray
-- ToDictionary
-- ToLookup
+```
+List<string> countries = new List<string> { "US", "India", "UK", "Australia", "Canada" };
+
+string[] result = (from country in countries
+                   orderby country ascending
+                   select country).ToArray();
+```
+                              
+- ToDictionary : Keys in the dictionary must be unique. 
+```
+Unhandled Exception: System.ArgumentException: An item with the same key has already been added.
+```
+```
+Dictionary<int, string> result = listStudents.ToDictionary(x => x.StudentID, x => x.Name);
+
+ToDictionary() that takes 2 parameters 
+a) keySelector - A function to extract a key from each element
+b) elementSelector - A function to produce a result element from each element in the
+
+overloaded of ToDictionary() that takes 1 parameter
+a) keySelector - A function to extract a key from each element
+
+Dictionary<int, Student> result = listStudents.ToDictionary(x => x.StudentID);
+
+```
+- ToLookup : Just like a dictionary, 
+```
+a Lookup is a collection of key/value pairs. A dictionary cannot contain keys with identical values, where as a Lookup can.
+```
+```
+// Group employees by JobTitle
+var employeesByJobTitle = listEmployees.ToLookup(x => x.JobTitle);
+
+Console.WriteLine("Employees Grouped By JobTitle");
+foreach (var kvp in employeesByJobTitle)
+{
+    Console.WriteLine(kvp.Key);
+    // Lookup employees by JobTitle
+    foreach (var item in employeesByJobTitle[kvp.Key])
+    {
+        Console.WriteLine("\t" + item.Name + "\t" + item.JobTitle + "\t" + item.City);
+    }
+}
+
+```
 - Cast
 - OfType
 - AsEnumerable 
