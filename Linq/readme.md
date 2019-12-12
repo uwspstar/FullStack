@@ -348,7 +348,35 @@ foreach (var kvp in employeesByJobTitle)
 }
 
 ```
-- Cast
-- OfType
+- Cast : attempts to convert all of the items within an existing collection to another type and return them in a new collection.
+```
+ArrayList list = new ArrayList();
+list.Add(1);
+list.Add(2);
+list.Add(3);
+
+// The following item causes an exception
+// list.Add("ABC");
+            
+IEnumerable<int> result = list.Cast<int>();
+```
+- OfType : return only elements of the specified type. The other type elements are simply ignored and excluded from the result set.
+```
+ArrayList list = new ArrayList();
+list.Add(1);
+list.Add(2);
+list.Add(3);
+list.Add("4");
+list.Add("ABC");
+
+IEnumerable<int> result = list.OfType<int>();
+```
+### When to use Cast over OfType and vice versa?
+- We would generally use Cast when the following 2 conditions are met
+```
+- 1. We want to cast all the items in the collection &
+- 2. We know for sure the collection contains only elements of the specified type
+```
+- If we want to filter the elements and return only the ones of the specified type, then we would use OfType.
 - AsEnumerable 
 - AsQueryable
