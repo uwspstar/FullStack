@@ -392,3 +392,14 @@ to a generic System.Linq.IQueryable<T>
 - The main use of AsQueryable operator is unit testing to mock a queryable data source using an in-memory data source. 
 
 ###  AsEnumerable 
+- use AsEnumerable operator to move query processing to the client side
+```
+1. The "inside part" that is the query before AsEnumerable operator is executed as Linq-to-SQL
+2. The "ouside part" that is the query after AsEnumerable operator is executed as Linq-to-Objects
+```
+- http://csharp-video-tutorials.blogspot.com/2014/07/part-17-asenumerable-and-asqueryable-in.html
+```
+var result = dbContext.Employees.AsEnumerable()
+                      .Where(x => x.Gender == "Male")
+                      .OrderByDescending(x => x.Salary).Take(5);
+```
