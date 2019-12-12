@@ -1,6 +1,7 @@
 
 # VSCODE shortcuts
 - https://github.com/uwspstar/FullStack/tree/master/VSCODE
+
 # Emoji
 ```
 On macOS control+command+space pulls up the Emoji keyboard
@@ -130,7 +131,6 @@ https://www.colorhexa.com/3f3151
 # Communication Protocols
 - https://github.com/uwspstar/FullStack/tree/master/Communication%20Protocols
 
-
 # Devices Matrics 
 https://material.io/tools/devices/
 
@@ -144,3 +144,5 @@ https://stackoverflow.com/questions/40844297/what-is-difference-between-axios-an
 
 # Linux
 - https://github.com/uwspstar/FullStack/tree/master/Linux
+# Regex tutorial
+- https://medium.com/factory-mind/regex-tutorial-a-simple-cheatsheet-by-examples-649dc1c3f285
