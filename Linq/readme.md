@@ -299,6 +299,9 @@ IEnumerable<Student> result = (from student in listStudents
 ```
 ### Conversion Operators in LINQ 
 - ToList
+```
+List<int> result = numbers.ToList();
+```
 - ToArray
 - ToDictionary
 - ToLookup
