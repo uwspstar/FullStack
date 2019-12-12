@@ -298,11 +298,11 @@ IEnumerable<Student> result = (from student in listStudents
                                select student).ToList();
 ```
 ### Conversion Operators in LINQ 
-- ToList
+### ToList
 ```
 List<int> result = numbers.ToList();
 ```
-- ToArray
+### ToArray
 ```
 List<string> countries = new List<string> { "US", "India", "UK", "Australia", "Canada" };
 
@@ -328,7 +328,7 @@ a) keySelector - A function to extract a key from each element
 Dictionary<int, Student> result = listStudents.ToDictionary(x => x.StudentID);
 
 ```
-- ToLookup : Just like a dictionary, 
+### ToLookup : Just like a dictionary, 
 ```
 a Lookup is a collection of key/value pairs. A dictionary cannot contain keys with identical values, where as a Lookup can.
 ```
@@ -348,7 +348,8 @@ foreach (var kvp in employeesByJobTitle)
 }
 
 ```
-- Cast : attempts to convert all of the items within an existing collection to another type and return them in a new collection.
+### Cast 
+- attempts to convert all of the items within an existing collection to another type and return them in a new collection.
 ```
 ArrayList list = new ArrayList();
 list.Add(1);
@@ -360,7 +361,8 @@ list.Add(3);
             
 IEnumerable<int> result = list.Cast<int>();
 ```
-- OfType : return only elements of the specified type. The other type elements are simply ignored and excluded from the result set.
+### OfType
+- return only elements of the specified type. The other type elements are simply ignored and excluded from the result set.
 ```
 ArrayList list = new ArrayList();
 list.Add(1);
@@ -378,5 +380,15 @@ IEnumerable<int> result = list.OfType<int>();
 - 2. We know for sure the collection contains only elements of the specified type
 ```
 - If we want to filter the elements and return only the ones of the specified type, then we would use OfType.
-- AsEnumerable 
-- AsQueryable
+
+### AsQueryable : 
+- There are 2 overloaded versions of this method. 
+```
+One overloaded version converts System.Collections.IEnumerable to System.Linq.IQueryable
+
+The other overloaded version converts a generic System.Collections.Generic.IEnumerable<T> 
+to a generic System.Linq.IQueryable<T>
+```
+- The main use of AsQueryable operator is unit testing to mock a queryable data source using an in-memory data source. 
+
+###  AsEnumerable 
