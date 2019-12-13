@@ -463,3 +463,7 @@ var employeeGroups = from employee in Employee.GetAllEmployees()
 int result = numbers.First();
 int result = numbers.FirstOrDefault(x => x % 2 == 100);
 ```
+### Last 
+- Very similar to First, except it returns the last element of the sequence.
+### LastOrDefault
+- Very similar to FirstOrDefault, except it returns the last element of the sequence
