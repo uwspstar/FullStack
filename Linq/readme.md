@@ -454,3 +454,12 @@ var employeeGroups = from employee in Employee.GetAllEmployees()
                     };
 ```
 ### Element Operators
+### First
+- If the sequence does not contain any elements or if no element in the sequence satisfies the condition then an InvalidOperationException is thrown.
+
+### FirstOrDefault
+- This is very similar to First, except that this method does ```not throw an exception```
+```
+int result = numbers.First();
+int result = numbers.FirstOrDefault(x => x % 2 == 100);
+```
