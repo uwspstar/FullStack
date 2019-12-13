@@ -467,3 +467,32 @@ int result = numbers.FirstOrDefault(x => x % 2 == 100);
 - Very similar to First, except it returns the last element of the sequence.
 ### LastOrDefault
 - Very similar to FirstOrDefault, except it returns the last element of the sequence
+### ElementAt 
+- Returns an element at a specified index. 
+- If the sequence is empty or if the provided index value is out of range, then an ArgumentOutOfRangeException is thrown.
+### ElementAtOrDefault
+- Similar to ElementAt except that this method does not throw an exception, 
+- if the sequence is empty or if the provided index value is out of range. Instead, a default value of the type that is expected is returned.
+```
+int result = numbers.ElementAt(0);
+```
+### Single
+- Single() method throws an exception if the sequence is empty or has more than one element.
+### SingleOrDefault
+- Very similar to Single(), except this method does not throw an exception when the sequence is empty or when no element in the sequence satisfies the given condition.
+```
+int result = numbers.Single();
+int result = numbers.SingleOrDefault(x => x % 2 == 0);
+```
+### DefaultIfEmpty
+- If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
+```
+IEnumerable<int> result = numbers.DefaultIfEmpty();
+// Since the sequence is empty, a sequence containing the specified default value (10) is returned.
+IEnumerable<int> result = numbers.DefaultIfEmpty(10);
+```
+
+
+
+
+
