@@ -491,7 +491,7 @@ IEnumerable<int> result = numbers.DefaultIfEmpty();
 // Since the sequence is empty, a sequence containing the specified default value (10) is returned.
 IEnumerable<int> result = numbers.DefaultIfEmpty(10);
 ```
-
+### Group Join
 
 
 
