@@ -1,6 +1,7 @@
 # IEnumerable
 - https://jeremybytes.blogspot.com/2012/05/next-please-closer-look-at-ienumerable.html
-
+- use "foreach" with a string type, it works!  This is because the string class in .NET implements IEnumerable<char>.
+  
 ### IEnumerable<T> Interface
 - only contains 1 method (well, technically two methods that do almost the same thing):
 ```
