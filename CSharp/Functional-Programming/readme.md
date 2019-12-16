@@ -8,4 +8,6 @@ https://weblogs.asp.net/dixin/functional-csharp-fundamentals
 -  ```Higher-order function``` is the function which receives another function as an argument, or returns another function as the result, or both. 
 - ```Pure function``` is the function which has no side effects and only returns the result. Its result only depends on argument values and will always be the same for the same argument values. That was easy. 
 - ```Lazy evaluation``` means that the expression is not evaluated before its value is about to be used. 
-- And ```pattern matching``` means to match structure of an object against predetermined patterns, so that 
+- And ```pattern matching``` means to match structure of an object against predetermined patterns, so that we can proceed with evaluation only if it conforms to certain structure and values.
+- ```Value type semantic```, for example, means that an object will always have the same value once it has been constructed and have some additional qualities. 
+- ```referential transparency```, which says that an expression will always produce the same result once it has been evaluated. This lets us safely replace an entire expression with its value and all subsequent references to it.
