@@ -17,3 +17,4 @@ https://weblogs.asp.net/dixin/functional-csharp-fundamentals
 - components in ValueTuple are public mutable fields
 - Tuple exposes public read-only properties Item1, Item2
 - ```ValueTuple``` is ```NOT``` a good choice for public API
+### Don't bind consumers toa struct with public fields
