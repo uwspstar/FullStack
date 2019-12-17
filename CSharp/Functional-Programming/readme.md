@@ -11,3 +11,9 @@ https://weblogs.asp.net/dixin/functional-csharp-fundamentals
 - And ```pattern matching``` means to match structure of an object against predetermined patterns, so that we can proceed with evaluation only if it conforms to certain structure and values.
 - ```Value type semantic```, for example, means that an object will always have the same value once it has been constructed and have some additional qualities. 
 - ```referential transparency```, which says that an expression will always produce the same result once it has been evaluated. This lets us safely replace an entire expression with its value and all subsequent references to it.
+### understanding the ValueTuple type
+-  ```ValueTuple``` is a struct
+- ``` Tuple ``` is a class
+- components in ValueTuple are public mutable fields
+- Tuple exposes public read-only properties Item1, Item2
+- ```ValueTuple``` is ```NOT``` a good choice for public API
