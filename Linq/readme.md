@@ -595,16 +595,17 @@ int result = numbers.ElementAt(1);
 ```
 int result = numbers.Single();
 ```
-- The second overloaded version of the Single() method is used to find the only element in a sequence that satisfies a given condition. ```
-An exception will be thrown if any of the following is true
-a) If the sequence does not contain any elements OR
-b) If no element in the sequence satisfies the condition OR
-c) If more than one element in the sequence satisfies the condition
-```
+- The second overloaded version of the Single() method is used to find the only element in a sequence that satisfies a given condition. 
 ### SingleOrDefault
 - Very similar to Single(), except this method does not throw an exception when the sequence is empty or when no element in the sequence satisfies the given condition. Just like Single(), this method will still throw an exception, if more than one element in the sequence satisfies the given condition.
 ```
 int result = numbers.SingleOrDefault(x => x % 2 == 0);
+```
+```
+An exception will be thrown if any of the following is true
+a) If the sequence does not contain any elements OR
+b) If no element in the sequence satisfies the condition OR
+c) If more than one element in the sequence satisfies the condition
 ```
 ### DefaultIfEmpty
 -  If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
