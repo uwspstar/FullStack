@@ -608,8 +608,13 @@ b) If no element in the sequence satisfies the condition OR
 c) If more than one element in the sequence satisfies the condition
 ```
 ### DefaultIfEmpty
--  If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
-
+- If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
+- If the sequence is empty, then DefaultIfEmpty() returns a sequence with the default value of the expected type.
+- The other overloaded version with a parameter allows us to specify a default value.
+```
+IEnumerable<int> result = numbers.DefaultIfEmpty();
+IEnumerable<int> result = numbers.DefaultIfEmpty(10);
+```
 
 
 
