@@ -1915,3 +1915,10 @@ public static void RegisterTraditionalRoutes(RouteCollection routes)
 }
 
 ```
+- To make {id} optional in traditional routing, you can defi ne the route like this:
+```
+routes.MapRoute("simple", "{controller}/{action}/{id}", new {id = UrlParameter.Optional}); 
+```
+### attribute routing
+-  with attribute routing, you can name your controller class anything you like as long as it ends with the Controller suffi x (it doesn’t need to be related to your URL). 
+- Having the attribute directly on the action method means that MVC knows exactly which overload to run, and doesn’t need to pick one of the potentially multiple action methods that share the same name.
