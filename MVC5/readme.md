@@ -1920,5 +1920,33 @@ public static void RegisterTraditionalRoutes(RouteCollection routes)
 routes.MapRoute("simple", "{controller}/{action}/{id}", new {id = UrlParameter.Optional}); 
 ```
 ### attribute routing
--  with attribute routing, you can name your controller class anything you like as long as it ends with the Controller suffi x (it doesn’t need to be related to your URL). 
+
+- with attribute routing, you can name your controller class anything you like as long as it ends with the Controller suffi x (it doesn’t need to be related to your URL). 
 - Having the attribute directly on the action method means that MVC knows exactly which overload to run, and doesn’t need to pick one of the potentially multiple action methods that share the same name.
+### Combining Attribute Routing with Traditional Routing 
+- You put your new route before the default simple route because routes are evaluated in order. 
+- the first route registered wins
+- Traditional routing always does an exact match, whereas the attribute routing regex inline constraint supports partial matches. 
+- You can use either attribute routing, traditional routing, or both. 
+- To use attribute routing, you need to have the following line in your RegisterRoutes method (where traditional routes live):
+```
+routes.MapMvcAttributeRoutes();
+```
+- Suppose you have an existing application that uses traditional routing, and you want to add a new controller to it that uses attribute routing. That’s pretty easy to do: 
+```
+routes.MapMvcAttributeRoutes(); 
+routes.MapRoute("simple",    "{controller}/{action}/{id}",    new { action = "index", id = UrlParameter.Optional});
+
+// Existing class 
+public class HomeController : Controller 
+{   
+  public ActionResult Index()    {        return View();    }
+}
+
+[RoutePrefix("contacts")] 
+[Route("{action=Index}/{id?}")] 
+public class NewContactsController : Controller 
+{    
+  public ActionResult Index()    {        // Do some work        return View();    }
+}
+```
