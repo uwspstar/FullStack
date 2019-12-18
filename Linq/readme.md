@@ -563,3 +563,67 @@ var employeeGroups = from employee in Employee.GetAllEmployees()
                          Employees = eGroup.OrderBy(x => x.Name)
                     };
  ```                                       
+### Element Operators in LINQ
+
+### First
+- If the sequence does not contain any elements, then First() method throws an InvalidOperationException.
+```
+int result = numbers.First();
+int result = numbers.First(x => x % 2 == 0);
+```
+### FirstOrDefault
+- This is very similar to First, except that this method does not throw an exception when there are no elements in the sequence or when no element satisfies the condition specified by the predicate. Instead, a default value of the type that is expected is returned. For reference types the default is NULL and for value types the default depends on the actual type expected.
+```
+int result = numbers.FirstOrDefault(x => x % 2 == 100);
+```
+### Last 
+- Very similar to First, except it returns the last element of the sequence
+### LastOrDefault
+- Very similar to FirstOrDefault, except it returns the last element of the sequence.
+
+### ElementAt
+- Returns an element at a specified index. If the sequence is empty or if the provided index value is out of range, then an ArgumentOutOfRangeException is thrown.
+```
+int result = numbers.ElementAt(1);
+```
+### ElementAtOrDefault
+- Similar to ElementAt except that this method does not throw an exception, if the sequence is empty or if the provided index value is out of range. Instead, a default value of the type that is expected is returned.
+
+### Single
+- There are 2 overloaded versions of this method. The first overloaded version that does not have any parameters returns the only element of the sequence.
+- Single() method throws an exception if the sequence is empty or has more than one element.
+```
+int result = numbers.Single();
+```
+- The second overloaded version of the Single() method is used to find the only element in a sequence that satisfies a given condition. ```
+An exception will be thrown if any of the following is true
+a) If the sequence does not contain any elements OR
+b) If no element in the sequence satisfies the condition OR
+c) If more than one element in the sequence satisfies the condition
+```
+### SingleOrDefault
+- Very similar to Single(), except this method does not throw an exception when the sequence is empty or when no element in the sequence satisfies the given condition. Just like Single(), this method will still throw an exception, if more than one element in the sequence satisfies the given condition.
+```
+int result = numbers.SingleOrDefault(x => x % 2 == 0);
+```
+### DefaultIfEmpty
+-  If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
