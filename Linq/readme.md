@@ -677,6 +677,8 @@ foreach (var employee in result)
     Console.WriteLine(employee.EmployeeName + "\t" + employee.DepartmentName);
 }
 ```
+### Difference between group join and inner join in linq
+
 ### Left Outer Join
 ### Cross Join
 
