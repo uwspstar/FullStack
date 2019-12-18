@@ -615,7 +615,42 @@ c) If more than one element in the sequence satisfies the condition
 IEnumerable<int> result = numbers.DefaultIfEmpty();
 IEnumerable<int> result = numbers.DefaultIfEmpty(10);
 ```
+### Group Join in LINQ
+### Group Join
+```
+var employeesByDepartment = Department.GetAllDepartments()
+                       .GroupJoin(Employee.GetAllEmployees(),
+                         d => d.ID,
+                         e => e.DepartmentID,
+                         (department, employees) => new
+                         {
+                             Department = department,
+                             Employees = employees
+                         });
 
+foreach (var department in employeesByDepartment)
+{
+    Console.WriteLine(department.Department.Name);
+    foreach (var employee in department.Employees)
+    {
+        Console.WriteLine(" " + employee.Name);
+    }
+    Console.WriteLine();
+}
+```
+```
+var employeesByDepartment = from d in Department.GetAllDepartments()
+                       join e in Employee.GetAllEmployees()
+                       on d.ID equals e.DepartmentID into eGroup
+                       select new
+                       {
+                          Department = d,
+                          Employees = eGroup
+                       };
+ ```                                                      
+### Inner Join
+### Left Outer Join
+### Cross Join
 
 
 
