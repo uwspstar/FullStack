@@ -1881,11 +1881,19 @@ public class HomeController : Controller
  ```
  ### route constraint
 - A route constraint is a condition that must be satisfi ed for the route to match. In this case, you just need a simple int constraint:
+-  instead of defi ning the route parameter as just {id}, you’ve now defi ned it as {id:int}. Putting a constraint in the route template like this is called an ```inline constraint```
 ```
 [Route("person/{id:int}")] 
 public ActionResult Details(int id) {    // Do some work    return View(); }
 [Route("person/{name}")]
 public ActionResult Details(string name) {    // Do some work    return View(); }
 ```
+```
+range {n:range(1,3)} // The Int64 value 1, 2, or 3
+alpha {n:alpha} // A String value containing only the A–Z and a–z characters
+regex {n:regex (^a+$)} // A String value containing only one or more 'a' characters (a Regex match for the ^a+$ pattern)
+```
+
+### Route Defaults
 
  
