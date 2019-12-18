@@ -492,7 +492,36 @@ IEnumerable<int> result = numbers.DefaultIfEmpty();
 IEnumerable<int> result = numbers.DefaultIfEmpty(10);
 ```
 ### Group Join
+- GroupBy creates and returns a sequence of IGrouping<K,V>
+```
+var employeeGroup = from employee in Employee.GetAllEmployees()
+                    group employee by employee.Department;
 
+Console.WriteLine("{0} - {1}", group.Key, group.Count());
+```
+```
+foreach (var group in employeeGroup)
+{
+    Console.WriteLine("{0} - {1}", group.Key, group.Count());
+    Console.WriteLine("----------");
+    foreach (var employee in group)
+    {
+        Console.WriteLine(employee.Name + "\t" + employee.Department);
+    }
+    Console.WriteLine(); Console.WriteLine();
+}
+```
+```
+var employeeGroup = from employee in Employee.GetAllEmployees()
+                  group employee by employee.Department into eGroup
+                  orderby eGroup.Key
+                  select new
+                  {
+                       Key = eGroup.Key,
+                       Employees = eGroup.OrderBy(x => x.Name)
+                  };
+
+```
 
 
 
