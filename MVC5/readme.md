@@ -1879,5 +1879,13 @@ public class HomeController : Controller
 }
  
  ```
+ ### route constraint
+- A route constraint is a condition that must be satisfi ed for the route to match. In this case, you just need a simple int constraint:
+```
+[Route("person/{id:int}")] 
+public ActionResult Details(int id) {    // Do some work    return View(); }
+[Route("person/{name}")]
+public ActionResult Details(string name) {    // Do some work    return View(); }
+```
 
  
