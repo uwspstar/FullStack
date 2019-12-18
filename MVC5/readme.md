@@ -1842,7 +1842,8 @@ public ActionResult Details(int id)
 ### Controller Routes
 - When you defi ne a route on the controller class, you can use a ```special route parameter``` named ```action```, and it serves as a placeholder for any action name
 ```
-[Route("home/{action}")] public class HomeController : Controller 
+[Route("home/{action}")] 
+public class HomeController : Controller 
 {    
   public ActionResult Index()    
   {        
@@ -1854,8 +1855,29 @@ public ActionResult Details(int id)
   }
 }
 ```
-- When you specify a route attribute at the action level, you’re overriding anything specifi ed at the controller level
+- When you specify a route attribute at the action level, you’re overriding anything specified at the controller level
 -  a URI just identifi es a resource, but a URL also tells you how to get it.
  - The key difference is that URL rewriting is focused on mapping one URL to another URL
  - Another key difference is that Routing also helps generate URLs using the same mapping rules that it uses to match incoming URLs. 
+ ### RoutePrefix:
+```
+[RoutePrefix("home")] 
+[Route("{action}")] 
+public class HomeController : Controller
+```
+- The prefi x is just a default, and you can escape from it if necessary.
+- To do that, just begin the route template with ~/, and the route prefi x will be ignored. 
+```
+[RoutePrefix("home")] 
+[Route("{action}")]
+public class HomeController : Controller 
+{    
+  [Route("~/")]    
+  [Route("")] // You can shorten this to [Route] if you prefer.    
+  [Route("index")]   
+  public ActionResult Index()    {        return View();    }
+}
+ 
+ ```
+
  
