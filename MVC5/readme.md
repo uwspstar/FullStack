@@ -1895,5 +1895,23 @@ regex {n:regex (^a+$)} // A String value containing only one or more 'a' charact
 ```
 
 ### Route Defaults
+```
+[Route("home/{action}")] 
 
- 
+[Route("{action=Index}/{id?}")]
+
+```
+### UNIT TESTING ROUTES
+- Rather than adding routes to the RouteTable directly in the Application_Start method, we moved the default template code to add routes into a separate static method named RegisterRoutes to make writing unit tests of your routes easier.  
+```
+public static void RegisterRoutes(RouteCollection routes) 
+{    
+  routes.MapMvcAttributeRoutes();    
+  RegisterTraditionalRoutes(routes); 
+}
+public static void RegisterTraditionalRoutes(RouteCollection routes) 
+{   
+  routes.MapRoute("simple", "{first}/{second}/{third}"); 
+}
+
+```
