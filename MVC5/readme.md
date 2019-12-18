@@ -1962,6 +1962,15 @@ Consider choosing attribute routes when:
 ➤ You are creating a new application or making signifi cant changes to an existing one.
 ```
 ### MVC Areas Areas p318
+- we ```recommend``` putting attribute routes in the route table before traditional routes
+- NOTE  : If you try to use both traditional routes and attribute routes together within an area, you’ll need to be careful about route order.
+- in the Application_Start method in Global.asax, you’ll notice that the call to AreaRegistration. RegisterAllAreas() comes before RegisterRoutes. That means any traditional routes you create in an area’s RegisterArea method come before any routes you create in RegisterRoutes, including any attribute routes created by calling MapMvcAttributeRoutes. 
+- However, attribute routes are even more specifi c, so in this case they need to be mapped even earlier than RegisterRoutes. In this scenario, we recommend moving the call to MapMvcAttributeRoutes outside of your RegisterRoutes method and instead making that the fi rst call in Application_Start:
+```
+RouteTable.Routes.MapMvcAttributeRoutes(); 
+AreaRegistration.RegisterAllAreas(); // Other registration calls, including RegisterRoutes
+```
+
 - ```Areas```, introduced in ASP.NET MVC 2, allow you to divide your models, views, and controllers into separate functional sections. This means you can separate larger or more complex sites into sections, 
 -  a call to the method ```AreaRegistration.RegisterAllAreas``` within the ```Application_Start``` method in ```Global.asax```.
 - traditional route: 
