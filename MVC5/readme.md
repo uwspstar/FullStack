@@ -1950,3 +1950,34 @@ public class NewContactsController : Controller
   public ActionResult Index()    {        // Do some work        return View();    }
 }
 ```
+### Choosing Attribute Routes or Traditional Routes Should you use attribute routes or traditional routes? 
+- Either option is reasonable, but here are some suggestions on when to use each one.
+```
+Consider choosing traditional routes when:
+➤ You want centralized confi guration of all your routes.
+➤ You use custom constraint objects.
+➤ You have an existing working application you don’t want to change.
+Consider choosing attribute routes when:
+➤ You want to keep your routes together with your action’s code.
+➤ You are creating a new application or making signifi cant changes to an existing one.
+```
+### MVC Areas Areas p318
+- ```Areas```, introduced in ASP.NET MVC 2, allow you to divide your models, views, and controllers into separate functional sections. This means you can separate larger or more complex sites into sections, 
+-  a call to the method ```AreaRegistration.RegisterAllAreas``` within the ```Application_Start``` method in ```Global.asax```.
+- traditional route: 
+```
+routes.MapRoute(   
+  "Default",   "{controller}/{action}/{id}",   
+  new { controller = "Home", action = "Index", id = "" },   
+  new [] { "AreasDemoWeb.Controllers" } 
+);
+
+
+```
+[RouteArea("admin")]
+[Route("users/{action}")] 
+public class UsersController : Controller 
+{    
+  // Some action methods
+}
+```
