@@ -678,7 +678,44 @@ foreach (var employee in result)
 }
 ```
 ### Difference between group join and inner join in linq
-
+- http://csharp-video-tutorials.blogspot.com/2014/08/part-23-difference-between-group-join.html
+```
+var result = from e in Employee.GetAllEmployees()
+            join d in Department.GetAllDepartments()
+            on e.DepartmentID equals d.ID
+            select new { e, d };
+            
+var result = Employee.GetAllEmployees()
+             .Join(Department.GetAllDepartments(),
+              e => e.DepartmentID,
+              d => d.ID, (employee, department) => new
+              {
+                   e = employee,
+                   d = department
+              });
+                    
+```
+```
+var result = from d in Department.GetAllDepartments()
+            join e in Employee.GetAllEmployees()
+            on d.ID equals e.DepartmentID into eGroup
+            select new
+            {
+               Department = d,
+               Employees = eGroup
+            };
+        
+var result = Department.GetAllDepartments()
+            .GroupJoin(Employee.GetAllEmployees(),
+             d => d.ID,
+             e => e.DepartmentID,
+             (department, employees) => new
+             {
+                  Department = department,
+                  Employees = employees
+             });
+                                         
+```
 ### Left Outer Join
 ### Cross Join
 
