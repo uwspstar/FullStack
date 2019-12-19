@@ -744,8 +744,73 @@ var result = Employee.GetAllEmployees()
                 });
 ```                    
 ### Cross Join
+- The on keyword that specfies the JOIN KEY is not required.
+- Cross join produces a cartesian product i.e when we cross join two sequences, every element in the first collection is combined with every element in the second collection.
+- To implement Cross Join using extension method syntax, we could either use SelectMany() method or Join() method
+```
+var result = from e in Employee.GetAllEmployees()
+            from d in Department.GetAllDepartments()
+            select new { e, d };
 
+var result = from d in Department.GetAllDepartments()
+            from e in Employee.GetAllEmployees()
+            select new { e, d };
 
+var result = Employee.GetAllEmployees()
+            .SelectMany(e => Department.GetAllDepartments(), (e, d) => new { e, d });
+
+var result = Employee.GetAllEmployees()
+             .Join(Department.GetAllDepartments(),
+                       e => true,
+                       d => true,
+                       (e, d) => new { e, d });
+
+```
+### Set operators in LINQ
+### Distinct
+- Notice that in the output we don't get unique employees. This is because, the default comparer is being used which will just check for object references being equal and not the individual property values.
+```
+var result = countries.Distinct();
+var result = countries.Distinct(StringComparer.OrdinalIgnoreCase);
+```
+- Using the overloaded version of Distinct() method to which we can pass a custom class that implements IEqualityComparer
+```
+//  Create a custom class that implements IEqualityComparer<T> and implement Equals() and GetHashCode() methods
+
+public class EmployeeComparer : IEqualityComparer<Employee>
+{
+    public bool Equals(Employee x, Employee y)
+    {
+        return x.ID == y.ID && x.Name == y.Name;
+    }
+
+    public int GetHashCode(Employee obj)
+    {
+        return obj.ID.GetHashCode() ^ obj.Name.GetHashCode();
+    }
+}
+```
+- http://csharp-video-tutorials.blogspot.com/2014/08/part-26-set-operators-in-linq.html
+### Union
+- Union combines two collections into one collection while removing the duplicate elements
+```
+int[] numbers1 = { 1, 2, 3, 4, 5 };
+int[] numbers2 = { 1, 3, 6, 7, 8 };
+
+var result = numbers1.Union(numbers2);
+```
+- When comparing elements, just like Distinct() method, Union(), Intersect() and Except() methods work in a slightly different manner with complex types like Employee, Customer etc. 
+
+### Intersect
+- Intersect() returns the common elements between the 2 collections.
+```
+var result = numbers1.Intersect(numbers2);
+```
+### Except
+- Except() returns the elements that are present in the first collection but not in the second collection.
+```
+var result = numbers1.Except(numbers2);
+```
 
 
 
