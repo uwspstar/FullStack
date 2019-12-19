@@ -811,7 +811,7 @@ var result = numbers1.Intersect(numbers2);
 ```
 var result = numbers1.Except(numbers2);
 ```
-
+### Generation Operators in LINQ
 
 
 
