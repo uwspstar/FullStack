@@ -678,6 +678,7 @@ foreach (var employee in result)
 }
 ```
 ### Difference between group join and inner join in linq
+- Join is similar to INNER JOIN in SQL and GroupJoin is similar to OUTER JOIN in SQL
 - http://csharp-video-tutorials.blogspot.com/2014/08/part-23-difference-between-group-join.html
 ```
 var result = from e in Employee.GetAllEmployees()
@@ -717,6 +718,31 @@ var result = Department.GetAllDepartments()
                                          
 ```
 ### Left Outer Join
+- To implement Left Outer Join, with extension method syntax we use the GroupJoin() method along with SelectMany() and DefaultIfEmpty() methods.
+- LEFT OUTER JOIN all the matching elements + all the non matching elements from the left collection are included in the result set.
+```
+var result = from e in Employee.GetAllEmployees()
+            join d in Department.GetAllDepartments()
+            on e.DepartmentID equals d.ID into eGroup
+            from d in eGroup.DefaultIfEmpty()
+            select new
+            {
+                 EmployeeName = e.Name,
+                 DepartmentName = d == null ? "No Department" : d.Name
+            };
+            
+var result = Employee.GetAllEmployees()
+        .GroupJoin(Department.GetAllDepartments(),
+                e => e.DepartmentID,
+                d => d.ID,
+                (emp, depts) => new { emp, depts })
+        .SelectMany(z => z.depts.DefaultIfEmpty(),
+                (a, b) => new
+                {
+                        EmployeeName = a.emp.Name,
+                        DepartmentName = b == null ? "No Department" : b.Name
+                });
+```                    
 ### Cross Join
 
 
