@@ -819,9 +819,20 @@ var result = numbers1.Except(numbers2);
 var evenNumbers = Enumerable.Range(1, 10).Where(x => x % 2 == 0);
 ```
 ### Repeat
+- Repeat operator is used to generate a sequence that contains one repeated value.
+```
+var result = Enumerable.Repeat("Hello", 5);
+```
 ### Empty
-
-
+- Empty operator returns an empty sequence of the specified type.
+```
+Enumerable.Empty<int>() // Returns an empty IEnumerable<int>
+Enumerable.Empty<string>() // Returns an empty IEnumerable<string>
+```
+- ```NULL-COALESCING operator```
+```
+IEnumerable<int> result = GetIntegerSequence() ?? Enumerable.Empty<int>();
+```
 
 
 
