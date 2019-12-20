@@ -869,6 +869,50 @@ To solve the problem in Example 6, there are 3 ways
     3. Project the properties into a new anonymous type, which overrides Equals() 
         and GetHashCode() methods
 ```
+### Quantifiers
+### All
+- All() method returns true if all the elements in a sequence satisfy a given condition, otherwise false.
+```
+var result = numbers.All(x => x < 10);
+```
+### Any
+- There are 2 overloaded versions of Any() method. 
+- The version without any parameters checks if the sequence contains at least one element. 
+- The other version with a predicate parameter checks if the sequence contains at least one element that satisfies a given condition.
+```
+int[] numbers = { 1, 2, 3, 4, 5 };
+
+var result = numbers.Any();
+var result = numbers.Any(x => x > 10);
+```
+### Contains
+- There are 2 overloaded versions of the Contains() method. 
+- One of the overloaded version checks if the sequence contains a specified element using the default equality comparer. 
+- The other overloaded version checks if the sequence contains a specified element using an alternate equality comparer.
+```
+int[] numbers = { 1, 2, 3, 4, 5 };
+var result = numbers.Contains(3);
+
+string[] countries = { "USA", "INDIA", "UK" };
+var result = countries.Contains("india", StringComparer.OrdinalIgnoreCase);
+```
+- When comparing complex types like Employee, Customer etc, the default comparer will only check if the object references are equal, and not the individual property values of the objects that are being compared.
+```
+To solve the problem in Example 6, there are 3 ways
+1. Use the other overloaded version of Contains() method 
+    to which we can pass a custom class that implements IEqualityComparer
+2. Override Equals() and GetHashCode() methods in Employee class
+3. Project the properties into a new anonymous type, 
+    which overrides Equals() and GetHashCode() methods
+```
+
+
+
+
+
+
+
+
 
 
 
