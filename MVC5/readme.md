@@ -1992,3 +1992,50 @@ public class UsersController : Controller
 ```
 
 ### Catch-All Parameter p321
+- Attribute routing uses the same syntax. Just add an asterisk (*) in front of the parameter’s name to make it a catch-all parameter
+```
+public static void RegisterRoutes(RouteCollection routes) 
+{   
+  routes.MapRoute("catchallroute", "query/{query-name}/{*extrastuff}"); 
+}
+```
+
+### StopRoutingHandler and IgnoreRoute
+- By default, Routing ignores requests that map to physical fi les on disk. 
+- That’s why requests for fi les such as CSS, JPG, and JS fi les are ignored by Routing and handled in the normal manner.
+- One way to ensure that Routing ignores such requests is to use the ```StopRoutingHandler```
+```
+public static void RegisterRoutes(RouteCollection routes) {   
+  routes.Add(new Route   (        
+    "{resource}.axd/{*pathInfo}",        
+    new StopRoutingHandler()   
+  ));   
+  routes.Add(new Route   (       
+    "reports/{year}/{month}"       
+    , new SomeRouteHandler()   
+  )); 
+}
+
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
