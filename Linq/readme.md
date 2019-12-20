@@ -813,7 +813,13 @@ var result = numbers1.Except(numbers2);
 ```
 ### Generation Operators in LINQ
 
-
+### Range
+- Range operator generates a sequence of integers within a specified range. This method has 2 integer parameters. The start parameter specifies the integer to start with and the count parameter specifies the number of sequential integers to generate.
+```
+var evenNumbers = Enumerable.Range(1, 10).Where(x => x % 2 == 0);
+```
+### Repeat
+### Empty
 
 
 
