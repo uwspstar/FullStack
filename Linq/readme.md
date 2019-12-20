@@ -833,7 +833,17 @@ Enumerable.Empty<string>() // Returns an empty IEnumerable<string>
 ```
 IEnumerable<int> result = GetIntegerSequence() ?? Enumerable.Empty<int>();
 ```
+### Concat
+-  concatenate both the integer sequences (numbers1 & numbers2) into one integer sequence. Notice that the duplicate elements ARE ```NOT REMOVED.```
+- union operator also combines the 2 integer sequences (numbers1 & numbers2) into one integer sequence, but notice that the duplicate elements ARE ```REMOVED.```
 
+```
+int[] numbers1 = { 1, 2, 3 };
+int[] numbers2 = { 1, 4, 5 };
+
+var result = numbers1.Concat(numbers2);
+var result = numbers1.Union(numbers2);
+```
 
 
 
