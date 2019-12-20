@@ -833,7 +833,7 @@ Enumerable.Empty<string>() // Returns an empty IEnumerable<string>
 ```
 IEnumerable<int> result = GetIntegerSequence() ?? Enumerable.Empty<int>();
 ```
-### Concat
+### Concat vs Union operators
 -  concatenate both the integer sequences (numbers1 & numbers2) into one integer sequence. Notice that the duplicate elements ARE ```NOT REMOVED.```
 - union operator also combines the 2 integer sequences (numbers1 & numbers2) into one integer sequence, but notice that the duplicate elements ARE ```REMOVED.```
 
@@ -844,11 +844,31 @@ int[] numbers2 = { 1, 4, 5 };
 var result = numbers1.Concat(numbers2);
 var result = numbers1.Union(numbers2);
 ```
+### SequenceEqual() 
+- SequenceEqual method is used to determine whether two sequences are equal. 
+- This method returns true if the sequences are equal otherwise false. 
+- default comparison is ```case sensitive.```
+- return false : the data is not present in the same ```order```
+```
+string[] countries1 = { "USA", "India", "UK" };
+string[] countries2 = { "USA", "India", "UK" };
 
-
-
-
-
+var result = countries1.SequenceEqual(countries2);
+```
+- ```case-insensitive```
+```
+var result = countries1.SequenceEqual(countries2, StringComparer.OrdinalIgnoreCase);
+var result = countries1.OrderBy(c => c).SequenceEqual(countries2.OrderBy(c => c));
+```
+- When comparing ```complex types``` (reference type), the default comparer will only check if the object references are equal. So, in this case SequenceEqual() returns false.
+```
+To solve the problem in Example 6, there are 3 ways
+    1. Use the other overloaded version of SequenceEqual() method 
+        to which we can pass a custom class that implements IEqualityComparer
+    2. Override Equals() and GetHashCode() methods in Employee class
+    3. Project the properties into a new anonymous type, which overrides Equals() 
+        and GetHashCode() methods
+```
 
 
 
