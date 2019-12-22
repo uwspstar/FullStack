@@ -44,7 +44,14 @@ public int this[int x, int y]
 // Does not compile, use readonly instead:
 private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 ```
-- runtime constants can be any type
+- runtime constants can be any type , You must initialize them in a constructor, or you can use an initializer.
+
+
+
+		
+	
+	
+		
 ### Prefer the is or as Operators to Casts
 ### Use Conditional Attributes Instead of #if
 
