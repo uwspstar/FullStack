@@ -55,7 +55,7 @@ private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 - the ```cast``` version must ```check null``` in addition to catching excep- tions. 
 - ```null``` can be converted to any reference type using a ```cast```, but the ```as``` operator returns null when used on a null reference.
 - Casting a long to a short can ```lose information```.  
-- Remember that user-defined conversion operators operate only on the compile-time type of an object, not on the runtime type. - The as operator does not work on value types. This statement won’t compile:
+- Remember that user-defined conversion operators operate only on the compile-time type of an object, not on the runtime type. - The as operator does not work on value types. This statement won’t compile: because ints are value types and can never be null.
 ```
 object o = Factory.GetValue();
 int i = o as int; // Does not compile.
