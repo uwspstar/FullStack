@@ -47,6 +47,7 @@ private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 - runtime constants can be any type , You must initialize them in a constructor, or you can use an initializer.
 	
 ### Prefer the is or as Operators to Casts
+- If you’re about to convert a type using as, the is check is simply not necessary.
 - The ```is``` operator should be used ```only``` when you cannot convert the type using ```as```. Otherwise, it’s simply redundant
 - ```Strong typing``` means you expect the compiler to find type mis-matches in your code.
 - ```Strong typing``` means your applications do not need to perform as much type checking at runtime.
