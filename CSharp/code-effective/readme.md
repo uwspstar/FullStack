@@ -47,6 +47,7 @@ private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 - runtime constants can be any type , You must initialize them in a constructor, or you can use an initializer.
 	
 ### Prefer the is or as Operators to Casts
+- The ```is``` operator should be used ```only``` when you cannot convert the type using ```as```. Otherwise, it’s simply redundant
 - ```Strong typing``` means you expect the compiler to find type mis-matches in your code.
 - ```Strong typing``` means your applications do not need to perform as much type checking at runtime.
 - two choices: Use the as operator or force the compiler to bend to your will using a cast
@@ -59,6 +60,7 @@ private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 ```
 object o = Factory.GetValue();
 int i = o as int; // Does not compile.
-```     	
+```
+- You’re stuck using the cast syntax. It’s actually a boxing/unboxing conversion     	
 ### Use Conditional Attributes Instead of #if
 - You cannot name an indexer in C#. Therefore, every different indexer in a type must have distinct parameter lists to avoid ambiguity.
