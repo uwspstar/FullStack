@@ -49,32 +49,11 @@ private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 ### Prefer the is or as Operators to Casts
 - ```Strong typing``` means you expect the compiler to find type mis-matches in your code.
 - ```Strong typing``` means your applications do not need to perform as much type checking at runtime.
-- two choices: Use the as operator or force the compiler to bend to your will using a cast       	
+- two choices: Use the as operator or force the compiler to bend to your will using a cast
+- You can test a conversion with is and then use as or casts to convert it.
+- The correct choice is to use the as operator whenever you can because it is safer than blindly casting and is more efficient at runtime.
+- the ```cast``` version must ```check null``` in addition to catching excep- tions. 
+- ```null``` can be converted to any reference type using a ```cast```, but the ```as``` operator returns null when used on a null reference.
+- Casting a long to a short can ```lose information```.        	
 ### Use Conditional Attributes Instead of #if
-
-
-
-		
-	
-	
-		
-
-
-
-		
-	
-	
-		
-
-
-
-
-
-
-
-
-
-
-
-
-
+- You cannot name an indexer in C#. Therefore, every different indexer in a type must have distinct parameter lists to avoid ambiguity.
