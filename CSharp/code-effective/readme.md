@@ -21,6 +21,7 @@ public int this[int x, int y]
 - All data mem- bers should be private, without exception. 
 
 ### Prefer readonly to const
+- you should prefer runtime constants over compile-time constants. 
 - You declare runtime constants with the readonly keyword. Compile-time constants are declared with the const keyword:
 - C# has two different versions of constants: compile-time constants and runtime constants.
   ```
