@@ -44,7 +44,22 @@ public int this[int x, int y]
 private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 ```
 - runtime constants can be any type
+### Prefer the is or as Operators to Casts
+### Use Conditional Attributes Instead of #if
 
+
+
+		
+	
+	
+		
+
+
+
+		
+	
+	
+		
 
 
 
