@@ -45,23 +45,11 @@ public int this[int x, int y]
 private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 ```
 - runtime constants can be any type , You must initialize them in a constructor, or you can use an initializer.
-
-
-
-		
 	
-	
-		
 ### Prefer the is or as Operators to Casts
 - ```Strong typing``` means you expect the compiler to find type mis-matches in your code.
-
-
-
-
-		
-	
-	
-		
+- ```Strong typing``` means your applications do not need to perform as much type checking at runtime.
+- two choices: Use the as operator or force the compiler to bend to your will using a cast       	
 ### Use Conditional Attributes Instead of #if
 
 
