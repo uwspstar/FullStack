@@ -53,6 +53,15 @@ private const DateTime classCreation = new DateTime(2000, 1, 1, 0, 0, 0);
 	
 		
 ### Prefer the is or as Operators to Casts
+- ```Strong typing``` means you expect the compiler to find type mis-matches in your code.
+
+
+
+
+		
+	
+	
+		
 ### Use Conditional Attributes Instead of #if
 
 
