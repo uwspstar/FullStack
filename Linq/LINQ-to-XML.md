@@ -3,3 +3,4 @@
 
 ### Functional Construction?
 - As far as LINQ to XML is concerned there is a technical term called Functional Construction
+- ```Functional construction``` is the ability to create an XML tree in a single statement.
