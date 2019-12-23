@@ -64,6 +64,7 @@ int i = o as int; // Does not compile.
 ```
 - You’re stuck using the cast syntax. It’s actually a boxing/unboxing conversion     	
 ### Use Conditional Attributes Instead of #if
+- The Conditional attribute can be applied only to entire methods.   
 ```
 [Conditional("DEBUG"), Conditional("TRACE")]
 private void CheckState()
