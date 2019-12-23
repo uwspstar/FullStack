@@ -64,4 +64,16 @@ int i = o as int; // Does not compile.
 ```
 - You’re stuck using the cast syntax. It’s actually a boxing/unboxing conversion     	
 ### Use Conditional Attributes Instead of #if
+```
+[Conditional("DEBUG")]
+private void CheckState()
+{// same code as above
+
+{// same code as above
+
+		}
+
+
+
+
 - You cannot name an indexer in C#. Therefore, every different indexer in a type must have distinct parameter lists to avoid ambiguity.
