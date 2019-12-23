@@ -65,7 +65,7 @@ int i = o as int; // Does not compile.
 - You’re stuck using the cast syntax. It’s actually a boxing/unboxing conversion     	
 ### Use Conditional Attributes Instead of #if
 ```
-[Conditional("DEBUG")]
+[Conditional("DEBUG"), Conditional("TRACE")]
 private void CheckState()
 {// same code as above}
 ```
