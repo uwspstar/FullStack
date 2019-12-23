@@ -67,12 +67,8 @@ int i = o as int; // Does not compile.
 ```
 [Conditional("DEBUG")]
 private void CheckState()
-{// same code as above
-
-{// same code as above
-
-		}
-
+{// same code as above}
+```
 
 
 
