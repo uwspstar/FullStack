@@ -5,6 +5,42 @@
 - As far as LINQ to XML is concerned there is a technical term called Functional Construction
 - ```Functional construction``` is the ability to create an XML tree in a single statement.
 - http://csharp-video-tutorials.blogspot.com/2014/08/part-1-linq-to-xml.html
+
+### XML validation against XSD
+- http://csharp-video-tutorials.blogspot.com/2014/09/part-8-xml-validation-against-xsd.html
+- An ```XSD``` ( XML Schema Definition Language) file defines the structure of the XML file, i.e which elements in which order, how many times, with which attributes, how they are nested, etc. Without an XSD, an XML file is a relatively free set of elements and attributes. 
+```
+using System;
+using System.Linq;
+using System.Xml.Linq;
+using System.Xml.Schema;
+
+...
+public static void Main()
+{
+    XmlSchemaSet schema = new XmlSchemaSet();
+    schema.Add("", @"C:\Demo\Demo\Student.xsd");
+
+    XDocument xmlDocument = XDocument.Load(@"C:\Demo\Demo\Data.xml");
+    bool validationErrors = false;
+
+    xmlDocument.Validate(schema, (s, e) =>
+    {
+        Console.WriteLine(e.Message);
+        validationErrors = true;
+    });
+
+    if (validationErrors)
+    {
+        Console.WriteLine("Validation failed");
+    }
+    else
+    {
+        Console.WriteLine("Validation succeeded");
+    }
+}
+
+```
 ### XML document are present in System.Xml.Linq namespace
 ### XML Document use XDocument class
 ### XML Declaration use XDeclaration class
