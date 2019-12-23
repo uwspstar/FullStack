@@ -111,3 +111,72 @@ IEnumerable<string> names = from student in XDocument
       orderby (int)student.Element("TotalMarks") descending
       select student.Element("Name").Value;
 ```                                                     
+### Modifying xml document 
+### Inserting or Adding new xml elements to the xml document
+```
+XDocument xmlDocument = XDocument.Load(@"C:\Demo\Demo\Data.xml");
+
+xmlDocument.Element("Students").Add(
+        new XElement("Student", new XAttribute("Id", 105),
+            new XElement("Name", "Todd"),
+            new XElement("Gender", "Male"),
+            new XElement("TotalMarks", 980)
+            ));
+
+xmlDocument.Save(@"C:\Demo\Demo\Data.xml");
+```
+- add the xml element as the first element use AddFirst() method.
+- AddBeforeSelf() or AddAfterSelf()
+- To disable formatting the XML document use SaveOptions.DisableFormatting
+```
+xmlDocument.Save(@"C:\Demo\Demo\Data.xml", SaveOptions.DisableFormatting);
+```
+### Updating xml elements in the xml document
+```
+XDocument xmlDocument = XDocument.Load(@"C:\Demo\Demo\Data.xml");
+
+xmlDocument.Element("Students")
+            .Elements("Student")
+            .Where(x => x.Attribute("Id").Value == "106").FirstOrDefault()
+            .SetElementValue("TotalMarks", 999);
+
+xmlDocument.Save(@"C:\Demo\Demo\Data.xml");
+```
+```
+XDocument xmlDocument = XDocument.Load(@"C:\Demo\Demo\Data.xml");
+
+xmlDocument.Element("Students")
+    .Elements("Student")
+    .Where(x => x.Attribute("Id").Value == "106")
+    .Select(x => x.Element("TotalMarks")).FirstOrDefault().SetValue(999);
+
+xmlDocument.Save(@"C:\Demo\Demo\Data.xml");
+```
+### Updating xml comments in the xml document
+```
+XDocument xmlDocument = XDocument.Load(@"C:\Demo\Demo\Data.xml");
+
+xmlDocument.Nodes().OfType<XComment>().FirstOrDefault().Value = "Comment Updated";
+
+xmlDocument.Save(@"C:\Demo\Demo\Data.xml");
+```
+### Deleting existing xml elements from the xml document
+```
+XDocument xmlDocument = XDocument.Load(@"C:\Demo\Demo\Data.xml");
+
+xmlDocument.Root.Elements().Where(x => x.Attribute("Id").Value == "106").Remove();
+
+xmlDocument.Save(@"C:\Demo\Demo\Data.xml");
+```
+- Deleting root node "Students"
+```
+XDocument xmlDocument = XDocument.Load(@"C:\Demo\Demo\Data.xml");
+
+xmlDocument.Root.Elements().Remove();
+
+xmlDocument.Save(@"C:\Demo\Demo\Data.xml");
+```
+- Deleting xml comments from the xml document
+```
+xmlDocument.Nodes().OfType<XComment>().Remove();
+```
