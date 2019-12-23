@@ -67,7 +67,12 @@ int i = o as int; // Does not compile.
 ```
 [Conditional("DEBUG"), Conditional("TRACE")]
 private void CheckState()
-{// same code as above}
+{
+// same code as above
+#if ( VAR1 && VAR2 )
+#define BOTH
+#endif
+}
 ```
 
 
