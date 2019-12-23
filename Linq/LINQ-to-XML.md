@@ -112,6 +112,7 @@ IEnumerable<string> names = from student in XDocument
       select student.Element("Name").Value;
 ```                                                     
 ### Modifying xml document 
+- http://csharp-video-tutorials.blogspot.com/2014/08/part-4-modifying-xml-document-using.html
 ### Inserting or Adding new xml elements to the xml document
 ```
 XDocument xmlDocument = XDocument.Load(@"C:\Demo\Demo\Data.xml");
@@ -180,3 +181,23 @@ xmlDocument.Save(@"C:\Demo\Demo\Data.xml");
 ```
 xmlDocument.Nodes().OfType<XComment>().Remove();
 ```
+### Transforming XML to CSV 
+- http://csharp-video-tutorials.blogspot.com/2014/08/part-5-transforming-xml-to-csv-using.html
+### CSV format
+```
+StringBuilder sb = new StringBuilder();
+string delimiter = ",";
+
+XDocument.Load(@"C:\Demo\Demo\Data.xml").Descendants("Student")
+         .ToList().ForEach(element => sb.Append(
+        element.Attribute("Country").Value + delimiter +
+        element.Element("Name").Value + delimiter +
+        element.Element("Gender").Value + delimiter +
+        element.Element("TotalMarks").Value + "\r\n"));
+
+StreamWriter sw = new StreamWriter(@"C:\Demo\Demo\Result.csv");
+sw.WriteLine(sb.ToString());
+sw.Close();
+```
+### HTML format
+### Different XML format
