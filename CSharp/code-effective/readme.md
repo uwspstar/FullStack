@@ -2,6 +2,8 @@
 - https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
 - https://www.amazon.com/gp/product/B074RJT99M/
 ### Prefer Immutability for Value Types
+- Don’t blindly create get and set accessors for every property in your type.
+- Your first choice for types that store data should be immutable
 - ```System.Collections.Immutable``` namespac
 - This is easy using the ImmutableList collection type
 ```
@@ -15,7 +17,11 @@ public struct PhoneList
 	public IEnumerable<Phone> Phones => phones; 
 } 
 ```
+- You can also create factory methods to initialize the structure
+- Factories make it easier to create common values.
 - But you do need to watch for any fields in an immutable type that are mutable reference types
+- you can create a mutable companion class for those instances in which multistep operations are necessary to fully construct an immutable type. The .NET string class follows this strategy
+- You use the StringBuilder class to create a string using multiple operations. After performing all the operations necessary to build the string, you retrieve the immutable string from the StringBuilder.
 - When you implement your constructors for these types, you need to make a defensive copy of that mutable type. 
 - Array is a mutable type. One alternative would be to use the ```ImmutableArray``` class
 - To create an immutable type, you need to ensure that there are no holes that would allow clients to change your internal stat
