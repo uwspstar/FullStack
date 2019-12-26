@@ -1,4 +1,6 @@
-# SUMMARY https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
+# SUMMARY 
+- https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
+- https://www.amazon.com/gp/product/B074RJT99M/
 
 ### Use Properties Instead of Accessible Data Members
 - If you had used public data members, you’re stuck looking for every bit of code that sets a customer’s name and fixing it there.
