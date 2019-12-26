@@ -5,6 +5,7 @@
 - Because properties are implemented with methods, adding multithreaded support is easier. 
 - You can enhance the implementation of the get and set accessors to provide synchronized access to the data
 - all indexers are declared with the this keyword
+
 ```
 public int this[int x, int y]
 {
