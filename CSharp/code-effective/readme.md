@@ -1,6 +1,12 @@
 # SUMMARY 
 - https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
 - https://www.amazon.com/gp/product/B074RJT99M/
+### Prefer Immutability for Value Types
+- Immutable types are inherently thread safe: Multiple readers can access the same contents
+- Immutable types work better in hash-based collections
+- Immutable types are simple: After they are created, they are constant
+- validate the parameters used to construct the object, you know that it is in a valid state from that point forward.
+- In practice, it is very difficult to make every type immutableThat’s why this recommendation is for both atomic and immutable value types
 
 ### Prefer Implicit Properties for Mutable Data
 - You cannot use implicit properties on types that are decorated with the Serializable attribute.
