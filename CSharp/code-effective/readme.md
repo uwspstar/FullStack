@@ -2,6 +2,23 @@
 - https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
 - https://www.amazon.com/gp/product/B074RJT99M/
 ### Prefer Immutability for Value Types
+- ```System.Collections.Immutable``` namespac
+- This is easy using the ImmutableList collection type
+```
+public struct PhoneList 
+{    
+	private readonly ImmutableList<Phone> phones;    
+	public PhoneList(Phone[] ph)    
+	{        
+		phones = ph.ToImmutableList();    
+	}    
+	public IEnumerable<Phone> Phones => phones; 
+} 
+```
+- But you do need to watch for any fields in an immutable type that are mutable reference types
+- When you implement your constructors for these types, you need to make a defensive copy of that mutable type. 
+- Array is a mutable type. One alternative would be to use the ```ImmutableArray``` class
+- To create an immutable type, you need to ensure that there are no holes that would allow clients to change your internal stat
 - Immutable types are inherently thread safe: Multiple readers can access the same contents
 - Immutable types work better in hash-based collections
 - Immutable types are simple: After they are created, they are constant
