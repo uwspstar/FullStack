@@ -129,7 +129,18 @@ private void CheckState()
 #endif
 }
 ```
+### Distinguish Between Value Types and Reference Types
+- You cannot create object hierarchies of value types. 
+- All value types are automatically sealed. 
+- value types are stored inline in an object, whereas reference types are not. Each variable of a reference type holds a reference, and the storage requires extra allocation
+- Value types store values, and reference types define behavior
+- objects are created on the heap
+-  Value types are not polymorphic. They are better suited to storing the data that your application manipulates.
+-  Reference types can be polymorphic and should be used to define the behavior of your application
+- C++, in which you define all types as value types and can create references to them
+- Java, in which everything is a reference type 
+- The documentation for .NET recommends that you consider the size of a type as a determining factor between value types and reference types.
 
-
+### Ensure That 0 Is a Valid State for Value Types
 
 - You cannot name an indexer in C#. Therefore, every different indexer in a type must have distinct parameter lists to avoid ambiguity.
