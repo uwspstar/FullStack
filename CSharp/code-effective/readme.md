@@ -14,6 +14,13 @@ public int this[int x, int y]
   get { return ComputeValue(x, y); }
 }
 ```
+- You can extend properties to be abstract and define properties as part of an interface definition, using similar syntax to implicit properties
+```
+public interface INameValuePair<T> {    
+	string Name { get; }    
+	T Value { get; set; } 
+} 
+```
 - You cannot name an indexer in C#. Therefore, every different indexer in a type must have distinct parameter lists to avoid ambiguity.
 - property access generates different Microsoft Intermediate Language (MSIL) instructions than a data access. properties and data members are source compatible, they are not binary compatible
 -  C# treats binary assemblies as first-class citizens.
