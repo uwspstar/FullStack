@@ -142,5 +142,28 @@ private void CheckState()
 - The documentation for .NET recommends that you consider the size of a type as a determining factor between value types and reference types.
 
 ### Ensure That 0 Is a Valid State for Value Types
+-  Never create an enum that does not include 0 as a
+valid choice.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 - You cannot name an indexer in C#. Therefore, every different indexer in a type must have distinct parameter lists to avoid ambiguity.
