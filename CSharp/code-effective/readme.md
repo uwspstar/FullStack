@@ -2,6 +2,21 @@
 - https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
 - https://www.amazon.com/gp/product/B074RJT99M/
 
+### Prefer Implicit Properties for Mutable Data
+- You cannot use implicit properties on types that are decorated with the Serializable attribute.
+- you are making binary-compatible changes to your class, and your validation will be in only one location. 
+```
+ public string LastName    {        
+	 get => lastName;        
+	 private set        {            
+		 if (string.IsNullOrEmpty(value))                
+			 throw new ArgumentException(                    
+			 "Last name cannot be null or empty");            
+		 lastName = value;        
+	 }    
+ } 
+ ```
+
 ### Use Properties Instead of Accessible Data Members
 - If you had used public data members, you’re stuck looking for every bit of code that sets a customer’s name and fixing it there.
 - Because properties are implemented with methods, adding multithreaded support is easier. 
