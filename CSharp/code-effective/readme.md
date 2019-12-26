@@ -142,11 +142,24 @@ private void CheckState()
 - The documentation for .NET recommends that you consider the size of a type as a determining factor between value types and reference types.
 
 ### Ensure That 0 Is a Valid State for Value Types
--  Never create an enum that does not include 0 as a
-valid choice.
-
-
-
+-  Never create an enum that does not include 0 as a valid choice. When you create your own values for an enum, make sure that 0 is one of them
+- enums that use the Flags attribute should always set the None value to 0: 
+```
+[Flags] public enum Styles 
+{   
+	None = 0,    
+	Flat = 1,    
+	Sunken = 2,    
+	Raised = 4, 
+} 
+```
+- 0 values cause serious problems with bitflags. 
+- If you use Flags, ensure that 0 is valid and that it means “the absence of all flags.” 
+```
+Styles flag = Styles.Sunken; 
+if ((flag & Styles.Flat) != 0) // Never true if Flat == 0.    DoFlatThings(); 
+```
+###  Ensure That Properties Behave Like Data
 
 
 
