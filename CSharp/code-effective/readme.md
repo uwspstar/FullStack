@@ -3,12 +3,15 @@
 - https://www.amazon.com/gp/product/B074RJT99M/
 ###  Limit Type Scope by Using Anonymous Types
 - Anonymous types are compiler generated immutable reference types
+-  you can and must use ```object initializer``` syntax when you construct an instance of an anonymous type.
+- Anonymous types are immutable types that support object initializer syntax.
 -  You’ve told the compiler that this new type is an immutable type and that it has two public read-only properties surrounding two backing fields (X, Y). 
 ```
 var aPoint = new { X = 5, Y = 67 }; 
 //  You’ve indicated that you need a new internal sealed class.
 ```
 - You’ve told the compiler to write something like this for you: 
+- Instead of writing this by hand, I’d rather let the compiler write it for me.
 ```
 internal sealed class AnonymousMumbleMumble 
 {    
@@ -29,6 +32,20 @@ internal sealed class AnonymousMumbleMumble
 	}    // And free implementations of ==, and GetHashCode() elided. 
 } 
 ```
+- The obvious ```drawback``` of using anonymous types is that you don’t know the name of the type. 
+- Because you don’t name the type, you can’t use an anonymous type as a parameter to a method or as its return value. 
+```
+static T Transform<T>(T element, Func<T, T> transformFunc) 
+{    
+	return transformFunc(element); 
+}
+var aPoint = new { X = 5, Y = 67 }; 
+var anotherPoint = Transform(aPoint, (p) =>    new { X = p.X * 2, Y = p.Y * 2 }); 
+```
+- The anonymous type can store results from the first phase of an algorithm and pass those interim results into the second phase. 
+- Using generic methods and lambdas means that you can define any necessary transformations on those anonymous types within the scope of the method where the anonymous type is defined. 
+- for two anonymous types to be considered the same, the property names and types must match, and the properties must be in the same order. 
+
 ### Prefer Immutability for Value Types
 - Don’t blindly create get and set accessors for every property in your type.
 - Your first choice for types that store data should be immutable
