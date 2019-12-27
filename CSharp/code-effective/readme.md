@@ -45,6 +45,19 @@ var anotherPoint = Transform(aPoint, (p) =>    new { X = p.X * 2, Y = p.Y * 2 })
 - The anonymous type can store results from the first phase of an algorithm and pass those interim results into the second phase. 
 - Using generic methods and lambdas means that you can define any necessary transformations on those anonymous types within the scope of the method where the anonymous type is defined. 
 - for two anonymous types to be considered the same, the property names and types must match, and the properties must be in the same order. 
+```
+var query = from c in customers            
+	group c by new { c.SalesRep, c.ZipCode };
+```
+- Tuples are similar in that they are lightweight types that you define by creating instances. 
+- Tuples are distinct from anonymous types in that they are ```mutable``` value types with public fields. 
+### anonymous types vs tuples 
+- Tuples are mutable value types
+- Anonymous types are compiler generated immutable reference types
+- Tuples are preferred for method return types and method parameters because they following structural typing. 
+- Anonymous types are better for composite keys in collections because they are immutable.
+- Tuples have all the advantages associated with value types; 
+- anonymous types have all the advantages associated with reference types
 
 ### Prefer Immutability for Value Types
 - Don’t blindly create get and set accessors for every property in your type.
