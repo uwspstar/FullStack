@@ -2,7 +2,33 @@
 - https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
 - https://www.amazon.com/gp/product/B074RJT99M/
 ###  Limit Type Scope by Using Anonymous Types
-
+- Anonymous types are compiler generated immutable reference types
+-  You’ve told the compiler that this new type is an immutable type and that it has two public read-only properties surrounding two backing fields (X, Y). 
+```
+var aPoint = new { X = 5, Y = 67 }; 
+//  You’ve indicated that you need a new internal sealed class.
+```
+- You’ve told the compiler to write something like this for you: 
+```
+internal sealed class AnonymousMumbleMumble 
+{    
+	private readonly int x;
+	public int X    
+	{        
+		get => x;    
+	}    
+	private readonly int y;    
+	public int Y    
+	{        
+		get => y;    
+	}    
+	public AnonymousMumbleMumble(int xParm, int yParm)    
+	{        
+		x = xParm;        
+		y = yParm;    
+	}    // And free implementations of ==, and GetHashCode() elided. 
+} 
+```
 ### Prefer Immutability for Value Types
 - Don’t blindly create get and set accessors for every property in your type.
 - Your first choice for types that store data should be immutable
