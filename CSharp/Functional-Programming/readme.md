@@ -5,7 +5,14 @@
 https://edcharbeneau.com/csharp-functional-workshop-instructions/
 - C# functional programming in-depth 
 https://weblogs.asp.net/dixin/functional-csharp-fundamentals
+- Writing Purely Functional Code in C# https://app.pluralsight.com/library/courses/writing-purely-functional-code-csharp/table-of-contents
 -  ```Higher-order function``` is the function which receives another function as an argument, or returns another function as the result, or both. 
+```
+int GiveStars(Func<string, float> HotelRating);
+Func<float> HotelRating (int desireRating);
+Func<int> AnyHotelRating (Func<string, float> HotelRating);
+
+```
 - ```Pure function``` is the function which has no side effects and only returns the result. Its result only depends on argument values and will always be the same for the same argument values. That was easy. 
 - ```Lazy evaluation``` means that the expression is not evaluated before its value is about to be used. 
 - And ```pattern matching``` means to match structure of an object against predetermined patterns, so that we can proceed with evaluation only if it conforms to certain structure and values.
