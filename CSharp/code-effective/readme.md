@@ -1,6 +1,8 @@
 # SUMMARY 
 - https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
 - https://www.amazon.com/gp/product/B074RJT99M/
+###  Limit Type Scope by Using Anonymous Types
+
 ### Prefer Immutability for Value Types
 - Don’t blindly create get and set accessors for every property in your type.
 - Your first choice for types that store data should be immutable
