@@ -1,6 +1,8 @@
 # SUMMARY 
 - https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
 - https://www.amazon.com/gp/product/B074RJT99M/
+### Define Local Functions on Anonymous Types
+
 ###  Limit Type Scope by Using Anonymous Types
 - Anonymous types are compiler generated immutable reference types
 -  you can and must use ```object initializer``` syntax when you construct an instance of an anonymous type.
@@ -58,7 +60,8 @@ var query = from c in customers
 - Anonymous types are better for composite keys in collections because they are immutable.
 - Tuples have all the advantages associated with value types; 
 - anonymous types have all the advantages associated with reference types
-
+-  you have interim results that you need to keep track of and if they’re modeled well with an immutable type, then you should use anonymous types. 
+- If they are modeled better as discrete mutable values, use a tuple.
 ### Prefer Immutability for Value Types
 - Don’t blindly create get and set accessors for every property in your type.
 - Your first choice for types that store data should be immutable
