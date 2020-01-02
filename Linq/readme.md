@@ -2,6 +2,7 @@
 - http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html
 - https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf
 
+- the query variable contains our query information ```NOT the query result```
 - LINQ stands for Language Integrated Query. LINQ enables us to query any type of data store (SQL Server, XML documents, Objects in memory etc).
 - LINQ provider is a component between the LINQ query and the actual data source
 ```
