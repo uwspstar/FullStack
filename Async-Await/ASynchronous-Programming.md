@@ -18,3 +18,20 @@ downloadButton.Clicked += async (o, e) =>
 };
 
 ```
+### CPU-bound Example: Performing a Calculation for a Game 
+```
+private DamageResult CalculateDamageDone() 
+{    
+  // Code omitted:    
+  //    
+  // Does an expensive calculation and returns    
+  // the result of that calculation. 
+}
+calculateButton.Clicked += async (o, e) => {    
+  // This line will yield control to the UI while CalculateDamageDone()    
+  // performs its work.  The UI thread is free to perform other work.    
+  var damageResult = await Task.Run(() => CalculateDamageDone());    
+  DisplayDamage(damageResult); 
+};
+
+```
