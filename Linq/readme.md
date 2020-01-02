@@ -6,7 +6,7 @@
 - the query variable contains our query information ```NOT the query result```
 - ```the result is not return from declare query variable```
 - ```the result comes from when we excute query```
-
+- As a rule when you write LINQ queries, we recommend that you use query syntax whenever possible and method syntax whenever necessary. There is no semantic or performance difference between the two different forms. Query expressions are often more readable than equivalent expressions written in method syntax
 ### LINQ provider is a component between the LINQ query and the actual data source
 ```
 // LINQ query using Lambda Expressions.
