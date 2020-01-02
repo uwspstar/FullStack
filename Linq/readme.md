@@ -2,7 +2,7 @@
 - LINQ stands for Language Integrated Query. LINQ enables us to query any type of data store (SQL Server, XML documents, Objects in memory etc).
 - http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html
 - https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf
-
+- A query is not executed until you iterate over the query variable, for example, in a foreach statement
 - the query variable contains our query information ```NOT the query result```
 - ```the result is not return from declare query variable```
 - ```the result comes from when we excute query```
