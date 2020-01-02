@@ -1,6 +1,6 @@
 ###
 ### The multiple from clauses 
-- The multiple from clauses  produce a SelectMany, which creates a single sequence from combining each element in the first sequence with each element in the second sequence.
+- The multiple from clauses  produce a ```SelectMany```, which creates a single sequence from combining each element in the first sequence with each element in the second sequence.
 ```
 
 var startingDeck = from s in Suits()
