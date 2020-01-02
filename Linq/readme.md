@@ -1,19 +1,26 @@
 # LINQ
+- LINQ stands for Language Integrated Query. LINQ enables us to query any type of data store (SQL Server, XML documents, Objects in memory etc).
 - http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html
 - https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf
 
 - the query variable contains our query information ```NOT the query result```
-- LINQ stands for Language Integrated Query. LINQ enables us to query any type of data store (SQL Server, XML documents, Objects in memory etc).
-- LINQ provider is a component between the LINQ query and the actual data source
+- ```the result is not return from declare query variable```
+- ```the result comes from when we excute query```
+
+### LINQ provider is a component between the LINQ query and the actual data source
 ```
-//LINQ query using Lambda Expressions.
+// LINQ query using Lambda Expressions.
 IEnumerable<Student> students = Student.GetAllStudents()
     .Where(student => student.Gender == "Male");
 
-//LINQ query using using SQL like query expressions
+// LINQ query using using SQL like query expressions, 
+// Query not excute yet
 IEnumerable<Student> students = from student in Student.GetAllStudents()
                                 where student.Gender == "Male"
                                 select student;
+                                
+// Excute query
+students.Count()
 ```
 ### Using Lambda Expressions.
 
