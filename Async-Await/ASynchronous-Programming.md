@@ -10,7 +10,13 @@
 - 1. Will your code be "waiting" for something, such as data from a database? If your answer is "yes", then your work is I/O-bound. 
 - 2. Will your code be performing a very expensive computation? If you answered "yes", then your work is CPU-bound. 
 
+### I/O-bound
+- If the work you have is I/O-bound, use async and await ```without``` Task.Run . 
+- You should ```NOT``` use the ```Task Parallel``` Library. The reason for this is outlined in the Async in Depth article.
 
+### CPU-bound 
+- If the work you have is CPU-bound and you care about responsiveness, use async and await but spawn the work off on another thread with Task.Run . 
+- If the work is appropriate for concurrency and parallelism, you should also consider using the Task Parallel Library.
 
 ### I/O-Bound Example: Downloading data from a web service 
 ```
