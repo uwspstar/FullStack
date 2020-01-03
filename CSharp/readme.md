@@ -1,6 +1,8 @@
 # C#
 - Secrets https://blog.submain.com/app-config-basics-best-practices/  (App.Config: Basics and Best Practices)
 - https://www.youtube.com/watch?v=-9b8NRqjUFM
+- C# Coding Conventions https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions
+- C# Walkthroughs https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs
 
 ### Higher Order Function
 ### tuples
