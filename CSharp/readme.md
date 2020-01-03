@@ -5,9 +5,23 @@
 - C# Walkthroughs https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs
 ### What is the purpose of the null coalescing (??) operator?
 - It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.
+- Only the compiler can derive from MulticastDelegate
 ### From which type does the compiler directly derive custom delegates?
-- MulticastDelegate
+- MulticastDelegate : an abstract class which represents one or more methods to be invoked
 ### Higher Order Function
+- Functions which accept other functions
+- Functions which return function
+- Delegates are .NET’s mechanism for treating functions as data 
+- Delegates are derived from MulticastDelegate 
+```
+public int Add (int x, int y) => x + y;
+Add(5, 10);
+
+public Func<int, int> Add (int x) => y => x + y;
+Add(5)(10);
+
+new[] { 2, 4, 6, 8 }.Select(Add(5))
+```
 ### tuples
 ### dynamic
 ```
