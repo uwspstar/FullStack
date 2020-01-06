@@ -41,3 +41,12 @@ public class Person
     LastName = lastName;    
   } 
 }
+
+### Destructors
+- Destructors can be defined in classes only, not structures. 
+- A class can have at most one destructor
+- Destructors cannot be inherited or overloaded
+- Destructors cannot be called directly
+- Destructors cannot have modifiers or parameters. 
+- The destructor is converted into an override version of the Finalize method. You cannot override Finalize or call it directly. 
+
