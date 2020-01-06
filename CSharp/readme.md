@@ -1029,3 +1029,12 @@ the standard query operators cannot be used on the provider's data source.
 - DELETE	Delete	404 (Not Found), unless you want to delete the whole collection — use with caution.	200 (OK). 404 (Not Found), if ID not found or invalid.
 ### Why can we exclude explicit type parameters when using the generic extension methods?
 - C#'s type inference system automatically determines the correct type
+
+### Optional parameters
+- Must exist after required parameters. 
+- If multiple optional parameters exist and a value is specified for one, all preceding optional parameters must also be supplied values.
+
+### Named parameters
+- Allow for giving parameters in a method a name
+- Increase code readability
+- Enable you to pass arguments to a method in an order other than in the method signature 
