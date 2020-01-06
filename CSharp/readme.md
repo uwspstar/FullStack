@@ -3,6 +3,8 @@
 - https://www.youtube.com/watch?v=-9b8NRqjUFM
 - C# Coding Conventions https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions
 - C# Walkthroughs https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs
+- C# Coding https://docs.microsoft.com/en-us/samples/browse/?redirectedfrom=MSDN-samples&term=C%23
+
 ### What is the purpose of the null coalescing (??) operator?
 - It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.
 - Only the compiler can derive from MulticastDelegate
