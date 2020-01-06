@@ -1051,3 +1051,4 @@ the standard query operators cannot be used on the provider's data source.
 - Use a placeholder at definition stage that will be replaced by type during instantiation 
 - Enable type-safe coding 
 - Increases performance due to reduction in conversions, boxing/unboxing
+
