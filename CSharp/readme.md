@@ -1046,3 +1046,8 @@ the standard query operators cannot be used on the provider's data source.
 ### Indexed properties
 - Allow array-like access to groups of items 
 - Must be access using an index in the same manner as arrays 
+
+### Generic types
+- Use a placeholder at definition stage that will be replaced by type during instantiation 
+- Enable type-safe coding 
+- Increases performance due to reduction in conversions, boxing/unboxing
