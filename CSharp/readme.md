@@ -1052,3 +1052,7 @@ the standard query operators cannot be used on the provider's data source.
 - Enable type-safe coding 
 - Increases performance due to reduction in conversions, boxing/unboxing
 
+### heap 
+- An area of memory used by the .NET compiler to store reference type variables 
+### instance fields 
+- The same as fields but are known as instance fields because they relate to an instance of an object. In other words, their values are not shared among objects of the same class. 
