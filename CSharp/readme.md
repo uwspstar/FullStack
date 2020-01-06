@@ -1038,3 +1038,11 @@ the standard query operators cannot be used on the provider's data source.
 - Allow for giving parameters in a method a name
 - Increase code readability
 - Enable you to pass arguments to a method in an order other than in the method signature 
+
+### Properties
+- May be read/write, read-only, or write-only
+- Can be used to perform data validation on incoming and outgoing data values
+
+### Indexed properties
+- Allow array-like access to groups of items 
+- Must be access using an index in the same manner as arrays 
