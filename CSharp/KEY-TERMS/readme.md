@@ -1,4 +1,6 @@
 
+### Unicode Unicode 
+- is a standard for encoding characters used by scripts in various locales around the world. It enables a program to display English, Chinese, Kanji, Arabic, Cyrillic, and other character sets. The .NET Framework uses the UTF-16 encoding, which uses 16 bits to represent each character. 
 ### Conversion Basics 
 - Implicit conversion doesn’t use a cast operator.
 - Explicit conversion uses a cast operator.
@@ -7,6 +9,8 @@
 - In an implicit conversion, the program automatically converts a value from one data type to another without any extra statements to tell it to make the conversion. 
 ### explicit conversion 
 - In an explicit conversion, the code uses an operator (such as a cast) or method (such as int.Parse) to explicitly tell the program how to convert a value from one type to another.
+### narrowing conversion 
+- A narrowing conversion is a data type conversion where the destination type cannot hold every possible value provided by the source data type. Converting from a long to an int is a narrowing conversion because a long can hold values such as 4,000,000,000 that cannot fit in an int. Narrowing conversions must be explicit. 
 ### is and as Operators 
 - Use the ```is``` operator to determine if a variable is compatible with a certain type.
 - Use the ```as``` operator to convert an object into a compatible type (or null if the object isn’t compatible with the type). 
@@ -22,6 +26,7 @@
 ### Boxing vs Unboxing
 - Boxing occurs when you convert a value type into a reference type as in object obj = 72. This is slow, so you should ```avoid it``` if possible.
 - Unboxing occurs when you convert a reference type back into a value type. 
+
 ### dynamic
 - The dynamic type is a static type, but its value isn’t evaluated until run time.
 ### Strings vs StringBuilders
@@ -39,3 +44,7 @@
 - Useful standard DateTime formatting strings include d (short date), D (long date), f (“full” with short time), F (“full” with long time), g (“general” with short time), G (“general” with long time), M or m (month/day), t (short time), T (long time), and Y  or y (year/month).
 ### Common Language Runtime (CLR) 
 - A virtual machine that manages execution of C# (and other .NET) programs.
+### intern pool 
+- The CLR maintains a table called “intern pool” that contains a single reference to every unique string used by the program. 
+### interoperability 
+- Interoperability enables managed code (such as a C# program) to use classes provided by unmanaged code that was not written under the control of the CLR.
