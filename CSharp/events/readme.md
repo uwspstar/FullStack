@@ -1,5 +1,5 @@
 # events
-- Events have publishers and subscribers. A given event may have many subscribers or no subscribers.
+- Events have ```publishers``` and ```subscribers```. A given event may have many subscribers or no subscribers.
 - Use a delegate type to define an event, as in the following code:
 ```
 public delegate void OverdrawnEventHandler(); 
