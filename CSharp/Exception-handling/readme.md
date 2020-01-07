@@ -18,3 +18,4 @@
 - Use a checked block or the Advanced Build Settings dialog to make overflows throw this exception. 
 - Floating point operations do not cause ```overflow```. Instead they set the result to ```PositiveInfinity```, ```NegativeInfinity```, or ```NaN```. 
 - Use the floating point methods ```IsInfinity```, ```IsInfinity```,```IsInfinity```, and ```IsNaN``` to determine whether a result is one of these special values.
+
