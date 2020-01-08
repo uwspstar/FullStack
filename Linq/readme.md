@@ -20,7 +20,8 @@ List<int> numbers2 = new List<int>() { 15, 14, 11, 13, 19, 18, 16, 17, 12, 10 };
 // Query #4. 
 double average = numbers1.Average();
 ```
-- In the previous queries, only Query #4 executes immediately. This is because it returns a single value, and not a generic IEnumerable<T> collection
+- In the previous queries, only Query #4 ```executes immediately```. This is because it returns a single value, and ```NOT``` a generic IEnumerable<T> collection
+    
 ### LINQ provider is a component between the LINQ query and the actual data source
 ```
 // LINQ query using Lambda Expressions.
