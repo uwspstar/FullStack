@@ -6,7 +6,7 @@
 - LINQ enables us to query any type of data store (SQL Server, XML documents, Objects in memory etc).
 - A query is not executed until you iterate over the query variable, for example, in a foreach statement
 - the query variable contains our query information ```NOT the query result```
-- ```the result is not return from declare query variable```
+- ```the result is ```NOT``` return from declare query variable```
 - ```the result comes from when we excute query```
 - As a rule when you write LINQ queries, we recommend that you use query syntax whenever possible and method syntax whenever necessary. There is no semantic or performance difference between the two different forms. Query expressions are often more readable than equivalent expressions written in method syntax
 - Some query operations must be expressed as a method call. The most common such methods are those that return singleton numeric values, such as Sum, Max, Min, Average, and so on.
