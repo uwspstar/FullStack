@@ -2,6 +2,8 @@
 - https://www.amazon.com/More-Effective-Specific-Software-Development/dp/0672337886/
 - https://www.amazon.com/gp/product/B074RJT99M/
 ### Define Local Functions on Anonymous Types
+- Tuples don’t use nominative typing. 
+- Anonymous types have names, but you can’t reference them
 
 ###  Limit Type Scope by Using Anonymous Types
 - Anonymous types are compiler generated immutable reference types
