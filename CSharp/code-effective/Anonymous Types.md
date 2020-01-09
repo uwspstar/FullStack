@@ -62,5 +62,10 @@ AnonymousMumbleMumble aPoint = new AnonymousMumbleMumble(5, 67);
 var query = from c in customers            
 	group c by new { c.SalesRep, c.ZipCode };
 ```
+### Tuples and anonymous
 - Tuples are similar in that they are lightweight types that you define by creating instances. 
 - Tuples are distinct from anonymous types in that they are ```mutable``` value types with public fields. 
+- Tuples are preferred for method return types and method parameters because they following structural typing
+- Anonymous types are better for composite keys in collections because they are immutable.
+- Tuples have all the advantages associated with value types; 
+- anonymous types have all the advantages associated with reference types 
