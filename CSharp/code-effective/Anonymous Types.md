@@ -1,13 +1,16 @@
 # Anonymous Types
 ###  Limit Type Scope by Using Anonymous Types
-- Anonymous types are compiler generated immutable reference types
+- Anonymous types are compiler generated ```immutable reference types```
 -  you can and must use ```object initializer``` syntax when you construct an instance of an anonymous type.
 - Anonymous types are immutable types that support object initializer syntax.
--  You’ve told the compiler that this new type is an immutable type and that it has two public read-only properties surrounding two backing fields (X, Y). 
+
 ```
 var aPoint = new { X = 5, Y = 67 }; 
 //  You’ve indicated that you need a new internal sealed class.
 ```
+- You’ve told the compiler several things : 
+- You’ve indicated that you need a new ```internal sealed class```. 
+- You’ve told the compiler that this new type is an ```immutable``` type and that it has two public ```read-only``` properties surrounding two backing fields (X, Y). 
 - You’ve told the compiler to write something like this for you: 
 - Instead of writing this by hand, I’d rather let the compiler write it for me.
 ```
@@ -30,8 +33,8 @@ internal sealed class AnonymousMumbleMumble
 	}    // And free implementations of ==, and GetHashCode() elided. 
 } 
 ```
-- The obvious ```drawback``` of using anonymous types is that you don’t know the name of the type. 
-- Because you don’t name the type, you can’t use an anonymous type as a parameter to a method or as its return value. 
+- The obvious ```drawback``` of using anonymous types is that you ```don’t know``` the ```name of the type```. 
+- Because you don’t name the type, you ```can’t``` use an anonymous type as a ```parameter``` to a ```method``` or as its return value. 
 ```
 static T Transform<T>(T element, Func<T, T> transformFunc) 
 {    
