@@ -1,4 +1,6 @@
 # Functional Programming in C#
+-  The most important concepts of functional programming are based on two approaches: 
+```avoiding state mutation``` and ```having functions as a firstclass concept```. 
 - https://www.youtube.com/watch?v=dfwBEIr5giY
 - https://www.youtube.com/watch?v=s8ru33IIQzc&t=523s
 - Going all in with Functional C#
