@@ -55,3 +55,44 @@ var employeeByState = employees.GroupJoin(states,
                        (e, h) => new { e.LastName, h.CityCode });
  
  ```
+### Grouping 
+```
+var employeesByState = employees.GroupBy(e => e.State); 
+```
+### Aggregate Functions 
+```
+int count = myArray.Where(i => i % 2 == 0).Count();
+int count = evenNumbers.Count();
+double average = myArray.Where(i => i % 2 == 0).Average();
+int sum = myArray.Where(i => i % 2 == 0).Sum();
+int min = myArray.Where(i => i % 2 == 0).Min();
+int max = myArray.Where(i => i % 2 == 0).Max();
+int first = myArray.Where(i => i % 2 == 0).First();
+int last = myArray.Where(i => i % 2 == 0).Last();
+
+```
+
+### Concatenation 
+```
+var combinedEmployees = employees.Concat(employees2);
+var combinedEmployees = employees
+                    .Select(e => new { Name = e.LastName })
+                    .Concat(people.Select(p => new { Name = p.LastName }));
+ 
+```
+### Skip and Take 
+```
+var newEmployees = employees.Skip(1);
+var newEmployees = employees.Skip(20).Take(10);
+```
+### Distinct
+```
+var distinctArray = myArray.Distinct();
+```
+
+
+
+
+
+
+
