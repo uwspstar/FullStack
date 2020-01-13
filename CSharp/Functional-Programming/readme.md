@@ -70,3 +70,5 @@ public static class FunctionalExtensions
     Func<T1, T2> f1, Func<T2, TResult> f2) => a => f2(f1(a)); 
 } 
 ```
+- Func<T, TResult> references a method with one argument and a return type that can be of a different type
+- This construct will become clear as you understand what the method returns: a method. The method that is returned is of type Func<T1, TResult>. After the first lambda operator, a => f2(f1(a)); 
