@@ -158,6 +158,18 @@ public static IEnumerable<TSource> Where<TSource>(
     Func<TSource, int, bool> predicate);
 
 ```
+-  you can call a function in your statement to make your code more readable
+```
+var evenNumbers = from i in myArray                     
+ where IsEvenAndGT5(i)                    
+ select i;
+ 
+static bool IsEvenAndGT5(int i) 
+{    
+    return (i % 2 == 0 && i > 5); 
+}
+
+```
 ### Multiple where Clauses
 - multiple where clauses is the equivalent of using the && operator
 ```
