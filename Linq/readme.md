@@ -158,7 +158,14 @@ public static IEnumerable<TSource> Where<TSource>(
     Func<TSource, int, bool> predicate);
 
 ```
-
+### Multiple where Clauses
+- multiple where clauses is the equivalent of using the && operator
+```
+var evenNumbers = from i in myArray                    
+    where i % 2 == 0                     
+    where i > 5                    
+    select i; 
+```
 ### Predicate?
 
 - A predicate is a function to test each element for a condition
