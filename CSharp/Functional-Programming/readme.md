@@ -1,6 +1,8 @@
 # Functional Programming in C#
 -  The most important concepts of functional programming are based on two approaches: 
-```avoiding state mutation``` and ```having functions as a firstclass concept```. 
+```avoiding state mutation``` and ```having functions as a firstclass concept```.
+- With C#, some of the predefined types are immutable such as the string type. Methods that are used to change the string always return a new string. 
+- What about collections? The methods used by LINQ don’t change a collection. Instead, methods such as Where and OrderBy return a new collection that is filtered and a ```new collection``` that is ordered. 
 - https://www.youtube.com/watch?v=dfwBEIr5giY
 - https://www.youtube.com/watch?v=s8ru33IIQzc&t=523s
 - Going all in with Functional C#
