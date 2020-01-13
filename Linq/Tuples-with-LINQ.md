@@ -29,9 +29,7 @@ static void UsingTuples()
 }
 ```
 - Tuples can have a performance advantage
-```
-With anonymous types, a class is created, 
-and thus instances of this class are allocated on the heap and need to be collected from the garbage collector. 
-By comparison, tuples are value types and stored on the stack. 
-Tuples can have a performance advantage.
-```
+- With anonymous types, a class is created, and thus instances of this class are allocated on the heap and need to be collected from the garbage collector. 
+- By comparison, tuples are value types and stored on the stack. 
+- Tuples can have a performance advantage.
+ 
