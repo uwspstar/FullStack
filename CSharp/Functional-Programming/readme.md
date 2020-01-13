@@ -61,4 +61,12 @@ Pure functions always return the same result for the same arguments that are pas
 Pure functions don’t result in a side effect, such as changing state, or depend on external sources. 
 ```
 ### EXPRESSION-BODIED MEMBERS
-
+### EXTENSION METHODS 
+```
+public static class FunctionalExtensions 
+{  
+  //...  
+  public static Func<T1, TResult> Compose<T1, T2, TResult>(
+    Func<T1, T2> f1, Func<T2, TResult> f2) => a => f2(f1(a)); 
+} 
+```
