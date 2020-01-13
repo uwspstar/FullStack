@@ -11,3 +11,15 @@ foreach (var employeeGroup in employeesByState)
   }    
 } 
 ```
+```
+var groupedNumbers = from i in myArray                        
+                      group i by (i % 2 == 0 ? "Even" : "Odd");
+foreach (var groupNumber in groupedNumbers)    
+{        
+  Debug.WriteLine(groupNumber.Key + ": " + groupNumber.Sum());        
+  foreach(var number in groupNumber)        
+  {            
+    Debug.WriteLine(number);        
+  }    
+}
+```
