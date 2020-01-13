@@ -15,8 +15,18 @@ static void UsingAnonymousTypes()
 ```
 - ``` Changing the curly brackets to parentheses creates a tuple``` with the fields LastName and Starts
 ```
-static void UsingTuples() {  var racerNamesAndStarts = Formula1.GetChampions()    .Where(r => r.Country == "Italy")    .OrderByDescending(r => r.Wins)    .Select(r =>     (      r.LastName,      r.Starts));
-  foreach (var r in racerNamesAndStarts)  {    Console.WriteLine($"{r.LastName}, starts: {r.Starts}");  } }
+static void UsingTuples() 
+{  
+  var racerNamesAndStarts = Formula1.GetChampions()    
+            .Where(r => r.Country == "Italy")    
+            .OrderByDescending(r => r.Wins)    
+            .Select(r => (      r.LastName,      r.Starts));
+
+  foreach (var r in racerNamesAndStarts)  
+  {    
+    Console.WriteLine($"{r.LastName}, starts: {r.Starts}");  
+  } 
+}
 ```
 - Tuples can have a performance advantage
 ```
