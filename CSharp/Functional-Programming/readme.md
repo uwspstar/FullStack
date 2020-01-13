@@ -72,3 +72,43 @@ public static class FunctionalExtensions
 ```
 - Func<T, TResult> references a method with one argument and a return type that can be of a different type
 - This construct will become clear as you understand what the method returns: a method. The method that is returned is of type Func<T1, TResult>. After the first lambda operator, a => f2(f1(a)); 
+### LOCAL FUNCTIONS 
+- A new feature of C# 7 is local functions: Methods can be declared within methods.
+- A reason to use local functions is if you need the functionality only within the scope of a method (or property, constructor, and so on).
+- Performance is a good reason to use local functions instead of lambda expressions. 
+```
+private static void IntroWithLocalFunctionsWithExpressionBodies() 
+{  
+  int add(int x, int y) => x + y;  
+  int result = add(37, 5);  
+  Console.WriteLine(result); 
+} 
+```
+### Local Functions with the yield Statement 
+### Recursive Local Functions 
+### TUPLES
+- Tuples enable you to combine objects of different types.
+- Tuples help reduce the need for the following two things: 
+```
+Defining custom classes or structs for returning multiple values 
+Defining parameters to return multiple values from methods
+```
+- Using _ with tuples is different. 
+- You don’t need to declare a type, and you can use _ multiple times; 
+- it’s a compiler feature to ignore this part with deconstruction.
+
+```
+(string s3, _, _) = ("magic", 42, new Person("Katharina", "Nagel"));  Console.WriteLine(s3); }
+```
+- Using the new tuple syntax, the C# compiler creates ValueTuple structures behind the scenes
+### Compatibility of ValueTuple with Tuple
+- The old Tuple type is implemented as an immutable class with read-only properties. 
+- With the new ValueTuple, the members are public fields. Public fields make this type mutable
+
+
+
+
+
+
+
+
