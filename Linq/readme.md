@@ -1,5 +1,4 @@
 # LINQ
-
 - http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html
 - https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf
 
