@@ -8,8 +8,10 @@
 ### What is the purpose of the null coalescing (??) operator?
 - It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.
 - Only the compiler can derive from MulticastDelegate
+
 ### From which type does the compiler directly derive custom delegates?
 - MulticastDelegate : an abstract class which represents one or more methods to be invoked
+
 ### Higher Order Function
 - Functions which accept other functions
 - Functions which return function
