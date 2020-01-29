@@ -1060,3 +1060,6 @@ the standard query operators cannot be used on the provider's data source.
 - An area of memory used by the .NET compiler to store reference type variables 
 ### instance fields 
 - The same as fields but are known as instance fields because they relate to an instance of an object. In other words, their values are not shared among objects of the same class. 
+
+### IHttpHandler
+- Why we need to create our own HTTP Handler: Sometime we need to avoid ASP.NET full page processing model, which saves lot of overheads, as ASP.NET web form model has to go through many steps such as creating web page objects, persisting view state etc. What we are interested into is to develop some low level interface that provides access to objects like Request and Response but doesn't use the full control based web form model discussed above.
