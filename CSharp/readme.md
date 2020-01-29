@@ -1063,3 +1063,4 @@ the standard query operators cannot be used on the provider's data source.
 
 ### IHttpHandler
 - Why we need to create our own HTTP Handler: Sometime we need to avoid ASP.NET full page processing model, which saves lot of overheads, as ASP.NET web form model has to go through many steps such as creating web page objects, persisting view state etc. What we are interested into is to develop some low level interface that provides access to objects like Request and Response but doesn't use the full control based web form model discussed above.
+- https://www.c-sharpcorner.com/uploadfile/37db1d/create-your-first-http-handler-in-Asp-Net-3-5/
