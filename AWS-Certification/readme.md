@@ -1,5 +1,7 @@
 
 # AWS Certified Solutions Architect - Associate
+- cloud 
+- data center
 - IAM
 ```
 - Delete your root access keys
