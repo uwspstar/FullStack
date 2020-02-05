@@ -15,3 +15,4 @@
 ### DC multi tenancy
 - multi tenancy and a very important aspect of multi tenancy is security.
 - Is the ability to host multiple clients/users on the Same infrastructure, while maintaining isolation And security for each tenant. This implies virtualizing The network, services, compute/servers, and storage
+### Servers - Physical
