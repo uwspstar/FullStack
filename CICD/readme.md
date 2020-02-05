@@ -1,4 +1,5 @@
 # CI / CD
+- https://logz.io/
 - JFrog Artifactory https://jfrog.com/artifactory/
 - Top 8 Continuous Integration Tools by Vladimir Pecanac
 https://code-maze.com/top-8-continuous-integration-tools/
