@@ -1,6 +1,7 @@
 
 # AWS Certified Solutions Architect - Associate
-
+- Requesting 30 Minutes additional Exam time for Non Native English Speakers
+https://www.udemy.com/course/aws-certified-solutions-architect-associate-exam/learn/lecture/16962376#overview
 - cloud 
 - data center
 - On Premise Data Center , What is Cloud Computing
