@@ -40,3 +40,14 @@
 - ```Private cloud``` is for a single tenant
 - ```Public cloud```, as the name implies, is shared among multiple tenants
 - ```Hybrid cloud``` is the composition of two or more private & public clouds
+- public cloud is all about. So Automated Access customer managed access to services whether it's infrastructure as a service platform and service or software as a service private cloud.
+- When the client builds the to me to cloud setup but ```in-house``` This is called ```private cloud``` 
+- hybrid cloud  basically the setup that encompasses public cloud tenancy and private cloud.
+### Cloud vs On-Premise
+- OPEX( operational expenditure ) vs CAPEX, Pay for what you use
+- Time to deploy
+- Dev and Test environments made easier
+- Flexibility of Changes
+- Elasticity
+- Automation
+### Cons : Lack of visibility (where is your Data)
