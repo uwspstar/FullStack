@@ -15,4 +15,9 @@
 ### DC multi tenancy
 - multi tenancy and a very important aspect of multi tenancy is security.
 - Is the ability to host multiple clients/users on the Same infrastructure, while maintaining isolation And security for each tenant. This implies virtualizing The network, services, compute/servers, and storage
-### Servers - Physical
+### Servers - Physical 
+- server /a physical standalone rack accountable server  
+- blade
+- cha
+### Servers - Virtual
+- one of these virtual server a virtual machine in ASW as this is called the elastic compute cloud or the EC2 service.
