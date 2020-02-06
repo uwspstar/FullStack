@@ -30,3 +30,13 @@
 - Cloud computing often referred to as the cloud is the delivery of on demand computing resources everything from applications to data centers over the Internet as pay for use basis.
 - Cloud computing is a type of computing that relies on sharing computing resources rather than having local servers or personal devices to handle applications.
 - Cloud computing is a kind of Internet based computing that provides shared processing for resources and data to computers and other devices on demand
+### Cloud computing offerings
+- Software as a Service (Saas) -- CRM, Microsoft Office 365 PowerPoint, in the cloud and people can subscribe to it.
+- Database as a Service (Daas)
+- Platform as a Service (PaaS)
+- Infrastructure as a Service (LaaS)  -- AWS No1
+### Cloud deployment models
+- HybridCloud ( PRivate Cloud , Public Cloud)
+- ```Private cloud``` is for a single tenant
+- ```Public cloud```, as the name implies, is shared among multiple tenants
+- ```Hybrid cloud``` is the composition of two or more private & public clouds
