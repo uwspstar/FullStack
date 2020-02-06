@@ -21,3 +21,12 @@
 - cha
 ### Servers - Virtual
 - one of these virtual server a virtual machine in ASW as this is called the elastic compute cloud or the EC2 service.
+- be able to save on cooling you would be able to save on power you would be able to save on
+### Servers - Virtual Memory, CPU, NIC, DISK
+- a ```virtualization layer``` or called ```hypervisor```.
+### Virtualization
+- All can be virtualized Networ, Storage, Security, SLB, 
+### Cloud Computing - Definition
+- Cloud computing often referred to as the cloud is the delivery of on demand computing resources everything from applications to data centers over the Internet as pay for use basis.
+- Cloud computing is a type of computing that relies on sharing computing resources rather than having local servers or personal devices to handle applications.
+- Cloud computing is a kind of Internet based computing that provides shared processing for resources and data to computers and other devices on demand
