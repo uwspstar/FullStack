@@ -4,6 +4,8 @@
 - authorized (before you do action )
 - Creating Users in a Group , Assigning Group membership and Permissions
 - Group, Policy, add user
+- One IAM User per PHYSICAL PERSON
+- One IAM Role per Application
 ### IAM Introduction
 - IAM (Identity and Access Management) and IAM has a global view
 - Users
