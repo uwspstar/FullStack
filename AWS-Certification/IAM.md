@@ -1,3 +1,5 @@
 # Identity and Access Management (IAM)
+- authenticated
+- authorized
 - Creating Users in a Group , Assigning Group membership and Permissions
-- Group, Plicy, add user
+- Group, Policy, add user
