@@ -51,3 +51,8 @@
 - Elasticity
 - Automation
 ### Cons : Lack of visibility (where is your Data)
+### who are the main players in the cloud.
+- Amazon : AWS
+- Microsoft :AZure
+- IBM
+- google
