@@ -1,5 +1,7 @@
 
 # AWS Certified Solutions Architect - Associate
+- https://www.udemy.com/course/aws-certified-solutions-architect-associate-saa-c01/learn/lecture/13531398?start=15#overview
+- https://www.udemy.com/course/aws-certified-solutions-architect-associate-exam/learn/lecture/9345242?start=210#overview
 - Requesting 30 Minutes additional Exam time for Non Native English Speakers
 https://www.udemy.com/course/aws-certified-solutions-architect-associate-exam/learn/lecture/16962376#overview
 - cloud 
