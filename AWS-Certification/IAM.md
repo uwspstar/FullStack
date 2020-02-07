@@ -27,3 +27,6 @@
 ### Policies (JSON Documents)
 - Defines what each of the above can and cannot do
 - Permissions are governed by Policies (JSON)
+### IAM Federation
+- Big enterprises usually integrate their own repository of users with IAM, This way, one can login into AWS using their company credentials
+- Identity Federation uses the SAML standard (Active Directory)
