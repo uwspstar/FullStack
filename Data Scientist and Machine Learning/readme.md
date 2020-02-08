@@ -3,3 +3,5 @@
 - What Is Machine Learning?
 - AI/Machine Learning/Data Science
 - https://teachablemachine.withgoogle.com/
+- https://ml-playground.com/#
+- https://www.elementsofai.com/
