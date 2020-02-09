@@ -11,5 +11,5 @@ when most people talk about Python they're talking about CPython that nterprets 
 So we're downloading this interpreter and compiler
 ```
 - int & float
-- float take more memory than int
+- float take more memory than int. 50,0001, save 2 different location 50, and 0001
 - print(type(6))
