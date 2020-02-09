@@ -7,7 +7,6 @@
 - https://www.elementsofai.com/
 - python / cpython
 ```
-when most people talk about Python they're talking about this one CPython that well does our translation
-for us it interprets our Python code and runs it on a machine.
+when most people talk about Python they're talking about CPython that nterprets our Python code and runs it on a machine.
 So we're downloading this interpreter and compiler
 ```
