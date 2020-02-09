@@ -5,3 +5,4 @@
 - https://teachablemachine.withgoogle.com/
 - https://ml-playground.com/#
 - https://www.elementsofai.com/
+- python
