@@ -10,3 +10,6 @@
 when most people talk about Python they're talking about CPython that nterprets our Python code and runs it on a machine.
 So we're downloading this interpreter and compiler
 ```
+- int & float
+- float take more memory than int
+- print(type(6))
