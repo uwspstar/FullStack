@@ -23,3 +23,5 @@ So we're downloading this interpreter and compiler
 - print(abs(-20)) # 20
 ### bin() and complex
 - print(bin(5) # 0b101 , 0b means binary
+- print(int('0b101', 2) # base 2
+### Variables
