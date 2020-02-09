@@ -7,6 +7,12 @@
 - https://www.elementsofai.com/
 - download minicoda https://docs.conda.io/en/latest/miniconda.html
 - python / cpython
+### install miniconda
+```
+conda create --prefix ./env pandas numpy matplotlib scikit-learn
+conda activate /Users/xingwang/Side-Projects/Maching-Learning-Projects/env
+```
+
 ```
 when most people talk about Python they're talking about CPython that nterprets our Python code and runs it on a machine.
 So we're downloading this interpreter and compiler
