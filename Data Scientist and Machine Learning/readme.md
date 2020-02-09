@@ -13,3 +13,7 @@ So we're downloading this interpreter and compiler
 - int & float
 - float take more memory than int. 50,0001, save 2 different location 50, and 0001
 - print(type(6))
+- print(type(1.1+ 2.9)) # float 4.0
+- print(2 ** 3) # 2 of power of 3
+- print(5 // 4) # int 1
+- print(6 % 4) # int reminder 2
