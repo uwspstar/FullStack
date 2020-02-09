@@ -5,6 +5,7 @@
 - https://teachablemachine.withgoogle.com/
 - https://ml-playground.com/#
 - https://www.elementsofai.com/
+- https://docs.conda.io/en/latest/miniconda.html
 - python / cpython
 ```
 when most people talk about Python they're talking about CPython that nterprets our Python code and runs it on a machine.
