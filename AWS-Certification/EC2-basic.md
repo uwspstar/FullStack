@@ -5,7 +5,7 @@
 - shared host vs dedicated host
 - operate system ( linux and windows)
 - ECS servce provides resizable compute capacity in the cloud
-- you have root aaccess to each of your EC2 instances
+- you have root access to each of your EC2 instances
 - you can stop restart reboot, or terminate your instance
 - EC2 availablity SLA is 99.95 % for each region during any monthly billing period ( 22 minutes per month)
 - you can provision your EC2 instances on shared or dedicated hosts ( physical servers)
