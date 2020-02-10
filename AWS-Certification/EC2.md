@@ -9,7 +9,7 @@
 - you can stop restart reboot, or terminate your instance
 - EC2 availablity SLA is 99.95 % for each region during any monthly billing period ( 22 minutes per month)
 - you can provision your EC2 instances on shared or dedicated hosts ( physical servers)
-### EC@ instance access
+### EC2 instance access
 - to access an instance you need a key and key pair name (public key vs private key)
 - when you launch a new EC2 instance, you can create a public private key pair
 - you can download the private key only once, save it in a safe place so you won't loose it
