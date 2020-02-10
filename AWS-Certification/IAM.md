@@ -35,3 +35,5 @@
 ### Access type
 - Programmatic access (AWS API, CLI, SDK, and other development tool)
 - AWS management console access (sing-in to the AWS Manageent Console)
+### password policy
+### AWS Billing Alerts and Cost Budgets
