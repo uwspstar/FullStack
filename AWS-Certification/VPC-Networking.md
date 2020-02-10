@@ -1,2 +1,2 @@
 # VPC
-![VPC](/Img/vpc.JPNG)
+![VPC](/Img/vpc.JPG)
