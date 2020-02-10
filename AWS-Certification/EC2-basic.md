@@ -14,8 +14,8 @@
 - when you launch a new EC2 instance, you can create a public private key pair
 - you can download the private key only once, save it in a safe place so you won't loose it
 - private key only display at first time, you can dowload
-- user keep the private key in safe place
-- user use private key + key name to call AWS server
+- users keep the private key in safe place
+- users use private key + key name to call AWS server
 - the public key is saved by AWS to match it to the key pair name, and private key when you try to login to the EC2 instance
 - if you launch you instance without a key pair, you will not be able to access it (via RDP or SSH)
 ### EC2
@@ -23,7 +23,7 @@
 - Two types of Block store devices are supported:  EBS vs instance-store
 - Elastice Block Store (EBS) persiistent and network attached virtual drives ( root volume and data volume)
 - Elastice Block Store (EBS) is not part of the EC2, it use network attached
-- Elastice Block Store (EBS) is persist
+- Elastice Block Store (EBS) is persist, terminate and restart, it still there
 - instance-store is part of the EC2
 - instance-store basicall the virtual hard drive on the host allocated to this EC2 instance
 - instance-store is virtual , tempory storage, ```if you terminate the EC2, you loose it```
