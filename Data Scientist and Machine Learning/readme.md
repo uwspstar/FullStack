@@ -9,8 +9,16 @@
 - python / cpython
 ### install miniconda
 ```
-conda create --prefix ./env pandas numpy matplotlib scikit-learn
+conda create --prefix ./env pandas numpy matplotlib scikit-learn jupyter
+```
+```
 conda activate /Users/xingwang/Side-Projects/Maching-Learning-Projects/env
+```
+```
+conda install jupyter
+```
+```
+jupyter notebook
 ```
 
 ```
