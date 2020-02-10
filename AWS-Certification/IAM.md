@@ -32,3 +32,6 @@
 ### IAM Federation
 - Big enterprises usually integrate their own repository of users with IAM, This way, one can login into AWS using their company credentials
 - Identity Federation uses the SAML standard (Active Directory)
+### Access type
+- Programmatic access (AWS API, CLI, SDK, and other development tool)
+- AWS management console access (sing-in to the AWS Manageent Console)
