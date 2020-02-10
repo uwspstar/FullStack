@@ -27,6 +27,18 @@
 - instance-store is part of the EC2
 - instance-store basicall the virtual hard drive on the host allocated to this EC2 instance
 - instance-store is virtual , tempory storage, ```if you terminate the EC2, you loose it```
+### EBS vs Instance Store
+- Some instance do not come with Root EBS volumes
+- Instead, they come with “Instance-Store” (= ephemeral storage)
+- Instance-store is physically attached to the machine (EBS is a network drive)
+- Pros:
+  • Better I/O performance
+  • Good for buffer / cache / scratch data / temporary content
+  • Data survives reboots
+- Cons:
+  • On stop or termination, the instance-store is lost
+  • You can’t resize the instance store
+  • Backups must be operated by the user
 ### EC2 - Root/Boot volume
 - EC2 instance root/boot volumes can be EBS or instance Store volumes
 - EBS-Backed EC2 instance : it has an EBS root volume
