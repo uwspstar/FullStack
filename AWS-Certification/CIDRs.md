@@ -14,4 +14,11 @@
 • /24 allows for 256 IP = 2^8
 • /16 allows for 65,536 IP = 2^16
 • /0 allows for all IPs = 2^32
+
+• /32 – no IP number can change
+• /24 - last IP number can change
+• /16 – last IP two numbers can change
+• /8 – last IP three numbers can change
+• /0 – all IP numbers can change
+
 ```
