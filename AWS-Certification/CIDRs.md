@@ -1,6 +1,7 @@
 # CIDRs
 ### Subnet Masks
 - The subnet masks basically allows part of the underlying IP to get additional next values from the base IP
+```
 • /32 allows for 1 IP = 2^0
 • /31 allows for 2 IP = 2^1
 • /30 allows for 4 IP = 2^2
@@ -12,3 +13,4 @@
 • /24 allows for 256 IP = 2^8
 • /16 allows for 65,536 IP = 2^16
 • /0 allows for all IPs = 2^32
+```
