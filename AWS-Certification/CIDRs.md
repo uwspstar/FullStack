@@ -43,3 +43,8 @@
   • 192.168.0.0 – 192.168.255.255 (192.168.0.0/16) <= example: home networks
 ```
 ### All the rest of the IP on the internet are public IP
+### Exam Tip:
+```
+• If you need 29 IP addresses for EC2 instances, you can’t choose a Subnet of size /27 (32 IP)
+• You need at least 64 IP, Subnet size /26 (64-5 = 59 > 29, but 32-5 = 27 < 29)
+```
