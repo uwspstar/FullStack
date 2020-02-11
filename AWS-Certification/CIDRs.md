@@ -1,6 +1,7 @@
 # CIDRs
 ### Subnet Masks
 - The subnet masks basically allows part of the underlying IP to get additional next values from the base IP
+- total is 32, /number means how many ip has been used ( not valid)
 ```
 • /32 allows for 1 IP = 2^0
 • /31 allows for 2 IP = 2^1
