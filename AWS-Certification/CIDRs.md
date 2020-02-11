@@ -32,3 +32,12 @@
   • All IP!
 
 ```
+### Private vs Public IP (IPv4)
+- Allowed ranges
+- The Internet Assigned Numbers Authority (IANA) established certain blocks of IPV4 addresses for the use of private (LAN) and public
+(Internet) addresses.
+### Private IP can only allow certain values
+  • 10.0.0.0 – 10.255.255.255 (10.0.0.0/8) <= in big networks
+  • 172.16.0.0 – 172.31.255.255 (172.16.0.0/12) <= default AWS one
+  • 192.168.0.0 – 192.168.255.255 (192.168.0.0/16) <= example: home networks
+### All the rest of the IP on the internet are public IP
