@@ -37,4 +37,5 @@
 - you can change the subnet association to another route table
 - you can aslo edit the main (default) route table if you need, but you can NOT delete the Main(defult) route table
 - However you can make a custom route table manuallt become the main route table, then you can delete the former main, as it is no longer a main route table
-- Every route table in a VPC comes with a default rule that allows all VPC subnets to communicate with one another
+- Every route table in a VPC comes with a default rule that allows all VPC subnets to communicate with one another, you can NOT modify or delete thsi rule
+###  Core Knowledge -VPC Components - IP Addressing - Internet Gateway - Subnet Types
