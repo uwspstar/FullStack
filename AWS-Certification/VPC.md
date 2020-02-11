@@ -1,1 +1,12 @@
-# VPC
+# VPC - AWS Virtual Private Cloud (VPC)
+- VPC inside region
+- VPC is region special
+- VPC has 1 or mort VPC subnet
+- VPC subnet inside Avaliablity Zone
+- 1 subnet in 1 Avaliablity Zone
+- 1 VPC in 1 region
+- VPC is a virtual network or data center inside tAWS for one client, or a department in an enterprise
+- The AWS client has full control over resources & virtual compute instances (virtual servers) hosted inside the VPC
+- is Similar to having your own data center inside AWS
+- Logically isolated from other VPCs on AWS
+- you can have 1 or mort IO address subnets inside a VPC
