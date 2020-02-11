@@ -1,5 +1,17 @@
 # VPC - AWS Virtual Private Cloud (VPC)
+### Default VPC Walkthrough
+- All new accounts have a default VPC
+- New instances are launched into default VPC if no subnet is specified
+- Default VPC have internet connectivity and all instances have public IP
+- We also get a public and a private DNS name
+### Because VPC is private, only the Private IP ranges are allowed:
+```
+• 10.0.0.0 – 10.255.255.255 (10.0.0.0/8)
+• 172.16.0.0 – 172.31.255.255 (172.16.0.0/12)
+• 192.168.0.0 – 192.168.255.255 (192.168.0.0/16)
+```
 ### VPC and VPC Subnet
+- You can have multiple VPCs in a region (max 5 per region – soft limit)
 - VPC inside region
 - VPC is region special
 - VPC has 1 or mort VPC subnet
@@ -12,6 +24,8 @@
 - Logically isolated from other VPCs on AWS
 - You can have 1 or mort IO address subnets inside a VPC
 - A VPC is confined to an AWS region and does not extend between regions
+- AWS reserves 5 IPs address (first 4 and last 1 IP address) in each Subnet
+- These 5 IPs are not available for use and cannot be assigned to an instance
 ### Components
 - CIDR and IP address subnets
 - implied Router
