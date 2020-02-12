@@ -24,6 +24,16 @@ jupyter notebook
 control + c
 ```
 ```
+conda deactivate
+```
+```
+ls
+cd Side-Projects/Maching-Learning-Projects/
+conda activate /Users/xingwang/Side-Projects/Maching-Learning-Projects/env
+jupyter notebook
+```
+
+```
 when most people talk about Python they're talking about CPython that nterprets our Python code and runs it on a machine.
 So we're downloading this interpreter and compiler
 ```
