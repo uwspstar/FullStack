@@ -17,7 +17,12 @@
 - ```Commits``` Different stages of your code inside a branch
 - ```download``` : https://git-scm.com/downloads
 ### Git command
--```>git init```
+```
+>git init
+>git status
+>git add .
+or >git add filename
+```
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
