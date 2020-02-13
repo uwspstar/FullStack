@@ -11,6 +11,11 @@
 ### Git vs Github
 - Git is the most popular "version control system" - a tool to keep track of file changes over time. 
 - GitHub is an online service that hosts git repositories for developers.
+### Git
+- ```Repository``` :  the location where your code history is stored
+- ```Branch``` "Folder" within the repository containing commits
+- ```Commits``` Different stages of your code inside a branch
+- downlaod git : https://git-scm.com/downloads
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
