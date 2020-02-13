@@ -19,10 +19,19 @@
 ### Git command
 ```
 >git init
->git status
->git add .
-or >git add filename
 ```
+```
+>git status
+```
+```
+>git add .
+```
+or 
+```
+>git add filename
+```
+- git add . means to add all files
+ 
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
