@@ -15,7 +15,9 @@
 - ```Repository``` :  the location where your code history is stored
 - ```Branch``` "Folder" within the repository containing commits
 - ```Commits``` Different stages of your code inside a branch
-- downlaod git : https://git-scm.com/downloads
+- ```download``` : https://git-scm.com/downloads
+### Git command
+-```>git init```
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
