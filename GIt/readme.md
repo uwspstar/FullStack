@@ -38,6 +38,15 @@ $ git add filename
 $ git commit -m "another test"
 ```
 - commit the change with the comment , ready for push
+```
+$ git log
+```
+- show the commit info , ```(HEAD -> master)``` means the latest change
+
+
+
+
+
 
 
 ### 5 steps by Scolt
