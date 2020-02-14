@@ -1,4 +1,5 @@
 # osquery 
+- https://audministrator.wordpress.com/2019/02/01/windows-using-osquery-tool/
 - https://osquery.io/
 - https://osquery.readthedocs.io/en/stable/
 - https://github.com/osquery/osquery
