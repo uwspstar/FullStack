@@ -18,20 +18,27 @@
 - ```download``` : https://git-scm.com/downloads
 ### Git command
 ```
->git init
+$ git init
 ```
+- create git repo for the currect fold
 ```
->git status
+$ git status
 ```
+- check the current status
 ```
->git add .
+$ git add .
 ```
-or 
+- add last file to stage
 ```
->git add filename
+$ git add filename
 ```
 - git add . means to add all files
  
+```
+$ git commit -m "another test"
+```
+- commit the change with the comment , ready for push
+
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
