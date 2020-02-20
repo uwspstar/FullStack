@@ -61,3 +61,7 @@
 ### Internaet Gateway
 - Internaet Gateway is the gateways throught which you VPC communicateds with the internet, and with other AWS services
 - Internaet Gateway is a horizontally scaled, redundant, and highly available VPC component
+- There is only one Internaet Gateway for each VPC, you can NOT have more than one
+- It performs NAT( static one-to-one) between your private and Public (or Elastic) IPv4 address
+- It support both IPv4 and IPv6
+### Public Subnet vs. Private Subnet
