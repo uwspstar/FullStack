@@ -53,3 +53,11 @@
 - However you can make a custom route table manuallt become the main route table, then you can delete the former main, as it is no longer a main route table
 - Every route table in a VPC comes with a default rule that allows all VPC subnets to communicate with one another, you can NOT modify or delete thsi rule
 ###  Core Knowledge -VPC Components - IP Addressing - Internet Gateway - Subnet Types
+- One the VPC is created, you can NOT change its CIDR block range
+- if you need a different CIDR size, create a new VPC
+- The different subnets within a VPC can NOT overlap (basic TCP/IP rule)
+- You can however, expand your VPC CIRD by adding new/extra IP address ranges
+- First 4 IP address in each subnet and the last one are reserved by AWS
+### Internaet Gateway
+- Is the gateways throught which you VPC communicateds with the internet, and with other AWS services
+
