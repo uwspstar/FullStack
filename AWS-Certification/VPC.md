@@ -59,5 +59,5 @@
 - You can however, expand your VPC CIRD by adding new/extra IP address ranges
 - First 4 IP address in each subnet and the last one are reserved by AWS
 ### Internaet Gateway
-- Is the gateways throught which you VPC communicateds with the internet, and with other AWS services
-
+- Internaet Gateway is the gateways throught which you VPC communicateds with the internet, and with other AWS services
+- Internaet Gateway is a horizontally scaled, redundant, and highly available VPC component
