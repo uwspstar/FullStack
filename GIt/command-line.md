@@ -2,8 +2,38 @@
 - https://alligator.io/workflow/command-line-creating-files-directories/
 - https://bencane.com/2013/05/13/removing-files-and-directories-with-rm-and-rmdir/
 
+### Tool 
+https://cmder.net/
+
+### bash command in windows
+- pwd : present working directory  ( C:\  = \c\ )
+- dir = ls
+- ls -l  
+- cd
+- ~  : current user root directory
 ```
+// current working directory (C:\ =  \c\)
+$ pwd
+
+// dir = ls
+// more detail of the list files
+$ ls -l
+
+// change directory
+$ cd video
+
+// current user root directory
+$ cd ~
+
+// with space using \space
+λ cd my\ documents/
+
+// back to 3 levels  ../ is one level
+λ cd ../../../
+
+
 //Creating a Directory .vscode
+
 $ mkdir .vscode
 
 // remove file .gitignore
