@@ -22,7 +22,7 @@ $ ls -l
 // change directory
 $ cd video
 
-// current user root directory
+// back to current user root directory
 $ cd ~
 
 // with space using \space
@@ -31,6 +31,9 @@ $ cd ~
 // back to 3 levels  ../ is one level
 λ cd ../../../
 
+//is commad valiad, is valid showing the location
+λ which ls
+/usr/bin/ls
 
 //Creating a Directory .vscode
 
