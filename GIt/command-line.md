@@ -58,6 +58,8 @@ $ mkdir .vscode
 λ rmdir newfolder/
 //rmdir: failed to remove 'newfolder/': Directory not empty
 
+// rm command with the -r and -f options will recursively and by force delete everything you specify
+// used with great caution.
 // rm remove folder, -r : recursive, -f : force 
 λ rm -r -f newfolder/
 // = λ rm -rf newfolder/
