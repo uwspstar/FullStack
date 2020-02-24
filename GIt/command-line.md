@@ -38,6 +38,12 @@ $ cd ~
 // echo $PATH : show path on console
 λ echo $PATH
 
+// cat show file full content
+λ cat index.html
+
+// less show file with less content  enter "q" to quit
+λ less index.html
+
 
 //Creating a Directory .vscode
 
