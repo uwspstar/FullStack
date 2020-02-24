@@ -58,9 +58,15 @@ $ mkdir .vscode
 λ rmdir newfolder/
 //rmdir: failed to remove 'newfolder/': Directory not empty
 
-//rm remove folder, -r : recursive, -f : force 
+// rm remove folder, -r : recursive, -f : force 
 λ rm -r -f newfolder/
 // = λ rm -rf newfolder/
+
+// clear screen
+λ clear
+
+// exit : exit console
+λ exit
 
 // remove file .gitignore
 $ rm .gitignore
