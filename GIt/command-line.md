@@ -35,6 +35,10 @@ $ cd ~
 λ which ls
 /usr/bin/ls
 
+// echo $PATH : show path on console
+λ echo $PATH
+
+
 //Creating a Directory .vscode
 
 $ mkdir .vscode
