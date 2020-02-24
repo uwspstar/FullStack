@@ -60,6 +60,7 @@ $ mkdir .vscode
 
 //rm remove folder, -r : recursive, -f : force 
 λ rm -r -f newfolder/
+// = λ rm -rf newfolder/
 
 // remove file .gitignore
 $ rm .gitignore
