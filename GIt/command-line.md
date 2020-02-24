@@ -44,10 +44,22 @@ $ cd ~
 // less show file with less content  enter "q" to quit
 λ less index.html
 
+// touch to create a new file
+λ touch demo.txt
+
+// mv change file name 
+λ mv demo.txt demo1.txt
 
 //Creating a Directory .vscode
-
+λ mkdir newfolder
 $ mkdir .vscode
+
+// rmdir : remove directory
+λ rmdir newfolder/
+//rmdir: failed to remove 'newfolder/': Directory not empty
+
+//rm remove folder, -r : recursive, -f : force 
+λ rm -r -f newfolder/
 
 // remove file .gitignore
 $ rm .gitignore
