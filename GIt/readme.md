@@ -22,7 +22,7 @@
 ### Git
 - ```Repository``` :  the location where your code history is stored
 - ```Branch``` "Folder" within the repository containing commits
-- ```Commits``` Different stages of your code inside a branch
+- ```Commits``` Different stages of your code inside a branch. Just a reference to a branch
 - ```download``` : https://git-scm.com/downloads
 ### Bash
 - Shell Environment
@@ -60,6 +60,14 @@ $ git log
 - the diff between 2 commits
 ```
 λ git diff 5eac20 2ea380d
+```
+- current branch
+```
+λ git branch
+```
+- create a new branch
+```
+λ git branch branchnamePlay
 ```
 - checkout the commet
 ```
