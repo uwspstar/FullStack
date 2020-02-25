@@ -37,6 +37,9 @@ $ cd ~
 // open current folder
 λ start .
 
+// show current folder with tree view
+λ tree .
+
 //is commad valiad, is valid showing the location
 λ which ls
 /usr/bin/ls
