@@ -34,6 +34,9 @@ $ cd ~
 // back to 3 levels  ../ is one level
 λ cd ../../../
 
+// open current folder
+λ start .
+
 //is commad valiad, is valid showing the location
 λ which ls
 /usr/bin/ls
