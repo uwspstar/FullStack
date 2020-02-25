@@ -69,8 +69,11 @@ $ git log
 ```
 λ git switch -
 ```
-
-
+- ```stdin``` standard input
+```
+λ echo "apple" | git hash-object --stdin
+89bdd812e4d7e3b665770f92c4a0c86b4d04094f
+```
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
 
