@@ -9,6 +9,11 @@
 - Commamd tool for windows https://cmder.net/
 
 - ```DO NOT REBASE COMMITS THAT EXISTS OUTSIDE YOUR REPO``` https://git-scm.com/book/en/v2/Git-Branching-Rebasing 
+### Git object
+- blob
+- tree
+- commit
+- tag
 
 ### Git vs Github
 - Git is the most popular "version control system" - a tool to keep track of file changes over time. 
