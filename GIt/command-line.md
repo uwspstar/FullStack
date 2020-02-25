@@ -1,6 +1,7 @@
 ### command line
 - https://alligator.io/workflow/command-line-creating-files-directories/
 - https://bencane.com/2013/05/13/removing-files-and-directories-with-rm-and-rmdir/
+- https://dev.to/awwsmm/101-bash-commands-and-tips-for-beginners-to-experts-30je
 
 ### Tool 
 https://cmder.net/
