@@ -19,6 +19,9 @@ $ pwd
 // more detail of the list files
 $ ls -l
 
+//show all hidden files
+λ ls -a
+
 // change directory
 $ cd video
 
