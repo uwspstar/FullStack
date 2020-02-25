@@ -10,8 +10,8 @@
 
 - ```DO NOT REBASE COMMITS THAT EXISTS OUTSIDE YOUR REPO``` https://git-scm.com/book/en/v2/Git-Branching-Rebasing 
 ### Git object
-- blob
-- tree
+- blob : contains content
+- tree : contains tree or blob
 - commit
 - tag
 
