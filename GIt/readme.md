@@ -57,9 +57,13 @@ $ git log
 ```
 - show the commit info , ```(HEAD -> master)``` means the latest change
 
+// the diff between 2 commits
+λ git diff 5eac20 2ea380d
 
-
-
+// checkout the commet
+λ git checkout 5eac20
+// switch back
+λ git switch -
 
 
 
