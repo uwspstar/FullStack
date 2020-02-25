@@ -1,5 +1,6 @@
 # Git
 - Understanding Git - Paolo Perrotta https://www.youtube.com/watch?v=nHkLxts9Mu4
+- How Git Works By Paolo Perrotta https://app.pluralsight.com/library/courses/how-git-works/table-of-contents
 - Git MERGE vs REBASE https://www.youtube.com/watch?v=CRlGDDprdOQ
 - Introduction to Git cherry-pick https://www.youtube.com/watch?v=-ndmel-4wsk
 - https://www.themoderncoder.com/a-better-git-workflow-with-rebase/ 
