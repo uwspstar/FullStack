@@ -1,4 +1,5 @@
 # Data Scientist and Machine Learning
+- How Machine Learning Works https://app.pluralsight.com/library/courses/how-machine-learning-works/table-of-contents
 - https://www.udemy.com/course/complete-machine-learning-and-data-science-zero-to-mastery/learn/lecture/16451328?start=0#overview
 - What Is Machine Learning?
 - AI/Machine Learning/Data Science
