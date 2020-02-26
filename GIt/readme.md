@@ -23,6 +23,7 @@
 - ```Repository``` :  the location where your code history is stored
 - ```Branch``` "Folder" within the repository containing commits
 - ```Commits``` Different stages of your code inside a branch. Just a reference to a branch
+- ```HEAD``` just a reference to a branch
 - ```download``` : https://git-scm.com/downloads
 ### Bash
 - Shell Environment
