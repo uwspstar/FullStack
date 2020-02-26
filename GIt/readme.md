@@ -32,30 +32,38 @@
 - Bourne Again Shell
 
 ### Git command
+- create git repo for the currect fold
 ```
 $ git init
 ```
-- create git repo for the currect fold
+
+- check the current status
 ```
 $ git status
 ```
-- check the current status
+
+
+- git add . means to add all files
 ```
 $ git add .
 ```
 - add last file to stage
+
 ```
 $ git add filename
 ```
-- git add . means to add all files
  
+- commit the change with the comment , ready for push
 ```
 $ git commit -m "another test"
 ```
-- commit the change with the comment , ready for push
+
+- show log
 ```
 $ git log
+λ git log -n 2
 ```
+
 - show the commit info , ```(HEAD -> master)``` means the latest change
 
 - the diff between 2 commits
