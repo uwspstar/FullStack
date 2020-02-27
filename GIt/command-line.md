@@ -35,6 +35,8 @@ $ cd ~
 // back to 3 levels  ../ is one level
 λ cd ../../../
 
+// vim (bash) 
+λ vim <file>
 // open current folder
 λ start .
 
