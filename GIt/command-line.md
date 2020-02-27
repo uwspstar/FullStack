@@ -35,8 +35,9 @@ $ cd ~
 // back to 3 levels  ../ is one level
 λ cd ../../../
 
-// vim (bash) 
+// vim (bash) , enter "i" instert, type "esc" , and enter ":", then enter "q", "w"
 λ vim <file>
+
 // open current folder
 λ start .
 
