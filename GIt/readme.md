@@ -93,6 +93,17 @@ $ git log
 λ echo "apple" | git hash-object --stdin
 89bdd812e4d7e3b665770f92c4a0c86b4d04094f
 ```
+
+- compare ```working area``` vs ```index```
+```
+λ git diff
+```
+
+- compare ```index``` vs ```repository```
+```
+λ git diff --cached
+```
+
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
 
@@ -113,6 +124,7 @@ http://python.slides.com/colt/web-scraping#/30
 
 - 5. Push changes to the online repository
 ```$>git push origin master```
+
 
 - http://python.slides.com/colt/web-scraping#/31  by Scolt
 ```
