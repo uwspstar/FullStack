@@ -104,6 +104,12 @@ $ git log
 λ git diff --cached
 ```
 
+- compare two branches , play and master
+```
+λ git diff play master
+```
+
+
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
 
