@@ -11,16 +11,20 @@
 
 - ```DO NOT REBASE COMMITS THAT EXISTS OUTSIDE YOUR REPO``` https://git-scm.com/book/en/v2/Git-Branching-Rebasing 
 - track the changes of the source code
+
 ### Git object
 - blob : contains content
 - tree : contains tree or blob
 - commit
 - tag
+
 ### The for aress
 - stash--> working area --> index / stage --> repository
+
 ### Git vs Github
 - Git is the most popular "version control system" - a tool to keep track of file changes over time. 
 - GitHub is an online service that hosts git repositories for developers.
+
 ### Git
 - ```Repository``` :  the location where your code history is stored
 - ```Branch``` "Folder" within the repository containing commits
