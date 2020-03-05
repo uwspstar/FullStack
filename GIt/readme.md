@@ -112,7 +112,10 @@ $ git log
 ```
 λ git diff play master
 ```
-
+- open file with notepadd++
+```
+λ start notepad++ index.html
+```
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
