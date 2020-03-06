@@ -1,6 +1,7 @@
 # tSQLt 
 - DATABASE UNIT TESTING FRAMEWORK FOR SQL SERVER
 - https://tsqlt.org/
+- https://app.pluralsight.com/library/courses/unit-testing-t-sql-tsqlt/table-of-contents
 
 ### tSQLt_Example
 ```
