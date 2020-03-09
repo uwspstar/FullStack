@@ -3,6 +3,7 @@
 - DATABASE UNIT TESTING FRAMEWORK FOR SQL SERVER
 - https://tsqlt.org/
 - https://app.pluralsight.com/library/courses/unit-testing-t-sql-tsqlt/table-of-contents
+- https://www.sqlshack.com/sql-unit-testing-with-the-tsqlt-framework-for-beginners/
 
 ### tSQLt_Example
 ```
