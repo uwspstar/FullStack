@@ -142,6 +142,30 @@ Untracked files:
 - rename file
 ```
 λ mv demo1.txt demo.md
+
+λ git status
+On branch master
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    demo1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo.md
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+λ git add demo.md
+λ git add demo1.txt
+
+λ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        renamed:    demo1.txt -> demo.md
+
+λ git commit -m "rename file"
 ```
 
 ### 5 steps by Scolt
