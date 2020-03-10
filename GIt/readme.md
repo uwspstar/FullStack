@@ -139,6 +139,10 @@ Untracked files:
         demo1.txt
         
 ```
+- rename file
+```
+λ mv demo1.txt demo.md
+```
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
