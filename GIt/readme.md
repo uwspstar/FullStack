@@ -116,6 +116,28 @@ $ git log
 ```
 λ start notepad++ index.html
 ```
+- remove file changes from index (stage)
+```
+λ git restore --staged demo1.txt
+```
+- remove file from index, unstage file
+```
+λ git rm demo1.txt
+error: the following file has changes staged in the index:
+    demo1.txt
+(use --cached to keep the file, or -f to force removal)
+
+λ git status
+On branch master
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        deleted:    demo1.txt
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        demo1.txt
+        
+```
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
