@@ -120,6 +120,7 @@ $ git log
 ```
 λ git restore --staged demo1.txt
 ```
+- ```git rm``` is NOT oppsite of ```git add```
 - remove file from index, unstage file
 ```
 λ git rm demo1.txt
