@@ -167,6 +167,11 @@ Changes to be committed:
 
 λ git commit -m "rename file"
 ```
+### commit move the branch
+- commit
+- merge
+- rebase
+- pull
 
 ### 5 steps by Scolt
 http://python.slides.com/colt/web-scraping#/30
