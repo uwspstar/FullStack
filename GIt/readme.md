@@ -8,6 +8,7 @@
 - https://www.youtube.com/watch?v=f1wnYdLEpgI
 - https://www.youtube.com/watch?v=_OZVJpLHUaI&list=PL55RiY5tL51poFMpbva1IqfO-pylwSNsN
 - Commamd tool for windows https://cmder.net/
+- https://www.interserver.net/tips/kb/linux-cat-command-usage-examples/
 
 - ```DO NOT REBASE COMMITS THAT EXISTS OUTSIDE YOUR REPO``` https://git-scm.com/book/en/v2/Git-Branching-Rebasing 
 - track the changes of the source code
