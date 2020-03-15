@@ -167,6 +167,10 @@ Changes to be committed:
 
 λ git commit -m "rename file"
 ```
+- see the hash content
+```
+λ git cat-file p 89bdd812e4d7e3b665770f92c4a0c86b4d04094f
+```
 ### commit move the branch
 - commit
 - merge
