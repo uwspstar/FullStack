@@ -1,4 +1,5 @@
 # Git
+
 - Understanding Git - Paolo Perrotta https://www.youtube.com/watch?v=nHkLxts9Mu4
 - Mastering Git https://app.pluralsight.com/library/courses/mastering-git/table-of-contents
 - How Git Works By Paolo Perrotta https://app.pluralsight.com/library/courses/how-git-works/table-of-contents
