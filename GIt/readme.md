@@ -10,7 +10,7 @@
 - https://www.youtube.com/watch?v=_OZVJpLHUaI&list=PL55RiY5tL51poFMpbva1IqfO-pylwSNsN
 - Commamd tool for windows https://cmder.net/
 - https://www.interserver.net/tips/kb/linux-cat-command-usage-examples/
-- https://www.youtube.com/watch?v=HVsySz-h9r4
+- Git Tutorial for Beginners: Command-Line Fundamentals https://www.youtube.com/watch?v=HVsySz-h9r4
 
 - ```DO NOT REBASE COMMITS THAT EXISTS OUTSIDE YOUR REPO``` https://git-scm.com/book/en/v2/Git-Branching-Rebasing 
 - track the changes of the source code
