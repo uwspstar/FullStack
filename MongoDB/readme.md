@@ -1,8 +1,13 @@
 # MongoDB
+### MongoDB Atlas Setup and Configuration
+- https://www.udemy.com/course/advanced-node-for-developers/learn/lecture/15037918#overview
+
+### MongoDB
 - MongoDB is an document database. It stores data in JSON like documents.
 - Instead of tables, a MongoDB database stores its data in collections.
 - Documents are analogous to records or rows in a relational database table.
 - https://www.mongodb.com/download-center/community
+
 ### Install 
 - https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
 - https://www.udemy.com/nodejs-the-complete-guide/learn/lecture/11942756#overview
