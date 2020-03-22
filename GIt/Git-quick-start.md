@@ -38,7 +38,7 @@ To force the deletion of local branch on your filesystem :
 
 $ git branch -D [name_of_your_new_branch]
 ```
-
+### Basic
 - check version
 ```
 $ git --version
