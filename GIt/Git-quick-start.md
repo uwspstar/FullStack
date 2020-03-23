@@ -130,3 +130,63 @@ $ git branch -d <mybranch>
 $ git branch -a
 $ git push origin --delete <mybranch>
 ```
+### Fixing Common Mistakes and Undoing Bad Commits
+- Undo the file changes
+```
+$ git diff
+$ git checkout <filename>
+``` 
+- Fix bad commit message before push to remote
+```
+$ git commit --amend -m “new commit message”
+```
+- Include the file in the last commit before push to remote
+```
+$ touch .gitignore
+$ git add .gitignore
+$ git commit
+ 
+// without changes, type : and type wq save changes exit
+:wq
+``` 
+- Move you commit to different branch
+```
+$ git log
+$ git checkout  <branchname>
+$ git cheery-pick <hash>
+$ git log
+// Cheery-pick does not delete the branch
+``` 
+ 
+- Git reset
+```
+$ git checkout master
+$ git log
+$ git reset --soft <hash>
+// soft : keep the changes files in staging
+ 
+$ git reset <hash>
+// default, keep the file in working directory
+ 
+$ git reset –hard <hash>
+// remove the files from staging and working directory
+ 
+$ git clean -df
+// clean untracked files
+ 
+$ git reflog
+// show the work flow all the command
+
+ 
+$ git checkout <hash>
+// detached head
+
+$ git branch <newbranchname>
+```
+ 
+- Really need to modify your changes which other people have pulled already
+```
+$ git revert <hash>
+// not delete old, add new on the top
+$ git diff <hash1> <hash2>
+```
