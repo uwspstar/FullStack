@@ -1,5 +1,6 @@
 # Python 
-
+### math function
+- https://www.programiz.com/python-programming/modules/math
 ### sort() vs sorted()
 ```
 The syntax of sort() method is:
