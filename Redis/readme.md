@@ -17,6 +17,8 @@
 ```
 web browser <-- Express app <-- Mongoose <--> Cashe Server <--> MongoDB
 
+web browser <-- Express app <-- Mongoose(Node-redis) <--> redis <--> MongoDB
+
 Cache Server : 
 Has this query been excuted before? 
 Store result of query on cache server
