@@ -12,3 +12,14 @@
 - $> brew install redis
 ### install Redis on Windows
 - Redis on Windows https://www.udemy.com/course/advanced-node-for-developers/learn/lecture/9679416#overview
+
+### Flow
+```
+web browser <-- Express app <-- Mongoose <--> Cashe Server <--> MongoDB
+
+Cache Server : 
+Has this query been excuted before? 
+Store result of query on cache server
+
+```
+
