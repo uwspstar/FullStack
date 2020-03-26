@@ -1,6 +1,10 @@
 # Python 
 - Complete Python Developer in 2020: Zero to Mastery
 https://www.udemy.com/course/complete-python-developer-zero-to-mastery
+- Python - The Practical Guide
+https://www.udemy.com/course/learn-python-by-building-a-blockchain-cryptocurrency/learn/lecture/10030662#overview
+- The Modern Python 3 Bootcamp
+ https://www.udemy.com/course/the-modern-python3-bootcamp/learn/lecture/7991036#overview
 
 ### math function
 - https://www.programiz.com/python-programming/modules/math
