@@ -6,6 +6,9 @@
 - C# Coding https://docs.microsoft.com/en-us/samples/browse/?redirectedfrom=MSDN-samples&term=C%23
 - http://net-informations.com/faq/default.htm
 
+### Convert vs Parse
+- the difference between Convert and the Parse methods is that Parse takes a string only as inout, while Convert can aslo take other base types as input.
+
 ### What is the purpose of the null coalescing (??) operator?
 - It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.
 - Only the compiler can derive from MulticastDelegate
