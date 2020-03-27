@@ -1,4 +1,5 @@
 # C# debug
+### Threads
 ```
 1. Debug -> Windows -> Threads
 2. Naming Threads
@@ -14,3 +15,18 @@
   ...
   ```
 - breakpoint -> condition ->System.Threading.Thread.CurrentThread.Nmae ==" one"
+### vs 
+### validate application input
+- manage data integrity
+- use ```Parse```, ```TryParse```, and ```Convert```
+- use regular expressions
+- validate JSON and XML
+
+### perfor symmetric and asymmetricencryption
+
+### manage assembiles
+
+### debug and application
+
+### implement diagnostics in an appication
+
