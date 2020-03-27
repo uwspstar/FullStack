@@ -8,6 +8,7 @@
 
 ### Convert vs Parse
 - the difference between Convert and the Parse methods is that Parse takes a string only as inout, while Convert can aslo take other base types as input.
+- When you are parsing user input, the best choice is the ```TryParse```
 
 ### What is the purpose of the null coalescing (??) operator?
 - It returns the left-hand operand if the operand is not null; otherwise it returns the right hand operand.
