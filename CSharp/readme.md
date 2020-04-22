@@ -6,6 +6,9 @@
 - C# Coding https://docs.microsoft.com/en-us/samples/browse/?redirectedfrom=MSDN-samples&term=C%23
 - http://net-informations.com/faq/default.htm
 
+### Performance: string concatenation vs String.Format vs interpolated string
+- https://www.meziantou.net/performance-string-concatenation-vs-string-format-vs-interpolated-string.htm
+
 ### Convert vs Parse
 - the difference between Convert and the Parse methods is that Parse takes a string only as inout, while Convert can aslo take other base types as input.
 - When you are parsing user input, the best choice is the ```TryParse```
