@@ -1,10 +1,11 @@
 # C#
-- Secrets https://blog.submain.com/app-config-basics-best-practices/  (App.Config: Basics and Best Practices)
 - https://www.youtube.com/watch?v=-9b8NRqjUFM
 - C# Coding Conventions https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions
 - C# Walkthroughs https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs
 - C# Coding https://docs.microsoft.com/en-us/samples/browse/?redirectedfrom=MSDN-samples&term=C%23
 - http://net-informations.com/faq/default.htm
+### App.Config: Basics and Best Practices
+- Secrets https://blog.submain.com/app-config-basics-best-practices/  (App.Config: Basics and Best Practices)
 
 ### Performance: string concatenation vs String.Format vs interpolated string
 - https://www.meziantou.net/performance-string-concatenation-vs-string-format-vs-interpolated-string.htm
