@@ -12,9 +12,11 @@ transfer data via an HTTP requests between two machines.
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/stringify
 - ```console.log(JSON.stringify(user));```
 - https://medium.com/javascript-in-plain-english/5-secret-features-of-json-stringify-c699340f9f27
+- In JSON, functions are not allowed as object values. The JSON.stringify() function will remove any functions from a JavaScript object, both the key and the value:
 
 ### JSON.parse()
 - https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/JSON/parse
+- https://www.w3schools.com/js/js_json_parse.asp
 - JSON.parse() does not allow single quotes
 ```
 // will throw a SyntaxError
