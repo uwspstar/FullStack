@@ -1,5 +1,18 @@
 # Express
 - https://www.npmjs.com/package/express
+### Fetch API  
+```
+fetch('http://localhost:3000/weather?address=austin')
+ .then((response) => { response.json()
+ .then((data) => { 
+
+  if (data.error) { console.log(data.error) 
+
+  } else { console.log(data.location) console.log(data.forecast) 
+
+ } 
+}) 
+```
 ### query string
 - http://expressjs.com/en/5x/api.html#req.query
 
