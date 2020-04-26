@@ -1,6 +1,8 @@
 # Express
 - https://www.npmjs.com/package/express
 ### Fetch API  
+- https://developers.google.com/web/updates/2015/03/introduction-to-fetch
+- https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API
 ```
 fetch('http://localhost:3000/weather?address=austin')
  .then((response) => { response.json()
