@@ -70,15 +70,44 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',
 const password = 'Red12345!'     	
 const hashedPassword = await bcrypt.hash(password, 8)
 const isMatch = await bcrypt.compare('red12345!', hashedPassword)
-console.log(isMatch)
-
-
-
-		
-	
-	
-		
+console.log(isMatch)      	
 ```
+### jsonwebtoken
+- https://www.npmjs.com/package/jsonwebtoken
+- ```$ npm install jsonwebtoken```
+
+### sendgrid
+- https://sendgrid.com/
+- ```$ npm i sendgrid/mail```
+
+### jest
+- https://jestjs.io/
+- https://www.npmjs.com/package/jest
+- ```$ npm i jest```
+
+
+		
+	
+	
+		
+			
+				
+					
+
+
+
+
+				
+
+			
+
+		
+
+		
+	
+	
+		
+
 
 		
 	
