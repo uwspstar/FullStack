@@ -1,5 +1,8 @@
 # Express
 - https://www.npmjs.com/package/express
+### Exploring Express Middleware
+- http://expressjs.com/en/guide/using-middleware.html#using-middleware
+- https://sendgrid.com/
 
 ### router
 - http://expressjs.com/en/5x/api.html#router
