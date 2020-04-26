@@ -7,7 +7,9 @@ transfer data via an HTTP requests between two machines.
 - The first is ```JSON.stringify``` and the second is ```JSON.parse```. 
 - ```JSON.stringify``` converts a JavaScript object into a JSON string
 - ```JSON.parse``` converts a JSON string into a JavaScript object
-
+### JSON.stringify
+- ```console.log(JSON.stringify(user));```
+- https://medium.com/javascript-in-plain-english/5-secret-features-of-json-stringify-c699340f9f27
 
 
 		
