@@ -62,7 +62,28 @@ mongoose.connect('mongodb://127.0.0.1:27017/task-manager-api',
   useCreateIndex: true 
 }) 
 ```
+- https://mongoosejs.com/docs/middleware.html
 
+### Hashing Passwords with Bcrypt
+- https://www.npmjs.com/package/bcryptjs
+```
+const password = 'Red12345!'     	
+const hashedPassword = await bcrypt.hash(password, 8)
+const isMatch = await bcrypt.compare('red12345!', hashedPassword)
+console.log(isMatch)
+
+
+
+		
+	
+	
+		
+```
+
+		
+	
+	
+		
 		
 	
 	
