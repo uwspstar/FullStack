@@ -1,5 +1,7 @@
 # Express
 - https://www.npmjs.com/package/express
+### query string
+- http://expressjs.com/en/5x/api.html#req.query
 
 ### Serving up a Static Directory with Path
 - https://nodejs.org/dist/latest-v11.x/docs/api/path.html
