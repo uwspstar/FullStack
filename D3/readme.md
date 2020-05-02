@@ -7,3 +7,27 @@
 - https://www.w3schools.com/graphics/svg_intro.asp
 - SVG defines vector-based graphics in XML format.
 - SVG is written in XML, all elements must be properly closed
+
+### SVG Shapes
+- Rectangle <rect>
+- Circle <circle>
+- Ellipse <ellipse>
+- Line <line>
+- Polyline <polyline>
+- Polygon <polygon>
+- Path <path>
+  
+### SVG Path - <path>
+- The <path> element is used to define a path.
+```
+M = moveto
+L = lineto
+H = horizontal lineto
+V = vertical lineto
+C = curveto
+S = smooth curveto
+Q = quadratic Bézier curve
+T = smooth quadratic Bézier curveto
+A = elliptical Arc
+Z = closepath
+```
