@@ -65,12 +65,13 @@ stroke-dasharray
 ```
 <script>
 var canvas = document.getElementById("myCanvas");
-var ctx = canvas.getContext("2d"); //The getContext() is a built-in HTML object, with properties and methods for drawing:
+var ctx = canvas.getContext("2d");
 ctx.fillStyle = "#FF0000";
 ctx.fillRect(0, 0, 150, 75);
 </script>
 ```
-
+- The getContext() is a built-in HTML object
+- grad = ctx.createRadialGradient(0,0,radius*0.95, 0,0,radius*1.05);
 
 
 
