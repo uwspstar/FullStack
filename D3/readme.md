@@ -8,6 +8,9 @@
 - SVG defines vector-based graphics in XML format.
 - SVG is written in XML, all elements must be properly closed
 
+### SVG Reference
+- https://www.w3schools.com/graphics/svg_reference.asp
+
 ### SVG Shapes
 - Rectangle <rect>
 - Circle <circle>
@@ -42,3 +45,10 @@ stroke-dasharray
 - https://www.w3schools.com/graphics/svg_filters_intro.asp
 ### SVG Blur Effects
 - https://www.w3schools.com/graphics/svg_fegaussianblur.asp
+### SVG Drop Shadows
+- https://www.w3schools.com/graphics/svg_feoffset.asp
+### SVG Gradients - Linear
+- https://www.w3schools.com/graphics/svg_grad_linear.asp
+### SVG Gradients - Radial
+- https://www.w3schools.com/graphics/svg_grad_radial.asp
+### 
