@@ -53,5 +53,6 @@ https://dev.to/lampewebdev/the-guide-to-visual-studio-code-shortcuts-higher-prod
     "diffEditor.ignoreTrimWhitespace": false,
     "editor.fontFamily": "'Fira Code', 'Droid Sans Mono', 'Courier New', monospace, 'Droid Sans Fallback'",
     "editor.fontLigatures": true,
+    "files.autoSave": "afterDelay",
 }
 ```
