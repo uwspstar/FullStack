@@ -54,4 +54,46 @@ stroke-dasharray
 ### 
 
 # Canvas
+- https://www.w3schools.com/graphics/canvas_intro.asp
 - The HTML <canvas> element is used to draw graphics on a web page.
+- By default, the <canvas> element has no border and no content.
+  
+### Canvas Reference
+- https://www.w3schools.com/graphics/canvas_reference.asp
+
+### Draw on the Canvas With JavaScript
+```
+<script>
+var canvas = document.getElementById("myCanvas");
+var ctx = canvas.getContext("2d"); //The getContext() is a built-in HTML object, with properties and methods for drawing:
+ctx.fillStyle = "#FF0000";
+ctx.fillRect(0, 0, 150, 75);
+</script>
+```
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
