@@ -38,3 +38,7 @@ stroke-width
 stroke-linecap
 stroke-dasharray
 ```
+### SVG Filter Elements
+- https://www.w3schools.com/graphics/svg_filters_intro.asp
+### SVG Blur Effects
+- https://www.w3schools.com/graphics/svg_fegaussianblur.asp
