@@ -31,3 +31,10 @@ T = smooth quadratic Bézier curveto
 A = elliptical Arc
 Z = closepath
 ```
+### SVG Stroke Properties
+```
+stroke
+stroke-width
+stroke-linecap
+stroke-dasharray
+```
