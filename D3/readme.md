@@ -52,3 +52,6 @@ stroke-dasharray
 ### SVG Gradients - Radial
 - https://www.w3schools.com/graphics/svg_grad_radial.asp
 ### 
+
+# Canvas
+- The HTML <canvas> element is used to draw graphics on a web page.
