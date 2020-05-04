@@ -8,6 +8,10 @@ https://code.visualstudio.com/shortcuts/keyboard-shortcuts-macos.pdf
 https://dev.to/lampewebdev/the-guide-to-visual-studio-code-shortcuts-higher-productivity-and-30-of-my-favourite-shortcuts-you-need-to-learn-mb3
 - VS Code Top-Ten Pro Tips https://www.youtube.com/watch?v=u21W_tfPVrY
 
+### vscode extensions
+- Rest Client
+- Paste JSON as Code
+
 ### vscode setting js
 ```
 {
