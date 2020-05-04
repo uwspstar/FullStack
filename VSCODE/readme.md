@@ -13,7 +13,7 @@ https://dev.to/lampewebdev/the-guide-to-visual-studio-code-shortcuts-higher-prod
 - Paste JSON as Code
 - Beautify hookyqr.beautify
 - Bracket Pair Colorizer
-- Material Icon Theme
+- Material Icon Theme pkief.material-icon-theme
 - vscode-icons vscode-icons-team.vscode-icons
 - Live Server ritwickdey.liveserver
 - Code Spell Checker streetsidesoftware.code-spell-checker
