@@ -12,6 +12,7 @@ https://dev.to/lampewebdev/the-guide-to-visual-studio-code-shortcuts-higher-prod
 - REST Client humao.rest-client
 - Paste JSON as Code
 - Beautify hookyqr.beautify
+- Bracket Pair Colorizer
 - Material Icon Theme
 - vscode-icons vscode-icons-team.vscode-icons
 - Live Server ritwickdey.liveserver
