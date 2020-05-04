@@ -9,8 +9,15 @@ https://dev.to/lampewebdev/the-guide-to-visual-studio-code-shortcuts-higher-prod
 - VS Code Top-Ten Pro Tips https://www.youtube.com/watch?v=u21W_tfPVrY
 
 ### vscode extensions
-- Rest Client
+- REST Client humao.rest-client
 - Paste JSON as Code
+- Beautify hookyqr.beautify
+- Material Icon Theme
+- vscode-icons vscode-icons-team.vscode-icons
+- Live Server ritwickdey.liveserver
+- Debugger for Chrome
+- Angular Snippets (Version 9) John Papa
+
 
 ### vscode setting js
 ```
