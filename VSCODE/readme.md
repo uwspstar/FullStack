@@ -2,6 +2,19 @@
 
 ### VSCODE Insiders
 - https://code.visualstudio.com/docs/getstarted/tips-and-tricks#vscode
+```
+$> code-insiders -r .
+
+Open User Settings settings.json
+
+Keyboard Shortcut: ⌘,
+
+Toggle Sidebar
+
+Keyboard Shortcut: ⌘B
+
+Navigate entire history: ctrl + Tab
+```
 
 
 - windows
