@@ -1,4 +1,8 @@
 # VSCODE shortcuts
+
+### VSCODE Insiders
+
+
 - windows
 https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
 - macos
