@@ -1,6 +1,7 @@
 # VSCODE shortcuts
 
 ### VSCODE Insiders
+- https://code.visualstudio.com/docs/getstarted/tips-and-tricks#vscode
 
 
 - windows
