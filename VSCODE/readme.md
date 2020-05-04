@@ -15,6 +15,7 @@ https://dev.to/lampewebdev/the-guide-to-visual-studio-code-shortcuts-higher-prod
 - Material Icon Theme
 - vscode-icons vscode-icons-team.vscode-icons
 - Live Server ritwickdey.liveserver
+- Code Spell Checker streetsidesoftware.code-spell-checker
 - Debugger for Chrome
 - Angular Snippets (Version 9) John Papa
 
