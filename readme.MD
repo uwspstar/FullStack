@@ -2,8 +2,6 @@
 # VSCODE shortcuts
 - https://github.com/uwspstar/FullStack/tree/master/VSCODE
 
-
-
 # Emoji
 ```
 On macOS control+command+space pulls up the Emoji keyboard
