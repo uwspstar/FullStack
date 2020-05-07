@@ -43,3 +43,4 @@ execution is paused.
 
 ### ThreadPool
 - Both TPL and PLINQ rely on the ThreadPool threads. The ```System.Threading.ThreadPool``` class provides a .NET application with a pool of worker threads.
+- use the ```System.Threading.Thread``` class that represents a managed thread.
