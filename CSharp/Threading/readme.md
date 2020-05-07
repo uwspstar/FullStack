@@ -14,7 +14,8 @@ finally
     if (__lockWasTaken) System.Threading.Monitor.Exit(__lockObj);
 }
 ```
-
+### When to use multiple threads
+- You use multiple threads to ```increase the responsiveness``` of your application and to ```take advantage``` of a multiprocessor or multi-core system to ```increase the application's throughput```.
 
 ### Processes vs threads
 - A ```process``` is an executing program. An operating system uses processes to separate the applications that are being
