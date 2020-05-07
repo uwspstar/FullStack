@@ -31,3 +31,6 @@ finally
     ...
     ```
 - breakpoint -> condition ->System.Threading.Thread.CurrentThread.Nmae ==" one"
+- Starting with the .NET Framework 4, multithreaded programming is greatly simplified with the
+```System.Threading.Tasks.Parallel``` and ```System.Threading.Tasks.Task``` classes, ```Parallel LINQ (PLINQ)```, new concurrent collection classes in the ```System.Collections.Concurrent``` namespace, and a new programming model that is based on the concept of
+tasks rather than threads.
