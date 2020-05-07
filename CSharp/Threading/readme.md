@@ -36,3 +36,7 @@ execution is paused.
 ### primary thread vs worker threads
 - By default, a .NET program is started with a single thread, often called the ```primary thread```. 
 - However, it can create additional threads to execute code in parallel or concurrently with the primary thread. These threads are often called ```worker threads```.
+
+### How to use multithreading in .NET
+- Starting with the .NET Framework 4, the recommended way to utilize multithreading is to use ```Task Parallel Library```
+(TPL) and ```Parallel LINQ``` (PLINQ).
