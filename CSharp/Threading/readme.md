@@ -42,4 +42,4 @@ execution is paused.
 (TPL) and ```Parallel LINQ``` (PLINQ).
 
 ### ThreadPool
--- Both TPL and PLINQ rely on the ThreadPool threads. The ```System.Threading.ThreadPool``` class provides a .NET application with a pool of worker threads.
+- Both TPL and PLINQ rely on the ThreadPool threads. The ```System.Threading.ThreadPool``` class provides a .NET application with a pool of worker threads.
