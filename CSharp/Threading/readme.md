@@ -16,7 +16,7 @@ finally
 ```
 
 
-### Processes vs threadis
+### Processes vs threads
 - A ```process``` is an executing program. An operating system uses processes to separate the applications that are being
 executed. 
 - A ```thread``` is the basic unit to which an operating system allocates processor time. 
