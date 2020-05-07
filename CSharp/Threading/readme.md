@@ -45,3 +45,5 @@ execution is paused.
 - Multiple threads can run in the context of a process. 
 - All threads of a process share its virtual address space. 
 - A thread can execute any part of the program code, including parts currently being executed by another thread.
+### The .NET Framework provides a way to isolate applications within a process with the use of application domains.
+### Application domains are not available on .NET Core.
