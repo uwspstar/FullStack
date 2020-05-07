@@ -40,3 +40,6 @@ execution is paused.
 ### How to use multithreading in .NET
 - Starting with the .NET Framework 4, the recommended way to utilize multithreading is to use ```Task Parallel Library```
 (TPL) and ```Parallel LINQ``` (PLINQ).
+
+### ThreadPool
+-- Both TPL and PLINQ rely on the ThreadPool threads. The ```System.Threading.ThreadPool``` class provides a .NET application with a pool of worker threads.
