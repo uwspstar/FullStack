@@ -148,17 +148,13 @@ if you declare the following, you will get an error.
 var? i = null;  // Error
 ```
 ### Throw Exception vs Throw
-```
-*** The best practice to use throw instead of throw(ex)
+- *** The best practice to use throw instead of throw(ex)
 
-The basic difference is that the Throw exception overwrites the stack trace 
+- The basic difference is that the ```Throw exception overwrites the stack trace``` and this makes it hard to find the original code line number that has thrown the exception.
 and this makes it hard to find the original code line number that has thrown the exception.
+- ```Throw basically retains the stack information``` and adds to the stack information in the exception that it is thrown.
 
-Throw basically retains the stack information and adds to the stack information in the exception that it is thrown.
-
-Let us see what it means rather speaking so many words to better understand the differences. 
-I am using a console application to easily test and see how the usage of the two differ in their functionality.
-
+```
 using System;  
 using System.Collections.Generic;  
 using System.Linq;  
