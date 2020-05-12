@@ -5,6 +5,9 @@
 - C# Walkthroughs https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs
 - C# Coding https://docs.microsoft.com/en-us/samples/browse/?redirectedfrom=MSDN-samples&term=C%23
 - http://net-informations.com/faq/default.htm
+### Clean Coding Principles in C#
+- https://app.pluralsight.com/library/courses/csharp-clean-coding-principles/table-of-contents
+
 ### App.Config: Basics and Best Practices
 - Secrets https://blog.submain.com/app-config-basics-best-practices/  (App.Config: Basics and Best Practices)
 
