@@ -19,3 +19,5 @@
 - Floating point operations do not cause ```overflow```. Instead they set the result to ```PositiveInfinity```, ```NegativeInfinity```, or ```NaN```. 
 - Use the floating point methods ```IsInfinity```, ```IsInfinity```,```IsInfinity```, and ```IsNaN``` to determine whether a result is one of these special values.
 
+### ThreadAbortException ( .NET Exceptions – System.Threading.ThreadAbortException )
+- https://airbrake.io/blog/dotnet-exception-handling/system-threading-threadabortexception
