@@ -21,3 +21,4 @@
 
 ### ThreadAbortException ( .NET Exceptions – System.Threading.ThreadAbortException )
 - https://airbrake.io/blog/dotnet-exception-handling/system-threading-threadabortexception
+- http://www1.cs.columbia.edu/~lok/csharp/refdocs/System.Threading/types/ThreadAbortException.html
