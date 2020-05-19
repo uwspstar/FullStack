@@ -6,6 +6,7 @@
 ```
 On macOS control+command+space pulls up the Emoji keyboard
 ```
+
 # http-status-codes
 - https://aloneonahill.com/blog/http-status-codes
 # A parity bit (error detecting code)
