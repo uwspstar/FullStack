@@ -1,13 +1,18 @@
 
 # VSCODE shortcuts
 - https://github.com/uwspstar/FullStack/tree/master/VSCODE
+# Web technology for developers
+- https://developer.mozilla.org/en-US/docs/Web
 
 # Emoji
 ```
 On macOS control+command+space pulls up the Emoji keyboard
 ```
 # Cookies vs LocalStorage — Organized Answer for your interview
+- https://developer.mozilla.org/en-US/docs/Web/HTTP/Cookies
 - https://medium.com/javascript-in-plain-english/cookies-vs-localstorage-organized-answer-for-your-interview-54018e0f5a1e
+- Though you didn’t do anything, if your browser holds some data in the cookies, it’s sent to the server through the header on every request.
+
 # http-status-codes
 - https://aloneonahill.com/blog/http-status-codes
 # A parity bit (error detecting code)
