@@ -6,7 +6,8 @@
 ```
 On macOS control+command+space pulls up the Emoji keyboard
 ```
-
+# Cookies vs LocalStorage — Organized Answer for your interview
+- https://medium.com/javascript-in-plain-english/cookies-vs-localstorage-organized-answer-for-your-interview-54018e0f5a1e
 # http-status-codes
 - https://aloneonahill.com/blog/http-status-codes
 # A parity bit (error detecting code)
