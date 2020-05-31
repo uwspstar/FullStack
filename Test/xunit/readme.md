@@ -2,6 +2,24 @@
 - https://www.youtube.com/watch?v=ub3P8c87cwk
 - https://app.pluralsight.com/library/courses/dotnet-core-testing-code-xunit-dotnet-getting-started
 
+### Creating the test project
+- $ mkdir <your-project.Tests>
+- $ cd <your-project.Tests>
+- $ dotnet new xunit
+- $ dotnet add referce <your-will-test-project.csproj>
+- $ dotnet sln add <your-project.Tests>
+
+
+### dotnet add referce
+- https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference
+- https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference#examples
+
+### dotnet add sln
+- https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-sln#examples
+
+
+
+
 ### internal function
 ```
 // AssemblyInfo.cs
