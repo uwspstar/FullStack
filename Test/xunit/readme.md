@@ -11,7 +11,7 @@
 
 ### xunit installation
 - NuGet install xunit package
-- NuGet install xunit.runner package
+- NuGet install xunit.runner.visualstudio package
 
 
 
