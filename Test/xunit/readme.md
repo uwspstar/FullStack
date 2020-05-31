@@ -1,6 +1,8 @@
 # xunit
 - https://www.youtube.com/watch?v=ub3P8c87cwk
 - https://app.pluralsight.com/library/courses/dotnet-core-testing-code-xunit-dotnet-getting-started
+- https://xunit.github.io/
+
 
 ### Creating the test project
 - $ mkdir <your-project.Tests>
@@ -8,6 +10,7 @@
 - $ dotnet new xunit
 - $ dotnet add referce <your-will-test-project.csproj>
 - $ dotnet sln add <your-project.Tests>
+- $ dotnet test
 
 ### xunit installation
 - NuGet install xunit package
