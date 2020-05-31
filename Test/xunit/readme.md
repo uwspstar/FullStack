@@ -9,6 +9,11 @@
 - $ dotnet add referce <your-will-test-project.csproj>
 - $ dotnet sln add <your-project.Tests>
 
+### xunit installation
+- NuGet install xunit package
+- NuGet install xunit.runner package
+
+
 
 ### dotnet add referce
 - https://docs.microsoft.com/en-us/dotnet/core/tools/dotnet-add-reference
