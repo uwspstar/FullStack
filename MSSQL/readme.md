@@ -7,3 +7,4 @@
 - Temporary tables act like physical tables in many ways. You can create indexes and statistics on temporary tables. 
 - Temporary tables are created in tempdb. 
 - Even though the tables are instantiated in tempdb, they are backed by physical disk and are even logged into the transaction log. 
+- the scope of any particular temporary table is the session in which it is created; meaning it is only visible to the current user.
