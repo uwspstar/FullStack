@@ -1,5 +1,15 @@
 # SQL Server
 - SQL vs NoSQL or MySQL vs MongoDB https://www.youtube.com/watch?v=ZS_kXvOeQ5Y
+### SQL sp performance checking
+- https://statisticsparser.com/index.html
+```
+--step1  
+SET STATISTICS IO ON
+SET STATISTICS TIME ON 
+
+-- step2 run 2 times
+EXEC dbo.sp1  @v1 = 100 , @v2 = 100 
+```
 ### SQL Server Temp Table vs Table Variable Performance Testing
 - https://www.mssqltips.com/sqlservertip/2825/sql-server-temp-table-vs-table-variable-performance-testing/
 - https://www.sqlshack.com/when-to-use-temporary-tables-vs-table-variables/
