@@ -1,4 +1,6 @@
 # .NET Core
+- https://www.cnblogs.com/jlion/p/12392327.html
+
 ### What is ASP.NET Core and what are it's benefits
 ```
 ASP.NET Core is a cross-platform, high-performance, open-source framework for building modern, 

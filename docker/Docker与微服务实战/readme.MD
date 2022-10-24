@@ -3,6 +3,8 @@
 
 - https://www.youtube.com/watch?v=Cmy2afG_XOE
 
+# Client/Server
+
 # 架构中主要的模块有: 
 - DockerC1ient: Docker Client是与 Docker Daemon建立通信的最佳途径。用户通过 Docker Client发起容器的管理请求，请求最终发往 DockerDaemon。
 
