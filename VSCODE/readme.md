@@ -108,6 +108,7 @@ https://dev.to/lampewebdev/the-guide-to-visual-studio-code-shortcuts-higher-prod
   "[html]": {
     "editor.defaultFormatter": "vscode.html-language-features"
   },
+  "terminal.integrated.defaultLocation": "editor",
   "terminal.integrated.shell.osx": "/bin/bash",
   "terminal.integrated.inheritEnv": false,
   "[javascript]": {
