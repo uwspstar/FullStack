@@ -6,7 +6,8 @@
 An image is an executable package that includes everything needed
 A container is launched by running an image. 
 ```
-- Docker client (Docker cli) // commands just a portal, nothing related the docker imgs and containers
+- Docker client (Docker cli) // commands just a portal, nothing related the docker images and containers
+
 - Docker server (Docker daemon) // create img ,run container
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
 - **install Docker which install a linux VM on the top of mac/windows , the linux kernal is running inside linux VM**
@@ -24,7 +25,7 @@ A container is launched by running an image.
 1) Docker server check the image cache first before pull from free service Docker Hub.
 2) After pulling the image, it's saved image cache first.
 3) The Docker server take the single image to memory to create a container of it, 
-and run a signle programe on it.
+and run a single program on it.
 ```
 ```
 To generate this message, Docker took the following steps: 
