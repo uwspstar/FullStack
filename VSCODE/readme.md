@@ -8,6 +8,8 @@ footer :"by Xing"
 ---
 
 # VSCODE shortcuts
+- https://code.visualstudio.com/shortcuts/keyboard-shortcuts-windows.pdf
+- https://www.youtube.com/c/Code2020
 
 ### VsCode Insiders
 - https://code.visualstudio.com/docs/getstarted/tips-and-tricks#vscode
