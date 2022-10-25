@@ -1,4 +1,4 @@
-# My favorite youtube channels
+# My Favorite YouTube Channels
 
 #### code interview 算法
 - NeetCode https://www.youtube.com/c/NeetCode
