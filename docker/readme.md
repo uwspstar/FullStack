@@ -11,51 +11,34 @@
 ### 05/17/2019
 - **Docker and Kubernetes: The Complete Guide** https://www.udemy.com/docker-and-kubernetes-the-complete-guide/ by **Stephen Grider**
 
-- Docker image // single file with all dependencies and configs to run the program
-```
-因为镜像包含操作系统完整的 root 文件系统，其体积往往是庞大的，因此在 Docker 设计时，就充分利用 Union FS (opens new window)的技术，将其设计为分层存储的架构。
-所以严格来说，镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。
-```
-- Docker container // instance of the image to run the program
+- `Docker image` // single file with all dependencies and configs to run the program
 
-```
-镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的 类 和 实例 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
+- 因为镜像包含操作系统完整的 root 文件系统，其体积往往是庞大的，因此在 Docker 设计时，就充分利用 Union FS (opens new window)的技术，将其设计为分层存储的架构。
+- 所以严格来说，镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。
+ 
+- `Docker container` // instance of the image to run the program
 
-容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的 命名空间 (opens new window)
+- 镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的 类 和 实例 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
 
-因此容器可以拥有自己的 root 文件系统、自己的网络配置、自己的进程空间，甚至自己的用户 ID 空间
+- 容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的 命名空间 (opens new window)
 
-镜像使用的是分层存储，容器也是如此
+- 因此容器可以拥有自己的 root 文件系统、自己的网络配置、自己的进程空间，甚至自己的用户 ID 空间
 
-容器存储层的生存周期和容器一样，容器消亡时，容器存储层也随之消亡。因此，任何保存于容器存储层的信息都会随容器删除而丢失
+- 镜像使用的是分层存储，容器也是如此
 
-An image is an executable package that includes everything needed
-A container is launched by running an image. 
+- 容器存储层的生存周期和容器一样，容器消亡时，容器存储层也随之消亡。因此，任何保存于容器存储层的信息都会随容器删除而丢失
 
-```
-- Docker Registry
+- An image is an executable package that includes everything needed
+- A container is launched by running an image. 
+
+- `Docker Registry`
    - Docker Registry 公开服务
    - 私有 Docker Registry
-```
-一个 Docker Registry 中可以包含多个 仓库（Repository）；每个仓库可以包含多个 标签（Tag）；每个标签对应一个镜像。
+
+- 一个 `Docker Registry` 中可以包含多个 仓库（`Repository`）；每个仓库可以包含多个 标签（`Tag`）；每个标签对应一个镜像。
 
 通常，一个仓库会包含同一个软件不同版本的镜像，而标签就常用于对应该软件的各个版本。我们可以通过 <仓库名>:<标签> 的格式来指定具体是这个软件哪个版本的镜像。如果不给出标签，将以 latest 作为默认标签。
 
-```
-- Docker client (Docker cli) // commands just a portal, nothing related the docker images and containers
-
-- Docker server (Docker daemon) // create img ,run container
-
-- install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
-
-- **install Docker which install a linux VM on the top of mac/windows , the linux kernal is running inside linux VM**
-
-- kernel 核心，要点；[计] 内核
-- daemon  守护进程；后台程序
-> ![PC work](/Img/docker005.png)
-- $> Docker version
-> ![PC work](/Img/docker004.png)
-- https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
 
 ### 使用 Docker 镜像
 - 从 Docker 镜像仓库获取镜像的命令是 docker pull
@@ -69,25 +52,26 @@ $ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 ```
 $ docker run -it --rm ubuntu:18.04 bash
 root@e7009c6ce357:/# cat /etc/os-release
+```
 
-
--it：这是两个参数，一个是 -i：交互式操作，一个是 -t 终端。
+- `-it`：这是两个参数，一个是 -i：交互式操作，一个是 -t 终端。
 我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终端。
 
---rm：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm。我们这里只是随便执行个命令，看看结果，不需要排障和保留结果，因此使用 --rm 可以避免浪费空间。
+- `--rm`：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm。我们这里只是随便执行个命令，看看结果，不需要排障和保留结果，因此使用 --rm 可以避免浪费空间。
 
-ubuntu:18.04：这是指用 ubuntu:18.04 镜像为基础来启动容器。
+- `ubuntu:18.04`：这是指用 ubuntu:18.04 镜像为基础来启动容器。
 
-bash：放在镜像名后的是 命令，这里我们希望有个交互式 Shell，因此用的是 bash。
+- `bash`：放在镜像名后的是 命令，这里我们希望有个交互式 Shell，因此用的是 bash。
 
-进入容器后，我们可以在 Shell 下操作，执行任何所需的命令。这里，我们执行了 cat /etc/os-release，这是 Linux 常用的查看当前系统版本的命令
-```
-- 列出已经下载下来的镜像，可以使用 docker image ls
+- 进入容器后，我们可以在 Shell 下操作，执行任何所需的命令。这里，我们执行了 `cat /etc/os-release`，这是 Linux 常用的查看当前系统版本的命令
+
+- 列出已经下载下来的镜像，可以使用 `docker image ls`
 ```
 $ docker image ls
 ```
 - 为了加速镜像构建、重复利用资源，Docker 会利用 中间层镜像。所以在使用一段时间后，可能会看到一些依赖的中间层镜像。
-- 默认的 docker image ls 列表中只会显示顶层镜像，如果希望显示包括中间层镜像在内的所有镜像的话，需要加 -a 参数。
+
+- 默认的 docker image ls 列表中只会显示顶层镜像，如果希望显示包括中间层镜像在内的所有镜像的话，需要加 `-a` 参数。
 ```
 $ docker image ls -a
 ```
@@ -100,7 +84,7 @@ $ docker image ls -f before=mongo:3.2
 ```
 $ docker image ls -q
 ```
-- --filter 配合 -q 产生出指定范围的 ID 列表，然后送给另一个 docker 命令作为参数，从而针对这组实体成批的进行某种操作的做法在 Docker 命令行使用过程中非常常见 (Go 的模板语法)
+- `--filter` 配合 `-q` 产生出指定范围的 ID 列表，然后送给另一个 docker 命令作为参数，从而针对这组实体成批的进行某种操作的做法在 Docker 命令行使用过程中非常常见 (Go 的模板语法)
 
 ```
 $ docker image ls --format "{{.ID}}: {{.Repository}}"
@@ -110,16 +94,31 @@ $ docker image ls --format "{{.ID}}: {{.Repository}}"
 - 由于 Docker 使用 Union FS，相同的层只需要保存一份即可，因此实际镜像硬盘占用空间很可能要比这个列表镜像大小的总和要小的多。
 
 
-- 通过 docker system df 命令来便捷的查看镜像、容器、数据卷所占用的空间
+- 通过 `docker system df` 命令来便捷的查看镜像、容器、数据卷所占用的空间
 ```
 $ docker system df
 ```
 - 无标签镜像也被称为 虚悬镜像(dangling image) ，可以用下面的命令专门显示这类镜像：
+
 ```
 $ docker image ls -f dangling=true
 ```
 
 
+- `Docker client` (Docker cli) // commands just a portal, nothing related the docker images and containers
+
+- `Docker server` (Docker daemon) // create img ,run container
+
+- install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
+
+- **install Docker which install a linux VM on the top of mac/windows , the linux kernal is running inside linux VM**
+
+- kernel 核心，要点；[计] 内核
+- daemon  守护进程；后台程序
+> ![PC work](/Img/docker005.png)
+- $> Docker version
+> ![PC work](/Img/docker004.png)
+- https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
 
 ### 05/20/2019
 
