@@ -1,3 +1,9 @@
+# Docker
+- Docker 官方文档：https://docs.docker.com/
+- Docker Hub：https://hub.docker.com
+- Docker 的源代码仓库：https://github.com/moby/moby
+
+
 # Docker 从入门到实践
 - https://vuepress.mirror.docker-practice.com/introduction/what/
 
@@ -50,6 +56,65 @@ A container is launched by running an image.
 - $> Docker version
 > ![PC work](/Img/docker004.png)
 - https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436632?start=15
+
+### 使用 Docker 镜像
+- 从 Docker 镜像仓库获取镜像的命令是 docker pull
+```
+$ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
+```
+- 下载也是一层层的去下载，并非单一文件。
+- 对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像
+
+- 镜像为基础启动并运行一个容器
+```
+$ docker run -it --rm ubuntu:18.04 bash
+root@e7009c6ce357:/# cat /etc/os-release
+
+
+-it：这是两个参数，一个是 -i：交互式操作，一个是 -t 终端。
+我们这里打算进入 bash 执行一些命令并查看返回结果，因此我们需要交互式终端。
+
+--rm：这个参数是说容器退出后随之将其删除。默认情况下，为了排障需求，退出的容器并不会立即删除，除非手动 docker rm。我们这里只是随便执行个命令，看看结果，不需要排障和保留结果，因此使用 --rm 可以避免浪费空间。
+
+ubuntu:18.04：这是指用 ubuntu:18.04 镜像为基础来启动容器。
+
+bash：放在镜像名后的是 命令，这里我们希望有个交互式 Shell，因此用的是 bash。
+
+进入容器后，我们可以在 Shell 下操作，执行任何所需的命令。这里，我们执行了 cat /etc/os-release，这是 Linux 常用的查看当前系统版本的命令
+```
+- 列出已经下载下来的镜像，可以使用 docker image ls
+```
+$ docker image ls
+```
+- 为了加速镜像构建、重复利用资源，Docker 会利用 中间层镜像。所以在使用一段时间后，可能会看到一些依赖的中间层镜像。
+- 默认的 docker image ls 列表中只会显示顶层镜像，如果希望显示包括中间层镜像在内的所有镜像的话，需要加 -a 参数。
+```
+$ docker image ls -a
+```
+- list 在 mongo:3.2 之后since建立的镜像 and before 建立的镜像
+```
+$ docker image ls -f since=mongo:3.2
+$ docker image ls -f before=mongo:3.2
+```
+- 所有的镜像的 ID 列出来
+```
+$ docker image ls -q
+```
+
+- Docker Hub 中显示的体积是压缩后的体积。在镜像下载和上传过程中镜像是保持着压缩状态的，因此 Docker Hub 所显示的大小是网络传输中更关心的流量大小。而 docker image ls 显示的是镜像下载到本地后，展开的大小，准确说，是展开后的各层所占空间的总和，因为镜像到本地后，查看空间的时候，更关心的是本地磁盘空间占用的大小。
+
+- 由于 Docker 使用 Union FS，相同的层只需要保存一份即可，因此实际镜像硬盘占用空间很可能要比这个列表镜像大小的总和要小的多。
+
+
+- 通过 docker system df 命令来便捷的查看镜像、容器、数据卷所占用的空间
+```
+$ docker system df
+```
+- 无标签镜像也被称为 虚悬镜像(dangling image) ，可以用下面的命令专门显示这类镜像：
+```
+$ docker image ls -f dangling=true
+```
+
 
 
 ### 05/20/2019
