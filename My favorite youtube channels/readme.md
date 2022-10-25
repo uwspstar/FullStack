@@ -11,5 +11,22 @@
 
 - WebGentle https://www.youtube.com/c/WebGentle/playlists
 
-### Big Data
+
+#### Docker & K8s
+- Docker与微服务实战（2022版） https://www.youtube.com/playlist?list=PLmOn9nNkQxJFtOGw9fsoLHgtCxcki7TtK
+
+
+#### Big Data
 - 【大数据】Kafka全套教程 从源码到面试真题by海波 https://www.youtube.com/playlist?list=PLmOn9nNkQxJEDjzl0iBYZ3WuXUuUStxZl
+
+#### AWS Services
+- AWS Training Center https://www.youtube.com/c/AWSTrainingCenter/playlists
+
+#### Security
+- 
+
+#### System Design
+
+
+####  All others
+- 尚硅谷IT培训学校 https://www.youtube.com/c/%E5%B0%9A%E7%A1%85%E8%B0%B7IT%E5%9F%B9%E8%AE%AD%E5%AD%A6%E6%A0%A1

@@ -1,3 +1,7 @@
+# Docker 从入门到实践
+- https://vuepress.mirror.docker-practice.com/introduction/what/
+
+
 ### 05/17/2019
 - **Docker and Kubernetes: The Complete Guide** https://www.udemy.com/docker-and-kubernetes-the-complete-guide/ by **Stephen Grider**
 - Docker image // single file with all dependencies and configs to run the program
@@ -20,6 +24,7 @@ A container is launched by running an image.
 
 
 ### 05/20/2019
+
 ### $> Docker run hello-world
 ```
 1) Docker server check the image cache first before pull from free service Docker Hub.
@@ -98,7 +103,7 @@ $> # cd ~
 
 ### Building Custom Images Through Docker Server
 - Docker File --> Docker Client --> Docker Server --> use img
-- Creat a Docker file
+- Create a Docker file
 ```
 1) Specify a base img
 2) run some command to install additional programs
@@ -530,5 +535,6 @@ You can think of WORKDIR like a cd inside the container
 -p 4000:3000
 mapping localhost 4000 to container port 3000
 ```
+
 ### reference container with Bookmarking Volumes
 https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/lecture/11437068#overview
