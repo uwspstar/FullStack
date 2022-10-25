@@ -4,17 +4,46 @@
 
 ### 05/17/2019
 - **Docker and Kubernetes: The Complete Guide** https://www.udemy.com/docker-and-kubernetes-the-complete-guide/ by **Stephen Grider**
+
 - Docker image // single file with all dependencies and configs to run the program
-- Docker container // instance of the image to run the program
 ```
+因为镜像包含操作系统完整的 root 文件系统，其体积往往是庞大的，因此在 Docker 设计时，就充分利用 Union FS (opens new window)的技术，将其设计为分层存储的架构。
+所以严格来说，镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。
+```
+- Docker container // instance of the image to run the program
+
+```
+镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的 类 和 实例 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
+
+容器的实质是进程，但与直接在宿主执行的进程不同，容器进程运行于属于自己的独立的 命名空间 (opens new window)
+
+因此容器可以拥有自己的 root 文件系统、自己的网络配置、自己的进程空间，甚至自己的用户 ID 空间
+
+镜像使用的是分层存储，容器也是如此
+
+容器存储层的生存周期和容器一样，容器消亡时，容器存储层也随之消亡。因此，任何保存于容器存储层的信息都会随容器删除而丢失
+
 An image is an executable package that includes everything needed
 A container is launched by running an image. 
+
+```
+- Docker Registry
+   - Docker Registry 公开服务
+   - 私有 Docker Registry
+```
+一个 Docker Registry 中可以包含多个 仓库（Repository）；每个仓库可以包含多个 标签（Tag）；每个标签对应一个镜像。
+
+通常，一个仓库会包含同一个软件不同版本的镜像，而标签就常用于对应该软件的各个版本。我们可以通过 <仓库名>:<标签> 的格式来指定具体是这个软件哪个版本的镜像。如果不给出标签，将以 latest 作为默认标签。
+
 ```
 - Docker client (Docker cli) // commands just a portal, nothing related the docker images and containers
 
 - Docker server (Docker daemon) // create img ,run container
+
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
+
 - **install Docker which install a linux VM on the top of mac/windows , the linux kernal is running inside linux VM**
+
 - kernel 核心，要点；[计] 内核
 - daemon  守护进程；后台程序
 > ![PC work](/Img/docker005.png)
