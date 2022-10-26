@@ -144,12 +144,36 @@ $ docker image rm $(docker image ls -q redis)
 $ docker image rm $(docker image ls -q -f before=mongo:3.2)
 ```
 # 利用 commit 理解镜像构成
+- 不要使用 `docker commit` 定制镜像，定制镜像应该使用 `Dockerfile` 来完成。
+- Docker 提供了一个 `docker commit` 命令，可以将容器的存储层保存下来成为镜像。换句话说，就是在原有镜像的基础上，再叠加上容器的存储层，并构成新的镜像。以后我们运行这个新镜像的时候，就会拥有原有容器最后的文件变化。
 
+- docker commit 的语法格式为：
+```
+$ docker commit [选项] <容器ID或容器名> [<仓库名>[:<标签>]]
+```
+```
+$ docker commit \
+    --author "Tao Wang <twang2218@gmail.com>" \
+    --message "修改了默认网页" \
+    webserver \
+    nginx:v2
+```
+- 其中 `--author` 是指定修改的作者，而 `--message` 则是记录本次修改的内容
+- 用 docker history 具体查看镜像内的历史记录
+```
+$ docker history nginx:v2
+```
+# 慎用 docker commit
+- 由于命令的执行，还有很多文件被改动或添加了。会有大量的无关内容被添加进来，将会导致镜像极为臃肿.
+- 生成的镜像也被称为 黑箱镜像，换句话说，就是除了制作镜像的人知道执行过什么命令、怎么生成的镜像，别人根本无从得知
 
+# 使用 Dockerfile 定制镜像
+- `FROM` 指定基础镜像 : FROM 就是指定 基础镜像，因此一个 Dockerfile 中 FROM 是必备的指令，并且必须是`第一条指令`。
 
-
+# Docker client
 - `Docker client` (Docker cli) // commands just a portal, nothing related the docker images and containers
 
+# Docker server
 - `Docker server` (Docker daemon) // create img ,run container
 
 - install Docker on mac https://www.udemy.com/docker-and-kubernetes-the-complete-guide/learn/v4/t/lecture/11436624?start=1
