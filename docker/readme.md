@@ -210,6 +210,20 @@ RUN set -x; buildDeps='gcc libc6-dev make wget' \
 ```
 - 首先，之前所有的命令只有一个目的，就是编译、安装 redis 可执行文件。因此没有必要建立很多层，这只是一层的事情。因此，这里没有使用很多个 RUN 一一对应不同的命令，而是仅仅使用一个 RUN 指令，并使用 && 将各个所需命令串联起来。将之前的 7 层，简化为了 1 层。
 - 在撰写 Dockerfile 的时候，要经常提醒自己，这并`不是在写 Shell 脚本，而是在定义每一层该如何构建`。
+- 为了格式化还进行了换行。Dockerfile 支持 Shell 类的行尾添加 \ 的命令换行方式，以及行首 # 进行注释的格式。良好的格式，比如换行、缩进、注释等，会让维护、排障更为容易，这是一个比较好的习惯。
+
+- 使用了 docker build 命令进行镜像构建。其格式为：
+```
+docker build [选项] <上下文路径/URL/->
+```
+# 镜像构建上下文（Context）
+- 当我们进行镜像构建的时候，并非所有定制都会通过 RUN 指令完成，经常会需要将一些本地文件复制进镜像，比如通过 COPY 指令、ADD 指令等。而 docker build 命令构建镜像，其实并非在本地构建，而是在服务端，也就是 Docker 引擎中构建的。
+-那么可以用 `.gitignore` 一样的语法写一个 `.dockerignore`，该文件是用于剔除不需要作为上下文传递给 Docker 引擎的
+
+
+# 操作 Docker 容器
+
+
 
 # Docker client
 - `Docker client` (Docker cli) // commands just a portal, nothing related the docker images and containers
