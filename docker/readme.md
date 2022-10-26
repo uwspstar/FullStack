@@ -1,21 +1,20 @@
+# Docker 从入门到实践
+- https://vuepress.mirror.docker-practice.com/introduction/what/
+
+- Docker and Kubernetes: The Complete Guide** https://www.udemy.com/docker-and-kubernetes-the-complete-guide/ by Stephen Grider
+
 # Docker
 - Docker 官方文档：https://docs.docker.com/
 - Docker Hub：https://hub.docker.com
 - Docker 的源代码仓库：https://github.com/moby/moby
 
-
-# Docker 从入门到实践
-- https://vuepress.mirror.docker-practice.com/introduction/what/
-
-
-### 05/17/2019
-- **Docker and Kubernetes: The Complete Guide** https://www.udemy.com/docker-and-kubernetes-the-complete-guide/ by **Stephen Grider**
-
+# Docker image
 - `Docker image` // single file with all dependencies and configs to run the program
 
 - 因为镜像包含操作系统完整的 root 文件系统，其体积往往是庞大的，因此在 Docker 设计时，就充分利用 Union FS (opens new window)的技术，将其设计为分层存储的架构。
 - 所以严格来说，镜像并非是像一个 ISO 那样的打包文件，镜像只是一个虚拟的概念，其实际体现并非由一个文件组成，而是由一组文件系统组成，或者说，由多层文件系统联合组成。
- 
+
+# Docker container
 - `Docker container` // instance of the image to run the program
 
 - 镜像（Image）和容器（Container）的关系，就像是面向对象程序设计中的 类 和 实例 一样，镜像是静态的定义，容器是镜像运行时的实体。容器可以被创建、启动、停止、删除、暂停等。
@@ -28,8 +27,12 @@
 
 - 容器存储层的生存周期和容器一样，容器消亡时，容器存储层也随之消亡。因此，任何保存于容器存储层的信息都会随容器删除而丢失
 
+- 按照 `Docker 最佳实践的要求`，容器不应该向其存储层内写入任何数据，容器存储层要保持无状态化。所有的文件写入操作，都应该使用 数据卷（`Volume`）、或者 绑定宿主目录，在这些位置的读写会跳过容器存储层，直接对宿主（或网络存储）发生读写，其性能和稳定性更高。
+
 - An image is an executable package that includes everything needed
 - A container is launched by running an image. 
+
+# Docker Registry
 
 - `Docker Registry`
    - Docker Registry 公开服务
@@ -39,14 +42,28 @@
 
 通常，一个仓库会包含同一个软件不同版本的镜像，而标签就常用于对应该软件的各个版本。我们可以通过 <仓库名>:<标签> 的格式来指定具体是这个软件哪个版本的镜像。如果不给出标签，将以 latest 作为默认标签。
 
-
-### 使用 Docker 镜像
+# 使用 Docker 镜像
 - 从 Docker 镜像仓库获取镜像的命令是 docker pull
 ```
 $ docker pull [选项] [Docker Registry 地址[:端口号]/]仓库名[:标签]
 ```
 - 下载也是一层层的去下载，并非单一文件。
 - 对于 Docker Hub，如果不给出用户名，则默认为 library，也就是官方镜像
+
+- Docker Hub 中显示的体积是压缩后的体积。在镜像下载和上传过程中镜像是保持着压缩状态的，因此 Docker Hub 所显示的大小是网络传输中更关心的流量大小。而 docker image ls 显示的是镜像下载到本地后，展开的大小，准确说，是展开后的各层所占空间的总和，因为镜像到本地后，查看空间的时候，更关心的是本地磁盘空间占用的大小。
+
+- 由于 Docker 使用 Union FS，相同的层只需要保存一份即可，因此实际镜像硬盘占用空间很可能要比这个列表镜像大小的总和要小的多。
+
+
+- 通过 `docker system df` 命令来便捷的查看镜像、容器、数据卷所占用的空间
+```
+$ docker system df
+```
+- 无标签镜像也被称为 虚悬镜像(dangling image) ，可以用下面的命令专门显示这类镜像：
+
+```
+$ docker image ls -f dangling=true
+```
 
 - 镜像为基础启动并运行一个容器
 ```
@@ -88,21 +105,47 @@ $ docker image ls -q
 
 ```
 $ docker image ls --format "{{.ID}}: {{.Repository}}"
+5f515359c7f8: redis
+05a60462f8ba: nginx
+fe9198c04d62: mongo
 ```
-- Docker Hub 中显示的体积是压缩后的体积。在镜像下载和上传过程中镜像是保持着压缩状态的，因此 Docker Hub 所显示的大小是网络传输中更关心的流量大小。而 docker image ls 显示的是镜像下载到本地后，展开的大小，准确说，是展开后的各层所占空间的总和，因为镜像到本地后，查看空间的时候，更关心的是本地磁盘空间占用的大小。
-
-- 由于 Docker 使用 Union FS，相同的层只需要保存一份即可，因此实际镜像硬盘占用空间很可能要比这个列表镜像大小的总和要小的多。
-
-
-- 通过 `docker system df` 命令来便捷的查看镜像、容器、数据卷所占用的空间
-```
-$ docker system df
-```
-- 无标签镜像也被称为 虚悬镜像(dangling image) ，可以用下面的命令专门显示这类镜像：
+- 或者打算以表格等距显示，并且有标题行，和默认一样，不过自己定义列：
 
 ```
-$ docker image ls -f dangling=true
+$ docker image ls --format "table {{.ID}}\t{{.Repository}}\t{{.Tag}}"
+IMAGE ID            REPOSITORY          TAG
+5f515359c7f8        redis               latest
+05a60462f8ba        nginx               latest
+fe9198c04d62        mongo               3.2
 ```
+- 如果要删除本地的镜像，可以使用 docker image rm 命令，其格式为：
+
+```
+$ docker image rm [选项] <镜像1> [<镜像2> ...]
+```
+- 其中，<镜像> 可以是 镜像短 ID、镜像长 ID、镜像名 或者 镜像摘要。
+- 镜像的唯一标识是其 ID 和摘要，而一个镜像可以有多个标签
+- 更精确的是使用 镜像摘要 删除镜像。
+```
+$ docker image ls --digests
+$ docker image rm node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b164422be228
+Untagged: node@sha256:b4f0e0bdeb578043c1ea6862f0d40cc4afe32a4a582f3be235a3b164422be228
+```
+- `Untagged` 和 `Deleted`
+- 因此当我们使用上面命令删除镜像的时候，实际上是在要求删除某个标签的镜像。所以首先需要做的是将满足我们要求的所有镜像标签都取消，这就是我们看到的 Untagged 的信息。
+- 因为一个镜像可以对应多个标签，因此当我们删除了所指定的标签后，可能还有别的标签指向了这个镜像，如果是这种情况，那么 Delete 行为就不会发生。所以并非所有的 docker image rm 都会产生删除镜像的行为，有可能仅仅是取消了某个标签而已。
+- 当该镜像所有的标签都被取消了，该镜像很可能会失去了存在的意义，因此会触发删除行为
+
+- 像其它可以承接多个实体的命令一样，可以使用 `docker image ls -q` 来配合使用 `docker image rm`，这样可以成批的删除希望删除的镜像。
+```
+$ docker image rm $(docker image ls -q redis)
+```
+```
+$ docker image rm $(docker image ls -q -f before=mongo:3.2)
+```
+# 利用 commit 理解镜像构成
+
+
 
 
 - `Docker client` (Docker cli) // commands just a portal, nothing related the docker images and containers
