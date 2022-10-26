@@ -169,6 +169,47 @@ $ docker history nginx:v2
 
 # 使用 Dockerfile 定制镜像
 - `FROM` 指定基础镜像 : FROM 就是指定 基础镜像，因此一个 Dockerfile 中 FROM 是必备的指令，并且必须是`第一条指令`。
+- Docker 还存在一个特殊的镜像，名为 `scratch`。这个镜像是虚拟的概念，并不实际存在，它表示一个空白的镜像。
+# RUN 执行命令 (其格式有两种)
+- shell 格式：RUN <命令>
+```
+RUN echo '<h1>Hello, Docker!</h1>' > /usr/share/nginx/html/index.html
+```
+- exec 格式：RUN ["可执行文件", "参数1", "参数2"]，这更像是函数调用中的格式。
+- 很多初学 Docker 的人`常犯的一个错误`, such as 像 Shell 脚本一样把每个命令对应一个 RUN。
+- Union FS 是有最大层数限制的，比如 AUFS，曾经是最大不得超过 42 层，现在是不得超过 127 层
+
+- bad example
+```
+FROM debian:stretch
+
+RUN apt-get update
+RUN apt-get install -y gcc libc6-dev make wget
+RUN wget -O redis.tar.gz "http://download.redis.io/releases/redis-5.0.3.tar.gz"
+RUN mkdir -p /usr/src/redis
+RUN tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1
+RUN make -C /usr/src/redis
+RUN make -C /usr/src/redis install
+```
+- `Dockerfile` `正确的写法`应该是这样 good example : 
+```
+FROM debian:stretch
+
+RUN set -x; buildDeps='gcc libc6-dev make wget' \
+    && apt-get update \
+    && apt-get install -y $buildDeps \
+    && wget -O redis.tar.gz "http://download.redis.io/releases/redis-5.0.3.tar.gz" \
+    && mkdir -p /usr/src/redis \
+    && tar -xzf redis.tar.gz -C /usr/src/redis --strip-components=1 \
+    && make -C /usr/src/redis \
+    && make -C /usr/src/redis install \
+    && rm -rf /var/lib/apt/lists/* \
+    && rm redis.tar.gz \
+    && rm -r /usr/src/redis \
+    && apt-get purge -y --auto-remove $buildDeps
+```
+- 首先，之前所有的命令只有一个目的，就是编译、安装 redis 可执行文件。因此没有必要建立很多层，这只是一层的事情。因此，这里没有使用很多个 RUN 一一对应不同的命令，而是仅仅使用一个 RUN 指令，并使用 && 将各个所需命令串联起来。将之前的 7 层，简化为了 1 层。
+- 在撰写 Dockerfile 的时候，要经常提醒自己，这并`不是在写 Shell 脚本，而是在定义每一层该如何构建`。
 
 # Docker client
 - `Docker client` (Docker cli) // commands just a portal, nothing related the docker images and containers
