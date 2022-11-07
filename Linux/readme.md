@@ -1,6 +1,5 @@
 # Linux
 -- https://www.linuxprobe.com/basic-learning-00.html
--- https://www.linuxprobe.com/books
 ```
 Mac OS X is a Unix OS and its command line is 99.9% the same as any Linux distribution. 
 Both are using bash as default shell .
