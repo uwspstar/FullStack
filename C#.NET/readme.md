@@ -1,5 +1,12 @@
 # C# 101
 
+## Reference
+
+- <https://dotnettutorials.net/course/csharp-dot-net-tutorials/>
+- <https://dotnet.microsoft.com/en-us/learn/csharp>
+- <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions>
+- <https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs>
+
 ## How Does Computer Work
 
 ![Full Stack Developer](/Img/101_computer_work.png)
@@ -57,7 +64,7 @@
   - `Compiler` : The compiler translates High-level code (Source code) to Machine code All at once. But its execution time is more and occupies the largest part of the memory. It is faster when compared to the interpreter as the entire translation happens in one go.
   - `Interpreter` :The interpreter translates each High-level instruction to machine code One by one. If an error occurs it will stop the compilation process.
   - `Assembler` : It is the system software that converts assembly language instructions into binary formats.
-  
+
 - `Compiler` and `interpreter` are both used to convert `high-level programs` to machine code. `Assembler` is used to convert `low-level` programs to machine code
 
 | Compiler                                                          |      Interpreter                                                  |
@@ -66,16 +73,7 @@
 | takes time to analyze the program. But execution time is faster   | translation time is faster but overall execution time is slower.  |
 | generates intermediate code called object code                    | MO object code                                                    |
 
-### Reference
-
-- <https://dotnet.microsoft.com/en-us/learn/csharp>
-- <https://dotnettutorials.net/course/csharp-dot-net-tutorials/>
-- <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions>
-- <https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs>
-- <https://docs.microsoft.com/en-us/samples/browse/?redirectedfrom=MSDN-samples&term=C%23>
-- <http://net-informations.com/faq/default.htm>
-- <https://www.youtube.com/watch?v=-9b8NRqjUFM>
-
 ### Extensions
 
 - draw.io in vscode <https://www.youtube.com/watch?v=AdrFG7sq1d4>
+- markdown_tables <https://www.tablesgenerator.com/markdown_tables>
