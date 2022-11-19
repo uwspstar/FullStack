@@ -106,7 +106,33 @@
 
 ![Flowchart](/Img/101_flowchart.png)
 
-### Extensions
+## What is COM?
+
+- `COM` stands for Component Object Model. The COM is one of Microsoft Frameworks.
+- Using `COM` Framework, we can develop Windows Applications and Web Applications.
+- In earlier `COM`, VB is the programming language that is used to implement Windows applications and ASP is the technology used to implement web applications.
+executed anywhere.
+
+## Framework
+
+- `Framework` is a collection of many small technologies integrated together to develop applications that can be
+
+## .NET Framework
+
+- read more <https://dotnettutorials.net/lesson/introduction-to-dot-net-framework/>
+- .NET is a Free, Cross-Platform, Open-Source
+- `NET` stands for Network Enabled Technology (Internet). In `.NET`, dot (.) refers to Object-Oriented, and NET refers to the internet. So, the complete .NET means through Object-Oriented we can implement internet-based applications.
+- `NuGet` is a package manager built specifically for .NET that contains over 100,000 packages.
+
+## What does the .NET Framework Provide
+
+![Execution Flow](/Img/101_dot-net-framework-code-exceution-flow.png)
+
+- The DOT NET Framework provides two things as follows
+  - `BCL (Base Class Libraries)` : Without BCL we can’t write any code in .NET. So, BCL is also known as the basic building block of .NET Programs. These are installed into the machine when we installed the .NET framework. BCL contains pre-defined classes and these classes are used for the purpose of application development.
+  - `CLR (Common Language Runtime)` : it is the core component under the .NET framework which is responsible for converting the `MSIL (Microsoft Intermediate Language)` code into `native code`.
+
+## Extensions
 
 - draw.io in vscode <https://www.youtube.com/watch?v=AdrFG7sq1d4>
 - markdown_tables <https://www.tablesgenerator.com/markdown_tables>
