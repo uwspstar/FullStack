@@ -54,10 +54,17 @@
 - read more <https://dotnettutorials.net/lesson/how-computer-programs-works-in-csharp/>
 
 - `Translators` : are system software that converts programming language code into binary format. The translators are classified into three types:
-  - Compiler : The compiler translates High-level code (Source code) to Machine code All at once.
-  - Interpreter
-  - Assembler
+  - `Compiler` : The compiler translates High-level code (Source code) to Machine code All at once. But its execution time is more and occupies the largest part of the memory. It is faster when compared to the interpreter as the entire translation happens in one go.
+  - `Interpreter` :The interpreter translates each High-level instruction to machine code One by one. If an error occurs it will stop the compilation process.
+  - `Assembler` : It is the system software that converts assembly language instructions into binary formats.
+  
 - `Compiler` and `interpreter` are both used to convert `high-level programs` to machine code. `Assembler` is used to convert `low-level` programs to machine code
+
+| Compiler                                                          |      Interpreter                                                  |
+|-------------------------------------------------------------------|:-----------------------------------------------------------------:|
+| scans the whole program and generates machine code in one go      | scan each statement one by one                                    |
+| takes time to analyze the program. But execution time is faster   | translation time is faster but overall execution time is slower.  |
+| generates intermediate code called object code                    | MO object code                                                    |
 
 ### Reference
 
