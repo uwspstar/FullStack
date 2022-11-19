@@ -26,7 +26,7 @@
 - `Decimal` Number System: {0,1,2,3,4,5,6,7,8,9}
 - `Hexadecimal` Number System: {0,1,2,3,4,5,6,7,8,9, A, B, C, D, E, F}
 
-### How do we Convert Decimal Numbers to Binary Numbers?
+## How do we Convert Decimal Numbers to Binary Numbers?
 
 - <https://www.cuemath.com/numbers/decimal-to-binary/>
 
@@ -36,7 +36,7 @@
 - `Compiler` : Programs get converted by the Compiler and generate machine code. The compiler converts all these instructions into binary language or machine code.
 - `Interface` : The interface means without having the background details we can perform our tasks. For example, the end-user understands the English language, then the end-user clicks on English, then all the instructions will come in English language and operations will be performed.
 
-### Types of Computer Languages
+## Types of Computer Languages
 
 - `Low-level Programming Language` : at a low level, we have two languages i.e.
  `Machine Language` and `Assembly language`
@@ -44,7 +44,7 @@
   - `Assembly language` : is a programming language (Symbolic Language) but that is a low-level programming language. The assembly language contains some human-readable commands such as mov, add, mul, div, sub, etc. (a little easier to write and understand compare with `Machine Language`. Assembly code is not faster than machine code)
 - `High-Level Programming Language` : Examples of High-Level Languages are C, C++, Java, Python, C#, Visual Basic, Visual C++, etc.
 
-### Types of Software
+## Types of Software
 
 - System Software
   - Operating System: DOS, WINDOWS, LINUX, UNIX
@@ -54,7 +54,7 @@
   - Application-Specific: MS OFFICE, Oracle
   - General Purpose Software
 
-### How Computer Programs Works
+## How Computer Programs Works
 
 ![Full Stack Developer](/Img/101_translator.png)
 
@@ -72,6 +72,37 @@
 | scans the whole program and generates machine code in one go      | scan each statement one by one                                    |
 | takes time to analyze the program. But execution time is faster   | translation time is faster but overall execution time is slower.  |
 | generates intermediate code called object code                    | MO object code                                                    |
+
+- `loader` : is a program that loads the machine codes of a program into system memory.
+- `locator` : is a program that assigns specific memory addresses for each machine code of a program that is to be loaded into system memory.
+- `linker` : is a program that links smaller programs to form a single program.
+
+## Different Types of Applications
+
+- There are 2 types of applications:
+  - `Standalone Applications` : the Application which is always dependent on an operating system is called a Standalone Application. Exp. All programming languages are standalone applications. That is the Installation of the application is mandatory on the machine.
+  - `Web Applications`
+
+## Operating System extensions
+
+- Windows : .exe
+- MAC OS : .DMG
+- Linux : .RPM
+
+## Platform-Dependent and Platform-Independent Language
+
+- Using any `platform-dependent language`, we can develop only standalone applications. such as using C and C++ language, because these languages are platform-dependent languages.
+- Using `platform-independent languages` we can develop both standalone applications and web applications. such as Java, C#, PHP, etc.
+
+## Programming Methodologies
+
+- `Monolithic Programming` : The entire program code is present in a single block without any division of code into functions.
+- `Modular/ Procedural` : a particular set of code is present in the form of functions or modules that can be used wherever required.
+- `Object-Oriented` : In OOPs, the code is written in the form of classes that contains different data members and member functions, the data, and their associated functions are grouped together. The objects can also be created by using class type.
+
+## Pseudocode -> Algorithm -> Programs
+
+## Flowchart
 
 ### Extensions
 
