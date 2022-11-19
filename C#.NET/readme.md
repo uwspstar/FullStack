@@ -2,7 +2,7 @@
 
 ## How Does Computer Work
 
-![Full Stack Developer](101_computer_work.png)
+![Full Stack Developer](/Img/101_computer_work.png)
 
 - `ALU` : Arithmetic Logic Unit: ALU performs the basic logical and arithmetic operations. Arithmetic operations like addition, subtraction, multiplication, division, and modulus. Logical operations like comparing two numbers (such as >, <, >=, <=, etc.), logical AND, OR, NOT, etc. So, ALU has performed these basic operations.
 - `CU` : Control Unit: Control unit controls the other components like Input and output devices, main memory, hard disk, etc. The job of the control unit is to utilize other resources effectively.
