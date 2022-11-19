@@ -5,6 +5,7 @@
 - C# Walkthroughs https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs
 - C# Coding https://docs.microsoft.com/en-us/samples/browse/?redirectedfrom=MSDN-samples&term=C%23
 - http://net-informations.com/faq/default.htm
+
 ### Clean Coding Principles in C#
 - https://app.pluralsight.com/library/courses/csharp-clean-coding-principles/table-of-contents
 
@@ -15,7 +16,7 @@
 - https://www.meziantou.net/performance-string-concatenation-vs-string-format-vs-interpolated-string.htm
 
 ### Convert vs Parse
-- the difference between Convert and the Parse methods is that Parse takes a string only as input, while Convert can aslo take other base types as input.
+- the difference between Convert and the Parse methods is that Parse takes a string only as input, while Convert can also take other base types as input.
 - When you are parsing user input, the best choice is the ```TryParse```
 
 ### What is the purpose of the null coalescing (??) operator?
