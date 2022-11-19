@@ -25,17 +25,17 @@
 
 ## Programming Languages
 
-- we need for a programming language in order to communicate with computers. a computer can understand only `machine code` or `binary code`.
+- We need for a programming language in order to communicate with computers. A computer can understand only `machine code` or `binary code`.
 - `Compiler` : Programs get converted by the Compiler and generate machine code. The compiler converts all these instructions into binary language or machine code.
-- `interface` : The interface means without having the background details we can perform our tasks. For example, the end-user understands the English language, then the end-user clicks on English, then all the instructions will come in English language and operations will be performed.
+- `Interface` : The interface means without having the background details we can perform our tasks. For example, the end-user understands the English language, then the end-user clicks on English, then all the instructions will come in English language and operations will be performed.
 
 ### Types of Computer Languages
 
-- Low-level Programming Language : at a low level, we have two languages i.e.
+- `Low-level Programming Language` : at a low level, we have two languages i.e.
  `Machine Language` and `Assembly language`
   - `Machine Language` : is the fundamental language (binary of 1’s and 0’s) for the system and it can be directly understandable without any translation.
   - `Assembly language` : is a programming language (Symbolic Language) but that is a low-level programming language. The assembly language contains some human-readable commands such as mov, add, mul, div, sub, etc. (a little easier to write and understand compare with `Machine Language`. Assembly code is not faster than machine code)
-- High-Level Programming Language : Examples of High-Level Languages are C, C++, Java, Python, C#, Visual Basic, Visual C++, etc.
+- `High-Level Programming Language` : Examples of High-Level Languages are C, C++, Java, Python, C#, Visual Basic, Visual C++, etc.
 
 ### Types of Software
 
