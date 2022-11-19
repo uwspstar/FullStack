@@ -222,7 +222,39 @@ docker build [选项] <上下文路径/URL/->
 
 
 # 操作 Docker 容器
+- 新建并启动 所需要的命令主要为 docker run。
+```
+$ docker run ubuntu:18.04 /bin/echo 'Hello world'
+Hello world
+```
+- 下面的命令则启动一个 bash 终端，允许用户进行交互。其中，`-t` 选项让Docker分配一个伪终端（pseudo-tty）并绑定到容器的标准输入上， `-i` 则让容器的标准输入保持打开
+```
+$ docker run -t -i ubuntu:18.04 /bin/bash
+root@af8bae53bdd3:/#
+```
 
+- docker run 创建容器时，Docker 在后台运行的标准操作包括：
+   - 检查本地是否存在指定的镜像，不存在就从 registry 下载
+   - 利用镜像创建并启动一个容器
+   - 分配一个文件系统，并在只读的镜像层外面挂载一层可读写层
+   - 从宿主主机配置的网桥接口中桥接一个虚拟接口到容器中去
+   - 从地址池配置一个 ip 地址给容器
+   - 执行用户指定的应用程序
+   - 执行完毕后容器被终止
+
+- 可以利用 `docker container start` 命令，直接将一个已经终止（exited）的容器启动运行。
+- 更多的时候，需要让 Docker 在后台运行而不是直接把执行命令的结果输出在当前宿主机下。此时，可以通过添加 -d 参数来实现。
+- 容器是否会长久运行，是和 docker run 指定的命令有关，和 -d 参数无关
+- 要获取容器的输出信息，可以通过 docker container logs 命令。
+```
+$ docker container logs [container ID or NAMES]
+```
+- 可以使用 `docker container stop` 来终止一个运行中的容器。
+- 终止状态的容器可以用 `docker container ls -a` 命令看到
+- `docker container restart` 命令会将一个运行态的容器终止，然后再重新启动它。
+- 在使用 -d 参数时，容器启动后会进入后台。
+- 某些时候需要进入容器进行操作，包括使用 `docker attach` 命令或 `docker exec` 命令，
+- 推荐大家使用 `docker exec` 命令 (exit，不会导致容器的停止)
 
 
 # Docker client
