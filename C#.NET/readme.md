@@ -4,6 +4,11 @@
 
 ![Full Stack Developer](101_computer_work.png)
 
+- `ALU` : Arithmetic Logic Unit: ALU performs the basic logical and arithmetic operations. Arithmetic operations like addition, subtraction, multiplication, division, and modulus. Logical operations like comparing two numbers (such as >, <, >=, <=, etc.), logical AND, OR, NOT, etc. So, ALU has performed these basic operations.
+- `CU` : Control Unit: Control unit controls the other components like Input and output devices, main memory, hard disk, etc. The job of the control unit is to utilize other resources effectively.
+- `HDD` : A hard disk is a storage device for a computer (contains two types of files, i.e. data files and program files.)
+- read more <https://dotnettutorials.net/lesson/how-computer-works-csharp/>
+
 ### Reference
 
 - <https://dotnet.microsoft.com/en-us/learn/csharp>

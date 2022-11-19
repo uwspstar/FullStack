@@ -7,7 +7,7 @@
                 <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;labelBackgroundColor=#FFFFFF;fontColor=#000000;" vertex="1" parent="1">
                     <mxGeometry x="160" y="82" width="230" height="250" as="geometry"/>
                 </mxCell>
-                <mxCell id="3" value="Memory" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
+                <mxCell id="3" value="Main&lt;br&gt;Memory" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
                     <mxGeometry x="210" y="194" width="140" height="110" as="geometry"/>
                 </mxCell>
                 <mxCell id="4" value="input" style="rounded=0;whiteSpace=wrap;html=1;" vertex="1" parent="1">
