@@ -2,6 +2,8 @@
 
 ## How Does Computer Work
 
+![Full Stack Developer](101_computer_work.png)
+
 ### Reference
 
 - <https://dotnet.microsoft.com/en-us/learn/csharp>
@@ -11,3 +13,7 @@
 - <https://docs.microsoft.com/en-us/samples/browse/?redirectedfrom=MSDN-samples&term=C%23>
 - <http://net-informations.com/faq/default.htm>
 - <https://www.youtube.com/watch?v=-9b8NRqjUFM>
+
+### Extensions
+
+- draw.io in vscode <https://www.youtube.com/watch?v=AdrFG7sq1d4>
