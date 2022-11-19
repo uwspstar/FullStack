@@ -49,6 +49,16 @@
 
 ### How Computer Programs Works
 
+![Full Stack Developer](/Img/101_translator.png)
+
+- read more <https://dotnettutorials.net/lesson/how-computer-programs-works-in-csharp/>
+
+- `Translators` : are system software that converts programming language code into binary format. The translators are classified into three types:
+  - Compiler : The compiler translates High-level code (Source code) to Machine code All at once.
+  - Interpreter
+  - Assembler
+- `Compiler` and `interpreter` are both used to convert `high-level programs` to machine code. `Assembler` is used to convert `low-level` programs to machine code
+
 ### Reference
 
 - <https://dotnet.microsoft.com/en-us/learn/csharp>
