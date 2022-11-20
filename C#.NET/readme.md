@@ -138,7 +138,7 @@ executed anywhere.
 
   - `CLR (Common Language Runtime)` : it is the `core component` under the .NET framework which is responsible for converting the `MSIL (Microsoft Intermediate Language)` code into `native code`. It is the execution engine that handles running applications. It provides services like thread management, garbage collection, type safety, exception handling, and more.
 
-- `JIT (ust-in-Time compiler)` : it is the component of `CLR` that is responsible for converting MSIL code into Native Code. Native code is code that is directly understandable by the operating system.
+    - `JIT (ust-in-Time compiler)` : it is the component of `CLR` that is responsible for converting MSIL code into Native Code. Native code is code that is directly understandable by the operating system.
 
 ## In the .NET framework, the code is compiled twice
 
