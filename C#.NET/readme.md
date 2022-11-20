@@ -168,6 +168,8 @@ executed anywhere.
 
 ![Execution Flow](/Img/101_dot-net-framework-code-exceution-flow.png)
 
+![Code Flow](/Img/101_code_flow.png)
+
 - The DOT NET Framework provides `two major components` as follows
 
   - `BCL (Base Class Libraries)` : Without `BCL` we can’t write any code in .NET. So, BCL is also known as the basic building block of .NET Programs. These are installed into the machine when we installed the .NET framework. `BCL` contains pre-defined classes and these classes are used for the purpose of application development. It provides a set of APIs and types for common functionality. It provides types for strings, dates, numbers, etc. The Class Library includes APIs for reading and writing files, connecting to databases, drawing, and more.
