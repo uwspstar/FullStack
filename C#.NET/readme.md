@@ -12,18 +12,27 @@
 ![Computer Work](/Img/101_computer_work.png)
 
 - `ALU` : Arithmetic Logic Unit: ALU performs the basic logical and arithmetic operations. Arithmetic operations like addition, subtraction, multiplication, division, and modulus. Logical operations like comparing two numbers (such as >, <, >=, <=, etc.), logical AND, OR, NOT, etc. So, ALU has performed these basic operations.
+
 - `CU` : Control Unit: Control unit controls the other components like Input and output devices, main memory, hard disk, etc. The job of the control unit is to utilize other resources effectively.
+
 - `Main Memory` : when computer run any program (Program Files), it will be brought into the main memory so that the CPU can execute it.
+
 - `HDD` : A hard disk is a storage device for a computer (contains two types of files, i.e. data files and program files.)
+
 - `INPUT` : Input devices are Keyboard, Mouse, etc.
+
 - `OUTPUT` : Output devices are monitors, printers, etc.
+
 - read more <https://dotnettutorials.net/lesson/how-computer-works-csharp/>
 
 ## The computer only understands the binary number system
 
 - `Binary` Number System: {0,1}
+
 - `Octal` Number System: {0,1,2,3,4,5,6,7}
+
 - `Decimal` Number System: {0,1,2,3,4,5,6,7,8,9}
+
 - `Hexadecimal` Number System: {0,1,2,3,4,5,6,7,8,9, A, B, C, D, E, F}
 
 ## How do we Convert Decimal Numbers to Binary Numbers?
@@ -33,25 +42,34 @@
 ## Programming Languages
 
 - We need for a programming language in order to communicate with computers. A computer can understand only `machine code` or `binary code`.
+
 - `Compiler` : Programs get converted by the Compiler and generate machine code. The compiler converts all these instructions into binary language or machine code.
+
 - `Interface` : The interface means without having the background details we can perform our tasks. For example, the end-user understands the English language, then the end-user clicks on English, then all the instructions will come in English language and operations will be performed.
 
 ## Types of Computer Languages
 
-- `Low-level Programming Language` : at a low level, we have two languages i.e.
- `Machine Language` and `Assembly language`
+- `Low-level Programming Language` : at a low level, we have two languages i.e.`Machine Language` and `Assembly language`
+  
   - `Machine Language` : is the fundamental language (binary of 1’s and 0’s) for the system and it can be directly understandable without any translation.
+  
   - `Assembly language` : is a programming language (Symbolic Language) but that is a low-level programming language. The assembly language contains some human-readable commands such as mov, add, mul, div, sub, etc. (a little easier to write and understand compare with `Machine Language`. Assembly code is not faster than machine code)
+
 - `High-Level Programming Language` : Examples of High-Level Languages are C, C++, Java, Python, C#, Visual Basic, Visual C++, etc.
 
 ## Types of Software
 
 - System Software
   - Operating System: DOS, WINDOWS, LINUX, UNIX
+
   - System Support: Compiler, Interpreter, Assembler
+
   - System Development: Linker, Loader, Editor
+
 - Application Software
+
   - Application-Specific: MS OFFICE, Oracle
+
   - General Purpose Software
 
 ## How Computer Programs Works
@@ -61,8 +79,11 @@
 - read more <https://dotnettutorials.net/lesson/how-computer-programs-works-in-csharp/>
 
 - `Translators` : are system software that converts programming language code into binary format. The translators are classified into three types:
+
   - `Compiler` : The compiler translates High-level code (Source code) to Machine code All at once. But its execution time is more and occupies the largest part of the memory. It is faster when compared to the interpreter as the entire translation happens in one go.
+
   - `Interpreter` :The interpreter translates each High-level instruction to machine code One by one. If an error occurs it will stop the compilation process.
+
   - `Assembler` : It is the system software that converts assembly language instructions into binary formats.
 
 - `Compiler` and `interpreter` are both used to convert `high-level programs` to machine code. `Assembler` is used to convert `low-level` programs to machine code
@@ -74,30 +95,39 @@
 | generates intermediate code called object code                    | MO object code                                                    |
 
 - `loader` : is a program that loads the machine codes of a program into system memory.
+
 - `locator` : is a program that assigns specific memory addresses for each machine code of a program that is to be loaded into system memory.
+
 - `linker` : is a program that links smaller programs to form a single program.
 
 ## Different Types of Applications
 
 - There are 2 types of applications:
+
   - `Standalone Applications` : the Application which is always dependent on an operating system is called a Standalone Application. Exp. All programming languages are standalone applications. That is the Installation of the application is mandatory on the machine.
+
   - `Web Applications`
 
 ## Operating System extensions
 
 - Windows : .exe
+
 - MAC OS : .DMG
+
 - Linux : .RPM
 
 ## Platform-Dependent and Platform-Independent Language
 
 - Using any `platform-dependent language`, we can develop only standalone applications. such as using C and C++ language, because these languages are platform-dependent languages.
+
 - Using `platform-independent languages` we can develop both standalone applications and web applications. such as Java, C#, PHP, etc.
 
 ## Programming Methodologies
 
 - `Monolithic Programming` : The entire program code is present in a single block without any division of code into functions.
+
 - `Modular/ Procedural` : a particular set of code is present in the form of functions or modules that can be used wherever required.
+
 - `Object-Oriented` : In OOPs, the code is written in the form of classes that contains different data members and member functions, the data, and their associated functions are grouped together. The objects can also be created by using class type.
 
 ## Pseudocode -> Algorithm -> Programs
@@ -109,7 +139,9 @@
 ## What is COM (Component Object Model)?
 
 - `COM (Component Object Model)` is one of Microsoft Frameworks.
+
 - Using `COM` Framework, we can develop Windows Applications and Web Applications.
+
 - In earlier `COM`, VB is the programming language that is used to implement Windows applications and ASP is the technology used to implement web applications.
 executed anywhere.
 
@@ -123,16 +155,20 @@ executed anywhere.
 - read more <https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet-framework>
 
 - `.NET` is a Free, Cross-Platform, Open-Source. (was called `.NET Core`) is Platform Independent.
+
 - `.NET Framework` is Platform-Dependent
+
 - `NET (Network Enabled Technology (Internet))`.
+
 - In `.NET`, dot (.) refers to Object-Oriented, and NET refers to the internet. So, the complete `.NET` means through Object-Oriented we can implement internet-based applications.
+
 - `NuGet` is a package manager built specifically for .NET that contains over 100,000 packages.
 
 ## What does the .NET Framework Provide
 
 ![Execution Flow](/Img/101_dot-net-framework-code-exceution-flow.png)
 
-- The DOT NET Framework provides two major components as follows
+- The DOT NET Framework provides `two major components` as follows
 
   - `BCL (Base Class Libraries)` : Without `BCL` we can’t write any code in .NET. So, BCL is also known as the basic building block of .NET Programs. These are installed into the machine when we installed the .NET framework. `BCL` contains pre-defined classes and these classes are used for the purpose of application development. It provides a set of APIs and types for common functionality. It provides types for strings, dates, numbers, etc. The Class Library includes APIs for reading and writing files, connecting to databases, drawing, and more.
 
@@ -153,7 +189,7 @@ executed anywhere.
 
 ## .NET Framework Architecture (wo major components)
 
-- The two major components of the .NET Framework are the `Common Language Runtime (CLR)` and the `Base Class Library (BCL)`.
+- The `two major components` of the .NET Framework are the `Common Language Runtime (CLR)` and the `Base Class Library (BCL)`.
 
   - `CLR (Common Language Runtime)`: is the execution engine that handles running applications. It provides services like thread management, garbage collection, type safety, exception handling, and more.
 
