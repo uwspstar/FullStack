@@ -174,9 +174,9 @@ executed anywhere.
 
 ## Source Code -> Compiler -> CIL -> CLR -> Machine Code
 
-- The .NET applications are written in C#, F#, or VB programming languages. The Source Code is compiled into an intermediate language code called IL or MSIL or CIL (Common Intermediate Language). And the Compiled code is stored in assemblies with .DLL or .EXE file extension.
+- The .NET applications are written in C#, F#, or VB programming languages. The Source Code is compiled into an intermediate language code called `IL` or `MSIL` or `CIL (Common Intermediate Language)`. And the Compiled code is stored in assemblies with `.DLL` or `.EXE` file extension.
 
-- When an application runs, the CLR takes the Assembly (IL Code or MSIL Code, or CIL) and uses the Just-in-Time compiler (JIT) to convert the MSIL or IL code into machine code that can execute on the specific architecture of the computer it is running on.
+- When an application runs, the CLR takes the `Assembly (IL Code or MSIL Code, or CIL)` and uses the  `Just-in-Time compiler (JIT)` to convert the `MSIL` or `IL` code into machine code that can execute on the specific architecture of the computer it is running on.
 
 ![Code Flow](/Img/101_code_flow.png)
 
