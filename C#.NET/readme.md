@@ -106,9 +106,9 @@
 
 ![Flowchart](/Img/101_flowchart.png)
 
-## What is COM?
+## What is COM (Component Object Model)?
 
-- `COM` stands for Component Object Model. The COM is one of Microsoft Frameworks.
+- `COM (Component Object Model)` is one of Microsoft Frameworks.
 - Using `COM` Framework, we can develop Windows Applications and Web Applications.
 - In earlier `COM`, VB is the programming language that is used to implement Windows applications and ASP is the technology used to implement web applications.
 executed anywhere.
@@ -120,24 +120,44 @@ executed anywhere.
 ## .NET Framework
 
 - read more <https://dotnettutorials.net/lesson/introduction-to-dot-net-framework/>
-- .NET is a Free, Cross-Platform, Open-Source
-- `NET` stands for Network Enabled Technology (Internet). In `.NET`, dot (.) refers to Object-Oriented, and NET refers to the internet. So, the complete .NET means through Object-Oriented we can implement internet-based applications.
+- read more <https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet-framework>
+
+- `.NET` is a Free, Cross-Platform, Open-Source. (was called `.NET Core`) is Platform Independent.
+- `.NET Framework` is Platform-Dependent
+- `NET (Network Enabled Technology (Internet))`.
+- In `.NET`, dot (.) refers to Object-Oriented, and NET refers to the internet. So, the complete `.NET` means through Object-Oriented we can implement internet-based applications.
 - `NuGet` is a package manager built specifically for .NET that contains over 100,000 packages.
 
 ## What does the .NET Framework Provide
 
 ![Execution Flow](/Img/101_dot-net-framework-code-exceution-flow.png)
 
-- The DOT NET Framework provides two things as follows
-  - `BCL (Base Class Libraries)` : Without BCL we can’t write any code in .NET. So, BCL is also known as the basic building block of .NET Programs. These are installed into the machine when we installed the .NET framework. BCL contains pre-defined classes and these classes are used for the purpose of application development.
-  - `CLR (Common Language Runtime)` : it is the core component under the .NET framework which is responsible for converting the `MSIL (Microsoft Intermediate Language)` code into `native code`.
+- The DOT NET Framework provides two major components as follows
 
-### In the .NET framework, the code is compiled twice
+  - `BCL (Base Class Libraries)` : Without `BCL` we can’t write any code in .NET. So, BCL is also known as the basic building block of .NET Programs. These are installed into the machine when we installed the .NET framework. `BCL` contains pre-defined classes and these classes are used for the purpose of application development. It provides a set of APIs and types for common functionality. It provides types for strings, dates, numbers, etc. The Class Library includes APIs for reading and writing files, connecting to databases, drawing, and more.
+
+  - `CLR (Common Language Runtime)` : it is the `core component` under the .NET framework which is responsible for converting the `MSIL (Microsoft Intermediate Language)` code into `native code`. It is the execution engine that handles running applications. It provides services like thread management, garbage collection, type safety, exception handling, and more.
+
+- `JIT (ust-in-Time compiler)` : it is the component of `CLR` that is responsible for converting MSIL code into Native Code. Native code is code that is directly understandable by the operating system.
+
+## In the .NET framework, the code is compiled twice
 
 - read more <https://dotnettutorials.net/lesson/introduction-to-dot-net-framework/>
+- read more <https://dotnet.microsoft.com/en-us/learn/dotnet/what-is-dotnet-framework>
+
 - `source code` to `MSIL` : In the 1st compilation, the `source code` is compiled by the respective language compiler and generates the intermediate code which is known as `MSIL` ( Microsoft Intermediate Language) or IL (Intermediate language code), or Managed Code.
+
 - `MSIL` to `Native code` : In the 2nd compilation, `MSIL` is converted into `Native code` (native code means code specific to the Operating system so that the code is executed by the Operating System) and this is done by CLR.
+
 - Always 1st compilation (`source code` to `MSIL`) is slow and 2nd compilation (`MSIL` is converted into `Native code`) is fast.
+
+## .NET Framework Architecture (wo major components)
+
+- The two major components of the .NET Framework are the `Common Language Runtime (CLR)` and the `Base Class Library (BCL)`.
+
+  - `CLR (Common Language Runtime)`: is the execution engine that handles running applications. It provides services like thread management, garbage collection, type safety, exception handling, and more.
+
+  - `BCL (Base Class Library)` :  provides a set of APIs and types for common functionality. It provides types for strings, dates, numbers, etc. The Class Library includes APIs for reading and writing files, connecting to databases, drawing, and more.
 
 ## Extensions
 
