@@ -132,6 +132,13 @@ executed anywhere.
   - `BCL (Base Class Libraries)` : Without BCL we can’t write any code in .NET. So, BCL is also known as the basic building block of .NET Programs. These are installed into the machine when we installed the .NET framework. BCL contains pre-defined classes and these classes are used for the purpose of application development.
   - `CLR (Common Language Runtime)` : it is the core component under the .NET framework which is responsible for converting the `MSIL (Microsoft Intermediate Language)` code into `native code`.
 
+### In the .NET framework, the code is compiled twice
+
+- read more <https://dotnettutorials.net/lesson/introduction-to-dot-net-framework/>
+- `source code` to `MSIL` : In the 1st compilation, the `source code` is compiled by the respective language compiler and generates the intermediate code which is known as `MSIL` ( Microsoft Intermediate Language) or IL (Intermediate language code), or Managed Code.
+- `MSIL` to `Native code` : In the 2nd compilation, `MSIL` is converted into `Native code` (native code means code specific to the Operating system so that the code is executed by the Operating System) and this is done by CLR.
+- Always 1st compilation (`source code` to `MSIL`) is slow and 2nd compilation (`MSIL` is converted into `Native code`) is fast.
+
 ## Extensions
 
 - draw.io in vscode <https://www.youtube.com/watch?v=AdrFG7sq1d4>
