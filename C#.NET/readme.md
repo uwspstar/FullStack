@@ -189,7 +189,7 @@ executed anywhere.
 
 - Always 1st compilation (`source code` to `MSIL`) is slow and 2nd compilation (`MSIL` is converted into `Native code`) is fast.
 
-## .NET Framework Architecture (wo major components)
+## .NET Framework Architecture (two major components)
 
 - read more <https://dotnettutorials.net/lesson/net-framework-architecture-and-components/>
 
