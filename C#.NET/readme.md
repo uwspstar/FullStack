@@ -176,6 +176,8 @@ executed anywhere.
 
 - When an application runs, the CLR takes the Assembly (IL Code or MSIL Code, or CIL) and uses the Just-in-Time compiler (JIT) to convert the MSIL or IL code into machine code that can execute on the specific architecture of the computer it is running on.
 
+## Source Code -> Compiler -> CIL -> CLR -> Machine Code
+
 ![Code Flow](/Img/101_code_flow.png)
 
 - The DOT NET Framework provides `two major components` as follows
@@ -196,8 +198,6 @@ executed anywhere.
 - `MSIL` to `Native code` : In the 2nd compilation, `MSIL` is converted into `Native code` (native code means code specific to the Operating system so that the code is executed by the Operating System) and this is done by CLR.
 
 - Always 1st compilation (`source code` to `MSIL`) is slow and 2nd compilation (`MSIL` is converted into `Native code`) is fast.
-
-## .NET Framework Architecture (two major components)
 
 ## Extensions
 
