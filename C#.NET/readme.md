@@ -168,6 +168,14 @@ executed anywhere.
 
 ![Execution Flow](/Img/101_dot-net-framework-code-exceution-flow.png)
 
+- read more <https://dotnettutorials.net/lesson/net-framework-architecture-and-components/>
+
+- The `two major components` of the .NET Framework are the `Common Language Runtime (CLR)` and the `Base Class Library (BCL)`.
+
+- The .NET applications are written in C#, F#, or VB programming languages. The Source Code is compiled into an intermediate language code called IL or MSIL or CIL (Common Intermediate Language). And the Compiled code is stored in assemblies with .DLL or .EXE file extension.
+
+- When an application runs, the CLR takes the Assembly (IL Code or MSIL Code, or CIL) and uses the Just-in-Time compiler (JIT) to convert the MSIL or IL code into machine code that can execute on the specific architecture of the computer it is running on.
+
 ![Code Flow](/Img/101_code_flow.png)
 
 - The DOT NET Framework provides `two major components` as follows
@@ -190,20 +198,6 @@ executed anywhere.
 - Always 1st compilation (`source code` to `MSIL`) is slow and 2nd compilation (`MSIL` is converted into `Native code`) is fast.
 
 ## .NET Framework Architecture (two major components)
-
-- read more <https://dotnettutorials.net/lesson/net-framework-architecture-and-components/>
-
-- The .NET applications are written in C#, F#, or VB programming languages. The Source Code is compiled into an intermediate language code called IL or MSIL or CIL (Common Intermediate Language). And the Compiled code is stored in assemblies with .DLL or .EXE file extension.
-
-- When an application runs, the CLR takes the Assembly (IL Code or MSIL Code, or CIL) and uses the Just-in-Time compiler (JIT) to convert the MSIL or IL code into machine code that can execute on the specific architecture of the computer it is running on.
-
-![Code Flow](/Img/101_code_flow.png)
-
-- The `two major components` of the .NET Framework are the `Common Language Runtime (CLR)` and the `Base Class Library (BCL)`.
-
-  - `CLR (Common Language Runtime)`: is the execution engine that handles running applications. It provides services like thread management, garbage collection, type safety, exception handling, and more.
-
-  - `BCL (Base Class Library)` :  provides a set of APIs and types for common functionality. It provides types for strings, dates, numbers, etc. The Class Library includes APIs for reading and writing files, connecting to databases, drawing, and more.
 
 ## Extensions
 
