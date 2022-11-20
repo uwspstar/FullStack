@@ -189,6 +189,8 @@ executed anywhere.
 
 ## .NET Framework Architecture (wo major components)
 
+![Code Flow](/Img/101_code_flow.png)
+
 - The `two major components` of the .NET Framework are the `Common Language Runtime (CLR)` and the `Base Class Library (BCL)`.
 
   - `CLR (Common Language Runtime)`: is the execution engine that handles running applications. It provides services like thread management, garbage collection, type safety, exception handling, and more.
