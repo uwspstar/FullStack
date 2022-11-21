@@ -58,7 +58,7 @@ static void Main(string[] args)
 ```c#
 static void Main(string[] args)
 {
-    Console.WriteLine("Enter two Numbers:"); 
+    Console.WriteLine("Enter a Number:"); 
     int num1 = Convert.ToInt32(Console.ReadLine());  
     Console.WriteLine($"The num1 is: {num1}");
     Console.ReadKey();
