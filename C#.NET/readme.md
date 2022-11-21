@@ -258,6 +258,12 @@ executed anywhere.
 
 - The `static class` in C# contains only static members i.e. all the `Properties` and `Methods` available in the Console class are static. So, we can access all these members by using the Console class name i.e. we don’t require the Console class instance to access these members.
 
+## gRPC on .NET
+
+- read more <https://learn.microsoft.com/en-us/aspnet/core/grpc/?view=aspnetcore-7.0>
+
+- read summary <https://github.com/uwspstar/FullStack/blob/master/C%23.NET/grpc.md>
+
 ## Extensions
 
 - draw.io in vscode: <https://www.youtube.com/watch?v=AdrFG7sq1d4>
