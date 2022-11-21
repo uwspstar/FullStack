@@ -248,12 +248,6 @@ executed anywhere.
 
 - read summary <https://github.com/uwspstar/FullStack/blob/master/C%23.NET/Console-Class.md>
 
-<details>
-  <summary>Summary...</summary>
-  Represents the standard input, output, and error streams for console applications. This class cannot be inherited.
-
-</details>
-
 ## static class
 
 - The `static class` in C# contains only static members i.e. all the `Properties` and `Methods` available in the Console class are static. So, we can access all these members by using the Console class name i.e. we don’t require the Console class instance to access these members.
@@ -273,9 +267,14 @@ executed anywhere.
 - Download VisualStudio: <https://visualstudio.microsoft.com/downloads/>
 - Download .NET Framework 4.8: <https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48>
 
+<details>
+  <summary>Summary</summary>
+
 - [X] Item1
 - [ ] Item2
 - [ ] Item3
+
+</details>
 
 ## others
 
