@@ -1,7 +1,8 @@
 # Operators
 
-- https://www.geeksforgeeks.org/c-sharp-operators/#Bitwise%20Operators
-```
+- <https://www.geeksforgeeks.org/c-sharp-operators/#Bitwise%20Operators>
+
+```c#
 “&=”(Bitwise AND Assignment) : 
 This operator is combination of ‘&’ and ‘=’ operators. 
 This operator first “Bitwise AND” the current value of the variable on the left by the value on the right 
