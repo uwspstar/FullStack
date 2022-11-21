@@ -255,8 +255,19 @@ executed anywhere.
     <td>The Console class is available in the System namespace.</td>
     </tr>
     <tr>
-    <td>The console is an operating system window where users interact with the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal</td>
+        <td>The console is an operating system window where users interact with the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal
+        </td>
     </tr>
+    <tr><td>Namespace: `System`</td></tr>
+    <tr><td>Represents the standard input, output, and error streams for console applications. This class cannot be inherited</td></tr>
+    <tr><td>## Console I/O Streams</td></tr>
+    <tr><td>read more <https://learn.microsoft.com/en-us/dotnet/api/system.console?view=net-7.0#console-io-streams></td></tr>
+    <tr><td>three I/O streams
+        - By default, `Console.In`, `Console.Out`, and `Console.Error`
+        - When a console application starts, the operating system automatically associates three I/O streams with the console:  
+        - standard input stream, default `System.IO.TextReader`
+        - standard output stream, default `System.IO.TextWriter`
+        - standard error output stream, default `System.IO.TextWriter`</td></tr>
     </table>
 </details>
 
