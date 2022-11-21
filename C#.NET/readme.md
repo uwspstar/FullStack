@@ -249,11 +249,9 @@ executed anywhere.
 - read summary <https://github.com/uwspstar/FullStack/blob/master/C%23.NET/Console-Class.md>
 
 <details>
-    <summary></summary>
-        - The Console class is available in the System namespace.
-
-        - The console is an operating system window where users interact with 
-        the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal
+  <summary>(Summary)</summary>
+    <p>The Console class is available in the System namespace.</p>
+    <p> The console is an operating system window where users interact with the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal</p>
 </details>
 
 ## static class
