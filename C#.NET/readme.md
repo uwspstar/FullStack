@@ -250,7 +250,6 @@ executed anywhere.
 
 <details>
   <summary>Summary : Console Class</summary>
-  <p>
 
     - Namespace: `System`
 
@@ -268,8 +267,6 @@ executed anywhere.
     - standard input stream, default `System.IO.TextReader`
     - standard output stream, default `System.IO.TextWriter`
     - standard error output stream, default `System.IO.TextWriter`
-
-  </p>
 
 </details>
 
