@@ -182,11 +182,11 @@ executed anywhere.
 
 - The DOT NET Framework provides `two major components` as follows
 
-  - `BCL (Base Class Libraries)` : Without `BCL` we can’t write any code in .NET. So, BCL is also known as the basic building block of .NET Programs. These are installed into the machine when we installed the .NET framework. `BCL` contains pre-defined classes and these classes are used for the purpose of application development. It provides a set of APIs and types for common functionality. It provides types for strings, dates, numbers, etc. The Class Library includes APIs for reading and writing files, connecting to databases, drawing, and more.
+  - `BCL (Base Class Libraries)`: Without `BCL` we can’t write any code in .NET. So, BCL is also known as the basic building block of .NET Programs. These are installed into the machine when we installed the .NET framework. `BCL` contains pre-defined classes and these classes are used for the purpose of application development. It provides a set of APIs and types for common functionality. It provides types for strings, dates, numbers, etc. The Class Library includes APIs for reading and writing files, connecting to databases, drawing, and more.
 
-  - `CLR (Common Language Runtime)` : it is the `core component` under the .NET framework which is responsible for converting the `MSIL (Microsoft Intermediate Language)` code into `native code`. It is the execution engine that handles running applications. It provides services like thread management, garbage collection, type safety, exception handling, and more.
+  - `CLR (Common Language Runtime)`: it is the `core component` under the .NET framework which is responsible for converting the `MSIL (Microsoft Intermediate Language)` code into `native code`. It is the execution engine that handles running applications. It provides services like thread management, garbage collection, type safety, exception handling, and more.
 
-    - `JIT (ust-in-Time compiler)` : it is the component of `CLR` that is responsible for converting MSIL code into Native Code. Native code is code that is directly understandable by the operating system.
+    - `JIT (ust-in-Time compiler)`: it is the component of `CLR` that is responsible for converting MSIL code into Native Code. Native code is code that is directly understandable by the operating system.
 
 ## In the .NET framework, the code is compiled twice
 
@@ -228,6 +228,7 @@ executed anywhere.
 
 ## Extensions
 
-- draw.io in vscode <https://www.youtube.com/watch?v=AdrFG7sq1d4>
-- markdown_tables <https://www.tablesgenerator.com/markdown_tables>
-- download visualstudio <https://visualstudio.microsoft.com/downloads/>
+- draw.io in vscode: <https://www.youtube.com/watch?v=AdrFG7sq1d4>
+- markdown_tables: <https://www.tablesgenerator.com/markdown_tables>
+- Download VisualStudio: <https://visualstudio.microsoft.com/downloads/>
+- Download .NET Framework 4.8: <https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48>
