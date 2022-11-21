@@ -226,9 +226,44 @@ executed anywhere.
 - Inheritance (I)
 - Encapsulation (E)
 
+## Basic Structure of C# Program
+
+- read more <https://dotnettutorials.net/lesson/basic-structure-of-csharp-program/>
+
+- `Using`: is a keyword. Using this keyword, we can refer to .NET `BCL` in C# Applications i.e. including the `BCL` namespaces as well as we can also include user-defined namespaces that we will discuss as we progress in this course
+
+## C# keywords
+
+- read more <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/>
+
+- C# Keywords are lowercase.
+
+- Keywords are `predefined, reserved identifiers` that have special meanings to the compiler.
+
+- Keywords can't be used as `identifiers` in your program unless they include `@ as a prefix`. For example, `@if` is a valid identifier, but if isn't because if is a keyword.
+
+## Console Class
+
+- read more <https://learn.microsoft.com/en-us/dotnet/api/system.console?view=net-7.0>
+
+- The Console class is available in the System namespace.
+- The console is an operating system window where users interact with the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal
+
+### a
+
+<details> <summary>TITLE</summary> BODY CONTENT </details>
+
+## static class
+
+- The `static class` in C# contains only static members i.e. all the `Properties` and `Methods` available in the Console class are static. So, we can access all these members by using the Console class name i.e. we don’t require the Console class instance to access these members.
+
 ## Extensions
 
 - draw.io in vscode: <https://www.youtube.com/watch?v=AdrFG7sq1d4>
 - markdown_tables: <https://www.tablesgenerator.com/markdown_tables>
 - Download VisualStudio: <https://visualstudio.microsoft.com/downloads/>
 - Download .NET Framework 4.8: <https://dotnet.microsoft.com/en-us/download/dotnet-framework/net48>
+
+- [X] Item1
+- [ ] Item2
+- [ ] Item3
