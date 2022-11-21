@@ -256,6 +256,7 @@ executed anywhere.
     <td><p>The Console class is available in the System namespace.</p></td>
     </tr>
     <tr>
+    <td></td>
     <td><p> The console is an operating system window where users interact with the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal</p></td>
     </tr>
     </table>
