@@ -4,7 +4,7 @@
 
 - Namespace: `System`
 
-- Represents the standard input, output, and error streams for console applications. This class cannot be inherited
+- Represents the standard input, output, and error streams for console applications. This class cannot be inherited.
 
 ## Console I/O Streams
 
