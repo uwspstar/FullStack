@@ -110,11 +110,11 @@
 
 ## Operating System extensions
 
-- Windows : .exe
+- Windows : `.exe`
 
-- MAC OS : .DMG
+- MAC OS : `.DMG`
 
-- Linux : .RPM
+- Linux : `.RPM`
 
 ## Platform-Dependent and Platform-Independent Language
 
