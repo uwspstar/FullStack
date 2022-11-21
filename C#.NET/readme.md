@@ -199,7 +199,35 @@ executed anywhere.
 
 - Always 1st compilation (`source code` to `MSIL`) is slow and 2nd compilation (`MSIL` is converted into `Native code`) is fast.
 
+## Applications Developed using .NET Framework
+
+- `WinForms`
+
+- `ASP.NET`
+
+- `ADO.NET`: This technology is used to develop applications to interact with databases such as Oracle or Microsoft SQL Server.
+
+- `Entity Framework`: It is an ORM-based open-source framework
+
+- `Parallel LINQ`: Parallel LINQ or PLINQ is a parallel implementation of LINQ to objects.
+
+- `WCF (Windows Communication Foundation)`: It is a framework for building service-oriented applications. Using `WCF`, you can send data as asynchronous messages from one service endpoint to another.
+
+## C# is Compiled and Interpreted
+
+- We know a programming language is either compiled or interpreted. But C# combines both approaches.
+
+- First C# compiler `CSC` translates source code into an intermediate language code known as `MSIL (Microsoft Intermediate Language)` or `CIL (Common Intermediate Language)` code. But these `MSIL` or `CIL` or `IL` codes are not machine instructions. So, in the second stage, these `MSIL` or `CIL`, or `IL` codes are interpreted by the C# `interpreter` (One Component of `CLR` called `JIT- Just in Time` Compiler). As a result, machine instructions will be generated which are directly executed by the machine. Hence, we are saying C# is both interpreted and compiled language.
+
+## C# is Object-Oriented (A P I E)
+
+- Abstraction (A)
+- Polymorphism (P)
+- Inheritance (I)
+- Encapsulation (E)
+
 ## Extensions
 
 - draw.io in vscode <https://www.youtube.com/watch?v=AdrFG7sq1d4>
 - markdown_tables <https://www.tablesgenerator.com/markdown_tables>
+- download visualstudio <https://visualstudio.microsoft.com/downloads/>
