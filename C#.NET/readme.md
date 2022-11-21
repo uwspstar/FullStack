@@ -268,3 +268,7 @@ executed anywhere.
 - [X] Item1
 - [ ] Item2
 - [ ] Item3
+
+## others
+
+- markdownlint取消html标签警告 <https://blog.csdn.net/qq_44926567/article/details/109167394>
