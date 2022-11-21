@@ -246,10 +246,12 @@ executed anywhere.
 
 - read more <https://learn.microsoft.com/en-us/dotnet/api/system.console?view=net-7.0>
 
+- read summary <https://github.com/uwspstar/FullStack/blob/master/C%23.NET/Console-Class.md>
+
 - The Console class is available in the System namespace.
 - The console is an operating system window where users interact with the operating system or with a text-based console application by entering text input through the computer keyboard, and by reading text output from the computer terminal
 
-### a
+## test
 
 <details> <summary>TITLE</summary> BODY CONTENT </details>
 
