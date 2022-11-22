@@ -14,7 +14,7 @@
 
 ## How Data is Represented in a Computer?
 
-<table cellspacing="0" cellpadding="0" style="border:none;">
+<table style="border-collapse: collapse; border: none;">
   <tr>
     <td width="300" style="border:none">
       <img src ="https://github.com/uwspstar/FullStack/blob/master/Img/101_Data_is_Represented.png" alt="Data_is_Represented" width="100%"/>
