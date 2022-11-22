@@ -16,7 +16,7 @@
 
 <table>
   <tr>
-    <td width="400">
+    <td width="300">
       <img src ="https://github.com/uwspstar/FullStack/blob/master/Img/101_Data_is_Represented.png" alt="Data_is_Represented" width="100%"/>
     </td>
     <td>
