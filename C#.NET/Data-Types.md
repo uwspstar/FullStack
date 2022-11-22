@@ -14,6 +14,11 @@
 
 ## How Data is Represented in a Computer?
 
+<style>
+td, th {
+   border: none!important;
+}
+</style>
 <table>
   <tr style="border:none">
     <td width="300">
