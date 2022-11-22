@@ -17,7 +17,7 @@
 <table>
   <tr>
     <td>
-      <img src ="https://github.com/uwspstar/FullStack/blob/master/Img/101_Data_is_Represented.png" />
+      <img src ="https://github.com/uwspstar/FullStack/blob/master/Img/101_Data_is_Represented.png" alt="Data_is_Represented" width="100%"/>
     </td>
     <td>
       <p>computer can only understand binary numbers i.e. 0’s and 1’s. So, the letter A is represented in the computer as 8 bits i.e. 01000001 (65 is the ASCII Value is A and hence the decimal number 65 is converted to its binary equivalent binary representation which is 01000001).<p>
