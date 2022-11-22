@@ -30,6 +30,12 @@
   </tr>
 </table>
 
+<style>
+td, th {
+    border: 0px solid grey
+}
+</style>
+
 ## Value types
 
 - all these data types is going to be a `struct`. And `struct` is a value type in C#
