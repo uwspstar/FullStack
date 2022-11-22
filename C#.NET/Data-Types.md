@@ -19,11 +19,13 @@
     <td width="300">
       <img src ="https://github.com/uwspstar/FullStack/blob/master/Img/101_Data_is_Represented.png" alt="Data_is_Represented" width="100%"/>
     </td>
-    <td>
-      <p>computer can only understand binary numbers i.e. 0’s and 1’s. So, the letter A is represented in the computer as 8 bits i.e. 01000001 (65 is the ASCII Value is A and hence the decimal number 65 is converted to its binary equivalent binary representation which is 01000001).<p>
-      <p>the 0’s and 1’s are called `bits`.</p>
-      <p>to store any data on the computer we need this 8-bit format. And this complete 8-bit is called a `Byte`.</p>
-      <p>then, to convert binary to decimal format, and internally the computer will map the decimal format to byte format (binary format), and then by using the byte we can represent the data. So, you can observe the byte representation of decimal number 65 is 01000001.</p>
+    <td style="vertical-align:top">
+      <ul>
+        <li>computer can only understand binary numbers i.e. 0’s and 1’s. So, the letter A is represented in the computer as 8 bits i.e. 01000001 (65 is the ASCII Value is A and hence the decimal number 65 is converted to its binary equivalent binary representation which is 01000001).</li>
+        <li>the 0’s and 1’s are called `bits`.</li>
+        <li>o store any data on the computer we need this 8-bit format. And this complete 8-bit is called a `Byte`.</li>
+        <li>then, to convert binary to decimal format, and internally the computer will map the decimal format to byte format (binary format), and then by using the byte we can represent the data. So, you can observe the byte representation of decimal number 65 is 01000001.</li>
+      </ul>
     </td>
   </tr>
 </table>
