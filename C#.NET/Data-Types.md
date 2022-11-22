@@ -16,7 +16,7 @@
 
 <table>
 <tr>
-<td>![101_Data_is_Represented](/Img/101_Data_is_Represented.png)<td>
+<td>![101_Data_is_Represented](/Img/101_Data_is_Represented.png)</td>
 <td>
   <p>computer can only understand binary numbers i.e. 0’s and 1’s. So, the letter A is represented in the computer as 8 bits i.e. 01000001 (65 is the ASCII Value is A and hence the decimal number 65 is converted to its binary equivalent binary representation which is 01000001).<p>
   <p>the 0’s and 1’s are called `bits`.</p>
