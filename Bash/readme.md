@@ -2,9 +2,11 @@
 
 ## Reference
 
-- <https://www.freecodecamp.org/news/the-linux-commands-handbook/>
+- The Linux Command Handbook <https://www.freecodecamp.org/news/the-linux-commands-handbook/>
 
-- <https://linuxhint.com/3hr_bash_tutorial/>
+- 3 Hour Bash Tutorial <https://linuxhint.com/3hr_bash_tutorial/>
+
+- Shell 编程快速入门 <https://www.runoob.com/w3cnote/shell-quick-start.html>
 
 ## Basic Commands
 
@@ -74,3 +76,29 @@ fi
 
 - make sure to have space after `[` and before `]`
 - `if [ $count -eq 10 ]` is a condition that checks whether the value of the count variable is equals to 10 or not.
+
+```bash
+#! /bin/bash
+
+age=10
+if [ "$age" -gt 18 ] && [ "$age" -lt 40 ]
+then
+    echo "age is correct"
+else
+    echo "age is not correct"
+fi
+```
+
+```bash
+#! /bin/bash
+
+age=30
+if [ "$age" -gt 18 -o "$age" -lt 40 ]
+then
+    echo "age is correct"
+else
+    echo "age is not correct"
+fi
+```
+
+## Loops
