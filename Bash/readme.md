@@ -31,6 +31,20 @@ if [ $count -eq 10 ]
 then
     echo "the condition is true"
 fi
+
+if [ $count -eq 9 ]
+then
+    echo "the condition is true"
+ else
+    echo "the condition is false"
+fi
+
+if (( $count > 9 ))
+then
+    echo "the condition is true"
+ else
+    echo "the condition is false"
+fi
 ```
 
 - `if [ $count -eq 10 ]` is a condition that checks whether the value of the count variable is equals to 10 or not.
