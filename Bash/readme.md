@@ -7,6 +7,7 @@
 - 3 Hour Bash Tutorial <https://linuxhint.com/3hr_bash_tutorial/>
 
 - Shell 编程快速入门 <https://www.runoob.com/w3cnote/shell-quick-start.html>
+- 《Linux就该这么学》 <https://www.linuxprobe.com/> <https://www.youtube.com/playlist?list=PLaMM3KFoB3JFtZctaR8HDaKQz9hqQQC92>
 
 ## Basic Commands
 
