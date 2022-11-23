@@ -72,5 +72,5 @@ if (( $count > 9 ))
 fi
 ```
 
-- make sure has space after `[` and before `]`
+- make sure to have space after `[` and before `]`
 - `if [ $count -eq 10 ]` is a condition that checks whether the value of the count variable is equals to 10 or not.
