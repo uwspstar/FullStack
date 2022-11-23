@@ -57,4 +57,20 @@ then
 fi
 ```
 
+```bash
+#! /bin/bash
+
+count=10
+if (( $count > 9 ))
+ then
+    echo "the first condition is true"
+ elif (( $count <= 9 ))
+ then
+    echo "then second condition is true"
+ else
+    echo "the condition is false"
+fi
+```
+
+- make sure has space after `[` and before `]`
 - `if [ $count -eq 10 ]` is a condition that checks whether the value of the count variable is equals to 10 or not.
