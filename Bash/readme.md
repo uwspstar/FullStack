@@ -31,14 +31,24 @@ if [ $count -eq 10 ]
 then
     echo "the condition is true"
 fi
+```
 
+```bash
+#! /bin/bash
+
+count=10
 if [ $count -eq 9 ]
 then
     echo "the condition is true"
  else
     echo "the condition is false"
 fi
+```
 
+```bash
+#! /bin/bash
+
+count=10
 if (( $count > 9 ))
 then
     echo "the condition is true"
