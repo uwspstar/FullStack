@@ -11,7 +11,7 @@
 NO. |Command                            |NOTEs
 ----|-----------------------------------|--------------------------------------------------------------------------
 1   |mkdir my_folder                    |to create a folder `my_folder`
-2   |cd my_folder                       |inside the folder `my_folder`
+2   |cd my_folder                       |navigate inside the folder `my_folder`
 3   |touch hello.sh                     |to create a file hello.sh
 5   |#! /bin/bash                       |add `#! /bin/bash` inside hello.sh on top
 6   |chmod +x hello.sh                  |to make this script hello.sh file executable permission
