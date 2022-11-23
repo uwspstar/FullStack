@@ -104,6 +104,8 @@ fi
 
 ## Loops
 
+- `while` loop
+
 ```bash
 #! /bin/bash
 
@@ -114,3 +116,57 @@ do
     number=$(( number+1 ))
 done
 ```
+
+- `until` loop
+
+```bash
+#! /bin/bash
+
+number=1
+until [ $number -ge 10 ]
+do
+    echo "$number"
+    number=$(( number+1 ))
+done
+```
+
+- `for` loop
+
+```bash
+#! /bin/bash
+ for (( i=0; i<5; i++ ))
+
+ do
+    echo $i
+ done
+ ```
+
+## Break and continue statement
+
+```bash
+#! /bin/bash
+
+ for (( i=0; i<=10; i++ ))
+ do
+    if [ $i -gt 5 ]
+    then
+    break
+    fi
+    echo $i
+ done
+```
+
+```bash
+#! /bin/bash
+
+ for (( i=0; i<=10; i++ ))
+ do
+    if [ $i -eq 3 ] || [  $i -eq 7 ]
+    then
+    continue
+    fi
+    echo $i
+ done
+ ```
+
+## Script input
