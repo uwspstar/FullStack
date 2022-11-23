@@ -20,3 +20,17 @@ NO.     |Command                            |NOTEs
 9       |cat >> file.txt                    |to capture the output from the shell and append to file.txt
 10      |# this is comment                  |to comment single line with `#`
 11      |:' this is comment'                |to comment multiple lines with `:'comments lines'`
+
+## Conditional Statements
+
+```bash
+#! /bin/bash
+
+count=10
+if [ $count -eq 10 ]
+then
+    echo "the condition is true"
+fi
+```
+
+- `if [ $count -eq 10 ]` is a condition that checks whether the value of the count variable is equals to 10 or not.
