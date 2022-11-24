@@ -29,6 +29,7 @@ NO.     |Command                            |NOTEs
 16      |${st1^}                            |lowercase, `echo ${st1^}`
 17      |${st2^^}                           |uppercase, `echo ${st2^^}`
 18      |${st1^l}                           |for capitalizing the first letter, `echo ${st1^l}`
+19      |$((  n1 + n2 ))                    |plus
 
 ## Conditional Statements
 
@@ -284,4 +285,29 @@ echo $c
 echo ${st1^} #for lowercase
 echo ${st2^^} #for uppercase
 echo ${st1^l} #for capitalizing the first letter
+```
+
+## math
+
+```bash
+#! /bin/bash
+n1=20
+n2=4
+
+echo $(( n1 + n2 ))
+echo $(( n1 - n2 ))
+echo $(( n1 * n2 ))
+echo $(( n1 / n2 ))
+echo $(( n1 % n2 ))
+```
+
+## Converting hexadecimal into decimal
+
+```bash
+#! /bin/bash
+
+echo "Enter Hex number of your choice"
+read Hex
+echo -n "The decimal value of $Hex is : "
+echo "obase=10; ibase=16; $Hex" | bc
 ```
