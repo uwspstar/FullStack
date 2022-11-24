@@ -28,6 +28,7 @@ NO.     |Command                            |NOTEs
 15      |c=$st1$st2                         |Concatenation, `echo $c`
 16      |${st1^}                            |lowercase, `echo ${st1^}`
 17      |${st2^^}                           |uppercase, `echo ${st2^^}`
+18      |${st1^l}                           |for capitalizing the first letter, `echo ${st1^l}`
 
 ## Conditional Statements
 
@@ -282,4 +283,5 @@ echo $c
 
 echo ${st1^} #for lowercase
 echo ${st2^^} #for uppercase
+echo ${st1^l} #for capitalizing the first letter
 ```
