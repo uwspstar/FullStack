@@ -30,6 +30,7 @@ NO.     |Command                            |NOTEs
 17      |${st2^^}                           |uppercase, `echo ${st2^^}`
 18      |${st1^l}                           |for capitalizing the first letter, `echo ${st1^l}`
 19      |$((  n1 + n2 ))                    |plus
+20      |car=('BMW' 'TOYOTA' 'HONDA')       |array
 
 ## Conditional Statements
 
@@ -318,4 +319,12 @@ echo "obase=10; ibase=16; $Hex" | bc
 #! /bin/bash
 declare -r pwdfile=/etc/passwd
 echo $pwdfile
-111
+```
+
+## Arrays
+
+```bash
+#! /bin/bash
+car=('BMW' 'TOYOTA' 'HONDA')
+echo "${car[@]}"
+```
