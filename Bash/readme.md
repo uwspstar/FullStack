@@ -311,3 +311,11 @@ read Hex
 echo -n "The decimal value of $Hex is : "
 echo "obase=10; ibase=16; $Hex" | bc
 ```
+
+## Declare (read only) command
+
+```bash
+#! /bin/bash
+declare -r pwdfile=/etc/passwd
+echo $pwdfile
+111
