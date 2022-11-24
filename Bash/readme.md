@@ -5,7 +5,7 @@
 - 3 Hour Bash Tutorial <https://linuxhint.com/3hr_bash_tutorial/>
 - The Linux Command Handbook <https://www.freecodecamp.org/news/the-linux-commands-handbook/>
 - Shell 编程快速入门 <https://www.runoob.com/w3cnote/shell-quick-start.html>
-- 《Linux就该这么学》 <https://www.linuxprobe.com/> 
+- 《Linux就该这么学》 <https://www.linuxprobe.com/>
 - <https://www.youtube.com/playlist?list=PLaMM3KFoB3JFtZctaR8HDaKQz9hqQQC92>
 
 ## Basic Commands
@@ -22,6 +22,12 @@ NO.     |Command                            |NOTEs
 9       |cat >> file.txt                    |to capture the output from the shell and append to file.txt
 10      |# this is comment                  |to comment single line with `#`
 11      |:' this is comment'                |to comment multiple lines with `:'comments lines'`
+12      |test.sh Untitled\ Document\ 1      |treat as one input `Untitled Document 1`
+13      |test.sh Untitled Document 1        |treat as 3 input `Untitled` , `Document`,  `1`
+14      |ls -al 1>file1.txt 2>file2.txt     |`1` represents the standard output and `2` represents the standard error
+15      |c=$st1$st2                         |Concatenation, `echo $c`
+16      |${st1^}                            |lowercase, `echo ${st1^}`
+17      |${st2^^}                           |uppercase, `echo ${st2^^}`
 
 ## Conditional Statements
 
@@ -168,4 +174,112 @@ done
  done
  ```
 
-## Script input
+## Script input (STDIN)
+
+```bash
+#! /bin/bash
+ echo $1 $2 $3
+ ```
+
+- $1 $2 $3 is 3 script file parameters
+
+```bash
+#! /bin/bash
+ echo $0 $1 $2 $3
+ ```
+
+- $0 will print the script name
+
+```bash
+#! /bin/bash
+
+ args=("$@") #you can also specify the array size here
+ # echo ${args[0]} ${args[1]} ${args[2]}
+echo $@   #prints all the array elements
+echo $#   #print the array size
+ ```
+
+- $@ unlimited input
+- $# array size
+
+## Reading file using stdin
+
+```bash
+#! /bin/bash
+
+while read line
+do
+    echo "$line"   
+done < "${1:-/dev/stdin}"
+```
+
+## Script output (STDOUT, STDERR)
+
+```bash
+#! /bin/bash
+
+ls -al 1>file1.txt 2>file2.txt
+```
+
+- `ls -al 1>file1.txt 2>file2.txt`, 1 represents the standard output and 2 represents the standard error
+
+```bash
+#! /bin/bash
+
+ls -al >file1.txt 2>&1
+# ls -al >&file1.txt
+```
+
+- use a single file for storing standard output and standard output
+
+## send output from one to another (pipe | )
+
+```bash
+#! /bin/bash
+
+MESSAGE="Hello LinuxHint Audience"
+export MESSAGE
+./secondScript.sh
+```
+
+```bash
+#! /bin/bash
+
+echo "the message from helloScript is: $MESSAGE"
+```
+
+```bash
+chmod +x ./secondScript.sh
+```
+
+- This script will export the value stored in the `MESSAGE` variable which is essential “Hello LinuxHint Audience” to ‘secondScript.sh’.
+
+## Strings processing
+
+```bash
+#! /bin/bash
+echo "enter Ist string"
+read st1
+echo "enter 2nd string"
+read st2
+
+if [ "$st1" == "$st2" ]
+then
+    echo "strings match"
+else
+    echo "strings don't match"
+fi
+
+if [ "$st1" \ "$st2" ]
+then
+    echo "Second string $st2 is smaller than $st1"
+else
+    echo "strings are equal"   
+fi
+
+c=$st1$st2 #Concatenation
+echo $c
+
+echo ${st1^} #for lowercase
+echo ${st2^^} #for uppercase
+```
