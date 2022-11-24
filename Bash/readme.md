@@ -325,6 +325,27 @@ echo $pwdfile
 
 ```bash
 #! /bin/bash
+#! /bin/bash
 car=('BMW' 'TOYOTA' 'HONDA')
 echo "${car[@]}"
+echo "printing value using index"
+echo "${car[0]}"
+echo "${car[1]}"
+echo "${car[2]}"
+echo "printing the indexes"
+echo "${!car[@]}"
+echo "printing number of values"
+echo "${#car[@]}"
+```
+
+```bash
+#! /bin/bash
+car=('BMW' 'TOYOTA' 'HONDA' 'ROVER')
+unset car[2] # delete an array element
+car[2]='MERCEDES' # store any other value
+echo "${car[@]}"
+echo "printing  the indexes"
+echo "${!car[@]}"
+echo "printing number of values"
+echo "${#car[@]}"
 ```
