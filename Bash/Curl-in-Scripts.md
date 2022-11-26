@@ -36,6 +36,16 @@ curl -u username ftp://127.0.0.1/hello.txt
 curl -u username:password https://127.0.0.1/
 ```
 
+### `-d` 选项，带请求参数的连接。比如下面的URL，user=xiaoruan&age=22就是所带的参数。crul可以带请求参数
+
+```html
+http://127.0.0.1/index.html?user=xw&age=90
+```
+
+```bash
+curl -d 'user=user=xw&age=90' http://127.0.0.1/index.html
+```
+
 ## basic command
 
 Command                              |NOTEs
