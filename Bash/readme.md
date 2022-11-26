@@ -4,6 +4,7 @@
 
 - 3 Hour Bash Tutorial <https://linuxhint.com/3hr_bash_tutorial/>
 - The Linux Command Handbook <https://www.freecodecamp.org/news/the-linux-commands-handbook/>
+- curl 的用法指南<https://www.ruanyifeng.com/blog/2019/09/curl-reference.html>
 - 《Linux就该这么学》 <https://www.linuxprobe.com/>
 - <https://www.youtube.com/playlist?list=PLaMM3KFoB3JFtZctaR8HDaKQz9hqQQC92>
 
@@ -484,23 +485,4 @@ From:test@gmail.com
 Cc:test@gmail.com
 Subject:test@gmail.com
 This is body
-```
-
-## Curl in Scripts
-
-- install
-
-```bash
-sudo apt install curl
-```
-
-```bash
-#! /bin/bash
-url="http://www.ovh.net/files/1Mb.dat"
-curl ${url} -O
-# ‘-O’ indicated that it will inherit its file name from its source.
-curl ${url} -o NewFileDownload
-# ‘-o’ flag and after that write the new file name
-curl -I ${url}
-# ‘-I’ before the url of the file.
 ```
