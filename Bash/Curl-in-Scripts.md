@@ -6,6 +6,7 @@
 
 - <https://www.ruanyifeng.com/blog/2011/09/curl.html>
 - <https://blog.csdn.net/deliciousion/article/details/78062521>
+- <https://blog.csdn.net/wuhuagu_wuhuaguo/article/details/90764856#t1>
 - <https://www.cnblogs.com/duhuo/p/5695256.html>
 - 3 Hour Bash Tutorial <https://linuxhint.com/3hr_bash_tutorial/>
 - <https://curl.se/docs/httpscripting.html>
@@ -13,7 +14,44 @@
 
 ## man curl
 
-## Most common
+## 最常用的curl命令
+
+### 发送GET请求
+
+```bash
+curl www.google.com?a=1&b=test
+```
+
+### 发送POST请求
+
+```bash
+curl -X POST -d 'a=1&b=test' www.google.com
+```
+
+### 发送json格式请求
+
+```bash
+curl -H "Content-Type: application/json" -X POST -d '{"abc":123,"bcd":"test"}' www.google.com
+curl -H "Content-Type: application/json" -X POST -d @test.json www.google.com
+```
+
+### `-H`代表header头，`-X`是指定什么类型请求(`POST/GET/HEAD/DELETE/PUT/PATCH`)，`-d`代表传输什么数据。这几个是最常用的。
+
+### 查看所有curl命令： `man curl`或者`curl -h`
+
+### 请求头：`H,A,e`
+
+### 响应头：`I,i,D`
+
+### cookie：`b,c,j`
+
+### 传输：`F(POST),G(GET),T(PUT),X`
+
+### 输出：`o,O,w`
+
+### 断点续传：`r`
+
+### 调试：`v,--trace,--trace-ascii,--trace-time`
 
 ### `-v` 选项，`--verbose`，指定该选项后，可以跟踪URL的连接信息。我们可以根据这个选项看看curl是怎么工作的
 
@@ -44,6 +82,15 @@ http://127.0.0.1/index.html?user=xw&age=90
 
 ```bash
 curl -d 'user=user=xw&age=90' http://127.0.0.1/index.html
+```
+
+### `-X` 选项，指定请求方式，我们只能URL可以有多种请求方式，最常见的是`GET`和`POST`，但请求的方式，包括`GET`、`PUT`、`POST`、`DELETE`四种方式
+
+```bash
+curl -XGET www.google.com
+curl -XPOST www.google.com
+curl -XDELETE www.google.com
+curl -XPUT www.google.co
 ```
 
 ## basic command
