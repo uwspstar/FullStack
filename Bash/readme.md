@@ -218,13 +218,15 @@ done < "${1:-/dev/stdin}"
 
 ## Script output (STDOUT, STDERR)
 
+- `ls -al 1>file1.txt 2>file2.txt`, 1 represents the standard output and 2 represents the standard error
+
 ```bash
 #! /bin/bash
 
 ls -al 1>file1.txt 2>file2.txt
 ```
 
-- `ls -al 1>file1.txt 2>file2.txt`, 1 represents the standard output and 2 represents the standard error
+- use a single file for storing standard output and standard output
 
 ```bash
 #! /bin/bash
@@ -232,8 +234,6 @@ ls -al 1>file1.txt 2>file2.txt
 ls -al >file1.txt 2>&1
 # ls -al >&file1.txt
 ```
-
-- use a single file for storing standard output and standard output
 
 ## send output from one to another (pipe | )
 
@@ -245,6 +245,8 @@ export MESSAGE
 ./secondScript.sh
 ```
 
+- This script will export the value stored in the `MESSAGE` variable which is essential “Hello LinuxHint Audience” to ‘secondScript.sh’.
+
 ```bash
 #! /bin/bash
 
@@ -254,8 +256,6 @@ echo "the message from helloScript is: $MESSAGE"
 ```bash
 chmod +x ./secondScript.sh
 ```
-
-- This script will export the value stored in the `MESSAGE` variable which is essential “Hello LinuxHint Audience” to ‘secondScript.sh’.
 
 ## Strings processing
 
@@ -349,3 +349,142 @@ echo "${!car[@]}"
 echo "printing number of values"
 echo "${#car[@]}"
 ```
+
+## function
+
+```bash
+#! /bin/bash
+function funcPrint()
+{
+    echo $1 $2 $3 $4
+}
+funcPrint Hi This is func
+```
+
+## Files and Directories
+
+- create files and directories
+
+```bash
+#! /bin/bash
+mkdir -p Directory2
+```
+
+- how to check the existence of these files and directories using a scrip
+
+```bash
+#! /bin/bash
+
+echo "enter directory name to check"
+read direct
+
+if [ -d "$direct" ]
+then
+    echo "$direct exists"
+else
+    echo "$direct doesn't exist"
+fi
+
+
+echo "enter file name to check"
+read fileName
+
+if [ -f "$fileName" ]
+then
+    echo "$fileName exists"
+else
+    echo "$fileName doesn't exist"
+fi
+
+```
+
+- reading text from the files line by line and append text in the files and last thing
+
+```bash
+#! /bin/bash
+
+echo "enter file name in which you want to append text"
+read fileName
+
+if [ -f "$fileName" ]
+then
+    echo "enter the text you want to append"
+    read fileText
+    echo "$fileText" >> $fileName
+else
+    echo "$fileName doesn't exist"
+fi
+
+echo "enter file name from which you want to read"
+read fileName
+
+if [ -f "$fileName" ]
+then
+    while IFS= read -r line
+    do
+        echo "$line"
+    done < $fileName
+else
+    echo "$fileName doesn't exist"
+fi
+
+```
+
+- how to delete a file
+
+```bash
+echo "enter file name from which you want to delete"
+read fileName
+
+if [ -f "$fileName" ]
+then
+    rm $fileName
+else
+    echo "$fileName doesn't exist"
+fi
+```
+
+## Sending email via script
+
+- install ssmtp
+
+```bash
+sudo apt install ssmtp
+```
+
+- edit the configuration file
+
+```bash
+$ gedit /etc/ssmtp/ssmtp.conf
+# or $ sudo -H gedit /etc/ssmtp/ssmtp.conf
+```
+
+- inside config file
+
+```text
+root=test@gmail.com
+mailhub=smtp.gmail.com:587
+AuthUser=test@gmail.com
+AuthPass= (here you can give the password of your email)
+UseSTARTTLS=yes
+```
+
+- create a script
+
+```bash
+#! /bin/bash
+ssmtp testingm731@gmail.com
+```
+
+- sent email
+
+```bash
+$ ./helloScript.sh
+To:test@gmail.com
+From:test@gmail.com
+Cc:test@gmail.com
+Subject:test@gmail.com
+This is body
+```
+
+## Curl in Scripts
