@@ -1,8 +1,11 @@
 # Curl in Scripts
 
+- Curl: 全称CommandLine URL 或 CommandLine Uniform Resource Locator，顾名思义，curl命令是在命令行方式下工作，利用URL的语法进行数据的传输或者文件的传输。
+
 ## Reference
 
 - <https://www.ruanyifeng.com/blog/2011/09/curl.html>
+- <https://blog.csdn.net/deliciousion/article/details/78062521>
 - <https://www.cnblogs.com/duhuo/p/5695256.html>
 - 3 Hour Bash Tutorial <https://linuxhint.com/3hr_bash_tutorial/>
 - <https://curl.se/docs/httpscripting.html>
@@ -10,8 +13,33 @@
 
 ## man curl
 
-Command                            |NOTEs
------------------------------------|--------------------------------------------------------------------------
+## Most common
+
+### `-v` 选项，`--verbose`，指定该选项后，可以跟踪URL的连接信息。我们可以根据这个选项看看curl是怎么工作的
+
+```bash
+curl -v www.google.com
+```
+
+### `-i` 选项，`--include`，把回应的头信息包含在内，跟-v大同小异，是-v的子集。`-I`（大写i）选项，`--head`，只显示返回的头信息，与-v大同小异，是-v的子集
+
+```bash
+curl -i www.google.com
+curl -I www.google.com
+```
+
+### `-u` 选项，带用户验证的连接。可以访问或获取带用户验证的URL
+
+```bash
+curl -u username:password ftp://127.0.0.1/hello.txt
+curl -u username ftp://127.0.0.1/hello.txt
+curl -u username:password https://127.0.0.1/
+```
+
+## basic command
+
+Command                              |NOTEs
+-------------------------------------|--------------------------------------------------------------------------
 `-A/--user-agent <string>`           |设置用户代理发送给服务器
 `-b/--cookie <name=string/file>`     |cookie字符串或文件读取位置
 `-c/--cookie-jar <file>`             |操作结束后把cookie写入到这个文件中
@@ -25,6 +53,7 @@ Command                            |NOTEs
 `-s/--silent`                        |静音模式。不输出任何东西
 `-T/--upload-file <file>`            |上传文件
 `-u/--user <user[:password]>`        |设置服务器的用户和密码
+`-v 选项，--verbose`                  |指定该选项后，可以跟踪URL的连接信息。我们可以根据这个选项看看curl是怎么工作的。
 `-w/--write-out [format]`            |什么输出完成后
 `-x/--proxy <host[:port]>`           |在给定的端口上使用HTTP代理
 `-#/--progress-bar`                  |进度条显示当前的传送状态
