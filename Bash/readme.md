@@ -488,3 +488,20 @@ This is body
 ```
 
 ## Curl in Scripts
+
+- install
+
+```bash
+sudo apt install curl
+```
+
+```bash
+#! /bin/bash
+url="http://www.ovh.net/files/1Mb.dat"
+curl ${url} -O
+# ‘-O’ indicated that it will inherit its file name from its source.
+curl ${url} -o NewFileDownload
+# ‘-o’ flag and after that write the new file name
+curl -I ${url}
+# ‘-I’ before the url of the file.
+```
