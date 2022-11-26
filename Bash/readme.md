@@ -473,7 +473,7 @@ UseSTARTTLS=yes
 
 ```bash
 #! /bin/bash
-ssmtp testingm731@gmail.com
+ssmtp test@gmail.com
 ```
 
 - sent email
