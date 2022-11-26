@@ -244,6 +244,3 @@ curl --header "Content-Type:application/json" http://example.com
 ```bash
 curl --user name:password example.com
 ```
-
-```bash
-```
