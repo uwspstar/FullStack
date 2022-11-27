@@ -62,7 +62,7 @@
   
   - `Machine Language` : is the fundamental language (binary of 1’s and 0’s) for the system and it can be directly understandable without any translation.
   
-  - `Assembly language` : is a programming language (Symbolic Language) but that is a low-level programming language. The assembly language contains some human-readable commands such as mov, add, mul, div, sub, etc. (a little easier to write and understand compare with `Machine Language`. Assembly code is not faster than machine code)
+  - `Assembly language` : is a programming language (Symbolic Language) but that is a low-level programming language. The assembly language contains some human-readable commands such as `mov, add, mul, div, sub`, etc. (a little easier to write and understand compare with `Machine Language`. Assembly code is slower than machine code)
 
 - `High-Level Programming Language` : Examples of High-Level Languages are C, C++, Java, Python, C#, Visual Basic, Visual C++, etc.
 
