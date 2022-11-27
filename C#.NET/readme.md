@@ -95,7 +95,9 @@
 
   - `Assembler` : It is the system software that converts assembly language instructions into binary formats.
 
-- `Compiler` and `interpreter` are both used to convert `high-level programs` to machine code. `Assembler` is used to convert `low-level` programs to machine code
+- `Compiler` and `interpreter` are both used to convert `high-level programs` to machine code.
+
+- `Assembler` is used to convert `low-level` programs to machine code
 
 | Compiler                                                          |      Interpreter                                                  |
 |-------------------------------------------------------------------|:-----------------------------------------------------------------:|
