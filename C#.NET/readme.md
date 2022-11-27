@@ -181,7 +181,9 @@ executed anywhere.
 
 - read more <https://dotnettutorials.net/lesson/net-framework-architecture-and-components/>
 
-- The `two major components` of the .NET Framework are the `Common Language Runtime (CLR)` and the `Base Class Library (BCL)`.
+- The `two major components` of the .NET Framework are
+  - the `Common Language Runtime (CLR)`
+  - and the `Base Class Library (BCL)`.
 
 ## Source Code -> Compiler -> CIL -> CLR -> Machine Code
 
