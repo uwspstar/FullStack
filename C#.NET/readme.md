@@ -245,7 +245,7 @@ executed anywhere.
 
 - read more <https://dotnettutorials.net/lesson/basic-structure-of-csharp-program/>
 
-- `Using`: is a keyword. Using this keyword, we can refer to .NET `BCL` in C# Applications i.e. including the `BCL` namespaces as well as we can also include user-defined namespaces that we will discuss as we progress in this course
+- `using`: is a keyword. Using this keyword, we can refer to .NET `BCL` in C# Applications i.e. including the `BCL` namespaces as well as we can also include user-defined namespaces that we will discuss as we progress in this course
 
 ## C# keywords
 
