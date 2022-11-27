@@ -1,4 +1,4 @@
-# C# 101
+# `C# 101 | Relearn C#`
 
 ## Reference
 
@@ -7,6 +7,10 @@
 - <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions>
 - <https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs>
 - <https://www.cnblogs.com/aoximin/category/1802312.html>
+
+## Good Software
+
+- is one that is `Testable`, `Maintainable`, `Reusable`, `Flexible`, and `Efficient`.
 
 ## How Does Computer Work
 
