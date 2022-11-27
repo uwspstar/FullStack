@@ -224,7 +224,7 @@ executed anywhere.
 
 - `Entity Framework`: It is an `ORM-based` open-source framework
 
-- `Parallel LINQ`: `Parallel LINQ` or `PLINQ `is a parallel implementation of LINQ to objects.
+- `Parallel LINQ`: `Parallel LINQ` or `PLINQ`is a parallel implementation of LINQ to objects.
 
 - `WCF (Windows Communication Foundation)`: It is a framework for building service-oriented applications. Using `WCF`, you can send data as asynchronous messages from one service endpoint to another.
 
@@ -283,6 +283,10 @@ executed anywhere.
 - Because of the limited use of data types, we lose in terms of optimization and performance.
 
 ## Async and Await
+
+- <https://learn.microsoft.com/en-us/dotnet/csharp/programming-guide/concepts/async/>
+
+- <https://stackoverflow.com/questions/14455293/how-and-when-to-use-async-and-await>
 
 - read summary <https://github.com/uwspstar/FullStack/blob/master/C%23.NET/Async-and-Await.md>
 
