@@ -1,6 +1,7 @@
 # Data Types
 
-- read more <https://dotnettutorials.net/lesson/data-types-in-csharp/https://dotnettutorials.net/lesson/data-types-in-csharp/>
+- read more <https://dotnettutorials.net/lesson/data-types-in-csharp/>
+- <https://dotnettutorials.net/lesson/data-types-in-csharp/>
 
 - `Value types`: read more <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types>
 
