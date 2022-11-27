@@ -210,9 +210,9 @@ executed anywhere.
 
 - `source code` to `MSIL` : In the 1st compilation, the `source code` is compiled by the respective language compiler and generates the intermediate code which is known as `MSIL` ( Microsoft Intermediate Language) or IL (Intermediate language code), or Managed Code.
 
-- `MSIL` to `Native code` : In the 2nd compilation, `MSIL` is converted into `Native code` (native code means code specific to the Operating system so that the code is executed by the Operating System) and this is done by CLR.
+- `MSIL` to `Native code` : In the 2nd compilation, `MSIL` is converted into `Native code` (native code means code specific to the Operating system so that the code is executed by the Operating System) and this is done by `CLR`.
 
-- Always 1st compilation (`source code` to `MSIL`) is slow and 2nd compilation (`MSIL` is converted into `Native code`) is fast.
+- Always 1st compilation (`source code` to `MSIL`) is `slow` and 2nd compilation (`MSIL` is converted into `Native code`) is `fast`.
 
 ## Applications Developed using .NET Framework
 
@@ -222,9 +222,9 @@ executed anywhere.
 
 - `ADO.NET`: This technology is used to develop applications to interact with databases such as Oracle or Microsoft SQL Server.
 
-- `Entity Framework`: It is an ORM-based open-source framework
+- `Entity Framework`: It is an `ORM-based` open-source framework
 
-- `Parallel LINQ`: Parallel LINQ or PLINQ is a parallel implementation of LINQ to objects.
+- `Parallel LINQ`: `Parallel LINQ` or `PLINQ `is a parallel implementation of LINQ to objects.
 
 - `WCF (Windows Communication Foundation)`: It is a framework for building service-oriented applications. Using `WCF`, you can send data as asynchronous messages from one service endpoint to another.
 
