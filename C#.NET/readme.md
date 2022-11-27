@@ -10,7 +10,7 @@
 
 ## Good Software
 
-- is one that is `Testable`, `Maintainable`, `Reusable`, `Flexible`, and `Efficient`.
+- is `Testable`, `Maintainable`, `Reusable`, `Flexible`, and `Efficient`.
 
 ## How Does Computer Work
 
