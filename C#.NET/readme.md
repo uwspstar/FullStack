@@ -271,7 +271,7 @@ executed anywhere.
 
 - read more <https://dotnettutorials.net/lesson/data-types-in-csharp/https://dotnettutorials.net/lesson/data-types-in-csharp/>
 
-- `Value types`: The data type which stores the value directly in the memory is called the Value Data Type in C#.
+- `Value types`: The data type which stores the `value directly in the memory` is called the Value Data Type in C#.
 - read more <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/builtin-types/value-types>
 
 - `Reference types`: read more <https://learn.microsoft.com/en-us/dotnet/csharp/language-reference/keywords/reference-types>
