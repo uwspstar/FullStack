@@ -8,8 +8,6 @@
 
 - `Pointer Data Types`
 
-- read summary <https://github.com/uwspstar/FullStack/blob/master/C%23.NET/Data-Types.md>
-
 - Because of the limited use of data types, we lose in terms of optimization and performance.
 
 ## How Data is Represented in a Computer?
