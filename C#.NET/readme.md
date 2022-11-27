@@ -105,7 +105,7 @@
 | takes time to analyze the program. But execution time is faster   | translation time is faster but overall execution time is slower.  |
 | generates intermediate code called object code                    | MO object code                                                    |
 
-- `loader` : is a program that loads the machine codes of a program into system memory.
+- `loader` : is a program that loads the machine codes of a program into `system memory`.
 
 - `locator` : is a program that assigns specific memory addresses for each machine code of a program that is to be loaded into system memory.
 
@@ -153,7 +153,7 @@
 
 - Using `COM` Framework, we can develop Windows Applications and Web Applications.
 
-- In earlier `COM`, VB is the programming language that is used to implement Windows applications and ASP is the technology used to implement web applications.
+- In earlier `COM`, `VB` is the programming language that is used to implement Windows applications and ASP is the technology used to implement web applications.
 executed anywhere.
 
 ## Framework
@@ -171,7 +171,7 @@ executed anywhere.
 
 - `NET (Network Enabled Technology (Internet))`.
 
-- In `.NET`, dot (.) refers to Object-Oriented, and NET refers to the internet. So, the complete `.NET` means through Object-Oriented we can implement internet-based applications.
+- In `.NET`, dot (.) refers to `Object-Oriented`, and `NET` refers to the `internet`. So, the complete `.NET` means through `Object-Oriented` we can implement `internet-based applications`.
 
 - `NuGet` is a package manager built specifically for .NET that contains over 100,000 packages.
 
