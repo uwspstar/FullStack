@@ -1,5 +1,7 @@
 # Git
 
+## Reference
+
 - Understanding Git - Paolo Perrotta <https://www.youtube.com/watch?v=nHkLxts9Mu4>
 
 - Mastering Git <https://app.pluralsight.com/library/courses/mastering-git/table-of-contents>
@@ -28,10 +30,10 @@
 
 ## Git object
 
-- blob : contains content
-- tree : contains tree or blob
-- commit
-- tag
+- `blob` : contains content
+- `tree` : contains tree or blob
+- `commit`
+- `tag`
 
 ## The 4 ares
 
@@ -39,8 +41,8 @@
 
 ## Git vs Github
 
-- Git is the most popular "version control system" - a tool to keep track of file changes over time.
-- GitHub is an online service that hosts git repositories for developers.
+- `Git` is the most popular "version control system" - a tool to keep track of file changes over time.
+- `GitHub` is an online service that hosts git repositories for developers.
 
 ## keys
 
