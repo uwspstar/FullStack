@@ -5,7 +5,7 @@
 ```bash
 # Before creating a new branch, pull the latest from master
 
-$ git branch master
+$ git branch <master_branch_name>
 
 $ git pull
 ```
@@ -13,7 +13,7 @@ $ git pull
 ## Push the branch on origin
 
 ```bash
-git push origin [name_of_your_new_branch]
+git push origin <name_of_your_new_branch>
 ```
 
 ## see all hidden branches
@@ -50,8 +50,8 @@ git merge [name_of_your_merge_branch]
 
 ```bash
 $ git branch -d [name_of_your_new_branch]
-To force the deletion of local branch on your filesystem :
 
+# To force the deletion of local branch on your filesystem :
 $ git branch -D [name_of_your_new_branch]
 ```
 
@@ -250,3 +250,14 @@ $ git revert <hash>
 
 $ git diff <hash1> <hash2>
 ```
+
+## git cherry pick
+
+## git rebase
+
+```bash
+git log -n 2
+git rebase -i  HEAD~2
+```
+
+## git use notepad++ as default open tool

@@ -37,7 +37,7 @@
 
 ## The 4 ares
 
-- stash--> working area --> index / stage --> repository
+- `stash`--> `working area` --> `index / stage` --> `repository`
 
 ## Git vs Github
 
@@ -82,7 +82,7 @@ git add .
 - add last file to stage
 
 ```bash
-git add filename
+git add <filename>
 ```
 
 - commit the change with the comment , ready for push
@@ -94,8 +94,8 @@ git commit -m "another test"
 - show log
 
 ```bash
-$ git log
-λ git log -n 2
+git log
+git log -n 2
 ```
 
 - show the commit info , ```(HEAD -> master)``` means the latest change
@@ -103,80 +103,80 @@ $ git log
 - the diff between 2 commits
 
 ```bash
-λ git diff 5eac20 2ea380d
+git diff <5eac2_comment_id_one> <2ea380d_comment_id_two>
 ```
 
 - current branch
 
 ```bash
-λ git branch
+git branch
 ```
 
 - create a new branch
 
 ```bash
-λ git branch branchnamePlay
+git branch <branchname_Play>
 ```
 
 - checkout the comment
 
 ```bash
-λ git checkout 5eac20
+git checkout <5eac20_comment_id>
 ```
 
 - switch back
 
 ```bash
-λ git switch -
+git switch -
 ```
 
 - ```stdin``` standard input
 
 ```bash
-λ echo "apple" | git hash-object --stdin
+$ echo "apple" | git hash-object --stdin
 89bdd812e4d7e3b665770f92c4a0c86b4d04094f
 ```
 
 - compare ```working area``` vs ```index```
 
 ```bash
-λ git diff
+git diff
 ```
 
 - compare ```index``` vs ```repository```
 
 ```bash
-λ git diff --cached
+git diff --cached
 ```
 
 - compare two branches , play and master
 
 ```bash
-λ git diff play master
+git diff <play_branch_one> <master_branch_two>
 ```
 
 - open file with notepadd++
 
 ```bash
-λ start notepad++ index.html
+start notepad++ <index.html>
 ```
 
 - remove file changes from index (stage)
 
 ```bash
-λ git restore --staged demo1.txt
+git restore --staged <demo1.txt>
 ```
 
 - ```git rm``` is NOT opposite of ```git add```
 - remove file from index, unstage file
 
 ```bash
-λ git rm demo1.txt
+$ git rm <demo1.txt>
 error: the following file has changes staged in the index:
     demo1.txt
 (use --cached to keep the file, or -f to force removal)
 
-λ git status
+$ git status
 On branch master
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
@@ -185,15 +185,14 @@ Changes to be committed:
 Untracked files:
   (use "git add <file>..." to include in what will be committed)
         demo1.txt
-        
 ```
 
 ## rename file
 
 ```bash
-λ mv demo1.txt demo.md
+$ mv demo1.txt demo.md
 
-λ git status
+$ git status
 On branch master
 Changes not staged for commit:
   (use "git add/rm <file>..." to update what will be committed)
@@ -206,22 +205,22 @@ Untracked files:
 
 no changes added to commit (use "git add" and/or "git commit -a")
 
-λ git add demo.md
-λ git add demo1.txt
+$ git add demo.md
+$ git add demo1.txt
 
-λ git status
+$ git status
 On branch master
 Changes to be committed:
   (use "git restore --staged <file>..." to unstage)
         renamed:    demo1.txt -> demo.md
 
-λ git commit -m "rename file"
+$ git commit -m "rename file"
 ```
 
 - see the hash content
 
 ```bash
-λ git cat-file p 89bdd812e4d7e3b665770f92c4a0c86b4d04094f
+git cat-file p 89bdd812e4d7e3b665770f92c4a0c86b4d04094f
 ```
 
 ## commit move the branch
@@ -231,45 +230,45 @@ Changes to be committed:
 - `rebase`
 - `pull`
 
-## 5 steps by Scolt
+## 5 basic steps by Scolt
 
 - <http://python.slides.com/colt/web-scraping#/30>
 
 - 1a. Initialize a local repository on your computer
 
 ```bash
-$>git init
+git init
 ```
 
 - OR
 - 1b. Clone (download) an online repository onto your computer
 
 ```bash
-$>git clone https://github.com/<your_github_handle>/<your_repo>.git
+git clone https://github.com/<your_github_handle>/<your_repo>.git
 ```
 
 - 2. Change (create, edit, move, remove) files on your computer
 
 ```bash
-$>echo "just putting text in this file" >> README.md
+echo "just putting text in this file" >> README.md
 ```
 
 - 3. Stage the files to be committed
 
 ```bash
-$>git add .
+git add .
 ```
 
 - 4. Commit the files to a new version
 
 ```bash
-$>git commit -m "my first commit"
+git commit -m "my first commit"
 ```
 
 - 5. Push changes to the online repository
 
 ```bash
-$>git push origin master
+git push origin master
 ```
 
 - <http://python.slides.com/colt/web-scraping#/31>  by Scolt
@@ -281,7 +280,7 @@ by typing "git init" inside the folder.
 - Initialized empty Git repository in /Users/Colt/test/.git
 
 ```bash
-$> git init 
+git init 
 ```
 
 - This command creates a "hidden" .git folder in the directory
@@ -294,7 +293,7 @@ you can add them to the stage by typing "git add"
 followed by the filename or parent directory of the files to add all of them.
 
 ```bash
-$> git add
+git add
 ```
 
 - Staging a file takes a snapshot of it at a point in time,
@@ -305,7 +304,7 @@ which will prepare it for a new commit (the next version of the repo).
 - Use the command "git commit" to save a new version of the repository. Use the "-m" (message) argument followed by a short description to explain the new version.
 
 ```bash
-$> git commit -m "added monty python"
+git commit -m "added monty python"
 ```
 
 - The new commit stores the snapshot in the .git folder.
@@ -318,7 +317,7 @@ Our changes are thus only on our machine.
 We can add a remote origin by making a GitHub repository and typing the command "git remote add origin" like so:
 
 ```bash
-$>git remote add origin https://github.com/<your_github_handle>/<your_repo_name>.git
+git remote add origin https://github.com/<your_github_handle>/<your_repo_name>.git
 Pushing
 ```
 
@@ -328,12 +327,12 @@ Pushing
 to publish your changes to your online GitHub repository.
 
 ```bash
-$>git push
+git push
 ```
 
 - Pushing synchronizes the local and remote repositories.
 Sometimes you will have to "git pull" first to bring your local repo up-to-date before pushing.
 
 ```bash
-$>git pull
+git pull
 ```
