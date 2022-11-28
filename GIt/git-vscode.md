@@ -1,1 +1,0 @@
-- Using VSCode as git mergetool and difftool https://medium.com/faun/using-vscode-as-git-mergetool-and-difftool-2e241123abe7
