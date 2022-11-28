@@ -33,7 +33,7 @@
 - commit
 - tag
 
-## The for ares
+## The 4 ares
 
 - stash--> working area --> index / stage --> repository
 
