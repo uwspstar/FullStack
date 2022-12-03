@@ -529,3 +529,17 @@ else
 fi
 done
 ```
+
+## Wait for filesystem using inotify
+
+- inotify is a Linux kernel subsystem that acts to extend filesystems to notice changes to the filesystem and report those changes to applications.
+
+```bash
+sudo apt install inotify-tools
+```
+
+```bash
+#! /bin/bash
+mkdir -p temp/NewFolder
+inotifywait -m temp/NewFolder
+```
