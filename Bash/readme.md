@@ -36,6 +36,44 @@ NO.     |Command                            |NOTEs
 19      |$((  n1 + n2 ))                    |plus
 20      |car=('BMW' 'TOYOTA' 'HONDA')       |array
 
+## Debugging Bash Scripts
+
+- put the `-x` flag
+
+```bash
+bash -x ./test.sh
+```
+
+```bash
+#! /bin/bash -x
+echo "enter filename to substitute using sed"
+read fileName
+if [[ -f $fileName ]]
+then
+     sed 's/Linux/Unix/g' $fileName
+   
+else
+    echo "$fileName doesn't exist"
+fi
+```
+
+- Write down the command `set -x` at the starting point of the debugging and for ending it simply write `set +x`.
+
+```bash
+#! /bin/bash
+set -x
+echo "enter filename to substitute using sed"
+read fileName
+set +x
+if [[ -f $fileName ]]
+then
+     sed 's/Linux/Unix/g' $fileName
+   
+else
+    echo "$fileName doesn't exist"
+fi
+```
+
 ## Conditional Statements
 
 ```bash
