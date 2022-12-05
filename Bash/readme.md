@@ -171,7 +171,7 @@ fi
 - `-i` not case sensitive
 - `-n` line number
 - `-c` words count
-- `v` without the words
+- `-v` without the words
 
 ```bash
 grep -i -n -c -v $grepvar $fileName
