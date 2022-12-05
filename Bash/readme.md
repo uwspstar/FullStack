@@ -114,6 +114,31 @@ else
 fi
 ```
 
+## grep
+
+```bash
+#! /bin/bash
+echo "enter a filename to search text from"
+read fileName
+if [[ -f $fileName ]]
+then
+    echo "enter the text to search"
+    read grepvar
+    grep $grepvar $fileName
+else
+    echo "$fileName doesn't exist"
+fi
+```
+
+- `-i` not case sensitive
+- `-n` line number
+- `-c` words count
+- `v` without the words
+
+```bash
+grep -i -n -c -v $grepvar $fileName
+```
+
 ## Loops
 
 - `while` loop
@@ -542,4 +567,34 @@ sudo apt install inotify-tools
 #! /bin/bash
 mkdir -p temp/NewFolder
 inotifywait -m temp/NewFolder
+```
+
+## sed
+
+- The sed command stands for stream editor, performs editing operations on text coming from standard input or a file. sed edits line-by-line and in a non-interactive way.
+
+```bash
+#! /bin/bash
+echo "enter filename to substitute using sed"
+read fileName
+if [[ -f $fileName ]]
+then
+    cat test.txt | sed 's/i/I/'
+   
+else
+    echo "$fileName doesn't exist"
+fi
+```
+
+```bash
+#! /bin/bash
+echo "enter filename to substitute using sed"
+read fileName
+if [[ -f $fileName ]]
+then
+     sed 's/Linux/Unix/g' $fileName
+   
+else
+    echo "$fileName doesn't exist"
+fi
 ```
