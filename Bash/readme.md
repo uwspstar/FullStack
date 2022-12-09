@@ -7,6 +7,7 @@
 - curl 的用法指南<https://www.ruanyifeng.com/blog/2019/09/curl-reference.html>
 - 《Linux就该这么学》 <https://www.linuxprobe.com/>
 - <https://www.youtube.com/playlist?list=PLaMM3KFoB3JFtZctaR8HDaKQz9hqQQC92>
+- <https://mp.weixin.qq.com/s/VA0n9jWTt2HRs3Ly4L540w>
 
 ## Curl in Scripts
 
