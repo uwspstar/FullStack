@@ -253,6 +253,10 @@ $ git diff <hash1> <hash2>
 
 ## git cherry pick
 
+```bash
+git cherry-pick <commitHash>
+```
+
 ## git rebase
 
 ```bash
