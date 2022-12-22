@@ -58,7 +58,7 @@
 
 ## Types of Computer Languages
 
-- `Low-level Programming Language` : at a low level, we have two languages i.e.`Machine Language` and `Assembly language`
+- `Low-level Programming Language` : at a low level, we have two languages i.e. `Machine Language` and `Assembly language`
   
   - `Machine Language` : is the fundamental language (binary of 1’s and 0’s) for the system and it can be directly understandable without any translation.
   
@@ -187,7 +187,9 @@ executed anywhere.
 
 ## Source Code -> Compiler -> CIL -> CLR -> Machine Code
 
-- The .NET applications are written in C#, F#, or VB programming languages. The Source Code is compiled into an intermediate language code called `IL` or `MSIL` or `CIL (Common Intermediate Language)`.
+- The .NET applications are written in C#, F#, or VB programming languages.
+
+- The Source Code is compiled into an intermediate language code called `IL` or `MSIL` or `CIL (Common Intermediate Language)`.
 
 - And the Compiled code is stored in assemblies with `.DLL` or `.EXE` file extension.
 
