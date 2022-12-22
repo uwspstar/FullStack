@@ -1,5 +1,9 @@
-# grep
+# grep : print lines matching a pattern
 
+`grep [OPTIONS] PATTERN [FILE...]`
+`grep [OPTIONS] [-e PATTERN | -f FILE] [FILE...]`
+
+- <https://www.tutorialspoint.com/unix_commands/grep.htm>
 - <https://www.youtube.com/watch?v=VGgTmxXp7xQ>
 
 - `grep <string> <file-name>`在给定的文件中搜寻指定的字符串。

@@ -1,8 +1,10 @@
 # git commit --amend
 
-- `git commit --amend` to modify 上一次的commit message的描述有误
+- <https://zhuanlan.zhihu.com/p/100243017>
 
-- Steps
+- `git commit --amend` to modify 上一次的commit message的描述有误. 记录会被覆盖，但是commit id会变成新的. 本质上就是生成了新的commit，替代了上一次commit的位置 (only modify commit info, if you want to modify commit files changes, you can use  `git reset HEAD <file>`)
+
+- `git commit --amend` Steps
 
 ```bash
 `git log -n 2` 
