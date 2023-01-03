@@ -1,3 +1,20 @@
+"""
+(class) enumerate
+Return an enumerate object.
+
+  iterable
+    an object supporting iteration, such as array,
+
+The enumerate object yields pairs containing a count (from start, which defaults to zero and a value yielded by the iterable argument.
+
+enumerate is useful for obtaining an indexed list:
+    (0, seq[0]), (1, seq[1]), (2, seq[2]), ...
+
+
+A hash table reduces the lookup time from O(n) to O(1) by trading space for speed. It supports fast lookup in near constant time. I say "near" because if a collision occurred, a lookup could degenerate to O(n) time. However, lookup in a hash table should be amortized O(1) time as long as the hash function was chosen carefully.
+"""
+
+
 # You are given a list of numbers, and a target number k. Return whether or not there are two numbers in the list that add up to k.
 
 # Example:
@@ -19,22 +36,6 @@ class Solution:
 
         return [-1, -1]
 
-
-"""
-(class) enumerate
-Return an enumerate object.
-
-  iterable
-    an object supporting iteration, such as array,
-
-The enumerate object yields pairs containing a count (from start, which defaults to zero and a value yielded by the iterable argument.
-
-enumerate is useful for obtaining an indexed list:
-    (0, seq[0]), (1, seq[1]), (2, seq[2]), ...
-
-
-A hash table reduces the lookup time from O(n) to O(1) by trading space for speed. It supports fast lookup in near constant time. I say "near" because if a collision occurred, a lookup could degenerate to O(n) time. However, lookup in a hash table should be amortized O(1) time as long as the hash function was chosen carefully.
-"""
 
 # def two_sum(list, k):
 #   a_set = set()
