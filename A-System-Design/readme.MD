@@ -7,7 +7,7 @@
 - <https://blog.bytebytego.com/p/payment-system>
 
 - ![Payment System](/A-System-Design/Img/payment_system.png)
-- [TODO] how distribute system working each components, and error handle in each step.
+- `TODO` how distribute system working each components, and error handle in each step.
 - log system
 
 ## Match buy and sell stock orders
@@ -19,4 +19,4 @@
 - The buy order is matched with all the sell orders at price 100.10, and the first order at price 100.11 (illustrated in light red). (buy 2700 shares: 2700 - 200 - 400 -1100 - 100 - 900 = 0)
 - `HashMap` ? key = price, val = [queue]
 - ![Match buy and sell stock orders](/A-System-Design/Img/match-buy-and-sell-stock-orders.png)
-- [TODO] write a small program to show the buy and sell 2700 shares.
+- `TODO` write a small program to show the buy and sell 2700 shares.
