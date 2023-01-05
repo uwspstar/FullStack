@@ -6,4 +6,4 @@
 
 - <https://blog.bytebytego.com/p/payment-system>
 
-- ![Payment System](/Img/payment_system.png)
+- ![Payment System](/A-System-Design/Img/payment_system.png)
