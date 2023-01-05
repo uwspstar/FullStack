@@ -18,5 +18,5 @@
 - buy 2700 shares in the diagram?
 - The buy order is matched with all the sell orders at price 100.10, and the first order at price 100.11 (illustrated in light red). (buy 2700 shares: 2700 - 200 - 400 -1100 - 100 - 900 = 0)
 - `HashMap` ? key = price, val = [queue]
-- ![Match buy and sell stock orders](/A-System-Design/Img/match-buy-and-sell-stock-orders.png)
+- ![Match buy and sell stock orders](/A-System-Design/Img/match-buy-and-sell-stock-orders.drawio)
 - [TODO] write a small program to show the buy and sell 2700 shares.
