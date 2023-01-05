@@ -8,7 +8,7 @@
 
 - ![Payment System](/A-System-Design/Img/payment_system.png)
 - `TODO` how distribute system working each components, and error handle in each step.
-- what type DB (SQL, noneSQL)
+- what type of DB (SQL, noneSQL) is
 - log system
 
 ## Match buy and sell stock orders
