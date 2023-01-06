@@ -40,6 +40,7 @@
 - deploy all the components in a single giant server (`no containers`)
 - use `shared memory` as an event bus to communicate among the components, `no hard disk`
 - key components like Order Manager and Matching Engine are `single-threaded` on the critical path, and each pinned to a CPU so that there is `no context switch` and `no locks`
-- the single-threaded application loop executes tasks one by one in sequence
-- other components listen on the event bus and react accordingly
+- the `single-threaded` application loop executes tasks one by one in sequence
+- other components listen on the `event bus` and react accordingly
 - ![Low latency stock exchange](/A-System-Design/Img/low-latency-stock-exchange.png)
+- `TODO` : Event Bus
