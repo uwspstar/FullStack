@@ -44,4 +44,4 @@
 - the `single-threaded` application loop executes tasks one by one in sequence
 - other components listen on the `event bus` and react accordingly
 - ![Low latency stock exchange](/A-System-Design/Img/low-latency-stock-exchange.png)
-- `TODO` : Event Bus
+- `TODO` : Event Bus, memory event bus
