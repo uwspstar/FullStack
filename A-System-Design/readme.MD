@@ -1,6 +1,8 @@
 # System Design
 
 - <https://blog.bytebytego.com/>
+- SDI-vol1: <https://amzn.to/3tK0qQn>
+- SDI-vol2: <https://amzn.to/37ZisW9>
 
 ## Payment system
 
@@ -21,3 +23,23 @@
 - `HashMap` ? key = price, val = [queue]
 - ![Match buy and sell stock orders](/A-System-Design/Img/match-buy-and-sell-stock-orders.png)
 - `TODO` write a small program to show the buy and sell 2700 shares.
+
+## Do less on the critical path
+
+- <https://blog.bytebytego.com/p/low-latency-stock-exchange>
+
+- Fewer tasks on the critical path
+- Less time on each task
+- Fewer network hops
+- Less disk usage
+- Other non-critical tasks should be removed from the critical path.
+
+## Low latency stock exchange
+
+- <https://blog.bytebytego.com/p/low-latency-stock-exchange>
+- deploy all the components in a single giant server (`no containers`)
+- use `shared memory` as an event bus to communicate among the components, `no hard disk`
+- key components like Order Manager and Matching Engine are `single-threaded` on the critical path, and each pinned to a CPU so that there is `no context switch` and `no locks`
+- the single-threaded application loop executes tasks one by one in sequence
+- other components listen on the event bus and react accordingly
+- ![Low latency stock exchange](/A-System-Design/Img/low-latency-stock-exchange.png)
