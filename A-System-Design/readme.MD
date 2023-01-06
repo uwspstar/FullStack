@@ -23,6 +23,7 @@
 - `HashMap` ? key = price, val = [queue]
 - ![Match buy and sell stock orders](/A-System-Design/Img/match-buy-and-sell-stock-orders.png)
 - `TODO` write a small program to show the buy and sell 2700 shares.
+- `TODO` how the best bid match the sell
 
 ## Do less on the critical path
 
