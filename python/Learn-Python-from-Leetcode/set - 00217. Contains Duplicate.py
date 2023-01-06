@@ -1,7 +1,7 @@
 """
 Loop Invariant, Linear Search, Sorting and Hash Table.
 
-when n is not sufficiently large, an O(n)O algorithm can be slower than an O(nlogn) algorithm.
+when n is not sufficiently large, an O(n) algorithm can be slower than an O(nlogn) algorithm.
 
 (class) set()
 
