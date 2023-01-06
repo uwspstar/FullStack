@@ -45,3 +45,4 @@
 - other components listen on the `event bus` and react accordingly
 - ![Low latency stock exchange](/A-System-Design/Img/low-latency-stock-exchange.png)
 - `TODO` : Event Bus, memory event bus
+- `TODO` : scalability (a single giant server -> vertical? any limit?)
