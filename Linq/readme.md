@@ -2,6 +2,7 @@
 
 - Credit <http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html>
 - Credit <https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf>
+- Credit <https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm>
 
 ## As a rule when you write LINQ queries, we recommend that you use `query syntax` whenever possible and `method syntax` whenever necessary
 
