@@ -1,28 +1,33 @@
 # LINQ
-- http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html
-- https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf
 
-- LINQ stands for Language Integrated Query. 
+- <http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html>
+- <https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf>
+
+- LINQ stands for Language Integrated Query.
+- LINQ queries `any collection of objects that supports IEnumerable` or the `generic IEnumerable<T> interface`.
 - LINQ enables us to query any type of data store (SQL Server, XML documents, Objects in memory etc).
 - A query is ```NOT``` executed until you iterate over the query variable, for example, in a foreach statement
 - the query variable contains our query information ```NOT the query result```
 - the result is ```NOT``` return from declare query variable
-- ```the result comes from when we excute query```
-- As a rule when you write LINQ queries, we recommend that you use ```query syntax``` whenever possible and ```method syntax``` whenever necessary. 
-- There is no semantic or performance difference between the two different forms. 
+- ```the result comes from when we execute query```
+- As a rule when you write LINQ queries, we recommend that you use ```query syntax``` whenever possible and ```method syntax``` whenever necessary.
+- There is no semantic or performance difference between the two different forms.
 - Query expressions are often more readable than equivalent expressions written in method syntax
 - Some query operations must be expressed as a method call. The most common such methods are those that return ```singleton numeric``` values, such as ```Sum```, ```Max```, ```Min```, ```Average```, and so on.
 
 - If the method has Action or Func parameters, these are provided in the form of a lambda expression, as shown in the following example:
+
 ```
 List<int> numbers1 = new List<int>() { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 }; 
 List<int> numbers2 = new List<int>() { 15, 14, 11, 13, 19, 18, 16, 17, 12, 10 }; 
 // Query #4. 
 double average = numbers1.Average();
 ```
+
 - In the previous queries, only Query #4 ```executes immediately```. This is because it returns a single value, and ```NOT``` a generic IEnumerable<T> collection
-    
+
 ### LINQ provider is a component between the LINQ query and the actual data source
+
 ```
 // LINQ query using Lambda Expressions.
 IEnumerable<Student> students = Student.GetAllStudents()
@@ -37,34 +42,47 @@ IEnumerable<Student> students = from student in Student.GetAllStudents()
 // Excute query
 students.Count()
 ```
-### Using Lambda Expressions.
+
+### Using Lambda Expressions
 
 ### Using SQL like query expressions
-- LINQ queries written using SQL like query expressions are ```translated into their lambda expressions before they are compiled```. 
+
+- LINQ queries written using SQL like query expressions are ```translated into their lambda expressions before they are compiled```.
 - The Standard Query Operators are implemented as ```extension``` methods on ```IEnumerable<T> interface```.
+
 ```
 GridView1.DataSource = from student in dataContext.Students
                        where student.Gender == "Male"
                        select student;
 ```
+
 - Since List<T> implements IEnumerable<T>, the LINQ Standard Query Operators will be available
+
 ### ForEach
+
 - ```ForEach``` is available for List<T> NOT IEnumerable<T> ( need .ToList())
 
-### Extension methods 
+### Extension methods
+
 - Extension methods enable you to "add" methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type.
 - Extension methods are a special kind of ```static method```, but they are called as if they were instance methods on the extended type.
+
 ### select, where
+
 - LINQ's standard query operators (select, where etc ) are implemented in Enumerable class as extension methods on the IEnumerable<T> interface.
+
 ```
 List<int> Numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 IEnumerable<int> EvenNumbers = Numbers.Where(n => n % 2 == 0);
 ```
+
 ### List<T> implements IEnumerable<T> interface
-- ```Where()``` method NOT belonging to List<T> class, we are still able to use it as though it belong to List<T> class. 
+
+- ```Where()``` method NOT belonging to List<T> class, we are still able to use it as though it belong to List<T> class.
 - This is possible because Where() method is implemented as extension method in IEnumerable<T> interface and List<T> implements IEnumerable<T> interface
 
 ### How to implement extension methods
+
 ```
 public class StringHelper
 {
@@ -95,15 +113,17 @@ public static class StringHelper
 }
 
 ```
+
 - Since all LINQ extension methods are defined in Enumerable class, the syntax will be as shown below.
+
 ```
 List<int> Numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 IEnumerable<int> EvenNumbers = Enumerable.Where(Numbers, n => n % 2 == 0); 
 ```
 
- 
 ### LINQ Aggregate
+
 ```
 int[] Numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 int smallestNumber = Numbers.Min();
@@ -118,7 +138,9 @@ double averageOfAllNumbers = Numbers.Average();
 double averageOfAllEvenNumbers = Numbers.Where(n => n % 2 == 0).Average();
 
 ```
+
 ### How Aggregate() function works?
+
 ```
 string[] countries = { "India", "US", "UK", "Canada", "Australia" };
 string result = countries.Aggregate((a, b) => a + ", " + b);
@@ -132,7 +154,9 @@ Step 3: Result in Step 2 is then concatenated with "Canada" to produce result "I
 This goes on until the last element in the array 
 to produce the final single string "India, US, UK, Canada, Australia"
 ```
-- One of the overloaded version of Aggregate() function has a Seed parameter. 
+
+- One of the overloaded version of Aggregate() function has a Seed parameter.
+
 ```
 If we pass 10 as the value for Seed parameter
 int result = Numbers.Aggregate(10, (a, b) => a * b);
@@ -142,6 +166,7 @@ Step 2: Result (20) in Step 1 is then multiplied with 3 (20X3) to produce result
 Step 3: Result (60) in Step 2 is then multiplied with 4 (60X4) to produce result 240
 Step 4: Result (240) in Step 3 is then multiplied with 5 (240X5) to produce final result 1200
 ```
+
 ### WHERE
 
 - The WHERE standard query operator belong to Restriction Operators category in LINQ.
@@ -157,7 +182,9 @@ public static IEnumerable<TSource> Where<TSource>(
     Func<TSource, int, bool> predicate);
 
 ```
--  you can call a function in your statement to make your code more readable
+
+- you can call a function in your statement to make your code more readable
+
 ```
 var evenNumbers = from i in myArray                     
  where IsEvenAndGT5(i)                    
@@ -169,17 +196,22 @@ static bool IsEvenAndGT5(int i)
 }
 
 ```
+
 ### Multiple where Clauses
+
 - multiple where clauses is the equivalent of using the && operator
+
 ```
 var evenNumbers = from i in myArray                    
     where i % 2 == 0                     
     where i > 5                    
     select i; 
 ```
+
 ### Predicate?
 
 - A predicate is a function to test each element for a condition
+
 ```
 IEnumerable<int> evenNumbers = numbers.Where(num => num % 2 == 0);
 
@@ -188,8 +220,9 @@ can be rewritten as shown below
 Func<int, bool> predicate = i => i % 2 == 0;
 IEnumerable<int> evenNumbers = numbers.Where(predicate);
 ```
- 
+
 ### SelectMany
+
 ```
 IEnumerable<string> allSubjects = Student.GetAllStudetns().SelectMany(s => s.Subjects);
 IEnumerable<string> allSubjects = Student.GetAllStudetns().SelectMany(s => s.Subjects).Distinct();
@@ -203,6 +236,7 @@ IEnumerable<string> allSubjects = (from student in Student.GetAllStudetns()
                                  select subject)
                                  .Distinct();
 ```
+
 ```
 var result = Student.GetAllStudetns().SelectMany(s => s.Subjects, (student, subject) =>
     new { StudentName = student.Name, Subject = subject });
@@ -223,8 +257,11 @@ foreach (var v in result)
 }
 
 ```
-### Select vs SelectMany 
+
+### Select vs SelectMany
+
 - in this example, the Select() method returns List of List<string>
+
 ```
 IEnumerable<List<string>> result = Student.GetAllStudetns().Select(s => s.Subjects);
 foreach (List<string> stringList in result)
@@ -235,7 +272,9 @@ foreach (List<string> stringList in result)
     }
 }
 ```
+
 - SelectMany() on the other hand, flattens queries that return lists of lists into a single list. So in this case to print all the subjects we have to use just one foreach loop.
+
 ```
 IEnumerable<string> result = Student.GetAllStudetns().SelectMany(s => s.Subjects);
 foreach (string str in result)
@@ -243,8 +282,11 @@ foreach (string str in result)
     Console.WriteLine(str);
 }
 ```
+
 ### OrderBy, OrderByDescending, ThenBy, and ThenByDescending
-- OrderBy, OrderByDescending, ThenBy, and ThenByDescending can be used to sort data. Reverse method simply reverses the items in a given collection.    
+
+- OrderBy, OrderByDescending, ThenBy, and ThenByDescending can be used to sort data. Reverse method simply reverses the items in a given collection.
+
 ```
 // Example 1: Sort Students by Name in ascending order
 IEnumerable<Student> result = Student.GetAllStudents().OrderBy(s => s.Name);
@@ -262,13 +304,15 @@ IEnumerable<Student> result = from student in Student.GetAllStudents()
                               orderby student.Name descending
                               select student;
 ```
-- ```OrderBy``` or ```OrderByDescending``` work fine when we want to sort a collection just ```by one value``` or expression. 
+
+- ```OrderBy``` or ```OrderByDescending``` work fine when we want to sort a collection just ```by one value``` or expression.
 
 - If want to ```sort by more than one value``` or expression, that's when we use ```ThenBy``` or ```ThenByDescending``` along with OrderBy or OrderByDescending.
 
-- ```OrderBy``` or ```OrderByDescending``` performs the ```primary sort```. 
-- ```ThenBy``` or ```ThenByDescending``` is used for ```adding secondary sort```. 
+- ```OrderBy``` or ```OrderByDescending``` performs the ```primary sort```.
+- ```ThenBy``` or ```ThenByDescending``` is used for ```adding secondary sort```.
 - Secondary Sort operators (ThenBy or ThenByDescending ) can be used more than once in the same LINQ query.
+
 ```
 // Example 1: 
 // a) Sorts Students first by TotalMarks in ascending order(Primary Sort) 
@@ -288,8 +332,11 @@ IEnumerable<Student> result = from student in Student.GetAllStudetns()
 // Example 3: Reverses the items in the collection.
 IEnumerable<Student> result = students.Reverse();
 ```
+
 ### Partitioning Operators
+
 - Take method returns a specified number of elements from the start of the collection. The number of items to return is specified using the count parameter this method expects.
+
 ```
 IEnumerable<string> result = countries.Take(3);
 
@@ -297,28 +344,40 @@ IEnumerable<string> result = (from country in countries
                            select country).Take(3);
                                                    
 ```
-- Skip method skips a specified number of elements in a collection and then returns the remaining elements. The number of items to skip is specified using the count parameter this method expects. 
+
+- Skip method skips a specified number of elements in a collection and then returns the remaining elements. The number of items to skip is specified using the count parameter this method expects.
+
 ```
 IEnumerable<string> result = countries.Skip(3);
 ```
+
 - For the same argument value, the Skip method returns all of the items that the Take method would not return.
- 
-- TakeWhile method returns elements from a collection as long as the given condition specified by the predicate is true. 
+
+- TakeWhile method returns elements from a collection as long as the given condition specified by the predicate is true.
+
 ```
 IEnumerable<string> result = countries.TakeWhile(s => s.Length > 2);
 ```
+
 - SkipWhile method skips elements in a collection as long as the given condition specified by the predicate is true, and then returns the remaining elements.
+
 ```
 IEnumerable<string> result = countries.SkipWhile(s => s.Length > 2);
 ```
+
 ### Implementing paging using Skip and Take
-- http://csharp-video-tutorials.blogspot.com/2014/07/part-13-implement-paging-using-skip-and.html
+
+- <http://csharp-video-tutorials.blogspot.com/2014/07/part-13-implement-paging-using-skip-and.html>
+
 ```
 IEnumerable<Student> result = students.Skip((pageNumber - 1) * pageSize).Take(pageSize);
  ```
+
 ### Deferred execution vs Immediate execution
-- http://csharp-video-tutorials.blogspot.com/2014/07/part-14-linq-query-deferred-execution.html
+
+- <http://csharp-video-tutorials.blogspot.com/2014/07/part-14-linq-query-deferred-execution.html>
 - LINQ operators can be broadly classified into 2 categories based on the behaviour of query execution
+
 ```
 1. Deferred or Lazy Operators -  These query operators use deferred execution.
 Examples - select, where, Take, Skip etc
@@ -326,7 +385,9 @@ Examples - select, where, Take, Skip etc
 2. Immediate or Greedy Operators - These query operators use immediate execution. 
 Examples - count, average, min, max, ToList etc
 ```
+
 - ```Deferred or Lazy Operators```, Examples - ```select```, ```where```, ```Take```, ```Skip``` etc
+
 ```
  // LINQ Query is only defined here and is not executed at this point
 // If the query is executed at this point, the result should not display Tim
@@ -335,7 +396,9 @@ IEnumerable<Student> result = from student in listStudents
                               select student;
                                           
 ```
+
 - ```Immediate or Greedy Operators```, Examples - ```count```, ```average```, ```min```, ```max```, ```ToList``` etc
+
 ```
 // Since we are using ToList() which is a greedy operator
 // the LINQ Query is executed immediately at this point
@@ -343,12 +406,17 @@ IEnumerable<Student> result = (from student in listStudents
                                where student.TotalMarks == 800
                                select student).ToList();
 ```
-### Conversion Operators in LINQ 
+
+### Conversion Operators in LINQ
+
 ### ToList
+
 ```
 List<int> result = numbers.ToList();
 ```
+
 ### ToArray
+
 ```
 List<string> countries = new List<string> { "US", "India", "UK", "Australia", "Canada" };
 
@@ -356,11 +424,13 @@ string[] result = (from country in countries
                    orderby country ascending
                    select country).ToArray();
 ```
-                              
-- ToDictionary : Keys in the dictionary must be unique. 
+
+- ToDictionary : Keys in the dictionary must be unique.
+
 ```
 Unhandled Exception: System.ArgumentException: An item with the same key has already been added.
 ```
+
 ```
 Dictionary<int, string> result = listStudents.ToDictionary(x => x.StudentID, x => x.Name);
 
@@ -374,8 +444,10 @@ a) keySelector - A function to extract a key from each element
 Dictionary<int, Student> result = listStudents.ToDictionary(x => x.StudentID);
 
 ```
+
 ### ToLookup
-- Just like a dictionary, 
+
+- Just like a dictionary,
 - a Lookup is a collection of key/value pairs. A dictionary cannot contain keys with identical values, where as a Lookup can.
 
 ```
@@ -394,8 +466,11 @@ foreach (var kvp in employeesByJobTitle)
 }
 
 ```
-### Cast 
+
+### Cast
+
 - attempts to convert all of the items within an existing collection to another type and return them in a new collection.
+
 ```
 ArrayList list = new ArrayList();
 list.Add(1);
@@ -407,8 +482,11 @@ list.Add(3);
             
 IEnumerable<int> result = list.Cast<int>();
 ```
+
 ### OfType
+
 - return only elements of the specified type. The other type elements are simply ignored and excluded from the result set.
+
 ```
 ArrayList list = new ArrayList();
 list.Add(1);
@@ -419,39 +497,53 @@ list.Add("ABC");
 
 IEnumerable<int> result = list.OfType<int>();
 ```
+
 ### When to use Cast over OfType and vice versa?
+
 - We would generally use Cast when the following 2 conditions are met
+
 ```
 - 1. We want to cast all the items in the collection &
 - 2. We know for sure the collection contains only elements of the specified type
 ```
+
 - If we want to filter the elements and return only the ones of the specified type, then we would use OfType.
 
-### AsQueryable : 
-- There are 2 overloaded versions of this method. 
+### AsQueryable
+
+- There are 2 overloaded versions of this method.
+
 ```
 One overloaded version converts System.Collections.IEnumerable to System.Linq.IQueryable
 
 The other overloaded version converts a generic System.Collections.Generic.IEnumerable<T> 
 to a generic System.Linq.IQueryable<T>
 ```
-- The main use of AsQueryable operator is unit testing to mock a queryable data source using an in-memory data source. 
 
-###  AsEnumerable 
+- The main use of AsQueryable operator is unit testing to mock a queryable data source using an in-memory data source.
+
+### AsEnumerable
+
 - use AsEnumerable operator to move query processing to the client side
+
 ```
 1. The "inside part" that is the query before AsEnumerable operator is executed as Linq-to-SQL
 2. The "ouside part" that is the query after AsEnumerable operator is executed as Linq-to-Objects
 ```
-- http://csharp-video-tutorials.blogspot.com/2014/07/part-17-asenumerable-and-asqueryable-in.html
+
+- <http://csharp-video-tutorials.blogspot.com/2014/07/part-17-asenumerable-and-asqueryable-in.html>
+
 ```
 var result = dbContext.Employees.AsEnumerable()
                       .Where(x => x.Gender == "Male")
                       .OrderByDescending(x => x.Salary).Take(5);
 ```
+
 ### GroupBy
+
 - GroupBy creates and returns a sequence of IGrouping<K,V>
-- This operator takes a flat sequence of items, organize that sequence into groups (IGrouping<K,V>) based on a specific key and return groups of sequences. 
+- This operator takes a flat sequence of items, organize that sequence into groups (IGrouping<K,V>) based on a specific key and return groups of sequences.
+
 ```
 var employeeGroup = from employee in Employee.GetAllEmployees()
                     group employee by employee.Department;
@@ -461,6 +553,7 @@ foreach (var group in employeeGroup)
     Console.WriteLine("{0} - {1}", group.Key, group.Count());
 }
 ```
+
 ```
 var employeeGroup = from employee in Employee.GetAllEmployees()
                   group employee by employee.Department into eGroup
@@ -470,8 +563,10 @@ var employeeGroup = from employee in Employee.GetAllEmployees()
                        Key = eGroup.Key,
                        Employees = eGroup.OrderBy(x => x.Name)
                   };
-```                                     
+```
+
 ### Group by multiple keys
+
 ```
 var employeeGroups = Employee.GetAllEmployees()
                 .GroupBy(x => new { x.Department, x.Gender })
@@ -483,6 +578,7 @@ var employeeGroups = Employee.GetAllEmployees()
                     Employees = g.OrderBy(x => x.Name)
                 });
 ```
+
 ```
 var employeeGroups = from employee in Employee.GetAllEmployees()
                     group employee by new
@@ -499,52 +595,78 @@ var employeeGroups = from employee in Employee.GetAllEmployees()
                          Employees = eGroup.OrderBy(x => x.Name)
                     };
 ```
+
 ### Element Operators
+
 ### First
+
 - If the sequence does not contain any elements or if no element in the sequence satisfies the condition then an InvalidOperationException is thrown.
 
 ### FirstOrDefault
+
 - This is very similar to First, except that this method does ```not throw an exception```
+
 ```
 int result = numbers.First();
 int result = numbers.FirstOrDefault(x => x % 2 == 100);
 ```
-### Last 
+
+### Last
+
 - Very similar to First, except it returns the last element of the sequence.
+
 ### LastOrDefault
+
 - Very similar to FirstOrDefault, except it returns the last element of the sequence
-### ElementAt 
-- Returns an element at a specified index. 
+
+### ElementAt
+
+- Returns an element at a specified index.
 - If the sequence is empty or if the provided index value is out of range, then an ArgumentOutOfRangeException is thrown.
+
 ### ElementAtOrDefault
-- Similar to ElementAt except that this method does not throw an exception, 
+
+- Similar to ElementAt except that this method does not throw an exception,
 - if the sequence is empty or if the provided index value is out of range. Instead, a default value of the type that is expected is returned.
+
 ```
 int result = numbers.ElementAt(0);
 ```
+
 ### Single
+
 - Single() method throws an exception if the sequence is empty or has more than one element.
+
 ### SingleOrDefault
+
 - Very similar to Single(), except this method does not throw an exception when the sequence is empty or when no element in the sequence satisfies the given condition.
+
 ```
 int result = numbers.Single();
 int result = numbers.SingleOrDefault(x => x % 2 == 0);
 ```
+
 ### DefaultIfEmpty
+
 - If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
+
 ```
 IEnumerable<int> result = numbers.DefaultIfEmpty();
 // Since the sequence is empty, a sequence containing the specified default value (10) is returned.
 IEnumerable<int> result = numbers.DefaultIfEmpty(10);
 ```
+
 ### Group Join
+
 - GroupBy creates and returns a sequence of IGrouping<K,V>
+
 ```
 var employeeGroup = from employee in Employee.GetAllEmployees()
                     group employee by employee.Department;
 
 Console.WriteLine("{0} - {1}", group.Key, group.Count());
 ```
+
 ```
 foreach (var group in employeeGroup)
 {
@@ -557,6 +679,7 @@ foreach (var group in employeeGroup)
     Console.WriteLine(); Console.WriteLine();
 }
 ```
+
 ```
 var employeeGroup = from employee in Employee.GetAllEmployees()
                   group employee by employee.Department into eGroup
@@ -568,7 +691,9 @@ var employeeGroup = from employee in Employee.GetAllEmployees()
                   };
 
 ```
+
 ### Group by multiple keys in linq
+
 ```
 var employeeGroups = Employee.GetAllEmployees()
                     .GroupBy(x => new { x.Department, x.Gender })
@@ -593,6 +718,7 @@ foreach(var group in employeeGroups)
     Console.WriteLine(); Console.WriteLine();
 }
 ```
+
 ```
 var employeeGroups = from employee in Employee.GetAllEmployees()
                     group employee by new
@@ -608,61 +734,88 @@ var employeeGroups = from employee in Employee.GetAllEmployees()
                          Gender = eGroup.Key.Gender,
                          Employees = eGroup.OrderBy(x => x.Name)
                     };
- ```                                       
+ ```
+
 ### Element Operators in LINQ
 
 ### First
+
 - If the sequence does not contain any elements, then First() method throws an InvalidOperationException.
+
 ```
 int result = numbers.First();
 int result = numbers.First(x => x % 2 == 0);
 ```
+
 ### FirstOrDefault
+
 - This is very similar to First, except that this method does not throw an exception when there are no elements in the sequence or when no element satisfies the condition specified by the predicate. Instead, a default value of the type that is expected is returned. For reference types the default is NULL and for value types the default depends on the actual type expected.
+
 ```
 int result = numbers.FirstOrDefault(x => x % 2 == 100);
 ```
-### Last 
+
+### Last
+
 - Very similar to First, except it returns the last element of the sequence
+
 ### LastOrDefault
+
 - Very similar to FirstOrDefault, except it returns the last element of the sequence.
 
 ### ElementAt
+
 - Returns an element at a specified index. If the sequence is empty or if the provided index value is out of range, then an ArgumentOutOfRangeException is thrown.
+
 ```
 int result = numbers.ElementAt(1);
 ```
+
 ### ElementAtOrDefault
+
 - Similar to ElementAt except that this method does not throw an exception, if the sequence is empty or if the provided index value is out of range. Instead, a default value of the type that is expected is returned.
 
 ### Single
+
 - There are 2 overloaded versions of this method. The first overloaded version that does not have any parameters returns the only element of the sequence.
 - Single() method throws an exception if the sequence is empty or has more than one element.
+
 ```
 int result = numbers.Single();
 ```
-- The second overloaded version of the Single() method is used to find the only element in a sequence that satisfies a given condition. 
+
+- The second overloaded version of the Single() method is used to find the only element in a sequence that satisfies a given condition.
+
 ### SingleOrDefault
+
 - Very similar to Single(), except this method does not throw an exception when the sequence is empty or when no element in the sequence satisfies the given condition. Just like Single(), this method will still throw an exception, if more than one element in the sequence satisfies the given condition.
+
 ```
 int result = numbers.SingleOrDefault(x => x % 2 == 0);
 ```
+
 ```
 An exception will be thrown if any of the following is true
 a) If the sequence does not contain any elements OR
 b) If no element in the sequence satisfies the condition OR
 c) If more than one element in the sequence satisfies the condition
 ```
+
 ### DefaultIfEmpty
+
 - If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
 - If the sequence is empty, then DefaultIfEmpty() returns a sequence with the default value of the expected type.
 - The other overloaded version with a parameter allows us to specify a default value.
+
 ```
 IEnumerable<int> result = numbers.DefaultIfEmpty();
 IEnumerable<int> result = numbers.DefaultIfEmpty(10);
 ```
+
 ### Group Join in LINQ
+
 ### Group Join
+
 ```
 var employeesByDepartment = Department.GetAllDepartments()
                        .GroupJoin(Employee.GetAllEmployees(),
@@ -684,6 +837,7 @@ foreach (var department in employeesByDepartment)
     Console.WriteLine();
 }
 ```
+
 ```
 var employeesByDepartment = from d in Department.GetAllDepartments()
                        join e in Employee.GetAllEmployees()
@@ -693,8 +847,10 @@ var employeesByDepartment = from d in Department.GetAllDepartments()
                           Department = d,
                           Employees = eGroup
                        };
- ```                                                      
+ ```
+
 ### Inner Join
+
 ```
 var result = Employee.GetAllEmployees().Join(Department.GetAllDepartments(),
             e => e.DepartmentID,
@@ -708,6 +864,7 @@ foreach (var employee in result)
     Console.WriteLine(employee.EmployeeName + "\t" + employee.DepartmentName);
 }
 ```
+
 ```
 var result = from e in Employee.GetAllEmployees()
             join d in Department.GetAllDepartments()
@@ -723,9 +880,12 @@ foreach (var employee in result)
     Console.WriteLine(employee.EmployeeName + "\t" + employee.DepartmentName);
 }
 ```
+
 ### Difference between group join and inner join in linq
+
 - Join is similar to INNER JOIN in SQL and GroupJoin is similar to OUTER JOIN in SQL
-- http://csharp-video-tutorials.blogspot.com/2014/08/part-23-difference-between-group-join.html
+- <http://csharp-video-tutorials.blogspot.com/2014/08/part-23-difference-between-group-join.html>
+
 ```
 var result = from e in Employee.GetAllEmployees()
             join d in Department.GetAllDepartments()
@@ -742,6 +902,7 @@ var result = Employee.GetAllEmployees()
               });
                     
 ```
+
 ```
 var result = from d in Department.GetAllDepartments()
             join e in Employee.GetAllEmployees()
@@ -763,9 +924,12 @@ var result = Department.GetAllDepartments()
              });
                                          
 ```
+
 ### Left Outer Join
+
 - To implement Left Outer Join, with extension method syntax we use the GroupJoin() method along with SelectMany() and DefaultIfEmpty() methods.
 - LEFT OUTER JOIN all the matching elements + all the non matching elements from the left collection are included in the result set.
+
 ```
 var result = from e in Employee.GetAllEmployees()
             join d in Department.GetAllDepartments()
@@ -788,11 +952,14 @@ var result = Employee.GetAllEmployees()
                         EmployeeName = a.emp.Name,
                         DepartmentName = b == null ? "No Department" : b.Name
                 });
-```                    
+```
+
 ### Cross Join
+
 - The on keyword that specfies the JOIN KEY is not required.
 - Cross join produces a cartesian product i.e when we cross join two sequences, every element in the first collection is combined with every element in the second collection.
 - To implement Cross Join using extension method syntax, we could either use SelectMany() method or Join() method
+
 ```
 var result = from e in Employee.GetAllEmployees()
             from d in Department.GetAllDepartments()
@@ -812,14 +979,20 @@ var result = Employee.GetAllEmployees()
                        (e, d) => new { e, d });
 
 ```
+
 ### Set operators in LINQ
+
 ### Distinct
+
 - Notice that in the output we don't get unique employees. This is because, the default comparer is being used which will just check for object references being equal and not the individual property values.
+
 ```
 var result = countries.Distinct();
 var result = countries.Distinct(StringComparer.OrdinalIgnoreCase);
 ```
+
 - Using the overloaded version of Distinct() method to which we can pass a custom class that implements IEqualityComparer
+
 ```
 //  Create a custom class that implements IEqualityComparer<T> and implement Equals() and GetHashCode() methods
 
@@ -836,51 +1009,74 @@ public class EmployeeComparer : IEqualityComparer<Employee>
     }
 }
 ```
-- http://csharp-video-tutorials.blogspot.com/2014/08/part-26-set-operators-in-linq.html
+
+- <http://csharp-video-tutorials.blogspot.com/2014/08/part-26-set-operators-in-linq.html>
+
 ### Union
+
 - Union combines two collections into one collection while removing the duplicate elements
+
 ```
 int[] numbers1 = { 1, 2, 3, 4, 5 };
 int[] numbers2 = { 1, 3, 6, 7, 8 };
 
 var result = numbers1.Union(numbers2);
 ```
-- When comparing elements, just like Distinct() method, Union(), Intersect() and Except() methods work in a slightly different manner with complex types like Employee, Customer etc. 
+
+- When comparing elements, just like Distinct() method, Union(), Intersect() and Except() methods work in a slightly different manner with complex types like Employee, Customer etc.
 
 ### Intersect
+
 - Intersect() returns the common elements between the 2 collections.
+
 ```
 var result = numbers1.Intersect(numbers2);
 ```
+
 ### Except
+
 - Except() returns the elements that are present in the first collection but not in the second collection.
+
 ```
 var result = numbers1.Except(numbers2);
 ```
+
 ### Generation Operators in LINQ
 
 ### Range
+
 - Range operator generates a sequence of integers within a specified range. This method has 2 integer parameters. The start parameter specifies the integer to start with and the count parameter specifies the number of sequential integers to generate.
+
 ```
 var evenNumbers = Enumerable.Range(1, 10).Where(x => x % 2 == 0);
 ```
+
 ### Repeat
+
 - Repeat operator is used to generate a sequence that contains one repeated value.
+
 ```
 var result = Enumerable.Repeat("Hello", 5);
 ```
+
 ### Empty
+
 - Empty operator returns an empty sequence of the specified type.
+
 ```
 Enumerable.Empty<int>() // Returns an empty IEnumerable<int>
 Enumerable.Empty<string>() // Returns an empty IEnumerable<string>
 ```
+
 - ```NULL-COALESCING operator```
+
 ```
 IEnumerable<int> result = GetIntegerSequence() ?? Enumerable.Empty<int>();
 ```
+
 ### Concat vs Union operators
--  concatenate both the integer sequences (numbers1 & numbers2) into one integer sequence. Notice that the duplicate elements ARE ```NOT REMOVED.```
+
+- concatenate both the integer sequences (numbers1 & numbers2) into one integer sequence. Notice that the duplicate elements ARE ```NOT REMOVED.```
 - union operator also combines the 2 integer sequences (numbers1 & numbers2) into one integer sequence, but notice that the duplicate elements ARE ```REMOVED.```
 
 ```
@@ -890,23 +1086,30 @@ int[] numbers2 = { 1, 4, 5 };
 var result = numbers1.Concat(numbers2);
 var result = numbers1.Union(numbers2);
 ```
-### SequenceEqual() 
-- SequenceEqual method is used to determine whether two sequences are equal. 
-- This method returns true if the sequences are equal otherwise false. 
+
+### SequenceEqual()
+
+- SequenceEqual method is used to determine whether two sequences are equal.
+- This method returns true if the sequences are equal otherwise false.
 - default comparison is ```case sensitive.```
 - return false : the data is not present in the same ```order```
+
 ```
 string[] countries1 = { "USA", "India", "UK" };
 string[] countries2 = { "USA", "India", "UK" };
 
 var result = countries1.SequenceEqual(countries2);
 ```
+
 - ```case-insensitive```
+
 ```
 var result = countries1.SequenceEqual(countries2, StringComparer.OrdinalIgnoreCase);
 var result = countries1.OrderBy(c => c).SequenceEqual(countries2.OrderBy(c => c));
 ```
+
 - When comparing ```complex types``` (reference type), the default comparer will only check if the object references are equal. So, in this case SequenceEqual() returns false.
+
 ```
 To solve the problem in Example 6, there are 3 ways
     1. Use the other overloaded version of SequenceEqual() method 
@@ -915,26 +1118,36 @@ To solve the problem in Example 6, there are 3 ways
     3. Project the properties into a new anonymous type, which overrides Equals() 
         and GetHashCode() methods
 ```
+
 ### Quantifiers
+
 ### All
+
 - All() method returns true if all the elements in a sequence satisfy a given condition, otherwise false.
+
 ```
 var result = numbers.All(x => x < 10);
 ```
+
 ### Any
-- There are 2 overloaded versions of Any() method. 
-- The version without any parameters checks if the sequence contains at least one element. 
+
+- There are 2 overloaded versions of Any() method.
+- The version without any parameters checks if the sequence contains at least one element.
 - The other version with a predicate parameter checks if the sequence contains at least one element that satisfies a given condition.
+
 ```
 int[] numbers = { 1, 2, 3, 4, 5 };
 
 var result = numbers.Any();
 var result = numbers.Any(x => x > 10);
 ```
+
 ### Contains
-- There are 2 overloaded versions of the Contains() method. 
-- One of the overloaded version checks if the sequence contains a specified element using the default equality comparer. 
+
+- There are 2 overloaded versions of the Contains() method.
+- One of the overloaded version checks if the sequence contains a specified element using the default equality comparer.
 - The other overloaded version checks if the sequence contains a specified element using an alternate equality comparer.
+
 ```
 int[] numbers = { 1, 2, 3, 4, 5 };
 var result = numbers.Contains(3);
@@ -942,7 +1155,9 @@ var result = numbers.Contains(3);
 string[] countries = { "USA", "INDIA", "UK" };
 var result = countries.Contains("india", StringComparer.OrdinalIgnoreCase);
 ```
+
 - When comparing complex types like Employee, Customer etc, the default comparer will only check if the object references are equal, and not the individual property values of the objects that are being compared.
+
 ```
 To solve the problem in Example 6, there are 3 ways
 1. Use the other overloaded version of Contains() method 
@@ -951,15 +1166,3 @@ To solve the problem in Example 6, there are 3 ways
 3. Project the properties into a new anonymous type, 
     which overrides Equals() and GetHashCode() methods
 ```
-
-
-
-
-
-
-
-
-
-
-
-

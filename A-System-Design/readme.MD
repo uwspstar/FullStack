@@ -51,4 +51,5 @@
 
 - [Zero Day Exploit Targeting Popular Java Library Log4j](https://www.govcert.ch/blog/zero-day-exploit-targeting-popular-java-library-log4j/)
 - Credit GovCERT : Link: <https://lnkd.in/e4JGJ224>
+- ![ero Day Exploit Targeting Popular Java Library Log4j](https://www.govcert.ch/blog/zero-day-exploit-targeting-popular-java-library-log4j/assets/log4j_attack.png)
 - Log4j is a popular Java library developed and maintained by the Apache foundation
