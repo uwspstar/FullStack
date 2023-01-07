@@ -5,6 +5,8 @@
 
 ## As a rule when you write LINQ queries, we recommend that you use `query syntax` whenever possible and `method syntax` whenever necessary
 
+- There is no semantic or performance difference between the two different forms.
+- Query expressions are often more readable than equivalent expressions written in method syntax
 - LINQ query using Lambda Expressions ( I prefer)
 
 ## Basic
@@ -16,8 +18,6 @@
 - the query variable contains our query information `NOT the query result`
 - the result is `NOT` return from declare query variable
 - the result comes from when we execute query
-- There is no semantic or performance difference between the two different forms.
-- Query expressions are often more readable than equivalent expressions written in method syntax
 - Some query operations must be expressed as a method call. The most common such methods are those that return `singleton numeric` values, such as `Sum, Max ,Min, Average` and so on.
 
 - If the method has Action or Func parameters, these are provided in the form of a lambda expression, as shown in the following example:
