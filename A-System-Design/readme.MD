@@ -53,3 +53,12 @@
 - Credit GovCERT : Link: <https://lnkd.in/e4JGJ224>
 - ![Zero Day Exploit Targeting Popular Java Library Log4j](https://www.govcert.ch/blog/zero-day-exploit-targeting-popular-java-library-log4j/assets/log4j_attack.png)
 - Log4j is a popular Java library developed and maintained by the Apache foundation
+- Remote Code Execution (RCE)
+- good idea to restrict outgoing server traffic by whitelisting required traffic
+- What Happened?
+  - attacker insert JNDI lookup in a header field to vulnerable server
+  - vulnerable server implement log4j query malicious LDAP server
+  - malicious LDAP server response malicious Java code
+  - vulnerable servers download and execute malicious Java code
+- `TODO` : take action before execute malicious Java code (each path)
+- `TODO` : what are inside the patch ?
