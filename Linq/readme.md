@@ -54,10 +54,15 @@ students.Count()
 - <https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm>
 - Lambda expressions as a LINQ equation's executable part translate logic in a way at run time so it can pass on to the data source conveniently.
 
+```C#
+IEnumerable<Student> students = Student.GetAllStudents()
+    .Where(student => student.Gender == "Male");
+```
+
 ### Using SQL like query expressions
 
-- LINQ queries written using SQL like query expressions are ```translated into their lambda expressions before they are compiled```.
-- The Standard Query Operators are implemented as ```extension``` methods on ```IEnumerable<T> interface```.
+- LINQ queries written using SQL like query expressions are `translated into their lambda expressions before they are compiled`
+- The Standard Query Operators are implemented as `extension` methods on `IEnumerable<T> interface`
 
 ```C#
 GridView1.DataSource = from student in dataContext.Students
@@ -69,12 +74,12 @@ GridView1.DataSource = from student in dataContext.Students
 
 ### ForEach
 
-- ```ForEach``` is available for `List<T>` NOT `IEnumerable<T>` ( need .ToList())
+- `ForEach` is available for `List<T>` NOT `IEnumerable<T>` ( need .ToList())
 
 ### Extension methods
 
 - Extension methods enable you to "add" methods to existing types without creating a new derived type, recompiling, or otherwise modifying the original type.
-- Extension methods are a special kind of ```static method```, but they are called as if they were instance methods on the extended type.
+- Extension methods are a special kind of `static method` but they are called as if they were instance methods on the extended type.
 
 ### select, where
 
