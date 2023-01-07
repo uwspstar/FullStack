@@ -634,9 +634,7 @@ var employeeGroup = from employee in Employee.GetAllEmployees()
                     group employee by employee.Department;
 
 Console.WriteLine("{0} - {1}", group.Key, group.Count());
-```
-
-```
+ 
 foreach (var group in employeeGroup)
 {
     Console.WriteLine("{0} - {1}", group.Key, group.Count());
@@ -647,9 +645,7 @@ foreach (var group in employeeGroup)
     }
     Console.WriteLine(); Console.WriteLine();
 }
-```
 
-```
 var employeeGroup = from employee in Employee.GetAllEmployees()
                   group employee by employee.Department into eGroup
                   orderby eGroup.Key
@@ -663,7 +659,7 @@ var employeeGroup = from employee in Employee.GetAllEmployees()
 
 ### Group by multiple keys in linq
 
-```
+```C#
 var employeeGroups = Employee.GetAllEmployees()
                     .GroupBy(x => new { x.Department, x.Gender })
                     .OrderBy(g => g.Key.Department).ThenBy(g => g.Key.Gender)
@@ -686,9 +682,7 @@ foreach(var group in employeeGroups)
     }
     Console.WriteLine(); Console.WriteLine();
 }
-```
 
-```
 var employeeGroups = from employee in Employee.GetAllEmployees()
                     group employee by new
                     {
@@ -707,85 +701,63 @@ var employeeGroups = from employee in Employee.GetAllEmployees()
 
 ### Element Operators in LINQ
 
-### First
-
 - If the sequence does not contain any elements, then First() method throws an InvalidOperationException.
 
-```
+```C#
 int result = numbers.First();
 int result = numbers.First(x => x % 2 == 0);
 ```
 
-### FirstOrDefault
-
 - This is very similar to First, except that this method does not throw an exception when there are no elements in the sequence or when no element satisfies the condition specified by the predicate. Instead, a default value of the type that is expected is returned. For reference types the default is NULL and for value types the default depends on the actual type expected.
 
-```
+```C#
 int result = numbers.FirstOrDefault(x => x % 2 == 100);
 ```
 
-### Last
-
 - Very similar to First, except it returns the last element of the sequence
-
-### LastOrDefault
-
 - Very similar to FirstOrDefault, except it returns the last element of the sequence.
-
-### ElementAt
-
 - Returns an element at a specified index. If the sequence is empty or if the provided index value is out of range, then an ArgumentOutOfRangeException is thrown.
 
-```
+```C#
 int result = numbers.ElementAt(1);
 ```
 
-### ElementAtOrDefault
-
 - Similar to ElementAt except that this method does not throw an exception, if the sequence is empty or if the provided index value is out of range. Instead, a default value of the type that is expected is returned.
-
-### Single
-
 - There are 2 overloaded versions of this method. The first overloaded version that does not have any parameters returns the only element of the sequence.
 - Single() method throws an exception if the sequence is empty or has more than one element.
 
-```
+```C#
 int result = numbers.Single();
 ```
 
 - The second overloaded version of the Single() method is used to find the only element in a sequence that satisfies a given condition.
 
-### SingleOrDefault
-
 - Very similar to Single(), except this method does not throw an exception when the sequence is empty or when no element in the sequence satisfies the given condition. Just like Single(), this method will still throw an exception, if more than one element in the sequence satisfies the given condition.
 
-```
+```C#
+
 int result = numbers.SingleOrDefault(x => x % 2 == 0);
-```
+
+// An exception will be thrown if any of the following is true
+// a) If the sequence does not contain any elements OR
+// b) If no element in the sequence satisfies the condition OR
+// c) If more than one element in the sequence satisfies the condition
 
 ```
-An exception will be thrown if any of the following is true
-a) If the sequence does not contain any elements OR
-b) If no element in the sequence satisfies the condition OR
-c) If more than one element in the sequence satisfies the condition
-```
-
-### DefaultIfEmpty
 
 - If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
 - If the sequence is empty, then DefaultIfEmpty() returns a sequence with the default value of the expected type.
 - The other overloaded version with a parameter allows us to specify a default value.
 
-```
+```C#
 IEnumerable<int> result = numbers.DefaultIfEmpty();
 IEnumerable<int> result = numbers.DefaultIfEmpty(10);
 ```
 
 ### Group Join in LINQ
 
-### Group Join
+```C#
 
-```
 var employeesByDepartment = Department.GetAllDepartments()
                        .GroupJoin(Employee.GetAllEmployees(),
                          d => d.ID,
@@ -805,9 +777,7 @@ foreach (var department in employeesByDepartment)
     }
     Console.WriteLine();
 }
-```
 
-```
 var employeesByDepartment = from d in Department.GetAllDepartments()
                        join e in Employee.GetAllEmployees()
                        on d.ID equals e.DepartmentID into eGroup
@@ -816,11 +786,12 @@ var employeesByDepartment = from d in Department.GetAllDepartments()
                           Department = d,
                           Employees = eGroup
                        };
+
  ```
 
 ### Inner Join
 
-```
+```C#
 var result = Employee.GetAllEmployees().Join(Department.GetAllDepartments(),
             e => e.DepartmentID,
             d => d.ID, (employee, department) => new
@@ -832,9 +803,7 @@ foreach (var employee in result)
 {
     Console.WriteLine(employee.EmployeeName + "\t" + employee.DepartmentName);
 }
-```
 
-```
 var result = from e in Employee.GetAllEmployees()
             join d in Department.GetAllDepartments()
             on e.DepartmentID equals d.ID
@@ -855,12 +824,12 @@ foreach (var employee in result)
 - Join is similar to INNER JOIN in SQL and GroupJoin is similar to OUTER JOIN in SQL
 - <http://csharp-video-tutorials.blogspot.com/2014/08/part-23-difference-between-group-join.html>
 
-```
+```C#
 var result = from e in Employee.GetAllEmployees()
             join d in Department.GetAllDepartments()
             on e.DepartmentID equals d.ID
             select new { e, d };
-            
+
 var result = Employee.GetAllEmployees()
              .Join(Department.GetAllDepartments(),
               e => e.DepartmentID,
@@ -869,10 +838,7 @@ var result = Employee.GetAllEmployees()
                    e = employee,
                    d = department
               });
-                    
-```
 
-```
 var result = from d in Department.GetAllDepartments()
             join e in Employee.GetAllEmployees()
             on d.ID equals e.DepartmentID into eGroup
@@ -881,7 +847,7 @@ var result = from d in Department.GetAllDepartments()
                Department = d,
                Employees = eGroup
             };
-        
+
 var result = Department.GetAllDepartments()
             .GroupJoin(Employee.GetAllEmployees(),
              d => d.ID,
@@ -891,7 +857,7 @@ var result = Department.GetAllDepartments()
                   Department = department,
                   Employees = employees
              });
-                                         
+
 ```
 
 ### Left Outer Join
@@ -899,7 +865,7 @@ var result = Department.GetAllDepartments()
 - To implement Left Outer Join, with extension method syntax we use the GroupJoin() method along with SelectMany() and DefaultIfEmpty() methods.
 - LEFT OUTER JOIN all the matching elements + all the non matching elements from the left collection are included in the result set.
 
-```
+```C#
 var result = from e in Employee.GetAllEmployees()
             join d in Department.GetAllDepartments()
             on e.DepartmentID equals d.ID into eGroup
@@ -909,7 +875,7 @@ var result = from e in Employee.GetAllEmployees()
                  EmployeeName = e.Name,
                  DepartmentName = d == null ? "No Department" : d.Name
             };
-            
+
 var result = Employee.GetAllEmployees()
         .GroupJoin(Department.GetAllDepartments(),
                 e => e.DepartmentID,
@@ -921,15 +887,16 @@ var result = Employee.GetAllEmployees()
                         EmployeeName = a.emp.Name,
                         DepartmentName = b == null ? "No Department" : b.Name
                 });
+
 ```
 
 ### Cross Join
 
-- The on keyword that specfies the JOIN KEY is not required.
+- The on keyword that specifies the JOIN KEY is not required.
 - Cross join produces a cartesian product i.e when we cross join two sequences, every element in the first collection is combined with every element in the second collection.
 - To implement Cross Join using extension method syntax, we could either use SelectMany() method or Join() method
 
-```
+```C#
 var result = from e in Employee.GetAllEmployees()
             from d in Department.GetAllDepartments()
             select new { e, d };
@@ -955,14 +922,14 @@ var result = Employee.GetAllEmployees()
 
 - Notice that in the output we don't get unique employees. This is because, the default comparer is being used which will just check for object references being equal and not the individual property values.
 
-```
+```C#
 var result = countries.Distinct();
 var result = countries.Distinct(StringComparer.OrdinalIgnoreCase);
 ```
 
 - Using the overloaded version of Distinct() method to which we can pass a custom class that implements IEqualityComparer
 
-```
+```C#
 //  Create a custom class that implements IEqualityComparer<T> and implement Equals() and GetHashCode() methods
 
 public class EmployeeComparer : IEqualityComparer<Employee>
@@ -985,7 +952,7 @@ public class EmployeeComparer : IEqualityComparer<Employee>
 
 - Union combines two collections into one collection while removing the duplicate elements
 
-```
+```C#
 int[] numbers1 = { 1, 2, 3, 4, 5 };
 int[] numbers2 = { 1, 3, 6, 7, 8 };
 
@@ -998,7 +965,7 @@ var result = numbers1.Union(numbers2);
 
 - Intersect() returns the common elements between the 2 collections.
 
-```
+```C#
 var result = numbers1.Intersect(numbers2);
 ```
 
@@ -1006,7 +973,7 @@ var result = numbers1.Intersect(numbers2);
 
 - Except() returns the elements that are present in the first collection but not in the second collection.
 
-```
+```C#
 var result = numbers1.Except(numbers2);
 ```
 
@@ -1016,7 +983,7 @@ var result = numbers1.Except(numbers2);
 
 - Range operator generates a sequence of integers within a specified range. This method has 2 integer parameters. The start parameter specifies the integer to start with and the count parameter specifies the number of sequential integers to generate.
 
-```
+```C#
 var evenNumbers = Enumerable.Range(1, 10).Where(x => x % 2 == 0);
 ```
 
@@ -1024,22 +991,23 @@ var evenNumbers = Enumerable.Range(1, 10).Where(x => x % 2 == 0);
 
 - Repeat operator is used to generate a sequence that contains one repeated value.
 
-```
+```C#
 var result = Enumerable.Repeat("Hello", 5);
+
 ```
 
 ### Empty
 
 - Empty operator returns an empty sequence of the specified type.
 
-```
+```C#
 Enumerable.Empty<int>() // Returns an empty IEnumerable<int>
 Enumerable.Empty<string>() // Returns an empty IEnumerable<string>
 ```
 
-- ```NULL-COALESCING operator```
+- `NULL-COALESCING operator`
 
-```
+```C#
 IEnumerable<int> result = GetIntegerSequence() ?? Enumerable.Empty<int>();
 ```
 
@@ -1048,7 +1016,7 @@ IEnumerable<int> result = GetIntegerSequence() ?? Enumerable.Empty<int>();
 - concatenate both the integer sequences (numbers1 & numbers2) into one integer sequence. Notice that the duplicate elements ARE ```NOT REMOVED.```
 - union operator also combines the 2 integer sequences (numbers1 & numbers2) into one integer sequence, but notice that the duplicate elements ARE ```REMOVED.```
 
-```
+```C#
 int[] numbers1 = { 1, 2, 3 };
 int[] numbers2 = { 1, 4, 5 };
 
@@ -1063,29 +1031,32 @@ var result = numbers1.Union(numbers2);
 - default comparison is ```case sensitive.```
 - return false : the data is not present in the same ```order```
 
-```
+```C#
 string[] countries1 = { "USA", "India", "UK" };
 string[] countries2 = { "USA", "India", "UK" };
 
 var result = countries1.SequenceEqual(countries2);
 ```
 
-- ```case-insensitive```
+- `case-insensitive`
 
-```
+```C#
 var result = countries1.SequenceEqual(countries2, StringComparer.OrdinalIgnoreCase);
 var result = countries1.OrderBy(c => c).SequenceEqual(countries2.OrderBy(c => c));
+
 ```
 
 - When comparing ```complex types``` (reference type), the default comparer will only check if the object references are equal. So, in this case SequenceEqual() returns false.
 
-```
+```C#
+/*
 To solve the problem in Example 6, there are 3 ways
-    1. Use the other overloaded version of SequenceEqual() method 
+    1. Use the other overloaded version of SequenceEqual() method
         to which we can pass a custom class that implements IEqualityComparer
     2. Override Equals() and GetHashCode() methods in Employee class
-    3. Project the properties into a new anonymous type, which overrides Equals() 
+    3. Project the properties into a new anonymous type, which overrides Equals()
         and GetHashCode() methods
+*/
 ```
 
 ### Quantifiers
@@ -1094,7 +1065,7 @@ To solve the problem in Example 6, there are 3 ways
 
 - All() method returns true if all the elements in a sequence satisfy a given condition, otherwise false.
 
-```
+```C#
 var result = numbers.All(x => x < 10);
 ```
 
@@ -1104,7 +1075,7 @@ var result = numbers.All(x => x < 10);
 - The version without any parameters checks if the sequence contains at least one element.
 - The other version with a predicate parameter checks if the sequence contains at least one element that satisfies a given condition.
 
-```
+```C#
 int[] numbers = { 1, 2, 3, 4, 5 };
 
 var result = numbers.Any();
@@ -1117,7 +1088,7 @@ var result = numbers.Any(x => x > 10);
 - One of the overloaded version checks if the sequence contains a specified element using the default equality comparer.
 - The other overloaded version checks if the sequence contains a specified element using an alternate equality comparer.
 
-```
+```C#
 int[] numbers = { 1, 2, 3, 4, 5 };
 var result = numbers.Contains(3);
 
@@ -1126,12 +1097,3 @@ var result = countries.Contains("india", StringComparer.OrdinalIgnoreCase);
 ```
 
 - When comparing complex types like Employee, Customer etc, the default comparer will only check if the object references are equal, and not the individual property values of the objects that are being compared.
-
-```
-To solve the problem in Example 6, there are 3 ways
-1. Use the other overloaded version of Contains() method 
-    to which we can pass a custom class that implements IEqualityComparer
-2. Override Equals() and GetHashCode() methods in Employee class
-3. Project the properties into a new anonymous type, 
-    which overrides Equals() and GetHashCode() methods
-```
