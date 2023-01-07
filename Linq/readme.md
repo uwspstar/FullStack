@@ -233,8 +233,12 @@ IEnumerable<int> evenNumbers = numbers.Where(predicate);
 ### SelectMany
 
 ```C#
-IEnumerable<string> allSubjects = Student.GetAllStudents().SelectMany(s => s.Subjects);
-IEnumerable<string> allSubjects = Student.GetAllStudents().SelectMany(s => s.Subjects).Distinct();
+IEnumerable<string> allSubjects = Student.GetAllStudents()
+                                    .SelectMany(s => s.Subjects);
+
+IEnumerable<string> allSubjects = Student.GetAllStudents()
+                                    .SelectMany(s => s.Subjects)
+                                    .Distinct();
 
 IEnumerable<string> allSubjects = from student in Student.GetAllStudents()
                                 from subject in student.Subjects
@@ -244,11 +248,9 @@ IEnumerable<string> allSubjects = (from student in Student.GetAllStudents()
                                  from subject in student.Subjects
                                  select subject)
                                  .Distinct();
-```
 
-```C#
-var result = Student.GetAllStudents().SelectMany(s => s.Subjects, (student, subject) =>
-    new { StudentName = student.Name, Subject = subject });
+var result = Student.GetAllStudents()
+                .SelectMany(s => s.Subjects, (student, subject) =>  new { StudentName = student.Name, Subject = subject });
 
 foreach (var v in result)
 {
@@ -256,8 +258,8 @@ foreach (var v in result)
 }
 
 var result = from student in Student.GetAllStudents()
-                    from subject in student.Subjects
-                    select new { StudentName = student.Name, Subject = subject };
+                from subject in student.Subjects
+                select new { StudentName = student.Name, Subject = subject };
 
 foreach (var v in result)
 {
@@ -267,10 +269,12 @@ foreach (var v in result)
 
 ### Select vs SelectMany
 
-- in this example, the Select() method returns List of `List<string>`
+- in this example, the `Select()` method returns `List` of `List<string>`
 
 ```C#
-IEnumerable<List<string>> result = Student.GetAllStudents().Select(s => s.Subjects);
+IEnumerable<List<string>> result = Student.GetAllStudents()
+                                    .Select(s => s.Subjects);
+
 foreach (List<string> stringList in result)
 {
     foreach (string str in stringList)
