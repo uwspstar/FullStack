@@ -85,14 +85,14 @@ GridView1.DataSource = from student in dataContext.Students
 
 - LINQ's standard query operators (select, where etc ) are implemented in Enumerable class as extension methods on the `IEnumerable<T>` interface.
 
+### `List<T>` implements `IEnumerable<T>` interface
+
 ```C#
 List<int> Numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 IEnumerable<int> EvenNumbers = Numbers.Where(n => n % 2 == 0);
 ```
 
-### `List<T>` implements `IEnumerable<T>` interface
-
-- ```Where()``` method NOT belonging to `List<T>` class, we are still able to use it as though it belong to `List<T>` class.
+- `Where` method NOT belonging to `List<T>` class, we are still able to use it as though it belong to `List<T>` class.
 - This is possible because Where() method is implemented as extension method in `IEnumerable<T>` interface and `List<T>` implements `IEnumerable<T>` interface
 
 ### How to implement extension methods
