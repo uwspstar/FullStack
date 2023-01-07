@@ -1,6 +1,6 @@
 # System Design
 
-- Credit <https://blog.bytebytego.com/>
+- Credit ByteByteGo Newsletter <https://blog.bytebytego.com/>
 - SDI-vol1: <https://amzn.to/3tK0qQn>
 - SDI-vol2: <https://amzn.to/37ZisW9>
 
