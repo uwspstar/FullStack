@@ -18,7 +18,7 @@
 
 - If the method has Action or Func parameters, these are provided in the form of a lambda expression, as shown in the following example:
 
-```
+```C#
 List<int> numbers1 = new List<int>() { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 }; 
 List<int> numbers2 = new List<int>() { 15, 14, 11, 13, 19, 18, 16, 17, 12, 10 }; 
 // Query #4. 
@@ -29,18 +29,18 @@ double average = numbers1.Average();
 
 ### LINQ provider is a component between the LINQ query and the actual data source
 
-```
+```C#
 // LINQ query using Lambda Expressions.
 IEnumerable<Student> students = Student.GetAllStudents()
     .Where(student => student.Gender == "Male");
 
 // LINQ query using using SQL like query expressions, 
-// Query not excute yet
+// Query not execute yet
 IEnumerable<Student> students = from student in Student.GetAllStudents()
                                 where student.Gender == "Male"
                                 select student;
                                 
-// Excute query
+// Execute query
 students.Count()
 ```
 
@@ -51,17 +51,17 @@ students.Count()
 - LINQ queries written using SQL like query expressions are ```translated into their lambda expressions before they are compiled```.
 - The Standard Query Operators are implemented as ```extension``` methods on ```IEnumerable<T> interface```.
 
-```
+```C#
 GridView1.DataSource = from student in dataContext.Students
                        where student.Gender == "Male"
                        select student;
 ```
 
-- Since List<T> implements IEnumerable<T>, the LINQ Standard Query Operators will be available
+- Since `List<T>` implements `IEnumerable<T>`, the LINQ Standard Query Operators will be available
 
 ### ForEach
 
-- ```ForEach``` is available for List<T> NOT IEnumerable<T> ( need .ToList())
+- ```ForEach``` is available for `List<T>` NOT `IEnumerable<T>` ( need .ToList())
 
 ### Extension methods
 
@@ -70,17 +70,17 @@ GridView1.DataSource = from student in dataContext.Students
 
 ### select, where
 
-- LINQ's standard query operators (select, where etc ) are implemented in Enumerable class as extension methods on the IEnumerable<T> interface.
+- LINQ's standard query operators (select, where etc ) are implemented in Enumerable class as extension methods on the `IEnumerable<T>` interface.
 
-```
+```C#
 List<int> Numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 IEnumerable<int> EvenNumbers = Numbers.Where(n => n % 2 == 0);
 ```
 
-### List<T> implements IEnumerable<T> interface
+### `List<T>` implements `IEnumerable<T>` interface
 
-- ```Where()``` method NOT belonging to List<T> class, we are still able to use it as though it belong to List<T> class.
-- This is possible because Where() method is implemented as extension method in IEnumerable<T> interface and List<T> implements IEnumerable<T> interface
+- ```Where()``` method NOT belonging to `List<T>` class, we are still able to use it as though it belong to `List<T>` class.
+- This is possible because Where() method is implemented as extension method in `IEnumerable<T>` interface and `List<T>` implements `IEnumerable<T>` interface
 
 ### How to implement extension methods
 
