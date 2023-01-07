@@ -224,7 +224,7 @@ var evenNumbers = from i in myArray
 ```C#
 IEnumerable<int> evenNumbers = numbers.Where(num => num % 2 == 0);
 
-can be rewritten as shown below
+// can be rewritten as shown below
 
 Func<int, bool> predicate = i => i % 2 == 0;
 IEnumerable<int> evenNumbers = numbers.Where(predicate);
