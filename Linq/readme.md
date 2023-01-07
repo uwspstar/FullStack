@@ -22,9 +22,10 @@
 List<int> numbers1 = new List<int>() { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 }; 
 List<int> numbers2 = new List<int>() { 15, 14, 11, 13, 19, 18, 16, 17, 12, 10 }; 
 // Query #4 
-double average = numbers1.Average();
+double average = numbers1.Average(); // executes immediately
+```
 
-// In the Query #4, executes immediately. This is because it returns a single value, and NOT a generic IEnumerable<T> collection
+- In the Query #4, executes immediately This is because it returns a single value, and `NOT a generic IEnumerable<T>` collection
 
 ### LINQ provider is a component between the LINQ query and the actual data source
 
