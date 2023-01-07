@@ -943,7 +943,6 @@ var result = countries.Distinct(StringComparer.OrdinalIgnoreCase);
 
 ```C#
 //  Create a custom class that implements IEqualityComparer<T> and implement Equals() and GetHashCode() methods
-
 public class EmployeeComparer : IEqualityComparer<Employee>
 {
     public bool Equals(Employee x, Employee y)
