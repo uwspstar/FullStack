@@ -50,6 +50,7 @@ students.Count()
 
 ### Using Lambda Expressions
 
+- <https://www.tutorialspoint.com/linq/linq_lambda_expressions.htm>
 - Lambda expressions as a LINQ equation's executable part translate logic in a way at run time so it can pass on to the data source conveniently.
 
 ### Using SQL like query expressions
