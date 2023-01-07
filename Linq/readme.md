@@ -5,6 +5,10 @@
 
 ## As a rule when you write LINQ queries, we recommend that you use `query syntax` whenever possible and `method syntax` whenever necessary
 
+- LINQ query using Lambda Expressions ( I prefer)
+
+## Basic
+
 - LINQ stands for Language Integrated Query.
 - LINQ queries `any collection of objects that supports IEnumerable` or the `generic IEnumerable<T> interface`.
 - LINQ enables us to query any type of data store (SQL Server, XML documents, Objects in memory etc).
