@@ -84,7 +84,7 @@ IEnumerable<int> EvenNumbers = Numbers.Where(n => n % 2 == 0);
 
 ### How to implement extension methods
 
-```
+```C#
 public class StringHelper
 {
     public static string ChangeFirstLetterCase(string inputString)
@@ -94,16 +94,17 @@ public class StringHelper
 
 }
 
-Instead we have to call it as shown below.
+// Instead we have to call it as shown below.
 string result = StringHelper.ChangeFirstLetterCase(strName);
 
-Convert ChangeFirstLetterCase() method to an extension method
+// Convert ChangeFirstLetterCase() method to an extension method
 string result = strName.ChangeFirstLetterCase();
 
+/*
 To convert ChangeFirstLetterCase() method to an extension method, make the following 2 changes
 1. Make StringHelper static class
-2. The type the method extends should be passed as a first parameter with this keyword preceeding it.
-
+2. The type the method extends should be passed as a first parameter with this keyword preceding it.
+*/
 
 public static class StringHelper
 {
@@ -112,12 +113,11 @@ public static class StringHelper
         return inputString;
     }
 }
-
 ```
 
 - Since all LINQ extension methods are defined in Enumerable class, the syntax will be as shown below.
 
-```
+```C#
 List<int> Numbers = new List<int> { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 
 IEnumerable<int> EvenNumbers = Enumerable.Where(Numbers, n => n % 2 == 0); 
@@ -125,7 +125,7 @@ IEnumerable<int> EvenNumbers = Enumerable.Where(Numbers, n => n % 2 == 0);
 
 ### LINQ Aggregate
 
-```
+```C#
 int[] Numbers = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10 };
 int smallestNumber = Numbers.Min();
 int smallestEvenNumber = Numbers.Where(n => n % 2 == 0).Min();
@@ -137,35 +137,30 @@ int countOfAllNumbers = Numbers.Count();
 int countOfAllEvenNumbers = Numbers.Where(n => n % 2 == 0).Count();
 double averageOfAllNumbers = Numbers.Average();
 double averageOfAllEvenNumbers = Numbers.Where(n => n % 2 == 0).Average();
-
 ```
 
 ### How Aggregate() function works?
 
-```
+```C#
 string[] countries = { "India", "US", "UK", "Canada", "Australia" };
 string result = countries.Aggregate((a, b) => a + ", " + b);
 
-Step 1. First "India" is concatenated with "US" to produce result "India, US"
-
-Step 2. Result in Step 1 is then concatenated with "UK" to produce result "India, US, UK"
-
-Step 3: Result in Step 2 is then concatenated with "Canada" to produce result "India, US, UK, Canada"
-
-This goes on until the last element in the array 
-to produce the final single string "India, US, UK, Canada, Australia"
+// Step 1. First "India" is concatenated with "US" to produce result "India, US"
+// Step 2. Result in Step 1 is then concatenated with "UK" to produce result "India, US, UK"
+// Step 3: Result in Step 2 is then concatenated with "Canada" to produce result "India, US, UK, Canada"
+// This goes on until the last element in the array to produce the final single string "India, US, UK, Canada, Australia"
 ```
 
 - One of the overloaded version of Aggregate() function has a Seed parameter.
 
-```
-If we pass 10 as the value for Seed parameter
+```C#
+// If we pass 10 as the value for Seed parameter
 int result = Numbers.Aggregate(10, (a, b) => a * b);
 
-Step 1: Multiply (10X2) to produce result 20
-Step 2: Result (20) in Step 1 is then multiplied with 3 (20X3) to produce result 60
-Step 3: Result (60) in Step 2 is then multiplied with 4 (60X4) to produce result 240
-Step 4: Result (240) in Step 3 is then multiplied with 5 (240X5) to produce final result 1200
+// Step 1: Multiply (10X2) to produce result 20
+// Step 2: Result (20) in Step 1 is then multiplied with 3 (20X3) to produce result 60
+//Step 3: Result (60) in Step 2 is then multiplied with 4 (60X4) to produce result 240
+// Step 4: Result (240) in Step 3 is then multiplied with 5 (240X5) to produce final result 1200
 ```
 
 ### WHERE
@@ -173,7 +168,7 @@ Step 4: Result (240) in Step 3 is then multiplied with 5 (240X5) to produce fina
 - The WHERE standard query operator belong to Restriction Operators category in LINQ.
 - 2 overloaded versions of WHERE extension method in Enumerable class
 
-```
+```C#
 public static IEnumerable<TSource> Where<TSource>(
     this IEnumerable<TSource> source,
     Func<TSource, bool> predicate);
@@ -186,7 +181,7 @@ public static IEnumerable<TSource> Where<TSource>(
 
 - you can call a function in your statement to make your code more readable
 
-```
+```C#
 var evenNumbers = from i in myArray                     
  where IsEvenAndGT5(i)                    
  select i;
@@ -202,7 +197,7 @@ static bool IsEvenAndGT5(int i)
 
 - multiple where clauses is the equivalent of using the && operator
 
-```
+```C#
 var evenNumbers = from i in myArray                    
     where i % 2 == 0                     
     where i > 5                    
@@ -213,7 +208,7 @@ var evenNumbers = from i in myArray
 
 - A predicate is a function to test each element for a condition
 
-```
+```C#
 IEnumerable<int> evenNumbers = numbers.Where(num => num % 2 == 0);
 
 can be rewritten as shown below
@@ -224,9 +219,9 @@ IEnumerable<int> evenNumbers = numbers.Where(predicate);
 
 ### SelectMany
 
-```
-IEnumerable<string> allSubjects = Student.GetAllStudetns().SelectMany(s => s.Subjects);
-IEnumerable<string> allSubjects = Student.GetAllStudetns().SelectMany(s => s.Subjects).Distinct();
+```C#
+IEnumerable<string> allSubjects = Student.GetAllStudents().SelectMany(s => s.Subjects);
+IEnumerable<string> allSubjects = Student.GetAllStudents().SelectMany(s => s.Subjects).Distinct();
 
 IEnumerable<string> allSubjects = from student in Student.GetAllStudetns()
                                 from subject in student.Subjects
@@ -238,8 +233,8 @@ IEnumerable<string> allSubjects = (from student in Student.GetAllStudetns()
                                  .Distinct();
 ```
 
-```
-var result = Student.GetAllStudetns().SelectMany(s => s.Subjects, (student, subject) =>
+```C#
+var result = Student.GetAllStudents().SelectMany(s => s.Subjects, (student, subject) =>
     new { StudentName = student.Name, Subject = subject });
 
 foreach (var v in result)
@@ -248,23 +243,23 @@ foreach (var v in result)
 }
 
 
-var result = from student in Student.GetAllStudetns()
+var result = from student in Student.GetAllStudents()
                     from subject in student.Subjects
                     select new { StudnetName = student.Name, Subject = subject };
 
 foreach (var v in result)
 {
-    Console.WriteLine(v.StudnetName + " - " + v.Subject);
+    Console.WriteLine(v.StudentName + " - " + v.Subject);
 }
 
 ```
 
 ### Select vs SelectMany
 
-- in this example, the Select() method returns List of List<string>
+- in this example, the Select() method returns List of `List<string>`
 
-```
-IEnumerable<List<string>> result = Student.GetAllStudetns().Select(s => s.Subjects);
+```C#
+IEnumerable<List<string>> result = Student.GetAllStudents().Select(s => s.Subjects);
 foreach (List<string> stringList in result)
 {
     foreach (string str in stringList)
@@ -276,8 +271,8 @@ foreach (List<string> stringList in result)
 
 - SelectMany() on the other hand, flattens queries that return lists of lists into a single list. So in this case to print all the subjects we have to use just one foreach loop.
 
-```
-IEnumerable<string> result = Student.GetAllStudetns().SelectMany(s => s.Subjects);
+```C#
+IEnumerable<string> result = Student.GetAllStudents().SelectMany(s => s.Subjects);
 foreach (string str in result)
 {
     Console.WriteLine(str);
@@ -288,7 +283,7 @@ foreach (string str in result)
 
 - OrderBy, OrderByDescending, ThenBy, and ThenByDescending can be used to sort data. Reverse method simply reverses the items in a given collection.
 
-```
+```C#
 // Example 1: Sort Students by Name in ascending order
 IEnumerable<Student> result = Student.GetAllStudents().OrderBy(s => s.Name);
 
@@ -306,23 +301,21 @@ IEnumerable<Student> result = from student in Student.GetAllStudents()
                               select student;
 ```
 
-- ```OrderBy``` or ```OrderByDescending``` work fine when we want to sort a collection just ```by one value``` or expression.
+- `OrderBy` or `OrderByDescending` work fine when we want to sort a collection just `by one value` or expression.
 
-- If want to ```sort by more than one value``` or expression, that's when we use ```ThenBy``` or ```ThenByDescending``` along with OrderBy or OrderByDescending.
+- If want to `sort by more than one value` or expression, that's when we use `ThenBy` or `ThenByDescending` along with OrderBy or OrderByDescending.
 
-- ```OrderBy``` or ```OrderByDescending``` performs the ```primary sort```.
-- ```ThenBy``` or ```ThenByDescending``` is used for ```adding secondary sort```.
+- `OrderBy` or `OrderByDescending` performs the `primary sort`.
+- `ThenBy` or `ThenByDescending` is used for `adding secondary sort`.
 - Secondary Sort operators (ThenBy or ThenByDescending ) can be used more than once in the same LINQ query.
 
-```
+```C#
 // Example 1: 
 // a) Sorts Students first by TotalMarks in ascending order(Primary Sort) 
-// b) The 4 Students with TotalMarks of 800, 
-will then be sorted by Name in ascending order (First Secondary Sort)
-// c) The 2 Students with Name of John, 
-will then be sorted by StudentID in ascending order (Second Secondary Sort)
+// b) The 4 Students with TotalMarks of 800, will then be sorted by Name in ascending order (First Secondary Sort)
+// c) The 2 Students with Name of John, will then be sorted by StudentID in ascending order (Second Secondary Sort)
 
-IEnumerable<Student> result = Student.GetAllStudetns()
+IEnumerable<Student> result = Student.GetAllStudents()
 .OrderBy(s => s.TotalMarks).ThenBy(s => s.Name).ThenBy(s => s.StudentID);
 
 
@@ -338,7 +331,7 @@ IEnumerable<Student> result = students.Reverse();
 
 - Take method returns a specified number of elements from the start of the collection. The number of items to return is specified using the count parameter this method expects.
 
-```
+```C#
 IEnumerable<string> result = countries.Take(3);
 
 IEnumerable<string> result = (from country in countries
@@ -348,7 +341,7 @@ IEnumerable<string> result = (from country in countries
 
 - Skip method skips a specified number of elements in a collection and then returns the remaining elements. The number of items to skip is specified using the count parameter this method expects.
 
-```
+```C#
 IEnumerable<string> result = countries.Skip(3);
 ```
 
@@ -356,13 +349,13 @@ IEnumerable<string> result = countries.Skip(3);
 
 - TakeWhile method returns elements from a collection as long as the given condition specified by the predicate is true.
 
-```
+```C#
 IEnumerable<string> result = countries.TakeWhile(s => s.Length > 2);
 ```
 
 - SkipWhile method skips elements in a collection as long as the given condition specified by the predicate is true, and then returns the remaining elements.
 
-```
+```C#
 IEnumerable<string> result = countries.SkipWhile(s => s.Length > 2);
 ```
 
@@ -370,37 +363,25 @@ IEnumerable<string> result = countries.SkipWhile(s => s.Length > 2);
 
 - <http://csharp-video-tutorials.blogspot.com/2014/07/part-13-implement-paging-using-skip-and.html>
 
-```
+```C#
 IEnumerable<Student> result = students.Skip((pageNumber - 1) * pageSize).Take(pageSize);
  ```
 
 ### Deferred execution vs Immediate execution
 
 - <http://csharp-video-tutorials.blogspot.com/2014/07/part-14-linq-query-deferred-execution.html>
-- LINQ operators can be broadly classified into 2 categories based on the behaviour of query execution
+- LINQ operators can be broadly classified into 2 categories based on the behavior of query execution
 
-```
-1. Deferred or Lazy Operators -  These query operators use deferred execution.
-Examples - select, where, Take, Skip etc
+- 1. Deferred or Lazy Operators -  These query operators use deferred execution. Examples - select, where, Take, Skip etc
+- 2. Immediate or Greedy Operators - These query operators use immediate execution.  Examples - count, average, min, max, ToList etc
 
-2. Immediate or Greedy Operators - These query operators use immediate execution. 
-Examples - count, average, min, max, ToList etc
-```
-
-- ```Deferred or Lazy Operators```, Examples - ```select```, ```where```, ```Take```, ```Skip``` etc
-
-```
- // LINQ Query is only defined here and is not executed at this point
+```C#
+// LINQ Query is only defined here and is not executed at this point
 // If the query is executed at this point, the result should not display Tim
 IEnumerable<Student> result = from student in listStudents
                               where student.TotalMarks == 800
                               select student;
                                           
-```
-
-- ```Immediate or Greedy Operators```, Examples - ```count```, ```average```, ```min```, ```max```, ```ToList``` etc
-
-```
 // Since we are using ToList() which is a greedy operator
 // the LINQ Query is executed immediately at this point
 IEnumerable<Student> result = (from student in listStudents
@@ -412,13 +393,13 @@ IEnumerable<Student> result = (from student in listStudents
 
 ### ToList
 
-```
+```C#
 List<int> result = numbers.ToList();
 ```
 
 ### ToArray
 
-```
+```C#
 List<string> countries = new List<string> { "US", "India", "UK", "Australia", "Canada" };
 
 string[] result = (from country in countries
@@ -428,19 +409,19 @@ string[] result = (from country in countries
 
 - ToDictionary : Keys in the dictionary must be unique.
 
-```
+```C#
 Unhandled Exception: System.ArgumentException: An item with the same key has already been added.
 ```
 
-```
+```C#
 Dictionary<int, string> result = listStudents.ToDictionary(x => x.StudentID, x => x.Name);
 
-ToDictionary() that takes 2 parameters 
-a) keySelector - A function to extract a key from each element
-b) elementSelector - A function to produce a result element from each element in the
+// ToDictionary() that takes 2 parameters 
+// a) keySelector - A function to extract a key from each element
+// b) elementSelector - A function to produce a result element from each element in the
 
-overloaded of ToDictionary() that takes 1 parameter
-a) keySelector - A function to extract a key from each element
+// overloaded of ToDictionary() that takes 1 parameter
+// a) keySelector - A function to extract a key from each element
 
 Dictionary<int, Student> result = listStudents.ToDictionary(x => x.StudentID);
 
@@ -451,7 +432,7 @@ Dictionary<int, Student> result = listStudents.ToDictionary(x => x.StudentID);
 - Just like a dictionary,
 - a Lookup is a collection of key/value pairs. A dictionary cannot contain keys with identical values, where as a Lookup can.
 
-```
+```C#
 // Group employees by JobTitle
 var employeesByJobTitle = listEmployees.ToLookup(x => x.JobTitle);
 
@@ -472,7 +453,7 @@ foreach (var kvp in employeesByJobTitle)
 
 - attempts to convert all of the items within an existing collection to another type and return them in a new collection.
 
-```
+```C#
 ArrayList list = new ArrayList();
 list.Add(1);
 list.Add(2);
@@ -488,7 +469,7 @@ IEnumerable<int> result = list.Cast<int>();
 
 - return only elements of the specified type. The other type elements are simply ignored and excluded from the result set.
 
-```
+```C#
 ArrayList list = new ArrayList();
 list.Add(1);
 list.Add(2);
@@ -502,19 +483,15 @@ IEnumerable<int> result = list.OfType<int>();
 ### When to use Cast over OfType and vice versa?
 
 - We would generally use Cast when the following 2 conditions are met
-
-```
-- 1. We want to cast all the items in the collection &
-- 2. We know for sure the collection contains only elements of the specified type
-```
-
+  - 1. We want to cast all the items in the collection &
+  - 2. We know for sure the collection contains only elements of the specified type
 - If we want to filter the elements and return only the ones of the specified type, then we would use OfType.
 
 ### AsQueryable
 
 - There are 2 overloaded versions of this method.
 
-```
+```C#
 One overloaded version converts System.Collections.IEnumerable to System.Linq.IQueryable
 
 The other overloaded version converts a generic System.Collections.Generic.IEnumerable<T> 
@@ -526,15 +503,12 @@ to a generic System.Linq.IQueryable<T>
 ### AsEnumerable
 
 - use AsEnumerable operator to move query processing to the client side
-
-```
-1. The "inside part" that is the query before AsEnumerable operator is executed as Linq-to-SQL
-2. The "ouside part" that is the query after AsEnumerable operator is executed as Linq-to-Objects
-```
+  - 1. The "inside part" that is the query before AsEnumerable operator is executed as Linq-to-SQL
+  - 2. The "outside part" that is the query after AsEnumerable operator is executed as Linq-to-Objects
 
 - <http://csharp-video-tutorials.blogspot.com/2014/07/part-17-asenumerable-and-asqueryable-in.html>
 
-```
+```C#
 var result = dbContext.Employees.AsEnumerable()
                       .Where(x => x.Gender == "Male")
                       .OrderByDescending(x => x.Salary).Take(5);
@@ -542,10 +516,10 @@ var result = dbContext.Employees.AsEnumerable()
 
 ### GroupBy
 
-- GroupBy creates and returns a sequence of IGrouping<K,V>
+- GroupBy creates and returns a sequence of `IGrouping<K,V>`
 - This operator takes a flat sequence of items, organize that sequence into groups (IGrouping<K,V>) based on a specific key and return groups of sequences.
 
-```
+```C#
 var employeeGroup = from employee in Employee.GetAllEmployees()
                     group employee by employee.Department;
 
