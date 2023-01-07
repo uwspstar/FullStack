@@ -284,7 +284,7 @@ foreach (List<string> stringList in result)
 }
 ```
 
-- SelectMany() on the other hand, flattens queries that return lists of lists into a single list. So in this case to print all the subjects we have to use just one foreach loop.
+- `SelectMany()` on the other hand, flattens queries that return lists of lists into a `single list`. So in this case to print all the subjects we have to use just one foreach loop.
 
 ```C#
 IEnumerable<string> result = Student.GetAllStudents().SelectMany(s => s.Subjects);
@@ -300,20 +300,22 @@ foreach (string str in result)
 
 ```C#
 // Example 1: Sort Students by Name in ascending order
-IEnumerable<Student> result = Student.GetAllStudents().OrderBy(s => s.Name);
+IEnumerable<Student> result = Student.GetAllStudents()
+                                .OrderBy(s => s.Name);
 
 // Example 2: Rewrite Example 1 using SQL like syntax
 IEnumerable<Student> result = from student in Student.GetAllStudents()
-                              orderby student.Name
-                              select student;
+                                orderby student.Name
+                                select student;
 
 // Example 3: Sort Students by Name in descending order
-IEnumerable<Student> result = Student.GetAllStudents().OrderByDescending(s => s.Name);
+IEnumerable<Student> result = Student.GetAllStudents()
+                                .OrderByDescending(s => s.Name);
 
 // Example 4: Rewrite Example 3 using SQL like syntax
 IEnumerable<Student> result = from student in Student.GetAllStudents()
-                              orderby student.Name descending
-                              select student;
+                                orderby student.Name descending
+                                select student;
 ```
 
 - `OrderBy` or `OrderByDescending` work fine when we want to sort a collection just `by one value` or expression.
@@ -331,7 +333,9 @@ IEnumerable<Student> result = from student in Student.GetAllStudents()
 // c) The 2 Students with Name of John, will then be sorted by StudentID in ascending order (Second Secondary Sort)
 
 IEnumerable<Student> result = Student.GetAllStudents()
-.OrderBy(s => s.TotalMarks).ThenBy(s => s.Name).ThenBy(s => s.StudentID);
+                                .OrderBy(s => s.TotalMarks)
+                                .ThenBy(s => s.Name)
+                                .ThenBy(s => s.StudentID);
 
 
 IEnumerable<Student> result = from student in Student.GetAllStudents()
