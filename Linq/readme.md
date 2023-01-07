@@ -223,11 +223,11 @@ IEnumerable<int> evenNumbers = numbers.Where(predicate);
 IEnumerable<string> allSubjects = Student.GetAllStudents().SelectMany(s => s.Subjects);
 IEnumerable<string> allSubjects = Student.GetAllStudents().SelectMany(s => s.Subjects).Distinct();
 
-IEnumerable<string> allSubjects = from student in Student.GetAllStudetns()
+IEnumerable<string> allSubjects = from student in Student.GetAllStudents()
                                 from subject in student.Subjects
                                 select subject;
                   
-IEnumerable<string> allSubjects = (from student in Student.GetAllStudetns()
+IEnumerable<string> allSubjects = (from student in Student.GetAllStudents()
                                  from subject in student.Subjects
                                  select subject)
                                  .Distinct();
@@ -242,16 +242,14 @@ foreach (var v in result)
     Console.WriteLine(v.StudentName + " - " + v.Subject);
 }
 
-
 var result = from student in Student.GetAllStudents()
                     from subject in student.Subjects
-                    select new { StudnetName = student.Name, Subject = subject };
+                    select new { StudentName = student.Name, Subject = subject };
 
 foreach (var v in result)
 {
     Console.WriteLine(v.StudentName + " - " + v.Subject);
 }
-
 ```
 
 ### Select vs SelectMany
@@ -319,7 +317,7 @@ IEnumerable<Student> result = Student.GetAllStudents()
 .OrderBy(s => s.TotalMarks).ThenBy(s => s.Name).ThenBy(s => s.StudentID);
 
 
-IEnumerable<Student> result = from student in Student.GetAllStudetns()
+IEnumerable<Student> result = from student in Student.GetAllStudents()
                               orderby student.TotalMarks, student.Name, student.StudentID
                               select student;
                               
@@ -527,9 +525,7 @@ foreach (var group in employeeGroup)
 {
     Console.WriteLine("{0} - {1}", group.Key, group.Count());
 }
-```
 
-```
 var employeeGroup = from employee in Employee.GetAllEmployees()
                   group employee by employee.Department into eGroup
                   orderby eGroup.Key
@@ -542,7 +538,7 @@ var employeeGroup = from employee in Employee.GetAllEmployees()
 
 ### Group by multiple keys
 
-```
+```C#
 var employeeGroups = Employee.GetAllEmployees()
                 .GroupBy(x => new { x.Department, x.Gender })
                 .OrderBy(g => g.Key.Department).ThenBy(g => g.Key.Gender)
@@ -552,9 +548,7 @@ var employeeGroups = Employee.GetAllEmployees()
                     Gender = g.Key.Gender,
                     Employees = g.OrderBy(x => x.Name)
                 });
-```
 
-```
 var employeeGroups = from employee in Employee.GetAllEmployees()
                     group employee by new
                     {
@@ -581,7 +575,7 @@ var employeeGroups = from employee in Employee.GetAllEmployees()
 
 - This is very similar to First, except that this method does ```not throw an exception```
 
-```
+```C#
 int result = numbers.First();
 int result = numbers.FirstOrDefault(x => x % 2 == 100);
 ```
@@ -604,7 +598,7 @@ int result = numbers.FirstOrDefault(x => x % 2 == 100);
 - Similar to ElementAt except that this method does not throw an exception,
 - if the sequence is empty or if the provided index value is out of range. Instead, a default value of the type that is expected is returned.
 
-```
+```C#
 int result = numbers.ElementAt(0);
 ```
 
@@ -616,7 +610,7 @@ int result = numbers.ElementAt(0);
 
 - Very similar to Single(), except this method does not throw an exception when the sequence is empty or when no element in the sequence satisfies the given condition.
 
-```
+```C#
 int result = numbers.Single();
 int result = numbers.SingleOrDefault(x => x % 2 == 0);
 ```
@@ -625,7 +619,7 @@ int result = numbers.SingleOrDefault(x => x % 2 == 0);
 
 - If the sequence on which this method is called is not empty, then the values of the original sequence are returned.
 
-```
+```C#
 IEnumerable<int> result = numbers.DefaultIfEmpty();
 // Since the sequence is empty, a sequence containing the specified default value (10) is returned.
 IEnumerable<int> result = numbers.DefaultIfEmpty(10);
@@ -635,7 +629,7 @@ IEnumerable<int> result = numbers.DefaultIfEmpty(10);
 
 - GroupBy creates and returns a sequence of IGrouping<K,V>
 
-```
+```C#
 var employeeGroup = from employee in Employee.GetAllEmployees()
                     group employee by employee.Department;
 
