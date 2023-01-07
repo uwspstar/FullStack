@@ -1,7 +1,9 @@
 # LINQ
 
-- <http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html>
-- <https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf>
+- Credit <http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html>
+- Credit <https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf>
+
+## - As a rule when you write LINQ queries, we recommend that you use `query syntax` whenever possible and `method syntax` whenever necessary
 
 - LINQ stands for Language Integrated Query.
 - LINQ queries `any collection of objects that supports IEnumerable` or the `generic IEnumerable<T> interface`.
@@ -10,7 +12,6 @@
 - the query variable contains our query information ```NOT the query result```
 - the result is ```NOT``` return from declare query variable
 - ```the result comes from when we execute query```
-- As a rule when you write LINQ queries, we recommend that you use ```query syntax``` whenever possible and ```method syntax``` whenever necessary.
 - There is no semantic or performance difference between the two different forms.
 - Query expressions are often more readable than equivalent expressions written in method syntax
 - Some query operations must be expressed as a method call. The most common such methods are those that return ```singleton numeric``` values, such as ```Sum```, ```Max```, ```Min```, ```Average```, and so on.
