@@ -3,7 +3,7 @@
 - Credit <http://csharp-video-tutorials.blogspot.com/2014/07/linq-tutorial.html>
 - Credit <https://vslapp.files.wordpress.com/2011/11/linq-cheatsheet.pdf>
 
-## - As a rule when you write LINQ queries, we recommend that you use `query syntax` whenever possible and `method syntax` whenever necessary
+## As a rule when you write LINQ queries, we recommend that you use `query syntax` whenever possible and `method syntax` whenever necessary
 
 - LINQ stands for Language Integrated Query.
 - LINQ queries `any collection of objects that supports IEnumerable` or the `generic IEnumerable<T> interface`.
@@ -913,7 +913,6 @@ var result = Employee.GetAllEmployees()
                        e => true,
                        d => true,
                        (e, d) => new { e, d });
-
 ```
 
 ### Set operators in LINQ
