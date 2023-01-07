@@ -195,9 +195,9 @@ public static IEnumerable<TSource> Where<TSource>(
 - you can call a function in your statement to make your code more readable
 
 ```C#
-var evenNumbers = from i in myArray                     
- where IsEvenAndGT5(i)                    
- select i;
+var evenNumbers = from i in myArray 
+    where IsEvenAndGT5(i)                    
+    select i;
  
 static bool IsEvenAndGT5(int i) 
 {    
