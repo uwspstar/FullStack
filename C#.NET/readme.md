@@ -327,3 +327,10 @@ executed anywhere.
 
 </details>
 - markdownlint取消html标签警告 <https://blog.csdn.net/qq_44926567/article/details/109167394>
+
+- only git finish add. commit, and push
+- <https://stackoverflow.com/questions/19595067/git-add-commit-and-push-commands-in-one>
+
+```text
+git config alias.acp '! acp() { git commit -a -m "$1" && git push ; } ; acp'
+```
