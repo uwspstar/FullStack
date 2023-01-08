@@ -1,6 +1,7 @@
 # Reflection
 
 - Reflection inspects the assembly and shows the metadata of that assembly
+- Reflection can invoke the members of an assembly in C#.
 
 ## Credit
 
