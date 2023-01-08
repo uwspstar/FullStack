@@ -2,8 +2,9 @@
 
 ## Credit
 
-- Credit [C#.NET Tutorials For Beginners and Professionals - dotnettutorials.net](<https://dotnettutorials.net/course/csharp-dot-net-tutorials/>)
-- Credit [Jamie King C# playlists](<https://www.youtube.com/@JamieKingCS/playlists>)
+- Credit dotnettutorials.net [C#.NET Tutorials For Beginners and Professionals -](https://dotnettutorials.net/course/csharp-dot-net-tutorials/)
+- Credit Jamie King C# [playlists](https://www.youtube.com/@JamieKingCS/playlists)
+- Credit Rainer Stropek [playlists](https://www.youtube.com/@rstropek/playlists)
 - Credit <https://dotnet.microsoft.com/en-us/learn/csharp>
 - Credit <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions>
 - Credit <https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs>
