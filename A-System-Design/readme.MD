@@ -62,3 +62,9 @@
   - vulnerable servers download and execute malicious Java code
 - `TODO` : take action before execute malicious Java code (each path)
 - `TODO` : what are inside the patch ?
+
+## How do we find nearby restaurants on Yelp or Google Maps
+
+- <https://blog.bytebytego.com/p/proximity-service>
+- Given a radius and location, return a list of nearby restaurants
+- [find nearby restaurants](/A-System-Design/Img/find-nearby-restaurants.png)

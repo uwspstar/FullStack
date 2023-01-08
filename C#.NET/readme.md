@@ -304,6 +304,14 @@ executed anywhere.
 
 ## Extensions
 
+## Reflection
+
+- <https://dotnettutorials.net/lesson/reflection-in-csharp/>
+- Reflection in C# provides objects (of type Type) that describe assemblies, modules, and types.
+- Use reflection to dynamically create an instance of a type, bind the type to an existing object, or get the type from an existing object and invoke its methods or access its fields and properties
+
+## others
+
 - draw.io in vscode: <https://www.youtube.com/watch?v=AdrFG7sq1d4>
 - markdown_tables: <https://www.tablesgenerator.com/markdown_tables>
 - Download VisualStudio: <https://visualstudio.microsoft.com/downloads/>
@@ -317,7 +325,4 @@ executed anywhere.
 - [ ] Item3
 
 </details>
-
-## others
-
 - markdownlint取消html标签警告 <https://blog.csdn.net/qq_44926567/article/details/109167394>
