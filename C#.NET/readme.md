@@ -1,12 +1,13 @@
 # `C# 101 | Relearn C#`
 
-## Reference
+## Credit
 
-- <https://dotnettutorials.net/course/csharp-dot-net-tutorials/>
-- <https://dotnet.microsoft.com/en-us/learn/csharp>
-- <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions>
-- <https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs>
-- <https://www.cnblogs.com/aoximin/category/1802312.html>
+- Credit [C#.NET Tutorials For Beginners and Professionals - dotnettutorials.net](<https://dotnettutorials.net/course/csharp-dot-net-tutorials/>)
+- Credit [Jamie King C# playlists](<https://www.youtube.com/@JamieKingCS/playlists>)
+- Credit <https://dotnet.microsoft.com/en-us/learn/csharp>
+- Credit <https://docs.microsoft.com/en-us/dotnet/csharp/programming-guide/inside-a-program/coding-conventions>
+- Credit <https://docs.microsoft.com/en-us/dotnet/csharp/walkthroughs>
+- Credit <https://www.cnblogs.com/aoximin/category/1802312.html>
 
 ## Good Software
 
