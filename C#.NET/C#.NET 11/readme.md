@@ -30,7 +30,7 @@ var person = new Person { FirstName = "John", LastName = "Doe", Age = 30 };
 
 ```c#
 var person2 = person with { Age = 35 };
-````s
+```
 
 - This creates a new instance of `person` class with the age value updated to 35.
 
