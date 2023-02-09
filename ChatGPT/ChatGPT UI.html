@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>ChatGPT UI</title>
+    <style>
+        /* Add some styling to make the page look similar to the ChatGPT UI */
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .container {
+            width: 800px;
+            margin: 0 auto;
+        }
+
+        .chat {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .chat-message {
+            background-color: #f2f2f2;
+            border-radius: 10px;
+            padding: 10px;
+            margin-bottom: 20px;
+            max-width: 70%;
+        }
+
+        .user-message {
+            align-self: flex-end;
+            background-color: #00bfff;
+            color: #fff;
+        }
+
+        .input {
+            margin-top: 20px;
+            display: flex;
+            align-items: center;
+        }
+
+        .input input[type="text"] {
+            padding: 10px;
+            border-radius: 10px;
+            border: 1px solid #ccc;
+            flex-grow: 1;
+        }
+
+        .input input[type="submit"] {
+            padding: 10px 20px;
+            background-color: #00bfff;
+            color: #fff;
+            border: none;
+            border-radius: 10px;
+            margin-left: 10px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1>ChatGPT UI</h1>
+        <div class="chat">
+            <!-- Chat messages will be added here -->
+        </div>
+        <form onsubmit="submitForm(event)">
+            <div class="input">
+                <input type="text" id="user-input">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+    <script>
+        async function submitForm(event) {
+            // Prevent the form from submitting
+            event.preventDefault();
+
+            // Get the user's input
+            const userInput = document.getElementById("user-input").value;
+
+            // Call the ChatGPT API
+            const response = await fetch("https://api.openai.com/v1/engines/davinci/jobs", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json",
+                    "Authorization": "Bearer API_KEY"
+                },
+                body: JSON.stringify({
+                    prompt: userInput,
+                    max_tokens: 100
+                })
+            });
+
+            // Get the response from the API
+            const result = await response.json();
+            const chatResponse = result.choices[0].text;
+
+            // Display the response to the user
+            const chat = document.querySelector(".chat");
+            const message = document
+            message.classList.add("chat-message");
+            message.classList.add("user-message");
+            message.textContent = chatResponse;
+            chat.appendChild(message);
+        }
+    </script>
+</body>
+
+</html>
