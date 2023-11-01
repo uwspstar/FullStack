@@ -1,6 +1,7 @@
 # Git 101
 
 ## Reference
+- a Simple Github Pull Request <https://www.youtube.com/watch?v=rgbCcBNZcdQ&t=219s>
 
 - Understanding Git - Paolo Perrotta <https://www.youtube.com/watch?v=nHkLxts9Mu4>
 
