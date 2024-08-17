@@ -2,13 +2,14 @@
 
 ## Reference
 
-- 3 Hour Bash Tutorial <https://linuxhint.com/3hr_bash_tutorial/>
-- The Linux Command Handbook <https://www.freecodecamp.org/news/the-linux-commands-handbook/>
-- curl 的用法指南<https://www.ruanyifeng.com/blog/2019/09/curl-reference.html>
-- 《Linux就该这么学》 <https://www.linuxprobe.com/>
-- <https://www.youtube.com/playlist?list=PLaMM3KFoB3JFtZctaR8HDaKQz9hqQQC92>
-- shell 运行原理和 Linux 权限详解 <https://mp.weixin.qq.com/s/VA0n9jWTt2HRs3Ly4L540w>
-- 29 个你必须知道的 Linux 命令 <https://mp.weixin.qq.com/s/17t4g5--xY5oOjodZulfSA>
+- [3 Hour Bash Tutorial](https://linuxhint.com/3hr_bash_tutorial/)
+- [The Linux Command Handbook](https://www.freecodecamp.org/news/the-linux-commands-handbook/)
+- [curl 的用法指南](https://www.ruanyifeng.com/blog/2019/09/curl-reference.html)
+- [《Linux就该这么学》](https://www.linuxprobe.com/)
+- [YouTube Playlist](https://www.youtube.com/playlist?list=PLaMM3KFoB3JFtZctaR8HDaKQz9hqQQC92)
+- [shell 运行原理和 Linux 权限详解](https://mp.weixin.qq.com/s/VA0n9jWTt2HRs3Ly4L540w)
+- [29 个你必须知道的 Linux 命令](https://mp.weixin.qq.com/s/17t4g5--xY5oOjodZulfSA)
+
 
 ## Curl in Scripts
 
