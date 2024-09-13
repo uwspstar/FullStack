@@ -399,4 +399,683 @@ GraphQL因其高效性和灵活性正在迅速成为API开发的标准。掌握G
 
 ---
 
-如果你有任何问题或需要进一步的解释，请随时提问！
+# Step-by-Step Guide to GraphQL with Examples
+# GraphQL教程的详细步骤与示例
+
+---
+
+## Step 11: Connecting to a Database
+## 第十一步：连接数据库
+
+**English**
+
+To make your GraphQL server more dynamic, you can connect it to a database. For this example, we'll use an in-memory array as a mock database.
+
+First, let's define a data structure:
+
+```javascript
+const users = [
+  { id: 1, name: 'Alice', age: 30 },
+  { id: 2, name: 'Bob', age: 25 },
+];
+```
+
+Modify your schema to include a `User` type and queries to fetch users:
+
+```javascript
+const schema = buildSchema(`
+  type User {
+    id: Int
+    name: String
+    age: Int
+  }
+
+  type Query {
+    getUser(id: Int!): User
+    getUsers: [User]
+  }
+`);
+```
+
+Update the root resolver:
+
+```javascript
+const root = {
+  getUser: ({ id }) => {
+    return users.find(user => user.id === id);
+  },
+  getUsers: () => {
+    return users;
+  },
+};
+```
+
+**中文**
+
+为了让您的GraphQL服务器更加动态，您可以将其连接到数据库。在此示例中，我们将使用内存数组作为模拟数据库。
+
+首先，定义一个数据结构：
+
+```javascript
+const users = [
+  { id: 1, name: 'Alice', age: 30 },
+  { id: 2, name: 'Bob', age: 25 },
+];
+```
+
+修改您的schema以包含`User`类型和用于获取用户的查询：
+
+```javascript
+const schema = buildSchema(`
+  type User {
+    id: Int
+    name: String
+    age: Int
+  }
+
+  type Query {
+    getUser(id: Int!): User
+    getUsers: [User]
+  }
+`);
+```
+
+更新root resolver：
+
+```javascript
+const root = {
+  getUser: ({ id }) => {
+    return users.find(user => user.id === id);
+  },
+  getUsers: () => {
+    return users;
+  },
+};
+```
+
+---
+
+## Step 12: Testing Database Queries
+## 第十二步：测试数据库查询
+
+**English**
+
+Restart your server and try the following queries in GraphiQL:
+
+1. **Get All Users**
+
+   ```graphql
+   {
+     getUsers {
+       id
+       name
+       age
+     }
+   }
+   ```
+
+2. **Get a Single User**
+
+   ```graphql
+   {
+     getUser(id: 1) {
+       name
+       age
+     }
+   }
+   ```
+
+**中文**
+
+重新启动服务器并在GraphiQL中尝试以下查询：
+
+1. **获取所有用户**
+
+   ```graphql
+   {
+     getUsers {
+       id
+       name
+       age
+     }
+   }
+   ```
+
+2. **获取单个用户**
+
+   ```graphql
+   {
+     getUser(id: 1) {
+       name
+       age
+     }
+   }
+   ```
+
+---
+
+## Step 13: Adding Database Mutations
+## 第十三步：添加数据库变更
+
+**English**
+
+Let's add a mutation to create a new user:
+
+Modify your schema:
+
+```javascript
+const schema = buildSchema(`
+  type User {
+    id: Int
+    name: String
+    age: Int
+  }
+
+  type Query {
+    getUser(id: Int!): User
+    getUsers: [User]
+  }
+
+  type Mutation {
+    createUser(name: String!, age: Int!): User
+  }
+`);
+```
+
+Update the root resolver:
+
+```javascript
+const root = {
+  // Previous resolvers...
+
+  createUser: ({ name, age }) => {
+    const id = users.length + 1;
+    const newUser = { id, name, age };
+    users.push(newUser);
+    return newUser;
+  },
+};
+```
+
+**中文**
+
+我们来添加一个mutation来创建新用户：
+
+修改您的schema：
+
+```javascript
+const schema = buildSchema(`
+  type User {
+    id: Int
+    name: String
+    age: Int
+  }
+
+  type Query {
+    getUser(id: Int!): User
+    getUsers: [User]
+  }
+
+  type Mutation {
+    createUser(name: String!, age: Int!): User
+  }
+`);
+```
+
+更新root resolver：
+
+```javascript
+const root = {
+  // 之前的resolver...
+
+  createUser: ({ name, age }) => {
+    const id = users.length + 1;
+    const newUser = { id, name, age };
+    users.push(newUser);
+    return newUser;
+  },
+};
+```
+
+---
+
+## Step 14: Testing the Create User Mutation
+## 第十四步：测试创建用户的Mutation
+
+**English**
+
+In GraphiQL, execute the following mutation:
+
+```graphql
+mutation {
+  createUser(name: "Charlie", age: 28) {
+    id
+    name
+    age
+  }
+}
+```
+
+Then, query all users to see the updated list:
+
+```graphql
+{
+  getUsers {
+    id
+    name
+    age
+  }
+}
+```
+
+**中文**
+
+在GraphiQL中，执行以下mutation：
+
+```graphql
+mutation {
+  createUser(name: "Charlie", age: 28) {
+    id
+    name
+    age
+  }
+}
+```
+
+然后，查询所有用户以查看更新的列表：
+
+```graphql
+{
+  getUsers {
+    id
+    name
+    age
+  }
+}
+```
+
+---
+
+## Step 15: Connecting to a Real Database (Optional)
+## 第十五步：连接到真实数据库（可选）
+
+**English**
+
+For a production application, you would connect your GraphQL server to a real database like MongoDB or PostgreSQL. Here's how you can connect to MongoDB using Mongoose:
+
+1. **Install Mongoose:**
+
+   ```bash
+   npm install mongoose
+   ```
+
+2. **Connect to MongoDB:**
+
+   Add the following code to your `index.js`:
+
+   ```javascript
+   const mongoose = require('mongoose');
+
+   mongoose.connect('mongodb://localhost:27017/graphqltutorial', { useNewUrlParser: true, useUnifiedTopology: true });
+
+   const UserSchema = new mongoose.Schema({
+     name: String,
+     age: Number,
+   });
+
+   const UserModel = mongoose.model('User', UserSchema);
+   ```
+
+3. **Update Resolvers to Use Mongoose:**
+
+   ```javascript
+   const root = {
+     getUser: async ({ id }) => {
+       return await UserModel.findById(id);
+     },
+     getUsers: async () => {
+       return await UserModel.find();
+     },
+     createUser: async ({ name, age }) => {
+       const user = new UserModel({ name, age });
+       return await user.save();
+     },
+   };
+   ```
+
+**中文**
+
+对于生产环境的应用程序，您将您的GraphQL服务器连接到诸如MongoDB或PostgreSQL等真实数据库。以下是如何使用Mongoose连接到MongoDB：
+
+1. **安装Mongoose：**
+
+   ```bash
+   npm install mongoose
+   ```
+
+2. **连接到MongoDB：**
+
+   在您的`index.js`中添加以下代码：
+
+   ```javascript
+   const mongoose = require('mongoose');
+
+   mongoose.connect('mongodb://localhost:27017/graphqltutorial', { useNewUrlParser: true, useUnifiedTopology: true });
+
+   const UserSchema = new mongoose.Schema({
+     name: String,
+     age: Number,
+   });
+
+   const UserModel = mongoose.model('User', UserSchema);
+   ```
+
+3. **更新Resolvers以使用Mongoose：**
+
+   ```javascript
+   const root = {
+     getUser: async ({ id }) => {
+       return await UserModel.findById(id);
+     },
+     getUsers: async () => {
+       return await UserModel.find();
+     },
+     createUser: async ({ name, age }) => {
+       const user = new UserModel({ name, age });
+       return await user.save();
+     },
+   };
+   ```
+
+---
+
+## Step 16: Implementing Authentication
+## 第十六步：实现身份验证
+
+**English**
+
+To secure your GraphQL API, you might need to implement authentication. One common method is using JSON Web Tokens (JWT).
+
+1. **Install JWT Libraries:**
+
+   ```bash
+   npm install jsonwebtoken express-jwt
+   ```
+
+2. **Add Middleware for Authentication:**
+
+   ```javascript
+   const jwt = require('express-jwt');
+
+   app.use(
+     jwt({
+       secret: 'your_secret_key',
+       algorithms: ['HS256'],
+       credentialsRequired: false,
+     })
+   );
+   ```
+
+3. **Modify Resolvers to Check Authentication:**
+
+   ```javascript
+   const root = {
+     getUser: async ({ id }, context) => {
+       if (!context.user) {
+         throw new Error('Unauthorized');
+       }
+       return await UserModel.findById(id);
+     },
+     // Other resolvers...
+   };
+   ```
+
+**中文**
+
+为了保护您的GraphQL API，您可能需要实现身份验证。一个常见的方法是使用JSON Web Tokens（JWT）。
+
+1. **安装JWT库：**
+
+   ```bash
+   npm install jsonwebtoken express-jwt
+   ```
+
+2. **添加用于身份验证的中间件：**
+
+   ```javascript
+   const jwt = require('express-jwt');
+
+   app.use(
+     jwt({
+       secret: 'your_secret_key',
+       algorithms: ['HS256'],
+       credentialsRequired: false,
+     })
+   );
+   ```
+
+3. **修改Resolvers以检查身份验证：**
+
+   ```javascript
+   const root = {
+     getUser: async ({ id }, context) => {
+       if (!context.user) {
+         throw new Error('未授权');
+       }
+       return await UserModel.findById(id);
+     },
+     // 其他resolvers...
+   };
+   ```
+
+---
+
+## Step 17: Handling Errors
+## 第十七步：处理错误
+
+**English**
+
+GraphQL allows you to return meaningful errors to the client. You can throw errors in your resolvers:
+
+```javascript
+const root = {
+  getUser: async ({ id }) => {
+    const user = await UserModel.findById(id);
+    if (!user) {
+      throw new Error('User not found');
+    }
+    return user;
+  },
+  // Other resolvers...
+};
+```
+
+**中文**
+
+GraphQL允许您向客户端返回有意义的错误。您可以在resolvers中抛出错误：
+
+```javascript
+const root = {
+  getUser: async ({ id }) => {
+    const user = await UserModel.findById(id);
+    if (!user) {
+      throw new Error('用户未找到');
+    }
+    return user;
+  },
+  // 其他resolvers...
+};
+```
+
+---
+
+## Step 18: Using GraphQL Variables
+## 第十八步：使用GraphQL变量
+
+**English**
+
+When sending queries from a client application, you can use variables to make your queries dynamic.
+
+Example query using variables:
+
+```graphql
+query GetUser($userId: Int!) {
+  getUser(id: $userId) {
+    name
+    age
+  }
+}
+```
+
+Variables:
+
+```json
+{
+  "userId": 1
+}
+```
+
+**中文**
+
+从客户端应用程序发送查询时，您可以使用变量使查询动态化。
+
+使用变量的查询示例：
+
+```graphql
+query GetUser($userId: Int!) {
+  getUser(id: $userId) {
+    name
+    age
+  }
+}
+```
+
+变量：
+
+```json
+{
+  "userId": 1
+}
+```
+
+---
+
+## Step 19: Fragments and Aliases
+## 第十九步：片段和别名
+
+**English**
+
+**Fragments** allow you to reuse parts of your GraphQL queries.
+
+Example:
+
+```graphql
+{
+  user1: getUser(id: 1) {
+    ...userFields
+  }
+  user2: getUser(id: 2) {
+    ...userFields
+  }
+}
+
+fragment userFields on User {
+  name
+  age
+}
+```
+
+**中文**
+
+**片段**允许您重用GraphQL查询的一部分。
+
+示例：
+
+```graphql
+{
+  user1: getUser(id: 1) {
+    ...userFields
+  }
+  user2: getUser(id: 2) {
+    ...userFields
+  }
+}
+
+fragment userFields on User {
+  name
+  age
+}
+```
+
+---
+
+## Step 20: Subscriptions for Real-time Data
+## 第二十步：使用订阅获取实时数据
+
+**English**
+
+GraphQL Subscriptions allow you to receive real-time updates. Implementing subscriptions requires using WebSockets.
+
+1. **Install Subscription Libraries:**
+
+   ```bash
+   npm install subscriptions-transport-ws graphql-subscriptions
+   ```
+
+2. **Set Up a Subscription Server:**
+
+   This involves more advanced setup and is often done using Apollo Server.
+
+**中文**
+
+GraphQL订阅允许您接收实时更新。实现订阅需要使用WebSockets。
+
+1. **安装订阅库：**
+
+   ```bash
+   npm install subscriptions-transport-ws graphql-subscriptions
+   ```
+
+2. **设置订阅服务器：**
+
+   这涉及更高级的设置，通常使用Apollo Server完成。
+
+---
+
+## Conclusion
+## 总结
+
+**English**
+
+You've now learned how to:
+
+- Connect your GraphQL server to a database
+- Implement authentication and error handling
+- Use advanced GraphQL features like variables and fragments
+- Explore real-time data with subscriptions
+
+From here, you can build complex and efficient APIs that meet your application's needs.
+
+**中文**
+
+您现在已经学会了：
+
+- 将您的GraphQL服务器连接到数据库
+- 实现身份验证和错误处理
+- 使用高级GraphQL功能，如变量和片段
+- 使用订阅探索实时数据
+
+从这里开始，您可以构建满足您应用程序需求的复杂且高效的API。
+
+---
+
+## Additional Resources
+## 其他资源
+
+- **English**
+  - [GraphQL Best Practices](https://graphql.org/learn/best-practices/)
+  - [GraphQL Security](https://www.apollographql.com/docs/apollo-server/security/)
+
+- **中文**
+  - [GraphQL最佳实践](https://graphql.cn/learn/best-practices/)
+  - [GraphQL安全性](https://www.apollographql.com/docs/apollo-server/security/)
