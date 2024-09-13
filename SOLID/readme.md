@@ -1,4 +1,5 @@
 # SOLID
+- [理解 SOLID 原则](https://github.com/uwspstar/20-Day-Challenge-List/blob/main/Python/%E7%90%86%E8%A7%A3%20SOLID%20%E5%8E%9F%E5%88%99.md)
 - http://csharp-video-tutorials.blogspot.com/2018/01/solid-design-principles.html
 ```
 S : Single Responsibility Principle (SRP) 
